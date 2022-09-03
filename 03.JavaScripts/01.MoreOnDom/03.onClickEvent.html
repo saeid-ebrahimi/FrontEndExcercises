@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OnClick Event</title>
+</head>
+<body>
+    <h2>Here is a forbidden button</h2>
+    <button> don't press me</button>
+</body>
+<script>
+    function ouch(){
+        alert("I alerted you to not click me!!")
+    }
+    let btn = document.querySelector("button")
+    btn.onclick = ouch
+    // you can put just one event for onclick property
+    btn.onclick = function(){
+        alert("I'm kidding bro! ;7)")
+    }
+
+</script>
+</html>

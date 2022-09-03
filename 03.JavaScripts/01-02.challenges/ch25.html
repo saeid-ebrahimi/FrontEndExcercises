@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Challenges</title>
+</head>
+<body>
+    <h1>Challenge 25</h1>
+    <button id="add1">Add text</button>
+    <button id="remove">Remove text</button>
+    <div>
+        <p>here is the text</p>
+    </div>
+
+</body>
+<script>
+    let div = document.querySelector("div")
+    let abtn = document.querySelector("#add1")
+    abtn.addEventListener("click",function(){
+        let par = document.createElement("p")
+        //par.innerText = "new paragraph"
+        let text = document.createTextNode("new paragraph")
+        par.appendChild(text)
+        div.appendChild(par)
+    })
+    let rbtn = document.querySelector("#remove")
+    rbtn.addEventListener("click",function(){
+        const pars = document.querySelectorAll("p")
+        div.removeChild(pars[pars.length -1])
+    })
+</script>
+</html>

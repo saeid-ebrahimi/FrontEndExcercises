@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Basic HTML Form</title>
+	<style>
+		body {
+			padding: 30px 100px;
+			font-family: Arial;
+		}
+
+		#formdata {
+			width: 400px;
+			margin: auto;
+			padding: 15px;
+			border: 2px solid red;
+		}
+
+		label {
+			display: block;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Basic Contact Form</h1>
+
+	<form action="processor.php" method="post" id="myForm">
+
+		<p><label for="name">Name</label>
+			<input id="name" name="name" type="text" required></p>
+
+		<p><label for="email">Email</label>
+			<input id="email" name="email" type="email" required></p>
+
+		<p><label for="url">Website</label>
+			<input id="url" name="url" type="url"></p>
+
+		<p><label for="comments">Comments</label>
+			<textarea id="comments" name="comments" cols="40" rows="10" required></textarea></p>
+
+		<p><input id="send" name="send" type="submit" value="send it"></p>
+
+	</form>
+
+
+	<div id="formdata"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.13.1/jquery.validate.min.js"></script>
+	<script src="script.js"></script>
+
+</body>
+
+
+</html>

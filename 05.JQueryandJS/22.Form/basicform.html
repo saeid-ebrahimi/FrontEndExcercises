@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Demonstrating Form Elements</title>
+	<style>
+		body { width: 75%; margin: auto; font-family: Arial; }
+		label, input, fieldset { display: block; }
+		input, fieldset, select, textarea {margin-bottom: 20px; }
+		fieldset input, fieldset label { display: inline; }
+		fieldset label { margin-bottom: 20px; }
+
+	</style>
+</head>
+
+<body>
+	
+	<h1>Below is a Form, Demonstrating Some of the Different Form Elements</h1>
+	
+	<form method="post" action="processor.php">
+		
+		<!-- The field below has a label and a default value
+		The for attribute in the label connects with the ID 
+		in the input field. The value attribute is optional.-->
+		
+		<label for="fname">First Name</label>
+		<input type="text" name="fname" id="fname" value="default value">
+		
+		<!-- Alternatatively, you can skip the for attribute
+		and wrap the label around the input tag. This is less
+		commonly seen, as it limits styling options.
+		Placeholder text will go away when click into the field-->
+		
+		<label>Last Name
+			<input type="text" name="lname" id="lname" placeholder="Last Name">
+		</label>
+		
+		<!-- There are lots of types of input in html5, but not
+		all of them are supported by browsers. Try this page in
+		a few browsers to see what you get for this field.-->
+		
+		<label for="favcolor">Favorite Color</label>
+		<input type="color" name="favcolor" id="favcolor">
+		
+		<!-- The required attribute at the end is a shortcut
+		for required="required". It relies on the browser to
+		validate, but not all browsers support it.-->
+		
+		<label for="email">Email Address</label>
+		<input type="email" name="email" id="email" required>
+		
+		<!-- You can use fieldset and legend to group fields
+		into logical groupings. This can be styled too.-->
+		
+		<fieldset>
+			<legend>Do you want spam?</legend>
+			<!-- Radio buttons and check boxes should useually
+			have the label come after the form element. Notice
+			the name makes the two options a set. Only one or the
+			other can be turned on. Also, the checked attribute,
+			which is short for checked="checked", will set a default-->
+
+			<input type="radio" name="spam" id="spam-yes">
+			<label for="spam-yes">Yes, Send me SPAM</label>
+			
+			<br>
+
+			<input type="radio" name="spam" id="spam-no" checked>
+			<label for="spam-no">No, Don't send me SPAM</label>
+		</fieldset>
+		
+		<fieldset>
+			<legend>Favorite Animals</legend>
+			<!-- checkboxes allow you to select multiple items
+			the square brackets are there after the name so that
+			the items can be treated as an array by the processor-->
+
+			<input type="checkbox" name="animal[]" id="chicken">
+			<label for="chicken">Chicken</label>
+			
+			<br>
+
+			<input type="checkbox" name="animal[]" id="llama">
+			<label for="llama">Llama</label>
+			
+			<br>
+			
+			<input type="checkbox" name="animal[]" id="cat">
+			<label for="cat">Cat</label>
+			
+			<br>
+			
+			<input type="checkbox" name="animal[]" id="dog">
+			<label for="dog">Dog</label>
+			
+		</fieldset>
+		
+		<!--Select lists follow this format. Notice the first item
+		has the selected attribute, which is short for selected="selected".
+		There is also a multi-select list, not shown on this demo.-->
+		
+		<label for="cheese">Favorite Cheeses</label>
+		<select name="cheese" id="cheese">
+			<option value="" selected> --- </option>
+			<option value="american">American</option>
+			<option value="swiss">Swiss</option>
+			<option value="Brie">Brie</option>
+		</select>
+		
+		<!--Textarea is different from input. It has a closing tag.
+		Default content goes between the opening and closing tags.
+		It is considered best practice to set rows and cols attributes
+		but the size of the textarea can be determined by CSS-->
+		
+		<label for="comment">Comments</label>
+		<textarea name="comments" id="comments" rows="10" cols="50">Default content</textarea>
+		
+		<!--This will submit the form to the processor.php for 
+		processing. The value will provide the text that appears
+		on the button. There are other buttons, but this is the
+		most commonly used button.-->
+		<input type="submit" name="send" id="send" value="Send Me">
+		
+	
+	</form>
+	
+	
+</body>
+</html>

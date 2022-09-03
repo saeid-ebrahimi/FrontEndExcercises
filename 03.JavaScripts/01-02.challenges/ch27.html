@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Challenges</title>
+</head>
+<body>
+    <h1>Challenge 27</h1>
+    <form method="get">
+        <label for="number">Enter the font size(number): </label>
+        <input id="number" type="number">
+        <input id="btn" type="submit">
+    </form>
+</body>
+<script>
+    let header1 = document.querySelector("h1")
+    let number = document.querySelector("#number")
+    let btn = document.querySelector("#btn")
+    btn.addEventListener("click",function(event1){
+        event1.preventDefault()
+        let font = number.value
+        header1.style.fontSize = font + "px"
+    })
+</script>
+</html>

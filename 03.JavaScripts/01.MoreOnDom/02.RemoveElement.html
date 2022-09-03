@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Removing Elements</title>
+</head>
+<body>
+    <div>
+        <p>hello</p>
+        <p>Remove this paragraph</p>
+    </div>
+    <script>
+        let div1 = document.querySelector("div")
+        console.log(div1.children)
+        div1.removeChild(div1.children[1])
+    </script>
+</body>
+</html>

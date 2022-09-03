@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java script challenges</title>
+</head>
+<body>
+    <h1>Challenge 15</h1>
+    <script>
+    function sayHello(name){
+        if (name === "" || name === null)
+            return "you didn't enter a name here!!"
+        else{
+            return `hello ${name} and welcome here.`
+        }
+    }
+    function hospitality(name , gifts){
+        let text = sayHello(name) + "\n"
+        for (let el of gifts){
+            text += `${name}, would you like some ${el}?\n`
+        }
+        return text
+    }
+    let name = prompt("enter your name please: ")
+    const foods = ["orange", "apple", "banana", "mango"]
+    let greeting = hospitality(name, foods)
+    console.log(greeting)
+    </script>
+</body>
+</html>

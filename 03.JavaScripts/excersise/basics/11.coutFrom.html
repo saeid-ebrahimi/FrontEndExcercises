@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Decendent from Desired Time</title>
+</head>
+<body>
+    <h1>Count Decendent from Desired Time</h1>
+    <p id=time></p>
+    <script>
+        let minute = +prompt("enter time in minutes: ")
+        let second = +prompt("enter time in seconds: ")
+        const timer = setInterval(function(){
+            if (second === -1){
+                minute -= 1
+                second = 59
+            }
+            if (minute === 0 && second===0){
+                clearInterval(timer)
+            }
+            document.getElementById("time").innerText =  `${minute} : ${second}`
+            second--
+        },1000)
+    </script>
+</body>
+</html>

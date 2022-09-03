@@ -1,0 +1,83 @@
+body {
+	padding-top: 50px;
+	font-family: Arial;
+	color: #333;
+}
+
+#slider-wrapper {
+	width: 1000px;
+	height: 358px;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+ul,
+li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#slider-wrapper ul {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#slider-wrapper ul li {
+	background-size: cover;
+	position: relative;
+	width: 1000px;
+	height: 300px;
+	float: left;
+}
+
+#slider-wrapper ul li:nth-child(1) {
+	background-image: url(images/leaves01.jpg);
+}
+#slider-wrapper ul li:nth-child(2) {
+	background-image: url(images/leaves02.jpg);
+}
+#slider-wrapper ul li:nth-child(3) {
+	background-image: url(images/leaves03.jpg);
+}
+#slider-wrapper ul li:nth-child(4) {
+	background-image: url(images/leaves04.jpg);
+}
+#slider-wrapper ul li:nth-child(5) {
+	background-image: url(images/leaves05.jpg);
+}
+
+.content {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 300px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+#slider-controls {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	background-color: #333;
+	justify-content: space-between;
+}
+
+#slider-controls a {
+	display: block;
+	padding: 20px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	width: 200px;
+	background-color: #666;
+}

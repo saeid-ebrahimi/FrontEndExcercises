@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Challenges</title>
+</head>
+<body>
+    <h1>Challenge 23</h1>
+    <p>here is the text</p>
+    <p>here is the next line</p>
+    <p>there is another text line with absurd information</p>
+    <button>Turn it to green</button>
+</body>
+<script>
+    let btn = document.querySelector("button")
+    let paragraphs = document.querySelectorAll("p")
+    btn.addEventListener("click",function(){
+        for( paragraph of paragraphs){
+            paragraph.style.color = "green"
+        }
+    })
+    btn.addEventListener("dblclick",function(){
+        for( paragraph of paragraphs){
+            paragraph.style.color = "blue"
+        }
+    })
+</script>
+</html>

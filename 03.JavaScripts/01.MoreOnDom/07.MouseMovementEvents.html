@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MouseOver and MouseOut and MouseLeave</title>
+    <style>
+        div{
+            width:10%;
+            height: 10%;
+            background-color: #128888;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Roll Mouse Over The Box</h1>
+    <div>0 <br>1 <br>2<br></div>
+    <script>
+        let header1 = document.querySelector("h1")
+        let box = document.querySelector("div")
+
+        box.addEventListener("mouseover", function (){
+            header1.innerText = "Mouse is over the box"
+        })
+        box.addEventListener("mouseleave", function (){
+            header1.innerText = "Mouse leave the box"
+        })
+        header1.addEventListener("mouseenter",function (){
+            header1.innerText = "Roll Mouse Over The Box"
+        })
+    </script>
+</body>
+</html>

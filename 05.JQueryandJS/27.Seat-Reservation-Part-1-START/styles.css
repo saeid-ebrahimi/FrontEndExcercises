@@ -1,0 +1,169 @@
+* { box-sizing: border-box; }
+
+body {
+	font-family: Arial;
+}
+
+h1 {
+	 text-align: center;
+}
+
+#stage {
+	width: 400px;
+	margin: auto;
+	line-height: 150px;
+	border: 2px solid #ccc;
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+#seating {
+	overflow: hidden;
+	width: 730px;
+	margin: auto;
+	padding-left: 10px;
+}
+
+#seating section {
+	float: left;
+}
+
+#seating section div {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width: 30px;
+	line-height: 26px;
+	border: 2px solid #ccc;
+	text-align: center;
+	font-size: 12px;
+}
+.a {
+	background: url(svg/chair-a.svg) no-repeat;
+	color: #EDEDED;
+}
+.a:hover, .s:hover {
+	cursor: pointer;
+}
+
+.a:hover {
+	background: #F9E300;
+}
+.a:hover {
+	background: url(svg/chair-h.svg) no-repeat;
+	color:#000;
+}
+.s {
+	background: url("svg/chair-s.svg");
+	color: #100e0f;
+}
+
+.r {
+	background: url("svg/chair-r.svg");
+	color: #100e0f;
+	cursor: not-allowed;
+}
+
+#seating .label {
+	border: 2px solid #fff;
+	text-transform: uppercase;
+}
+
+#left, #right {
+	width: 160px;
+}
+
+#middle {
+	width: 360px;
+	margin: 0 20px;
+}
+
+#reserve {
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	padding: 20px;
+	background: #B7E792;
+	text-decoration: none;
+
+}
+
+/****************** Reservation form *****************/
+
+#resform {
+	display: none; /* initially invisible */
+	position: absolute;
+	top: 10%;
+	left: 30%;
+	width: 40vw;
+	padding: 20px;
+	background:#ECECEC;
+	border: 2px solid #ccc;
+}
+
+#resform h2, p {
+	text-align: center;
+}
+
+#confirmres {
+	text-align: center;
+}
+
+input, label {
+	display: block;
+	width: 20vw;
+	margin: auto;
+}
+
+input {
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+label {
+	margin-bottom: 5px;
+}
+
+#confirmbtn {
+  display: inline-block;
+  padding: 6px 14px 6px;
+  margin-bottom: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #0077C8;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 95%);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 95%);
+  background-image: -linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 95%);
+  background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 95%);
+  background-repeat: repeat-x;
+  border: 0;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.2);
+     -moz-box-shadow: inset 0 -2px 0 rgba(0,0,0,.2);
+          box-shadow: inset 0 -2px 0 rgba(0,0,0,.2);
+  -webkit-transition: 0.1s;
+     -moz-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Basic HTML Form</title>
+	<style>
+		body {
+			padding: 30px 100px;
+			font-family: Arial;
+		}
+
+		#formdata {
+			width: 400px;
+			margin: auto;
+			padding: 15px;
+			border: 2px solid red;
+		}
+
+		label {
+			display: block;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Basic Contact Form</h1>
+
+	<form  method="POST" id="myForm">
+
+		<p><label for="name" id="name-label">Name</label>
+			<input id="name" name="name" type="text" class="data"></p>
+
+		<p><label for="email" id="email-label">Email</label>
+			<input id="email" name="email" type="text" class="data"></p>
+
+		<p><label for="url" id="url-label">Website</label>
+			<input id="url" name="url" type="text" class="data"></p>
+
+		<p><label for="comments" id="comments-label">Comments</label>
+			<textarea id="comments" name="comments" cols="40" rows="10" class="data"></textarea></p>
+
+		<p><input id="send" name="send" type="submit" value="send it"></p>
+
+	</form>
+
+	<div id="formdata"></div>
+	<script src="script.js"></script>
+</body>
+
+</html>

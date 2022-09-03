@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Challenges</title>
+</head>
+<body>
+    <h1>Challenge 24</h1>
+    <button>add text</button>
+    <div>
+        <p>here is the text</p>
+    </div>
+
+</body>
+<script>
+    let div = document.querySelector("div")
+    let btn = document.querySelector("button")
+    btn.addEventListener("click",function(){
+        let par = document.createElement("p")
+        //par.innerText = "new paragraph"
+        let text = document.createTextNode("new paragraph")
+        par.appendChild(text)
+        div.appendChild(par)
+    })
+</script>
+</html>

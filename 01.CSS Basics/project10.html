@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Forms</title>
+        <style>
+            #form1{
+                background-color: rgb(110, 6, 6);
+                color:antiquewhite;
+                font: 1.1em "arial";
+                margin: 1rem;
+                padding: 1rem 2rem;
+                width:60vw;
+                height: 60vh;
+
+            }
+            #form1 input{
+                margin-bottom: 0.7rem;
+                padding: .4rem;
+                border: 2px solid antiquewhite;
+                background-color: rgb(228, 166, 166);
+                color: rgb(110, 6, 6);
+            }
+            #form1 input:hover, #form input:focus{
+                background-color: white;
+                border: 2px solid rgb(228, 166, 166);
+            }
+            #form1 button{
+                background-color: white;
+                color: rgb(110, 6, 6);
+                padding: .5rem 1rem;
+                border: 2px rgb(228, 166, 166) solid; 
+                font-weight: bold;
+                font-size: 1.2rem;
+                border-radius: .3rem;
+
+            }
+            #form2{
+                background-color: rgb(82, 5, 75);
+                color:whitesmoke;
+                font: 1.1rem Tahoma;
+                font-variant: small-caps;
+                margin: 1rem;
+                padding: 1rem 2rem;
+                width: 80vw;
+                height: 40vh;
+            }
+            #form2 input{
+                background-color: rgb(82, 5, 75);
+                color:gray;
+                font: .7rem Tahoma;
+                font-variant: small-caps;
+                border: 1px solid gray;
+                margin: .7rem .2rem;
+                padding: .5rem .5rem;
+                width: 25vw;
+            }
+            #form2 input:hover{
+                background-color: rgb(82, 5, 75);
+                color:rgb(148, 83, 143);
+                border: 1px solid rgb(148, 83, 143);;
+                scale: 105%;
+            }
+            #form2 button{
+                background-color: rgb(148, 83, 143);
+                color:white;
+                font: .7rem Tahoma;
+                border: 0px;
+                font-variant: small-caps;
+                margin: .7rem .2rem;
+                padding: .5rem .7rem;
+                width: 27.5vw;    
+            }
+            #form2 button:hover{
+                background-color:white ;
+                color:rgb(148, 83, 143);
+                scale: 105%;
+            }        
+        </style>
+    </head>
+    <body>
+        <div id="form1">
+            <form >
+                <h1>Sign Up</h1>
+                <label for="given" >Given name</label><br>
+                <input id="given" type="text"><br>
+                <label for="family">Family name</label><br>
+                <input id="family" type="text"><br>
+                <label for="email" >Email</label><br>
+                <input id="email" type="email"><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="form2">
+            <form>
+                <h1>Sign Up</h1>
+                <input id="given" type="text" placeholder="GIVEN NAME">
+                <input id="family" type="text" placeholder="FAMILY NAME"><br>
+                <input id="email" type="email" placeholder="EMAIL">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

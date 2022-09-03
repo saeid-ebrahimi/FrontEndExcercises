@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title >Image Usage</title>
+        <style>
+            #Image1{
+                width: 85vw;
+                height: 85vh;
+                background-color: silver;
+                padding: 1vw 1.3vh;
+                margin: 1vw 1vh;
+                overflow:auto;
+            }
+            #Image1 p{
+                padding: 1.5rem;
+                background-color: rgb(37, 154, 184);
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #Images img{
+                width: 23vw;
+                margin: 1vw;
+                padding: 1vw;
+                border: 3px rgb(37, 154, 184) ridge;
+                background-color: whitesmoke; 
+            }
+            #image2 {
+                width:60vw;
+                background-image: url("Image/sky1.jpg");
+                background-repeat: no-repeat;
+                background-size: 70vw;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                margin: 1vw;
+                padding: 2vw 3vh;
+            }
+            #image2 p{
+                margin: 2vw;
+            }
+            #image2 a{
+                margin-bottom: 2vw;
+
+            }
+            #click {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                padding: 1cm;
+            }
+            #image2 a img{
+                width: 12vw;
+            }
+        </style>
+        <div id="Image1">
+            <p>
+                Here is a group of images in a grid, similar to how you would want to display them in a gallery. You can see how
+                important it is to add proper white space around the images. In this case we have added padding, a border as well as
+                margin to give the images a nice flow. There is also a good spacing between the images and the text.
+            </p>
+            <div id="Images">
+                <img src="Image/Audi.jpeg" alt="Audi car" title="Auidi car">
+                <img src="Image/Blue Bugatti.jpeg" alt="Blue Bugatti" title="Blue Bugatti">
+                <img src="Image/Bugatti Veyron.jpeg" alt="Bugatti Veyron" title="Bugatti Veyron">
+                <img src="Image/Ferrari.jpeg" alt="Ferrari" title="Ferrari">
+                <img src="Image/Lamborghini.jpeg" alt="Lamborghini" title="Lamborghini">
+                <img src="Image/Lexus.jpeg" alt="Lamborghini" title="Lamborghini">
+            </div>
+        </div>
+        <div id="image2">
+            <p>
+            Here is some body text that is now on top of an image because it is set as the background. When using an image as a
+            background try to pick an image that is not overly busy, this can make your text or other images difficult to read when
+            placed on top of.
+            </p>
+            <a href="https://www.w3.org/"><img src="Icons/forward1.png" title="click to link"></a>
+            <a id= "click" href="https://www.w3.org/">Click The Image</a>
+        </div>
+    </head>
+</html>

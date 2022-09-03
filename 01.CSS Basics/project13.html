@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body{
+                background-color: darkcyan;
+                width: 97vw;
+                margin: 1vh auto;
+                height: 100vh;
+            }
+            header{
+                background-color: rgb(245, 168, 2);
+                padding: 1vh 1vw;
+                color: whitesmoke;
+                height: 10vh;
+            }
+            header h1{
+                float: left;
+                margin: 1vh auto;
+                padding: 1vh 1vw;
+            }
+            header h2{
+                float: right;
+                margin:1vh auto;
+                padding: 1vh 1vw;
+            }
+            #navigation{
+                background-color: aliceblue;
+                width: 60%;
+                margin: 1vh auto;
+                
+                line-height: 4vh;
+            }
+            #navigation ul{
+                padding:0px;
+                padding-bottom: 1vh;
+                text-align: center;
+                
+                
+            }
+            #navigation li{
+                display: inline;
+                padding: 0.3vh 0.6vw;
+                
+                border-bottom: 3px groove rgb(245, 168, 2);
+            }
+            #content {
+                width: 70%;
+                background-color: rgb(188, 206, 206);
+                padding: .5rem .5rem;
+                margin: auto;
+                height: 70vh;
+                
+            }
+            #content div{
+                color: white;
+                background-color: rgb(184, 69, 69);
+                width: 40%;
+                margin: 2vh 2vw;
+                height: 40%;
+                text-align: left;
+                padding: 1vh 1vw;
+            }
+            #topLeft{
+                float: left;
+            }
+            #topRight{
+                float: right;
+            }
+            #bottomLeft{
+                float: left;
+            }
+            #bottomRight{
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Homepage Title</h1>
+            <h2>welcome greeting subtitle</h2>
+            
+        </header>
+        <section id="navigation">
+            <ul>
+                <li>nav link1</li>
+                <li>nav link2</li>
+                <li>nav link3</li>
+                <li>nav link4</li>
+            </ul>
+        </section>
+        <section id="content">
+            <div id="topLeft">
+                26. Up until now, we haven't moved elements very far from wherever the web browser automatically places them, but as
+                you've probably noticed this has left our page very left side heavy.
+            </div>
+            <div id="topRight">
+                If your elements are still not exactly where you want them to be after adjusting the padding, margins and alignment,
+                then you can try out the float property. The "float" property is one of the most powerful tools you can master when
+                learning CSS.
+            </div>
+            <div id="bottomLeft">
+                Elements underneath a floating object will automatically wrap themselves around the content. For example, if you float
+                an image, the text underneath will wrap around it so that none of it is actually obscured underneath the image.
+            </div>
+            <div id="bottomRight">
+                29. The float property liberates an element from its automatic position and lifts it up to "float" on top of other
+                elements in the direction you specify. You can specify float either right, left or the default of none.
+            </div>
+        </section>
+    </body>
+</html>

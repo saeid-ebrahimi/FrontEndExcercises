@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Animation Example 4</title>
+
+	<style>
+
+		body { padding:50px; margin:0; }
+		nav { margin-bottom:50px; }
+		nav ul { overflow:hidden; border-left:1px solid #777676; margin:0; padding:0; list-style-type:none; }
+		nav ul li { float:left; }
+		nav ul li a { 
+			display:block; 
+			width:149px; 
+			text-align:center; 
+			background:#BEBCBC; 
+			color:#333; 
+			border-right:1px solid #777676;
+			height:50px;
+			line-height:50px;
+			text-decoration:none;
+			text-transform:uppercase;
+		}
+		nav ul li a:hover { background:#D5D4D4; }
+
+		#box { 
+			width:260px; 
+			height:260px; 
+			background:#4C90D8; 
+			padding:20px;
+			color:#fff;
+            position: absolute;
+            left: 50px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" id="growbox">grow box</a></li>
+            <li><a href="#" id="growtext">grow text</a></li>
+            <li><a href="#" id="movebox">move box</a></li>
+            <li><a href="#" id="doall">do all</a></li>
+            <li><a href="#" id="sequence">sequence</a></li>
+        </ul>
+    </nav>
+    
+    <div id="box">Chickens and Llamas!</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+        $("#growbox").click(function (){
+            $("#box").animate({width:"50%"},1000)
+        }).dblclick(function (){
+            $("#box").animate({width:"10%"},1000)
+        })
+
+        $("#growtext").click(function (){
+            $("#box").animate({fontSize:"2rem"},1000)
+        }).dblclick(function (){
+            $("#box").animate({fontSize:"0.5rem"},1000)})
+
+        $("#movebox").click(function (){
+            $("#box").animate({left:"+=300px"},4000)}).dblclick(function (){
+            $("#box").animate({left:"-=300px"},4000)})
+
+        $("#doall").click(function (){
+            $("#box").animate({width:"50%",left:"+=300px", fontSize:"2rem"},4000)})
+        $("#sequence").click(function (){
+             $("#box").animate({width:"50%"},1000,function (){
+                 $("#box").animate({fontSize:"2rem"},1000,function (){
+                     $("#box").animate({left:"+300px"},1000)
+                 })
+             })
+        })
+    </script>
+
+</body>
+
+</html>
+

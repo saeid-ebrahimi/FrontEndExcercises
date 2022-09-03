@@ -1,0 +1,28 @@
+body {
+    font-family: Arial;
+    color: #333;
+}
+
+img { max-width: 100%;}
+
+#page {
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+#loaddata {
+    margin-bottom: 20px;
+}
+
+.serverdata {
+    background-color: azure;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    box-sizing: border-box;
+}

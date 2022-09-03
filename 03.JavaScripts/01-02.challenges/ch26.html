@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Challenges</title>
+</head>
+<body>
+    <h1>Challenge 26</h1>
+    <button>Add text</button>
+    <button>Remove text</button>
+    <div>
+    </div>
+
+</body>
+<script>
+    let div = document.querySelector("div")
+    let btns = document.querySelectorAll("button")
+    let abtn = btns[0]
+    let rbtn = btns[1]
+    let txtNumber = 1
+    abtn.addEventListener("click",function(){
+        let par = document.createElement("p")
+        let text = document.createTextNode(`This is paragraph number ${txtNumber}`)
+        txtNumber++
+        par.appendChild(text)
+        div.appendChild(par)
+    })
+    rbtn.addEventListener("click",function(){
+        if(txtNumber > 1) {
+            txtNumber--
+            let pars = document.querySelectorAll("div p")
+            div.removeChild(pars[pars.length -1])
+            alert(`you are removing paragraph number ${txtNumber}`)
+        }
+        else
+            alert("there isn't any paragraph to remove")
+    })
+</script>
+</html>

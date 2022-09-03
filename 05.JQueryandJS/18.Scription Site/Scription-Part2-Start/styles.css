@@ -1,0 +1,595 @@
+/************ Basic Resets ************/
+
+h1, h2, h3, h4, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul, nav ol {
+	list-style-type: none;
+}
+
+* { box-sizing: border-box; }
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a { text-decoration: none; }
+
+:root {
+	--rich-black: #061923;
+	--firey-rose: #FF5964;
+	--alice-blue: #EBF8FF;
+	--jasmine: #FFE099;
+	--tea-green: #C8D6AF;
+	--tea-green-light: #F7FFEA;
+	--english-violet: #48284A;
+
+}
+
+/************ Basic typography *************/
+
+body {
+	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	color: var(--rich-black);
+	padding-top: 100px;
+}
+
+h1, h2, h3, h4 { 
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: .5em;
+	color: var(--firey-rose);
+}
+
+h3 {
+	font-size: 20px;
+	margin-bottom: .5em;
+}
+
+h4 {
+	margin-bottom: .5em
+}
+
+p {
+	margin-bottom: 1em;
+	line-height: 1.4em;
+}
+
+button {
+	border: none;
+	border-radius: 15px;
+	height: 30px;
+	line-height: 30px;
+	background-color: var(--tea-green);
+	color: var(--rich-black);
+	font-weight: 600;
+	padding: 0 20px;
+	display: block;
+	margin: auto;
+}
+
+/************ Basic Page Sections *************/
+
+#page{
+	max-width: 1500px;
+	margin: auto;
+}
+
+section, footer {
+	padding: 20px;
+	margin-bottom: 150px;
+}
+
+section section {
+	margin: 0;
+	padding: 0;
+}
+
+/************ Header Styles *************/
+
+header {
+	height: 101px;
+	padding: 10px 0;
+	/*background-color: rgba(255,224,153,0.75);*/
+	background-color: rgba(0,0,0,0.75);
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.logo { 
+	position: relative; 
+	margin: auto;
+	width: 140px;
+	margin-bottom: 10px;
+}
+
+header .logo:hover {
+	cursor: pointer;
+}
+
+.logo h1 {
+	font-size: 24px;
+	color: var(--firey-rose);
+	position: absolute;
+	top: 10px;
+	left: 42px;
+}
+
+.logo img {
+	width: 50px;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: center;
+}
+
+header nav ul li a {
+	display: block;
+	font-family: 'Quicksand', sans-serif;
+	color: var(--alice-blue);
+	font-weight: 600;
+	padding: 0 5px;
+}
+
+/************ Slider Styles **************/
+
+#slider {
+	margin-bottom: 150px;
+}
+
+#slider .flexslider ul li > div {
+	height: 0;
+	padding-top: 46.7%;
+	position: relative;
+}
+
+#slider > .flexslider > ul > li > div { 
+	background-size: cover; 
+}
+
+.slide1 { background-image: url("images/slider/slider01-small.jpg"); }
+/*Add styling for additional slide backgrounds*/
+
+#slider .cta {
+	position: absolute;
+	/*adjust the bottom setting*/
+	bottom: 0;
+	right: 0;
+	background: rgba(6,25,35,0.5);
+	padding: 10px;
+	color:#fff;
+	width: 100%;
+}
+
+#slider .cta h2 {
+	font-size: 20px;
+	color: #fff;
+}
+
+/*Add three rules for flexslider*/
+
+/************ Overview Styles *************/
+
+.intro h2 {
+	font-size: 30px;
+}
+
+.intro p {
+	font-size: 20px;
+}
+
+#overview section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+}
+
+
+/************ Download Styles **************/
+
+#download {
+	background-color: var(--tea-green-light);
+	padding: 0;
+}
+
+#download ul {
+	list-style-type: none;
+}
+
+#download .eachfeature li {
+	width:100%;
+	height: 30px;
+	line-height: 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#download ul li a {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 600;
+	color: var(--firey-rose);
+}
+
+#download article{
+	padding: 20px;
+}
+
+#download article:first-of-type{
+	display: flex;
+}
+
+#download > article > div {
+	margin-right: 20px;
+}
+
+#download article div img {
+	width: 70px;
+	margin: auto;
+}
+
+#download article img {
+	margin: auto;
+}
+
+#download article:first-of-type ul {
+	margin-top: 30px;
+}
+
+#download article:nth-child(2){
+	background-color: var(--tea-green);
+	min-height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
+#feature-container {
+	position: relative;
+	overflow: hidden;
+	height: 200px;
+}
+
+#features {
+	position: absolute;
+	top: 0;
+}
+
+#download article:nth-child(2) a {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #364A14;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: 600;
+	font-family: 'Quicksand', sans-serif;
+	color: var(--jasmine);
+}
+
+/************ Pricing Styles *************/
+
+#pricing {
+	background-color: var(--english-violet);
+	color: #fff;
+}
+
+#pricing h2 {
+	color: #fff;
+}
+
+#pricing #tabs > ul {
+	display: flex;
+	list-style-type: none;
+}
+
+#pricing #tabs > ul > li > a {
+    display:block;
+    height:30px;
+    line-height:30px;
+    margin-right:5px;
+    background: var(--tea-green);
+    color: var(--rich-black);
+    padding:0 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#pricing #tabs > div {
+	display: none;
+	padding: 15px;
+	background: var(--tea-green-light);
+	color: var(--rich-black);
+	border-top-right-radius: 10px;
+	min-height: 500px;
+}
+
+#pricing #tabs > div:first-of-type {
+	display: block;
+	background: var(--tea-green-light);
+}
+
+#pricing #tabs > ul > li:first-of-type a {
+	background: var(--tea-green-light);
+}
+
+#pricing #tabs div ul {
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+
+#pricing #tabs div ul li {
+	margin-bottom: .5em;
+}
+
+#pricing #tabs div article {
+	margin-bottom: 20px;
+}
+
+#pricing #tabs div h3 {
+	color: var(--firey-rose);
+	text-align: center;
+}
+
+#pricing #tabs div h4 {
+	text-align: center;
+}
+/************ listen Styles **************/
+
+#listen {
+	padding: 0;
+}
+
+#listen article {
+	padding: 20px;
+}
+
+#listen article:first-of-type {
+	background: var(--rich-black);
+	color: #fff;
+}
+
+#listen h2 {
+	color: #fff;
+}
+
+/* Add two rotator rules */
+
+#listen blockquote {
+	font-size: 28px;
+	line-height: 1.3em;
+}
+
+#listen blockquote{
+	text-indent: -.4em;
+}
+
+#listen blockquote footer {
+	margin: 0;
+	font-size: .6em;
+}
+
+#listen blockquote footer span {
+	color: var(--firey-rose);
+}
+
+
+/************ Our Team Styles **************/
+
+#ourteam {
+	background: #FCF7ED;
+}
+
+#ourteam h2 {
+	color: var(--rich-black);
+}
+
+#ourteam article div:first-of-type {
+	display: flex;
+	justify-content: space-between;
+}
+
+#ourteam figure{
+	margin: 0;
+}
+
+#ourteam div figure {
+	width: 48%;
+}
+
+#ourteam article figure img {
+	border-radius: 50%;
+	max-width: 80%;
+	margin: auto;
+}
+
+#ourteam figcaption {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px 0;
+}
+
+#ourteam figcaption span {
+	color: var(--firey-rose);
+}
+/************ Footer Styles *************/
+
+#page > footer {
+	background: var(--rich-black);
+	color: var(--jasmine);
+	margin-bottom: 0;
+}
+
+footer .logo {
+	margin-bottom: 20px;
+}
+
+footer .logo h1{
+	color: var(--jasmine);
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
+
+footer article h2 {
+	font-size: 20px;
+	text-align: center;
+	color: var(--jasmine);
+}
+
+footer article a {
+	color: var(--jasmine);
+}
+
+/************ Tablet Size Styles *************/
+@media only screen and (min-width: 760px) {
+	
+	/* slider styles */
+	#slider .cta { width: 50%; right:0; }
+	.slide1 { background-image: url("images/slider/slider01-medium.jpg"); }
+	/* Add Additional slide backgrounds */
+	
+	/* overview styles */
+	#overview { display: flex;}
+	#overview > article { flex:2; margin-right: 20px;}
+	#overview > section { flex: 3; padding-top: 3em; }
+	
+	/* download styles */
+	#download { display: flex; flex-wrap: wrap; }
+	#download article { flex: 1; }
+	#download article:last-of-type { flex: 100%; }
+	#feature-container { height: 90%; }
+
+	/* pricing styles */
+	#pricing { display: flex; }
+	#pricing article:first-of-type { flex: 2; margin-right: 20px; }
+	#pricing article:last-of-type { flex: 3;}
+	
+	/* listen styles */
+	#listen { display: flex; }
+	#listen article:first-of-type { flex: 2; }
+	#listen article:last-of-type { flex: 5; }
+	/*add rotator min-height rule*/
+
+	/* our team styles */
+	#ourteam article{ display: flex; flex-wrap: wrap; }
+	#ourteam article div:first-of-type { flex-direction: column; flex: 2; align-items: center;}
+	#ourteam article div:last-of-type { flex: 3; padding: 0 20px;}
+	#ourteam article h2 { flex: 100%; }
+	#ourteam figure {padding: 20px 0;}
+	#ourteam figure img { margin: auto; }
+	
+	/* footer styles */
+	#page > footer { display: flex; }
+	#page > footer .logo { flex: 1; margin: 0; }
+	#page > footer nav { flex: 1; margin:10px 20px 0 0; }
+	#page > footer article { flex: 2; margin-top: 10px;  }
+	
+}
+
+/************ Large Tablet Size Styles *************/
+@media only screen and (min-width: 1020px) {
+	
+	/* body, header and slider styles */
+	body { padding: 0;}
+	header { display: flex; justify-content: space-between; align-items: center; }
+	header .logo { flex: 1; margin-left: 20px; }
+	header nav { flex: 2; }
+	header nav ul { justify-content: flex-end; margin-right: 20px; }
+	header nav ul li a { padding: 20px 10px; }
+	#slider .cta { width: 33%; padding: 30px; }
+	
+	/* download styles */
+	#download { flex-wrap: nowrap; }
+	#download article:first-of-type{ display: block; flex: 2;}
+	#download article:nth-child(2){ flex: 3; }
+	#download article:last-of-type { flex: 5 0; }
+
+	/* pricing styles */
+	#pricing article:first-of-type { flex: 1; }
+	#pricing article:last-of-type { flex: 4; }
+	#pricing .container { display: flex; justify-content: space-between; }
+	#pricing .container article { flex: 1; padding: 0 10px 40px 10px; margin: 0; position: relative;}
+	#pricing .container article button{ position: absolute; bottom: 0;}
+	
+	/* Listen styles */
+	#listen article:first-of-type { flex: 1; }
+	#listen article:last-of-type { flex: 4; }
+	#listen blockquote { font-size: 36px; }
+
+	/* Our Team styles */
+	#ourteam { display: flex; }
+	#ourteam > article { flex: 1; }
+	#ourteam > figure { flex: 1; }
+	#ourteam div figure { width: 100%; }
+	#ourteam article div:first-of-type { flex: 1;}
+	#ourteam article div:last-of-type { flex: 2; }
+}
+
+/************ Desktop Size Styles *************/
+
+@media only screen and (min-width: 1200px) {
+	
+	/* Page styles */
+	section { padding: 50px; }
+	#page > footer { padding: 50px; margin-bottom: 0;}
+
+	/* Header styles */
+	header .logo { margin-left: 50px; }
+	header nav ul { margin-right: 50px; }
+	header .logo h1 { font-size: 36px; top: 12px;left: 60px; }
+	header .logo img { width: 70px; }
+
+	/* Slider styles */
+	#slider .cta { width: 25%; padding: 50px;}
+	.slide1 { background-image: url("images/slider/slider01-large.jpg"); }
+	/*Add additional slide backgrounds*/
+	
+	/* Overview styles */
+	#overview > article { flex: 1; margin-right: 50px;}
+	#overview > section { flex: 2; padding-top: 3em; }
+	#overview > section { grid-template-columns: 1fr 1fr 1fr; grid-gap: 50px; }
+
+	/* Download styles */
+	#download article { padding: 50px; }
+	#download article:nth-child(2){ flex: 2; }
+
+	/* Pricing styles */
+	#pricing > article:first-of-type { margin-right: 50px; }
+	#pricing .container article { flex: 1; padding: 0 20px 40px 20px;}
+	
+	/* Listen styles */
+	#listen article:first-of-type { flex: 1; padding: 50px; }
+	#listen article:last-of-type { flex: 4; }
+	#listen blockquote { font-size: 48px; padding: 30px; }
+
+	/* Footer styles */
+	#page > footer nav { flex: 2 }
+	#page > footer nav ul { justify-content: flex-start; }
+	#page > footer nav ul li { margin-right: 20px; }
+	#page > footer article { padding: 0 20px; }
+}
+
+/************ Maximum Size Styles *************/
+
+@media only screen and (min-width: 1500px) {
+	header { width: 1500px; left: 50%; transform: translateX(-50%); }
+}

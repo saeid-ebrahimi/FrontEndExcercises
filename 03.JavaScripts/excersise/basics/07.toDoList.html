@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <script>
+        const toDoList = [
+        {id:1,title:"practice JS",status:false},
+        {id:2,title:"practice Bootstrap",status:true},
+        {id:3,title:"learn react",status:true}
+        ]
+        const user_choice = prompt(`choose one from menu:
+        1.Add Todo
+        2.Remove Todo
+        3.toggle task status`)
+        if (user_choice === "1"){
+            const task_name = prompt("please enter new task name to add: ")
+            const new_task = {
+                id: toDoList.length + 1,
+                title: task_name,
+                status: false
+            }
+            toDoList.push(new_task)
+        }else if(user_choice === "2"){
+            const task_name = prompt("please enter the task you wanna remove: ")
+            const task_index = toDoList.findIndex(function(task){
+                return task.title == task_name
+            })
+            console.log(task_index)
+            if (task_index != -1)
+                toDoList.splice(task_index,1)
+        }else if (user_choice === "3"){
+            const task_name = prompt("please enter the task you wanna edit: ")
+            const task_index = toDoList.findIndex(function(task){
+                return task.title == task_name 
+            })
+            console.log(task_index)
+            if ( toDoList[task_index].status == true)
+                toDoList[task_index].status = false
+            else
+                toDoList[task_index].status = true
+        }else{
+            alert("invalid chioce! please select from 1 to 3")
+        }
+    </script>
+</body>
+</html>

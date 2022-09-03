@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery Validator Plugin Example</title>
+
+	<style>
+	label.error {
+		color:#D40004;
+		display:block;
+		border: 2px solid #50087c;
+		width: 15%;
+		margin-top: 2vh;
+		padding:.5rem;
+		font-size:1rem;
+		text-transform:uppercase;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Basic Form Validation - JQuery Validator Plugin (simple version)</h1>
+	<form action="processor.php" method="post" id="myForm">
+    	<p><label for="name" >Name</label><br>
+		<input id="name" name="name" type="text" required title="please enter a valid name"></p>
+        
+        <p><label for="email" >Email</label><br>
+        <input id="email" name="email" type="email" required title="provided email is not valid"></p>
+        
+        <p><label for="url">Website</label><br>
+        <input id="url" name="url" type="url" title="your website url isn't valid(in form of https://"></p>
+        
+        <p><label for="comments" >Comments</label><br>
+    	<textarea id="comments" style="resize: none" name="comments" cols="40" rows="10" required></textarea></p>
+        
+        <p><input id="send"  name="send" type="submit" value="send it"></p>
+    </form>
+	
+	<!-- add link to jQuery library here -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- add validator plugin here -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+	<!-- Run the validator plugin with your own script here -->
+	<script>
+		$("#myForm").validate()
+	</script>
+</body>
+</html>

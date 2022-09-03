@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Object</title>
+</head>
+<body>
+    <h1>Prevent Events</h1>
+    <a href="www.google.com"> link to google</a><br>
+    <button>don't press me</button>
+</body>
+<script>
+    let link = document.querySelector("a")
+    link.addEventListener("click",function (event1){
+        event1.preventDefault()
+        alert("there is no google for this!!")
+
+    })
+    let btn = document.querySelector("button")
+    btn.addEventListener("click",function (event2){
+        event2.target.style.backgroundColor = "darkred"
+        alert("I told you don't press me!")
+    })
+</script>
+</html>

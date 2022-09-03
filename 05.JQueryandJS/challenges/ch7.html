@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>challenge 7</title>
+</head>
+<body>
+<p>don't change this paragraph</p>
+    <div id="main">
+     <p>Here is paragraph one</p>
+     <p>Here is paragraph two</p>
+     <p>Here is paragraph three</p>
+     <p>Here is paragraph four</p>
+     <p>Here is paragraph five</p>
+     <p>Here is paragraph six</p>
+     <p>Here is paragraph seven</p>
+     <p>Here is paragraph eight</p>
+     <p>Here is paragraph nine</p>
+     <p>Here is paragraph ten</p>
+     <p>Here is paragraph eleven</p>
+     <p>Here is paragraph twelve</p>
+    </div>
+    <script>
+        const evenParagraphs = document.querySelectorAll("#main p:nth-child(2n)")
+        for (let i=0; i< evenParagraphs.length; i++){
+            evenParagraphs[i].style.color = "red"
+        }
+    </script>
+</body>
+</html>

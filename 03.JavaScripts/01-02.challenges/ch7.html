@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Basic Challenges</title>
+</head>
+<body>
+    <h1>JavaScript Basic Challenges</h1>
+    <h2> challenge 5</h2>
+    <script>
+        let number = prompt("what's the number?",8)
+        if (number === 10){
+            alert("10")
+        }else if (number < 10){
+            alert("your number is less than 10")
+            for(let n = number; n >= 0; n--){
+                console.log(n)
+            }
+        }else if (number > 10){
+            alert("your number is greater than 10")
+        }
+        else{
+            alert("your input is not a number ")
+        }
+    </script>
+</body>
+</html>

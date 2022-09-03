@@ -1,0 +1,154 @@
+/********** Bill's resets **********/
+
+h1, h2, h3, p, ul, ol {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul, nav ol { list-style-type: none; }
+
+img { max-width:100%; }
+
+a { text-decoration:none;}
+
+* { box-sizing: border-box; }
+
+/************** End CSS RESET ****************/
+
+
+body { font-family: 'Gentium Basic', serif; color:#333; }
+
+header {
+	padding:0 20px;
+	
+}
+
+header h1 {
+	text-align: center;
+	font-size: 10vw;
+	margin-bottom: 0;
+	background: #E8E8E8;
+	padding: 50px 20px;
+}
+
+main { 
+	margin-top: 60px;
+	padding: 0 10px;
+}
+
+section { padding: 20px 10px; }
+
+.column, .double { padding: 0 10px; }
+
+footer {
+	margin: 0 20px;
+	padding: 40px;
+	background: #E8E8E8;
+}
+
+/************* Typography ************/
+
+h1, h2{ 
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+}
+
+p { 
+	line-height: 1.4em;
+	margin-bottom: 1em;
+}
+
+footer p { 
+	margin-bottom: 0;
+	text-align: center;
+}
+/**************** Flexslider Style ****************/
+
+.flexslider{
+	margin: 0 1.6vw;
+	border: none;
+	border-radius: 0;
+}
+.flex-control-paging li a.flex-active{
+	background-color: #041b5f;
+
+}
+.flex-control-paging li a{
+	background-color: #51649f;
+}
+.flex-control-paging li a:hover{
+	background-color: #2c3d72;
+}
+.slide1{background: url("./slides/kitten01.jpg") top left no-repeat;}
+.slide2{background: url("./slides/kitten02.jpg") top left no-repeat;}
+.slide3{background: url("./slides/kitten03.jpg") top left no-repeat;}
+.slide4{background: url("./slides/kitten04.jpg") top left no-repeat;}
+.slide5{background: url("./slides/kitten05.jpg") top left no-repeat;}
+.slides li div{
+	width: 100%;
+	position: relative;
+	height: 0;
+	padding-bottom: 50%;
+	background-size: cover;
+}
+.slides li div h2{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	color: #b40205;
+}
+.cta{
+	display: flex;
+	align-items: center;
+	width: 25vw;
+	height: 25vw;
+
+	position: absolute;
+	right: 20px;
+	bottom: 100%;
+
+	background-color: rgba(123,157,179,.3);
+	border-radius: 50%;
+	border: 2px solid #084d64;
+
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	font-family: "Oswald", sans-serif;
+	font-size: 4vw;
+	color: #033545;
+}
+.light{
+	color: #ededed;
+}
+/**************** Media Queries ****************/
+
+@media only screen and (min-width: 600px) {
+	
+	main { display: flex; }
+
+	.column { flex: 1; }
+	.cta{
+		width: 20vw;
+		height: 20vw;
+		font-size: 3vw;
+	}
+	
+}
+
+@media only screen and (min-width: 1000px) {
+	
+	#page {
+		max-width: 1000px;
+		margin: auto;
+	}
+	.cta{
+		width: 150px;
+		height: 150px;
+		font-size: 24px;
+	}
+	header h1 {font-size: 120px;}
+}
+

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form Check</title>
+</head>
+<body>
+    <h1>Registration Form Check</h1>
+    <script>
+        const users = [
+        {id:1,fname:"George",lname:"Kloni",age:40, email: "Kloni@gmail.com"},
+        {id:2,fname:"Robert",lname:"Margoni",age:21, email:"Robert@gmail.com"},
+        {id:3,fname:"Rose",lname:"Goldenberg", age:31, email:"Rose@gmail.com"}
+        ]
+        let user_count = 4
+        const user_fname = prompt("please provide your first name :")
+        const user_lname = prompt("please provide your last name: ")
+        const user_age = Number(prompt("please provide your age:"))
+        const user_email = prompt("please provide a email: ")
+
+        if(user_fname && user_lname && user_email){
+            if (user_fname.length < 3 || user_fname > 10)
+                alert("please provide a valid first name!")
+            else if (user_fname.lenght < 3 || user_lname > 15)
+                alert("please provide a valid last name!")
+            else if (isNaN(userAge) || user_age || user_age > 200)
+                alert("please provide a valid age!")
+            else{
+                const new_user={
+                    id: user_count,
+                    fname: user_fname,
+                    lname:user_lname,
+                    age:user_age,
+                    email:user_email
+                }
+                user_count++
+                users.push(new_user)
+            }
+        }else{
+            alert("fields cannot be empty!")
+        }
+
+    </script>
+</body>
+</html>

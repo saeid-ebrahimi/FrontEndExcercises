@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>challenge 6</title>
+</head>
+<body>
+    <p>Don't change this paragraph</p>
+    <div id="main">
+        <p>change this paragraph.</p>
+        <p>change this paragraph too.</p>
+        <p>And change this last paragraph.</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#main p:last-of-type").css({ "font-size":"30px","color":"red"})
+        $("#main p").last().css({ "font-size":"30px","color":"red"})
+    </script>
+
+</body>
+</html>

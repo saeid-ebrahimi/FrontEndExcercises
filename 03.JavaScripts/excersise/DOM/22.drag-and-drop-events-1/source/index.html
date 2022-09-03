@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Drag And Drop</title>
+  </head>
+
+  <body>
+    <h2 id="react" draggable="true" ondragstart="dragStartHandler(event)">React JS</h2>
+    <h2 id="vue" draggable="true" ondragstart="dragStartHandler(event)">Vue JS</h2>
+    <h2 id="angular" draggable="true" ondragstart="dragStartHandler(event)">Angular</h2>
+    <div class="drop" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)"></div>
+    <script src="js/app.js" async></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 17</title>
+</head>
+<body>
+    <nav>
+         <ul>
+             <li><a href="#">link one</a></li>
+             <li><a href="#">link two</a></li>
+             <li><a href="#">link three</a></li>
+             <li><a href="#">link four</a></li>
+             <li><a href="#">link five</a></li>
+         </ul>
+    </nav>
+    <p id="paragraph">Click a link to change this paragraph</p>
+    <script>
+        const links = document.querySelectorAll("nav ul li a")
+        for(const link of links){
+            link.addEventListener("click",function (event){
+                event.preventDefault()
+                document.querySelector("#paragraph").innerHTML = "You Clicked "+this.innerHTML
+            })
+        }
+    </script>
+</body>
+</html>

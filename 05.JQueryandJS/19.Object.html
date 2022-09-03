@@ -1,0 +1,76 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object and Data</title>
+</head>
+<body>
+
+</body>
+<script>
+    const cheese = "yummy"
+    const animals = ["dunky", "horse", "bull", "illma", "beef","chicken"]
+    console.log(animals[2])
+    console.log(animals.slice(1,4))
+    const car = {
+        color: "silver",
+        tank_size : 120,
+        max_speed: 200}
+    console.log(car["color"])
+    console.log(car.max_speed)
+    car.capacity = 4
+    console.log(car)
+    const motorcycle = new Object() // better to use {}
+    motorcycle.color = "black"
+    motorcycle.tank_size = 60
+    motorcycle.max_speed = 150
+    console.log(motorcycle)
+
+    const person = {
+        first_name: "Rose",
+        last_name: "Golden Berg",
+        pets: ["dog", "cat", "bunny"],
+        phone_number: {
+            home: "+9837176565",
+            work: "+9837228998",
+            mobile: "+989178782534"
+        },
+        greeting: function (){alert(`hello! my name is ${this.first_name} ${this.last_name} and you can contact me by ${this.phone_number.mobile}`)}
+    }
+    console.log(person)
+    console.log(person.pets[2])
+    console.log(person.phone_number["work"])
+    console.log(person["phone_number"]["home"])
+    console.log(person.phone_number.mobile)
+    person.greeting()
+
+    // constructor function
+    function Person(first,last,pets,phone){
+        this.first_name = first
+        this.last_name = last
+        this.phone_number = phone
+
+    }
+
+    const john = new Person("john","golden","+15676435888")
+    const mike = new Person("mike","martin","+549255437711")
+    function printableMessage(){
+        const message = "how you doing?"
+        function showMessage(){
+            alert(message)
+        }
+        function setMessage(new_message){
+            this.message = new_message
+        }
+        return {
+            showMess: showMessage,
+            setMess : setMessage
+        }
+    }
+
+    const printableMess = printableMessage() //call to get return obj
+    printableMess.showMess()
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Example Page</title>
+</head>
+
+<body>
+
+	<div id="page">
+    	<header>
+        	<h1>Title of the page</h1>
+            <h2>Subtitle of the page</h2>
+        </header>
+        
+        <nav id="sidebar">
+        	<ul>
+            	<li class="special"><a href="#">Link one</a>
+                
+                	<ul class="submenu">
+                    	<li><a href="#">Sub Link one</a></li>
+                        <li><a href="#">Sub Link two</a></li>
+                        <li><a href="#">Sub Link three</a></li>
+                        <li><a href="#">Sub Link four</a></li>
+                    </ul>
+                
+                </li>
+                <li><a href="#">Link two</a></li>
+                <li><a href="#">Link three</a></li>
+                <li><a href="#">Link four</a></li>
+            </ul>
+        </nav>
+        
+        <section id="main">
+        	<h2>Section Title One</h2>
+            <p>Pitchfork polaroid semiotics, cred crucifix bitters tilde selvage disrupt small batch beard pop-up. Viral disrupt ugh leggings scenester fap pug. Brunch scenester Thundercats, street art occupy four loko kogi banjo sustainable literally. Mumblecore trust fund fap Austin letterpress, American Apparel squid Bushwick.</p>
+            
+            <h2>Section Title Two</h2>
+            <p>Distillery letterpress asymmetrical, cray mixtape 3 wolf moon Odd Future pickled. Shabby chic salvia cardigan wayfarers. Flexitarian butcher squid banjo kitsch flannel crucifix pug lomo taxidermy, keffiyeh Shoreditch cred.
+                <ol>
+                    <li>Item number one</li>
+                    <li class="special">Item number two</li>
+                    <li>Item number three</li>
+                    <li class="special">Item number four</li>
+                </ol>
+            </p>
+        </section>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("h1,p").css("color","navy")
+        $("#main").css("border","solid 2px navy")
+        $("#main h2").css("border","groove 2px lightblue")
+        $(".special").css("border","inset 3px lightgreen")
+        $("li").first().css("border","double 3px green")
+        $("li").odd().css("border","solid 3px wheat")
+        $("li:has(ul)").css("background-color","silver")
+        $("li:contains(four)").css("color","aliceblue")
+
+        $("a").click(function (){
+            alert($(this).html())
+            alert(this.innerHTML)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>challenge 9</title>
+</head>
+<body>
+    <p>don't change this paragraph</p>
+    <div id="main">
+         <p>Here is paragraph one</p>
+         <p>Here is paragraph two</p>
+         <p>Here is paragraph three</p>
+         <p>Here is paragraph four</p>
+         <p>Here is paragraph five</p>
+         <p>Llamas and Chickens!</p>
+         <p>Here is paragraph seven</p>
+         <p>Here is paragraph eight</p>
+         <p>Here is paragraph nine</p>
+         <p>Here is paragraph ten</p>
+         <p>Here is paragraph eleven</p>
+         <p>Here is paragraph twelve</p>
+    </div>
+    <script>
+        const paragraphs = document.querySelectorAll("#main p")
+        for (let i=0; i < paragraphs.length; i++){
+            if (paragraphs[i].innerHTML === "Llamas and Chickens!")
+                paragraphs[i].style.color = "red"
+        }
+    </script>
+</body>
+</html>

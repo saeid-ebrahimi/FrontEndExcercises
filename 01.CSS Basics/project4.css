@@ -1,0 +1,40 @@
+div {
+    margin: 50px;
+    padding: 50px;
+    }
+    #badButton {
+    background-color: teal;
+    color: white;
+    }
+    #badButton button {
+    background-color: transparent;
+    border: 0px;
+    color: white;
+    }
+
+#design1 {
+    background-color: #94618E;
+    color: #F8EEE7;
+    font-family: Corbel;
+}
+#design1 button {
+    background-color: #F4DECB;
+    padding: 10px 25px;
+    border: 5px solid #F8EEE7;
+    color: #49274A;
+    font-weight: bold;
+    font-size: 1.2em;
+ }
+#design3 {
+    font-family: Impact, sans-serif;
+    font-size: 2em;
+}
+ 
+#design3 button {
+    font-family: Impact, sans-serif;
+    font-weight: 100;
+    background-color: white;
+    border: 7px #EC576B solid;
+    border-radius: 5rem;
+    font-size: 0.8em;
+}

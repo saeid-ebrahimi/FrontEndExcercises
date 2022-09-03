@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Example 5</title>
+</head>
+
+<body>
+    <h1>Event Example 5</h1>
+    <script>
+        // JS here
+        console.log("do this first");
+        const rand1 = Math.ceil(Math.random() * 10);
+        console.log(`the first async function will wait at least
+        ${rand1} seconds`);
+        const rand2 = Math.ceil(Math.random() * 10);
+        console.log(`the second async function will wait at least
+        ${rand2} seconds`);
+        setTimeout(function () {
+         console.log(`finishing async1 after ${rand1} seconds`);
+        }, rand1 * 1000);
+        setTimeout(function () {
+         console.log(`finishing async2 after ${rand2} seconds`);
+        }, rand2 * 1000);
+        console.log("do this last");
+    </script>
+</body>
+
+</html>

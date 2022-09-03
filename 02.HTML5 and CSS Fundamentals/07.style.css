@@ -1,0 +1,168 @@
+body {
+            background-color: aliceblue;
+            font-family: Tahoma;
+            color: rgba(19, 18, 18, 0.9);
+        }
+
+        header {
+            width: 95%;
+            margin: auto;
+        }
+
+        cite img {
+            float: left;
+            width: 5vw;
+            border-radius: 6rem;
+            margin: 1vh 1vw;
+        }
+
+        cite p {
+            float: left;
+            font-size: small;
+            margin: 2vh 3vw;
+            line-height: 4vh;
+            width: 75vw;
+        }
+
+        cite p a:hover {
+            color: gray;
+        }
+
+        div {
+            width: 85vw;
+        }
+
+        header div>a {
+            text-decoration: none;
+            color: black;
+            font-weight: 200;
+            background-color: white;
+            border: 3px solid rgb(117, 21, 21);
+            border-radius: .3rem;
+            padding: 0.7vh .8vw;
+            padding-top: 2.5vh;
+            margin: 0vh 1.5vw;
+        }
+
+        header div a:hover {
+            color: aliceblue;
+            background-color: rgb(117, 21, 21);
+        }
+
+        header div button:hover {
+            color: aliceblue;
+            background-color: rgb(117, 21, 21);
+        }
+
+        header div button span {
+            padding-bottom: 1vh;
+            padding: .2vh .2vw;
+            font-weight: bold;
+        }
+
+        header div a svg {
+            width: 4vw;
+            height: 6vh;
+            padding: 0.1vh 0vw;
+        }
+
+        header div button {
+            background-color: white;
+            border: 3px solid rgb(117, 21, 21);
+            border-radius: .3rem;
+            padding: 0.4vh 1vw;
+            margin: 0vh 1.5vw;
+        }
+
+        header div button svg {
+            width: 3vw;
+            height: 5vh;
+            padding: 0.1vh .1vw;
+        }
+
+        header div button span {
+            padding-bottom: 1vh;
+            font-weight: bold;
+            vertical-align: center;
+        }
+
+        main nav {
+            width: 90%;
+            border: 2px gray solid;
+            padding: 2vh 2vw;
+            text-shadow: 1vw 1vw 1vw silver;
+            margin: 2vh auto;
+        }
+
+        main nav ul {
+            align-items: center;
+            width: 50%;
+            margin: auto;
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        main nav ul li {
+            padding-left: 2vw;
+
+        }
+
+        main nav ul li a {
+            text-decoration: none;
+            color: rgb(2, 2, 77);
+
+        }
+
+        main nav ul li a:hover {
+            color: gray;
+
+        }
+
+        #main,
+        #first,
+        #second {
+            width: 90%;
+            border: 2px gray solid;
+            padding: 2vh 2vw;
+            margin: 2vh auto;
+        }
+
+        #main>img,
+        #first>img,
+        #second>img {
+            box-shadow: 1vw 1vw 1vw silver;
+            width: 90%;
+            margin: 2vh 5vw;
+        }
+
+        #first>a,
+        #second>a {
+
+            padding: 1.5vh 2vw;
+            color: black;
+            text-decoration: none;
+            border: 2px solid rgb(117, 21, 21);
+            border-radius: 0.2rem;
+        }
+
+        #first *,
+        #second * {
+            margin: 5vh 0px;
+        }
+
+        #first>a:hover,
+        #second>a:hover {
+            color: white;
+            background-color: rgb(117, 21, 21);
+        }
+
+        #first p a,
+        #second p a {
+            font-weight: 600;
+            color: rgb(63, 60, 66);
+        }
+
+        #first p a:hover,
+        #second p a:hover {
+            color: gray;
+        }

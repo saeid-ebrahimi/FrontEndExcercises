@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>challenge 8</title>
+</head>
+<body>
+    <p>don't change this paragraph</p>
+    <div id="main">
+     <p>Here is paragraph one</p>
+     <p>Here is paragraph two</p>
+     <p>Here is paragraph three</p>
+     <p>Here is paragraph four</p>
+     <p>Here is paragraph five</p>
+     <p>Here is paragraph six</p>
+     <p>Here is paragraph seven</p>
+     <p>Here is paragraph eight</p>
+     <p>Here is paragraph nine</p>
+     <p>Here is paragraph ten</p>
+     <p>Here is paragraph eleven</p>
+     <p>Here is paragraph twelve</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#main p:nth-child(2n-1)").css("color","red")
+         //$("#main p").even().css("color","red")
+    </script>
+</body>
+</html>

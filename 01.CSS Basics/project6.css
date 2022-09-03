@@ -1,0 +1,36 @@
+body{
+    background-color: lightblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+    color: seashell;
+}
+.top{
+    color: azure;
+    background-color: darkblue;
+    padding: .5rem;
+}
+.top li{
+    margin-left: 2rem;
+
+}
+.bottom{
+    color: darkblue;
+    background-color: seashell;
+     padding: .5rem;
+}
+.bottom li{
+    margin-left: 2rem;
+
+}
+#list1{
+    color: cyan;
+    text-decoration: underline;
+
+}
+#list2{
+    color: gray;
+    text-decoration: underline;
+
+}
+li:l

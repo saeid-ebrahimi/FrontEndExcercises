@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Object</title>
+</head>
+<body>
+<script>
+    const user = `{
+        "first_name": "Joe",
+        "last_name": "Jones",
+        "age": 25,
+        "social_media": [
+            "facebook",
+            "Twitter",
+            "Instagram"
+            ],
+        "online": true,
+        "phone_numbers": {
+            "home": "916-123-4567",
+            "work": "916-321-9876",
+            "mobile": "530-212-1111"
+            },
+        "status": "active"
+        }`
+    const user_obj = JSON.parse(user)
+    console.log(user_obj)
+    user_obj["status"] = "offline"
+    user_obj.social_media.push("tik tok","linkedin")
+    console.log(user_obj)
+    const new_user = JSON.stringify(user_obj)
+    console.log(new_user)
+</script>
+</body>
+</html>

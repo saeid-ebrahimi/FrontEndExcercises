@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Capturing Scroll Events</title>
+    <style>
+    div{
+            width:50px;
+            height:5000px;
+            background-color: #021445;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Capture Scroll Events</h1>
+    <div>
+    </div>
+</body>
+    <script>
+        let pageTop = 0
+        window.addEventListener("scroll",function (){
+            pageTop = window.pageYOffset
+            console.log(pageTop)
+            let div = document.querySelector("div")
+            let par = document.createElement("p")
+            par.innerText = pageTop + "\n"
+            div.appendChild(par)
+        })
+
+
+    </script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java script challenges</title>
+</head>
+<body>
+    <h1>Challenge 14</h1>
+    <script>
+    function sayHello(name){
+        if (name === "" || name === null)
+            return "you didn't enter a name here!!"
+        else{
+            return `hello ${name} and welcome here.`
+        }
+    }
+
+    let name = prompt("enter your name please: ")
+    let greeting = sayHello(name)
+    console.log(greeting)
+    </script>
+</body>
+</html>

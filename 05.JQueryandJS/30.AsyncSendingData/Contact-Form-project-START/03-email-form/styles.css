@@ -1,0 +1,116 @@
+@import url("spinner.css");
+
+body {
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #efefef;
+}
+
+#page {
+    margin: auto;
+    width: 400px;
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+#contactform input, label, textarea {
+    display: block;
+}
+
+label {
+    margin-bottom: 5px;
+}
+input, textarea {
+    margin-bottom: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submitBtn {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background-color:#B51515;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.submitBtn:hover {
+	background-color:#c62d1f;
+}
+.submitBtn:active {
+	position:relative;
+	top:1px;
+}
+
+#message {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    height:100%;
+    color: #fff;
+}
+
+.error, .success {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+    padding:30px;
+    box-sizing: border-box;
+}
+
+.error {
+    background:#B51515;
+}
+
+.success {
+    background:rgba(82,162,20,1.00);
+}
+
+.preloader {
+    text-align:center;
+    padding-top:100px;
+}
+
+.hide-message {
+    display:none;
+}
+
+.show-message {
+    display:block;
+}
+
+#message h3 {
+    color: #fff;
+}
+
+.fadeOutElement {
+	animation: fadeout 2s;
+}
+
+@keyframes fadeout {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+
+

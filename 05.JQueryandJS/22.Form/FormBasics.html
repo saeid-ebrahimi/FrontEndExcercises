@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Basics</title>
+    <style>
+        input, label{
+            display: block;
+        }
+        input[type="checkbox"], input[type="radio"], select{
+            display: inline;
+        }
+        fieldset label, label[for="cheese"]{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Basics</h1>
+    <form method="post" action="processor.py" name="form1" id="form1" >
+        <label for="fname">first name:</label>
+        <input type="text" id="fname" name="fname" value="" placeholder="Bill" tabindex="1" required>
+
+        <label for="fav_color">favorite color:</label>
+        <input type="color" id="fav_color" name="favColor" tabindex="2">
+
+        <fieldset>
+            <legend>Do you want spam?</legend>
+            <input type="radio" name="spam" id="spam_yes" value="yes" tabindex="3">
+            <label for="spam_yes">yes</label>
+            <input type="radio" name="spam" id="spam_no" value="no" tabindex="4" checked>
+            <label for="spam_no">no</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Your favorite animals:</legend>
+            <input type="checkbox" name="animals[]" id="cat" value="cat" checked tabindex="5">
+            <label for="cat">cat</label>
+            <input type="checkbox" name="animals[]" id="dog" value="dog" checked tabindex="6">
+            <label for="dog">dog</label>
+            <input type="checkbox" name="animals" id="llima" value="llima" checked tabindex="7">
+            <label for="llima">llima</label>
+        </fieldset>
+        <label for="cheese">your favorite cheese:</label>
+        <select id="cheese" name="favCheese" tabindex="8">
+            <option disabled selected>Select One</option>
+            <option value="american" >American</option>
+            <option value="swiss" >Swiss</option>
+            <option value="brie">Brie</option>
+        </select>
+        <label for="comment">Tell us what you want:</label>
+        <textarea name="comment" id="comment" placeholder="type your comment..." cols="50" rows="10" style="resize: none"></textarea>
+        <input type="submit" name="submit" id="submit" value="Send">
+    </form>
+</body>
+</html>

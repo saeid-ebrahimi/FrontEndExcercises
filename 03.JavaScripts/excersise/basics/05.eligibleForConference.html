@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eligible group for conference</title>
+</head>
+<body>
+    <h2>eligible group for conference</h2>
+    <script>
+        const group_pars = [
+        {id:1,name:'sally',age:29},
+        {id:2,name:"rose",age:20},
+        {id:3,name:"mary",age:13},
+        {id:4,name:"pitter",age:20},
+        {id:5,name:"mike",age:23},
+        {id:6,name:"frank",age:30},
+        ]
+
+        const  are_aligable = group_pars.every(person => {
+            return person.age >= 18
+        })
+        if (are_aligable)
+            alert("your group is eligible to create meeting")
+        else
+            alert("your group isn't eligible. maybe some participants' age are less than 18")
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(255, 248, 236);
+    font-family: Tahoma;
+    color: rgba(19, 18, 18, 0.9);
+}
+header{
+    width: 95%;
+    margin: auto;
+}
+section{
+    width: 90%;
+    border: 2px gray solid;
+    padding: 2vh 2vw;
+    margin: 2vh auto;
+    overflow: auto;
+}
+
+section > img {
+    width: 90%;
+    margin: 2vh 4vw;
+}
+
+section .other{
+    margin: 1vh 1vw;
+    max-width: 27%;
+    margin: 2vh 2.2vw;
+    height: 25%;
+}
+#facts a{
+    text-decoration: none;
+    color:rgba(15, 14, 14, 0.9);
+    border-bottom: 1px solid darkred;
+}
+#facts a:hover{
+    color: black;
+    border-bottom: 2px solid darkred;
+}

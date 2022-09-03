@@ -1,0 +1,102 @@
+/********** Bill's resets **********/
+
+h1, h2, h3, p, ul, ol {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul, nav ol { list-style-type: none; }
+
+img { max-width:100%; }
+
+a { text-decoration:none;}
+
+* { box-sizing: border-box; }
+
+/************** End CSS RESET ****************/
+
+
+body { font-family: 'Gentium Basic', serif; color:#333; }
+
+header {
+	padding:0 20px;
+	
+}
+
+header h1 {
+	text-align: center;
+	font-size: 10vw;
+	margin-bottom: 0;
+	background: #E8E8E8;
+	padding: 50px 20px;
+}
+
+main { 
+	margin-top: 60px;
+	padding: 0 10px;
+}
+
+section { padding: 20px 10px; }
+
+.column, .double { padding: 0 10px; }
+
+footer {
+	margin: 0 20px;
+	padding: 40px;
+	background: #E8E8E8;
+}
+
+/************* Typography ************/
+
+h1, h2{ 
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+}
+
+p { 
+	line-height: 1.4em;
+	margin-bottom: 1em;
+}
+
+footer p { 
+	margin-bottom: 0;
+	text-align: center;
+}
+/**************** Flexslider Style ****************/
+.flexslider{
+	margin: 0 1.6vw;
+	border: none;
+	border-radius: 0;
+}
+.flex-control-paging li a.flex-active{
+	background-color: #041b5f;
+
+}
+.flex-control-paging li a{
+	background-color: #51649f;
+}
+.flex-control-paging li a:hover{
+	background-color: #2c3d72;
+}
+/**************** Media Queries ****************/
+
+@media only screen and (min-width: 600px) {
+	
+	main { display: flex; }
+
+	.column { flex: 1; }
+	
+}
+
+@media only screen and (min-width: 1000px) {
+	
+	#page {
+		max-width: 1000px;
+		margin: auto;
+	}
+
+	header h1 {font-size: 120px;}
+}
+

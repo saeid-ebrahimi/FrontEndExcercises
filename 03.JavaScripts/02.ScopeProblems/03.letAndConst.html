@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>using let and const</title>
+</head>
+<body>
+    <h1>using let and const</h1>
+</body>
+<script>
+
+    // var scope is in function(local) and global and it hoisted to the top
+    for (var n=0;n<10;n++)
+        console.log(n)
+    console.log(`value of n is ${n}`)
+    // let scope is block level
+    for (let i=0;i<10;i++)
+        console.log(i)
+    console.log(`value of i is ${i}`)
+    // const in general means cannot reassign a variable
+    // but we can reassign value of array elements
+    const name = "Rose"
+    //name = "Mary"   //raise error
+</script>
+</html>

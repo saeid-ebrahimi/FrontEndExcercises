@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 11</title>
+</head>
+<body>
+    <nav>
+         <ul>
+             <li><a href="#">link one</a></li>
+             <li><a href="#">link two</a></li>
+             <li><a href="#">link three</a></li>
+             <li><a href="#">link four</a></li>
+             <li><a href="#">link five</a></li>
+         </ul>
+    </nav>
+    <p>Here is a paragraph with a
+        <a href="http://google.com">link to google</a>
+        init
+    </p>
+    <script>
+        const links = document.querySelectorAll("nav ul li a")
+        for(const link of links){
+            link.addEventListener("click",function (event){
+                event.preventDefault()
+                alert("clicked!")
+            })
+        }
+    </script>
+</body>
+</html>

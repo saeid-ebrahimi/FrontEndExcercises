@@ -1,0 +1,49 @@
+body{
+    color: aliceblue;
+    background-color: darkcyan;
+    padding: .5rem;
+    margin: .5rem;
+}
+h1:hover{
+    text-decoration: underline;
+}
+input:hover{
+    border: 2px solid yellow;
+}
+input:active{
+    background-color: yellow;
+}
+input:valid{
+    color: darkgreen;
+}
+input:invalid{
+    color: darkred;
+}
+button{
+    border-radius: .5rem;
+    padding: .1rem .5rem;
+}
+button:hover{
+    color:white;
+    background-color: #006666 ;
+}
+button:active{
+    background-color: #33cc99 ;
+}
+li:hover{
+    color: white;
+    background-color: #006666 ;
+}
+li:active{
+    color: white;
+    background-color: #33cc99 ;
+}
+a:link{
+    color:white;
+}
+a:active{
+    color: #33cc99 ;
+}
+a:visited{
+    color: darkmagenta;
+}

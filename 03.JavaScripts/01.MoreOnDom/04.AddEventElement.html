@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Event Listener</title>
+</head>
+<body>
+    <h1>Java Script Events</h1>
+    <button>Don't Press Me!</button>
+    <script>
+        function ouch(){
+            alert("please don't press me!!")
+        }
+        let btn = document.querySelector("button")
+        btn.addEventListener("click",ouch)
+        btn.addEventListener("click",function (){
+            alert("No! please don't do that again!!")
+        })
+    </script>
+</body>
+</html>

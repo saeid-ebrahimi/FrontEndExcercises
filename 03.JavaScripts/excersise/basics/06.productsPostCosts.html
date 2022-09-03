@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating total post post cost</title>
+</head>
+<body>
+    <h1>Calculating total post post cost</h1>
+    <p></p>
+    <script>
+        const total_items = [
+        {id:1,name:"laptop", price: 2000},
+        {id:2,name:"phone",price:900},
+        {id:3,name:"mouse",price:99},
+        {id:4,name:"keyboard",price:300},
+        {id:5,name:"coolpad",price:80},
+        {id:6,name:"ipen",price:90}
+        ]
+
+        const new_items = total_items.filter(function(item){
+            return item.price < 100
+        })
+        const post_price = new_items.length * 1 + 20
+        document.querySelector("p").innerText = "total post price is: " + post_price + "\n"
+        
+        let items_price = 0
+        total_items.forEach(function(item){
+            items_price += item.price
+        }) 
+        document.querySelector("p").innerText += "items price is: "+ items_price + "\n"
+        document.querySelector("p").innerText += "total price is: " + (items_price + post_price) + "\n"
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online test</title>
+</head>
+<body>
+    <h1>Online test</h1>
+    <script>
+        const questions = [
+            {id:1,title:"2+3",answer:"5"},
+            {id:2,title:"4*3",answer:"12"},
+            {id:3,title:"3**4",answer:"81"},
+            {id:4,title:"12/2",answer:"6"},
+            {id:5,title:"7-8",answer:"-1"},
+            {id:6,title:"capital of iran",answer:"tehran"},
+            {id:7,title:"perspolis placed in",answer:"shiraz"}
+        ]
+        let score = 0
+        questions.forEach(question => {
+            const user_answer = prompt(question.title + "?")
+            if (user_answer.toLowerCase === question.answer)
+                score++
+        })
+        alert("your final score is "+ score)
+    </script>
+</body>
+</html>

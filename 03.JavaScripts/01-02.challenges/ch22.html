@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Challenges</title>
+</head>
+<body>
+    <h1>Challenge 22</h1>
+    <p>here is the text</p>
+    <button>Turn it to green</button>
+</body>
+<script>
+    let button = document.querySelector("button")
+    let paragraph = document.querySelector("p")
+    button.addEventListener("click",function (){
+        paragraph.style.color = "darkgreen"
+        paragraph.style.backgroundColor = "silver"
+    })
+</script>
+</html>

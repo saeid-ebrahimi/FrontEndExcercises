@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing jQuery</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Is jQuery Working?</h1>
+    <p>par1</p>
+    <p>par2</p>
+    <p>par3</p>
+    <p>par4</p>
+    <!--Add jQuery library here-->
+
+    <script>
+        /*
+        if (window.jQuery) {
+            alert("jQuery is loaded! :-)");
+        }
+        else {
+            alert("jQuery is not loaded :-(");
+        }
+		*/
+        jQuery("h1").css("color","red")
+        $("h1").css("background-color","gray")
+        jQuery("p").css("color","white")
+        $("p").css("background-color","blue")
+    </script>
+
+</body>
+
+</html>

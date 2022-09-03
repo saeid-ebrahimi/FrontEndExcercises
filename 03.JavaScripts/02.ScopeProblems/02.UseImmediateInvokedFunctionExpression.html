@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use IIFE</title>
+</head>
+<body>
+    <h1>Use Immediate Invoked Function Expression</h1>
+    <h2> namespacing</h2>
+    <p>here is par1</p>
+    <p>here is par2</p>
+    <p>here is par3</p>
+    <p>here is par4</p>
+    <p>here is par5</p>
+</body>
+<script>
+    (function(){
+        const ps = document.querySelectorAll("p")
+        for (p of ps){
+            p.style.color = "darkgreen"
+        }
+    })()
+</script>
+</html>

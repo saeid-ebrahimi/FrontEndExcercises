@@ -1,0 +1,25 @@
+
+body { padding: 100px; background:#717171; }
+
+#slider {
+	width:400px;
+	overflow:hidden;
+	border: 10px solid #4C4C4C;
+	height:266px;
+	position:relative;
+	margin:auto;
+}
+
+#slider ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+}
+
+#slider ul li img {
+	display: block;
+}

@@ -1,0 +1,56 @@
+h1, h2, h3, h4, ul, li, p{
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+body{
+    font-family: Arial;
+    color: #030303;
+}
+header{
+    padding: 5rem;
+    background-color: cornflowerblue;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+main{
+    max-width: 80vw;
+    padding: 2vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+main form{
+    width: 40%;
+}
+main article{
+    width: 45%;
+}
+
+h1, h2, h3, h4, p{
+    margin-bottom: 1rem;
+}
+
+#title{
+    text-align: center;
+}
+#destination_details_form label{
+    display: block;
+    margin-bottom: 1em;
+}
+#destination_details_form > input, textarea, button{
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    border: inset 1px #333333;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+.card{
+    background-color: #efefef;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}

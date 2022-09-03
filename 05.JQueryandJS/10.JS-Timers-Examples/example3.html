@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>recursion</title>
+
+	<style>
+
+		body { padding-top: 100px; }
+
+		.one {
+			width:100px;
+			height:100px;
+			background:#910104;
+			border-radius:50%;
+			margin:auto;
+			transition: all 2s;
+		}
+
+		.two {
+			width:500px;
+			height:500px;
+			background:#1B2F6B;
+			border-radius:50%;
+			margin:auto;
+			transition: all 2s;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="thediv" class="one"></div>
+
+	<script>
+		const div1 = document.getElementById("thediv")
+		let currentClass = "one"
+		function classToggle(){
+			if (currentClass === "one")
+			{
+				setTimeout(function (){
+					div1.className = "two"
+					currentClass = "two"
+					classToggle()
+				},2000)
+			}
+			else{
+				setTimeout(function (){
+					div1.className = "one"
+					currentClass = "one"
+					classToggle()
+				}, 2000)
+			}
+		}
+		classToggle()
+		/*
+		var theDiv = document.getElementById("thediv");
+		var currentClass = "one";
+
+		function classRotator()
+		{
+			if( currentClass == "one" )
+			{
+				setTimeout( function(){ 
+					theDiv.className="two"; 
+					currentClass = "two"; 
+					classRotator(); }, 2000 );
+			}
+			else
+			{
+				setTimeout( function(){ 
+					theDiv.className="one"; 
+					currentClass = "one"; 
+					classRotator(); }, 2000  );
+			}
+		}
+
+		classRotator();
+		*/
+	</script>
+
+</body>
+</html>

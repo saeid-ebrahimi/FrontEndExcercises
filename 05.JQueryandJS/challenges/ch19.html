@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 19</title>
+</head>
+<body>
+    <nav>
+         <ul>
+            <li><a href="#" id="link1">link one</a></li>
+            <li><a href="#" id="link2">link two</a></li>
+            <li><a href="#" id="link3">link three</a></li>
+            <li><a href="#" id="link4">link four</a></li>
+            <li><a href="#" id="link5">link five</a></li>
+         </ul>
+    </nav>
+    <p id="paralink1">Looks like you clicked the first link in the list</p>
+    <p id="paralink2">Looks like you clicked the second link in the list</p>
+    <p id="paralink3">Looks like you clicked the third link in the list</p>
+    <p id="paralink4">Looks like you clicked the fourth link in the list</p>
+    <p id="paralink5">Looks like you clicked the fifth link in the list</p>
+    <script>
+        const links = document.querySelectorAll("nav ul li a")
+        const paragraphs = document.querySelectorAll("p")
+
+        for(const link of links)
+        {
+            link.addEventListener("click",function (event)
+            {
+                for (let i=0; i < paragraphs.length; i++){
+                    paragraphs[i].style.color = "black"
+                    }
+                event.preventDefault()
+                document.querySelector("#para"+this.id).style.color = "red"
+            })
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>More on events</title>
+</head>
+<body>
+    <form method="get">
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name" placeholder="James">
+        <input type="submit">
+    </form>
+    <script>
+        let form1 = document.querySelector("form")
+        form1.addEventListener("submit",function (event1){
+            event1.preventDefault()
+            let name = document.querySelector("#name").value
+            alert(`your entered name is ${name}`)
+        })
+    </script>
+</body>
+</html>

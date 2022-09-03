@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Form Validation</title>
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	
+	<h1>Basic Form with JavaScript Validation</h1>
+
+	<form action="processor.php" method="post" id="myform">
+    
+    	<p><label for="name">Name</label><br>
+		<input id="name" name="name" type="text"><span id="name-err"></span></p>
+        
+        <p><label for="email">Email</label><br>
+        <input id="email" name="email" type="text"><span id="email-err"></span></p>
+        
+        <p><label for="url">Website</label><br>
+        <input id="url" name="url" type="text"><span id="url-err"></span></p>
+        
+        <p><label for="comments">Comments</label><span id="comments-err"></span><br>
+    	<textarea id="comments" name="comments" cols="40" rows="10"></textarea></p>
+        
+        <p><input name="send" type="submit" value="send it"></p>
+    
+    </form>
+	<!--
+	<script>
+
+		document.getElementById('myform').onsubmit = validateForm;
+
+		function validateForm()
+		{
+			var reName = /^[a-zA-Z]+(([\'\- ][a-zA-Z])?[a-zA-Z]*)*$/;
+			var reEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+			var reURL = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+
+			document.getElementById('name-err').innerHTML="";
+			document.getElementById('email-err').innerHTML="";
+			document.getElementById('url-err').innerHTML="";
+			document.getElementById('comments-err').innerHTML="";
+
+			var counter=0;
+
+			if( !reName.test(document.getElementById('name').value) )
+			{
+				fixForm( document.getElementById('name'), "Please provide a proper name" );
+				counter++;
+			}
+
+			if( !reEmail.test(document.getElementById('email').value) )
+			{
+				fixForm( document.getElementById('email'), "Please type add a valid email address" );
+				counter++;
+			}
+
+			var url = document.getElementById('url');
+			if( url.value != "" && !reURL.test(url.value) )
+			{
+				fixForm( url, "Please type a valid URL in the form of 'http://example.com'" );
+				counter++;
+			}
+
+			if( document.getElementById('comments').value == "" )
+			{
+				fixForm( document.getElementById('comments'), "Please provide some comments" );
+				counter++;
+			}
+
+			if(counter > 0)
+			{
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+
+		function fixForm(field, message)
+		{
+			var errorMessage = field.id + "-err";
+			document.getElementById(errorMessage).innerHTML = message;
+			document.getElementById(errorMessage).style.color = "red";
+			document.getElementById(field.id).focus();
+		}
+
+	</script>
+	-->
+</body>
+</html>
+

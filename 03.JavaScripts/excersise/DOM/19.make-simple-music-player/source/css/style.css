@@ -1,0 +1,13 @@
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    background-color: rgb(164, 190, 247);
+    width: 3rem;
+    height: 2rem;
+    border: 2px double gray;
+    border-radius: 50%;
+}
+button:hover{
+    background-color: rgb(82, 126, 223);
+    color: whitesmoke;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Element</title>
+</head>
+<body>
+    <h1>Create Element</h1>
+    <div>
+        <p>this is a paragraph on page</p>
+    </div>
+    <script>
+        let newTag = document.createElement("p")
+        let myText = document.createTextNode("new paragraph added!")
+        newTag.appendChild(myText)
+        let div = document.querySelector("div")
+        div.appendChild(newTag)
+        div.setAttribute("id","div1")
+
+
+    </script>
+</body>
+</html>

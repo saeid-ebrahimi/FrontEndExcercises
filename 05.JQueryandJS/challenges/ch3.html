@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>challenge 3</title>
+</head>
+<body>
+    <p>Don't change this paragraph</p>
+    <div id="main">
+        <p>change this paragraph.</p>
+        <p>change this paragraph too.</p>
+        <p>And change this last paragraph.</p>
+    </div>
+    <script>
+        const paragraphs = document.querySelectorAll("#main p")
+        for (const par of paragraphs){
+            par.style.fontSize = "24px"
+            par.style.color = "red"
+        }
+    </script>
+</body>
+</html>

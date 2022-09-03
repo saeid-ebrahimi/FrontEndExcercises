@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 16</title>
+</head>
+<body>
+    <nav>
+         <ul>
+             <li><a href="#">link one</a></li>
+             <li><a href="#">link two</a></li>
+             <li><a href="#">link three</a></li>
+             <li><a href="#">link four</a></li>
+             <li><a href="#">link five</a></li>
+         </ul>
+    </nav>
+    <p id="paragraph">Click a link to change this paragraph</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        jQuery("nav ul li a").click(function (event){
+            event.preventDefault()
+            $("#paragraph").html("You Clicked "+$(this).html())
+        })
+    </script>
+</body>
+</html>

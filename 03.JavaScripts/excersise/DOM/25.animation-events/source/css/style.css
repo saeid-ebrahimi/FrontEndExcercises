@@ -1,0 +1,16 @@
+div {
+  width: 600px;
+  height: 120px;
+  background-color: lightgray;
+  font-size: 22px;
+  padding: 10px;
+  text-align: center;
+  margin: 30px;
+  font-weight: bold;
+  position: relative;
+}
+
+@keyframes move {
+  from {top: 0px;}
+  to {top: 250px;}
+}

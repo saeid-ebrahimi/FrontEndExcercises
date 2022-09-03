@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selling ticket platform</title>
+</head>
+<body>
+    <h1>selling tickets platform</h1>
+    <h2 id="province"></h2>
+    <h3>the cities are: </h3>
+    <ul id="cities">
+    </ul>
+    <script>
+        const cities = {
+            tehran:["tehran","tehran pars","shahryar", "roudhen"],
+            fars:["shiraz","pasargad","daryan","fasa","jahrom","darab","lar","lamerd"],
+            khorasan_razavi:["mashad","nishabur","fariman","ghochan"],
+            azarbayejan_sharghi:["tabriz","bostan abad","marand","bonab","jolfa","ahar"]
+        }
+        const province = prompt("enter the source province please:")
+        const neightbors = cities[province]
+        if ( neightbors !== undefined){
+            document.getElementById("province").innerText = `selected province is ${province}: `
+            neightbors.forEach(city => {
+                document.getElementById("cities").innerHTML += `<li>${city}</li>`
+            })
+        }
+    </script>
+</body>
+</html>

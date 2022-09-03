@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+<body>
+    <h1>to do list</h1>
+    <script>
+        const tasks = {
+            "mike":["html","css"],
+            "john":["java script","jquery"],
+            "rose":["bootstrap","UI/UX"],
+            "mary":["react","vue"],
+            'lisa':["seo","link building"]
+        }
+        const employeeName = prompt("enter the employee name please: ")
+        const newTask = prompt("enter the new task(Note: to see employee task leave this field empty): ")
+        
+        const employeeTasks = tasks[employeeName]
+        
+        if (employeeTasks !== undefined && newTask.trim(" ") != "" && employeeName.trim(" ") != ""){
+            employeeTasks.push(newTask)
+        }else{
+            alert('invalid values entered for the fields')
+        }
+    </script>
+</body>
+</html>

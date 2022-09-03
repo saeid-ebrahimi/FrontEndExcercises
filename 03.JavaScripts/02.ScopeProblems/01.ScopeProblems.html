@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope Problems</title>
+</head>
+<body>
+    <h1>Here is scope problems</h1>
+</body>
+<script>
+    oopsGlobal = "here is oops global"
+    global2 = "another global"
+    console.log(global2)
+    var global2
+    var global3 = "here is in global scope"
+    console.log(global3)
+    function scope(){
+        var global3 = "here is in local scope"
+        console.log(global3)
+    }
+    scope()
+    console.log(global3)
+    console.log(oopsGlobal)
+
+</script>
+</html>

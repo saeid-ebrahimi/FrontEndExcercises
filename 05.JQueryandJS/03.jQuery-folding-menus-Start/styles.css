@@ -1,0 +1,43 @@
+body {
+    background-color: #efefef;
+    font-family: Arial;
+    color: #333;
+    line-height: 1.4em;
+}
+
+main {
+    width: 800px;
+    margin:auto;
+    background-color:#FFF;
+    padding:20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+aside {
+    width: 250px;
+}
+
+article {
+    width:525px;
+}
+
+h1 {
+    height: 150px;
+    background: url("http://placekitten.com/525/150") no-repeat;
+    line-height: 150px;
+    text-align: center;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.hide-menu {
+    display: none;
+}
+
+.show-menu {
+    display: block;
+}
