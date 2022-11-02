@@ -1,0 +1,125 @@
+:root{
+    --bs-success: #198754
+}
+.row-header{
+    margin: 0px auto;
+    padding: 0px;
+}
+body{
+    font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.bi{
+    font-size: 1.5rem;
+    margin: 5px;
+    vertical-align: middle;
+}
+.row-content{
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px gray ridge;
+    min-height: 400px;
+}
+.row-content:last-child {
+    
+    border-bottom: 0px ridge;
+}
+.form-group {
+    margin-top: 1vh;
+}
+.footer{
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+}
+.row-footer{
+    padding: 20px 20px;
+}
+.jumbotron{
+    margin: 0px auto;
+    background-color:cornflowerblue;
+    color: #0f0f0f;
+}
+.address{
+    font-size: .8rem;
+    margin: 0px;
+}
+
+.footer-link{
+    text-decoration: none;
+    color:white;
+}
+#address .footer-link{
+    text-decoration: none;
+    color: rgb(6, 34, 87);
+    
+}
+#address .footer-link:hover {
+    color: cornflowerblue;
+}
+.footer-link:hover {
+    color: rgb(134, 170, 238);
+    
+}
+.footer div{
+    background: var(--bs-success);
+    color: white;
+}
+.breadcrumb{
+    background-color: wheat;
+    padding-left: 2rem;
+    border-radius: 1rem;
+}
+.tab-content{
+    border-left: 2px solid cornflowerblue;
+    padding: 10px;
+}
+.nav-tabs .nav-link{
+    color: rgb(77, 76, 76);
+}
+.nav-tabs .nav-link:focus {
+    color: cornflowerblue;
+}
+.collapsed:hover{
+    color: rgb(190, 216, 245);
+}
+.card-header{
+    background-color: cornflowerblue;
+}
+.collapsed{
+    color: white; 
+    text-decoration: none;
+}
+
+#qoute{
+    color: whitesmoke;
+    background-color: cornflowerblue;
+}
+/* style tables */
+.table{
+    cursor:default;
+}
+.table tbody tr:nth-child(2n+1){
+    background-color: cornflowerblue;
+    color: white;
+}
+.table thead tr {
+    color: cornflowerblue;
+    background-color: white;
+}
+.table tbody tr:nth-child(2n) {
+    color: cornflowerblue;
+    background-color: white;
+}
+.table td:hover, .table th:hover{
+    color:rgb(4, 16, 37) ;
+}
+.carousel{
+    background-color: rgb(126, 192, 194);
+}
+.carousel-item{
+    height: 300px;
+}
+.carousel-item img{
+    position: absolute;
+    
+    height: 300px;
+}
