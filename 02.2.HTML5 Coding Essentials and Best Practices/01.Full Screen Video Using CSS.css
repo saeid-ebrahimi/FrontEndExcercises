@@ -1,0 +1,13 @@
+
+    body {
+       margin: 0;
+    }
+
+     
+    video {
+       position: absolute;
+       width: 100vw;
+       height: 100vh;
+       object-fit: cover;
+       object-position: center center;
+    }

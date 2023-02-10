@@ -1,0 +1,17 @@
+#w3devCampusVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px; 
+  margin: -180px 0 0 -240px;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+#w3devCampusVideo:hover{
+  width: 400px; 
+  transform: rotate(+1deg)
+}
+video {
+  width:100%;
+  height:auto;
+}

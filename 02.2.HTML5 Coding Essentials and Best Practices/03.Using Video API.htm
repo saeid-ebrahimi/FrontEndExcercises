@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="03.Using Video API.css">
+    <link rel="shortcut icon" href="./Cydemy.jpg" type="image/x-icon">
+    <title>Using Video DOM API</title>
+    
+</head>
+<body>
+    <video src="https://mainline.i3s.unice.fr/mooc/big_buck_bunny_1080p_stereo.ogg" type="video/mp4"
+        width='360' height='240' id="vid">
+        <p>This video cannot be displayed.
+            <br /> No support for HTML5?
+        </p>
+    </video>
+    <div class="slide">
+    <span class="material-symbols-outlined" id="play"
+    onclick="playVideo()">
+        play_circle
+    </span>
+    <span class="material-symbols-outlined" id="pause"
+    onclick="pauseVideo()">
+        pause_circle
+    </span>
+    <span class="material-symbols-outlined" id="replay"
+    onclick="replayVideo()">
+        replay_circle_filled
+    </span>
+    <span class="material-symbols-outlined" id="backward" 
+    onclick="backward()">
+        replay_10
+    </span>
+    </div>
+    <p>to add a new video click <span onclick="addVideo()"
+         style="color:burlywood ; cursor:pointer;text-decoration:underline;">Here</span> </p>
+    <script src="03.Using Video API.js"></script>
+</body>
+</html>

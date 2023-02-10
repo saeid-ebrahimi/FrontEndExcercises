@@ -1,0 +1,40 @@
+.slide{
+    display: block;
+    visibility: visible;
+    position: absolute;
+    border-style: none;
+}
+#play,#pause,#replay,#backward,#forward,#next,#prev{
+    cursor: pointer;
+}
+body {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    height: 100%;
+    font-family: "Gill Sans MT", "Gill Sans", GillSans, sans-serif;
+    font-size: 19px;
+    color: #eeeeff;
+    background-color: #3d64ac;
+}
+
+div.slide {
+    text-shadow: black 1px 1px 1px;
+    filter: Shadow(Color=#000000, Direction=135, Strength=1);
+}
+div.slide {
+    z-index: 20;
+    position: relative;
+    margin: 0 0 0 0;
+    padding: 0;
+    border-width: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* for IE6 */
+    left: 0;
+    right: 0;
+    line-height: 1.2;
+    background: transparent;
+    overflow: auto;
+    /* Avoid collapsing of margins outside the slide */
+}

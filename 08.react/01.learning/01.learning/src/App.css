@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -23,9 +21,20 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.App-title{
+  font-size: 1.5rem;
+}
+
+.App-intro{
+  font-size: large;
+}
+
 
 .App-link {
   color: #61dafb;
+}
+.Media-list{
+  list-style-type: none;
 }
 
 @keyframes App-logo-spin {

@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple HTML5 video player</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="02.Full Screen Video Using Java Script.css">
+  <link rel="icon" type="image/x-icon" href="cydemy2.ico">
+  
+</head>
+<body onload="init();">
+  <video id="w3devCampusVideo" controls> 
+    <!-- I have three versions of the video encoded with
+        different codecs.  The browser will automatically
+        choose the first one it knows it can play. --> 
+    <source src="https://html5doctor.com/demos/video-canvas-magic/video.webm" type="video/webm"> 
+    <source src="https://html5doctor.com/demos/video-canvas-magic/video.ogg" type="video/ogg"> 
+    <source src="https://html5doctor.com/demos/video-canvas-magic/video.mp4" type="video/mp4"> 
+  </video> 
+
+  <script>
+      var video;
+
+      function init(){
+          //function called when the page is loaded
+          video = document.querySelector("#w3devCampusVideo")
+          
+          // for initial value 
+          video.width = 400;
+          video.height = 400;
+
+          // for dealing with window resize
+          window.onresize = function(){
+              video.width = window.innerWidth;
+              video.height = window.innerHeight;
+          }
+      }
+  </script>
+</body>
+</html>
+
