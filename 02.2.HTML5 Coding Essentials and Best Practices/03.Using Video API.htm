@@ -13,7 +13,7 @@
 </head>
 <body>
     <video src="https://mainline.i3s.unice.fr/mooc/big_buck_bunny_1080p_stereo.ogg" type="video/mp4"
-        width='360' height='240' id="vid">
+        width='360' height='240' id="vid" controls>
         <p>This video cannot be displayed.
             <br /> No support for HTML5?
         </p>
@@ -27,6 +27,10 @@
     onclick="pauseVideo()">
         pause_circle
     </span>
+    <span class="material-symbols-outlined" id="stop" 
+    onclick="stopVideo()">
+        stop_circle
+    </span>
     <span class="material-symbols-outlined" id="replay"
     onclick="replayVideo()">
         replay_circle_filled
@@ -34,6 +38,10 @@
     <span class="material-symbols-outlined" id="backward" 
     onclick="backward()">
         replay_10
+    </span>
+    <span class="material-symbols-outlined" id="forward" 
+    onclick="forward()">
+        forward_10
     </span>
     </div>
     <p>to add a new video click <span onclick="addVideo()"

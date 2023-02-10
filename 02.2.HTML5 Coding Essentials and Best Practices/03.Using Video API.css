@@ -4,8 +4,11 @@
     position: absolute;
     border-style: none;
 }
-#play,#pause,#replay,#backward,#forward,#next,#prev{
+#play,#pause,#replay,#stop,#backward,#forward,#next,#prev{
     cursor: pointer;
+}
+#play:hover,#pause:hover,#replay:hover,#stop:hover,#backward:hover,#forward:hover,#next:hover,#prev:hover{
+    color: cadetblue;
 }
 body {
     margin: 0 0 0 0;
