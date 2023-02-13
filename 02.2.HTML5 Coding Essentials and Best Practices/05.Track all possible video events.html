@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Cydemy.jpg">
+    <script src="05.Track all possible video events.js" defer></script>
+    <title>Track All Possible Video Events </title>
+</head>
+<body>
+   <body onload='init();'>
+    <h1>Handling events for the <code>video</code> element</h1>
+    <video id="vid" controls>
+        <!-- I have three versions of the video encoded with
+       different codecs.  The browser will automatically
+       choose the first one it knows it can play. -->
+        <source src=https://mainline.i3s.unice.fr/mooc/samuraiPizzacat.webm type=video/webm>
+        <source src=https://mainline.i3s.unice.fr/mooc/samuraiPizzacat.ogg type=video/ogg>
+        <source src=https://mainline.i3s.unice.fr/mooc/samuraiPizzacat.mp4 type=video/mp4>
+    </video>
+    <p><div id="notes"></div></p>
+    <div id="eventslog"></div> 
+    
+</body>
+</html>

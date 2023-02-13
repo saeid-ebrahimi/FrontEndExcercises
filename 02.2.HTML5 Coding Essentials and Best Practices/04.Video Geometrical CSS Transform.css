@@ -1,0 +1,66 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+header,video {
+  display:block;
+}
+
+body{
+  padding:3em;
+}
+h1 {
+  font-size:20px;
+  margin:0 0 1em 0;
+  color:#393;
+}
+
+#stage{
+   background:#eee;
+   width:400px;
+   height:300px;
+   overflow:hidden;
+   position:relative;
+   margin:2em 0;
+}
+
+video {
+  width:400px;
+  height:300px;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#controls{
+  position:relative;
+  width:400px;
+}
+
+#change{
+  position:absolute;
+  right:-100px;
+  top:-300px;
+  width:100px;
+}
+
+button{
+  font-size:150%;
+  color: #369;
+  text-align:center;
+  display:block;
+}
+
+#change button{
+  width:60px;
+  border:none;
+  background: #ffffff;
+}
+h2 {
+  font-size:18px;
+  margin:1em 0;
+  color:#363;
+}
+
+

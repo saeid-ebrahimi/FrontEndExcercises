@@ -3,11 +3,12 @@
     visibility: visible;
     position: absolute;
     border-style: none;
+    
 }
-#play,#pause,#replay,#stop,#backward,#forward,#next,#prev{
+#play,#mute,#pause,#replay,#stop,#backward,#forward,#next,#prev{
     cursor: pointer;
 }
-#play:hover,#pause:hover,#replay:hover,#stop:hover,#backward:hover,#forward:hover,#next:hover,#prev:hover{
+#play:hover,#pause:hover,#replay:hover,#stop:hover,#backward:hover,#forward:hover,#next:hover,#prev:hover,#mute:hover{
     color: cadetblue;
 }
 body {
@@ -40,4 +41,9 @@ div.slide {
     background: transparent;
     overflow: auto;
     /* Avoid collapsing of margins outside the slide */
+}
+input[type="range"]{
+    width: 80px;
+    height: 5px;
+    vertical-align:text-top;
 }

@@ -20,29 +20,46 @@
     </video>
     <div class="slide">
     <span class="material-symbols-outlined" id="play"
-    onclick="playVideo()">
+    onclick="playVideo()" title="play">
         play_circle
     </span>
+    <span class="material-symbols-outlined" id="prev" 
+    onclick="prevVideo()" title="previous">
+        skip_previous
+    </span>
     <span class="material-symbols-outlined" id="pause"
-    onclick="pauseVideo()">
+    onclick="pauseVideo()" title="pause">
         pause_circle
     </span>
+    <span class="material-symbols-outlined" id="next" 
+    onclick="nextVideo()" title="next">
+        skip_next
+    </span>
     <span class="material-symbols-outlined" id="stop" 
-    onclick="stopVideo()">
+    onclick="stopVideo()" title="stop">
         stop_circle
     </span>
     <span class="material-symbols-outlined" id="replay"
-    onclick="replayVideo()">
+    onclick="replayVideo()" title="replay">
         replay_circle_filled
     </span>
     <span class="material-symbols-outlined" id="backward" 
-    onclick="backward()">
+    onclick="backward()" title="backward 10 seconds ">
         replay_10
     </span>
     <span class="material-symbols-outlined" id="forward" 
-    onclick="forward()">
+    onclick="forward()" title="forward 10 seconds">
         forward_10
     </span>
+    <span class="material-symbols-outlined" id="mute" 
+    title="mute or unmute">
+    volume_up
+    </span>
+    <input onchange="changeVolume()" id="volumerange" type="range" min="5" step="5" max="100" value="50">
+    <p>buffered video: <span style="color:burlywood" id="buffer"></span></p>
+    <div>
+        <ol id="playlist"></ol>
+    </div>
     </div>
     <p>to add a new video click <span onclick="addVideo()"
          style="color:burlywood ; cursor:pointer;text-decoration:underline;">Here</span> </p>
