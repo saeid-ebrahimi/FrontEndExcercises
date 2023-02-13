@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Usage of Path Drawing Mode</title>
+    <script>
+        
+        var canvas, ctx, w, h;
+
+            function init() {
+                canvas = document.getElementById('myCanvas');
+                ctx = canvas.getContext('2d');
+
+                w = canvas.width;
+                h = canvas.height;
+
+                console.time("time to draw");
+
+                for (var i = 0; i < 1000; i++) {
+                    var x = Math.random() * w;
+                    var y = Math.random() * h;
+                    var width = Math.random() * w;
+                    var height = Math.random() * h;
+
+                    ctx.rect(x, y, width, height);
+                }
+                ctx.stroke()
+                console.timeEnd("time to draw");
+            }
+  
+            
+    </script>
+</head>
+
+<body onload=init();>
+    <canvas id="myCanvas" width="400" height=400>
+        Your browser does not support the canvas tag.</canvas>
+</body>
+
+</html>

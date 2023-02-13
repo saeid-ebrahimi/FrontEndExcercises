@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Cydemy.jpg" type="image/x-icon">
+    <title>Using Canvas Element</title>
+    <style>
+        button{
+            color: antiquewhite;
+            background-color: purple;
+            cursor: pointer;
+            border-radius: 1rem;
+            box-shadow: 2px 2px 10px gray;
+        }
+        button:active{
+            background-color: rgb(182, 132, 228);
+            color: black;
+        }
+        canvas{
+            
+            margin-top: 1rem;
+            border: none;
+            border-radius: 2rem;
+            background-color: rgba(0, 255, 255, 0.007);
+            box-shadow: 2px 2px 100px gray;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img  src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"
+         width="512" id="logo" alt="logo" height="512">
+    </div>
+    <div id="controls">
+        <button onclick="drawRect()">Rectangle</button>
+        <button onclick="drawText()">Draw Welcome Text</button>
+        <button onclick="drawSomeRect()">Draw Some Rectangles</button>
+        <button onclick="drawMonster(0,0)">Draw Monster Head</button>
+        <button onclick="translateCoords(100,50)">Move Context</button>
+        <button onclick="scaleContext(2)">Make it 2x Bigger</button>
+        <button onclick="rotateContext(30)">Rotate it 30 &deg; Clockwise</button>
+        <button onclick="drawImage()">Draw an Image</button>
+        <button onclick="drawImageTag()">Draw the logo image tag</button>
+    </div>
+
+    
+    <canvas id="myCanvas" width="600px" height="600px"></canvas>
+    <script src="9.using canvas element.js">
+    </script>
+</body>
+</html>
