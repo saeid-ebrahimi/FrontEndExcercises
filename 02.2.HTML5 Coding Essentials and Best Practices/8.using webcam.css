@@ -1,6 +1,25 @@
-
-#snapshot {
-  vertical-align: top;
+button{
+    color: antiquewhite;
+    background-color: rgb(3, 62, 65);
+    border: solid 3px rgb(8, 158, 163);
+    border-radius: 1rem;
+}
+body{
+    background-color: lightblue;
+}
+#record.active{
+    color: red;
+}
+#record.normal:hover,#play:hover,#stop:hover,#snapshot:hover{
+    color: purple;
+}
+.myshot{
+    width: 240px;
+    height: 180px;
+}
+#myshots{
+    width: 100vw;
+    overflow-x: auto;
 }
 .blur {
   filter: blur(3px);

@@ -1,5 +1,13 @@
 let webcamStream = null
 let video = null
+
+let mediaRecorder;
+let recordedBlobs;
+
+let recordedVideo = document.getElementById("recorded")
+let recordButton = document.querySelector('#record');
+let playRecord = document.querySelector('#playRec');
+let downloadButton = document.querySelector('#download');
 let vgaButton, qvgaButton, hdButton, dimensions, mystream;
 function init(){
    vgaButton = document.querySelector('#vga');
@@ -7,6 +15,9 @@ function init(){
    hdButton = document.querySelector('#hd');
    dimensions = document.querySelector('#dimensions'); 
    video = document.getElementById("liveVideo")
+   recordButton.onclick = toggleRecording;
+   playRecord.onclick = playRec;
+   downloadButton.onclick = download;
 
 qvgaButton.onclick = function() {
       getMedia(qvgaConstraints);
@@ -28,6 +39,70 @@ qvgaButton.onclick = function() {
        }, 500);
     });
 }
+function handleDataAvailable(event) {
+  if (event.data && event.data.size > 0) {
+    recordedBlobs.push(event.data);
+  }
+}
+function handleStop(event) {
+  console.log('Recorder stopped: ', event);
+}
+function toggleRecording() {
+  if (recordButton.classList.contains('normal')) {
+    startRecording();
+    recordButton.classList.remove('normal')
+    recordButton.classList.add('active')
+  } else {
+    stopRecording();
+    recordButton.classList.remove('active')
+    recordButton.classList.add('normal')
+    playRec.disabled = false;
+    downloadButton.disabled = false;
+  }
+}
+function startRecording() {
+  recordedBlobs = [];
+    
+  try {
+    mediaRecorder = new MediaRecorder(window.webcamStream);
+  } catch (e) {
+    console.error('Exception while creating MediaRecorder: ' + e);
+    return;
+  }
+  console.log('Created MediaRecorder', mediaRecorder);
+  recordButton.classList.remove('active')
+  recordButton.classList.add('normal')
+  playRecord.disabled = true;
+  downloadButton.disabled = true;
+  mediaRecorder.onstop = handleStop;
+  mediaRecorder.ondataavailable = handleDataAvailable;
+  mediaRecorder.start(10); // collect 10ms of data
+  console.log('MediaRecorder started', mediaRecorder);
+}
+function stopRecording() {
+  mediaRecorder.stop();
+  console.log('Recorded Blobs: ', recordedBlobs);
+  recordedVideo.controls = true;
+}
+function playRec() {
+  const superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
+  recordedVideo.src = window.URL.createObjectURL(superBuffer);
+}
+function download() {
+  const blob = new Blob(recordedBlobs, {type: 'video/webm'});
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.style.display = 'none';
+  a.href = url;
+  a.download = 'test.webm';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(function() {
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+  }, 100);
+}
+
 function displayVideoDimensions() {
   dimensions.innerHTML = 'Actual video dimensions: ' + video.videoWidth +
     'x' + video.videoHeight + 'px.';
@@ -39,9 +114,10 @@ function getMedia(constraints) {
   }
  navigator.mediaDevices.getUserMedia(constraints)
  .then((stream) => {
+   recordButton.disabled = false;
    video.srcObject = stream;
    video.play();
-   window.mystream = stream;
+   window.webcamStream = stream;
  })
  .catch((error) =>{
     console.log('navigator.getUserMedia error: ', error);
@@ -87,9 +163,13 @@ function changeFilter(elem){
 }
 
 function snapShot(){
-    let canvas = document.getElementById("myshot")
+    let container = document.getElementById("myshots")
+    let canvas = document.createElement("canvas")
+    canvas.className = 'myshot'
     let ctx = canvas.getContext("2d")
     ctx.drawImage(video,0,0,canvas.width,canvas.height)
+    container.appendChild(canvas)
+
 }
 
 var qvgaConstraints = {
@@ -108,7 +188,7 @@ var vgaConstraints = {
 
 var hdConstraints = {
   video: {
-    width: { min: 1280 },
-    height: { min: 720 }
+    width: { max: 1280 },
+    height: { max: 720 }
   }
 };

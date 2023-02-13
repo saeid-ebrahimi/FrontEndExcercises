@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,100" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
     <link rel="shortcut icon" href="./Cydemy.jpg" type="image/x-icon">
     <link rel="stylesheet" href="8.using webcam.css">
     <title>Using Webacm with JS</title>
@@ -16,6 +17,8 @@
     </style>
 </head>
 <body onload="init()">
+    <h1>Webcam Stram Can Have Some Filteres By Clicking on The Video</h1>
+    <h3>Here You Can Choose Your Stream Video Quality</h3>
     <div id="buttons">
         <button id="qvga">QVGA</button>
         <button id="vga">VGA</button>
@@ -36,12 +39,30 @@
             onclick="stopStream()" title="stop">
         stop_circle
         </span>
-        <span class="material-symbols-outlined" id="" 
+        <span class="material-symbols-outlined" id="snapshot" 
             onclick="snapShot(this)" title="snapshot">
         screenshot
         </span>
+        <span class="material-icons-outlined normal" id="record" 
+         title="record video">
+        radio_button_checked
+        </span>
     </div>
-    <canvas id="myshot" width="200" height="150"></canvas>
+    <h3>Below You Can See Recorded Video</h3>
+    <video id="recorded" loop controls></video>
+    <div>
+        <span class="material-symbols-outlined" id="playRec"
+           title="play recorded video">
+        play_circle
+        </span>
+        <span class="material-symbols-outlined" id="download"
+            title="Download recorded video">
+        download
+        </span>
+    </div>
+    <div id="myshots">
+
+    </div>
     <script src="8.using webcam.js"></script>
 </body>
 </html>
