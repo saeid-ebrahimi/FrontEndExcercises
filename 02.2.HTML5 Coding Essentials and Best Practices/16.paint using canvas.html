@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="16.paint using canvas.css">
+    <link rel="shortcut icon" href="Cydemy.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+    <title>Paint Using Canvas</title>
+    <script src="./16.paint using canvas.js" defer></script>
+</head>
+<body>
+    
+    <p>This example shows how to paint in a canvas, with a "pencil"... The path that is drawn is made of several
+        contiguous lines. Each line is drawn in "immediate" mode. There is no animation loop in there as we must not
+        clear the canvas like in an animation loop. We draw only when the mouse moved.
+    </p>
+    <div>
+        <label for="size">Canvas Size:</label>
+        <input id="canvasWidth" type="number" value="400">
+        <span> x </span>
+        <input id="canvasHeight" type="number" value="400">
+        <button id="resize">resize</button>
+    </div>
+    <div>
+        <label for="canvasColor">Canvas Color: </label>
+        <input id="canvasColor" type="color" >
+    </div>
+    <div>
+        <span>Tools: </span>
+        <span id="pen1" class="material-icons-outlined">
+        draw
+        </span>
+        <span id="brush1" class="material-icons-outlined">
+        brush
+        </span>
+        <label for="thickness">thickness:</label>
+        <input id="thickness" type="number" value="1"> <span>px</span>
+    </div>
+    <div>
+        <label for="paintingColor">painting Color: </label>
+        <input type="color" id="paintingColor">
+    </div>
+    <canvas id="canvas1"  width="400px" height="400px" ></canvas>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Cydemy.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="9.Canvas Style.css">
+    <title>Draw Shpes Using Path</title>
+</head>
+<body>
+    <div>
+        <button onclick="clearCanvas()">Clear All</button>
+        <button onclick="drawGrid()">Draw Grid lines</button>
+        <button onclick="drawDiagnalLines()">Draw Diagnal Lines</button>
+        <button onclick="drawTriangles()">Draw Two Triangles</button>
+        <button onclick="drawArrow(50, 50, 150, 150, 4, 'cyan')">Draw Arrow with Desired Properties</button>
+        <button onclick="drawArc()">Draw an Arc</button>
+        <button onclick="drawCircle(200,200,80)">Draw a Circle</button>
+        <button onclick="drawRoundedRectangle(100,100,80,120,10,true,true)">
+            Draw Rounded Rectangle
+        </button>
+        <button onclick="drawRoundedTriangle(200,30,300,180,30,100,15,true,true)">
+            Draw Rounded Triangle
+        </button>
+        <button onclick="drawLineAndQuadratic()">
+            Draw Line Connected to Quadratic Curve
+        </button>
+        <button 
+        onclick="drawCurvedArrow(100,10,200,120,35,70,5,15,'black')">
+            Draw Curved Arrow
+        </button>
+        <button
+        onclick="drawBezierAndQuadraticPath()">
+            Draw Bezier And Quadratic Path
+        </button>
+        <button onclick="drawGradientRect()">
+            Draw Gradient Rectangle
+        </button>
+        <button onclick="drawGradientChessBoard(15)">
+            Draw Gradient Chess Board
+        </button>
+        <button onclick="drawGradientCheckBoard(15)">
+            Draw Gradient CheckBoard
+        </button>
+        <button onclick="drawGradientCellChessBoard(15)">
+            Gradient Cell Chess Board
+        </button>
+        <button onclick="drawRadialGradients()">
+            Draw Radial Gradients
+        </button>
+        <button onclick="drawPatterns()">
+            Draw Patterns
+        </button>
+        <button onclick="drawMultiplePattern()">
+            Draw Multiple Pattern
+        </button>
+        <button onclick="drawShadow()">
+            Draw Rectangle Shadow
+        </button>
+        <button onclick="drawCircleShadow()">
+            Draw Outlined Circle Shadow
+        </button>
+        <button onclick="changeLineCapAndJoin()">
+            Change Line Cap And Join
+        </button>
+    </div>
+    <canvas id="myCanvas" width="500px" height="500px">Your browser does not support the canvas tag.</canvas>
+    <script src="11.draw shapes using path.js"></script>
+</body>
+</html>

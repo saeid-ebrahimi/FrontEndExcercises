@@ -1,0 +1,33 @@
+body {
+    margin: 20px;
+    padding: 50px;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: blueviolet;
+}
+canvas{
+    margin-top: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: rgba(0, 255, 255, 0.007);
+    box-shadow: 2px 2px 100px gray;
+}
+button{
+    color: aliceblue;
+    background-color: cadetblue;
+    border: none;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+}
+input{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+}
+input[type="number"]
+{
+    width: 5rem;
+}
+.material-icons-outlined{
+    vertical-align: bottom;
+    cursor: pointer;
+}
