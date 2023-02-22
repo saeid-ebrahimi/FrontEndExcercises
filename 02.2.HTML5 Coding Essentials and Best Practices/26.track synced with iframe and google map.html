@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26.track synced with iframe and google map</title>
+    <link rel="shortcut icon" href="Cydemy.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="26.track synced with iframe and google map.css">
+</head>
+<body>
+    <main>  
+    <header>
+    <h1>Example of a video in sync with an iframe and a Google Map</h1>
+    <p>We use for this <a href="https://mainline.i3s.unice.fr/mooc/SamuraiPizzaCat-metadata.vtt" target="_blank">a webVTT metadata file that contains JSON objects</a>:</p>
+    <pre>
+    <code>
+    2
+    00:07.810 --> 00:09.221
+    {
+    "type": "WikipediaPage",	 
+    "url" :"https://en.wikipedia.org/wiki/HTML5"
+    }
+
+    3
+    00:11.441 --> 00:14.441
+    {
+    "type": "LongLat",
+    "lat" : "36.198269",
+    "long": "137.2315355"
+    }
+    </code>
+    </pre>
+    </header>
+    <video id="myVideo" controls crossorigin="anonymous">
+        <source src="http://mainline.i3s.unice.fr/mooc/samuraiPizzacat.mp4" type="video/mp4">
+        <source src="http://mainline.i3s.unice.fr/mooc/samuraiPizzacat.ogg" type="video/ogg">
+        <source src="http://mainline.i3s.unice.fr/mooc/samuraiPizzacat.webm" type="video/webm">
+        <track label="url track" kind="metadata" src="https://mainline.i3s.unice.fr/mooc/SamuraiPizzaCat-metadata.vtt" >
+    </video>
+    <div id="map" allow="Access-Control-Allow-Origin"></div>
+    </main>
+    
+    <aside>
+        <iframe crossorigin="anonymous" sandbox="allow-same-origin allow-scripts" id="myIframe">
+            you need to disable browser or server CORS policy
+        </iframe>
+    </aside>
+    <h3>Wikipedia URL: <span id="currentURL"> Non défini </span></h3>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFB1GLugl4GXsi_zKVGKZDvxKIehLb5B8&callback=Function.prototype"></script>
+    <script src="./26.track synced with iframe and google map.js"></script>
+</body>
+</html>

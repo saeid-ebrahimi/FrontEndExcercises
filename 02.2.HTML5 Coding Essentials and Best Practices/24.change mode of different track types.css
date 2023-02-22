@@ -1,0 +1,31 @@
+div{
+    display: block;
+    background-color: antiquewhite;
+    font-family:cursive;
+    margin: 2rem auto;
+    padding: 2rem;
+    width : 80%;
+    max-height: 35vh;
+    overflow-y: auto;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 50px 20px darkblue;
+}
+#myVideo{
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+button{
+    margin-top: 1rem;
+    font-family: sans-serif;
+    background-color: cadetblue;
+    color: aliceblue;
+    border: solid 1px blue;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+button:hover,button:active{
+    background-color: blueviolet;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Cydemy.jpg" type="image/x-icon">
+    <title>Different Type of files after choosing</title>
+</head>
+<body>
+    <div>
+        <label for="files1">Choose multiple image files:</label>
+        <input type="file" multiple id="files1">
+        <div id="thumbnails"></div>
+    </div>
+    <div>
+        <label for="files2">Choose multiple text files:</label>
+        <input type="file" multiple id="files2"><br>
+        <label for="dileContent">Files Contents are here:</label><br>
+        <textarea rows=30 cols=50 id="filesContent"></textarea>
+    </div>
+    <div>
+        <label for="files3">Choose a song to play for you:</label>
+        <input type="file" id="files3"> <br>
+        <audio src="" id="song1" controls></audio> <br>
+        <button onclick="playSound()" disabled>Start</button>
+        <button onclick="stopSound()" disabled>Stop</button>
+    </div>
+    <script src="20.some Choose File APIs.js"></script>
+</body>
+</html>

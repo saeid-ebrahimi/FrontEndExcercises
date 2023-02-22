@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="shortcut icon" href="Cydemy.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="18.application From.css">
+    <script src="18.application From.js" defer></script>
+</head>
+<body>
+    <h2 class="title">Job Application Form</h2>
+    <p class="subtitle">Please Fill Out the Form Below to Submit Your Job Application!</p>
+    <form method="post" id="form1">
+        <fieldset>
+            <legend>Primary Informations</legend>
+            <div class="input-container">
+                <label for="photo">Upload Photo<span style="color:red;">*</span></label>
+                <input  multiple type="file" name="photo" id="photo" accept=".jpg,.png,.svg,.jpeg" required>
+                <div id="thumbnails"></div>
+            </div>
+            <div class="input-container">
+                <label for="fname">Name<span style="color:red;">*</span></label>
+                <input id="fname" autofocus autocomplete="on" maxlength="15" pattern="[A-Za-z]{3,15}" type="text" name="fname" placeholder="First Name" required>
+                <input id="lname" type="text" maxlength="15"  pattern="[a-zA-Z]{3,15}" name='lname' placeholder="Last Name" required>
+            </div>
+            <div class="input-container">
+                <label for="email">Email<span style="color:red;">*</span></label>
+                <input type="email" multiple id="email" name="email" placeholder="ex: myname@example.com   (you can add more emails seperated by comma)" required>
+            </div>
+            <div class="input-container">
+                <label for="phone">Phone Number<span style="color:red;">*</span></label>
+                <input type="tel" maxlength="11" pattern="[0]{1}[0-9]{10}" name="phone" id="phone" placeholder="(000) 000-0000" required>
+            </div>
+            <div class="input-container">
+                <label for="position">Applied Position<span style="color:red;">*</span></label>
+                <input type="text" id="position" name="position" placeholder="ex: IT Engineer" required>
+            </div>
+            <div class="input-container">
+                <label for="bdate">Birth Date<span style="color:red;">*</span></label>
+                <input type="date" min="1970-01-01"
+                 name="bdate" id="bdate" placeholder="ex: 01-01-1998" required>
+            </div>
+            <div class="input-container">
+                <label for="startDate">Earliest Possible Start Date</label>
+                <input type="date"  min="2023-01-01" id="startDate" name="startDate" placeholder="MM-DD-YYYY">
+                <datalist id="birthdayPartyPossibleDates">
+                    <option label="Best for me">2023-06-20</option>
+                    <option label="Ok for mee too">2023-06-27</option>
+                    <option label="This one is a little later, hmm">2023-06-28</option>
+                </datalist>
+            </div>
+            <div>
+                <label for="workStatus">What is your current employment status?<span style="color:red;">*</span></label>
+                <input type="radio" class="status" name="workStatus" id="employed" value="employed" ><label  class="radioLabel" for="employed">Employed</label><br>
+                <input type="radio" class="status"  name="workStatus" id="selfEmployed" value="selfEmployed"><label  class="radioLabel" for="selfEmployed">Self-Employed</label><br>
+                <input type="radio" class="status"  name="workStatus" id="unemployed" value="unemployed" checked><label  class="radioLabel" for="unemployed">Unemployed</label><br>
+                <input type="radio" class="status"  name="workStatus" id="student" value="student"><label  class="radioLabel" for="student">Student</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Additional Informations</legend>
+            <div class="input-container">
+                <label for="exprience">work exprience</label>
+                <input type="number" min="0" max="20" name="exprience" id="exprience" value="0"><output>years</output>
+            </div>
+            <div class="input-container">
+                <label for="interview">Preferred Interview Date</label>
+                <input type="datetime-local" id="interview">
+            </div>
+            <div class="input-container">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender">
+                    <option value="" disabled selected>-- Select An Option --</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Prefer Not to Say</option>
+                </select>
+            </div>
+            <div>
+                <label for="link">Linked-in or Website URL</label>
+                <input type="url" pattern="(http|https|ftp)://[a-zA-Z0-9\-\.\/]*" name="link" id="link">
+            </div>
+            <div>
+                <label for="favColor"> Favorite Color</label>
+                <input type="color" name="color" id="favColor" list="colors">
+                <datalist id="colors">
+                    <option>#0000FF</option>
+                    <option>#00FF00</option>
+                    <option>#FF0000</option>
+                    <option>#FFFF00</option>
+                    <option>#FF00FF</option>
+                    <option>#00FFFF</option>
+                    <option>#FFFFFF</option>
+  
+                </datalist>
+            </div>
+            <div>
+                <label for="huby">Your Favorite Huby</label>
+                <input list="hubies" name="huby" id="huby">
+                <datalist id="hubies">
+                    <option value="movie">Watch a Movie</option>
+                    <option value="sport">Play Sports</option>
+                    <option value="music">Play a music</option>
+                    <option value="game">play a game</option>
+                    <option value="instrument">play an Instrument</option>
+                    <option value="social">Using Social Media</option>
+                </datalist>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Exprience Documents</legend>
+            <div>
+                <label for="level">
+                    level of your skills in web development
+                </label>
+                <input type="range" name="level" id="level" 
+                min="0" max="10" value="2" step="1" list="ticks">
+                <datalist id="ticks">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </datalist>
+
+
+            </div>
+            <div class="input-container">
+                <label for="cover">Cover Letter<span style="color:red;">*</span></label>
+                <textarea name="cover" id="cover" cols="30" rows="10" placeholder="Please do not exceed 200 words"></textarea>
+            </div>
+            <div class="input-container">
+                <label for="resume">Upload Resume<span style="color:red;">*</span></label>
+                <input type="file" id="resume" multiple accept=".pdf,doc,.html,.docx,.jpg,.png">
+            </div>
+        </fieldset>
+        <fieldset>
+
+            <div class="input-container">
+                <label for="contact">Contact Form<span style="color:red;">*</span></label>
+                <input type="checkbox" class="contact" name="contact" id="email2" value="email" checked required><label class="checkLabel" for="email2">Send Me Email</label><br>
+                <input type="checkbox" class="contact" name="contact" id="call" value="call"><label class="checkLabel" for="call">Make Phone Call</label><br>
+                <input type="checkbox" class="contact" name="contact" id="text" value="text"><label class="checkLabel" for="text">Send Text Message</label><br>
+            </div>
+        </fieldset>
+            <div class="input-container">
+                <input type="submit" id="submit" value="Apply" class="button" formenctype="multipart/form-data" formtarget="_blank" >
+                <input type="reset" value="Clear" class="button">
+                <input type="button" id="save" value="Save" class="button">
+                <!-- <input type="submit" formaction="otherAction.php" formmethod="get" formnovalidate value="Submit to another URL than default"> -->
+            </div>
+<!-- 
+            o	application/x-www-form-urlencoded: all characters are escaped/encoded before submission, for example, spaces become "+", accentuated characters are transformed into hexadecimal, etc.
+            o	multipart/form-data: encoding is not done. Usually we use this value for submitting binary data such as images, files, etc.
+            o	text/plain: some encoding is done on standard characters like space (that becomes a "+"), nothing is done for special characters. -->
+
+    </form>
+</body>
+</html>

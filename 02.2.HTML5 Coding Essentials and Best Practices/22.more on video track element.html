@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Cydemy.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="22.more on video track element.css">
+    <title>More on Video Track Element</title>
+</head>
+<body>
+    <video id="myVideo" preload="metadata" controls crossorigin="anonymous">
+        <source src="https://mainline.i3s.unice.fr/mooc/elephants-dream-medium.mp4" type="video/mp4">
+        <source src="https://mainline.i3s.unice.fr/mooc/elephants-dream-medium.webm" type="video/webm">
+        <track label="English Subtitle" kind="subtitles" srclang="en"
+        src="https://mainline.i3s.unice.fr/mooc/elephants-dream-subtitles-en.vtt">
+        <track label="Deutch Subtitle" kind="subtitles" srclang="de"
+        src="https://mainline.i3s.unice.fr/mooc/elephants-dream-subtitles-de.vtt" default>
+        <track label="English Chapter" kind="chapters" srclang="en"
+        src="https://mainline.i3s.unice.fr/mooc/elephants-dream-chapters-en.vtt">
+    </video>
+    <div id="control">
+        <button id="loadFirstTrackBtn" disabled>Force Load First Track</button>
+        <button id="loadThirdTrackBtn" disabled>Force Load Third Track</button>
+        <br>
+        <button id="listenFirstTrackBtn" disabled>Start listening to enter and exit events for
+        cues of track 0 (English subs)
+        </button>
+        <button id="listenThirdTrackBtn" disabled>Start listening to enter and exit events for
+            cues of track 1 (German subs)
+        </button>
+    </div>
+    <div id="trackStatusesDiv">
+    </div>
+    <div id="trackContent"></div>
+    <div id="cueEvents"></div>
+    <script src="22.more on video track element.js"></script>
+</body>
+</html>

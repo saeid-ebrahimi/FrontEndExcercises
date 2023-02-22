@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Cydemy.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Basic example of use of the geolocation API</title>
+</head>
+<body>
+    <p id="msg">Wanna Know Your Location? <span id="location" style="cursor:pointer;" class="material-symbols-outlined">
+location_on
+</span>
+</p>
+<script>
+    const locationElem = document.getElementById("location")
+    const displayCoords = document.getElementById("msg");
+    locationElem.addEventListener("click",getLocation,false)
+    function getLocation(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition, errorPosition)
+        }else{
+            displayCoords.innerHTML = "Geolocation API not supported by your browser."
+        }
+    }
+    function showPosition(position){
+        displayCoords.innerHTML =  `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`
+    }
+    function errorPosition(error) {
+        let info = "Error during geolocation: ";
+        switch (error.code) {
+            case error.TIMEOUT:
+                info += "Timeout !";
+                break;
+            case error.PERMISSION_DENIED:
+                info += "Permission denied, geolocation could not be obtained...";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                info += "Location could not be obtained though the available means...";
+                break;
+            case error.UNKNOWN_ERROR:
+                info += "Unknown error";
+                break;
+        }
+        displayCoords.innerHTML = info;
+    }
+
+</script>
+</body>
+</html>

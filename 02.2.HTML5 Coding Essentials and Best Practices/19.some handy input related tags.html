@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some Input related tags</title>
+</head>
+<body>
+    <div>
+
+        <input type="number" name="x" id="x" value="1">
+        <label for="">x</label>
+        <input type="number" name="y" id="y" value="2">
+        <label for="">=</label>
+        <output id="result" for="x y">2</output>
+    </div>
+    <div>
+        <input id="grade" type="range" min="0" max="100" step="5" value="50">
+        <output for="grade" id="rangeVal">50%</output><br>
+        <meter id="gradeMeter" value="50" min=0 low=20 high=80 max=100  optimum=18>50%</meter>
+    </div>
+    <div>
+        <p>simulate a download progress by changing in real time the value attribute.</p>
+        <p><code>&lt;progress id=prog value=10 max=1000&gt;</code><br>
+        Download Progress: <progress id="prog" value=10 max=1000></progress>
+        <output id="downOut">10%</output>
+    </p>
+        
+    </div>
+    <div>
+        <form >
+
+            <label for="password1">Password:</label> <input type="password" id="password1" oninput="checkPasswords()"
+            required>
+            <p>
+                <label for="password2">Repeat password:</label> <input type="password" id="password2"
+                oninput="checkPasswords()" required>
+                <p>
+                    <button>Submit</button>
+        </form>
+    </div>
+    <script>
+        const resultElem = document.getElementById("result")
+        const xElem = document.getElementById("x")
+        const yElem = document.getElementById("y")
+        const gradeRangeElem = document.getElementById("grade")
+        const gradeOutElem = document.getElementById("rangeVal")
+        const gradeMeterElem = document.getElementById("gradeMeter") 
+        const downProgressElem = document.getElementById("prog")
+        const downOutElem = document.getElementById("downOut")
+        xElem.addEventListener("change", calcResult,false)
+        yElem.addEventListener("change", calcResult,false)
+        function calcResult(){
+            resultElem.value = xElem.valueAsNumber * yElem.valueAsNumber 
+        }
+        gradeRangeElem.addEventListener("change",()=>{
+            gradeOutElem.value = gradeRangeElem.valueAsNumber +"%"
+            gradeMeterElem.value = gradeRangeElem.valueAsNumber
+        },false)
+        let cnt = 0
+        window.setInterval(()=>{
+            cnt = (cnt+1)%1000
+            downProgressElem.value = cnt
+            downOutElem.value =parseInt(cnt/ Number(downProgressElem.getAttribute("max"))*100 )+ "%"
+        },1)
+
+        function checkPasswords() {
+            var password1 = document.getElementById('password1');
+            var password2 = document.getElementById('password2');
+            if (password1.value != password2.value) {
+                password2.setCustomValidity('non identical passwords!!');
+            } else {
+                password2.setCustomValidity('');
+            }
+        }
+    </script>
+</body>
+</html>

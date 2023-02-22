@@ -1,0 +1,131 @@
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  max-width: 800px;
+  margin:2rem auto;
+  padding: 3rem;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #b9b9b9;
+  background-color: #e3e3e3;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 8px 10px orangered;
+}
+h2,p {
+  color: #f0a500;
+}
+label{
+    color: #e6a00a;
+}
+legend{
+    color: #bd8200;
+    font-weight: bolder;
+}
+input:invalid{
+    color: red;
+    text-decoration: underline;
+}
+input:valid{
+  color: rgb(11, 167, 11);
+}
+/* input:required{
+  border: 1px solid red;
+}
+input:optional{
+  border: 1px solid green;
+} */
+input.invalid{
+    color: red;
+    text-decoration: underline;
+}
+fieldset{
+    border: none;
+    border-left: 2px solid red ;
+    margin-bottom: 3rem;
+}
+input, select{
+    color:gray;
+}
+
+input,
+select option,
+select, textarea {
+  width: 100%;
+  padding: 1rem;
+  line-height: 1.4;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+input:focus {
+  outline: 0;
+  border-color: #bd8200;
+}
+input:focus {
+  color: #f0a500;
+
+}
+input:focus {
+  border-right-color: #f0a500;
+}
+label{
+    display: block;
+}
+
+input[type="number"]{
+    width: 80%;
+}
+input[type="checkbox"], input[type="radio"]{
+    display: inline;
+    width: 4vw;
+}
+textarea{
+  resize: none;
+}
+.checkLabel,.radioLabel{
+    display: inline;
+    padding-left: 0px;  
+}
+input.button, input[type="file"]{
+    background-color: #e6a00a;
+    color: white;
+    cursor:pointer;
+    font-size: large;
+    font-weight: bold;
+}
+
+select {
+  height: 3.4rem;
+  line-height: 2;
+}
+select:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+select:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+select:focus,
+select:active {
+  outline: 0;
+}
+select option {
+  background-color: #f0a500;
+  color: #fff;
+}
+#favColor{
+    width: 3rem;
+    color: #bd8200;
+    background-color: #000;
+    border: #e6a00a;
+}

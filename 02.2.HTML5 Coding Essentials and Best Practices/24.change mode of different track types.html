@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./24.change mode of different track types.css">
+    <link rel="shortcut icon" href="Cydemy.jpg" type="image/x-icon">
+    <script src="./24.change mode of different track types.js" defer></script>
+    <title>Change track modes and show them</title>
+</head>
+<body>
+    <div>
+
+        <p style="text-align: left;">This setup contains a video encoded in both <a
+            href="http://demo.jwplayer.com/html5-report/sintel.webm">WebM</a> and <a
+            href="http://demo.jwplayer.com/html5-report/sintel.mp4">MP4</a>.
+            The video contains four tracks:
+        </p>
+    </div>
+    <div>
+        <video id="myVideo" preload="metadata" poster="http://mainline.i3s.unice.fr/mooc/sintel.jpg"
+        crossorigin="anonymous" controls="controls" width="640" height="272">
+        
+        <source src="https://mainline.i3s.unice.fr/mooc/sintel.mp4" type="video/mp4" />
+        <source src="https://mainline.i3s.unice.fr/mooc/sintel.webm" type="video/webm" />
+        <track src="https://mainline.i3s.unice.fr/mooc/sintel-captions.vtt" kind="captions" label="English Captions"
+        default />
+        <track src="https://mainline.i3s.unice.fr/mooc/sintel-descriptions.vtt" kind="descriptions"
+        label="Audio Descriptions" />
+        <track src="https://mainline.i3s.unice.fr/mooc/sintel-chapters.vtt" kind="chapters"
+        label="Chapter Markers" />
+        <track src="https://mainline.i3s.unice.fr/mooc/sintel-thumbs.vtt" kind="metadata" label="Preview Thumbs" />
+        </video>
+    </div>
+    <div>
+    <p>Click one of these buttons to toggle the mode of each track:</p>
+    <button>Toggle english caption track mode</button><br>
+    <button>Toggle audio description track mode</button><br>
+    <button>Toggle chapter track mode</button><br>
+    <button>Toggle preview thumbnail track modes</button>
+    </div>
+    <div>
+
+        <h3>Tracks Status:</h3>
+        <div id="currentTrackStatuses"></div>
+    </div>
+    <div>
+        <h3>Caption transcript:</h3>
+        <div id="caption"></div>
+    </div>
+    <div>
+        <h3>Audio Description transcript:</h3>
+        <div id="description"></div>
+    </div>
+    <div>
+        <h3>Chapter transcript:</h3>
+        <div id="chapter"></div>
+    </div>
+    <div>
+        <h3>Thumbnails transcript:</h3>
+        <div id="thumb"></div>
+    </div>
+</body>
+</html>

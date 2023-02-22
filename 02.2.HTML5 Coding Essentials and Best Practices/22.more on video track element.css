@@ -1,0 +1,35 @@
+#trackContent, #trackStatusesDiv, #control,#cueEvents, video{
+    display: block;
+    background-color: antiquewhite;
+    font-family:cursive;
+    color: rgb(7, 86, 89);
+    margin: 2rem auto;
+    padding: 2rem;
+    width : 80vw;
+    max-height: 100vh;
+    overflow-y: auto;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 50px 20px darkblue;
+}
+#control{
+    text-align: center;
+}
+#loadFirstTrackBtn{
+        margin-right: 10vw;
+}
+#loadThirdTrackBtn{
+        margin-left: 10vw;
+}
+button{
+    margin-top: 1rem;
+    font-family: sans-serif;
+    background-color: cadetblue;
+    color: aliceblue;
+    border: solid 1px blue;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+button:hover,button:active{
+    background-color: blueviolet;
+}
