@@ -8,6 +8,7 @@
 <body>
     <h1>Do Online Shop</h1>
     <script>
+        // some usage
         const allProducts = [
             {id:1,name:"notebook", price:"1000"},
             {id:2,name:"phone",price:"500"},
@@ -21,15 +22,14 @@
             { id: 6, name: "keyboard", price: "100" }
         ]
         const product = prompt("enter the product name please: ")
-        cnt=2
+       
         const add_available_item = allProducts.some(productItem => {
             if (productItem.name === product){
                 new_item = {
-                    id:cnt,
+                    id: productItem.id,
                     name:productItem.name,
                     price:productItem.price
                 }
-                cnt++
                 userBasket.push(new_item) 
                 return true
             }

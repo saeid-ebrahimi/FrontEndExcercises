@@ -8,6 +8,7 @@
 <body>
     <h2>eligible group for conference</h2>
     <script>
+        // every and some usage
         const group_pars = [
         {id:1,name:'sally',age:29},
         {id:2,name:"rose",age:20},
@@ -17,10 +18,10 @@
         {id:6,name:"frank",age:30},
         ]
 
-        const  are_aligable = group_pars.every(person => {
+        const  are_eligable = group_pars.every(person => {
             return person.age >= 18
         })
-        if (are_aligable)
+        if (are_eligable)
             alert("your group is eligible to create meeting")
         else
             alert("your group isn't eligible. maybe some participants' age are less than 18")

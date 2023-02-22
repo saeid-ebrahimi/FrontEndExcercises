@@ -13,7 +13,6 @@
         {id:2,fname:"Robert",lname:"Margoni",age:21, email:"Robert@gmail.com"},
         {id:3,fname:"Rose",lname:"Goldenberg", age:31, email:"Rose@gmail.com"}
         ]
-        let user_count = 4
         const user_fname = prompt("please provide your first name :")
         const user_lname = prompt("please provide your last name: ")
         const user_age = Number(prompt("please provide your age:"))
@@ -28,13 +27,12 @@
                 alert("please provide a valid age!")
             else{
                 const new_user={
-                    id: user_count,
+                    id: users.length +1,
                     fname: user_fname,
                     lname:user_lname,
                     age:user_age,
                     email:user_email
                 }
-                user_count++
                 users.push(new_user)
             }
         }else{

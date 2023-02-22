@@ -19,7 +19,7 @@
         ]
         let score = 0
         questions.forEach(question => {
-            const user_answer = prompt(question.title + "?")
+            const user_answer = prompt(question.id +" of "+questions.length+" : " + question.title + "?")
             if (user_answer.toLowerCase === question.answer)
                 score++
         })
