@@ -1,0 +1,79 @@
+body {
+  font-size: 15px;
+  font-family: sans-serif, serif;
+}
+
+body * {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  color: gray;
+}
+
+audio {
+  width: 98%;
+  height: 40px;
+  background-image: linear-gradient(to right, teal , goldenrod);
+  opacity: 0.9;
+  padding: 1%;
+}
+
+canvas {
+  background-color: black;
+  width: 100%;
+  height: 260px;
+}
+
+#Canvas-1 {
+  height: 40px;
+}
+
+.startBut {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(100, 100, 100, 0.35);
+  z-index: 10;
+}
+
+.startBut button {
+  border-radius: 50%;
+  font-size: 1.5em;
+  border-width: 0.5em;
+  border-color: goldenrod;
+  border-style: outset;
+  width: 7em;
+  height: 7em;
+  cursor: pointer;
+}
+
+.startBut button:hover {
+  border-style: inset;
+  border-width: 0.35em;
+  border-color: teal;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.startBut button:hover i {
+  font-size: 4.5rem !important;
+  transform: rotate(90deg); 
+}
+
+.browserupgrade {
+  background-color: white;
+  margin-top: 1rem;
+  padding: 1rem;
+  z-index: 1000;
+}

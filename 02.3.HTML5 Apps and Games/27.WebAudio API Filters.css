@@ -1,0 +1,59 @@
+body {
+    
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;           
+}
+label{
+    display: inline-block;
+    width: 8rem;
+    text-align: left;
+}
+audio{
+    margin: 1rem 0px;
+}
+#container{
+    background: rgb(56, 0, 0);
+    margin: 30px auto;
+    padding: 3rem;
+    width: 60%;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow:3px 3px 10px 5px #810505;
+
+}
+button{
+    margin: 1rem 0px;
+    background-color: #810505;
+    color: aliceblue;
+    line-height: 2rem;
+    border-radius: 15px; 
+    border: solid 3px #810505
+}
+button:active{
+    background-color: aliceblue;
+    color: #810505;
+    border: ridge 3px #810505;
+}
+input[type='range']{
+    -webkit-appearance: none;
+    background-color: #810505;
+    height: 15px;
+    border-radius: 15px;
+    padding: 0 3px;
+    }
+select{
+    color: aliceblue;
+    background-color: #810505;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 20px;
+    border: solid 3px #810505;
+}
+input[type='range']::-webkit-slider-thumb {
+    vertical-align: middle;
+    -webkit-appearance: none;
+    background-color:aliceblue;
+    width: 13px;
+    height: 13px;
+    border-radius: 16px;
+}

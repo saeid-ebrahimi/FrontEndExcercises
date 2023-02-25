@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Cydemy.jpg" type="image/x-icon">
+    <title>WebAudio API Filters</title>
+    <link rel="stylesheet" href="27.WebAudio API Filters.css">
+</head>
+<body>
+    <div id="container">
+
+   <h1>WebAudio API Filters</h1>
+    <audio src="./musics/drums.mp3" id="gainExample" controls loop
+        crossorigin="anonymous"></audio>
+    <br>
+    <label for="gainSlider">Gain</label>
+    <input type="range" min="0" max="1" step="0.01" value=".5" id="gainSlider" />
+    <br>
+    <label for="balanceSlider">Balance</label>
+    <input type="range" id="balanceSlider" step="0.1" max="1" min="-1" value="0">
+    <br>
+    <button id="compressorButton">Turn compressor On</button>
+    <br>
+    <audio id="guitarplayer" src="./musics/guitarRiff1.mp3" controls crossorigin="anonymous" loop></audio>
+    <br>
+    <label for="biquadFilterFrequencySlider">Frequency:</label>
+    <input type="range" min="0" max="22050" step="1" value="350" id="biquadFilterFrequencySlider">
+    <br>
+    <label for="biquadFilterDetuneSlider">Detune:</label>
+    <input type="range" min="0" max="100" step="1" value="0" id="biquadFilterDetuneSlider" type="text">
+    <br>
+    <label for="biquadFilterQSlider">Q:</label>
+    <input type="range" min="0.0001" max="1000" step="0.01" value="1" id="biquadFilterQSlider">
+    <br>
+    <label for="convolverSlider">Reverb(Dry/Wet):</label>
+    <input type="range" min="0" max="1" step="0.1" value="0" id="convolverSlider" />
+    <br>
+    <label for="biquadFilterTypeSelector">Filter Type:</label>
+    <select name="filterType" id="biquadFilterTypeSelector">
+        <option value="lowpass" selected>lowpass</option>
+        <option value="highpass">highpass</option>
+        <option value="bandpass">bandpass</option>
+        <option value="lowshelf">lowshelf</option>
+        <option value="highshelf">highshelf</option>
+        <option value="peaking">peaking</option>
+        <option value="notch">notch</option>
+        <option value="allpass">allpass</option>
+    </select>
+    <br>
+    
+     </div>
+    <script src="27.WebAudio API Filters.js"></script>
+</body>
+</html>

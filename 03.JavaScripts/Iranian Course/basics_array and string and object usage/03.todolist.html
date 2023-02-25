@@ -10,22 +10,40 @@
     <script>
         // push , pop and trim
         const tasks = {
-            "mike":["html","css"],
-            "john":["java script","jquery"],
-            "rose":["bootstrap","UI/UX"],
-            "mary":["react","vue"],
-            'lisa':["seo","link building"]
-        }
-        const employeeName = prompt("enter the employee name please: ")
-        const newTask = prompt("enter the new task(Note: to see employee task leave this field empty): ")
-        
-        const employeeTasks = tasks[employeeName]
-        
-        if (employeeTasks !== undefined && newTask.trim(" ") != "" && employeeName.trim(" ") != ""){
-            employeeTasks.push(newTask)
-        }else{
-            alert('invalid values entered for the fields')
-        }
+                "mike": ["html", "css"],
+                "john": ["java script", "jquery"],
+                "rose": ["bootstrap", "UI/UX"],
+                "mary": ["react", "vue"],
+                "lisa": ["seo", "link building"]
+            }
+            const employeeName = prompt("enter employee name:")
+
+            if (employeeName.trim() !== "") {
+
+                const employeeTasks = tasks[employeeName]
+                if (employeeTasks !== undefined) {
+                    const newTask = prompt("enter the new task:(to see previous task leave it empty)")
+                    if (newTask.trim() !== "") {
+                        employeeTasks.push(newTask)
+
+                    } else {
+                        employeeTasks.forEach((task) => {
+                            alert(task)
+                        })
+                    }
+                } else {
+                    alert("employee current tasks is empty")
+                    const newTask = prompt("enter the new task:(to see previous task leave it empty)")
+                    if (newTask.trim() !== "") {
+                        tasks[employeeName] = [newTask]
+                    }
+                    else
+                        alert("please enter a task to add")
+                }
+            }
+            else
+                alert("please enter a name for employee")
+            console.log(tasks)
     </script>
 </body>
 </html>

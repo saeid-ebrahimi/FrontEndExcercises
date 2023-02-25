@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="28.audio equalizer.css">
+    <link rel="shortcut icon" href="./Cydemy.jpg" type="image/x-icon">
+    <title> Audio of Video Equalizer</title>
+</head>
+<body>
+    
+    <div class="eq">
+        <h2>Equalizer made with the Web Audio API</h2>
+        <video id="player" controls crossorigin="anonymous">
+        <source src="./videos/elephants-dream-medium.mp4" >
+        </video>
+        <div class="controls">
+            <label>60Hz</label>
+            <input type="range" value="0" step="1" min="-30" max="30"></input>
+            <output id="gain0">0 dB</output>
+        </div>
+        <div class="controls">
+            <label>170Hz</label>
+            <input type="range" value="0" step="1" min="-30" max="30"></input>
+            <output id="gain1">0 dB</output>
+        </div>
+        <div class="controls">
+            <label>350Hz</label>
+            <input type="range" value="0" step="1" min="-30" max="30"></input>
+            <output id="gain2">0 dB</output>
+        </div>
+        <div class="controls">
+            <label>1000Hz</label>
+            <input type="range" value="0" step="1" min="-30" max="30"></input>
+            <output id="gain3">0 dB</output>
+        </div>
+        <div class="controls">
+            <label>3500Hz</label>
+            <input type="range" value="0" step="1" min="-30" max="30"></input>
+            <output id="gain4">0 dB</output>
+        </div>
+        <div class="controls">
+            <label>10000Hz</label>
+            <input type="range" value="0" step="1" min="-30" max="30"></input>
+            <output id="gain5">0 dB</output>
+        </div>
+        <canvas id="myCanvas" width=500 height=200></canvas>
+        <canvas id="myCanvas2" width=300 height=100></canvas>
+    </div>
+    <script src="29.video equalizer.js"></script>
+</body>
+</html>
