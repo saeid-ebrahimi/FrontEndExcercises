@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Visibility and Z-Index</title>
+    <style>
+
+        div>div {
+            width: 100px;
+            height:10rem;
+            margin: 0.5rem;
+            background-color: rgba(194, 214, 244, 0.38);
+        }
+
+    </style>
+</head>
+<body class="container p-3">
+<div>
+    <div class="visible">lorem</div>
+    <div class="invisible">lorem</div>
+</div>
+<div class="position-relative">
+    <!--
+    <div class="z-3 position-absolute p-5 rounded-4"><span>z-3</span></div>
+    <div class="z-2 position-absolute p-5 rounded-4"><span>z-2</span></div>
+    -->
+    <div class="z-1 m-2 position-absolute p-5 rounded-4"><span>z-1</span></div>
+    <br>
+    <div class="z-0 m-2 position-absolute p-5 rounded-4"><span>z-0</span></div>
+    <br>
+    <div class="z-n1 m-2 position-absolute p-5 rounded-4"><span>z-n1</span></div>
+</div>
+
+</body>
+</html>

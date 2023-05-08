@@ -1,0 +1,84 @@
+*{
+	padding: 0;
+	margin:0;
+}
+
+.slider-container{
+	display: flex;
+	justify-content: center;
+	width: 400px;
+	height: 250px;
+	margin: auto;
+}
+.slider {
+	width: 100%;
+	position: relative;
+	z-index: 3;
+	top: 20%;
+	border-radius: 10px;
+	outline: 10px solid rgb(100, 100, 100);
+	overflow: hidden;
+}
+.slider ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+}
+.slider ul li img {
+	display: block;
+}
+
+.prev , .next{
+	position: absolute;
+	z-index: 10;
+	height: 100%;
+	text-decoration: none;
+	width: 25px;
+	background-color: rgba(135, 135, 135, 0.4);
+	font-size: 23px;
+	color: rgb(255, 252, 252);
+	vertical-align: center;
+	transition: all 230ms ease;
+	cursor: pointer;
+}
+.prev i, .next i{
+	position: relative;
+	top: 45%;
+}
+.prev:hover{
+	background-color: rgba(0,0,0,0.50);
+	color: white;
+	text-decoration: none;
+}
+.next:hover{
+	background-color: rgba(0,0,0,0.50);;
+	color: white;
+	text-decoration: none;
+}
+.next i,.prev i{
+	font-family: cursive;
+
+	padding: 2px;
+}
+.prev{
+	left:0;
+}
+.next{
+	right: 0;
+}
+.fadein-img{
+	animation: fadein 2s;
+}
+
+@keyframes fadein {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}

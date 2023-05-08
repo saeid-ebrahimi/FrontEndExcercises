@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <style>
+        body > div{
+            margin:1rem;
+        }
+    </style>
+    <title>Input Groups</title>
+</head>
+<body class="container">
+
+<div class="input-group input-group-sm">
+    <span class="input-group-text">@</span>
+    <input class="form-control" type="text" placeholder="username">
+</div>
+<div class="input-group input-group-md">
+    <span class="input-group-text">@</span>
+    <input class="form-control" type="text" placeholder="username">
+</div>
+<div class="input-group input-group-lg">
+    <span class="input-group-text">@</span>
+    <input class="form-control" type="text" placeholder="username">
+</div>
+<hr>
+<div class="input-group">
+    <span class="input-group-text">@</span>
+    <input class="form-control" type="text" placeholder="username">
+</div>
+<div class="input-group">
+    <input class="form-control"  type="text" placeholder="your gmail">
+    <span class="input-group-text">@gmail.com</span>
+</div>
+<div class="input-group">
+    <span class="input-group-text">$</span>
+    <input class="form-control"  type="text" placeholder="price">
+    <span class="input-group-text">.00</span>
+</div>
+<div class="input-group">
+    <input class="form-control"  type="text">
+</div>
+<div class="input-group">
+    <input class="form-control" placeholder="xxx" type="text">
+    <span class="input-group-text">-</span>
+    <input class="form-control" placeholder="xxx" type="text">
+</div>
+<hr>
+<div class="input-group input-group-md">
+    <div class="input-group-text">
+        <input type="checkbox" class="form-check-input">
+    </div>
+    <input type="text" class="form-control" placeholder="xxx">
+</div>
+<div class="input-group input-group-sm">
+    <div class="input-group-text">
+        <input type="radio" class="form-check-input">
+    </div>
+    <input type="text" class="form-control" placeholder="xxx">
+</div>
+<div class="input-group">
+    <button class="btn btn-primary"  role="button">@</button>
+    <input type="text" class="form-control" placeholder="xxx">
+</div>
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="xxx">
+    <button class="btn btn-primary"  role="button">@</button>
+</div>
+<hr>
+<div class="input-group">
+
+    <input type="file" name="files" id="file1" class="form-control" placeholder="Choose some files" multiple>
+    <label class="input-group-text" for="file1">Upload</label>
+</div>
+<div class="input-group mb-3">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Platform</button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Instagram</a></li>
+        <li><a class="dropdown-item" href="#">Facebook</a></li>
+        <li><a class="dropdown-item" href="#">TicTok</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">linkedIn</a></li>
+    </ul>
+    <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Username">
+</div>
+<hr>
+<div class="input-group mb-3">
+
+    <select class="form-select" id="inputGroupSelect01">
+        <option selected>Choose...</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+</div>
+
+<div class="input-group">
+    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+        <option selected>Choose...</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    <button class="btn btn-outline-secondary" type="button">Buttons</button>
+</div>
+</body>
+</html>

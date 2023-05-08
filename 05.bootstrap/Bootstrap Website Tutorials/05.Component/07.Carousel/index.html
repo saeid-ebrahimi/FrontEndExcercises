@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Carousel</title>
+    <style>
+
+    </style>
+</head>
+<body class="container p-3">
+    <div id="carousel-container" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-container"
+                    data-bs-slide-to="0" aria-label="Slide 1" class="active"></button>
+            <button type="button" data-bs-target="#carousel-container"
+                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel-container"
+                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carousel-container"
+                    data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carousel-container"
+                    data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="images/closeup-shot-colorful-loriini-blurred-background.jpg" alt="" class="d-block w-100 mx-auto">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5> Slide Label</h5>
+                    <p>Some text to indicate the item features</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./images/closeup-shot-colorful-parrot-with-big-green-leaves.jpg" alt="" class="d-block w-100 mx-auto">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5> Slide Label</h5>
+                    <p>Some text to indicate the item features</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./images/hyacinth-macaw-palm-tree-nature-habitat.jpg" alt="" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5> Slide Label</h5>
+                    <p>Some text to indicate the item features</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./images/mesmerizing-shot-colorful-parrot-blurred-background.jpg" alt="" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5> Slide Label</h5>
+                    <p>Some text to indicate the item features</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./images/beautiful-shot-tiger-standing-forest-during-daytime.jpg" alt="" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5> Slide Label</h5>
+                    <p>Some text to indicate the item features</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#carousel-container" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button"
+        data-bs-target="#carousel-container" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</body>
+</html>

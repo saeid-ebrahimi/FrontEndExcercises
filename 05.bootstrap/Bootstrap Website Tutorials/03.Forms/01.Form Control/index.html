@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Intro To Form Controls</title>
+</head>
+<body class="container">
+    <div>
+        <label for="fname">First Name</label>
+        <input type="password" name="" id="fname" placeholder="First Name">
+    </div>
+    <div>
+        <label for="pass1" class="form-label">Password</label>
+        <input class="form-control" type="password" name="" id="pass1" placeholder="Password">
+        <div class="form-text" id="passwordHelp">Your password must be 8-20 characters long, contain letters and
+            numbers, and must not contain spaces, special characters, or emoji.
+        </div>
+    </div>
+
+    <br>
+    <div class="row gy-3">
+        <input class="form-control" type="text" name="" id="name" placeholder="Default">
+        <input class="form-control form-control-plaintext" type="text" name="" placeholder="plain text">
+        <input class="form-control" type="text" name="" readonly placeholder="Read Only">
+        <input class="form-control" type="text" name="" disabled placeholder="Disabled">
+
+    </div>
+    <hr>
+    <div  class="row gy-3">
+        <input class="form-control" type="search" name=""  placeholder="Default">
+        <input class="form-control form-control-sm" type="search" name="" placeholder="small" >
+        <input class="form-control form-control-md" type="search" name="" placeholder="medium">
+        <input class="form-control form-control-lg" type="search" name="" placeholder="large">
+    </div>
+    <hr>
+    <div class="row gy-3">
+        <textarea class="form-control"></textarea>
+        <textarea cols="15" rows="8"></textarea>
+    </div>
+    <hr>
+    <div  class="row gy-3">
+        <input type="file" name="">
+        <input type="file" class="form-control form-control-sm" name="" multiple>
+        <input type="file" class="form-control" name="" multiple>
+        <input type="file" class="form-control form-control-lg" name="" multiple>
+    </div>
+    <hr>
+    <input type="color" name="">
+    <div  class="row gy-3">
+
+        <input type="color" class="form-control form-control-sm form-control-color" name="" multiple>
+        <input type="color" class="form-control form-control-color" name="" multiple>
+        <input type="color" class="form-control form-control-lg form-control-color" name="" multiple>
+    </div>
+    <hr>
+    <input list="options" type="text" class="form-control">
+    <datalist id="options">
+        <option value="opt1"></option>
+        <option value="opt2"></option>
+        <option value="opt3"></option>
+    </datalist>
+</div>
+</body>
+</html>

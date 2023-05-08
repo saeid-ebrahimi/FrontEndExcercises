@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <style>
+        body > div{
+            margin:1rem;
+        }
+    </style>
+    <title>Floating Label</title>
+</head>
+<body class="container">
+    <div class="form-floating mb-3">
+        <input type="email" name="email" id="float-email"
+               placeholder="name@example.com" class="form-control is-valid">
+        <label for="float-email">Email Address</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" name="password" id="float-password"
+               class="form-control is-invalid" placeholder="enter the password">
+        <label for="float-password">Password</label>
+    </div>
+    <div class="form-text">
+        Your password must be 8-20 characters long, contain letters and
+        numbers, and must not contain spaces, special characters, or emoji.
+    </div>
+    <div class="form-floating mb-3">
+        <textarea class="form-control" style="resize: none;height: 200px;"  placeholder="leave a comment here..." id="float-textarea"></textarea>
+        <label for="float-textarea">Comments</label>
+    </div>
+    <div class="form-floating mb-3">
+        <select id="browsers" name="browsers" class="form-control">
+            <option value="" disabled selected>Choose Browser...</option>
+            <option value="chrome">Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="opera">Opera</option>
+        </select>
+        <label for="browsers">Your Current Browser</label>
+    </div>
+    <div class="row g-4 mb-3">
+        <div class="col">
+            <div class="input-group">
+                <span class="input-group-text">@</span>
+                <div class="form-floating">
+                    <input class="form-control" type="text" name="user" id="username" placeholder="username">
+                    <label for="username">Username</label>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="input-group">
+                <span class="input-group-text">$</span>
+                <div class="form-floating">
+                    <input class="form-control" type="password" name="pass" id="password" placeholder="password">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

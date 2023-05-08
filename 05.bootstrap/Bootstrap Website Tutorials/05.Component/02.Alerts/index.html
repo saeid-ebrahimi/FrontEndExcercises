@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-icons-1.10.4/font/bootstrap-icons.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Badge and Breadcrumb</title>
+    <style>
+
+    </style>
+</head>
+<body class="container p-3">
+<h2>Badges</h2>
+<hr>
+    <div>
+        <h1>React.JS <span class="badge bg-primary">New</span></h1>
+        <h2>Bootstrap <span class="badge bg-secondary">New</span></h2>
+        <h3>JavaScript <span class="badge bg-success">New</span></h3>
+        <h4>CSS <span class="badge bg-danger">New</span></h4>
+        <h5>HTML <span class="badge bg-warning">New</span></h5>
+        <h6>Git <span class="badge bg-info-subtle">New</span></h6>
+
+        <p>Python <span class="badge bg-body-secondary">New</span></p>
+        <p>C++ <span class="badge bg-dark">New</span></p>
+    </div>
+    <hr>
+    <button class="btn btn-success">
+        Notification <span class="badge text-bg-danger"> 6</span>
+    </button>
+    <hr>
+    <button class="btn btn-primary position-relative">Inbox
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light"> 17</span>
+        <span class="visually-hidden">unread messages</span>
+    </button>
+    <hr>
+    <button class="btn btn-primary position-relative">Profile
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle p-2 bg-danger border border-light"> </span>
+        <span class="visually-hidden">unread messages</span>
+    </button>
+    <hr>
+<div>
+    <span class="badge rounded-pill text-bg-primary">Primary</span>
+    <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+    <span class="badge rounded-pill text-bg-success">Success</span>
+    <span class="badge rounded-pill text-bg-danger">Danger</span>
+    <span class="badge p-2 rounded-circle text-bg-warning">Warning</span>
+    <span class="badge p-2 rounded-circle text-bg-info">Info</span>
+    <span class="badge p-2 rounded-circle text-bg-light">Light</span>
+    <span class="badge p-2 rounded-circle text-bg-dark">Dark</span>
+</div>
+<hr>
+<h2>Breadcrumb</h2>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="link-dark" href="#">Home</a></li>
+        <li class="breadcrumb-item"><a class="link-dark" href="#">About Us</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Saeid Ebrahimi</li>
+    </ol>
+</nav>
+<hr>
+<nav>
+    <ol class="breadcrumb" style="--bs-breadcrumb-divider:'>';">
+        <li class="breadcrumb-item"><a href="#" class="link-dark">Home</a></li>
+        <li class="breadcrumb-item"><a href="#" class="link-dark">About Us</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Saeid Ebrahimi</li>
+    </ol>
+</nav>
+<hr>
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+     aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="link-warning" href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+</nav>
+</body>
+</html>

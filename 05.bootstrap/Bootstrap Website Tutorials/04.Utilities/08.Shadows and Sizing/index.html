@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Shadows and Sizing</title>
+    <style>
+
+    </style>
+</head>
+<body class="container p-3">
+<div class="shadow-none p-3 mb-5 bg-body rounded">No Shadow</div>
+<div class="shadow-sm p-3 mb-5 bg-body rounded">Small Shadow</div>
+<div class="shadow p-3 mb-5 bg-body rounded">Regular Shadow</div>
+<div class="shadow-lg p-3 mb-5 bg-body rounded">Large Shadow</div>
+
+<br>
+<br>
+<div>
+    <div class="mw-100 bg-primary p-3">Max Width 100%</div>
+    <div class="w-25 bg-primary p-3">Width 25%</div>
+    <div class="w-50 bg-primary p-3">Width 50%</div>
+    <div class="w-75 bg-primary p-3">Width 75%</div>
+    <div class="w-100 bg-primary p-3">Width 100%</div>
+    <div class="w-auto bg-primary p-3">Width Automatic</div>
+
+</div>
+<hr>
+<div style="height: 200px; background-color: #86b7fe;padding: 1rem;">
+
+    <div class="h-25 d-inline-block bg-warning" style="width: 100px">Height 25%</div>
+    <div class="h-50 d-inline-block bg-warning" style="width: 100px">Height 50%</div>
+    <div class="h-75 d-inline-block bg-warning" style="width: 100px">Height 75%</div>
+    <div class="h-100 d-inline-block bg-warning" style="width: 100px">Height 100%</div>
+    <div class="h-auto d-inline-block bg-warning" style="width: 100px">Height Auto</div>
+</div>
+<hr>
+<div style="height: 200px; background-color: #86b7fe;padding: 1rem;">
+    <div class="mh-100 d-inline-block bg-warning" style="width: 100px">Max-height 100%</div>
+</div>
+<hr>
+<div style="background-color: #86b7fe;padding: 1rem;">
+    <div class="bg-body min-vw-100 mb-3">Min-width 100vw</div>
+    <div class="bg-body min-vh-100 mb-3">Min-height 100vh</div>
+    <div class="bg-body vw-100 mb-3">Width 100vw</div>
+    <div class="bg-body vh-100 mb-3">Height 100vh</div>
+</div>
+</body>
+</html>

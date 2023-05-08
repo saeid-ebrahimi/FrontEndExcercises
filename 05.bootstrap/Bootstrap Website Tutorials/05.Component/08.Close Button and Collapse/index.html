@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Close Button and Collapse</title>
+    <style>
+
+    </style>
+</head>
+<body class="container p-3">
+<div>
+    <button class="btn-close" aria-label="Close"></button>
+    <button class="btn-close" disabled aria-label="Close"></button>
+</div>
+<hr>
+<div class="bg-dark rounded">
+    <button class="btn-close btn-close-white" aria-label="Close"></button>
+    <button class="btn-close btn-close-white" disabled aria-label="Close"></button>
+</div>
+<hr>
+<div>
+    <div>
+        <a href="#collapse1" class="btn btn-primary" data-bs-toggle="collapse">
+            collapse link
+        </a>
+        <button class="btn btn-primary" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapse2">
+            collapse button
+        </button>
+        <button type="button" class="btn btn-outline-danger"
+        data-bs-target=".collapse1" data-bs-toggle="collapse">collapse both</button>
+    </div>
+    <div class="row">
+        <div class="col-6 collapse border border-2 collapse1" id="collapse1">
+            <br>
+            Lorem111 ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolor dolorum fugiat maxime necessitatibus nihil non nostrum perferendis, quidem velit. Dolore dolorem ipsum minima numquam sequi vel voluptatem. Alias, tempora!
+        </div>
+        <div class="col-6 collapse border border-2 collapse1" id="collapse2">
+
+            <br>
+            Lorem222 ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis, eaque earum eum excepturi maxime, neque possimus quae repellendus ullam veritatis vero, voluptatum. Adipisci facilis neque, nesciunt qui repudiandae rerum?
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div>
+            <a href="#collapse3" class="btn btn-primary" data-bs-toggle="collapse">
+            collapse link
+            </a>
+        </div>
+        <div id="collapse3" class="collapse collapse-horizontal" >
+            <p class="border border-success p-4" style="width: 300px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi consequatur dolorum ex fugiat inventore magnam, magni nam neque nostrum pariatur perferendis provident quisquam, rem reprehenderit sunt, temporibus tenetur voluptatum?</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
