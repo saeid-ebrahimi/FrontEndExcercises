@@ -1,52 +1,71 @@
-body, p { margin: 0; padding: 0; }
-
-body { padding: 100px; background: #717171; }
-
-#content {
-	margin: 100px auto 20px auto;
-	border: 10px solid #4C4C4C;
-	width: 400px;
-	height: 266px;
-	position: relative;
+*{
+	padding: 0;
+	margin:0;
 }
 
-#content img {
-	position: absolute;
+.slider-container{
+	display: flex;
+	justify-content: center;
+	width: 750px;
+	height: 500px;
+}
+.slider {
+	width: 100%;
+	display: flex;
+	position: relative;
+	z-index: 3;
+	top: 20%;
+	left: calc(100vw/2 );
+	transform:translate(-50%,0) ;
+	box-shadow: 0 0 0 25px rgb(65, 65, 65);
+	border-radius: 10px;
+	outline: 10px solid rgb(100, 100, 100);
+	overflow: hidden;
+}
+.slider img {
+	position: relative;
 	left: 0;
 	top: 0;
 }
-
-p { text-align: center; }
-
-/********** Link Styles ***********/
-
-#links {
-	width: 420px;
-	display: flex;
-	margin: auto;
-}
-
-#links a {
-	display: block;
-	flex: 1;
-	background: #6C0204;
-	height: 50px;
-	line-height: 50px;
-	color: #D5D5D5;
+.prev , .next{
+	position: absolute;
+	z-index: 10;
+	height: 100%;
 	text-decoration: none;
-	font-family: Arial;
-	text-transform: uppercase;
-	text-align: center;
+	width: 40px;
+	background-color: rgba(255, 255, 255, 0.16);
+	font-size: 23px;
+	color: rgba(255,255,255,0.5);
+	vertical-align: center;
+	transition: all 230ms ease;
+	cursor: pointer;
 }
-
-#links a:hover {
-	background: #A51D1F;
-	color: #fff;
+.prev i, .next i{
+	position: relative;
+	top: 45%;
 }
-
-/************ Animation Styles ************/
-
-.fadeinimg{
+.prev:hover{
+	background-color: rgba(0,0,0,0.50);
+	color: white;
+	text-decoration: none;
+}
+.next:hover{
+	background-color: rgba(0,0,0,0.50);;
+	color: white;
+	text-decoration: none;
+}
+.next i,.prev i{
+	font-family: cursive;
+	font-weight: bold;
+	padding: 2px;
+}
+.prev{
+	left:0;
+}
+.next{
+	right: 0;
+}
+.fadein-img{
 	animation: fadein 2s;
 }
 

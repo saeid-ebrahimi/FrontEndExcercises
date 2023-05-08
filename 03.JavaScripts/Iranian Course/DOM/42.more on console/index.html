@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+  <h2>More On Console</h2>
+  <h3>Open the Console in inspect please</h3>
+  <script>
+    // console.error("hello")
+    // console.info("API response Status is 404")
+    // console.warn("")
+    // let ans = prompt("enter the value: ")
+    // console.assert(ans > 100, "value is bigger than 100")
+    console.time()
+    let user = {
+    id:1,
+    username:"Amin",
+    password:"254",
+    age:32
+    }
+    console.table(user)
+    let products = [
+    {id:1,name:"laptob",price:5000},
+    {id:2,name:"phone",price:1000},
+    {id:3,name:"tablet",price:2000},
+    {id:4,name:"mouse",price:100},
+    {id:5,name:"keyboard",price:200},
+
+    ]
+    console.table(products)
+
+    console.timeEnd()
+    // %s	 Formats the value as a string
+    // %i or %d	 Formats the value as an integer
+    // %f	 Formats the value as a floating point value
+    // %o	 Formats the value as an expandable DOM element. As seen in the Elements panel
+    // %O	 Formats the value as an expandable JavaScript object
+    // %c	 Applies CSS style rules to the output string as specified by the second parameter
+    console.log("%cstart of group", "color:wheat;background-color:darkblue;")
+    console.group()
+    console.log("first log in group")
+    console.log("second log in group")
+    console.log("third log in group")
+    console.log("fourth log in group")
+    console.groupEnd()
+    console.log("%cend of group", "color:orange;background-color:navy;")
+  </script>
 </body>
 </html>

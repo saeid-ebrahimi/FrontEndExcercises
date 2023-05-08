@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Task Management</title>
+</head>
+<body>
+    <h2>Employee Task Management</h2>
+    <script>
+        const taskArray = {
+            Emily: ["html", "css", "responsive css"],
+            John:["js", "bootstrap"],
+            lily: ["react","vue","engular"],
+            megan:["seo", "link building", "digital marketing"],
+            smith: ["admin", "content provider"],
+            mike: ["python", "django", "sql"],
+        }
+        const employeeName = prompt("enter the employee name: ").trim()
+        const empTask = prompt("enter the employee task: ").trim()
+        if (employeeName){
+            const employeeTasks = taskArray[employeeName]
+            if (employeeTasks && empTask){
+                employeeTasks.push(empTask)
+                alert(empTask+" task added to "+employeeName)
+            }
+        }
+
+            
+    </script>
+</body>
+</html>

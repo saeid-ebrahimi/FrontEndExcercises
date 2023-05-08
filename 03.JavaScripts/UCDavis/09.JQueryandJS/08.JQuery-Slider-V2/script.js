@@ -9,10 +9,11 @@ $(window).on("load",function (){
     let counter = 0
 
     $(".slider ul").css("width", totalWidth)
+    let timer = setInterval(nextSlide, 1000)
     $("#next").click(function (){
         counter++
         if (counter === imageCount){
-            $(".slider ul").clone().appendTo("#slider")
+            $(".slider ul").clone().appendTo(".slider")
             $(".slider ul").last().css("left",imageWidth+"px")
 
             leftPosition = `-${totalWidth}`
@@ -33,18 +34,20 @@ $(window).on("load",function (){
        })
     $("#previous").click(function (){
         counter--
-        if (counter < 0){
+        if (counter === -1){
             counter = imageCount -1
-            $(".slider ul").clone().appendTo("#slider")
+            $(".slider ul").clone().appendTo(".slider")
             $(".slider ul").last().css({left: `-${totalWidth}`})
+
             leftPosition = `-${counter * imageWidth}px`
+
             $(".slider ul").last().animate({left:leftPosition},700,"easeInQuad")
             $(".slider ul").first().animate({left:imageWidth+"px"}, 700, "easeInQuad",function (){
                 $(".slider ul").first().remove()
             })
         }else{
             leftPosition = `-${counter * imageWidth}px`
-            $(".slider ul").animate({left:imageWidth+"px"}, 700, "easeInQuad")
+            $(".slider ul").animate({left:leftPosition}, 700, "easeInQuad")
 
         }
 

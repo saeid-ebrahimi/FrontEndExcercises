@@ -2,9 +2,7 @@ h1, h2, h3, h4, ul, li, p{
     margin: 0;
     padding: 0;
 }
-img {
-    max-width: 100%;
-}
+
 body{
     font-family: Arial;
     color: #030303;
@@ -53,4 +51,18 @@ h1, h2, h3, h4, p{
     background-color: #efefef;
     padding: 2rem;
     margin-bottom: 2rem;
+}
+
+img {
+    max-width: 100%;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="page">
+        <h1>Example 2</h1>
+        <h2>The jQuery $.ajax()</h2>
+
+        <p>This page uses the jQuery $.ajax() method to get the data from an external URL. It really is the same thing
+            as the XMLHttpRequest method, just made a little easier through jQuery. The data the
+            page is getting is generated from a script that randomly waits between 5 and 30 seconds to run. Note that
+            waiting for it does not hold up this page at all. Click the button to load the data.</p>
+        <p><button id="bgcolor">Change Background Color</button> <button id="font">Change Font</button></p>
+
+        <button id="loaddata">Get Data</button>
+
+        <div id="remotedata"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script>
+
+        $('#loaddata').click(function () {
+
+            // Add jQuery code here...
+            $("#remotedata").html("<img src='images/spinner.gif' alt='spinning spinner'>")
+        });
+        $.ajax({
+            url: "https://cpe-web-assignments.ucdavis.edu/remotedata/index.php",
+            cache: false
+        }).done( data =>{
+            $("#remotedata").html(data)
+        })
+        let color = "white";
+        let font = "arial";
+
+        $('#bgcolor').click(function () {
+            if (color == "white") {
+                $('#page').css('background-color', '#f2f4b1');
+                color = "yellow";
+            }
+            else {
+                $('#page').css('background-color', '#fff');
+                color = "white";
+            }
+        });
+
+        $('#font').click(function () {
+            if (font == "arial") {
+                $('#page').css('font-family', 'Georgia');
+                font = "georgia";
+            }
+            else {
+                $('#page').css('font-family', 'Arial');
+                font = "arial";
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

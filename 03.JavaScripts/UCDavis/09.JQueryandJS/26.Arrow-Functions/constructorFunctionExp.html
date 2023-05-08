@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor Function Expression</title>
+</head>
+<body>
+    <h1>Constructor Function Expression</h1>
+    <script>
+        // we cannot use arrow function for constructor
+        const Employee = function (firstname, lastname, jobTitle){
+            this.fname = firstname
+            this.lname = lastname
+            this.position = jobTitle
+            this.fullName = () => `${this.fname} ${this.lname}`
+        }
+    </script>
+</body>
+</html>

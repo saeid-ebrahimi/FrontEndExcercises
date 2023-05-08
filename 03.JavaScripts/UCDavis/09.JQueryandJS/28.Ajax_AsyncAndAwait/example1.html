@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 1</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="page">
+        <h1>Example 1</h1>
+        <h2>The XMLHttpRequest</h2>
+
+        <p>This page uses the XMLHttpRequest object to asynchronously go get data from an external URL. The data the
+            page is getting is generated from a script that randomly waits between 5 and 30 seconds to run. Note that
+            waiting for it does not hold up this page at all. Click the button to load the data.</p>
+        <p><button id="bgcolor">Change Background Color</button> <button id="font">Change Font</button></p>
+
+        <button id="loaddata">Get Data</button>
+
+        <div id="remotedata"></div>
+    </div>
+
+    <script>
+        document.getElementById('loaddata').addEventListener('click', getData);
+        // AJAX function for getting data from the file...
+        function getData() {
+            // add xhr request code here...
+            const req = new XMLHttpRequest()
+            const url =  "https://cpe-web-assignments.ucdavis.edu/remotedata/index.php"
+            req.onreadystatechange = function (){
+                useResponse(req)
+            }
+            req.open("GET",url, true)
+            req.send(null)
+        }
+
+        // AJAX function that processes the data when successfully recieved.
+        function useResponse(req) {
+            // Add use response code here...
+            if(req.readyState === 4){
+                if(req.status === 200){
+                    document.getElementById("remotedata").innerHTML = req.responseText
+                }
+            }else{
+                document.getElementById("remotedata").innerHTML = "<img src='images/spinner.gif' alt='loading data'>"
+            }
+        }
+
+        // Handling buttons
+        let color = "white";
+        let font = "arial";
+        document.getElementById('bgcolor').addEventListener('click', function () {
+
+            if (color == "white") {
+                document.getElementById('page').style.backgroundColor = "#f2f4b1";
+                color = "yellow";
+            }
+            else {
+                document.getElementById('page').style.backgroundColor = "#fff";
+                color = "white";
+            }
+        });
+
+        document.getElementById('font').addEventListener('click', function () {
+
+            if (font == "arial") {
+                document.getElementById('page').style.fontFamily = "Georgia";
+                font = "georgia";
+            }
+            else {
+                document.getElementById('page').style.fontFamily = "Arial";
+                font = "arial";
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

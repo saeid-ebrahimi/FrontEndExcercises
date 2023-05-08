@@ -4,310 +4,271 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js" defer></script>
-    <title>Navbar</title>
+    <title>Nav & Tabs</title>
     <style>
-
     </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <!--
-        we can use:
-        fixed-bottom
-        fixed-top
-        sticky-top
-        sticky-bottom
-        -->
-        <nav class="navbar fixed-bottom navbar-expand-lg rounded-3 bg-warning-subtle bg-gradient">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand order-lg-0">
-                    <img src="icons8-source-code-96.ico" alt="NeoWeb" width="30px">
-                    <span class="navbar-text">
-                           NeoWeb
-                    </span>
+<div>
 
-                </a>
-                <form class="d-flex order-lg-2" role="search">
-                    <input type="search" class="form-control me-2"
-                           placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
-                </form>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarContent"
-                        aria-controls="navbarContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"> </span>
-                </button>
-                <div class="collapse order-lg-1 navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav me-auto mb-3 mb-lg-1">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link active" aria-current="page">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Contact</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button"
-                                   data-bs-toggle="dropdown" aria-expanded="false">language</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item">English</a></li>
-                                    <li><a href="#" class="dropdown-item">Persian</a></li>
-                                    <li><a href="#" class="dropdown-item">French</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a href="#" class="dropdown-item">Other Languages</a></li>
-                                </ul>
-                            </li>
-                        <form class="d-flex">
-                            <div class="input-group">
-                                <span class="input-group-text" id="basic-addon1">@</span>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                                <button class="btn btn-outline-dark" type="submit">login</button>
-                            </div>
-
-                        </form>
-                    </ul>
-
-                </div>
-            </div>
-
-        </nav>
-        <nav class="navbar navbar-expand-lg rounded-3 bg-warning-subtle bg-gradient">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand order-lg-0">
-                    <img src="icons8-source-code-96.ico" alt="NeoWeb" width="30px">
-                    <span class="navbar-text">
-                           NeoWeb
-                    </span>
-
-                </a>
-                <form class="d-flex order-lg-2" role="search">
-                    <input type="search" class="form-control me-2"
-                           placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
-                </form>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarContent"
-                        aria-controls="navbarContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"> </span>
-                </button>
-                <div class="collapse order-lg-1 navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav me-auto mb-3 mb-lg-1">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link active" aria-current="page">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Contact</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button"
-                                   data-bs-toggle="dropdown" aria-expanded="false">language</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item">English</a></li>
-                                    <li><a href="#" class="dropdown-item">Persian</a></li>
-                                    <li><a href="#" class="dropdown-item">French</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a href="#" class="dropdown-item">Other Languages</a></li>
-                                </ul>
-                            </li>
-                        <form class="d-flex">
-                            <div class="input-group">
-                                <span class="input-group-text" id="basic-addon1">@</span>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                                <button class="btn btn-outline-dark" type="submit">login</button>
-                            </div>
-
-                        </form>
-                    </ul>
-
-                </div>
-            </div>
-
-        </nav>
+    <ul class="nav justify-content-around bg-body-tertiary rounded-3">
+        <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link link-dark">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link link-dark">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link disabled">Cooperation</a>
+        </li>
+    </ul>
+</div>
+<hr>
+<div>
+    <ul class="nav justify-content-around  flex-column bg-info-subtle rounded-3">
+        <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link link-dark">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link link-dark">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link disabled">Cooperation</a>
+        </li>
+    </ul>
+</div>
+<hr>
+<div>
+    <nav class="nav flex-column">
+        <a class="nav-link  active" aria-current="page" href="#">Active</a>
+        <a class="nav-link link-dark" href="#">Link</a>
+        <a class="nav-link link-dark" href="#">Link</a>
+        <a class="nav-link link-dark disabled">Disabled</a>
+    </nav>
+</div>
+<hr>
+<div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a href="#" aria-current="page" class="nav-link active">Starter</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link link-dark">Junior</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link link-dark">MidLevel</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link link-dark disabled">Senior</a>
+        </li>
+    </ul>
+</div>
+<hr>
+<div>
+    <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link link-dark">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link link-dark">Portfolio</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link link-dark disabled">Blogs</a>
+        </li>
+    </ul>
+</div>
+<hr>
+<div>
+    <ul class="nav nav-underline justify-content-center">
+        <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link link-warning">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link link-warning">Portfolio</a>
+        </li>
+        <li class="nav-item">
+            <a href="" class="nav-link link-warning disabled">Blogs</a>
+        </li>
+    </ul>
+</div>
+<hr>
+<div>
+    <nav class="nav nav-pills nav-fill">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link" href="#">Much longer nav link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled">Disabled</a>
+    </nav>
+</div>
+<hr>
+<div>
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link" href="#">Much longer nav link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled">Disabled</a>
+    </nav>
+</div>
+<hr>
+<div>
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+        <a class="flex-sm-fill text-sm-center nav-link disabled">Disabled</a>
+    </nav>
+</div>
+<hr>
+<div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+        </li>
+    </ul>
+</div>
+<hr>
+<div>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+        </li>
+    </ul>
+</div>
+<hr>
+<div>
+    <ul class="nav nav-tabs" id="newTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" type="button" role="tab"
+                    data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    aria-controls="home-tab-pane" aria-selected="true">
+                Home
+            </button>
+        </li>
+        <li class="nav-item" role="presentation" >
+            <button class="nav-link" id="profile-tab" type="button" role="button"
+                    data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" type="button" role="button"
+                    data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                    aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="disabled-tab" type="button" role="button"
+                    data-bs-toggle="tab" data-bs-target="#disabled-tab-pane"
+                    aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">Home Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto asperiores at atque, consequatur distinctio dolorum eaque impedit ipsa nihil placeat sapiente suscipit, voluptatem. Ad exercitationem id incidunt nihil ullam?</div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Profile Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem culpa cum cumque excepturi, expedita fugiat iste magnam non nulla quas reprehenderit tempora totam velit voluptates? Assumenda ipsum optio tenetur?</div>
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Contact Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa dolorum hic impedit neque odio odit quam voluptates! Aliquid deserunt enim esse et eveniet harum officia quam sed sequi velit!</div>
+        <div class="tab-pane fade" id="disable-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">Disable Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eveniet fugiat illo quo sint? Aliquid assumenda atque cumque distinctio, dolor error expedita inventore natus nesciunt officia porro sint tempore, veritatis?</div>
     </div>
     <hr>
     <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar scroll</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Link
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Link</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+                <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
             </div>
         </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div>
+        </div>
     </div>
     <hr>
     <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="#">Hidden brand</a>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
+        </div>
     </div>
-    <hr>
+    <!--  for vertical tabs, you should also add aria-orientation="vertical" to the tab list container. -->
     <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#">Navbar</a>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
+        <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+                <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Disabled</button>
+                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
             </div>
-        </nav>
-    </div>
-    <hr>
-    <h2>Toggle External Content</h2>
-    <div>
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-                <h5 class="text-white h4">Collapsed content</h5>
-                <span class="text-body-secondary">Toggleable via the navbar brand.</span>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
             </div>
         </div>
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </nav>
     </div>
-    <hr>
-    <h2>Offcanvas Navbar</h2>
-    <div>
-        <nav class="navbar navbar-dark bg-dark bg-gradient">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand order-lg-0">
-                    <img src="icons8-source-code-96.ico" alt="NeoWeb" width="30px">
-                    <span class="navbar-text">
-                           NeoWeb
-                    </span>
-
-                </a>
-                <button class="navbar-toggler" type="button"
-                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-                        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1"
-                     id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                       <h5 class="offcanvas-title"  id="offcanvasDarkNavbarLabel">NeoWeb</h5>
-                        <button type="button" class="btn-close btn-close-white"
-                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <form class="d-flex">
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="basic-addon2">@</span>
-                                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon2">
-                                        <button class="btn bg-secondary-subtle text-dark btn-outline-light" type="submit">login</button>
-                                    </div>
-
-                                </form>
-                            </li>
-                        </ul>
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-success" type="submit">Search</button>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
+</div>
 </body>
 </html>

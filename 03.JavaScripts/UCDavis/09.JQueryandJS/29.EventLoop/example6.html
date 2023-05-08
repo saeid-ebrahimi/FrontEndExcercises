@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Example 6</title>
+    <style>
+        #ex1container {
+            color: red;
+        }
+
+        #ex2container {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Event Example 6</h1>
+    <p><button id="ex1">Using setInterval</button> <button id="stop1">Stop 1</button></p>
+
+    <p><button id="ex2">Using recursion</button> <button id="stop2">Stop 2</button></p>
+
+    <div id="ex1container"></div>
+    <div id="ex2container"></div>
+
+    <script>
+        
+        var bttnEx1 = document.getElementById('ex1');
+        var bttnEx2 = document.getElementById('ex2');
+        var stop1 = document.getElementById('stop1');
+        var stop2 = document.getElementById('stop2');
+        var container1 = document.getElementById('ex1container');
+        var container2 = document.getElementById('ex2container');
+
+        var badIdea;
+        var stopRecursion;
+
+        /* Uses setInterval to go do something every 1.5 seconds
+        not good for async calls because you don't know how long they will
+        actually take to complete*/
+        bttnEx1.addEventListener('click', function () {
+            badIdea = setInterval(function () {
+                container1.innerHTML += "<p>don't do async calls this way</p>";
+            }, 1500);
+        });
+
+        stop1.addEventListener('click', function () {
+            clearInterval(badIdea);
+        });
+
+        /**************************** ||||| *************************/
+
+        /* This uses recursion, which will run only after the async call has 
+        happened, no matter how long it takes*/
+
+        function doRecursion() {
+            setTimeout(function () {
+                container2.innerHTML += "<p>do async calls this way</p>";
+                if (stopRecursion != 'stop') {
+                    doRecursion();
+                }
+            }, 1500);
+        }
+
+        bttnEx2.addEventListener('click', function () {
+            stopRecursion = "go";
+            doRecursion();
+        });
+
+        stop2.addEventListener('click', function () {
+            stopRecursion = "stop";
+        });
+    </script>
+</body>
+
+</html>

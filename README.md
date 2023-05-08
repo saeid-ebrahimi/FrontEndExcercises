@@ -6,5 +6,5 @@ this repository contains front-end learning path exercises.
 2. html and css fundamentals, best practices , apps and games
 3. JS, JS DOM and JQuery excercises
 4.Git
-5.Bootstrap 
-6.react
+5.Bootstrap Cites and excercises
+6.React

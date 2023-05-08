@@ -1,0 +1,128 @@
+body {
+	font-family: Arial;
+	color: #333;
+	padding-top: 200px;
+}
+
+header {
+	background:rgba(217,217,217,0.9);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	height: 160px;
+}
+
+header h1 {
+	text-align: center;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+section {
+	width: 95%;
+	margin: 0 auto 150px auto;
+	padding: 25px;
+	box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
+}
+
+/*************** Navigation Styles ***************/
+header nav {
+	width: 95%;
+	margin: auto;
+}
+
+header nav ul {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	width: 20%;
+	box-sizing: border-box;
+	border-left: 2px solid #666;
+}
+
+header nav ul li:first-of-type{
+	border-left: none;
+}
+
+header nav ul li a {
+	text-decoration: none;
+	display: block;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 10px;
+	background: #9C9C9C;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: center;
+	text-overflow: ellipsis;
+}
+
+
+.selected {
+	background: rgba(254,0,187,1.00);
+	transition: all 1s;
+}
+
+
+@media only screen and (min-width: 700px) {
+	
+	/*************** Frist Section Styles ***************/
+	#first article {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	#first article img {
+		margin-left: 25px;
+	}
+	
+	/*************** Second Section Styles ***************/
+	#second div, #fifth div {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#second article {
+		width: 30%;
+	}
+
+	/*************** Third Section Styles ***************/
+	#third article {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	#third article img {
+		margin-right: 25px;
+	}
+
+	/*************** Fifth Section Styles ***************/
+	#fifth article {
+		width: 47%;
+	}
+
+	#fifth {
+		margin-bottom: 500px;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	section, header nav {
+		width: 960px;
+	}
+}
+
+
+

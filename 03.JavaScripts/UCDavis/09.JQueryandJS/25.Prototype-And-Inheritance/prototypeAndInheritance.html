@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype &amp; Inheritance</title>
+
+</head>
+<body>
+    <h1>Prototype &amp; Inheritance</h1>
+    <script>
+        function iPhone(){}
+        iPhone.prototype.faceId = function (){
+            console.log("unlock my phone with face")
+        }
+        iPhone.prototype.video = function (){
+            console.log("take 4k video with my iphone")
+        }
+        iPhone.prototype.stockApp = function (){
+            console.log("find out what the stock market is doing")
+        }
+        const myPhone = new iPhone()
+        myPhone.faceId()
+        myPhone.stockApp()
+        myPhone.video()
+        myPhone.app = "twitter"
+        myPhone.post = function (){
+            console.log(`using ${myPhone.app} to post`)
+        }
+        console.log(myPhone.app)
+        myPhone.post()
+
+        // overriding present function
+        myPhone.stockApp = function (){
+            console.log("upgraded to pro version!")
+        }
+        myPhone.stockApp()
+
+        // deleting present functions
+        //myPhone.stockApp = undefined
+        // or
+        //delete myPhone.stockApp
+        //myPhone.stockApp() //get error
+
+    </script>
+</body>
+</html>

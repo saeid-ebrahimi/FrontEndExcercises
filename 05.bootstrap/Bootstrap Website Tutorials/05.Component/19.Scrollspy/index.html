@@ -3,52 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--    <script src="js/popper.min.js" defer></script>-->
-    <!--    <script src="js/bootstrap.js" defer></script>-->
-    <!-- or -->
-    <script src="js/bootstrap.bundle.min.js" defer></script>
-    <script src="js/script.js" defer></script>
-    <title>Progress</title>
-    <style>
 
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Scrollspy example 1</title>
+    <style>
+        #home,#contact,#front,#back,#python{
+            height: 40vh;
+        }
     </style>
 </head>
 <body class="container p-3">
-    <div class="progress" role="progressbar" aria-label="First Download"
-         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar bg-danger" style="width: 10%">10%</div>
+    <nav id="main-navbar" class="navbar sticky-top bg-body-secondary px-3 mb-3">
+        <a href="#home" class="navbar-brand">
+            <img src="icons8-source-code-96.ico" alt="NeoWeb" width="30px">
+            <span class="navbar-text"> NeoWeb </span>
+        </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown"
+                   role="button"  aria-expanded="false">Blogs</a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#front" class="dropdown-item">Front-end Roadmap</a>
+                    </li>
+                    <li>
+                        <a href="#back" class="dropdown-item">Back-end Roadmap</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a href="#python" class="dropdown-item">Python Developer Roadmap</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+<div id="main-container" data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-margin="0px 0px -40%"
+     data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+    <div id="home" class="mt-5" >
+        <h4 >Home</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, minus, recusandae. Adipisci, asperiores dignissimos dolor dolorem fugiat harum nesciunt possimus, praesentium quibusdam reiciendis saepe similique. Dicta eligendi eveniet nostrum pariatur?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi debitis dolorum earum, eligendi, eum ex explicabo hic, natus nesciunt non porro quaerat qui quos ratione sit totam vero voluptates.</p>
     </div>
     <hr>
-    <div class="progress" role="progressbar" aria-label="Second Download"
-        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar bg-warning w-50">50%</div>
+    <div id="contact">
+        <h4 >Contact US</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolor doloribus eius illo natus nemo nostrum
+            quos tempora tempore veritatis. Aspernatur dicta dolor maxime, molestias numquam quaerat quo tenetur
+            voluptates?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolor doloribus eius illo natus nemo nostrum
+            quos tempora tempore veritatis. Aspernatur dicta dolor maxime, molestias numquam quaerat quo tenetur
+            voluptates?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolor doloribus eius illo natus nemo nostrum
+            quos tempora tempore veritatis. Aspernatur dicta dolor maxime, molestias numquam quaerat quo tenetur
+            voluptates?</p>
     </div>
     <hr>
-    <div class="progress" role="progressbar" aria-label="Example 3px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 3px">
-        <div class="progress-bar" style="width: 25%"></div>
+    <div>
+        <div id="front">
+            <h4 >Front-end Roadmap</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur cum eos explicabo, facilis fuga
+                iure laborum, maiores maxime, modi non obcaecati odio odit quaerat quibusdam reprehenderit suscipit ut
+                veniam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur cum eos explicabo, facilis fuga
+                iure laborum, maiores maxime, modi non obcaecati odio odit quaerat quibusdam reprehenderit suscipit ut
+                veniam!</p>
+        </div>
+        <hr>
+        <div id="back">
+            <h4 >Back-end Roadmap</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae corporis cumque deleniti dolorum
+                ducimus in, inventore labore minus modi nulla obcaecati perspiciatis placeat quasi repudiandae sapiente
+                sunt totam vero.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae corporis cumque deleniti dolorum
+                ducimus in, inventore labore minus modi nulla obcaecati perspiciatis placeat quasi repudiandae sapiente
+                sunt totam vero.</p>
+        </div>
+        <hr>
+        <div id="python">
+            <h4 >Python Developer Roadmap</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dicta dolores laboriosam magnam odit
+                quo, sunt tempora velit. Aspernatur ipsam iste labore magni possimus qui quidem repellendus.
+                Necessitatibus quasi, sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dicta dolores laboriosam magnam odit
+                quo, sunt tempora velit. Aspernatur ipsam iste labore magni possimus qui quidem repellendus.
+                Necessitatibus quasi, sequi!</p>
+        </div>
     </div>
     <hr>
-    <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-        <div class="progress-bar" style="width: 25%">25%</div>
-    </div>
-    <hr>
-    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar bg-info overflow-visible text-warning-emphasis" style="width: 10%">downloading assets images and sprites</div>
-    </div>
-    <hr>
-    <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
-    </div>
-    <hr>
-    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 75%"></div>
-    </div>
-    <hr>
-    <div class="progress" role="progressbar" aria-label="download resources"
-         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar rounded-end-1 bg-danger" style="width: 20%">sprites and icons</div>
-        <div class="progress-bar rounded-1 bg-warning w-50">images and audios</div>
-        <div class="progress-bar rounded-start-1 bg-success progress-bar-striped progress-bar-animated w-25">downloading audios and videos</div>
-    </div>
+</div>
+
 </body>
 </html>

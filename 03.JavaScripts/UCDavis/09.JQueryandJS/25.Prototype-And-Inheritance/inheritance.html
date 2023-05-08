@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype &amp; Inheritance</title>
+</head>
+<body>
+    <h1>Prototype &amp; Inheritance</h1>
+    <script>
+        // arrays inherit from Array and it inherit from object
+        const animals1 = ["chicken","cat","dog","llama","got"]
+        console.log(animals1)
+        const animals = new Array()
+        animals.push("bee","panda","mouse")
+        console.log(animals)
+
+        const carManufacturer = {
+            name:"Honda",
+            model:"Accord",
+            trimLevel: "ex",
+            baseFeatures:["wheels","engine","seats"],
+            entertainment:"crappy audio system"
+        }
+        const dealership = Object.create(carManufacturer)
+        dealership.equipment = "roof rack"
+        dealership.warranty = "extended"
+        dealership.branding = "licence plate frame"
+
+        const myCar = Object.create(dealership)
+        myCar.custom = "after market trailer hitch"
+        myCar.bumperSticker = "Save the llamas"
+        myCar.entertainment = "fancy audio system"
+        for (const key in myCar){
+            const value = myCar[key]
+            console.log(`the key is ${key}, and the value is ${value}`)
+        }
+
+        console.log("it's direct properties not inherited")
+        for (const key in myCar){
+            if (myCar.hasOwnProperty(key)){
+                const value = myCar[key]
+                console.log(`the key is ${key}, and the value is ${value}`)
+            }
+        }
+    </script>
+
+</body>
+</html>

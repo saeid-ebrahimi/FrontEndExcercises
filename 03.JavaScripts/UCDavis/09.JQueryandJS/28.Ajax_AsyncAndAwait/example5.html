@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 5</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="page">
+        <h1>Example 5</h1>
+        <h2>Fetch and Promises with JSON Data</h2>
+
+        <p>Fetch is a modern replacement for the older XMLHttpRequest object. It returns a promise, which will resolve
+            to either success or failure. The data the page is getting is generated from a script that randomly waits
+            between 5 and 30 seconds to run. Note that waiting for it does not hold up this page at all. Click the
+            button to load the data.</p>
+        <p><button id="bgcolor">Change Background Color</button> <button id="font">Change Font</button></p>
+
+        <button id="loaddata">Get Data</button>
+
+        <div id="remotedata"></div>
+    </div>
+
+    <script>
+
+        document.getElementById('loaddata').addEventListener('click', getData);
+        // Asynchronously getting data from the file...
+        function getData() {
+            // Add fetch promise code working with JSON here....
+            document.getElementById("remotedata").innerHTML = "<img src='images/spinner.gif' alt='spinning spinner'>"
+            const fetchPromise = fetch("https://cpe-web-assignments.ucdavis.edu/remotedata/data.php")
+            fetchPromise.then(response=>{
+                response.json().then(data => {
+                    document.getElementById("remotedata").innerHTML = outputHTML(data)
+                })
+            })
+        }
+
+        function outputHTML(data) {
+            // Construct the HTML for the page here...
+            const html = `<div class="serverdata">
+                          <h2>${data.sleep_time} Seconds</h2>
+                          <p>${data.time_requested}</p>
+                          <p>${data.time_processed}</p>
+                          </div>`
+            return html
+        }
+
+        // Handling buttons
+        let color = "white";
+        let font = "arial";
+        document.getElementById('bgcolor').addEventListener('click', function () {
+
+            if (color == "white") {
+                document.getElementById('page').style.backgroundColor = "#f2f4b1";
+                color = "yellow";
+            }
+            else {
+                document.getElementById('page').style.backgroundColor = "#fff";
+                color = "white";
+            }
+        });
+
+        document.getElementById('font').addEventListener('click', function () {
+
+            if (font == "arial") {
+                document.getElementById('page').style.fontFamily = "Georgia";
+                font = "georgia";
+            }
+            else {
+                document.getElementById('page').style.fontFamily = "Arial";
+                font = "arial";
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

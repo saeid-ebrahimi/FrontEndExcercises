@@ -3,60 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--    <script src="js/popper.min.js" defer></script>-->
+    <!--    <script src="js/bootstrap.js" defer></script>-->
+    <!-- or -->
     <script src="js/bootstrap.bundle.min.js" defer></script>
-    <title>Placeholder</title>
+    <script src="js/script.js" defer></script>
+    <title>Popover</title>
     <style>
 
     </style>
 </head>
-<body>
+<body class="container">
 
-<div class="row row-cols-2">
-    <div class="card col-6">
-        <img src="beautiful-shot-tiger-standing-forest-during-daytime.jpg"
-             class="card-img card-img-top" alt="a Tiger Image">
-        <div class="card-body">
-            <h5 class="card-title">Bangel Tiger</h5>
-            <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, iure, quas? Adipisci assumenda at distinctio error incidunt ipsum, iste laborum maxime quo sapiente? Eligendi laboriosam maxime nostrum officiis, placeat sunt.
-            </p>
-            <a href="#" class="btn btn-success">See More ></a>
-        </div>
-    </div>
-    <div class="card col-6">
-        <div class="card-img placeholder-wave">
-            <span class="btn btn-secondary disabled placeholder col-12"></span>
-        </div>
-<!--        <img class="card-img-top placeholder-glow" src="beautiful-shot-tiger-standing-forest-during-daytime.jpg" alt="a Tiger Image">-->
-        <div class="card-body">
-            <h5 class="card-title placeholder-glow">
-                <span class="placeholder placeholder-lg col-6"></span>
-            </h5>
-            <p class="card-text placeholder-glow">
-                <span class="placeholder col-7"></span>
-                <span class="placeholder col-4"></span>
-                <span class="placeholder col-12"></span>
-                <span class="placeholder col-12"></span>
-                <span class="placeholder col-12"></span>
-                <span class="placeholder col-5"></span>
-                <span class="placeholder col-6"></span>
-                <span class="placeholder placeholder-sm col-4"></span>
-            </p>
-            <a href="" class="btn btn-success disabled placeholder col-4"></a>
-        </div>
-    </div>
-</div>
-<div>
-    <span class="placeholder col-12"></span>
-    <span class="placeholder col-12 bg-primary"></span>
-    <span class="placeholder col-12 bg-secondary"></span>
-    <span class="placeholder col-12 bg-success"></span>
-    <span class="placeholder col-12 bg-danger"></span>
-    <span class="placeholder col-12 bg-warning"></span>
-    <span class="placeholder col-12 bg-info"></span>
-    <span class="placeholder col-12 bg-light"></span>
-    <span class="placeholder col-12 bg-dark"></span>
-</div>
+<hr>
+<hr>
+<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+<hr>
+<h3>Custom Popover</h3>
+<style>
+    .custom-popover1{
+        --bs-popover-max-width: 200px;
+        --bs-popover-border-color: var(--bs-info);
+        --bs-popover-header-bg:var(--bs-info);
+        --bs-popover-header-color:var(--bs-white);
+        --bs-popover-body-padding-x: 1rem;
+        --bs-popover-body-padding-y: .5rem;
+    }
+</style>
+<button type="button" class="btn btn-outline-warning"
+    data-bs-toggle="popover" data-bs-placement="bottom" data-bs-custom-class="custom-popover1"
+    data-bs-title="Information" data-bs-content="This is a custom popover using css variables"
+    >custom popover
+</button>
 
+<h3>Dismissible popover with JS</h3>
+<!-- Dismissing on next click requires specific HTML for proper cross-browser and cross-platform behavior.
+You can only use <a> elements, not <button>s, and you must include a tabindex. -->
+<a tabindex="0" class="btn btn-sm btn-info" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+   data-bs-title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">
+    Dismissible Popover
+</a>
+
+<h3>Disabled Elements</h3>
+<span class="d-inline-block" tabindex="0" data-bs-toggle="popover"
+    data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+        <button type="button" class="btn btn-primary" disabled>Disabled Button</button>
+</span>
 </body>
 </html>

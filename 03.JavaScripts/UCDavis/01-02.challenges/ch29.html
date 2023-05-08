@@ -21,16 +21,16 @@
 </body>
 <script>
     window.addEventListener("scroll", function (){
-        let pageOffset = window.pageYOffset
+        let pageScrollYPos = window.scrollY
         let body = document.querySelector("body")
-        console.log(pageOffset)
-        if (pageOffset >= 500 && pageOffset < 1000)
+        console.log(pageScrollYPos)
+        if (pageScrollYPos >= 500 && pageScrollYPos < 1000)
             body.className = "two"
-        else if (pageOffset >= 1000 && pageOffset < 1500)
+        else if (pageScrollYPos >= 1000 && pageScrollYPos < 1500)
             body.className = "three"
-        else if (pageOffset>= 1500 && pageOffset < 2000)
+        else if (pageScrollYPos>= 1500 && pageScrollYPos < 2000)
             body.className = "four"
-        else if (pageOffset >= 2000 && pageOffset < 2500)
+        else if (pageScrollYPos >= 2000 && pageScrollYPos < 2500)
             body.className = "five"
     })
 </script>

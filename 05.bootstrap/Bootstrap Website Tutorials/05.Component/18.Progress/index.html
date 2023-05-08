@@ -3,51 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--    <script src="js/popper.min.js" defer></script>-->
-    <!--    <script src="js/bootstrap.js" defer></script>-->
-    <!-- or -->
+
     <script src="js/bootstrap.bundle.min.js" defer></script>
-    <script src="js/script.js" defer></script>
-    <title>Popover</title>
+    <title>Progress</title>
     <style>
 
     </style>
 </head>
-<body class="container">
-
-<hr>
-<hr>
-<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-<hr>
-<h3>Custom Popover</h3>
-<style>
-    .custom-popover1{
-        --bs-popover-max-width: 200px;
-        --bs-popover-border-color: var(--bs-info);
-        --bs-popover-header-bg:var(--bs-info);
-        --bs-popover-header-color:var(--bs-white);
-        --bs-popover-body-padding-x: 1rem;
-        --bs-popover-body-padding-y: .5rem;
-    }
-</style>
-<button type="button" class="btn btn-outline-warning"
-    data-bs-toggle="popover" data-bs-placement="bottom" data-bs-custom-class="custom-popover1"
-    data-bs-title="Information" data-bs-content="This is a custom popover using css variables"
-    >custom popover
-</button>
-
-<h3>Dismissible popover with JS</h3>
-<!-- Dismissing on next click requires specific HTML for proper cross-browser and cross-platform behavior.
-You can only use <a> elements, not <button>s, and you must include a tabindex. -->
-<a tabindex="0" class="btn btn-sm btn-info" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
-   data-bs-title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">
-    Dismissible Popover
-</a>
-
-<h3>Disabled Elements</h3>
-<span class="d-inline-block" tabindex="0" data-bs-toggle="popover"
-    data-bs-trigger="hover focus" data-bs-content="Disabled popover">
-        <button type="button" class="btn btn-primary" disabled>Disabled Button</button>
-</span>
+<body class="container p-3">
+    <div class="progress" role="progressbar" aria-label="First Download"
+         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-danger" style="width: 10%">10%</div>
+    </div>
+    <hr>
+    <div class="progress" role="progressbar" aria-label="Second Download"
+        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-warning w-50">50%</div>
+    </div>
+    <hr>
+    <div class="progress" role="progressbar" aria-label="Example 3px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+        <div class="progress-bar" style="width: 25%"></div>
+    </div>
+    <hr>
+    <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+        <div class="progress-bar" style="width: 25%">25%</div>
+    </div>
+    <hr>
+    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-info overflow-visible text-warning-emphasis" style="width: 10%">downloading assets images and sprites</div>
+    </div>
+    <hr>
+    <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
+    </div>
+    <hr>
+    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+    </div>
+    <hr>
+    <div class="progress" role="progressbar" aria-label="download resources"
+         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar rounded-end-1 bg-danger" style="width: 20%">sprites and icons</div>
+        <div class="progress-bar rounded-1 bg-warning w-50">images and audios</div>
+        <div class="progress-bar rounded-start-1 bg-success progress-bar-striped progress-bar-animated w-25">downloading audios and videos</div>
+    </div>
 </body>
 </html>

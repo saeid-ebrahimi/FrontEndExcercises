@@ -3,109 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--    <script src="js/popper.min.js" defer></script>-->
-    <!--    <script src="js/bootstrap.js" defer></script>-->
-    <!-- or -->
+
     <script src="js/bootstrap.bundle.min.js" defer></script>
-    <script src="js/script.js" defer></script>
-    <title>Progress</title>
+    <title>Scrollspy example 2</title>
     <style>
-        #home,#contact,#front,#back,#python{
-            height: 40vh;
+        div>div>div{
+            height: 50vh;
         }
     </style>
 </head>
 <body class="container p-3">
-    <nav id="main-navbar" class="navbar sticky-top bg-body-secondary px-3 mb-3">
-        <a href="#home" class="navbar-brand">
-            <img src="icons8-source-code-96.ico" alt="NeoWeb" width="30px">
-            <span class="navbar-text"> NeoWeb </span>
-        </a>
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#contact" class="nav-link">Contact Us</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown"
-                   role="button"  aria-expanded="false">Blogs</a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#front" class="dropdown-item">Front-end Roadmap</a>
-                    </li>
-                    <li>
-                        <a href="#back" class="dropdown-item">Back-end Roadmap</a>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li>
-                        <a href="#python" class="dropdown-item">Python Developer Roadmap</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-<div id="main-container" data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-margin="0px 0px -40%"
-     data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-    <div id="home" class="mt-5" >
-        <h4 >Home</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, minus, recusandae. Adipisci, asperiores dignissimos dolor dolorem fugiat harum nesciunt possimus, praesentium quibusdam reiciendis saepe similique. Dicta eligendi eveniet nostrum pariatur?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi debitis dolorum earum, eligendi, eum ex explicabo hic, natus nesciunt non porro quaerat qui quos ratione sit totam vero voluptates.</p>
-    </div>
-    <hr>
-    <div id="contact">
-        <h4 >Contact US</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolor doloribus eius illo natus nemo nostrum
-            quos tempora tempore veritatis. Aspernatur dicta dolor maxime, molestias numquam quaerat quo tenetur
-            voluptates?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolor doloribus eius illo natus nemo nostrum
-            quos tempora tempore veritatis. Aspernatur dicta dolor maxime, molestias numquam quaerat quo tenetur
-            voluptates?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolor doloribus eius illo natus nemo nostrum
-            quos tempora tempore veritatis. Aspernatur dicta dolor maxime, molestias numquam quaerat quo tenetur
-            voluptates?</p>
-    </div>
-    <hr>
-    <div>
-        <div id="front">
-            <h4 >Front-end Roadmap</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur cum eos explicabo, facilis fuga
-                iure laborum, maiores maxime, modi non obcaecati odio odit quaerat quibusdam reprehenderit suscipit ut
-                veniam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur cum eos explicabo, facilis fuga
-                iure laborum, maiores maxime, modi non obcaecati odio odit quaerat quibusdam reprehenderit suscipit ut
-                veniam!</p>
-        </div>
-        <hr>
-        <div id="back">
-            <h4 >Back-end Roadmap</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae corporis cumque deleniti dolorum
-                ducimus in, inventore labore minus modi nulla obcaecati perspiciatis placeat quasi repudiandae sapiente
-                sunt totam vero.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae corporis cumque deleniti dolorum
-                ducimus in, inventore labore minus modi nulla obcaecati perspiciatis placeat quasi repudiandae sapiente
-                sunt totam vero.</p>
-        </div>
-        <hr>
-        <div id="python">
-            <h4 >Python Developer Roadmap</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dicta dolores laboriosam magnam odit
-                quo, sunt tempora velit. Aspernatur ipsam iste labore magni possimus qui quidem repellendus.
-                Necessitatibus quasi, sequi!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dicta dolores laboriosam magnam odit
-                quo, sunt tempora velit. Aspernatur ipsam iste labore magni possimus qui quidem repellendus.
-                Necessitatibus quasi, sequi!</p>
-        </div>
-    </div>
-    <hr>
-</div>
     <div>
         <div class="row">
             <div class="col-4">
-                <nav id="navbar-example3" class="nav-bar  h-100 flex-column align-items-stretch pe-4 border-end">
+                <nav id="navbar-example3" class="nav-bar position-fixed h-100 flex-column align-items-stretch pe-4 border-end">
                     <nav class="nav nav-pills flex-column">
                         <a class="nav-link" href="#item-1">Item 1</a>
                         <nav class="nav nav-pills flex-column">
@@ -127,13 +38,11 @@
                     <div id="item-1">
                         <h4>Item 1</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere laboriosam neque nisi quis velit? Ab ea, exercitationem labore non qui quisquam quo soluta veniam. Eligendi eum modi omnis sequi voluptate.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere laboriosam neque nisi quis velit? Ab ea, exercitationem labore non qui quisquam quo soluta veniam. Eligendi eum modi omnis sequi voluptate.</p>
                     </div>
                     <div id="item-1-1">
                         <h5>Item 1-1</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere laboriosam neque nisi quis velit? Ab ea, exercitationem labore non qui quisquam quo soluta veniam. Eligendi eum modi omnis sequi voluptate.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere laboriosam neque nisi quis velit? Ab ea, exercitationem labore non qui quisquam quo soluta veniam. Eligendi eum modi omnis sequi voluptate.</p>
-
                     </div>
                     <div id="item-1-2">
                         <h5>Item 1-2</h5>
@@ -141,6 +50,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere laboriosam neque nisi quis velit? Ab ea, exercitationem labore non qui quisquam quo soluta veniam. Eligendi eum modi omnis sequi voluptate.</p>
 
                     </div>
+                    <hr>
                     <div id="item-2">
                         <h4>Item 2</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere laboriosam neque nisi quis velit? Ab ea, exercitationem labore non qui quisquam quo soluta veniam. Eligendi eum modi omnis sequi voluptate.</p>

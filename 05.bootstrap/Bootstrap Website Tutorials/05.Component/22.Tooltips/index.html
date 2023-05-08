@@ -8,46 +8,39 @@
     <!-- or -->
     <script src="js/bootstrap.bundle.min.js" defer></script>
     <script src="js/script.js" defer></script>
-    <title>Popover</title>
+    <title>Tooltips</title>
     <style>
+        .custom-tooltip {
+            --bs-tooltip-bg: var(--bs-warning);
+            --bs-tooltip-color: var(--bs-dark);
+        }
 
     </style>
 </head>
 <body class="container">
-
+<p class="muted">
+    Placeholder text to demonstrate some
+    <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip" data-bs-placement="top">inline links</a>
+    with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of
+    <a href="#" data-bs-toggle="tooltip" data-bs-title="Another tooltip"  data-bs-placement="bottom">real text</a>.
+    And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how
+    <a href="#" data-bs-toggle="tooltip" data-bs-title="Another one here too"  data-bs-placement="left">these tooltips on links</a>
+    can work in practice, once you use them on
+    <a href="#" data-bs-toggle="tooltip" data-bs-title="The last tip!"  data-bs-placement="right">your own</a>
+    site or project.
+</p>
 <hr>
-<hr>
-<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-<hr>
-<h3>Custom Popover</h3>
-<style>
-    .custom-popover1{
-        --bs-popover-max-width: 200px;
-        --bs-popover-border-color: var(--bs-info);
-        --bs-popover-header-bg:var(--bs-info);
-        --bs-popover-header-color:var(--bs-white);
-        --bs-popover-body-padding-x: 1rem;
-        --bs-popover-body-padding-y: .5rem;
-    }
-</style>
-<button type="button" class="btn btn-outline-warning"
-    data-bs-toggle="popover" data-bs-placement="bottom" data-bs-custom-class="custom-popover1"
-    data-bs-title="Information" data-bs-content="This is a custom popover using css variables"
-    >custom popover
+<button type="button" class="btn btn-secondary"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-html="true"
+        data-bs-title="This right <strong> tooltip </strong>is <em> themed </em> via CSS variables, and contains html elements too.">
+    Custom tooltip
 </button>
-
-<h3>Dismissible popover with JS</h3>
-<!-- Dismissing on next click requires specific HTML for proper cross-browser and cross-platform behavior.
-You can only use <a> elements, not <button>s, and you must include a tabindex. -->
-<a tabindex="0" class="btn btn-sm btn-info" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
-   data-bs-title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">
-    Dismissible Popover
-</a>
-
-<h3>Disabled Elements</h3>
-<span class="d-inline-block" tabindex="0" data-bs-toggle="popover"
-    data-bs-trigger="hover focus" data-bs-content="Disabled popover">
-        <button type="button" class="btn btn-primary" disabled>Disabled Button</button>
+<hr>
+<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Disabled tooltip">
+  <button class="btn btn-primary" type="button" disabled>Disabled button</button>
 </span>
 </body>
 </html>

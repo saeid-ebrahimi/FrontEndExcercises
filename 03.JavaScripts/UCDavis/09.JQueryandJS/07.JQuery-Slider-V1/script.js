@@ -1,27 +1,28 @@
 
-$(window).on("load",function (){
+(function() {
     "use strict"
-    const imageCount = $("#slider ul li").length
-    const imageWidth = $("#slider ul li img").first().width()
-    const totalWidth = (imageCount * imageWidth)+"px"
+    const imageCount = $(".slider ul li").length
+    const imageWidth = $(".slider ul li img").first().width()
+    const totalWidth = (imageCount*imageWidth)+"px"
 
-    let leftPosition = 0
+    let leftPos = 0
     let counter = 0
-
-    $("#slider ul").css("width", totalWidth)
-    $("#next").click(function (){
+    const slider = $(".slider ul")
+    slider.css("width", totalWidth)
+    $("#next").click(function(){
         counter++
-        if (counter >= imageCount)
+        if(counter === (imageCount)){
             counter = 0
-        leftPosition = `-${counter * imageWidth}px`
-        $("#slider ul").animate({left:leftPosition},700,"easeInQuad")
+        }
+        leftPos = `-${counter * imageWidth}px`
+        slider.animate({left:leftPos}, 500, "easeInQuad")
     })
     $("#previous").click(function (){
         counter--
-        if (counter < 0)
+        if(counter === -1){
             counter = imageCount -1
-        leftPosition = `-${counter * imageWidth}px`
-        $("#slider ul").animate({left:leftPosition},700,"easeInQuad")
-
+        }
+        leftPos = `-${counter * imageWidth}px`
+        slider.animate({left:leftPos}, 500, "easeInQuad")
     })
-})
+})()

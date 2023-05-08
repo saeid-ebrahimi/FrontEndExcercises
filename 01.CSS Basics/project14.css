@@ -16,7 +16,7 @@
     margin-bottom: 3vh;
 }
 #menu1 div li {
-    color: wheat;
+    color: #fbe7c2;
     display: inline;
     padding: 2.5vh 5vw;
     margin-left: .5vw;
@@ -64,5 +64,12 @@
 
 #footer1 footer .toplist{
     font-variant: small-caps;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+}
+#footer1 div li{
+    padding: .5rem;
+}
+#footer1 div li:hover{
+    cursor: pointer;
+    border-bottom: 2px #A239CA solid ;
 }

@@ -30,8 +30,9 @@ function userValidation(){
         userSpan.innerHTML = "username must contains at least 12 characters"
         userSpan.style.color = "red"
     }else{
-        userSpan.innerHTML = "valid username entered"
-        userSpan.style.color = "green"
+        userSpan.innerHTML = ""
+        // userSpan.innerHTML = "valid username entered"
+        // userSpan.style.color = "green"
         
     }
 }
@@ -40,11 +41,13 @@ function passValidation(){
     
     console.log(passwordInput.value.length)
     if (passwordInput.value.length < 8){
+
         passSpan.innerHTML = "password must contains at least 8 characters"
         passSpan.style.color = "red"
     }else{
-        passSpan.innerHTML = "valid password entered"
-        passSpan.style.color = "green"
+        passSpan.innerHTML = ""
+        // passSpan.innerHTML = "valid password entered"
+        // passSpan.style.color = "green"
         
     }
 }

@@ -52,7 +52,7 @@ function saveData(evt){
     for(let file of photoElem.files){
         photos.push(file)
     }
-    localStorage.photo = photos
+    localStorage.photo = JSON.stringify(photos)
     localStorage.fname = fNameElem.value
     localStorage.lname = lNameElem.value
     localStorage.email = emailElem.value
@@ -81,17 +81,18 @@ function saveData(evt){
         if (elem.checked)
             contactForms.push(elem.value)
     }
-    localStorage.contact = contactForms
+    localStorage.contact = JSON.stringify(contactForms)
 
     for(let prop in localStorage){
         localStorage[prop] = localStorage[prop]
     }
 }
 window.onload = function restoreData(){
+    console.table(localStorage)
     for(let field of selectors){
         console.log(field)
         if (field === "photo" ){
-            phoneElem.files = localStorage[field]
+            // phoneElem.files = localStorage[field]
         }else if(field === "status"){
             document.getElementById(localStorage[field]).checked = true
         }
@@ -117,7 +118,7 @@ function readImagesAndPreview(evt){
         reader.onload = function(evt){
             let container = document.createElement("div")
             let image = document.createElement("img")
-            image.src = evt.target.result
+            image.src = evt.target.result.toString()
             image.width = 100
             let namePar = document.createElement("p")
             namePar.innerText = file.name

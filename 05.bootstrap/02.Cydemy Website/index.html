@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/light_2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Cydemy | Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-success sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navrbar-brand mr-auto" href="index.html">
+                <img src="/images/light_2.png" width="150px" alt="">
+            </a>
+            <div class="navbar-collapse collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="./index.html" class="nav-link active" ><i class="bi bi-house text"></i> Home</a></li>
+                    <li class="nav-item"><a href="./courses.html" class="nav-link"><i class="bi bi-camera-video"></i> Courses</a></li>
+                    <li class="nav-item"><a href="./projects.html" class="nav-link"><i class="bi bi-person-workspace"></i> Projects</a></li>
+                    <li class="nav-item"><a href="./about.htm" class="nav-link"><i class="bi bi-info-circle"></i> About</a></li>
+                    <li class="nav-item"><a href="./contact.html" class="nav-link"><i class="bi bi-person"></i> Contact</a></li>
+                </ul>
+            </div>
+            <span class="navbar-text">
+                <a data-bs-toggle="modal" data-bs-target="#loginModal" style="text-decoration: none;" href="">
+                    <span class="bi bi-box-arrow-in-right" ></span>
+                    Sign In
+                </a>
+            </span>
+        </div>
+        
+    </nav>
+    <div id="loginModal" class="modal fade" role="dialog" >
+        <div class="modal-dialog modal-lg" role="contentinfo">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign In</h4>
+                    <a role="button" type="button" class="close bi bi-x-circle text-dark" data-bs-dismiss="modal">
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label class="d-none d-sm-block col-sm-3 col-md-2 col-form-label" for="exampleInputEmail">Email</label>
+                            <div class="col-sm-9 col-md-10">
+                                <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter Your Email Address Please...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="d-none d-sm-block col-sm-3 col-md-2 col-fro-label"  for="#exampleInputPassword">Password</label>
+                            <div class="col-sm-9 col-md-10">
+                                <input type="password" class="form-control"
+                                id="exampleInputPassword"
+                                placeholder="Enter Your Password Please...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-8">
+                                <input class="form-check-input" type="checkbox" id="inputCheck">
+                                <label for="#inputCheck" class="form-check-label">Remember Me</label>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-5 offset-1 offset-sm-3 offset-md-2 col-sm-3 mr-auto">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>    
+                            </div>
+                            <div class="col-5 offset-1 col-sm-3 ml-auto">
+                                <button type="submit" class="btn btn-primary ">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <header class="p-5 rounded jumbotron">
+        <div class="container-fluid">
+            <div class="row row-header">
+                    <div class="col-12 col-sm-4 col-md-3 ">
+                        <img src="images/light_2.png" alt="Cydemy Logo" title="online coding academy" style="max-width:300px">
+                    </div>
+                    <div class="col-12 col-sm-7 offset-sm-1 offset-md-1 mt-4 col-md-6">
+                        <h1>Cydemy Is an Online free coding academy</h1>
+                        <p>Learn Coding for free in Cydemy from experienced instructors</p>
+                    </div>
+                    <div class="col-12 col-sm col-md-2  mt-4">
+                        
+                        <a id="example" class="btn btn-warning" 
+                        data-bs-toggle="tooltip" data-bs-html="true"
+                        title="contact" data-bs-original-title="or contact us <br><strong> at contact us form </strong>"
+                        data-bs-placement = "bottom"
+                        href="#contactform" role="button">Contact Us</a>
+                        
+                    </div>
+            </div>
+            
+        </div>
+    </header>
+    <div class="container">
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="./images/React.jpg" alt="reactjs course">
+                            <div class="carousel-caption d-none d-md-block offset-md-3">
+                                <h2 class="mt-0 text-dark">React JS Course <br> <small><span class="badge bg-danger">100$</span></small></h2>
+                                <p class="d-none d-md-block text-dark"> 
+                                    Learn to Make One Page Web Applications Using React JS
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"  src="./images/NodeJs.jpg" alt="">
+                            <div class="carousel-caption d-none d-md-block offset-md-3">
+                                <h2 class="mt-0 text-dark">Node JS Course <br> <small><span class="badge bg-danger">80$</span></small></h2>
+                                <p class="d-none d-md-block text-dark"> 
+                                    Learn to Implement Web Applications Services Using Node JS
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"  src="./images/python.jpg" alt="">
+                            <div class="carousel-caption d-none d-md-block offset-md-3">
+                                <h2 class="mt-0 text-dark">Python Course <br> <small><span class="badge bg-danger">100$</span></small></h2>
+                                <p class="d-none d-md-block text-dark"> 
+                                    Learn to Make Console and GUI Applications in Python
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            
+                            <img class="d-block img-fluid"  src="./images/Java Script.jpg" alt="">
+                            <div class="carousel-caption d-none d-md-block offset-md-3">
+                                <h2 class="mt-0 text-dark">JavaScript Course <br> <small><span class="badge bg-danger">100$</span></small></h2>
+                                <p class="d-none d-md-block text-dark"> 
+                                    Learn to Make Page Web Applications Dynamic in Javascript
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"  src="./images/Cpp.jpg" alt="">
+                            <div class="carousel-caption d-none d-md-block offset-md-3">
+                                <h2 class="mt-0 text-dark">C++ Course <br> <small><span class="badge bg-danger">100$</span></small></h2>
+                                <p class="d-none d-md-block text-dark"> 
+                                    Learn to Make Console Applications In C++
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"  src="./images/Qt.jpg" alt="">
+                            <div class="carousel-caption d-none d-md-block offset-md-3">
+                                <h2 class="mt-0 text-dark">PyQt Course <br> <small><span class="badge bg-danger">100$</span></small></h2>
+                                <p class="d-none d-md-block text-dark">
+                                    Learn to Make Cross Platform GUI Applications in Python
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="1" ></li>
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="2" ></li>
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="3" ></li>
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="4" ></li>
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="5" ></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row row-content">
+            <h2>Front End</h2> <hr>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="media">
+                    <img class="d-flex mr-3 mb-1 img-thumbnail" src="./images/HTML.jpg" alt="HTML Course">
+                    
+                    <div class="media-body">
+                        <h2 class="mt-0">HTML5 Course<br> <small><s class="badge bg-secondary">30$</s> <span class="badge bg-danger  offset-1">Free</span></small></h2>
+                        <p class="d-none d-sm-block"> 
+                            Learn to Build Structure of Web Pages Using HTML5
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="media">
+                    <img class="d-flex mr-3 mb-1 img-thumbnail" src="./images/CSS.jpg" alt="CSS Course">
+                    
+                    <div class="media-body">
+                        <h2 class="mt-0">CSS3 Course <br> <small><span class="badge bg-danger">40$</span></small></h2>
+                        <p class="d-none d-sm-block"> 
+                            Learn to Style Web Pages Using CSS3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="media">
+                    <img class="d-flex mr-3 mb-1 img-thumbnail" src="./images/Java Script.jpg" alt="JavaScript Course">
+            
+                    <div class="media-body">
+                        <h2 class="mt-0">JavaScript Course <br> <small> <span class="badge bg-success rounded-pill">Popular</span><s class="badge bg-secondary offset-1">100$</s><span class="badge bg-danger offset-1">50$</span> 
+                        </small>
+                        </h2>
+                        
+                        <p class="d-none d-sm-block">
+                            Learn to Build Dynamic Web Pages Using Java
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="media">
+                    <img class=" d-flex mr-3 mb-1 img-thumbnail align-self-center" src="./images/Bootstrap.jpg"
+                        alt=" Bootstrap Course" title="bootstrap course">
+                    <div class="media-body">
+                        <h2 class="mt-0">Bootstrap Course <br> <small> <span class="badge bg-warning rounded-pill">New</span><span class="badge bg-danger  offset-1">50$</span></small></h2>
+                        <p class="d-none d-sm-block"> Learn to Design Responsive Web Pages Using Boostrap in Mobile First
+                            Approach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-content">
+               <h2>Back End</h2> <hr>
+            
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="media">
+                    <img class="d-flex mr-3 mb-1 img-thumbnail" src="./images/HTML.jpg" alt="HTML Course">
+            
+                    <div class="media-body">
+                        <h2 class="mt-0">HTML5 Course<br> <small><s class="badge bg-secondary">30$</s> <span
+                                    class="badge bg-danger offset-1">Free</span></small></h2>
+                        <p class="d-none d-sm-block">
+                            Learn to Build Structure of Web Pages Using HTML5
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="media">
+                    <img class="d-flex mr-3 mb-1 img-thumbnail" src="./images/CSS.jpg" alt="CSS Course">
+            
+                    <div class="media-body">
+                        <h2 class="mt-0">CSS3 Course <br> <small><span class="badge bg-danger">40$</span></small></h2>
+                        <p class="d-none d-sm-block">
+                            Learn to Style Web Pages Using CSS3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="media">
+                    <img class="d-flex mr-3 mb-1 img-thumbnail" src="./images/Java Script.jpg" alt="JavaScript Course">
+            
+                    <div class="media-body">
+                        <h2 class="mt-0">JavaScript Course <br> <small> <span class="badge bg-success rounded-pill">Popular</span><s
+                                    class="badge bg-secondary offset-1">100$</s><span
+                                    class="badge bg-danger offset-1">50$</span>
+                            </small>
+                        </h2>
+            
+                        <p class="d-none d-sm-block">
+                            Learn to Build Dynamic Web Pages Using Java
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-last">
+                <div class="media">
+                    <img class=" d-flex mr-3 mb-1 img-thumbnail align-self-center" src="./images/Bootstrap.jpg"
+                        alt=" Bootstrap Course" title="bootstrap course">
+                    <div class="media-body">
+                        <h2 class="mt-0">Bootstrap Course <br> <small> <span class="badge bg-warning rounded-pill">New</span><span
+                                    class="badge bg-danger offset-1">50$</span></small></h2>
+                        <p class="d-none d-sm-block"> Learn to Design Responsive Web Pages Using Boostrap in Mobile First
+                            Approach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container-fluid bg-light ">
+            <div class="row row-footer">
+                <div class="row col-12 col-sm-6 align-self-center">
+                    <h2>Courses</h2>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li> <a class="footer-link" href="">C++</a></li>
+                            <li> <a class="footer-link" href="">HTML</a></li>
+                            <li> <a class="footer-link" href="">CSS</a></li>
+                            <li> <a class="footer-link" href="">Java Script</a></li>
+                            <li> <a class="footer-link" href="">JQuery</a></li>
+                            <li> <a class="footer-link" href="">git</a></li>
+                            <li> <a class="footer-link" href="">Boostrap</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li> <a class="footer-link" href="">React.js</a></li>
+                            <li><a class="footer-link" href="">SQL</a></li>
+                            <li><a class="footer-link" href="">Nodejs</a></li>
+                            <li><a class="footer-link" href="">Python</a></li>
+                            <li><a class="footer-link" href="">Django</a></li>
+                            <li><a class="footer-link" href="">PyQt</a></li>
+                            <li><a class="footer-link" href="">Linux</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-2 align-self-center">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h3>About</h3>
+                            <a class="footer-link" href="./about.htm"><i class="bi bi-info-circle"></i> About Us</a>
+                         </li>
+                        <li>
+                            <h3>Contact</h3>
+                            <a class="footer-link" href="./contact.html"><i class="bi bi-person"></i> Contact Us</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="col-6 col-sm-4 align-self-center address">
+                    <h2>Address</h2>
+                    <address>
+                        <ul class="list-unstyled">
+                            <li> <a class= "footer-link" href="https://maps.google.com/?ll=29.566136, 52.594518"><i class="bi bi-geo-alt"></i> Forsat Shirazi blv, Shiraz , Iran</a> 
+                            </li>
+                            <li><a class= "footer-link" href="tel:9389137236"> <i class="bi bi-phone"></i> +98 938 913 7236</a> </li>
+                            <li> <a class="footer-link" href="mailto:saeidebrahimiapply@gmail.com"> <i class="bi bi-envelope"></i>saeidebrahimiapply@gmail.com</a> </li>
+                            <li></li>
+                        </ul>
+                    </address>
+                    
+                </div>
+                <div class="col-12 col-sm-6 align-self-center">
+                    <div class="text-center">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"> <a class="bi bi-github footer-link"></a> </li>
+                            <li class="list-inline-item"> <a class="bi bi-discord footer-link"></a> </li>
+                            <li class="list-inline-item"> <a class="bi bi-linkedin footer-link"></a> </li>
+                            <li class="list-inline-item"> <a class="bi bi-instagram footer-link"></a> </li>
+                            <li class="list-inline-item"> <a class="bi bi-whatsapp footer-link"></a> </li>
+                            <li class="list-inline-item"> <a class="bi bi-twitter footer-link"></a> </li>
+                            <li class="list-inline-item"> <a class="bi bi-telegram footer-link"></a> </li>
+                            <li class="list-inline-item"> <a class="bi bi-youtube footer-link"></a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm justify-content-center">
+                    <p>&copy; Copyright 2021 by Cydemy. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<!-- boostrap bundle disable fade effect in hamberger menu-->   
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!-- <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script> -->
+</body>
+</html>

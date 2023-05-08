@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Online Shop</title>
+</head>
+<body>
+    <h1>Do Online Shop</h1>
+    <script>
+        // some findIndex and forEach usage 
+        const allProducts = [
+            {id:1,name:"notebook", price:"1000"},
+            {id:2,name:"phone",price:"500"},
+            {id:3,name:"microphone",price:"100"},
+            {id:4,name:"headset",price:"200"},
+            {id:5,name:"mouse",price:"50"},
+            {id:6,name:"keyboard",price:"100"}
+        ]
+        const userBasket=[
+            { id: 1, name: "mouse", price: "50" },
+            { id: 2, name: "keyboard", price: "100" }
+        ]
+        const userRequest = prompt("1.Add Product\n2.Remove Product")
+        if(userRequest === "1")
+        {
+            const productName = prompt("enter the product name please: ")
+            const add_available_item = allProducts.some(productItem => {
+                if (productItem.name === productName) {
+                    addToBasket(productItem)
+                    return true
+                }
+                return false
+            })
+            if (add_available_item) {
+                alert("کالا به سبد اضافه شد")
+                console.log(userBasket)
+                const total_price = calc_total_price(userBasket)
+                console.log("total price:" + total_price)
+            }
+            else {
+                alert('کالا موجود نیست')
+            }
+            
+        }
+        else if(userRequest === "2"){
+            const productName = prompt("enter the product name please: ")
+            const removeableProduct = userBasket.some(productItem =>{
+                if (productItem.name === productItem)
+                {
+                    removeFromBasket(productItem)
+                    return true
+                }
+                else
+                    return false
+            })
+            if(removeableProduct){
+                alert("کالا از سبد حذف شد")
+                console.log(userBasket)
+                const total_price = calc_total_price(userBasket)
+                console.log("total price:" + total_price)
+            }
+            else{
+                alert("کالا در سبد موجود نیست")
+            }
+
+        }
+        else{
+            alert("Please Enter a valid number!!(1 or 2)")
+        }
+        function calc_total_price(Basket) {
+            let sum = 0
+            Basket.forEach(item => {
+                sum += Number(item.price)
+            })
+            return sum
+        }
+        function addToBasket(productItem){
+            new_item = {
+                id: productItem.id,
+                name: productItem.name,
+                price: productItem.price
+            }
+            userBasket.push(new_item)
+        }
+        function removeFromBasket(productItem){
+            const productIndex = userBasket.findIndex( product => {
+                return product.name === productItem.name
+            })
+            userBasket.splice(productIndex,1)
+        }
+        
+        
+         
+    </script>
+</body>
+</html>

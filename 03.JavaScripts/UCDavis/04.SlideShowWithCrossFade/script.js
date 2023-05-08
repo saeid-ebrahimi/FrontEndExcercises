@@ -1,30 +1,37 @@
-(function(){
+(function (){
     "use strict"
+    const images = ["./slides/image1.jpg",
+        "./slides/image2.jpg",
+        "./slides/image3.jpg",
+        "./slides/image4.jpg",
+        "./slides/image5.jpg"]
     let currentImage = 0
-    const myPhotos = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg"]
     const next = document.querySelector("#next")
     const previous = document.querySelector("#previous")
-    const container = document.querySelector("#content")
-    next.addEventListener("click",function(event1){
-        event1.preventDefault()
-        currentImage++
-        if(currentImage > myPhotos.length -1)
+    const slider= document.querySelector(".slider")
+
+    next.onclick = nextSlide
+    previous.onclick = previousSlide
+    function nextSlide (){
+        if(++currentImage > images.length-1){
             currentImage = 0
+        }
         swapImage()
-        })
-    previous.addEventListener("click",function(event1){
-        event1.preventDefault()
-        currentImage--
-        if(currentImage < 0)
-            currentImage = myPhotos.length -1
+    }
+    function previousSlide(){
+        if(--currentImage < 0){
+            currentImage = images.length-1
+        }
         swapImage()
-        })
+    }
+
     function swapImage(){
         const newSlide = document.createElement("img")
-        newSlide.src = `slides/${myPhotos[currentImage]}`
-        newSlide.className = "fadeinimg"
-        container.appendChild(newSlide)
-        if (container.children.length > 2)
-            container.removeChild(container.children[0])
+        newSlide.src = images[currentImage]
+        newSlide.className = "fadein-img"
+        slider.appendChild(newSlide)
+        if(slider.children.length > 3){
+            slider.removeChild(slider.children[slider.children.length -2])
+        }
     }
 })()

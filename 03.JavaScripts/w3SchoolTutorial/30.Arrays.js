@@ -16,7 +16,7 @@ let car = cars[0]
 let l = car.length
 let last = cars[cars.length -1]
 const fruits = ["Banana", "Orange", "Apple", "Mango", "Berry", "Straw Berry"]
-let text = "<ul><li>"
+let text = "<ul>"
 for (let fruitElement of fruits) {
     text +=`<li> ${fruitElement} </li>`
 }

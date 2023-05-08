@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Seat Reservations</title>
+	<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<h1>Reserve Your Seats</h1>
+
+	<div id="stage">Stage</div>
+
+	<div id="seating">
+		<section id="left">
+			<!-- Use JavaScript to replace these
+			<div class="label">A</div>
+			<div id="a1">1</div>
+			<div id="a2">2</div>
+			<div id="a3">3</div>
+			-->
+		</section>
+
+		<section id="middle">
+			<!-- Use JavaScript to replace these
+			<div id="a4">4</div>
+			<div id="a5">5</div>
+			<div id="a6">6</div>
+			<div id="a7">7</div>
+			<div id="a8">8</div>
+			<div id="a9">9</div>
+			<div id="a10">10</div>
+			<div id="a11">11</div>
+			<div id="a12">12</div>
+			-->
+		</section>
+
+		<section id="right">
+			<!-- Use JavaScript to replace these
+			<div id="a13">13</div>
+			<div id="a14">14</div>
+			<div id="a15">15</div>
+			<div class="label">A</div>
+			 -->
+		</section>
+		<a href="#" id="reserve">Reserve Seats</a>
+
+		<section id="resform">
+
+			<h2>Complete This Form to Confirm Your Reservation</h2>
+
+			<p id="selected-seats">You have selected X seats</p>
+
+			<form id="confirm-seats">
+				<label for="fname">First Name</label>
+				<input type="text" name="fname" id="fname" placeholder="Bob" required>
+
+				<label for="lname">Last Name</label>
+				<input type="text" name="lname" id="lname" placeholder="Jones" required>
+
+				<input type="submit" name="send" id="confirm-btn" value="Confirm Reservation">
+
+				<p>Or <a href="#" id="cancel">cancel</a> and choose different seats</p>
+			</form>
+		</section>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>

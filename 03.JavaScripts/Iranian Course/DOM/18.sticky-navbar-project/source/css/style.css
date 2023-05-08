@@ -75,3 +75,14 @@ footer {
 .txt-white a{
 	color: #eee !important;
 }
+.material-icons-outlined{
+	display: block;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	color: white;
+	background-color: #0c5460;
+	padding: 10px;
+	border-radius:50% ;
+	cursor: pointer;
+}

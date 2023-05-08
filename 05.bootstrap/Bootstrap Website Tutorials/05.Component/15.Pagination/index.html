@@ -4,106 +4,49 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js" defer></script>
-    <title>Offcanvas</title>
+    <title>Pagination</title>
     <style>
-        body>div{
-            height: 40vh;
-        }
 
     </style>
 </head>
-<body>
-    <!--
-    Accessibility:
-    Since the offcanvas panel is conceptually a modal dialog, be sure to add aria-labelledby="..."—referencing the offcanvas title—to .offcanvas.
-    Note that you don’t need to add role="dialog" since we already add it via JavaScript.
-    -->
-    <div>
-        <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcan1"
-             aria-labelledby="offcanvas-label" >
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvas-label">Welcome</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi cupiditate distinctio eius id magnam magni nemo nobis rem totam. Assumenda dolore harum ipsa natus porro. Minus nesciunt quisquam suscipit?
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div>
-        <a href="#offcan2" data-bs-toggle="offcanvas" class="btn btn-success"
-           role="button" aria-controls="offcan2">Welcome with link</a>
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcan2" aria-controls="offcan2">Welcome with Button</button>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcan2" aria-labelledby="offcan2">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcan2-label">Welcome</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur doloribus enim excepturi fuga fugit. Adipisci aliquam dolorum nulla provident quia reiciendis repellat repellendus sint soluta ullam. Illo, laborum voluptate. Necessitatibus?</p>
-                </div>
-                <div class="dropdown mt-3">
-                    <button class="btn btn-outline-warning dropdown-toggle"
-                            type="button" data-bs-toggle="dropdown">
-                        languages
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">Persian</a></li>
-                        <li><a href="#" class="dropdown-item">English</a></li>
-                        <li><a href="#" class="dropdown-item">French</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <h3>Offcanvas with body scroll and backdrop with dark theme</h3>
-    <div>
-        <a href="#offcan3" data-bs-toggle="offcanvas" class="btn btn-success"
-           role="button" aria-controls="offcan3">Welcome with link</a>
-        <div class="offcanvas offcanvas-start" data-bs-theme="dark" data-bs-scroll="true"
-             data-bs-backdrop="false" tabindex="-1" id="offcan3" aria-labelledby="offcan3">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcan3-label">Welcome</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur doloribus enim excepturi fuga fugit. Adipisci aliquam dolorum nulla provident quia reiciendis repellat repellendus sint soluta ullam. Illo, laborum voluptate. Necessitatibus?</p>
-                </div>
-                <div class="dropdown mt-3">
-                    <button class="btn btn-outline-warning dropdown-toggle"
-                            type="button" data-bs-toggle="dropdown">
-                        languages
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">Persian</a></li>
-                        <li><a href="#" class="dropdown-item">English</a></li>
-                        <li><a href="#" class="dropdown-item">French</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <h3>responsive offcanvas</h3>
-    <div>
-        <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
-
-        <div class="alert alert-info d-none d-lg-block">Resize your browser to show the responsive offcanvas toggle.</div>
-
-        <div class="offcanvas-lg offcanvas-bottom" data-bs-theme="dark" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <p class="mb-0 d-lg-none">This is content within an <code>.offcanvas-lg</code>.</p>
-            </div>
-        </div>
-    </div>
+<body class="container p-3">
+<nav aria-label="Page Navigation Example">
+    <ul class="pagination">
+        <li class="page-item"><a href="#" class="page-link">Prev</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+    </ul>
+</nav>
+<nav aria-label="Page Navigation Example">
+    <ul class="pagination pagination-sm">
+        <li class="page-item disabled" ><a href="#" class="page-link">
+            <span aria-hidden="true">&laquo;</span>
+        </a></li>
+        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">
+            <span aria-hidden="true">&raquo;</span>
+        </a></li>
+    </ul>
+</nav>
+<nav aria-label="Page Navigation Example">
+    <ul class="pagination pagination-lg justify-content-center">
+        <li class="page-item disabled" ><a href="#" class="page-link">
+            <span aria-hidden="true">&laquo;</span>
+        </a></li>
+        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">
+            <span aria-hidden="true">&raquo;</span>
+        </a></li>
+    </ul>
+</nav>
 </body>
 </html>

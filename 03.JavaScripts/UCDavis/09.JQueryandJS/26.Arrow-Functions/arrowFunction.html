@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function Introduction</title>
+</head>
+<body>
+    <h1>Arrow Function Introduction</h1>
+    <script>
+        function makeUpperCase(aString){
+            return aString.toUpperCase()
+        }
+        console.log(makeUpperCase("here is a string!"))
+        // function expresion
+        const makeUpperCase2 = function (aString){return aString.toUpperCase()}
+        console.log(makeUpperCase2("here is a string!"))
+        const makeUpperCase3 = (aString) =>  aString.toUpperCase()
+        console.log(makeUpperCase3("here is an another string!"))
+
+        const fullname = (first,last) => `${first} ${last}`
+        console.log(fullname("mehran","mandegar"))
+        const desireFullname = () => {
+            const first = "Sasan"
+            const last = "Sharifi"
+            return `${first} ${last}`
+        }
+        console.log(desireFullname())
+        const fruits = ["apple", "orange", "kiwi", "mango"]
+        const upperFruits = []
+        fruits.forEach(eachFruit => {
+            upperFruits.push(eachFruit.toUpperCase())
+        })
+        console.log(upperFruits)
+
+    </script>
+</body>
+</html>

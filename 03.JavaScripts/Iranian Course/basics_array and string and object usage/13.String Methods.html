@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta text="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods and Properties</title>
+</head>
+<body>
+    <h1>String Methods and Properties</h1>
+    <script>
+        
+        // properties
+        let tempText = "hello my friends from JavaScript"
+        console.log("text 8th index:" + tempText[8]) // cannot use negative number
+        console.log("text length: " + tempText.length)
+        console.log("String Prototype: "+ tempText.prototype)
+
+        // methods
+        console.log("%c start of methods: ", 'background: #222; color: orange')
+        console.log("text 4th index from last:" + tempText.at(-4)) // like index and we can use negative number
+        console.log("text 4th index:" + tempText.charAt(4)) // like index and cannot use negative number
+        console.log("text 5th index unicode number: " + tempText.charCodeAt(6))
+        console.log("your input was ".concat(tempText))
+        console.log(tempText + " ends with word 'Scrip': "+tempText.endsWith("Scrip"))
+        console.log("text using unicode number:"+ String.fromCharCode(189,99,117,112))
+        // cannot use indexof and includes with regEx
+        console.log(tempText + " contains 'Java': " + tempText.includes("Java"))
+        console.log(tempText + " contains 'Java' in index: " + tempText.indexOf("Java", 8, tempText - 4))
+        console.log(tempText + " last appearance of 'i' is in index: " + tempText.lastIndexOf("i"))
+        // we also have trim start and trim End
+        // match is used for regular expression and returns array
+        const regEx = /[A-Z]/g
+        console.log('text upper case letters array is '+tempText.match(regEx))
+        // matchAll is used for regular expression and returns iterator of result
+        const result = tempText.matchAll(regEx)
+        console.log(result)
+        while(true){
+            let ans = result.next()
+            if (ans.value)
+                console.log(ans)
+            else
+                break
+        }
+        console.log(tempText.padEnd(39,"x"))
+        console.log(tempText.padStart(37,"X"))
+        console.log(String.raw`C:\Development\profile\aboutme` ) // only with template text
+        console.log("Great ".repeat(5)) // can be used with reEx
+        console.log("Great ".repeat(5).replace("Great", "Awful"))
+        console.log("Great ".repeat(5).replaceAll("Great", "Awful"))
+        const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?'
+        // cannot find desire string in boundary index 
+        console.log(tempText + " contains 'Java' in index: " + tempText.search("Java")) // if does not exist return -1
+        console.log(paragraph.search(/[^\w\s]/)) // can be used with regEx
+        console.log(tempText.slice(8, -9))
+        console.log(tempText.split(" "))
+        console.log(tempText.startsWith("Hello"))
+        //console.log(tempText.substr(1,18)) //Deprecated: This feature is no longer recommended. length = 8
+        console.log(tempText.substring(10, 33)) // both start and stop are included
+        console.log(tempText.substring(33, 10)) // if start greater than stop it swapped
+
+        console.log("text in upeer case: " + tempText.toUpperCase())
+        console.log("text in lower case: " + tempText.toLowerCase())
+        console.log(tempText.trim()) // to get rid of reduntant spaces
+        console.log(tempText.trimStart())
+        console.log(tempText.trimEnd())
+        
+        
+        
+
+    </script>
+</body>
+</html>

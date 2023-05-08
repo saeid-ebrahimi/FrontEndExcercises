@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 4</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="page">
+        <h1>Example 4</h1>
+        <h2>Async and Await</h2>
+
+        <p>Async and await were introduced with es2017. They provide a simpler way of working with fetch() and
+            promises.The data the page is getting is generated from a script that randomly waits between 5 and 30
+            seconds to run. Note that waiting for it does not hold up this page at all. Click the button to load the
+            data.</p>
+        <p><button id="bgcolor">Change Background Color</button> <button id="font">Change Font</button></p>
+
+        <button id="loaddata">Get Data</button>
+
+        <div id="remotedata"></div>
+    </div>
+
+    <script>
+
+        document.getElementById('loaddata').addEventListener('click', getData);
+        // Async function for getting data from the file...
+        async function getData() {
+            // Add async / await code here...
+            document.getElementById("remotedata").innerHTML = "<img src='images/spinner.gif'>"
+            const fetchPromise = await fetch("https://cpe-web-assignments.ucdavis.edu/remotedata/index.php")
+            const content = await fetchPromise.text()
+            document.getElementById("remotedata").innerHTML = content
+        }
+
+        // Handling buttons
+        let color = "white";
+        let font = "arial";
+        document.getElementById('bgcolor').addEventListener('click', function () {
+
+            if (color == "white") {
+                document.getElementById('page').style.backgroundColor = "#f2f4b1";
+                color = "yellow";
+            }
+            else {
+                document.getElementById('page').style.backgroundColor = "#fff";
+                color = "white";
+            }
+        });
+
+        document.getElementById('font').addEventListener('click', function () {
+
+            if (font == "arial") {
+                document.getElementById('page').style.fontFamily = "Georgia";
+                font = "georgia";
+            }
+            else {
+                document.getElementById('page').style.fontFamily = "Arial";
+                font = "arial";
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

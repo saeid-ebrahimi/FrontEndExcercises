@@ -1,0 +1,18 @@
+#todoList label{
+  width: 80%;
+}
+#todoList li{
+  list-style-type: none;
+}
+.completed label{
+  color: green;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+.uncompleted label{
+  color: #07c8e7;
+  text-decoration: none;
+}
+#todoList .btn{
+  margin-left: 10px;
+}

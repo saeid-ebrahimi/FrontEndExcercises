@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="page">
+
+        <h2>Contact Me</h2>
+        <form method="post" id="contactform">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text">
+
+            <label for="email">Your Email</label>
+            <input id="email" name="email" type="email">
+
+            <label for="comment">Comments</label>
+            <textarea id="comment" rows="8" name="comment"></textarea>
+
+            <input type="submit" name="send" class="submitBtn" value="Send it to me!">
+        </form>
+
+        <div id="message" class="hide-message">
+            <div class="error">
+                <h3>Ooops!</h3>
+                <p>You forgot to give me a valid email address. Please fix that and try again!</p>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="formProcessor.js"></script>
+</body>
+
+</html>

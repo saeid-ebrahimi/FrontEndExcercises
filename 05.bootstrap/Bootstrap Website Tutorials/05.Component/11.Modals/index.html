@@ -4,146 +4,233 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js" defer></script>
-    <title>List Group</title>
+    <title>Modals</title>
     <style>
 
     </style>
 </head>
 <body class="container p-3">
-<div>
-    <ul class="list-group">
-        <li class="list-group-item">Learn Vue</li>
-        <li class="list-group-item">Learn Angular</li>
-        <li class="list-group-item active">Learn React</li>
-        <li class="list-group-item disabled">Learn JS</li>
-    </ul>
-</div>
-<hr>
-<div>
-    <ul class="list-group list-group-flush">
-        <a href="#" role="button" class="list-group-item list-group-item-action active">link Item</a>
-        <a href="#" role="button" class="list-group-item list-group-item-action">link Item</a>
-        <button class="list-group-item list-group-item-action">button Item</button>
-        <button class="list-group-item list-group-item-action disabled">button Item</button>
-    </ul>
-</div>
-<hr>
-<div>
-    <h5>Design Front-end</h5>
-    <ol class="list-group list-group-flush list-group-numbered">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="ms-3">
-                <h5 class="fw-bold">UI/UX</h5>
-                <p>Design UI/UX using Figma or Adobe XD</p>
-            </div>
-            <span class="badge bg-info rounded-pill">2</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="ms-3">
-                <h5 class="fw-bold">Design Raw Template</h5>
-                <p>Design Raw Template Using HTML, CSS and Bootstrap</p>
-            </div>
-            <span class="badge bg-info rounded-pill">1</span>
-            </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="ms-3">
-                <h5 class="fw-bold">Develop Front-end</h5>
-                <p>Develop Front-end Using JS and Bootstrap</p>
-            </div>
-            <span class="badge bg-info rounded-pill">2</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="ms-3">
-                <h5 class="fw-bold"> Using React.JS</h5>
-                <p>Maximize Interactivity Using React Library </p>
-            </div>
-            <span class="badge bg-info rounded-pill">2</span>
-        </li>
-    </ol>
-</div>
-<hr>
-<div>
-    <ul class="list-group list-group-horizontal-md">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-    </ul>
-</div>
-<hr>
-<div>
-    <ul class="list-group rounded rounded-3 list-group-flush" >
-        <a href="#" class="list-group-item list-group-item-action">item1</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">item1</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">item2</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-success">item3</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-warning">item4</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-danger">item5</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-dark">item6</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-info">item1</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-light">item1</a>
-    </ul>
-</div>
-<hr>
-<div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small>1 day ago</small>
-        </div>
-        <p class="mb-1">Some placeholder content in a paragraph.</p>
-        <small>And some small print.</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-body-secondary">2 days ago</small>
-        </div>
-        <p class="mb-1">Some placeholder content in a paragraph.</p>
-        <small class="text-body-secondary">And some muted small print.</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-body-secondary">3 days ago</small>
-        </div>
-        <p class="mb-1">Some placeholder content in a paragraph.</p>
-        <small class="text-body-secondary">And some muted small print.</small>
-    </a>
 
-</div>
-<hr>
-    <div>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                <label class="form-check-label stretched-link" for="firstCheckbox">First checkbox</label>
-            </li>
-            <li class="list-group-item">
-                <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                <label class="form-check-label  stretched-link" for="secondCheckbox">Second checkbox</label>
-            </li>
-            <li class="list-group-item">
-                <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                <label class="form-check-label  stretched-link" for="thirdCheckbox">Third checkbox</label>
-            </li>
-        </ul>
+    <div class="modal fade" tabindex="-1" id="myModal">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title h1">Modal Title</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+               </div>
+               <div class="modal-body">
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+               </div>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                   <button type="button" class="btn btn-primary">Save changes</button>
+               </div>
+           </div>
+       </div>
     </div>
-<hr>
+    <div class="modal fade" data-bs-backdrop="static" tabindex="-1" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title h1">Modal Title</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-cols-2">
+                    <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" id="myModal3">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title h1">Modal Title</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="fs-5">Popover in modal</h2>
+                    <p>to visit more <button class="btn btn-outline-danger"
+                                             data-bs-toggle="popover" title="More Detail" data-bs-content="here is more detail informations about ...."> > </button></p>
+                    <hr>
+                    <h2 class="fs-5">Tooltips in a modal</h2>
+                    <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <div>
-    <ul class="list-group">
-        <li class="list-group-item">
-            <input class="form-check-input me-1" name="choice" type="radio" value="" id="firstRadio" checked>
-            <label class="form-check-label stretched-link" for="firstRadio">First checkbox</label>
-        </li>
-        <li class="list-group-item">
-            <input class="form-check-input me-1" name="choice" type="radio" value="" id="secondRadio">
-            <label class="form-check-label  stretched-link" for="secondRadio">Second checkbox</label>
-        </li>
-        <li class="list-group-item">
-            <input class="form-check-input me-1" name="choice" type="radio" value="" id="thirdRadio">
-            <label class="form-check-label  stretched-link" for="thirdRadio">Third checkbox</label>
-        </li>
-    </ul>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Normal</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2">
+        Static Backdrop
+    </button>
+    <!--
+    When modals become too long for the user’s viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
+    You can also create a scrollable modal that allows scroll the modal body by adding .modal-dialog-scrollable
+    -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal3">
+        Centered and Scrollable
+    </button>
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal4">
+        With popover and tooltip
+    </button>
+</div>
+
+    <hr>
+<h3>Varying Modal Content</h3>
+<div class="modal fade" id="newModal" tabindex="-1" aria-labelledby="newModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Recipient:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+        </div>
+    </div>
+</div>
+<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+        data-bs-target="#newModal" data-bs-whatever="www.john@gmail.com">To John
+</button>
+<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+        data-bs-target="#newModal" data-bs-whatever="www.kane@gmail.com">To Kane
+</button>
+<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+        data-bs-target="#newModal" data-bs-whatever="www.magi@gmail.com">To Magi
+</button>
+<script>
+    const exampleModal = document.getElementById('newModal')
+    if (exampleModal) {
+        exampleModal.addEventListener('show.bs.modal', event => {
+            // Button that triggered the modal
+            const button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            const recipient = button.getAttribute('data-bs-whatever')
+            // If necessary, you could initiate an Ajax request here
+            // and then do the updating in a callback.
+
+            // Update the modal's content.
+            const modalTitle = exampleModal.querySelector('.modal-title')
+            const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+            modalTitle.textContent = `New message to ${recipient}`
+            modalBodyInput.value = recipient
+        })
+    }
+</script>
+
+<h3>Toggle Between Modals</h3>
+<div>
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Show a second modal and hide this one with the button below.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Hide this modal and show the first with the button below.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
+</div>
+    <hr>
+<div>
+    <button class="btn btn-primary" data-bs-target="#full-modal" data-bs-toggle="modal">
+        full screen for small screens</button>
+    <div class="modal fade modal-fullscreen-md-down" tabindex="-1" id="full-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title h1">Modal Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, fugit labore molestiae necessitatibus neque officiis repellat sint. Facere obcaecati, placeat! Adipisci dignissimos mollitia officiis. Harum minima nisi porro saepe!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

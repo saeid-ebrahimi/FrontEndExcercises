@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 8</title>
+    <style>
+    body{
+        background-color:#F8EEE7;
+    }
+    section p{
+        background-color:#F4DECB;
+    }
+    #section p{
+
+    }
+section section p{
+background-color:#94618E;
+color:#F8EEE7;
+}
+section section section p{
+background-color:#49274A;
+}
+section section section section p{
+background-color:#FFFFFF;
+color:#49274A;
+}
+section section section section p:hover{
+background-color:#B4DBC0 !important;
+border:2px dashed black;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <section>
+      <h3>Section 1</h3>
+        <p>Now that you've learned all these different selectors, you've probably noticed that there is nothing preventing one from creating rules that overlap, meaning creating rules that apply style to the same HTML elements. In fact, it's very common for HTML elements on a page to have multiple CSS rules competing for importance.</p>
+    <section>
+      <h3>Section 2</h3>
+        <p>Thanks to the "cascading" part of "Cascading Style Sheets", this isn't a problem. That is because CSS has a way to figure out which rule "wins" when styles are conflicting. CSS actually computes a "weight" for each style rule and the one with the greatest weight wins. If you want all the specifics on how this weight is computed you can read more here. For simplicity's sake, the most specific rule wins!</p>
+      <section>
+        <h3>Section 3</h3>
+          <p>A rule is generally more specific if it applies to a fewer number of elements than another rule that encompasses those elements. The more facets a rule has the more specific it is.</p>
+        <section>
+          <h3>Section 4</h3>
+            <p>When pseudo-classes are applied this is more specific than without the pseudo-class. For example, p:hover will win over just p.</p>
+        </section>
+      </section>
+    </section>
+    </section>
+    <section id="section">
+      <h3>Section 5</h3>
+        <p>Contextual selection is more specific because it scopes the rule to elements within a certain subset of those on the page. For example, a rule that applies to all the paragraphs within articles is more specific than a rule that applies to all the paragraphs on the page.</p>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+h1 , h2{
+    font-family: fantasy;
+}
+header h1{
+    float: left;
+    width: 30%;
+    padding: 2vh 3vw;
+    line-height: 5vh;   
+    
+}
+header h1 span{
+    color: rgb(76, 182, 243);
+}
+header li{
+    color:rgb(76, 182, 243);
+    padding: 1vh 0px;
+    
+}
+header li span{
+    color: black;
+    
+}
+header ul{
+    padding: 2vh 3vw;
+    float: left;
+    width:30%;
+    line-height: 2vh;
+    list-style: none;
+}
+header img{
+    border-top: 0.5rem solid rgb(76, 182, 243);
+    border-bottom: 0.5rem solid rgb(76, 182, 243);
+    padding: 2vh 1vw;
+    margin:2vh 3vw ;
+    float: left;
+    min-width: 12%;
+    max-width: 15%;
+}
+
+header li a{
+    color: navy;
+}
+header li a:hover{
+    color: chocolate;
+    font-weight: bold;
+}
+
+main{
+    clear: both;
+    border-top:3px navy solid ;
+}
+#work, #practical, #certificates, #projects{
+    float: left;
+    width: 62%;
+}
+
+#obj, #per, #edu{
+    float: left;
+    width: 25%;
+}
+#skills, #military{
+     float: right;
+     width: 25%;
+     margin-right: 3.3vw;
+ }
+section{
+    border-radius: 1.7vw;
+    margin: 1.5vh 1vw;
+    padding: 1.5vh 1.5vw;
+    background-color: rgb(226, 229, 229);
+}
+section h2{
+        padding-bottom: 0.5vh; 
+        border-bottom: 2px solid navy;
+}
+ footer{
+     margin: 1.5vh 1vw;
+     border-radius: 1.7vw;
+     padding: .5vh 1.5vw;
+     background-color: rgb(226, 229, 229);
+     color: rgb(76, 182, 243);
+     clear: both;
+     text-align: center;
+ }
+ footer a{
+     color:navy;
+ }
+ footer a:hover{
+     color: chocolate;
+     font-weight: bold;
+ }
+ #instructor > p, #intern >p, #editor >p, #ta >p{
+     float: left;
+     width: 10%;
+     padding-right: .5vw;
+     height: 20%;
+ }
+ #instructor h3, #intern h3, #editor h3, #ta h3{
+     color: rgb(76, 182, 243);
+ }
+#instructor div, #intern div, #editor div, #ta div{
+      padding-left:1.5vw; 
+     float: left;
+    border-left: 3px solid orange;
+     width: 85%;
+ }
+ #practical div p{
+     padding-left: 2vw;
+     
+ }
+ #practical div h3{
+     padding-left: 1vw;
+ }
+
+ #practical div{
+     border-left: 3px solid orange;
+ }
+  #practical div p em{
+      color: rgb(76, 182, 243);
+  }
+
+ #certificates p{
+     padding-left: 2vw;
+      border-left: 3px solid orange;
+     
+ }
+ #certificates h2{
+     padding-left: 1vw;
+ }
+ #certificates p em{
+      color: rgb(76, 182, 243);
+ }
+ #military p{
+     padding-left: 2vw;
+      border-left: 3px solid orange;
+     
+ }
+ #military h2{
+     padding-left: 1vw;
+ }
+  #projects p{
+     padding-left: 2vw;
+      border-left: 3px solid orange;
+     
+ }
+ #projects h2{
+     padding-left: 1vw;
+ }
+   #obj p{
+     padding-left: 2vw;
+      border-left: 3px solid orange;
+     
+ }
+ #obj h2{
+     padding-left: 1vw;
+ }
+ #per ul{
+     padding:0px;
+ }
+   #per li{
+       list-style: none;;
+     padding-left: 2vw;
+     margin: 0px;
+      border-left: 3px solid orange;
+     
+ }
+ #per li span{
+     color: rgb(76, 182, 243);
+ }
+ #per h2{
+     padding-left: 1vw;
+ }
+#edu p{
+     padding-left: 2vw;
+      border-left: 3px solid orange;
+     
+ }
+ #edu h2{
+     padding-left: 1vw;
+ }
+#skills p{
+    padding-left: 1.5vw;
+    border-left: 3px solid orange;
+     
+ }
+ #skils h2{
+     padding-left: 1vw;
+ }
+ #skills span{
+     color: rgb(76, 182, 243);
+ }
