@@ -7,5 +7,3 @@ let totalPrice = prices.reduce((prevPrice, currentPrice) => {
 })
 
 console.log('Reduce Output (Total Price):', totalPrice);
-
-// ['ali', 'mmd', 'amin', 'qadir', 'sasan', 'ali', 'qadir'] => {ali: 2, mmd: 1, amin: 1, qadir: 2, sasan: 1}

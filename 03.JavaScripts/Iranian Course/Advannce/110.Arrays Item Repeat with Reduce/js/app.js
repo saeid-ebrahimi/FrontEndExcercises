@@ -1,9 +1,8 @@
-let prices = [1_000, 2_000_000, 500_000, 90_000, 33_000]
+let nums = [1, 3,12 , 90, 100, 12, 4, 3, 100]
+let initialVal = {}
 
-let totalPrice = prices.reduce((prevPrice, currentPrice) => {
-    console.log(prevPrice, currentPrice) // 1000 2000000 | 2000000 500000 | ... | 90000 33000
+let itemRepeatObj = nums.reduce((prevObj, currVal) =>{
+    return {...prevObj,[currVal] : (prevObj[currVal] || 0) + 1}
+}, initialVal)
 
-    return prevPrice + currentPrice
-})
-
-console.log('Reduce Output (Total Price):', totalPrice);
+console.log(itemRepeatObj)
