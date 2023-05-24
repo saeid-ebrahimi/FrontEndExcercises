@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>Edit User Data</title>
+    <!-- links -->
+    <link rel="stylesheet" href="content/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+
+    <div  class="modal-container" id="delete-modal">
+      <div  class="modal-content">
+
+        <!-- ! delete user content ! -->
+        <h1 class="modal-title">are you sure you want delete this user ?</h1>
+        <div class="btn-groups">
+            <button class="unaccept-btn" onclick="closeModal()">No</button>
+            <button class="accept-btn" onclick="deleteUser()">Yes</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal-container" id="edit-modal"> <!-- ! add visible class to be visible ! -->
+      <div class="modal-content">
+
+          <!-- ! edit user content ! -->
+           <h1 class="modal-title">Fill out the following fields</h1>
+          <form action="" class="edit-user-form" onsubmit="event.preventDefault()">
+              <div class="input-field">
+                  <span><i class="bi bi-cursor-text"></i></span>
+                  <input type="text" class="firstname" id="" name="" placeholder="Your firstname" spellcheck="false">
+              </div>
+              <div class="input-field">
+                  <span><i class="bi bi-cursor-text"></i></span>
+                  <input type="text" class="lastname" id="" name="" placeholder="Your lastname" spellcheck="false">
+              </div>
+              <div class="input-field">
+                  <span><i class="bi bi-lock"></i></span>
+                  <input type="password" class="password" id="" name="" placeholder="your password" spellcheck="false">
+              </div>
+
+              <button class="accept-btn" onclick="updateUser()">update information</button>
+          </form> 
+      </div>
+  </div>
+
+
+    <h1 class="user-title">
+      <!-- ⚙ Loading... -->
+      <!-- ! when you're fetching data you can show this status ! -->
+      All users that you fetched 😎💣
+    </h1>
+
+    <div id="wrap-users"></div>
+
+    <script src="content/js/index.js"></script>
+    <script src="content/js/app.js"></script>
+  </body>
+</html>

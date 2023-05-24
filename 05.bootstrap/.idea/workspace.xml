@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e36faf2c-1258-406f-8119-bb03647d7031" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/46.get-variable-by-id/source/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/46.get-variable-by-id/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/46.get-variable-by-id/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/47-autocomplete-search-suggestions-project/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/47-autocomplete-search-suggestions-project/source/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/47-autocomplete-search-suggestions-project/source/js/suggestions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/47-autocomplete-search-suggestions-project/source/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/48.event Bubbling/source/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/48.event Bubbling/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/48.event Bubbling/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/49.event Capturing/source/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/49.event Capturing/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/49.event Capturing/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/50.stop Propagation/source/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/50.stop Propagation/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/50.stop Propagation/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/51.event bubbling usage/source/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/51.event bubbling usage/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/51.event bubbling usage/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/52-refactor-note app-project-with-event-bubbling/source/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/52-refactor-note app-project-with-event-bubbling/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/52-refactor-note app-project-with-event-bubbling/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/52-refactor-note app-project-with-event-bubbling/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/52-refactor-note app-project-with-event-bubbling/source/js/icons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/53-usage-for-callback/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/53-usage-for-callback/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/53-usage-for-callback/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/54-function composition/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/54-function composition/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/54-function composition/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/55-High Order Functions/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/55-High Order Functions/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/55-High Order Functions/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/56-strict-mode/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/56-strict-mode/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/56-strict-mode/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/57. Spread syntax for array and object/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/57. Spread syntax for array and object/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/57. Spread syntax for array and object/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/58.Argument object for normal functions/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/58.Argument object for normal functions/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/58.Argument object for normal functions/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/59.Rest Parameters/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/59.Rest Parameters/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/59.Rest Parameters/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/60.array Destructing/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/60.array Destructing/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/60.array Destructing/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/61.Object Destructing/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/61.Object Destructing/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/61.Object Destructing/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/62. Modules/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/62. Modules/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/62. Modules/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/62. Modules/source/js/funcs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/63.indexDB-createDB_createStore_createUser_getUsers_removeUser/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/63.indexDB-createDB_createStore_createUser_getUsers_removeUser/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/63.indexDB-createDB_createStore_createUser_getUsers_removeUser/source/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/63.indexDB-createDB_createStore_createUser_getUsers_removeUser/source/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/63.indexDB-createDB_createStore_createUser_getUsers_removeUser/source/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/64.Call Bind Apply/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/64.Call Bind Apply/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/64.Call Bind Apply/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/65.Call Bind Apply 2/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/65.Call Bind Apply 2/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/65.Call Bind Apply 2/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/66.Constructor Function/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/66.Constructor Function/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/66.Constructor Function/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/67.Constructor Function examples/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/67.Constructor Function examples/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/67.Constructor Function examples/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/68.Nullish Operator/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/68.Nullish Operator/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/68.Nullish Operator/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/69.Optional Chaining/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/69.Optional Chaining/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/69.Optional Chaining/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/70.Objects Entries Method/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/70.Objects Entries Method/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/70.Objects Entries Method/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/71.Set in JS/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/71.Set in JS/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/71.Set in JS/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/72.Map in JS/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/72.Map in JS/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/72.Map in JS/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/73.Weak Set and Weak Map/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/73.Weak Set and Weak Map/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/73.Weak Set and Weak Map/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/74.Proxy/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/74.Proxy/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/74.Proxy/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/75.Symbol/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/75.Symbol/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/75.Symbol/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/76.Shared Symbol/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/76.Shared Symbol/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/76.Shared Symbol/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/77.Object Value Shorthand/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/77.Object Value Shorthand/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/77.Object Value Shorthand/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/78.Why Use Semicolon in JS/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/78.Why Use Semicolon in JS/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/78.Why Use Semicolon in JS/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/79.Mutability and Immutability/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/79.Mutability and Immutability/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/79.Mutability and Immutability/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/80.Callback Hell/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/80.Callback Hell/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/80.Callback Hell/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/81. Promise/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/81. Promise/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/81. Promise/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/82. Promise Status/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/82. Promise Status/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/82. Promise Status/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/83. Promise Finally Handler/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/83. Promise Finally Handler/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/83. Promise Finally Handler/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/84.Chaining Handlers/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/84.Chaining Handlers/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/84.Chaining Handlers/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/85.Chaining Handlers another example/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/85.Chaining Handlers another example/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/85.Chaining Handlers another example/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/86.Promise Real World Example/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/86.Promise Real World Example/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/86.Promise Real World Example/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/87.Real world API Usage/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/87.Real world API Usage/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/87.Real world API Usage/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/87.Real world API Usage/source/js/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/89.Fetch Method/source/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/89.Fetch Method/source/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/89.Fetch Method/source/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/91.get-users-from-db/api.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/91.get-users-from-db/content/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/91.get-users-from-db/content/img/default-prof.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/91.get-users-from-db/content/img/noimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/91.get-users-from-db/content/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/91.get-users-from-db/content/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/91.get-users-from-db/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/92.delete-users-from-db-with-api/api.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/92.delete-users-from-db-with-api/content/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/92.delete-users-from-db-with-api/content/img/default-prof.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/92.delete-users-from-db-with-api/content/img/noimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/92.delete-users-from-db-with-api/content/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/92.delete-users-from-db-with-api/content/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/92.delete-users-from-db-with-api/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/97.delete-users-from-firebase/content/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/97.delete-users-from-firebase/content/img/default-prof.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/97.delete-users-from-firebase/content/img/noimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/97.delete-users-from-firebase/content/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/97.delete-users-from-firebase/content/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/97.delete-users-from-firebase/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/98.edit-users-in-firebase/content/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/98.edit-users-in-firebase/content/img/default-prof.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/98.edit-users-in-firebase/content/img/noimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/98.edit-users-in-firebase/content/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/98.edit-users-in-firebase/content/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/98.edit-users-in-firebase/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/99.jsonplaceholder/content/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/99.jsonplaceholder/content/img/default-prof.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/99.jsonplaceholder/content/img/noimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/99.jsonplaceholder/content/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/Advannce/99.jsonplaceholder/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/02.Layout/Screenshot 2023-05-15 at 14-17-10 Breakpoints.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/02.Layout/Screenshot 2023-05-15 at 14-18-19 Gutters.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/02.Layout/Screenshot 2023-05-22 at 12-42-46 margin and padding Spacing.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/DOM/38.pagination-project/source/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../03.JavaScripts/Iranian Course/DOM/38.pagination-project/source/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/01.Content/01.Color and Container/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/01.Content/01.Color and Container/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/02.Layout/02.Grid/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/02.Layout/02.Grid/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/02.Layout/03.Columns/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/02.Layout/03.Columns/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PpChKCGZwndxuAKk5LyKH3mQIW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/FrontEndExcercises/03.JavaScripts/Iranian Course",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\01.Content\01.Color and Container\css" />
+      <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\02.Layout" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\02.Layout" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e36faf2c-1258-406f-8119-bb03647d7031" name="Changes" comment="" />
+      <created>1684144753563</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684144753563</updated>
+      <workItem from="1684144754629" duration="1742000" />
+      <workItem from="1684148122933" duration="6000" />
+      <workItem from="1684744496395" duration="6908000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
