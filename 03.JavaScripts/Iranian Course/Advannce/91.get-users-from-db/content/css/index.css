@@ -1,0 +1,204 @@
+/* ---------------------------- custom scrollbar ---------------------------- */
+::-webkit-scrollbar {
+    width: 0.8em;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-800);
+}
+/* ---------------------------------- root ---------------------------------- */
+:root {
+    --white: #FFFFFF;
+    --blue: #5500FF;
+    --gray-500: #979797;
+    
+    --dark-950: #080909;
+    --dark-900: #151617;
+    --dark-800: #202020;
+}
+/* --------------------------------- styles --------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif !important;
+}
+body {
+    height: 100vh;
+    background-color: var(--dark-900);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.user-title {
+    color: var(--white);
+    font-size: 2rem;
+}
+#wrap-users {
+    width: 550px;
+    height: 300px;
+    background-color: var(--dark-950);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
+    border: 1px solid ;
+    margin-top: 40px;
+    border: 1px solid var(--dark-800);
+    padding: 20px;
+    overflow-y: auto;
+}
+.user {
+    width: 100%;
+    background: var(--dark-900);
+    border: 1px solid var(--dark-800);
+    display: flex;
+    justify-content: space-between;
+}
+.user:not(:first-child) {
+    margin-top: 20px;
+}
+.user-profile-wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px;
+}
+.user-profile {
+    width: 80px;
+    object-fit: cover;
+}
+.user-profile-name {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-align: left;
+    color: var(--white);   
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.user-age {
+    font-size: 0.6rem;
+    padding: 3px 5px;
+    border-radius: 5px; 
+    background-color: var(--blue);
+}
+.user-explanations {
+    margin-top: 6px;
+    width: 250px;
+    text-align: left;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--gray-500);
+}
+.delete-user-btn, .edit-user-btn {
+    padding: 0 25px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    transition: .4s;
+    height: 100%;
+}
+.edit-user-btn {
+    background-color: var(--white);
+    color: var(--dark-950);
+}
+.delete-user-btn {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.delete-user-btn:hover, .edit-user-btn:hover {
+    filter: brightness(0.7);
+}
+.btn-groups {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+.btn-groups-column {
+    display: flex;
+    flex-direction: column;
+}
+/* ---------------------------------- modal --------------------------------- */
+.modal-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+}
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+.modal-container::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-color: var(--dark-950);
+}
+.modal-content {
+    width: 450px;
+    background-color: var(--white);
+    z-index: 1;
+    padding: 30px 40px;
+}
+.modal-title {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+.accept-btn, .unaccept-btn {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .4s;
+}
+.accept-btn {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.accept-btn:hover {
+    filter: brightness(.7);
+}
+.unaccept-btn {
+    background-color: transparent;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+.unaccept-btn:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.edit-user-form {
+    margin-top: 10px;
+    text-align: left;
+}
+.input-field {
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+    padding: 0 0 0 10px;
+    border: 1px solid var(--dark-800);
+    margin-bottom: 20px;
+}
+.input-field span {
+    padding: 10px ;
+}
+.input-field input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.1rem;
+    padding-right: 15px;
+}

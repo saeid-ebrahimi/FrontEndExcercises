@@ -1,0 +1,14 @@
+body{
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.message{
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: "Segoe UI",Tahoma,Geneva, Verdana, sans-serif;
+}
