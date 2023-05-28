@@ -132,7 +132,6 @@ section:nth-of-type(2) {
 .within-list {
   cursor: pointer;
 }
-
 .card-columns {
   @include media-breakpoint-only(lg) {
     column-count: 4;

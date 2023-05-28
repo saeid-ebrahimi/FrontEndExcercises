@@ -1,0 +1,39 @@
+
+.course-card{
+    display: flex;
+    margin: 12px;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px #cccccc;
+    max-width: 400px;
+    align-items: center;
+    justify-content: space-around;
+    font-family: sans-serif;
+}
+.cover{
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 60px;
+    margin-right: 2rem;
+
+}
+.cover >img{
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+}
+.details .info{
+    display: none;
+}
+.details .actions button{
+    border:none;
+    outline: none;
+    padding: 8px 22px;
+    background-color: #333333;
+    color: whitesmoke;
+}
+.details .actions button:hover{
+    background-color: #434343;
+    cursor: pointer;
+}

@@ -1,0 +1,12 @@
+.header{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+}
+
+.header h2{
+    color: whitesmoke;
+}
