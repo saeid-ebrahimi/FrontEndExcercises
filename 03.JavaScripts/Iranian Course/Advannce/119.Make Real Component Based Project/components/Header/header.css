@@ -1,0 +1,15 @@
+.header{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    background-color: #333;
+}
+
+.header h2{
+    color: #FFFFFF;
+    font-family: Tahoma, fantasy;
+    font-weight: bold;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Making Real Component</title>
+</head>
+<body>
+  <site-header header-title="Cydemy Course List 😍"></site-header>
+  <div class="courses-container">
+    <site-course title="JS Course" cover="img/js.png">
+      <span slot="students"> 10,000</span>
+      <span slot="teacher">Mr.X</span>
+    </site-course>
+    <site-course title="React Course" cover="img/reactjs.png">
+      <span slot="students">5,000</span>
+      <spna slot="teacher">Mr.X</spna>
+    </site-course>
+    <site-course title="NPM Course" cover="img/npm.png">
+      <span slot="students">6,000</span>
+      <spna slot="teacher">Mr.X</spna>
+    </site-course>
+
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
