@@ -1,0 +1,20 @@
+{
+  "name": "04.configure-npm-setting-for-initialization",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "index": "node ./source/js/index.js" ,
+    "app": "tsc ./source/ts/app.ts -w"
+  },
+  "keywords": [],
+  "author": "Mr.X",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.7.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}

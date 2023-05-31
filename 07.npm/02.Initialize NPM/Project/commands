@@ -1,0 +1,9 @@
+mkdir {directory name}
+cd {drive name}:
+cd {absolute path}
+cd {relative path}
+dir
+rmdir {directory name}
+npm init
+npm init -y : answer all questions with yes and default settings
+npm init --yes : answer all questions with yes and default settings

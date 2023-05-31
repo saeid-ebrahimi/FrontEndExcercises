@@ -1,0 +1,71 @@
+npm config set init-author-name "Mr.X"
+npm config set init-license "MIT"
+npm config set init-name "Cydemy"
+npm set init-name "Cydemy"
+
+------------------
+npm get init-author-name
+npm config get init-license
+npm get init-license
+
+------------- flags in npm commands -------------------
+npm install express --save
+npm i express --save
+npm install express
+npm i express
+
+=======================================================
+
+npm install jest --save-dev
+npm i jest --save-dev
+npm install jest -D
+npm i jest -D
+
+======================================================
+
+npm uninstall nodemon
+npm un nodemon
+npm remove nodemon
+npm rm nodemon
+
+======================================================
+
+npm i react-icons --global
+npm i react-icons -g
+
+======================================================
+
+npm rm react-icons -g
+npm un react-icons -g
+
+======================================================
+
+npm run {script name}
+npm run-script {script name}
+
+node {script name and path}
+
+=================
+tsc app.ts -w
+tsc app.ts --watch
+
+======================================================
+npm update : to update packages
+
+in package.json file:
+"jquery": "^3.7.0" : ^ means : in update , can update minor version and patches
+"jquery": "*3.7.0" : ~ means : in update , can update only patches
+"jquery": "~3.7.0" : * means : in update , can update major version, minor version and  patches
+
+=====================================================
+
+npx : node package execute => means package runner to run a package without installing and saving in memory
+
+npx cowsay "React JS ;)"
+npx create-react-app
+
+=====================================================
+
+npm audit : to see  packages vulnerabilities
+npm audit fix : to fix packages vulnerabilities
+npm fund : funding for packages

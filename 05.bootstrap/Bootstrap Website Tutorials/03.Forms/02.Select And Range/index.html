@@ -16,35 +16,15 @@
             <option value="opera">opera</option>
             <option value="brave">brave</option>
         </select>
-        <select name="" class="form-select">
+        <hr>
+        <select name="browser" class="form-select">
             <option value="chrome">chrome</option>
             <option value="firefox">firefox</option>
             <option value="edge">edge</option>
             <option value="opera">opera</option>
             <option value="brave">brave</option>
         </select>
-        <select name="" class="form-control" >
-            <option value="chrome">chrome</option>
-            <option value="firefox">firefox</option>
-            <option value="edge">edge</option>
-            <option value="opera">opera</option>
-            <option value="brave">brave</option>
-        </select>
-        <select name="" class="form-select form-select-sm">
-            <option value="chrome">chrome</option>
-            <option value="firefox">firefox</option>
-            <option value="edge">edge</option>
-            <option value="opera">opera</option>
-            <option value="brave">brave</option>
-        </select>
-        <select name="" class="form-select form-select-md">
-            <option value="chrome">chrome</option>
-            <option value="firefox">firefox</option>
-            <option value="edge">edge</option>
-            <option value="opera">opera</option>
-            <option value="brave">brave</option>
-        </select>
-        <select name="" class="form-select form-select-lg">
+        <select name="browser" class="form-control" >
             <option value="chrome">chrome</option>
             <option value="firefox">firefox</option>
             <option value="edge">edge</option>
@@ -52,14 +32,36 @@
             <option value="brave">brave</option>
         </select>
         <hr>
-        <select name="" multiple>
+        <select name="browser" class="form-select form-select-sm">
             <option value="chrome">chrome</option>
             <option value="firefox">firefox</option>
             <option value="edge">edge</option>
             <option value="opera">opera</option>
             <option value="brave">brave</option>
         </select>
-        <select name="" class="form-select" multiple>
+        <select name="browser" class="form-select form-select-md">
+            <option value="chrome">chrome</option>
+            <option value="firefox">firefox</option>
+            <option value="edge">edge</option>
+            <option value="opera">opera</option>
+            <option value="brave">brave</option>
+        </select>
+        <select name="browser" class="form-select form-select-lg">
+            <option value="chrome">chrome</option>
+            <option value="firefox">firefox</option>
+            <option value="edge">edge</option>
+            <option value="opera">opera</option>
+            <option value="brave">brave</option>
+        </select>
+        <hr>
+        <select name="browser" multiple>
+            <option value="chrome">chrome</option>
+            <option value="firefox">firefox</option>
+            <option value="edge">edge</option>
+            <option value="opera">opera</option>
+            <option value="brave">brave</option>
+        </select>
+        <select name="browser" class="form-select" multiple>
             <option value="chrome" selected>chrome</option>
             <option value="firefox">firefox</option>
             <option value="edge">edge</option>
@@ -67,9 +69,19 @@
             <option value="brave">brave</option>
         </select>
     </div>
+
+    <hr>
     <div class="row gy-2">
-        <input type="range" name="" id="">
-        <input type="range"  class="form-range" name="" id="">
+        <input type="range" role="slider" min="0" max="5" name="" step="1" list="years">
+        <datalist id="years" class="form-label" >
+            <option value="0" label="0" >0</option>
+            <option value="1" label="1" >1</option>
+            <option value="2" label="2" >2</option>
+            <option value="3" label="3" >3</option>
+            <option value="4" label="4" >4</option>
+        </datalist>
+        <input type="range" min="0" max="5" class="form-range" name="" list="years">
+
     </div>
 </div>
 </body>

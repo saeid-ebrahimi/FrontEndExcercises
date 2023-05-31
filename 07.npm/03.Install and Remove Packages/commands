@@ -1,0 +1,32 @@
+npm init -y
+npm install bootstrap
+npm i bootstrap
+npm i bootstrap --save : install command for prior version 5 of nodejs
+npm i jquery
+npm install bootstrap@5.1.2
+npm install bootstrap@4.2
+npm install bootstrap@4
+npm install boostrap jquery lodash
+npm uninstall jquery
+npm uninstall bootstrap
+
+npm i : install all packages in package.json file
+
+
+semantic version:
+        2.4.5
+  Major.Minor.Patch
+Major: incompatible API changes
+Minor: add backwards-compatible functionality
+Patch: make backwards-compatible bug fix
+
+
+npm i jquery --save-dev : install as development dependency
+
+npm i command install packages as local module, to install it globally use -g option:
+npm i bootstrap@5.3 -g: install it as global package, located in user/appdata/roaming/npm/node_modules
+
+npm list -a: to list installed packages and its dependencies
+npm list : to list installed packages
+npm list --depth 1 : to list installed packages and dependencies with depth of 1
+

@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e36faf2c-1258-406f-8119-bb03647d7031" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/01.Content/02.Typography/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/01.Content/02.Typography/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/01.Content/03.Images/WhatsApp Banner 2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/01.Content/03.Images/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/01.Content/03.Images/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/01.Content/04.Table/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/01.Content/04.Table/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/01.Form Control/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/01.Form Control/index.html" afterDir="false" />
+    <list default="true" id="e36faf2c-1258-406f-8119-bb03647d7031" name="Changes" comment="some minor changes to the tutorial files">
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/02.Select And Range/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/02.Select And Range/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/03.Check box and Radio Buttons/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/03.Check box and Radio Buttons/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/04.Inputs Group/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/04.Inputs Group/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +58,31 @@
       <workItem from="1684144754629" duration="1742000" />
       <workItem from="1684148122933" duration="6000" />
       <workItem from="1684744496395" duration="6908000" />
-      <workItem from="1685351225697" duration="4908000" />
+      <workItem from="1685351225697" duration="9529000" />
+      <workItem from="1685456921848" duration="29000" />
     </task>
+    <task id="LOCAL-00001" summary="some minor changes to the tutorial files">
+      <created>1685360020601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685360020601</updated>
+    </task>
+    <task id="LOCAL-00002" summary="some minor changes to the tutorial files">
+      <created>1685360028576</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685360028576</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some minor changes to the tutorial files" />
+    <option name="LAST_COMMIT_MESSAGE" value="some minor changes to the tutorial files" />
   </component>
 </project>
