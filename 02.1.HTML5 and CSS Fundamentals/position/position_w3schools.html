@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed Positioning| W3 Schools</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+        rel="stylesheet">
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+    }
+    header{
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: aliceblue;
+      width: 99vw;
+      height: 80px;
+    }
+    /* ----------------- Main Menu --------- */
+    header img{
+      display: inline;
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+    }
+    #left,#right {
+      display: inline;
+    }
+    nav, ul , li {
+      display: inline;
+    }
+    #main-menu nav {
+      padding-left: 20px;
+      line-height: 60px;
+      vertical-align: top;
+    }
+    #main-menu li{
+      padding-left:30px;
+    }
+    #main-menu a{
+      color: black ;
+      text-decoration: none;
+    }
+
+    #right{
+      float: right;
+      padding: 20px;
+    }
+    #right > a{
+      padding-left: 20px;
+    }
+    /* ------------- Sub Menu ------------- */
+    #sub-menu {
+      background-color: #282A35;
+      padding: 10px 0;
+    }
+
+    #sub-menu a{
+      color: white;
+      font-weight: bold;
+      padding:0 10px;
+      text-decoration: none;
+    }
+    #icons {
+      display: inline-block;
+      float: right;
+    }
+    .active{
+      background-color: green;
+      padding: 5px;
+      border-radius: 1rem;
+    }
+    /* --------------- Main -------- */
+    main{
+      height: 200vh;
+      margin-top: 82px;
+      padding: 50px;
+      line-height: 2rem;
+      font-family: "Arial Rounded MT Bold",serif;
+      background-color: aliceblue;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div id="main-menu">
+      <div id="left">
+        <a href="https://www.w3schools.com/" >
+          <img src="W3Schools_logo.svg.png" alt="w3 schools logo">
+        </a>
+        <nav>
+          <ul>
+            <li><a href="">Tutorials</a></li>
+            <li><a href="">Exercises</a></li>
+            <li><a href="">Get Certified</a></li>
+            <li><a href="">Services</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="right">
+        <a href="https://www.w3schools.com/bootcamp/index.php">Bootcamps</a>
+        <a href="https://www.w3schools.com/spaces/index.php">Spaces</a>
+        <a href="https://www.w3schools.com/signup/index.php">Sign Up</a>
+        <a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com">Log in</a>
+      </div>
+    </div>
+    </div>
+    <div id="sub-menu">
+      <nav>
+        <ul>
+          <li><a href="https://www.w3schools.com/html/default.asp">HTML</a></li>
+          <li class="active"><a  href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+          <li><a href="https://www.w3schools.com/js/default.asp">JAVASCRIPT</a></li>
+          <li><a href="https://www.w3schools.com/sql/default.asp">SQL</a></li>
+          <li><a href="https://www.w3schools.com/python/default.asp">PYTHON</a></li>
+          <li><a href="https://www.w3schools.com/java/default.asp">JAVA</a></li>
+          <li><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+          <li><a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">BOOTSTRAP</a></li>
+          <li><a href="https://www.w3schools.com/howto/default.asp">HOW TO</a></li>
+          <li><a href="https://www.w3schools.com/w3css/default.asp">W3.CSS</a></li>
+          <li><a href="https://www.w3schools.com/c/index.php">C</a></li>
+          <li><a href="https://www.w3schools.com/cpp/default.asp">C++</a></li>
+          <li><a href="https://www.w3schools.com/cs/index.php">C#</a></li>
+          <li><a href="https://www.w3schools.com/react/default.asp">REACT</a></li>
+          <li><a href="https://www.w3schools.com/r/default.asp">R</a></li>
+          <li><a href="https://www.w3schools.com/django/index.php">DJANGO</a></li>
+        </ul>
+      </nav>
+      <div id="icons">
+        <a href="">
+            <span class="material-icons-outlined">
+              brightness_medium
+            </span>
+        </a>
+        <a href="">
+          <span class="material-icons-outlined">
+            public
+          </span>
+        </a>
+        <a href="">
+          <span class="material-icons-outlined">
+            search
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+<main>
+  <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem eius est eveniet illum ipsam, quisquam sapiente similique! Eaque iusto minus quidem voluptas? Ab aliquid beatae culpa dolores ducimus facilis fugiat molestias nisi, non nulla officiis perspiciatis placeat porro praesentium sapiente suscipit tempore! Blanditiis deleniti fugit obcaecati odio porro quisquam voluptate? Accusamus deserunt exercitationem expedita inventore ipsa placeat quo quos rem tempore, veritatis! Aut culpa dolore dolorum expedita fuga harum magnam, minima odio quod voluptatibus! Amet asperiores assumenda consectetur dignissimos dolores ea, esse explicabo fugit in incidunt ipsum laborum libero magni maiores molestiae nam natus nesciunt, nobis omnis pariatur possimus quas quos rem, repudiandae sit sunt temporibus veritatis? A ad adipisci, aut consequatur cupiditate doloremque ex illum impedit iste libero officia officiis perferendis quaerat unde, voluptatibus? Adipisci aliquid distinctio eum quos voluptatibus? Aperiam culpa iure nihil perspiciatis rem? Accusantium aliquam animi aspernatur dignissimos dolore eos mollitia nobis ratione sit unde. Beatae deleniti et itaque qui suscipit. Aliquam dignissimos dolores dolorum error incidunt molestias, porro quidem velit? Aperiam beatae doloremque ea enim illo illum ipsa maiores numquam pariatur quas quasi, quia quo sint. A aliquam atque deleniti dolore dolorum et facere, fugiat molestias nihil nisi, officia praesentium quo ratione reprehenderit voluptate. A ab at consequatur consequuntur cum dicta dignissimos dolores dolorum earum, eius, esse est eum ex explicabo facilis id illo illum impedit inventore iste labore modi molestiae nisi nulla odio omnis perferendis placeat possimus quas ratione recusandae rem similique sint tempora totam unde vel? Aperiam commodi, esse eum excepturi expedita facilis ipsam molestiae, praesentium recusandae, repudiandae ullam vitae voluptatem? Animi autem fugiat necessitatibus placeat similique! Architecto eaque vitae voluptates! Atque blanditiis fugiat minima. Dolor explicabo, hic iure laborum magni minus molestiae neque quaerat quibusdam quis velit vitae. Ipsa molestias porro quos vel voluptate? A adipisci aliquid architecto assumenda aut autem culpa deserunt dolor id, impedit ipsam nulla, odit quo quos saepe veniam voluptatibus! Ab accusantium aliquid assumenda blanditiis consectetur consequatur corporis delectus deleniti distinctio, dolores enim et exercitationem harum illo ipsam itaque iure maxime nobis nulla quae quibusdam quod reiciendis repellendus sequi sint sunt tempora, ullam unde vitae voluptatum. Adipisci cum dignissimos facere impedit laboriosam laudantium mollitia possimus voluptatum? Adipisci architecto deleniti nobis, quasi quidem sit velit! Aspernatur culpa ipsum nemo quis quos suscipit tempora. Amet delectus dicta dignissimos minus mollitia officia omnis, porro, quasi quod recusandae saepe ullam unde. Ab ad alias consectetur, error exercitationem expedita hic impedit ipsam, maxime modi odio quas veritatis voluptatibus. Debitis deleniti dignissimos dolor et excepturi, expedita fuga fugit harum itaque iusto magni modi natus nesciunt nisi, perferendis sint vero voluptatem. Deleniti esse explicabo impedit ipsam nam necessitatibus quod repudiandae soluta. Consequuntur culpa dolor ducimus ea eaque eius esse exercitationem explicabo hic illo ipsam laboriosam laudantium libero molestias nam, nemo nulla porro quae quaerat quas quasi quis quisquam rerum sapiente sed sequi similique tempore unde ut vero! Adipisci alias atque autem doloribus, dolorum ea facere facilis fugit id, impedit iste labore modi nihil qui quibusdam, sed vero voluptas? Excepturi expedita odit porro reprehenderit voluptates.
+  </div>
+</main>
+</body>
+</html>

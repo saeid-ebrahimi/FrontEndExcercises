@@ -1,0 +1,18 @@
+.flex-container{
+    display: flex;
+    background-color: aliceblue;
+}
+.flex-item{
+    padding: 45px;
+    margin: 10px;
+    background-color: #282A35;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Segoe UI", ui-sans-serif;
+}
+.flex-item{
+    min-width: 80px;
+    max-width: 150px;
+    flex-basis: 100px;
+}

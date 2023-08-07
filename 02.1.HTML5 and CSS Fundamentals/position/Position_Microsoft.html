@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Positioning1 | Fixed</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+        rel="stylesheet">
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      font-family: "Segoe UI";
+    }
+    header{
+      position: fixed;
+      font-size: .8rem;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #fffbfb;
+      width: 99vw;
+
+    }
+    /* ----------------- Main Menu --------- */
+    header img{
+      display: inline;
+      width: 100px;
+      padding: 20px 20px 10px 100px;
+    }
+    #left,#right {
+      display: inline;
+    }
+    nav, ul , li {
+      display: inline;
+    }
+    #main-menu nav {
+      padding-left: 10px;
+      line-height: 60px;
+      vertical-align: top;
+    }
+    #main-menu li{
+      padding-left:20px;
+    }
+    #main-menu a{
+      color: black ;
+      text-decoration: none;
+    }
+
+    #right{
+      float: right;
+      padding: 20px 15px 10px 15px;
+    }
+    #right > a{
+      padding-left: 20px;
+    }
+
+    .active{
+      background-color: green;
+      padding: 5px;
+      border-radius: 1rem;
+    }
+    /* --------------- Main -------- */
+    /* --------------- Main -------- */
+    main{
+      height: 200vh;
+      margin-top: 82px;
+      font-family: "Arial Rounded MT Bold",serif;
+      background-color: aliceblue;
+    }
+    /* ---------------- jumbotron --------------- */
+    #jumbotron{
+      position: relative;
+      z-index: 0;
+    }
+    #jumbotron img{
+      width:100%;
+    }
+    #cta{
+      position: absolute;
+      background-color: aliceblue;
+      padding: 50px;
+      font-family: "Segoe UI";
+      left: 100px;
+      top:100px;
+      width: 30%;
+    }
+    #display{
+      margin-top: 0;
+      font-weight: 500;
+      font-size: 2.3rem;
+    }
+    #cta p{
+      margin: 20px 0;
+    }
+    #cta-btn{
+      font-weight: 500;
+      color: #ffffff;
+      background-color: #0568c7;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <div id="main-menu">
+    <div id="left">
+      <a href="https://www.microsoft.com/" >
+        <img src="RE1Mu3b.png" alt="w3 schools logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="https://www.microsoft.com/microsoft-365">
+            Microsoft 365
+          </a></li>
+          <li><a href="https://www.microsoft.com/microsoft-teams/group-chat-software">
+            Teams
+          </a></li>
+          <li><a href="https://www.microsoft.com/en-us/windows/">
+            Windows
+          </a></li>
+          <li><a href="https://www.microsoft.com/surface">
+            Surface
+          </a></li>
+          <li><a href="https://www.xbox.com/">
+            Xbox
+          </a></li>
+          <li><a href="https://www.microsoft.com/en-us/store/b/sale?icid=gm_nav_L0_salepage">
+            Deals
+          </a></li>
+          <li><a href="https://www.microsoft.com/en-us/store/b/business">
+            Small Business
+          </a></li>
+          <li><a href="https://support.microsoft.com/en-us">
+            Support
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="right">
+      <a href="https://www.w3schools.com/bootcamp/index.php">Bootcamps</a>
+      <a href="https://www.w3schools.com/spaces/index.php">Spaces</a>
+      <a href="https://www.w3schools.com/signup/index.php">Sign Up</a>
+      <a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com">Log in</a>
+    </div>
+  </div>
+</header>
+<main>
+  <div id="jumbotron">
+    <img src="Highlight-Test-Surface-Pro-9-Platinum-Attract_VP5-1920x600.avif" alt="">
+    <div id="cta">
+      <p id="display">Save up to $300 on new Surface Pro 9</p>
+      <p>The tablet flexibility you want and the laptop performance you need—all in one ultra-portable device. Offer ends 6/25.</p>
+      <a href="https://www.microsoft.com/en-us/d/surface-pro-9/93VKD8NP4FVK?icid=mscom_marcom_H1a_SurfacePro9Offer" id="cta-btn">Shop Surface Pro 9</a>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,86 @@
+*{
+    font-family: "Segoe UI", ui-sans-serif;
+}
+.container{
+    margin-bottom: 30px;
+    background-color: aliceblue;
+}
+.items{
+    padding: 45px;
+    margin: 10px;
+    background-color: #282A35;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+/*******************************************/
+.flex-container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+}
+.flex-item{
+    width: 70px;
+}
+/*--------------------------------------*/
+.flex-container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.flex-item2{
+    width: 70px;
+}
+/*------------------------------------ */
+
+.flex-container3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-item3{
+    width: 70px;
+}
+
+/* ------------------------------------*/
+.flex-container4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+}
+.flex-item4{
+    width: 50px;
+}
+/* ------------------------------------*/
+.flex-container5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 800px;
+}
+.flex-item5{
+    width: 50px;
+}
+
+/* ------------------------------------*/
+.flex-container6{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 800px;
+}
+.flex-item6{
+    width: 50px;
+}
+/* ------------------------------------*/
+.flex-container7{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 800px;
+}
+.flex-item7{
+    width: 50px;
+}

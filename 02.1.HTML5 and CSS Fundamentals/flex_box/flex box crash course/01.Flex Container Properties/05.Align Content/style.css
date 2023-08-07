@@ -1,0 +1,87 @@
+*{
+    font-family: "Segoe UI", ui-sans-serif;
+}
+.container{
+    margin-bottom: 30px;
+    background-color: aliceblue;
+}
+.items{
+    padding: 45px;
+    margin: 10px;
+    background-color: #282A35;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+/*******************************************/
+.flex-container{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    /*align-content: center;*/
+    align-content: flex-start;
+    height: 500px;
+
+}
+.flex-item{
+    width: 70px;
+}
+/*---------------------------------------*/
+.flex-container2{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-evenly;
+    height: 500px;
+
+}
+.flex-item2{
+    width: 70px;
+}
+/*------------------------------------- */
+
+.flex-container3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*align-content: center;*/
+    align-content: stretch;
+    height: 500px;
+}
+.flex-item3{
+    width: 70px;
+}
+
+/* ------------------------------------*/
+.flex-container4{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 800px;
+}
+
+/* ------------------------------------*/
+.flex-container5{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-evenly;
+    height: 800px;
+}
+
+
+/* ------------------------------------*/
+.flex-container6{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 800px;
+}
+
