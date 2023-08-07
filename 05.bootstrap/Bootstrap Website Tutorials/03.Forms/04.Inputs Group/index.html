@@ -13,11 +13,14 @@
     <title>Input Groups</title>
 </head>
 <body class="container">
-<label class="form-label col-form-label">username: </label>
-<div class="input-group input-group-sm">
-    <span class="input-group-text">@</span>
-    <input class="form-control" type="text" placeholder="username">
+<div>
+    <label class="form-label">username: </label>
+    <div class="input-group input-group-sm">
+        <span class="input-group-text">@</span>
+        <input class="form-control" type="text" placeholder="username">
+    </div>
 </div>
+
 <div class="input-group input-group-md">
     <span class="input-group-text">@</span>
     <input class="form-control" type="text" placeholder="username">
@@ -45,39 +48,50 @@
     <input class="form-control"  type="text">
     <input class="form-control"  type="text">
 </div>
-<div class="input-group">
-    <input class="form-control" placeholder="xxx" type="text">
-    <span class="input-group-text bg-dark text-light">-</span>
-    <input class="form-control" placeholder="xxx" type="text">
+<div>
+    <label for="card-number">Card Number: </label>
+    <div class="input-group">
+        <input class="form-control"  id="card-number" placeholder="xxxx" type="text">
+        <span class="input-group-text bg-dark text-light">-</span>
+        <input class="form-control" placeholder="xxxx" type="text">
+        <span class="input-group-text bg-dark text-light">-</span>
+        <input class="form-control" placeholder="xxxx" type="text">
+        <span class="input-group-text bg-dark text-light">-</span>
+        <input class="form-control" placeholder="xxxx" type="text">
+    </div>
 </div>
+
 <hr>
 <div class="input-group input-group-md">
     <div class="input-group-text">
-        <input type="checkbox" class="form-check-input">
+        <input type="checkbox" id="visa-card" class="form-check-input m-1">
+        <label for="visa-card" class="m-1"> Visa Card Number:</label>
     </div>
     <input type="text" class="form-control" placeholder="xxx">
 </div>
 <div class="input-group input-group-sm">
     <div class="input-group-text">
-        <input type="radio" class="form-check-input">
+        <input type="radio" class="form-check-input" id="master-card">
+        <label for="master-card" class="m-1"> Master Card Number:</label>
     </div>
     <input type="text" class="form-control" placeholder="xxx">
 </div>
 <div class="input-group">
-    <button class="btn btn-primary"  role="button">@</button>
+    <button class="btn btn-success" role="button">validate</button>
     <input type="text" class="form-control" placeholder="xxx">
 </div>
 <div class="input-group">
     <input type="text" class="form-control" placeholder="xxx">
-    <button class="btn btn-primary"  role="button">@</button>
+    <button class="btn btn-primary"  role="button">Search</button>
 </div>
 <hr>
 <div class="input-group">
-    <input type="file" name="files" id="file1" class="form-control" placeholder="Choose some files" multiple>
-    <label class="input-group-text" for="file1">Upload</label>
+    <input type="file" class="form-control" placeholder="Choose some files" multiple>
+    <button class="btn btn-dark">Upload</button>
 </div>
 <div class="input-group mb-3">
-    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Platform</button>
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Platform</button>
     <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Instagram</a></li>
         <li><a class="dropdown-item" href="#">Facebook</a></li>

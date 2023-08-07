@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./styles.css";
-
+import "./App.css";
+import logo from "../logo.svg"
 const content = [
     [
         "React is extremely popular",
@@ -18,6 +18,12 @@ const content = [
         "Official web page (react.dev)",
         "Next.js (Fullstack framework)",
         "React Native (build native mobile apps with React)"
+    ],
+    [
+        "Vanilla JavaScript requires imperative programming",
+        "Imperative Programming: You define all the steps needed to achieve a result",
+        "React on the other hand embraces declarative programming",
+        "with React, you define the goal and React figures out how to get here"
     ]
 ];
 
@@ -27,7 +33,7 @@ export default function App() {
     return (
         <div>
             <header>
-                <img src="react-logo-xs.png" alt="React logo" />
+                <img src={logo} alt="React logo" />
                 <div>
                     <h1>React.js</h1>
                     <p>i.e., using the React library for rendering the UI</p>
@@ -53,6 +59,12 @@ export default function App() {
                         onClick={() => setActiveContentIndex(2)}
                     >
                         Related Resources
+                    </button>
+                    <button
+                        className={activeContentIndex === 3 ? "active" : ""}
+                        onClick={() => setActiveContentIndex(3)}
+                    >
+                        React vs JS
                     </button>
                 </menu>
                 <div id="tab-content">

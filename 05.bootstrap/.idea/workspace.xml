@@ -5,9 +5,136 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e36faf2c-1258-406f-8119-bb03647d7031" name="Changes" comment="some minor changes to the tutorial files">
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/01.Flex Container Properties/01.Flex container and Flex items/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/01.Flex Container Properties/01.Flex container and Flex items/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/01.Flex Container Properties/02.Flex Direction_Flex Wrap_Flex Flow/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/01.Flex Container Properties/02.Flex Direction_Flex Wrap_Flex Flow/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/01.Flex Container Properties/03.Justify Content/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/01.Flex Container Properties/03.Justify Content/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/01.Flex Container Properties/04.Align Items/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/01.Flex Container Properties/04.Align Items/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/01.Flex Container Properties/05.Align Content/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/01.Flex Container Properties/05.Align Content/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/02.Flex Item Properties/01.Flex Items Order/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/02.Flex Item Properties/01.Flex Items Order/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/02.Flex Item Properties/02.Flex Grow &amp; Flex Shrink/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/02.Flex Item Properties/02.Flex Grow &amp; Flex Shrink/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/02.Flex Item Properties/03.Flex Basis/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/02.Flex Item Properties/03.Flex Basis/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/02.Flex Item Properties/04.Align Self/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/02.Flex Item Properties/04.Align Self/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/03.Flex Project/Interactivereart.xd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/03.Flex Project/images/svg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/03.Flex Project/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/03.Flex Project/styles/normilize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/position/Position_Microsoft.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/position/position_fixed_w3schools.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/position/position_w3schools.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/Card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/Fruits.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/FruitsCounter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/Heading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/InputComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/RegisterForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/TextInputWithFocusButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/components/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/components/Intro1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/components/Intro2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/components/Intro3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/components/Nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/components/Promo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/assests/little lemon logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/components/AboutLittleLemon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/components/Contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/components/CurrentMessage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/components/HomePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/components/LogInOutButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/03.create-router/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/src/components/Calculator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/04.calculator/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/02.Select And Range/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/02.Select And Range/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/03.Check box and Radio Buttons/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/03.Check box and Radio Buttons/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/04.Inputs Group/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/04.Inputs Group/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/05.Floating Label/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/05.Floating Label/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/06.Layout Forms/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/03.Forms/06.Layout Forms/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/04.Utilities/02.Borders/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/04.Utilities/02.Borders/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/04.Utilities/03.Display and Float/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/04.Utilities/03.Display and Float/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/04.Utilities/10.Text/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/04.Utilities/10.Text/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap Website Tutorials/04.Utilities/11.Z-index And Visibility/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/04.Utilities/11.Z-index And Visibility/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/public/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/public/logo512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/02.customizing-example/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/reportWebVitals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06.react/Mata React Basics/first-app/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/Mata React Basics/01.first-app/src/setupTests.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,19 +152,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/FrontEndExcercises/03.JavaScripts/Iranian Course&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/FrontEndExcercises/02.1.HTML5 and CSS Fundamentals/flex_box/flex box crash course/03.Flex Project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\01.Content\01.Color and Container\css" />
@@ -60,6 +187,7 @@
       <workItem from="1684744496395" duration="6908000" />
       <workItem from="1685351225697" duration="9529000" />
       <workItem from="1685456921848" duration="29000" />
+      <workItem from="1687163428836" duration="3383000" />
     </task>
     <task id="LOCAL-00001" summary="some minor changes to the tutorial files">
       <created>1685360020601</created>

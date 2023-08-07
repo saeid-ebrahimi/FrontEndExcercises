@@ -3,21 +3,16 @@
     background-color: aliceblue;
 }
 .flex-item{
-    width: 100px;
     padding: 45px;
-    margin: 20px;
+    margin: 10px;
     background-color: #282A35;
     color: white;
     font-size: 30px;
     text-align: center;
-    font-family: "Segoe UI";
+    font-family: "Segoe UI", ui-sans-serif;
 }
-#item1{
-    order: 3;
-}
-#item3{
-    order:2;
-}
-#item2{
-    order:1;
+.flex-item{
+    min-width: 80px;
+    max-width: 150px;
+    flex-basis: 100px;
 }

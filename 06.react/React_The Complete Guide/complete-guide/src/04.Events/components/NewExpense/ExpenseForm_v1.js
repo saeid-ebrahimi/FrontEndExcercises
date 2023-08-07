@@ -1,7 +1,7 @@
 import "./ExpenseForm.css"
 import React, {useState} from "react";
 
-const ExpenseForm = () => {
+const ExpenseForm_v1 = () => {
     const [userInput, setUserInput] = useState({
         enteredTitle:"",
         enteredAmount: "",
@@ -35,6 +35,7 @@ const ExpenseForm = () => {
             return {...prevState, enteredDate: event.target.value}
         })
     }
+
     return(
         <form>
         <div className="new-expense__controls">
@@ -57,4 +58,4 @@ const ExpenseForm = () => {
         </form>
     )
 }
-export default ExpenseForm
+export default ExpenseForm_v1

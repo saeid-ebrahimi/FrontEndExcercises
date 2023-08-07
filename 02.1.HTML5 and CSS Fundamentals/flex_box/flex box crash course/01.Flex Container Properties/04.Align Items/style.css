@@ -17,10 +17,10 @@
 .flex-container{
     display: flex;
     flex-direction: row-reverse;
-    align-items:space;
+    align-items:center;
     justify-content: space-around;
     /*align-items: flex-end;*/
-    align-items: baseline;
+    /* align-items: baseline; */
     height: 500px;
 
 }

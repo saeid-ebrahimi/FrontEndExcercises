@@ -1,0 +1,115 @@
+
+        #sec1{
+            display: grid;
+            column-gap: 1vw;
+            row-gap: 3vh;
+            grid-template-columns: 35% 25% auto ;
+            grid-template-rows: 30% 30% auto;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        #sec1 div{
+            border: 5px red solid;
+            background-color: #D9EEE1;
+            margin: 2vw;
+            padding: 3vw;
+
+        }
+        #php{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #jquery{
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        #sec1 button{
+            color: azure;
+            box-sizing: border-box;
+            background-color: #282A35;
+            border-radius: 30px;
+            padding: .7rem 2rem;
+            width: 13rem;
+            font-size: 1.2rem;
+        }
+        #item1{
+            grid-area: myArea;
+        }
+        #sec2{
+            display: inline-grid;
+            grid-template-areas: 'myArea  myArea .' ;
+        }
+
+        #sec2 div{
+            width:100px;
+            background-color: #282A35;
+            color: #D9EEE1;
+            margin: 1vw;
+        }
+        #sec3{
+            display: inline-grid;
+            font-family: 'Source Sans Pro', sans-serif;
+
+
+        }
+        #sec3 div{
+            width: 200px;
+            background-color: darkgoldenrod;
+            margin: 1rem;
+            padding: 1rem;
+
+        }
+        #node-div{
+            grid-area: 1 / 2 /span 3 /5;
+        }
+
+        #sec4{
+            display: grid;
+            justify-content: flex-end;
+            grid-template-columns: 35% 25% auto ;
+            grid-template-rows: 30% 30% auto;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        #sec4 div{
+            width: 50%;
+            background-color: darksalmon;
+            margin: 1rem;
+            padding: 1rem;
+        }
+        #sec5{
+            display: grid;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+       #sec5 div{
+            background-color: darkkhaki;
+            margin: 1rem;
+            padding: 1rem;
+        }
+
+       #div1{
+           grid-column: 1 / 3;
+           grid-row: 1 / span 2;
+       }
+       #div2{
+           grid-column: 3 / span 2;
+           grid-row: 1;
+       }
+       #div3 {
+           grid-column: 3/5;
+           grid-row: 2;
+       }
+       #div4{
+           grid-column: 3 / 5;
+       }
+       #div5{
+           grid-column: 1 / 3;
+       }
+       #div6{
+           grid-column: 3 / span 2;
+       }
+       #div7{
+           grid-column: 1 / 3;
+       }
+       #div8{
+           grid-column: 3/6;
+       }

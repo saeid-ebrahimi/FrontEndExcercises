@@ -1,6 +1,10 @@
+
 .flex-container{
     display: flex;
+    margin-top: 20px;
+    height: 500px;
     background-color: aliceblue;
+    align-items: flex-start;
 }
 .flex-item{
     padding: 45px;
@@ -10,9 +14,21 @@
     font-size: 30px;
     text-align: center;
     font-family: "Segoe UI", ui-sans-serif;
+
+    /*flex: flex-grow flex-shrink flex-basis;*/
+
+    /*flex:auto; => flex:1 1 auto;*/
+
+    /*flex:none; =>  flex:0 0 auto;*/
+
+    /*flex:2; => flex:2 1 auto;*/
 }
-.flex-item{
-    min-width: 80px;
-    max-width: 150px;
-    flex-basis: 100px;
+#item2{
+    align-self: center;
+}
+#item3{
+    align-self: flex-end;
+}
+#item4{
+    align-self: stretch;
 }

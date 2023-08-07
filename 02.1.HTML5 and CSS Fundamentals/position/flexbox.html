@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Responsive Design</title>
+    <style>
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            justify-content: space-evenly;
+            height: 500px;
+            background-color: antiquewhite;
+            align-items:center;
+            align-content:space-around;
+        }
+        .items{
+            color: white;
+            background-color: darkorchid;
+            min-width: 100px; 
+            flex-basis: 100px;
+            padding:20px;
+            margin:10px;
+            text-align: center;
+        }
+        #item1{
+            order:4;
+            flex-shrink: 3;
+            align-self: center;
+        }
+        #item2{
+            order:1;
+            flex-shrink: 2;
+            align-self: flex-start;
+    }
+        #item3{
+            order:2;
+            flex-shrink: 1;
+            align-self: flex-end;
+        }
+        #item4{
+            order:3;
+            flex-shrink: 1;
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+    </div>
+    <div class="flex-container">
+        <div class="items" id="item1">1</div>
+        <div class="items" id="item2">2</div>
+        <div class="items" id="item3">3</div>
+        <div class="items" id="item4">4</div>
+    </div>
+</body>
+</html>

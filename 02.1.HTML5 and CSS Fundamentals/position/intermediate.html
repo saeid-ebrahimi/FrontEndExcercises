@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate CSS</title>
+    <style>
+        #overflow{
+            margin:20px auto;
+            padding: 20px;
+            width: 150px;
+            background-color: lightblue;
+            max-height: 500px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        #center{
+            height: 200px;
+            background-color: bisque;
+            line-height: 200px;
+            text-align: center;
+            opacity:.5;
+        }
+        #center::before, #center::after{
+            content: "NEW";
+            background-color: red;
+            color: white;
+            padding:7px;
+            margin: 10px;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="overflow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, eum omnis dolorum nobis, quos odit rerum veniam doloremque necessitatibus enim natus ipsam! Sapiente quae recusandae provident quasi asperiores vel porro voluptate eos, aut minus sequi, dolorum dignissimos blanditiis eius obcaecati commodi, corrupti rem quos. Eius quidem harum cum neque laboriosam consectetur esse laborum dignissimos eos odit, beatae, quisquam voluptatem quasi totam vitae, qui officia dolorem magni! A vero totam officiis dignissimos, dicta et in enim, iure fugit officia unde fugiat ipsam rem quo quis! Nulla consequuntur eaque, asperiores magni magnam inventore accusantium officia necessitatibus enim voluptas! Expedita obcaecati nesciunt eaque.
+    </div>
+    <div id="center">there is simple text</div>
+</body>
+</html>

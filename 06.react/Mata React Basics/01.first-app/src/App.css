@@ -21,3 +21,9 @@
     transform: rotate(360deg);
   }
 }
+.card{
+  width: 200px;
+  margin: 20px auto;
+  border: solid black 1px;
+  border-radius: 1rem;
+}

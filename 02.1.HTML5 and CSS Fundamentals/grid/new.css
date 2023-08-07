@@ -1,0 +1,38 @@
+#sec1{
+    display: grid;
+    row-gap: 1.2rem;
+    column-gap: 1.2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    grid-template-columns: 35% 25% auto;
+    grid-template-rows: 30% 30% auto;
+}
+#sec1 div{
+    border: 5px red solid;
+    background-color: #D9EEE1;
+    margin: 2vw;
+    padding: 3vw;
+}
+#sec1 button{
+    color: azure;
+    box-sizing: border-box;
+    background-color: #282A35;
+    border-radius: 30px;
+    padding: .7rem 2rem;
+    width: 13rem;
+    font-size: 1.2rem;
+}
+#php{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#jquery{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+#sec2{
+    display: grid;
+    grid-template-areas: "myArea . . .";
+}
+#item1{
+    grid-area: myArea;
+}

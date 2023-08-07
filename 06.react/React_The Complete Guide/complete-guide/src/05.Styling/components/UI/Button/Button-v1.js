@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-// import './Button.css';
-const Button = styled.button`
+// import './ButtonV1-v1.css';
+const ButtonV1 = styled.button`
   width: 100%;
   font: inherit;
   padding: 0.5rem 1.5rem;
@@ -23,7 +23,7 @@ const Button = styled.button`
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
     }
 `;
-// const Button = props => {
+// const ButtonV1 = props => {
 //   return (
 //     <button type={props.type} className="button" onClick={props.onClick}>
 //       {props.children}
@@ -31,4 +31,4 @@ const Button = styled.button`
 //   );
 // };
 
-export default Button;
+export default ButtonV1;

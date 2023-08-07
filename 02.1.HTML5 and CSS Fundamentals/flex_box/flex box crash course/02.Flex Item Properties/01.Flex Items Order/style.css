@@ -12,3 +12,12 @@
     text-align: center;
     font-family: "Segoe UI";
 }
+#item1{
+    order: 3;
+}
+#item3{
+    order:2;
+}
+#item2{
+    order:1;
+}

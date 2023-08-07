@@ -1,7 +1,10 @@
+import{UserProvider, useUser} from "./UserContext";
+
 const LoggedInUser = () => {
+    const {user} = useUser()
     return (
         <p>
-            Hello <span className={"Username"}></span>
+            Hello <span className={"Username"}>{user.name}</span>
         </p>
     )
 }
@@ -15,7 +18,8 @@ const Header = () => {
     )
 }
 
-constPage = () => {
+const Page = () => {
+    const {user} = useUser()
     return (
         <div>
             <h2>What is Lorem ipsum?</h2>
@@ -38,8 +42,26 @@ constPage = () => {
                 doloribus esse hic inventore iste, possimus quisquam sit voluptate, voluptatum?
             </p>
             <p>
-                Written by
+                Written by {user.name}
             </p>
         </div>
     )
 }
+
+function App() {
+    return (
+        <div className={"App"}>
+            <Header/>
+            <Page/>
+        </div>
+    )
+}
+function Root(){
+    return (
+        <UserProvider>
+            <App/>
+        </UserProvider>
+    )
+}
+
+export default Root;

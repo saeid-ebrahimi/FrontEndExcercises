@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +11,7 @@
     *{
       margin:0;
       padding:0;
+      font-family: "Segoe UI";
     }
     header{
       position: fixed;
@@ -61,7 +63,6 @@
 
     #sub-menu a{
       color: white;
-      font-weight: bold;
       padding:0 10px;
       text-decoration: none;
     }
@@ -70,20 +71,59 @@
       float: right;
     }
     .active{
-      background-color: green;
+      background-color: #04AA6D;
+      color: white;
       padding: 5px;
       border-radius: 1rem;
     }
+    .active_overview,.active_overview + div {
+      background-color: #ecf8fc;
+      border-radius: .4rem;
+      padding: 10px 0;
+    }
+
     /* --------------- Main -------- */
     main{
       height: 200vh;
       margin-top: 82px;
+      margin-left: 201px;
       padding: 50px;
       line-height: 2rem;
       font-family: "Arial Rounded MT Bold",serif;
-      background-color: aliceblue;
+      background-color: #ffffff;
     }
+  /* --------------- left inner menu --------------------- */
+    #leftmenuinner{
+      position: fixed;
+      left: 0;
+      top:110px;
+      width: 230px;
+      background-color: #f8fffe;
 
+      height: 100vh;
+      overflow-y: scroll;
+    }
+    #leftmenuinner > h2{
+      font-weight: normal;
+    }
+    #leftmenuinner > a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: black;
+      font-size: smaller;
+    }
+    #leftmenuinner > div > a.active{
+      color: white;
+      font-weight: bolder;
+    }
+    #leftmenuinner>div > a {
+      display: block;
+      padding-left: 20px;
+      text-decoration: none;
+      color: black;
+      font-size: smaller;
+    }
   </style>
 </head>
 <body>
@@ -95,10 +135,10 @@
         </a>
         <nav>
           <ul>
-            <li><a href="">Tutorials</a></li>
-            <li><a href="">Exercises</a></li>
-            <li><a href="">Get Certified</a></li>
-            <li><a href="">Services</a></li>
+            <li><a href="https://www.w3schools.com/css/">Tutorials</a></li>
+            <li><a href="https://www.w3schools.com/css/">Exercises</a></li>
+            <li><a href="https://www.w3schools.com/css/">Get Certified</a></li>
+            <li><a href="https://www.w3schools.com/css/">Services</a></li>
           </ul>
         </nav>
       </div>
@@ -114,7 +154,7 @@
       <nav>
         <ul>
           <li><a href="https://www.w3schools.com/html/default.asp">HTML</a></li>
-          <li class="active"><a  href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+          <li ><a class="active" href="https://www.w3schools.com/css/default.asp">CSS</a></li>
           <li><a href="https://www.w3schools.com/js/default.asp">JAVASCRIPT</a></li>
           <li><a href="https://www.w3schools.com/sql/default.asp">SQL</a></li>
           <li><a href="https://www.w3schools.com/python/default.asp">PYTHON</a></li>
@@ -155,5 +195,217 @@
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem eius est eveniet illum ipsam, quisquam sapiente similique! Eaque iusto minus quidem voluptas? Ab aliquid beatae culpa dolores ducimus facilis fugiat molestias nisi, non nulla officiis perspiciatis placeat porro praesentium sapiente suscipit tempore! Blanditiis deleniti fugit obcaecati odio porro quisquam voluptate? Accusamus deserunt exercitationem expedita inventore ipsa placeat quo quos rem tempore, veritatis! Aut culpa dolore dolorum expedita fuga harum magnam, minima odio quod voluptatibus! Amet asperiores assumenda consectetur dignissimos dolores ea, esse explicabo fugit in incidunt ipsum laborum libero magni maiores molestiae nam natus nesciunt, nobis omnis pariatur possimus quas quos rem, repudiandae sit sunt temporibus veritatis? A ad adipisci, aut consequatur cupiditate doloremque ex illum impedit iste libero officia officiis perferendis quaerat unde, voluptatibus? Adipisci aliquid distinctio eum quos voluptatibus? Aperiam culpa iure nihil perspiciatis rem? Accusantium aliquam animi aspernatur dignissimos dolore eos mollitia nobis ratione sit unde. Beatae deleniti et itaque qui suscipit. Aliquam dignissimos dolores dolorum error incidunt molestias, porro quidem velit? Aperiam beatae doloremque ea enim illo illum ipsa maiores numquam pariatur quas quasi, quia quo sint. A aliquam atque deleniti dolore dolorum et facere, fugiat molestias nihil nisi, officia praesentium quo ratione reprehenderit voluptate. A ab at consequatur consequuntur cum dicta dignissimos dolores dolorum earum, eius, esse est eum ex explicabo facilis id illo illum impedit inventore iste labore modi molestiae nisi nulla odio omnis perferendis placeat possimus quas ratione recusandae rem similique sint tempora totam unde vel? Aperiam commodi, esse eum excepturi expedita facilis ipsam molestiae, praesentium recusandae, repudiandae ullam vitae voluptatem? Animi autem fugiat necessitatibus placeat similique! Architecto eaque vitae voluptates! Atque blanditiis fugiat minima. Dolor explicabo, hic iure laborum magni minus molestiae neque quaerat quibusdam quis velit vitae. Ipsa molestias porro quos vel voluptate? A adipisci aliquid architecto assumenda aut autem culpa deserunt dolor id, impedit ipsam nulla, odit quo quos saepe veniam voluptatibus! Ab accusantium aliquid assumenda blanditiis consectetur consequatur corporis delectus deleniti distinctio, dolores enim et exercitationem harum illo ipsam itaque iure maxime nobis nulla quae quibusdam quod reiciendis repellendus sequi sint sunt tempora, ullam unde vitae voluptatum. Adipisci cum dignissimos facere impedit laboriosam laudantium mollitia possimus voluptatum? Adipisci architecto deleniti nobis, quasi quidem sit velit! Aspernatur culpa ipsum nemo quis quos suscipit tempora. Amet delectus dicta dignissimos minus mollitia officia omnis, porro, quasi quod recusandae saepe ullam unde. Ab ad alias consectetur, error exercitationem expedita hic impedit ipsam, maxime modi odio quas veritatis voluptatibus. Debitis deleniti dignissimos dolor et excepturi, expedita fuga fugit harum itaque iusto magni modi natus nesciunt nisi, perferendis sint vero voluptatem. Deleniti esse explicabo impedit ipsam nam necessitatibus quod repudiandae soluta. Consequuntur culpa dolor ducimus ea eaque eius esse exercitationem explicabo hic illo ipsam laboriosam laudantium libero molestias nam, nemo nulla porro quae quaerat quas quasi quis quisquam rerum sapiente sed sequi similique tempore unde ut vero! Adipisci alias atque autem doloribus, dolorum ea facere facilis fugit id, impedit iste labore modi nihil qui quibusdam, sed vero voluptas? Excepturi expedita odit porro reprehenderit voluptates.
   </div>
 </main>
+<aside>
+  <div id="leftmenuinner">
+    <!--  <a href='https://www.w3schools.com/css/javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+    <h2 class="left"><span class="left_h2">CSS</span> Tutorial</h2>
+    <a target="_top" href="https://www.w3schools.com/css/https://www.w3schools.com/css/default.asp">CSS HOME</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_intro.asp">CSS Introduction</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_syntax.asp">CSS Syntax</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_selectors.asp">CSS Selectors</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_howto.asp" >CSS How To</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_comments.asp">CSS Comments</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_colors.asp">CSS Colors</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css_colors.asp">Colors</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_colors_rgb.asp">RGB</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_colors_hex.asp">HEX</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_colors_hsl.asp">HSL</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css_background.asp" class="active_overview" >CSS Backgrounds</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css_background.asp" class="active" >Background Color</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_background_image.asp" >Background Image</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_background_repeat.asp" >Background Repeat</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_background_attachment.asp">Background Attachment</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_background_shorthand.asp" >Background Shorthand</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css_border.asp" >CSS Borders</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css_border.asp" >Borders</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_border_width.asp" >Border Width</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_border_color.asp" >Border Color</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_border_sides.asp" >Border Sides</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_border_shorthand.asp" >Border Shorthand</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_border_rounded.asp" >Rounded Borders</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css_margin.asp" >CSS Margins</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css_margin.asp" >Margins</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_margin_collapse.asp" >Margin Collapse</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css_padding.asp" >CSS Padding</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_dimension.asp" >CSS Height/Width</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_boxmodel.asp" >CSS Box Model</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_outline.asp" >CSS Outline</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css_outline.asp" >Outline</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_outline_width.asp" >Outline Width</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_outline_color.asp" >Outline Color</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_outline_shorthand.asp" >Outline Shorthand</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_outline_offset.asp" >Outline Offset</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css_text.asp" >CSS Text</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css_text.asp" >Text Color</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_text_align.asp" >Text Alignment</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_text_decoration.asp" >Text Decoration</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_text_transformation.asp" >Text Transformation</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_text_spacing.asp" >Text Spacing</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_text_shadow.asp" >Text Shadow</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css_font.asp" >CSS Fonts</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css_font.asp" >Font Family</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_font_websafe.asp" >Font Web Safe</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_font_fallbacks.asp" >Font Fallbacks</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_font_style.asp" >Font Style</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_font_size.asp" >Font Size</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_font_google.asp" >Font Google</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_font_pairings.asp" >Font Pairings</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_font_shorthand.asp" >Font Shorthand</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css_icons.asp" >CSS Icons</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_link.asp" >CSS Links</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_list.asp" >CSS Lists</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_table.asp" >CSS Tables</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css_table.asp" >Table Borders</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_table_size.asp" >Table Size</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_table_align.asp" >Table Alignment</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_table_style.asp" >Table Style</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_table_responsive.asp" >Table Responsive</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css_display_visibility.asp" >CSS Display</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_max-width.asp" >CSS Max-width</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_positioning.asp" >CSS Position</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_z-index.asp" >CSS Z-index</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_overflow.asp" >CSS Overflow</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_float.asp" >CSS Float</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css_float.asp" >Float</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_float_clear.asp" >Clear</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_float_examples.asp" >Float Examples</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css_inline-block.asp" >CSS Inline-block</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_align.asp" >CSS Align</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_combinators.asp" >CSS Combinators</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_pseudo_classes.asp" >CSS Pseudo-class</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_pseudo_elements.asp" >CSS Pseudo-element</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_image_transparency.asp" >CSS Opacity</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_navbar.asp" >CSS Navigation Bar</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css_navbar.asp" >Navbar</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_navbar_vertical.asp" >Vertical Navbar</a>
+      <a target="_top" href="https://www.w3schools.com/css/css_navbar_horizontal.asp" >Horizontal Navbar</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css_dropdowns.asp" >CSS Dropdowns</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_image_gallery.asp" >CSS Image Gallery</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_image_sprites.asp" >CSS Image Sprites</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_attribute_selectors.asp" >CSS Attr Selectors</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_form.asp" >CSS Forms</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_counters.asp" >CSS Counters</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_website_layout.asp" >CSS Website Layout</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_units.asp" >CSS Units</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_specificity.asp" >CSS Specificity</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_important.asp" >CSS !important</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_math_functions.asp" >CSS Math Functions</a>
+    <br>
+    <h2 class="left"><span class="left_h2">CSS Advanced</span></h2>
+    <a target="_top" href="https://www.w3schools.com/css/css3_borders.asp" >CSS Rounded Corners</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_border_images.asp" >CSS Border Images</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_backgrounds.asp" >CSS Backgrounds</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_colors.asp" >CSS Colors</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_colors_keywords.asp" >CSS Color Keywords</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_gradients.asp" >CSS Gradients</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css3_gradients.asp" >Linear Gradients</a>
+      <a target="_top" href="https://www.w3schools.com/css/css3_gradients_radial.asp" >Radial Gradients</a>
+      <a target="_top" href="https://www.w3schools.com/css/css3_gradients_conic.asp" >Conic Gradients</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css3_shadows.asp" >CSS Shadows</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css3_shadows.asp" >Shadow Effects</a>
+      <a target="_top" href="https://www.w3schools.com/css/css3_shadows_box.asp" >Box Shadow</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css3_text_effects.asp" >CSS Text Effects</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_fonts.asp" >CSS Web Fonts</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_2dtransforms.asp" >CSS 2D Transforms</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_3dtransforms.asp" >CSS 3D Transforms</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_transitions.asp" >CSS Transitions</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_animations.asp" >CSS Animations</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_tooltip.asp" >CSS Tooltips</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_images.asp" >CSS Style Images</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_image_reflection.asp" >CSS Image Reflection</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_object-fit.asp" >CSS object-fit</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_object-position.asp" >CSS object-position</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_masking.asp" >CSS Masking</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_buttons.asp" >CSS Buttons</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_pagination.asp" >CSS Pagination</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_multiple_columns.asp" >CSS Multiple Columns</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_user_interface.asp" >CSS User Interface</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_variables.asp" >CSS Variables</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css3_variables.asp" >The var() Function</a>
+      <a target="_top" href="https://www.w3schools.com/css/css3_variables_overriding.asp" >Overriding Variables</a>
+      <a target="_top" href="https://www.w3schools.com/css/css3_variables_javascript.asp" >Variables and JavaScript</a>
+      <a target="_top" href="https://www.w3schools.com/css/css3_variables_mediaqueries.asp" >Variables in Media Queries</a>
+    </div>
+    <a target="_top" href="https://www.w3schools.com/css/css3_box-sizing.asp" >CSS Box Sizing</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_mediaqueries.asp" >CSS Media Queries</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_mediaqueries_ex.asp" >CSS MQ Examples</a>
+    <a target="_top" href="https://www.w3schools.com/css/css3_flexbox.asp" >CSS Flexbox</a>
+    <div class="tut_overview">
+      <a target="_top" href="https://www.w3schools.com/css/css3_flexbox.asp" >CSS Flexbox</a>
+      <a target="_top" href="https://www.w3schools.com/css/css3_flexbox_container.asp" >CSS Flex Container</a>
+      <a target="_top" href="https://www.w3schools.com/css/css3_flexbox_items.asp" >CSS Flex Items</a>
+      <a target="_top" href="https://www.w3schools.com/css/css3_flexbox_responsive.asp" >CSS Flex Responsive</a>
+    </div>
+
+    <br>
+    <h2 class="left"><span class="left_h2">CSS</span> Responsive</h2>
+    <a target="_top" href="https://www.w3schools.com/css/css_rwd_intro.asp" >RWD Intro</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_rwd_viewport.asp" >RWD Viewport</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_rwd_grid.asp" >RWD Grid View</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" >RWD Media Queries</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_rwd_images.asp" >RWD Images</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_rwd_videos.asp" >RWD Videos</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_rwd_frameworks.asp" >RWD Frameworks</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_rwd_templates.asp" >RWD Templates</a>
+    <br>
+    <h2 class="left"><span class="left_h2">CSS</span> Grid</h2>
+    <a target="_top" href="https://www.w3schools.com/css/css_grid.asp" >Grid Intro</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_grid_container.asp" >Grid Container</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_grid_item.asp" >Grid Item</a>
+    <br>
+    <h2 class="left"><span class="left_h2">CSS</span> SASS</h2>
+    <a target="_top" href="https://www.w3schools.com/css//sass/default.php" >SASS Tutorial</a>
+    <br>
+    <h2 class="left"><span class="left_h2">CSS</span> Examples</h2>
+    <a target="_top" href="https://www.w3schools.com/css/css_templates.asp" >CSS Templates</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_examples.asp" >CSS Examples</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_editor.asp" >CSS Editor</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_snippets.asp" >CSS Snippets</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_quiz.asp" >CSS Quiz</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_exercises.asp" >CSS Exercises</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_bootcamp.asp" >CSS Bootcamp</a>
+    <a target="_top" href="https://www.w3schools.com/css/css_exam.asp" >CSS Certificate</a>
+    <br>
+    <h2 class="left"><span class="left_h2">CSS</span> References</h2>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/default.asp" >CSS Reference</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css_selectors.asp" >CSS Selectors</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css_functions.asp" >CSS Functions</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css_ref_aural.asp" >CSS Reference Aural</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css_websafe_fonts.asp" >CSS Web Safe Fonts</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css_animatable.asp" >CSS Animatable</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css_units.asp" >CSS Units</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css_pxtoemconversion.asp" >CSS PX-EM Converter</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css_colors.asp" >CSS Colors</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css_colors_legal.asp" >CSS Color Values</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css_default_values.asp" >CSS Default Values</a>
+    <a target="_top" href="https://www.w3schools.com/css//cssref/css3_browsersupport.asp" >CSS Browser Support</a>
+    <br><br>
+  </div>
+</aside>
 </body>
 </html>
