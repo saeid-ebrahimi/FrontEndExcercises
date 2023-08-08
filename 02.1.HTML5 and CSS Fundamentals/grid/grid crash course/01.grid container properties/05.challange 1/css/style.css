@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #282A35;
+}
+img{
+    transition: transform 0.3s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+img:hover{
+    transform: scale(1.08) skewX(-1deg) rotate(-1deg);
+}
+.container{
+    display: grid;
+
+    margin: 1rem auto;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    width: 80%;
+    height: 200vh;
+}
+.grid-items{
+    background-color: #282A35;
+    text-align: center;
+    color: whitesmoke;
+    font-family: "Segoe UI", sans-serif;
+    border-radius: 1rem;
+}
+.small{
+    grid-row-end: span 1;
+}
+.medium{
+    grid-row-end: span 2;
+}
+.large{
+    grid-row-end:span 3 ;
+}
