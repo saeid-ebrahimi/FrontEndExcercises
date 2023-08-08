@@ -8,8 +8,8 @@
     width: 80%;
     margin: 1rem auto;
     display: grid;
-    grid-template-rows: 100px 100px 150px;
-    grid-template-columns: 120px 120px 180px;
+    grid-template-rows: 200px 200px 250px;
+    grid-template-columns: 220px 220px 280px;
     /*grid-gap: 2rem;*/
     grid-column-gap: 1rem;
     grid-row-gap: 1.5rem;
@@ -20,7 +20,7 @@
     color: #D9EEE1;
     border: 2px solid salmon;
     text-align: center;
-    line-height: 100px;
+    line-height: 200px;
     font-weight: bold;
     font-size: 2rem;
     font-family: "Segoe UI";
