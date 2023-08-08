@@ -13,9 +13,10 @@ img{
     object-fit: cover;
     object-position: center;
     border-radius: 1rem;
+    transform: rotateZ(5deg);
 }
 img:hover{
-    transform: scale(1.08) skewX(-1deg) rotate(-1deg);
+    transform: scale(1.08) skewX(-1deg);
 }
 .container{
     display: grid;

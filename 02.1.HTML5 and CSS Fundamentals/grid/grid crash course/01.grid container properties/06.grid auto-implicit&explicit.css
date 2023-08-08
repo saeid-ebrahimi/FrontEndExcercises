@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container, .container2{
+    display: grid;
+    width: 90vw;
+    margin: 1rem auto;
+    grid-gap: 1rem;
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(2, 1fr);
+}
+.container{
+    /* grid-auto-flow => default: row*/
+    grid-auto-rows: 100px;
+}
+.container2{
+
+    grid-auto-flow: column;
+    grid-auto-columns: 100px;
+}
+.items, .items2{
+    font-family: "Segoe UI", sans-serif;
+    font-size: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282A35;
+    color: whitesmoke;
+}

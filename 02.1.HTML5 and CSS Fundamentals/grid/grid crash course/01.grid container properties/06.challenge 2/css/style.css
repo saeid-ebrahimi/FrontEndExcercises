@@ -1,0 +1,41 @@
+.container{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-gap: 1rem;
+    width: 80vw;
+    min-height: 500px;
+    height: calc(100vh - 4rem);
+    margin:1rem auto;
+    background-color: lightblue;
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #282A35;
+    color: #D9EEE1;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 3vh;
+    border-radius: 1rem;
+}
+.narrow{
+    grid-column-end: span 4;
+}
+.tall{
+    grid-row-end: span 6;
+}
+.medium{
+    grid-row-end: span 2;
+}
+.large{
+    grid-row-end: span 4;
+    grid-column-end: span 3;
+}
+.small{
+    grid-column-end: span 2;
+}
+#item-1{
+    grid-column-end:  span 2;
+}
