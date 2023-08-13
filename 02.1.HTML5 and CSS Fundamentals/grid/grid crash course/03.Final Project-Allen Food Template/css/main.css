@@ -38,7 +38,7 @@ body{
     content: "";
     height: 1px;
     position: relative;
-    vertical-align: top;
+    vertical-align: middle;
     width: 6%;
 }
 .section-title::before{
@@ -55,6 +55,5 @@ body{
     .section-title::before, .section-title::after{
         width: 8%;
     }
-
 }
 

@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center;
     grid-column: 1/-1;
+
     display: grid;
     grid-template-rows: repeat(3, min-content);
     /*grid-template-columns: repeat(1,max-content);*/
@@ -54,10 +55,10 @@
 }
 @media screen and (max-width: 500px){
     .header-bottom{
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     .header-bottom1{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     .header-bottom-btn{
         font-size: .7rem;

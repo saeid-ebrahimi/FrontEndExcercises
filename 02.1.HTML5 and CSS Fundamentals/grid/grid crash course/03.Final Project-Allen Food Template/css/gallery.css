@@ -40,6 +40,7 @@
     background-image: url("../img/gallery5.jpg");
     grid-area: img5;
 }
+
 @media screen and (max-width: 1000px) {
     .gallery-images{
         grid-template-areas: "img1 img1 img2" "img3 img4 img4" "img5 img5 img5";
@@ -55,9 +56,8 @@
         grid-template-areas: "img1 img1" "img3 img2" "img4 img4" "img5 img5";
     }
     #image-gallery2, #image-gallery3{
-        border-radius: 0;
+        border-radius: 2rem;
         clip-path: polygon(14% 0, 100% 0%, 86% 100%, 0% 100%);
-
     }
 
 }
