@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    background-color: aliceblue;
+    width: 1000px;
+    height: 100vh;
+    margin: 1rem auto;
+    grid-gap: 2rem;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 250px);
+    align-items: center;
+    justify-items: start;
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 1rem;
+    font-family: "Segoe UI" , sans-serif;
+    background-color: #282A35;
+    color: lightblue;
+    border-radius: 1rem;
+}
+.item-1{
+    background-color: salmon;
+    align-self: start;
+}
+.item-2{
+    background-color: orangered;
+    justify-self: end;
+}
+.item-3{
+    background-color: darkcyan;
+    justify-self: stretch;
+    align-self: stretch;
+}

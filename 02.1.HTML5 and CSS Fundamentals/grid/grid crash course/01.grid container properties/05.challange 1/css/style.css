@@ -7,24 +7,23 @@ body{
     background-color: #282A35;
 }
 img{
-    transition: transform 0.3s;
+    transition: transform 1s; 
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 1rem;
-    transform: rotateZ(5deg);
+    transform: rotateZ(3deg);
 }
 img:hover{
-    transform: scale(1.08) skewX(-1deg);
-}
+    transform: scale(1.1) skewX(-5deg);
+} 
 .container{
     display: grid;
-
     margin: 1rem auto;
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 1.5rem;
     width: 80%;
     height: 200vh;
 }
@@ -42,5 +41,5 @@ img:hover{
     grid-row-end: span 2;
 }
 .large{
-    grid-row-end:span 3 ;
+    grid-row-end:span 3;
 }

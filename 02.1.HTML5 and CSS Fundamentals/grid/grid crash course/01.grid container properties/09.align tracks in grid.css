@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: #D9EEE1;
+    width: 90vw;
+    margin: 1rem auto;
+    display: grid;
+    grid-gap: 1.5rem;
+    height: calc(100vh - 2rem);
+    grid-template-columns: repeat(3, calc(30vw - 5rem));
+    grid-template-rows: repeat(2, 200px);
+    /*justify-content: center;*/
+    /*justify-content: left;*/
+    /*justify-content: right;*/
+    /*justify-content: space-between;*/
+    /*justify-content: space-evenly;*/
+    justify-content: space-around;
+
+    /*align-content: start;*/
+    /*align-content: end;*/
+    /*align-content: center;*/
+    /*align-content: space-around;*/
+    /*align-content: space-evenly;*/
+    align-content: space-between;
+
+
+}
+
+.items{
+    background-color: #282A35;
+    color: #D9EEE1;
+    display: flex;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+}

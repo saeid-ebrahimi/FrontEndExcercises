@@ -1,0 +1,64 @@
+.menu{
+    position: fixed;
+    z-index: 5;
+    top: 20px;
+    left: 30vw;
+    background-color: rgba(21, 22, 28, 0.73);
+    width: 40vw;
+    border-radius: 0 4rem 0 4rem ;
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1rem;
+}
+.menu .navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.navbar-items{
+    padding: 1rem 2vw 1.5rem 2vw;
+}
+.navbar-items > a{
+    color: whitesmoke;
+    text-decoration: none;
+    padding: .5rem 0;
+    border-bottom: 1px solid whitesmoke;
+    transition: color .5s, border-bottom-color .5s;
+}
+.navbar-items > a.active, .navbar-items > a:hover{
+    color: var(--newOrange);
+    border-bottom-color: var(--newOrange);
+}
+
+@media screen and (max-width: 1370px) {
+    .menu{
+        left: 20vw;
+        width: 60vw;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .menu{
+        left: 15vw;
+        width: 70vw;
+        font-size: .9rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .menu{
+        left: 10vw;
+        width: 80vw;
+        font-size: .8rem;
+    }
+    .navbar-items{
+    padding: .8rem 2vw 1.3rem 2vw;
+}
+}
+@media screen and (max-width: 400px) {
+    .menu{
+        left: 5vw;
+        width: 90vw;
+        font-size: .7rem;
+    }
+}
