@@ -1,0 +1,86 @@
+
+/* Footer */
+
+.footer-top{
+    background-color: #65adee;
+    padding: 6.5rem 0;
+    color: #ffffff;
+}
+.footer-top-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-top-text{
+    font-family: "TTNorms Light";
+    font-size:1.6rem;
+    font-weight: normal;
+    width: 100%;
+}
+
+.footer-top-email{
+    background-color: white;
+    display: flex;
+    flex-basis: 22rem;
+    justify-content: space-between;
+    padding: 0.3rem .3rem .3rem 1.5rem;
+    border-radius: .3rem;
+    align-items: center;
+}
+.footer-top-input{
+    border: none;
+    outline: none;
+}
+.footer-top-btn{
+    background-color:  #65adea;
+    border: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .3rem;
+    transition: background-color .5s;
+}
+.footer-top-btn:hover{
+    background-color: #3997e6;
+}
+.footer-bottom{
+    color: #6C7890;
+    padding: 1rem 0;
+}
+.footer-bottom-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+@media only screen and (max-width: 1200px) {
+    .footer-top-text{
+        max-width: 28rem;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .footer-top-text{
+        max-width: 20rem;
+    }
+    .footer-top-wrapper{
+        flex-direction: column;
+    }
+    .footer-top-text{
+        max-width: 100%;
+    }
+    .footer-top-wrapper .footer-top-email{
+        flex-basis: auto;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 576px) {
+    .footer-top-btn{
+        padding: 1rem 1.2rem;
+    }
+}

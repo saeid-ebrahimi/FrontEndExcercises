@@ -33,7 +33,11 @@ body {
   text-align: center; }
 
 .banner h1:hover {
-  background-color: #d8eeff; }
+  background-color: #d8eeff;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s; }
 
 .footer h3:hover {
   color: #FFB300;

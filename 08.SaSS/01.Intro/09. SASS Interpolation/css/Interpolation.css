@@ -1,24 +1,4 @@
-.numbers {
-  font-weight: 300;
-  line-height: 1.6; }
-
-.string {
-  font-family: "Segoe Print", sans-serif;
-  font-style: italic;
-  font-weight: bold; }
-
-.colors {
-  background-color: darkcyan;
-  color: #1E88E5;
-  border-color: #c86496;
-  border-left-color: rgba(70, 19, 180, 0.4);
-  border-right-color: #85a375;
-  border-bottom-color: rgba(133, 163, 117, 0.6); }
-
-.list {
-  margin: 10px 20px 30px 40px;
-  font-family: Arial, "Arial Rounded MT Bold", sans-serif;
-  border: 2px solid blue; }
-
-h1 {
-  color: green; }
+h2 {
+  box-sizing: border-box;
+  border-radius: 2rem;
+  background-color: violet; }

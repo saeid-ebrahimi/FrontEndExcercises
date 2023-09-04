@@ -1,0 +1,12 @@
+@import "variables";
+@mixin headingStyle($fontSize:$font-size-md){ //mixin  can be used as a method or function and it has default value
+  text-align: center;
+  color: $secondary-color;
+  font-size: $fontSize;
+}
+@mixin transition($params...){
+  transition: $params;
+  -webkit-transition: $params;
+  -moz-transition: $params;
+  -o-transition: $params;
+}

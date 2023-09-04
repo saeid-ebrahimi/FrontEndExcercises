@@ -20,20 +20,12 @@ $font-size-sm:1.5rem;
   -moz-transition: $params;
   -o-transition: $params;
 }
-@function doubleFontSize($fontSize:1rem){  // user defined functions
-  @return $fontSize*2;
-}
+
 body{
   color: #606060;
 }
 .nav{
-  //background-color: $bg-color;
-  //background-color: lighten($color:$primary-color, $amount: 37%) ; // scss special functions
-  //background-color: darken($color:$primary-color, $amount: 37%) ; // scss special functions
-  //background-color: transparentize($color:$primary-color, $amount: .4) ; // scss special functions
-  //background-color: mix($primary-color, $secondary-color) ; // scss special functions
-  background-color: mix($primary-color, $secondary-color, 40%) ; // scss special functions
-
+  background-color: $bg-color;
   display: flex;
   justify-content: center;
   ul{
@@ -61,14 +53,22 @@ body{
   font-size: $font-size-lg;
   text-align: center;
 }
+%heading{ //heading as placeholder: just copy the code and don't make .heading class
+  color: $primary-color;
+  background-color: $secondary-color;
+  font-size: $font-size-lg;
+  text-align: center;
+}
 .banner h1{
-  @extend .heading;
+  //@extend .heading;
+  @extend %heading;
   &:hover{
     background-color: #d8eeff;
   }
 }
 .footer h3{
-  @extend .heading ;
+  //@extend .heading ;
+  @extend %heading;
   //@extend .banner h1; // error: cannot use nested selectors
   //@extend h1; // it's ok
   &:hover{
@@ -76,8 +76,4 @@ body{
     background-color: #1E88E5;
     @include transition(color 800ms, background-color 1s)
   }
-}
-.banner p{
-  //font-size: doubleFontSize($font-size-sm);
-  font-size: doubleFontSize();
 }

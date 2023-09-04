@@ -1,10 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Row , Col and Helper Class</title>
+  <style>
+    html{
+      box-sizing: border-box;
+    }
+    * , *:before, *:after{
+      box-sizing: border-box;
+    }
+    body{
+      margin:0;
+      font-family: Montserrat, sans-serif;
+      color: #D9EEE1;
+    }
+    /* Helper Class or Utility Class: small classes to shorthand an specific style  */
+    .mr-1{
+      margin-right: 1rem;
+    }
+    .flex-center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  /* Main CSS  */
+    .container{
+      width: 1200px;
+      margin: 2rem auto;
+      background-color: #282A35;
+    }
+    .row{
+      height: 20rem;
+    }
+    .col{
+      color: #65adea;
+      padding: 1rem 2rem;
+    }
+  </style>
 </head>
 <body>
-$END$
+
+  <div class="container">
+    <div class="row flex-center">
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur corporis doloremque ducimus error eum laboriosam, laudantium maxime nam obcaecati possimus praesentium provident quam recusandae, repellendus sit velit vero voluptates.</div>
+    </div>
+    <div class="row flex-center">
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aut doloremque eius, eos, excepturi, facere fugiat impedit incidunt minus nihil sapiente tempore? Aliquam amet et reiciendis reprehenderit unde voluptas?</div>
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam delectus ex provident quisquam rem! Aliquid distinctio optio quis rem vel. Accusantium dolor eaque iure molestias nobis non sapiente sunt temporibus.</div>
+    </div>
+    <div class="row flex-center">
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet architecto at atque commodi consequatur dignissimos distinctio dolorum ex id nisi provident quos ratione sint temporibus, vel voluptates? Culpa, molestias!</div>
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id inventore ipsum laborum pariatur placeat quisquam unde. Animi cum dolores doloribus excepturi, molestiae quisquam repellendus soluta temporibus totam ut velit, voluptatem!</div>
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum cupiditate distinctio enim, iusto mollitia recusandae. Asperiores ea incidunt laudantium maiores odio officiis provident quod ratione recusandae. Accusamus explicabo, tenetur?</div>
+    </div>
+  </div>
 </body>
 </html>

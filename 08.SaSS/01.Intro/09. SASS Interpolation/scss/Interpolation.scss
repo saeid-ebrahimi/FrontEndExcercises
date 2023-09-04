@@ -1,38 +1,8 @@
-// sass is case sensitive
-// number
-.numbers{
-  font-weight: 300; //integer
-  line-height: 1.6; // point decimal
-}
-.string{
-  font-family: "Segoe Print", sans-serif;
-  font-style: italic;
-  font-weight: bold;
-}
-.colors{
-  background-color: darkcyan;
-  color: #1E88E5;
-  border-color: rgb(200,100,150);
-  border-left-color: rgba(70,19,180,.4);
-  border-right-color:hsl(100,20%,55%) ;
-  border-bottom-color:hsla(100,20%,55%, 0.6) ;
-}
+$b : "border";
+$c : "color";
 
-.list{
-  margin: 10px 20px 30px 40px;
-  font-family: Arial, "Arial Rounded MT Bold", sans-serif;
-  border: 2px solid blue;
+h2{
+  box-sizing: #{$b}-box;
+  #{$b}-radius: 2rem;
+  background-#{$c}: violet;
 }
-// map data type
-$colors: (
-  primary: red,
-  secondary: green,
-  tertiary: "brown"
-);
-h1{
-  color: map-get($map: $colors, $key: secondary);
-}
-
-// boolean: true or false
-
-// null : has no value and type

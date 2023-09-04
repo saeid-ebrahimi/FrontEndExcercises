@@ -15,6 +15,7 @@ function dataValidation() {
         modal.style.display = "inline"
 
     }
+
     setTimeout(function(){
         modal.style.display = "none"
     },3000)

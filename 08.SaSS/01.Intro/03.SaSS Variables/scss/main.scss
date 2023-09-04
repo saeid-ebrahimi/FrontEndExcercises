@@ -1,0 +1,31 @@
+// global variables
+$bg-color: #d8eeff;
+$primary-color: #1E88E5;
+$secondary-color: #383838;
+$tertiary-color:#FFB300;
+$text-color: #606060;
+
+$font-size-lg:3.5rem;
+$font-size-md:2.5rem;
+$font-size-sm:1.5rem;
+
+body{
+  color: #606060;
+}
+.nav{
+  background-color: $bg-color;
+}
+.banner h1{
+  $secondary-color: #560909; // local variable: inner {} scope
+  $test-color: #d89906 !global; // make local variable global
+  color: $secondary-color;
+
+  font-size: $font-size-lg;
+  text-align: center;
+}
+.footer h3{
+  color: $secondary-color;
+  background-color: $test-color;
+  font-size: $font-size-sm;
+  text-align: center;
+}

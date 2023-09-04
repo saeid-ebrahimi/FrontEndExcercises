@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-sass": "node-sass -o css scss -w"
   },
   "keywords": [],
   "author": "Mr.X",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
 }

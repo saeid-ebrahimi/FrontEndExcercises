@@ -1,0 +1,85 @@
+// global variables
+$bg-color: #d8eeff;
+$primary-color: #1E88E5;
+$secondary-color: #383838;
+$tertiary-color:#FFB300;
+$text-color: #606060;
+
+$font-size-lg:3.5rem;
+$font-size-md:2.5rem;
+$font-size-sm:1.5rem;
+
+@mixin headingStyle($fontSize:$font-size-md){ //mixin  can be used as a method or function and it has default value
+  text-align: center;
+  color: $secondary-color;
+  font-size: $fontSize;
+}
+@mixin transition($params...){
+  transition: $params;
+  -webkit-transition: $params;
+  -moz-transition: $params;
+  -o-transition: $params;
+}
+@function doubleFontSize($fontSize:1rem){  // user defined functions
+  @return $fontSize*2;
+}
+body{
+  color: #606060;
+}
+.nav{
+
+  background-color: darken($color:$primary-color, $amount: 37%) ; // scss special functions
+
+  display: flex;
+  justify-content: center;
+  ul{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: $tertiary-color;
+      font-size: $font-size-sm;
+      &:hover{
+        color: lighten($tertiary-color, 30%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+.heading{
+  color: $primary-color;
+  background-color: $secondary-color;
+  font-size: $font-size-lg;
+  text-align: center;
+}
+%heading{ //heading as placeholder: just copy the code and don't make .heading class
+  color: $primary-color;
+  background-color: $secondary-color;
+  font-size: $font-size-lg;
+  text-align: center;
+}
+.banner h1{
+  //@extend .heading;
+  @extend %heading;
+  &:hover{
+    background-color: #d8eeff;
+    @include transition(background-color 1s)
+  }
+}
+.footer h3{
+  @extend %heading;
+  &:hover{
+    color: $tertiary-color;
+    background-color: #1E88E5;
+    @include transition(color 800ms, background-color 1s)
+  }
+}
+.banner p{
+  //font-size: doubleFontSize($font-size-sm);
+  font-size: doubleFontSize();
+}

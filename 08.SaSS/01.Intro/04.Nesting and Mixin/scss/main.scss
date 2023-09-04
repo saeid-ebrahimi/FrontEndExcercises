@@ -9,23 +9,52 @@ $font-size-lg:3.5rem;
 $font-size-md:2.5rem;
 $font-size-sm:1.5rem;
 
+@mixin headingStyle($fontSize:$font-size-md){ //mixin  can be used as a method or function and it has default value
+  text-align: center;
+  color: $secondary-color;
+  font-size: $fontSize;
+}
+@mixin transition($params...){
+  transition: $params;
+  -webkit-transition: $params;
+  -moz-transition: $params;
+  -o-transition: $params;
+}
 body{
   color: #606060;
 }
 .nav{
   background-color: $bg-color;
+  display: flex;
+  justify-content: center;
+  ul{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: $tertiary-color;
+      font-size: $font-size-sm;
+      &:hover{
+        color: $secondary-color;
+        cursor: pointer;
+      }
+    }
+  }
 }
 .banner h1{
-  $secondary-color: #560909; // local variable: inner {} scope
-  $test-color: #d89906 !global; // make local variable global
-  color: $secondary-color;
-
-  font-size: $font-size-lg;
-  text-align: center;
+  //$secondary-color: #560909; // local variable: inner {} scope
+  @include headingStyle($font-size-lg); // better to use mixin styles in first line
 }
 .footer h3{
-  color: $secondary-color;
-  background-color: $test-color;
-  font-size: $font-size-sm;
-  text-align: center;
+  @include headingStyle($font-size-md);
+  &:hover{
+    color: $tertiary-color;
+    background-color: #1E88E5;
+    @include transition(color 800ms, background-color 1s)
+  }
 }

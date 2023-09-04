@@ -2,14 +2,37 @@ body {
   color: #606060; }
 
 .nav {
-  background-color: #d8eeff; }
+  background-color: #d8eeff;
+  display: flex;
+  justify-content: center; }
+  .nav ul {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center; }
+  .nav ul li {
+    list-style: none; }
+    .nav ul li a {
+      text-decoration: none;
+      color: #FFB300;
+      font-size: 1.5rem; }
+      .nav ul li a:hover {
+        color: #383838;
+        cursor: pointer; }
 
 .banner h1 {
-  color: #560909;
-  font-size: 3.5rem;
-  text-align: center; }
+  text-align: center;
+  color: #383838;
+  font-size: 3.5rem; }
 
 .footer h3 {
+  text-align: center;
   color: #383838;
-  font-size: 1.5rem;
-  text-align: center; }
+  font-size: 2.5rem; }
+  .footer h3:hover {
+    color: #FFB300;
+    background-color: #1E88E5;
+    transition: color 800ms, background-color 1s;
+    -webkit-transition: color 800ms, background-color 1s;
+    -moz-transition: color 800ms, background-color 1s;
+    -o-transition: color 800ms, background-color 1s; }

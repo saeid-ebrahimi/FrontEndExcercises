@@ -1,10 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/33952cd144.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/scss/_fonts.scss">
+    <link rel="stylesheet" href="style/css/main.css">
+    <title>Kebab Lab</title>
 </head>
 <body>
-$END$
+<!-- site navbar-->
+<nav class="navbar">
+    <input type="checkbox" name="" id="check" class="checkbox" hidden>
+    <div class="hamburger-menu">
+        <label for="check" class="menu">
+            <div class="menu-line menu-line-1"></div>
+            <div class="menu-line menu-line-2"></div>
+            <div class="menu-line menu-line-3"></div>
+        </label>
+    </div>
+    <div class="navbar-navigation">
+        <div class="navbar-navigation-left">
+            <img src="assests/images/nav-img-1.jpeg" class="left-img left-img-1" alt="">
+            <img src="assests/images/nav-img-2.jpeg" class="left-img left-img-2" alt="">
+            <img src="assests/images/nav-img-3.jpeg" class="left-img left-img-3" alt="">
+        </div>
+        <div class="navbar-navigation-right">
+            <ul class="nav-list">
+                <li class="nav-list-item">
+                    <a href="" class="nav-list-link">Home</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="" class="nav-list-link">About Us</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="" class="nav-list-link">Our Services</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="" class="nav-list-link">Gallery</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="" class="nav-list-link">Reservation</a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="" class="nav-list-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- site header-->
+    <header class="header">
+      <div class="brand">
+          <a href="#" class="logo">
+              <img src="assests/logo/kebab-logo-removebg.png">
+          </a>
+          <div>
+              <h1 class="main-name">Kebab Lab</h1>
+              <p class="sub-name">Restaurant</p>
+          </div>
+          <div class="header-banner">
+              <h1 class="main-heading">Welcome</h1>
+              <h3 class="sub-heading">Try Our Hot Delicious Kebabs</h3>
+              <button type="button" class="main-btn">Reserve</button>
+          </div>
+      </div>
+  </header>
+<!-- site about us section-->
+    <section class="about-us">
+      <div class="about-us-left">
+          <img src="assests/images/story.jpg" alt="About Us">
+      </div>
+      <div class="about-us-right">
+          <h2 class="main-heading">About Us</h2>
+          <h3 class="sub-heading">Know More about Kebab Lab restaurant</h3>
+          <p class="description">Welcome to our kebab restaurant! We are passionate about serving delicious and authentic kebabs that will tantalize your taste buds. Our chefs use only the freshest ingredients and traditional recipes to create mouth-watering dishes that will transport you to the streets of Istanbul.
+              Our menu features a wide variety of kebabs, including lamb, chicken, beef, and vegetarian options. We also offer a range of sides and desserts to complement your meal.
+          </p>
+          <button type="button" class="main-btn">Read More</button>
+      </div>
+  </section>
+<!-- site gallery section-->
+    <section class="gallery">
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="card-overlay">
+                    <h2 class="card-overlay-heading">Chicken Kebab</h2>
+                    <p class="card-overlay-description">Price: $50</p>
+                    <button type="button" class="card-overlay-btn">Order</button>
+                </div>
+                <img src="assests/images/grilled%20chicken.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h2 class="card-overlay-heading">Shish Kebab</h2>
+                    <p class="card-overlay-description">Price: $150</p>
+                    <button type="button" class="card-overlay-btn">Order</button>
+                </div>
+                <img src="assests/images/shish-kebab.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h2 class="card-overlay-heading">Meat Kebab</h2>
+                    <p class="card-overlay-description">Price: $100</p>
+                    <button type="button" class="card-overlay-btn">Order</button>
+                </div>
+                <img src="assests/images/meat-kebab.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h2 class="card-overlay-heading">Mixed Kebab</h2>
+                    <p class="card-overlay-description">Price: $250</p>
+                    <button type="button" class="card-overlay-btn">Order</button>
+                </div>
+                <img src="assests/images/mixed-fried-meat.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h2 class="card-overlay-heading">Lula Kebab</h2>
+                    <p class="card-overlay-description">Price: $100</p>
+                    <button type="button" class="card-overlay-btn">Order</button>
+                </div>
+                <img src="assests/images/lula-kebab.jpg" class="card-img" alt="">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h2 class="card-overlay-heading">Vegetable Kebab</h2>
+                    <p class="card-overlay-description">Price: $70</p>
+                    <button type="button" class="card-overlay-btn">Order</button>
+                </div>
+                <img src="assests/images/grilled-vegetables.jpg" class="card-img" alt="">
+            </div>
+        </div>
+    </section>
+<!-- site Reserve Section-->
+    <section class="reserve">
+        <div class="reserve-left">
+            <h2 class="main-heading">Reserve a Table</h2>
+            <h3 class="sub-heading">Rserve a table on Kebab Lab restaurant</h3>
+            <p class="description"> At our restaurant, we believe that food is not just about nourishment but also about bringing people together. That’s why we have created a warm and inviting atmosphere where you can enjoy great food with family and friends.</p>
+            <button type="button" class="main-btn">Reserve</button>
+        </div>
+        <div class="reserve-right">
+            <img src="assests/images/drinks.jpg" alt="">
+        </div>
+    </section>
+<!-- site footer-->
+    <footer class="footer">
+        <div class="footer-header">
+            <a href="#" class="logo">
+                <img src="assests/logo/kebab-logo-removebg.png">
+            </a>
+            <div>
+                <h2 class="main-name">Kebab Lab</h2>
+                <p class="sub-name">Restaurant</p>
+            </div>
+        </div>
+        <div class="footer-social-media">
+            <ul class="social-media">
+                <li class="social-media-item"><a href="#" class="social-media-link"><i
+                        class="fab fa-facebook-square"></i></a></li>
+                <li class="social-media-item"><a href="#" class="social-media-link"><i
+                        class="fab fa-google-plus-square"></i></a></li>
+                <li class="social-media-item"><a href="#" class="social-media-link"><i
+                        class="fab fa-instagram-square"></i></a></li>
+                <li class="social-media-item"><a href="#" class="social-media-link"><i
+                        class="fab fa-youtube-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p class="footer-copyright-paragraph">
+                &copy; all rights reserved by <span class="footer-copyright-paragraph_brand"> Kebab Lab</span>.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

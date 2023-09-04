@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../../assests/fonts/Nunito/Nunito-VariableFont_wght.ttf"); }
+
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../assests/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf"); }
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("../../assests/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf"); }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -308,7 +320,354 @@ template {
   margin: 0; }
 
 body {
-  background-color: #262626; }
+  background-color: #2a2a2a; }
+
+.hamburger-menu .menu, .card-overlay, .card-img {
+  width: 100%;
+  height: 100%; }
+
+*, *:after, *:before {
+  padding: 0;
+  margin: 0; }
 
 body {
-  background-color: #d8eeff; }
+  background-color: #2a2a2a; }
+
+.hamburger-menu .menu, .card-overlay, .card-img {
+  width: 100%;
+  height: 100%; }
+
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 50; }
+  .hamburger-menu .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform .6s; }
+    .hamburger-menu .menu-line {
+      width: 100%;
+      height: 4px;
+      background-color: #d3ab55;
+      transition: all .6s .6s;
+      transform-origin: right; }
+
+.logo {
+  font-size: 70px;
+  color: #d3ab55; }
+  .logo img {
+    display: block;
+    width: 600px; }
+
+.main-name {
+  font-family: "Dancing Script", cursive;
+  font-size: 70px;
+  line-height: 1rem;
+  color: #bbb;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  word-spacing: 5px; }
+
+.sub-name {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  color: #bbb;
+  text-align: center; }
+
+.main-heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 100px;
+  font-weight: 300;
+  color: #d3ab55;
+  margin-bottom: 40px; }
+
+.sub-heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  font-weight: 300;
+  color: #bbb;
+  margin-bottom: 40px; }
+
+.main-btn {
+  width: 400px;
+  padding: 1rem 3rem;
+  font-family: "Josefin Sans", san-serif;
+  font-size: 40px;
+  color: #d3ab55;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #d3ab55;
+  border-radius: .5rem;
+  transition: all 500ms; }
+  .main-btn:hover {
+    cursor: pointer;
+    color: #bbb;
+    border: 2px solid #bbb; }
+
+.card {
+  position: relative;
+  width: 30%;
+  height: 30vw;
+  overflow: hidden; }
+  .card:hover .card-overlay {
+    left: 50%; }
+  .card-overlay {
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(211, 171, 85, 0.8);
+    color: #ffffff;
+    transition: left 1s; }
+    .card-overlay-heading {
+      font-family: "Nunito", san-serif;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      word-spacing: 5px; }
+    .card-overlay-description {
+      padding-top: 2rem;
+      font-family: "Josefin Sans", san-serif;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      word-spacing: 5px; }
+    .card-overlay-btn {
+      margin-top: 2rem;
+      width: 150px;
+      height: 50px;
+      color: #ffffff;
+      font-family: "Nunito", san-serif;
+      font-size: 20px;
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      border-radius: 1rem;
+      cursor: pointer; }
+  .card-img {
+    object-fit: cover; }
+
+*, *:after, *:before {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #2a2a2a; }
+
+.hamburger-menu .menu, .card-overlay, .card-img {
+  width: 100%;
+  height: 100%; }
+
+.navbar {
+  position: relative;
+  z-index: 40; }
+  .navbar-navigation {
+    display: flex; }
+    .navbar-navigation-left {
+      width: 50vw;
+      height: 100vh;
+      background-color: #2a2a2a;
+      position: fixed;
+      left: -50vw;
+      transition: left 700ms cubic-bezier(1, 0, 0, 1); }
+    .navbar-navigation-right {
+      width: 50vw;
+      height: 100vh;
+      background-color: #1f1d1d;
+      position: fixed;
+      right: -50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: right 500ms; }
+    .navbar-navigation .nav-list {
+      text-align: center; }
+      .navbar-navigation .nav-list-item {
+        list-style: none;
+        line-height: 2; }
+      .navbar-navigation .nav-list-link {
+        font-family: "Dancing Script", cursive;
+        font-size: 40px;
+        color: #bbb;
+        text-decoration: none;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        word-spacing: 5px;
+        transition: all 500ms; }
+        .navbar-navigation .nav-list-link:hover {
+          color: #d3ab55;
+          letter-spacing: 4px; }
+    .navbar-navigation .left-img {
+      width: 50%;
+      position: absolute;
+      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+      opacity: .8;
+      border-radius: 1rem; }
+    .navbar-navigation .left-img-1 {
+      top: 15%;
+      left: 15%; }
+    .navbar-navigation .left-img-2 {
+      top: 35%;
+      left: 25%; }
+    .navbar-navigation .left-img-3 {
+      top: 55%;
+      left: 35%; }
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left: 0; }
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  right: 0; }
+
+.checkbox:checked ~ .hamburger-menu .menu {
+  transform: rotateZ(90deg); }
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+  transform: rotateZ(-40deg); }
+
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+  transform: rotateZ(-40deg);
+  opacity: 0; }
+
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+  transform: rotateZ(40deg); }
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(42, 42, 42, 0.6)), url("../../assests/images/banner.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .header .brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+  .header-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+.about-us {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .about-us-left {
+    width: 60%; }
+    .about-us-left img {
+      width: 100%;
+      object-fit: fill; }
+  .about-us-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify; }
+    .about-us-right .description {
+      padding: 2rem 3rem;
+      font-family: "Nunito", san-serif;
+      font-size: 20px;
+      letter-spacing: 2px;
+      word-spacing: 4px;
+      color: #ffffff;
+      text-indent: 1rem; }
+      .about-us-right .description:first-letter {
+        font-size: 40px; }
+
+.gallery .card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.reserve {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .reserve-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify; }
+    .reserve-left .description {
+      padding: 2rem 3rem;
+      font-family: "Nunito", san-serif;
+      font-size: 20px;
+      letter-spacing: 2px;
+      word-spacing: 4px;
+      color: #ffffff;
+      text-indent: 1rem; }
+      .reserve-left .description:first-letter {
+        font-size: 40px; }
+  .reserve-right {
+    width: 60%; }
+    .reserve-right img {
+      width: 100%;
+      object-fit: fill; }
+
+.footer {
+  border-top: 2px solid #d3ab55;
+  border-radius: 2rem;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .footer-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem; }
+    .footer-header img {
+      width: 300px; }
+  .footer .main-name {
+    font-size: 20px;
+    line-height: 2rem;
+    color: #d3ab55; }
+  .footer .social-media {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin-bottom: 2.5rem; }
+    .footer .social-media-item {
+      list-style: none; }
+    .footer .social-media-link {
+      text-decoration: none;
+      font-size: 40px;
+      color: #bbb;
+      transition: color 600ms; }
+      .footer .social-media-link:hover {
+        color: #d3ab55; }
+  .footer-copyright-paragraph {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Nunito", san-serif; }
+    .footer-copyright-paragraph_brand {
+      color: #d3ab55;
+      font-family: "Dancing Script", cursive; }

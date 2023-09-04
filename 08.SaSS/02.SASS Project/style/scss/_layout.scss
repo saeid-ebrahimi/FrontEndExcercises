@@ -1,0 +1,174 @@
+@import "base";
+
+.navbar {
+  position: relative;
+  z-index: 40;
+  &-navigation {
+    display: flex;
+
+    &-left {
+      width: 50vw;
+      height: 100vh;
+      background-color: $dark-color;
+      position: fixed;
+      left: -50vw;
+      transition: left 700ms cubic-bezier(1,0,0,1);
+    }
+
+    &-right {
+      width: 50vw;
+      height: 100vh;
+      background-color: #1f1d1d;
+      position: fixed;
+      right: -50vw;
+      @include flex-center;
+      transition: right 500ms;
+    }
+    .nav-list{
+      text-align: center;
+      &-item{
+        list-style: none;
+        line-height: 2;
+      }
+      &-link{
+        font-family: $dancingScript-font;
+        font-size: $secondary-size;
+        color: $secondary-color;
+        text-decoration: none ;
+        @include text-typography;
+        transition: all 500ms;
+        &:hover{
+          color: $primary-color;
+          letter-spacing: 4px;
+        }
+      }
+    }
+    .left-img{
+      width: 50%;
+      position: absolute;
+      box-shadow: 0 15px 60px rgba($black-color, .5);
+      opacity: .8;
+      border-radius: 1rem;
+    }
+    .left-img-1{
+      top: 15%;
+      left: 15%;
+    }
+    .left-img-2{
+      top: 35%;
+      left: 25%;
+    }
+    .left-img-3{
+      top: 55%;
+      left: 35%;
+    }
+  }
+}
+.checkbox:checked ~ .navbar-navigation {
+  .navbar-navigation-left{
+    left: 0;
+  }
+  .navbar-navigation-right{
+    right: 0;
+  }
+}
+.checkbox:checked ~ .hamburger-menu .menu{
+  transform: rotateZ(90deg);
+}
+.checkbox:checked ~ .hamburger-menu .menu-line-1{
+  transform: rotateZ(-40deg);
+}
+.checkbox:checked ~ .hamburger-menu .menu-line-2{
+  transform: rotateZ(-40deg);
+  opacity: 0;
+}
+.checkbox:checked ~ .hamburger-menu .menu-line-3{
+  transform: rotateZ(40deg);
+}
+.header{
+  width: 100%;
+  height: 100vh;
+  background:linear-gradient(rgba($black-color, 0.8), rgba($dark-color, 0.6)), url("../../assests/images/banner.jpg");
+  background-size: cover;
+  @include flex-center;
+  .brand{
+    @include flex-center;
+    text-align: center;
+  }
+  &-banner{ // you can use & instead of parent name
+    @include flex-center;
+  }
+}
+.about-us{
+ @include section-layout;
+
+  &-left{
+    @include section-image;
+  }
+  &-right{
+    @include section-content;
+  }
+}
+.gallery{
+  .card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+.reserve{
+  @include section-layout;
+  &-left{
+    @include section-content;
+  }
+  &-right{
+    @include section-image;
+  }
+}
+.footer{
+  border-top: 2px solid $primary-color;
+  border-radius: 2rem;
+  padding: 3rem 0;
+  @include flex-center;
+  text-align: center;
+  &-header{
+    @include flex-center;
+    margin-bottom: 2.5rem ;
+    img{
+      width: 300px;
+    }
+  }
+  & .main-name{
+    font-size: $text-size;
+    line-height: 2rem;
+    color: $primary-color;
+  }
+  .social-media{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    &-item{
+      list-style: none;
+    }
+    &-link{
+      text-decoration: none;
+      font-size: $secondary-size;
+      color: $secondary-color;
+      transition: color 600ms;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+  &-copyright-paragraph{
+    font-size: $text-size;
+    color: $text-color;
+    font-family: $nunito-font;
+    &_brand{
+      color: $primary-color;
+      font-family: $dancingScript-font;
+    }
+  }
+}

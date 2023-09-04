@@ -1,0 +1,195 @@
+/* ............. Main............*/
+.main{
+    padding-top: 3rem;
+    background-image: url("../images/svg.png") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.works{
+    text-align: center;
+    padding: 5rem 0;
+}
+.works-text, .portfolio-text{
+    margin-top: 0;
+    color: #6C7890;
+    text-transform: uppercase;
+}
+
+.works-title, .portfolio-title{
+    margin-top: 0.5rem;
+    color: #081d43;
+    text-align: center;
+    font-family: "TTNorms Medium";
+}
+.works-content{
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem auto;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.works-content-item{
+    flex-basis: 15rem;
+}
+.works-content__title{
+    color: #081d43;
+}
+.works-content__text{
+    color:#6C7890;
+    line-height: 2rem;
+}
+.works-image{
+    max-width: 31rem;
+    margin: 0 auto;
+}
+.works-image-img{
+    width: 100%;
+}
+/* testimonial */
+.persons-comments{
+    padding: 5rem 0;
+    background-color: #65adee;
+    text-align: center;
+}
+.person-comments .container{
+    max-width: 70rem;
+    margin:auto;
+}
+.person-comments-title{
+    margin-top: 0;
+    color: white;
+    font-family: "TTNorms Medium";
+    font-weight: normal;
+}
+.person-comments-text{
+    color: white;
+    font-family: "TTNorms Light";
+    max-width: 28rem;
+    margin: 0 auto;
+    line-height: 1.8rem;
+}
+.comments{
+    max-width: 65rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.comment{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 18rem;
+    justify-content: space-between;
+    background-color: #fff;
+    margin: 1rem auto;
+    border-radius: .3rem;
+    min-height: 15rem;
+}
+.comment-content{
+    text-align: left;
+    padding: 1.2rem;
+
+}
+.comment-body{
+    font-family: "Times New Roman";
+    font-style: italic;
+    line-height: 1.5rem;
+    color:#081d43;
+    margin: 0;
+}
+.comment-info{
+    display: flex;
+    border-top:1px solid #E8E8EF;
+    padding: 1.2rem;
+    align-items: center;
+}
+.comment-person{
+    margin: 0 0 0 .5rem;
+}
+.companies{
+    max-width: 65rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5rem auto auto;
+}
+.companies-img{
+    margin: 1rem;
+}
+/* portfolio */
+.portfolio{
+    text-align: center;
+    padding: 5rem 0;
+}
+.portfolio-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.portfolio-item{
+    flex-basis: 23rem;
+    margin-bottom:2rem;
+
+}
+.portfolio-item-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3rem;
+    object-fit:contain;
+    transition: transform .8s;
+}
+.portfolio-item-img:hover{
+    transform: scale(1.1);
+}
+@media only screen and (max-width: 1200px) {
+    .portfolio-item{
+        flex-basis: 28rem;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .comments{
+        flex-wrap: wrap;
+    }
+    .comment{
+        flex-basis: 19rem;
+    }
+    .companies{
+        justify-content: center;
+    }
+    .portfolio-item{
+        flex-basis: 21rem;
+    }
+    .main .footer-top{
+        padding: 4rem 0;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .works-content-item{
+        flex-basis: 14rem;
+    }
+    .comment{
+        flex-basis: 100%;
+    }
+    .companies{
+        margin-top: 2.5rem;
+    }
+    .portfolio-item{
+        flex-basis: 100%;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .works-content-item{
+        flex-basis: 90%;
+        margin-bottom: 1rem;
+    }
+    .works-content__text{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+}
