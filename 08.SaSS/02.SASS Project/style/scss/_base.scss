@@ -4,6 +4,7 @@ $black-color: #000000;
 $primary-color: #d3ab55;
 $secondary-color: #bbb;
 $text-color: #ffffff;
+
 $primary-size: 70px;
 $secondary-size: 40px;
 $text-size: 20px;
@@ -34,9 +35,16 @@ body{
 }
 @mixin section-layout{
   height: 90vh;
+  @media (max-width: 1300px) {
+    height: 70vh;
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+    height: max-content;
+  }
 }
 @mixin section-content {
   width: 40%;
@@ -56,13 +64,37 @@ body{
     &:first-letter {
       font-size: $secondary-size;
     }
+    @media (max-width: 1600px) {
+      font-size: 17px;
+      padding: 2rem 2rem;
+    }
+
+    @media (max-width: 800px) {
+      font-size: 16px;
+      padding: 2rem 2rem;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    width: 50%;
+  }
+  @media (max-width: 1000px) {
+    width: 80%;
+    margin-bottom: 3rem;
   }
 }
 @mixin section-image{
-  width: 60%;
+  width: 50%;
   img{
     width: 100%;
     object-fit: fill;
+  }
+  @media (max-width: 1300px) {
+    width: 45%;
+  }
+  @media (max-width: 1000px) {
+    width: 80%;
+    margin-bottom: 3rem;
   }
 }
 %fullSpace{

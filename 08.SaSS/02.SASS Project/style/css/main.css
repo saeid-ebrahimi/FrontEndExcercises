@@ -344,6 +344,10 @@ body {
   top: 10%;
   right: 5%;
   z-index: 50; }
+  @media (max-width: 1000px) {
+    .hamburger-menu {
+      width: 30px;
+      height: 30px; } }
   .hamburger-menu .menu {
     display: flex;
     flex-direction: column;
@@ -358,6 +362,9 @@ body {
       background-color: #d3ab55;
       transition: all .6s .6s;
       transform-origin: right; }
+      @media (max-width: 1000px) {
+        .hamburger-menu .menu-line {
+          height: 3px; } }
 
 .logo {
   font-size: 70px;
@@ -365,6 +372,12 @@ body {
   .logo img {
     display: block;
     width: 600px; }
+    @media (max-width: 1600px) {
+      .logo img {
+        width: 450px; } }
+    @media (max-width: 1300px) {
+      .logo img {
+        width: 300px; } }
 
 .main-name {
   font-family: "Dancing Script", cursive;
@@ -375,6 +388,12 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   word-spacing: 5px; }
+  @media (max-width: 1600px) {
+    .main-name {
+      font-size: 60px; } }
+  @media (max-width: 1300px) {
+    .main-name {
+      font-size: 45px; } }
 
 .sub-name {
   font-family: "Dancing Script", cursive;
@@ -388,6 +407,18 @@ body {
   font-weight: 300;
   color: #d3ab55;
   margin-bottom: 40px; }
+  @media (max-width: 1600px) {
+    .main-heading {
+      font-size: 80px; } }
+  @media (max-width: 1300px) {
+    .main-heading {
+      font-size: 70px; } }
+  @media (max-width: 800px) {
+    .main-heading {
+      font-size: 55px; } }
+  @media (max-width: 600px) {
+    .main-heading {
+      font-size: 45px; } }
 
 .sub-heading {
   font-family: "Dancing Script", cursive;
@@ -395,6 +426,16 @@ body {
   font-weight: 300;
   color: #bbb;
   margin-bottom: 40px; }
+  @media (max-width: 1600px) {
+    .sub-heading {
+      font-size: 30px;
+      margin-bottom: 30px; } }
+  @media (max-width: 1300px) {
+    .sub-heading {
+      font-size: 25px; } }
+  @media (max-width: 600px) {
+    .sub-heading {
+      font-size: 22px; } }
 
 .main-btn {
   width: 400px;
@@ -411,12 +452,33 @@ body {
     cursor: pointer;
     color: #bbb;
     border: 2px solid #bbb; }
+  @media (max-width: 1600px) {
+    .main-btn {
+      font-size: 30px;
+      padding: 1rem 2.5rem;
+      width: 300px; } }
+  @media (max-width: 1300px) {
+    .main-btn {
+      font-size: 25px;
+      padding: 1rem 2rem;
+      width: 250px; } }
+  @media (max-width: 600px) {
+    .main-btn {
+      font-size: 20px;
+      padding: 1rem 1.5rem;
+      width: 200px; } }
 
 .card {
   position: relative;
   width: 30%;
   height: 30vw;
   overflow: hidden; }
+  @media (max-width: 800px) {
+    .card {
+      width: 45%; } }
+  @media (max-width: 600px) {
+    .card {
+      width: 75%; } }
   .card:hover .card-overlay {
     left: 50%; }
   .card-overlay {
@@ -440,6 +502,9 @@ body {
       letter-spacing: 2px;
       text-transform: uppercase;
       word-spacing: 5px; }
+      @media (max-width: 1000px) {
+        .card-overlay-heading {
+          font-size: 30px; } }
     .card-overlay-description {
       padding-top: 2rem;
       font-family: "Josefin Sans", san-serif;
@@ -459,6 +524,10 @@ body {
       border: 1px solid #ffffff;
       border-radius: 1rem;
       cursor: pointer; }
+      @media (max-width: 1000px) {
+        .card-overlay-btn {
+          width: 130px;
+          height: 40px; } }
   .card-img {
     object-fit: cover; }
 
@@ -485,6 +554,9 @@ body {
       position: fixed;
       left: -50vw;
       transition: left 700ms cubic-bezier(1, 0, 0, 1); }
+      @media (max-width: 820px) {
+        .navbar-navigation-left {
+          display: none; } }
     .navbar-navigation-right {
       width: 50vw;
       height: 100vh;
@@ -496,6 +568,10 @@ body {
       justify-content: center;
       align-items: center;
       transition: right 500ms; }
+      @media (max-width: 600px) {
+        .navbar-navigation-right {
+          width: 100vw;
+          right: -100vw; } }
     .navbar-navigation .nav-list {
       text-align: center; }
       .navbar-navigation .nav-list-item {
@@ -511,6 +587,9 @@ body {
         text-transform: uppercase;
         word-spacing: 5px;
         transition: all 500ms; }
+        @media (max-width: 1000px) {
+          .navbar-navigation .nav-list-link {
+            font-size: 30px; } }
         .navbar-navigation .nav-list-link:hover {
           color: #d3ab55;
           letter-spacing: 4px; }
@@ -569,17 +648,34 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+  @media (max-width: 800px) {
+    .header {
+      height: 70vh; } }
 
 .about-us {
   height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media (max-width: 1300px) {
+    .about-us {
+      height: 70vh; } }
+  @media (max-width: 1000px) {
+    .about-us {
+      flex-direction: column-reverse;
+      height: max-content; } }
   .about-us-left {
-    width: 60%; }
+    width: 50%; }
     .about-us-left img {
       width: 100%;
       object-fit: fill; }
+    @media (max-width: 1300px) {
+      .about-us-left {
+        width: 45%; } }
+    @media (max-width: 1000px) {
+      .about-us-left {
+        width: 80%;
+        margin-bottom: 3rem; } }
   .about-us-right {
     width: 40%;
     display: flex;
@@ -596,17 +692,43 @@ body {
       text-indent: 1rem; }
       .about-us-right .description:first-letter {
         font-size: 40px; }
+      @media (max-width: 1600px) {
+        .about-us-right .description {
+          font-size: 17px;
+          padding: 2rem 2rem; } }
+      @media (max-width: 800px) {
+        .about-us-right .description {
+          font-size: 16px;
+          padding: 2rem 2rem; } }
+    @media (max-width: 1300px) {
+      .about-us-right {
+        width: 50%; } }
+    @media (max-width: 1000px) {
+      .about-us-right {
+        width: 80%;
+        margin-bottom: 3rem; } }
 
 .gallery .card-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
 
+@media (max-width: 1000px) {
+  .gallery {
+    margin-bottom: 3rem; } }
+
 .reserve {
   height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media (max-width: 1300px) {
+    .reserve {
+      height: 70vh; } }
+  @media (max-width: 1000px) {
+    .reserve {
+      flex-direction: column-reverse;
+      height: max-content; } }
   .reserve-left {
     width: 40%;
     display: flex;
@@ -623,11 +745,36 @@ body {
       text-indent: 1rem; }
       .reserve-left .description:first-letter {
         font-size: 40px; }
+      @media (max-width: 1600px) {
+        .reserve-left .description {
+          font-size: 17px;
+          padding: 2rem 2rem; } }
+      @media (max-width: 800px) {
+        .reserve-left .description {
+          font-size: 16px;
+          padding: 2rem 2rem; } }
+    @media (max-width: 1300px) {
+      .reserve-left {
+        width: 50%; } }
+    @media (max-width: 1000px) {
+      .reserve-left {
+        width: 80%;
+        margin-bottom: 3rem; } }
   .reserve-right {
-    width: 60%; }
+    width: 50%; }
     .reserve-right img {
       width: 100%;
       object-fit: fill; }
+    @media (max-width: 1300px) {
+      .reserve-right {
+        width: 45%; } }
+    @media (max-width: 1000px) {
+      .reserve-right {
+        width: 80%;
+        margin-bottom: 3rem; } }
+    @media (max-width: 600px) {
+      .reserve-right {
+        display: none; } }
 
 .footer {
   border-top: 2px solid #d3ab55;
@@ -646,6 +793,9 @@ body {
     margin-bottom: 2.5rem; }
     .footer-header img {
       width: 300px; }
+      @media (max-width: 600px) {
+        .footer-header img {
+          width: 200px; } }
   .footer .main-name {
     font-size: 20px;
     line-height: 2rem;
@@ -655,6 +805,9 @@ body {
     width: 500px;
     justify-content: space-between;
     margin-bottom: 2.5rem; }
+    @media (max-width: 600px) {
+      .footer .social-media {
+        width: 80vw; } }
     .footer .social-media-item {
       list-style: none; }
     .footer .social-media-link {
@@ -668,6 +821,9 @@ body {
     font-size: 20px;
     color: #ffffff;
     font-family: "Nunito", san-serif; }
+    @media (max-width: 600px) {
+      .footer-copyright-paragraph {
+        font-size: 18px; } }
     .footer-copyright-paragraph_brand {
       color: #d3ab55;
       font-family: "Dancing Script", cursive; }

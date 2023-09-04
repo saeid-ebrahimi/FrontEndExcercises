@@ -6,6 +6,10 @@
   top: 10%;
   right: 5%;
   z-index: 50;
+  @media (max-width: 1000px) {
+    width: 30px;
+    height: 30px;
+  }
   .menu{
     @extend %fullSpace;
     @include flex-center;
@@ -18,6 +22,9 @@
       background-color: $primary-color;
       transition: all .6s .6s;
       transform-origin: right;
+      @media (max-width: 1000px) {
+        height: 3px;
+      }
     }
   }
 }
@@ -27,6 +34,12 @@
   img{
     display: block;
     width: 600px;
+    @media (max-width: 1600px) {
+      width: 450px;
+    }
+    @media (max-width: 1300px){
+      width: 300px;
+    }
   }
 }
 .main-name{
@@ -34,7 +47,13 @@
   font-size: $primary-size;
   line-height: 1rem;
   color: $secondary-color;
-  @include text-typography
+  @include text-typography;
+  @media (max-width: 1600px){
+    font-size: 60px;
+  }
+  @media (max-width: 1300px){
+    font-size: 45px;
+  }
 }
 .sub-name{
   font-family: $dancingScript-font;
@@ -48,6 +67,18 @@
   font-weight: 300;
   color: $primary-color;
   margin-bottom: 40px;
+  @media (max-width: 1600px){
+    font-size: 80px;
+  }
+  @media (max-width: 1300px){
+    font-size: 70px;
+  }
+  @media (max-width: 800px){
+    font-size: 55px;
+  }
+  @media (max-width: 600px){
+    font-size: 45px;
+  }
 }
 .sub-heading{
   font-family: $dancingScript-font;
@@ -55,6 +86,17 @@
   font-weight: 300;
   color: $secondary-color;
   margin-bottom: 40px;
+  @media (max-width: 1600px) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 1300px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 600px){
+    font-size: 22px;
+  }
 }
 .main-btn{
   width: 400px ;
@@ -72,12 +114,33 @@
     color: $secondary-color;
     border: 2px solid $secondary-color;
   }
+  @media (max-width: 1600px) {
+    font-size: 30px;
+    padding: 1rem 2.5rem;
+    width: 300px;
+  }
+  @media (max-width: 1300px) {
+    font-size: 25px;
+    padding: 1rem 2rem;
+    width: 250px;
+  }
+  @media (max-width: 600px){
+    font-size: 20px;
+    padding: 1rem 1.5rem;
+    width: 200px;
+  }
 }
 .card{
   position: relative;
   width: 30%;
   height: 30vw;
   overflow: hidden;
+  @media (max-width: 800px){
+    width: 45%;
+  }
+  @media (max-width: 600px){
+    width: 75%;
+  }
   &:hover .card-overlay{
     left: 50%;
   }
@@ -97,12 +160,16 @@
         font-family: $nunito-font;
         font-size: $secondary-size;
         @include text-typography;
+        @media (max-width: 1000px) {
+          font-size: 30px;
+        }
       }
       &-description{
         padding-top: 2rem;
         font-family: $josefinSans-font;
         font-size: $text-size;
         @include text-typography;
+
       }
     &-btn{
       margin-top: 2rem;
@@ -115,6 +182,10 @@
       border: 1px solid $text-color;
       border-radius: 1rem;
       cursor: pointer;
+      @media (max-width: 1000px) {
+        width: 130px;
+        height: 40px;
+      }
     }
   }
     &-img{
