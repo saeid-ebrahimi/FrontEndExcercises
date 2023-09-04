@@ -1,0 +1,15 @@
+body {
+  color: #606060; }
+
+.nav {
+  background-color: #d8eeff; }
+
+.banner h1 {
+  color: #560909;
+  font-size: 3.5rem;
+  text-align: center; }
+
+.footer h3 {
+  color: #383838;
+  font-size: 1.5rem;
+  text-align: center; }

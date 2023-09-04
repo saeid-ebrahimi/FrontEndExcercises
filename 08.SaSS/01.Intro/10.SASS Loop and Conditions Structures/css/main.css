@@ -1,0 +1,40 @@
+p {
+  font-size: 30px;
+  padding: 30px;
+  background-color: #61aff4; }
+
+.paragraph-1 {
+  color: whitesmoke;
+  background-color: #515151; }
+
+.paragraph-2 {
+  color: whitesmoke;
+  background-color: darkblue; }
+
+.paragraph-3 {
+  color: whitesmoke;
+  background-color: darkred; }
+
+.paragraph-4 {
+  color: whitesmoke;
+  background-color: darkgreen; }
+
+.paragraph-5 {
+  color: whitesmoke;
+  background-color: #717102; }
+
+.paragraph-red {
+  border: solid 3px red; }
+
+.paragraph-green {
+  color: #d8eeff;
+  border: solid 3px green; }
+
+.paragraph-blue {
+  border: dotted 5px purple; }
+
+.paragraph-yellow {
+  border: solid 3px yellow; }
+
+.paragraph-orange {
+  border: solid 3px orange; }

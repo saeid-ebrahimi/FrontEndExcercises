@@ -1,0 +1,34 @@
+$colors: (
+  1:#515151,
+  2:darkblue,
+  3:darkred,
+  4:darkgreen,
+  5: #717102
+);
+p{
+  font-size: 30px;
+  padding: 30px;
+  background-color: #61aff4;
+}
+@for $i from 1 to 6{
+  .paragraph-#{$i}{
+     color: whitesmoke;
+     background-color: map-get($map: $colors, $key:$i);
+  }
+}
+$eachColors: red green blue yellow orange;
+@each $color in $eachColors{
+  .paragraph-#{$color}{
+    @if($color == blue){
+      border: dotted 5px purple;
+    }@else if($color == green){
+      color: #d8eeff;
+      border: solid 3px $color;
+    }
+    @else{
+      border: solid 3px $color;
+    }
+    //background-color: $color;
+
+  }
+}
