@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+}
+
+body{
+  font-family: var(--font-shabnam);
+  font-size: var(--font-size-default);
+  position: relative;
+}
+
+p,h1,h2,h3,h4,h5,h6{
+  overflow-wrap: break-word;
+  font-size: inherit;
+}
+
+button,
+input,
+textarea{
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button{
+  cursor: pointer;
+}
+
+img,
+video,
+canvas,
+svg{
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 75em) {
+
+  html {
+      font-size: 50%;
+  }
+
+}

@@ -1,0 +1,14 @@
+.u-container{
+    margin: 0 auto;
+    width: 85%;
+    height: 100%;
+}
+
+.u-title{
+    font-size: 4.2rem;
+}
+
+.u-text{
+    font-weight: lighter;
+    font-size: 1.4rem;
+}

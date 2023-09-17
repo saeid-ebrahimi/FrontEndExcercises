@@ -1,0 +1,28 @@
+.alert{
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 5px;
+    font-weight: lighter;
+}
+
+.alert__danger{
+    background-color: var(--danger);
+    color: var(--white);
+}
+
+.alert__success{
+    background-color: var(--teal);
+}
+
+.alert__info{
+    background-color: #d9edf7 ;
+    color: #303030;
+}
+
+.alert a{
+    font-weight: bold;
+    font-size: 2rem;
+    color: #31708f;
+}

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="قالب فروش دوره برای سایت های آموزشی و فروش دوره ها و محصولات سایت">
+        <meta name="keywords" content="فروش دوره، سئو، برنامه نویسی، آموزش، جاوا اسکریپت">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="assets/styles/libraries/swiper.css">
+        <link rel="stylesheet" href="assets/styles/cart.css">
+        <title>سبد خرید</title>
+    </head>
+</head>
+
+<body dir="rtl" id="top-body">
+        <!-- Mobile Menu -->
+        <aside class="menu-mobile">
+            <div class="icon__close">
+                <span>
+                    <i class="fa fa-times-circle"></i>
+                </span>
+            </div>
+            <div class="menu-mobile__wrapper">
+                <div class="menu-mobile__content">
+                    <div class="menu-mobile__search">
+                        <input type="text" name="" id="" placeholder="جستجو کنید ...">
+                        <span>
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                    <ul class="menu-mobile__list">
+                        <li class="menu-mobile__item">
+                            <a href="/index" class="menu-mobile__link">
+                                <span>صفحه اصلی</span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile__item parent-item-submenu">
+                            <a href="#" class="menu-mobile__link">
+                                <span>دوره ها</span>
+                                <span><i class="fa fa-arrow-down"></i></span>
+                            </a>
+                            <ul class="menu-mobile__submenu--list">
+                                <li class="menu-mobile__submenu--item">
+                                    <a href="/cart" class="">سبد خرید</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-mobile__item parent-item-submenu">
+                            <a href="#" class="menu-mobile__link">
+                                <span>صفحات</span>
+                                <span><i class="fa fa-arrow-down"></i></span>
+                            </a>
+                            <ul class="menu-mobile__submenu--list ">
+                                <li class="menu-mobile__submenu--item">
+                                    <a href="/blog" class="">بلاگ</a>
+                                </li>
+                                <li class="menu-mobile__submenu--item">
+                                    <a href="/product" class="">محصول</a>
+                                </li>
+                                <li class="menu-mobile__submenu--item">
+                                    <a href="/courses" class="">محصولات</a>
+                                </li>
+                                <li class="menu-mobile__submenu--item">
+                                    <a href="/article" class="">جزئیات مقاله</a>
+                                </li>
+            
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        
+    <!-- Header -->
+    <header class="header-mini">
+        <div class="u-container">
+            <nav class="top-nav">
+                <div class="top-nav__right">
+                    <div class="top-nav__right--contact">
+                        <div class="top-nav__img">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <p class="">
+                            <span>تماس پشتیبانی</span>
+                            <span>09901394741</span>
+                        </p>
+                    </div>
+                    <div class="top-nav__right--contact">
+                        <div class="top-nav__img">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <p class="">
+                            <span>پشتیبانی ایمیل</span>
+                            <span>mehdiilkhaninasab7@gmail.com</span>
+                        </p>
+                    </div>
+                    <div class="menu__login-submit">
+                        <a href="#">
+                            <svg class="icon icon-log-out">
+                                <use xlink:href="./assets/icons/defs.svg#icon-log-out"></use>
+                            </svg>
+                            <span>ورود</span>
+                            <span>/</span>
+                            <span>ثبت نام</span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="top-nav__left">
+                    <a href="#" class="">بلاگ</a>
+                    <a href="#" class="">فروشگاه</a>
+                </div>
+            </nav>
+            <nav class="menu">
+                <div class="menu__logo">
+                    <img src="assets/images/logo-1.png" alt="">
+                </div>
+                <div class="menu__details">
+                    <div class="menu__right">
+                        <div class="menu__icon">
+                            <svg class="icon icon-menu">
+                                <use xlink:href="./assets/icons/defs.svg#icon-menu"></use>
+                            </svg>
+                        </div>
+                        <p class="">دسته بندی ها</p>
+                        <ul class="menu__category--subMenu-list">
+                            <li class="menu__category-subMeny-item subMneu__item">
+                                <a href="#" class="">
+                                    <span>چند رسانه ای</span>
+                                    <i class="fa fa-arrow-left"></i>
+                                </a>
+                                <ul>
+                                    <li><a href="">انیمیشن و سه بعدی</a></li>
+                                    <li><a href="">فیلم صدا</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu__category-subMeny-item">
+                                <a href="#" class="">زبان خارجی</a>
+                            </li>
+                            <li class="menu__category-subMeny-item">
+                                <a href="#" class="">سبک زندگی</a>
+                            </li>
+                            <li class="menu__category-subMeny-item">
+                                <a href="#" class="">طراحی</a>
+                            </li>
+                            <li class="menu__category-subMeny-item subMneu__item">
+                                <a href="#" class="">
+                                    <span>فناوری اطلاعات</span>
+                                    <i class="fa fa-arrow-left"></i>
+                                </a>
+                                <ul>
+                                    <li><a href="">برنامه نویسی</a></li>
+                                    <li><a href="">شبکه و امنیت</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu__category-subMeny-item">
+                                <a href="#" class="">کسب کار</a>
+                            </li>
+                        </ul>
+                        <div class="menu__logo">
+                            <img src="assets/images/logo-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__left">
+                    <ul class="menu__list">
+                        <li>
+                            <a href="index.html" class="">
+                                <span>صفحه اصلی</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="">
+                                <span>دوره ها</span>
+                                <span><i class="fa fa-arrow-down"></i></span>
+                            </a>
+                            <ul class="">
+                                <li><a href="cart.html">سبد خرید</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="">
+                                <span>صفحات</span>
+                                <span><i class="fa fa-arrow-down"></i></span>
+                            </a>
+                            <ul class="">
+                                <li><a href="blog.html">بلاگ</a></li>
+                                <li><a href="courses.html">دوره ها</a></li>
+                                <li><a href="product.html">محصول</a></li>
+                                <li><a href="article.html">جزئیات مقاله</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="menu__baskit-search">
+                        <div class="menu__search">
+                            <a href="#" class=""><i class="fa fa-search"></i></a>
+                        </div>
+                        <div class="menu__baskit">
+                            <a href="#" class="">
+                                <i class="fa fa-shopping-bag"></i>
+                                <span>0</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="menu__login-submit">
+                        <a href="#">
+                            <svg class="icon icon-log-out">
+                                <use xlink:href="./assets/icons/defs.svg#icon-log-out"></use>
+                            </svg>
+                            <span>ورود</span>
+                            <span>/</span>
+                            <span>ثبت نام</span>
+                        </a>
+
+                    </div>
+                </div>
+                </div>
+            </nav>
+            <div class="landing landing-mini">
+                    <div class="checkout-steps">
+                        <div class="checkout-steps__wrapper">
+                            <div class="checkout__line">
+                                <div class="checkout-line--inner"></div>
+                            </div>
+                            <div class="checkout__circle circle1">
+                                <div class="checkout__circle--inner">1</div>
+                                <p class="active">سبد خرید</p>
+                            </div>
+                            <div class="checkout__circle circle2">
+                                <div class="checkout__circle--inner">2</div>
+                                <p class="">پرداخت</p>
+                            </div>
+                            <div class="checkout__circle circle3">
+                                <div class="checkout__circle--inner">3</div>
+                                <p class="">تکمیل سفارش</p>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="cart">
+        <div class="u-container">
+            <div class="alert alert__danger">
+                <p class="">
+                    لطفا یک کد تخفیف وارد کنید.   
+                </p>
+            </div>
+
+            <div class="alert alert__success">
+                <p class="">
+                    با موفقیت ثبت شد.  
+                </p>
+            </div>
+            <div class="alert alert__info">
+                <p class="">
+                    قبلا ثبت نام کرده‌اید؟ برای ورود <a href="" class="">اینجا</a> را کلیک کنید
+                </p>
+            </div>
+            <div class="cart__wrapper">
+                <div class="cart__top">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="th-img">عکس</th>
+                                <th>نام محصول</th>
+                                <th>قیمت</th>
+                                <th>تعداد</th>
+                                <th>مجموع</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td__remove-icon">
+                                   <a href="" class=""><span> ×</span></a>
+                                </td>
+                                <td class="td__img-courses">
+                                    <img src="assets/images/golden-webmasters.png" alt="">
+                                </td>
+                                <td class="td__name-course">
+                                    <a href="#" class="">دوره آموزش افزایش سرعت سایت</a>
+                                </td>
+                                <td class="td__price-courses">
+                                    <span>139,000</span>
+                                    <span>تومان</span>
+                                </td>
+                                <td class="td__count-course">1</td>
+                                <td class="td__price-total">
+                                    <span>139,000</span>
+                                    <span>تومان</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td__remove-icon">
+                                    <a href="" class=""><span> ×</span></a>
+                                </td>
+                                <td class="td__img-courses">
+                                    <img src="assets/images/google-analytics-1-500x500.png" alt="">
+                                </td>
+                                <td class="td__name-course">
+                                    <a href="#" class="">دوره آموزش گوگل آنالیتیکس</a>
+                                </td>
+                                <td class="td__price-courses">
+                                    <span>119,000</span>
+                                    <span>تومان</span>
+                                </td>
+                                <td class="td__count-course">1</td>
+                                <td class="td__price-total">
+                                    <span>119,000</span>
+                                    <span>تومان</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cart__bottom">
+                    <form action="" class="cart__right">
+                        <input type="text" placeholder="کد تخفیف">
+                        <button class="discount-btn">اعمال کد تخفیف</button>
+                    </form>
+                    <div class="cart__left">
+                        <div class="cart-subtotal">
+                            <span>جمع جز</span>
+                            <span>158,000</span>
+                        </div>
+                        <div class="cart-total">
+                            <span>مجموع</span>
+                            <span>158,000</span>
+                        </div>
+                        <div class="cart__btns">
+                            <button class="update-cart">بروزرسانی سبد خرید</button>
+                            <button class="checkout-btn">پرداخت نهایی</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="u-container">
+            <div class="footer__wrapper">
+                <div class="footer__top">
+                    <div class="footer__right">
+                        <div class="footer__title">
+                            <h3>معرفی گروه طراحی و توسعه</h3>
+                        </div>
+                        <div class="footer__desc">
+                            <p class="">گروه وردپرس من از سال 1393 فعالیت خود را در زمینه طراحی و توسعه نرم افزارهای تحت
+                                وب با توجه به استانداردها و متدولوژی های روز دنیا و مد نظر قرار دادن ارزش ها و باورهای
+                                حرفه ای و نیز مطالعات کیفی و کمی در زمینه سیستم های یکپارچه.</p>
+                        </div>
+                        <div class="footer__contact">
+                            <p class="footer__adress">
+                                <span><i class="fa fa-map-marker-alt"></i></span>
+                                <span>تهران ، یوسف آباد ، خیابان چهلم ، پلاک 10</span>
+                            </p>
+                            <p class="footer__tel">
+                                <span><i class="fa fa-mobile"></i></span>
+                                <span>09901394741</span>
+                            </p>
+                            <p class="footer__email">
+                                <span><i class="fa fa-envelope"></i></span>
+                                <span>mehdiilkhaninasab7@gmail.com</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer__left">
+                        <div class="">
+                            <div class="footer__title">
+                                <h3>فهرست سفارشی</h3>
+                            </div>
+                            <ul class="footer__list">
+                                <li><a href="#" class="">بلاگ</a></li>
+                                <li><a href="cart.html" class="">سبد خرید</a></li>
+                                <li><a href="#" class="">لیست سفارشی</a></li>
+                                <li><a href="#" class="">لورم اپیسوم</a></li>
+                                <li><a href="login-register.html" class="">حساب کاربری من</a></li>
+                                <li><a href="#" class="">فروشگاه</a></li>
+                                <li><a href="#" class="">منوی دلخواه</a></li>
+                                <li><a href="#" class="">منوی دلخواه</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <div class="footer__title">
+                                <h3>منوی خدمات</h3>
+                            </div>
+                            <ul class="footer__list">
+                                <li><a href="#" class="">بلاگ</a></li>
+                                <li><a href="cart.html" class="">سبد خرید</a></li>
+                                <li><a href="#" class="">لیست سفارشی</a></li>
+                                <li><a href="#" class="">لورم اپیسوم</a></li>
+                                <li><a href="login-register.html" class="">حساب کاربری من</a></li>
+                                <li><a href="#" class="">فروشگاه</a></li>
+                                <li><a href="#" class="">منوی دلخواه</a></li>
+                                <li><a href="#" class="">منوی دلخواه</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="">
+                        <ul class="social-links">
+                            <li>
+                                <a href="" target="_blank" class="Facebook" title="Facebook">
+                                    <i class="fa fa-telegram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="Twitter" title="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="Instagram" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="Vimeo" title="Vimeo">
+                                    <i class="fab fa-vimeo-v"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="Behance" title="Behance">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="Foursquare" title="Foursquare">
+                                    <i class="fab fa-foursquare"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="" title="">
+                                    <i class="fab fa-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="moveUp__box">
+                        <a href="#top-body" class=""><span><i class="fa fa-angle-up"></i></span></a>
+
+                    </div>
+                    <div class="copy-right">
+                        <p class="">
+                            این وبسایت صرفا جهت نمونه کار است.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/libraries/swiper.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/spa.js" type="module"></script>
+</body>
+
+</html>

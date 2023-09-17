@@ -1,0 +1,233 @@
+.article-page {
+    width: 100%;
+    height: auto;
+    background-color: #f9f9f9;
+    padding: 3rem 0;
+}
+
+.article-page__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.article-page__left {
+    width: calc(25% - 1rem);
+    height: 100%;
+}
+
+.article-page__right {
+    width: calc(75% - 1rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+.article-page__description {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 1px 7px -3px rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.article-page__img{
+    width: 100%;
+    height: 48rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.article-page__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-page__content{
+    text-align: justify;
+    color: #666;
+    line-height: 3rem;
+}
+
+.article-page__author {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 1px 7px -3px rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.article-apge__author--right{
+    width: calc(80% - 0.5rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    color: #666;
+}
+
+.article-apge__author--about{
+    text-align: right;
+
+    font-size: 1.5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+    
+}
+
+.article-apge__author--right a{
+    color: var(--yellow );
+}
+
+
+.article-apge__author--left{
+    width: calc(20% - 0.5rem);
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.article-apge__author--left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.article-page__comment {
+    width: 100%;
+    height: 50rem;
+}
+
+.article-page__send-comment{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #666;
+}
+
+.article-page__title{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.article-page__textarea textarea{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.article-page__name-email{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.article-page__name-email > div{
+    width: calc(50% - 1rem);
+    height: 100%;
+}
+.article-page__name-email input{
+    width: 100%;
+    height: 100%;
+    padding: 1rem ;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    outline: none;
+}
+
+.article-page__policy{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.article-page__send-comment button{
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--yellow);
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 75em) {
+
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 62em) {
+
+    .article-page__wrapper{
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .article-page__left {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .article-page__right {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 48em) {
+
+    .article-page__img{
+        height: auto;
+    }
+    
+
+}
+
+@media only screen and (max-width: 37.5em) {
+
+    .article-page__article{
+        width: 100%;
+    }
+
+
+    .article-page__author {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+
+    }
+
+}

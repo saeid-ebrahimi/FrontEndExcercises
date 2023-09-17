@@ -1,0 +1,241 @@
+.aboutus-page{
+    width: 100%;
+    height: auto;
+    padding: 5rem 0;
+}
+
+.aboutus-page__wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.aboutus-page__introduc{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aboutus-page__introduc h2{
+    font-size: 2.5rem;
+}
+
+.aboutus-page__introduc p{
+    line-height: 3rem;
+    text-align: justify;
+}
+
+.aboutus-page__profit{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    text-align: center;
+}
+
+.aboutus-page__profit h2{
+    font-size: 2rem;
+}
+
+.aboutus-page__profit-list{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.aboutus-page__profit-item{
+    width: calc(100%/3 - 2rem);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0px 0px 19px 0px rgba(32.99999999999999, 35, 41.99999999999999, 0.08);
+    padding: 3rem;
+    border-radius: 4px;
+}
+
+.aboutus-page__profit-icon{
+    width: 7rem;
+    height: 7rem;
+
+}
+.aboutus-page__profit-icon svg{
+    width: 100%;
+    height: 100%;
+}
+
+.aboutus-page__profit-item h3{
+    font-size: 1.8rem;
+}
+
+.aboutus-page__profit-item p{
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: #9b9b9b;
+}
+
+.aboutus-page__story{
+    width: 100%;
+    height: auto;
+    padding: 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #34246b;
+    color: #fff;
+}
+
+.aboutus-page__story h2{
+    font-size: 2.5rem;
+}
+
+.aboutus-page__story p{
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+
+.aboutus-page__students{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.aboutus-page__students-title{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aboutus-page__students-title h2{
+    font-size: 2.5rem;
+}
+
+.aboutus-page__comments{
+    width: 100%;
+    height: auto;
+
+    position: relative;
+}
+
+.student-comment-swiper{
+    overflow-x: hidden;
+    padding: 1rem;
+}
+
+
+.student-comment__box{
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    box-shadow: 0px 0px 20px -5px rgb(216 214 222);
+}
+
+
+.student-comment__box-top{
+    padding: 1rem 0 1rem;
+    text-align: justify;
+    border-bottom: 1px dashed #cacaca;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+
+}
+
+.student-comment__box-bottom-right{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.student-comment__box-img{
+    width: 15%;
+    height: 100%;
+}
+
+.student-comment__box-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+.student-comment__box-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+
+.student-comment__box-text p{
+    font-size: 1.3rem;
+}
+
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--yellow);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.swiper-rtl .swiper-button-prev{
+    right: -1.5rem;
+}
+.swiper-rtl .swiper-button-next{
+    left: -1.5rem;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    display: none;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -2.5rem
+}
+
+.swiper-pagination-bullet{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 5px;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--yellow);
+    width: 2.5rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 75em) {
+
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 62em) {}
+
+@media only screen and (max-width: 48em) {
+    .aboutus-page__profit-item{
+        width: calc(100%/2 - 1.5rem);
+    }
+    
+}
+
+@media only screen and (max-width: 37.5em) {
+    .courses-page .card {
+        width: 80% ;
+    }
+}

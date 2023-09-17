@@ -1,0 +1,336 @@
+.checkout-steps {
+    margin-top: 2rem;
+    width: 50rem;
+    height: 10rem;
+
+}
+
+.checkout-steps__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.checkout__line {
+    width: 100%;
+    height: 5px;
+    background-color: var(--light);
+
+}
+
+.checkout-line--inner {
+    width: 50%;
+    height: 100%;
+    background-color: var(--yellow);
+    transform: translateX(-100%);
+}
+
+
+.checkout__circle {
+    width: 6rem;
+    height: 6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    padding: 0.5rem;
+}
+
+.circle1 {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.circle2 {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: var(--yellow);
+}
+
+.circle3 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.checkout__circle p {
+    width: max-content;
+    position: absolute;
+    top: 100%;
+    right: -1rem;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.548);
+}
+
+p.active {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.checkout__circle--inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+
+.login-form__box{
+    width: 100%;
+    height: 35rem;
+    background-color: #f9f9f9;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    border-radius: 5px;
+    color: #666;
+}
+
+.login-form__title{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-weight: lighter;
+}
+
+.login-form__title h2{
+    font-size: 2.5rem;
+}
+
+.login-form__form{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-form__input-box{
+    width: 50%;
+}
+
+.login-form__form input{
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid #e6e6e6;
+    outline: none;
+}
+
+.login-form__input-box input:focus{
+    border: 1px solid var(--yellow);
+}
+
+.login-form__remmber-forget{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form__forget a{
+    color: var(--yellow);
+}
+
+.login-form__wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.login-form__btn{
+    border: none;
+    outline: none;
+    padding: 1rem 0;
+    background-color: var(--yellow);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+.checkout__wrapper {
+    display: flex;
+    align-items: start;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
+    gap: 3rem;
+}
+
+.checkout__right {
+    width: calc(60% - 1.5rem);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.checkout__title {
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.checkout__infos-person {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.names-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.names-info .input__boxes{
+    width: 50%;
+}
+
+.input__boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input__boxes label{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input__boxes label span:last-child{
+    color: var(--red);
+}
+
+.input__boxes input {
+    width: 100%;
+    border-radius: 0;
+    padding: 0 12px;
+    min-height: 50px;
+    line-height: 1.7;
+    border: 1px solid #e6e6e6;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    placeholder: #afafaf;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+}
+
+.checkout__left {
+    width: calc(40% - 1.5rem);
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.checkout-review{
+    color: #7f7e83;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    border-radius: 5px;
+}
+
+.checkout-review__list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.checkout-review__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.submit-checkout{
+    width: 100%;
+    padding: 1.5rem 0;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: var(--yellow);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media only screen and (max-width: 75em) {
+
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 62em) {
+    .checkout__wrapper{
+        flex-direction: column;
+    }
+
+    .checkout__right {
+        width: 100%;
+    }
+
+    .checkout__left {
+        width: 100%;
+    }
+
+    .courses-page .card {
+        width: calc(33% - 1rem);
+    }
+    
+}
+
+@media only screen and (max-width: 48em) {
+    .login-form__box{
+        height: 50rem;
+    }
+
+    .login-form__form{
+        flex-direction: column;
+    }
+    
+    .login-form__input-box{
+        width: 100%;
+    }
+    
+    .checkout-steps {
+        width: 35rem ;
+    
+    }
+
+}
+
+@media only screen and (max-width: 37.5em) {
+   
+}

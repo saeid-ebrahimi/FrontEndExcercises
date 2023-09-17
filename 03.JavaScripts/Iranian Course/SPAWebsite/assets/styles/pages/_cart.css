@@ -1,0 +1,316 @@
+.checkout-steps {
+    margin-top: 2rem;
+    width: 50rem;
+    height: 10rem;
+
+}
+
+.checkout-steps__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.checkout__line {
+    width: 100%;
+    height: 5px;
+    background-color: var(--light);
+
+}
+
+.checkout-line--inner {
+    width: 50%;
+    height: 100%;
+    background-color: var(--yellow);
+}
+
+
+.checkout__circle {
+    width: 6rem;
+    height: 6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    padding: 0.5rem;
+}
+
+.circle1 {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: var(--yellow);
+}
+
+.circle2 {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.circle3 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.checkout__circle p {
+    width: max-content;
+    position: absolute;
+    top: 100%;
+    right: -1rem;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.548);
+}
+
+p.active {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.checkout__circle--inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.cart {
+    width: 100%;
+    height: auto;
+    padding: 4rem 0;
+}
+
+.cart__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+.cart__top {
+    width: 100%;
+    min-height: 20rem;
+}
+
+table,
+td,
+th {
+    border-bottom: 1px solid #ddd;
+    color: #7f7e83
+}
+
+th {
+    padding: 1rem 0;
+}
+
+td {
+    padding: 2rem 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.td__remove-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.td__remove-icon span {
+    font-size: 2rem;
+    background-color: var(--red);
+    width: 3rem;
+    height: 3rem;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.td__img-courses img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+}
+
+.td__name-course {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.td__name-course:hover {
+    color: var(--yellow);
+}
+
+.cart__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cart__right {
+    width: 40%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.cart__right input {
+    outline: none;
+    border: 1px solid #e6e6e6;
+    padding: 1rem 2rem;
+    width: 70%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.cart__right input:focus {
+    border: 1px solid var(--yellow);
+}
+
+.cart__right button {
+    width: 30%;
+    height: 100%;
+    background-color: #333;
+    color: var(--light);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.cart__right button:hover {
+    filter: brightness(90%);
+}
+
+.cart__left {
+    width: 40%;
+    height: 25rem;
+    background-color: #ececec;
+    padding: 30px 20px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart__left > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #303030;
+}
+
+.cart__btns button{
+    width: 45%;
+    padding: 1.5rem 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--light);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.update-cart{
+    background-color: #333;
+}
+
+.checkout-btn{
+    background-color: var(--yellow);
+
+}
+
+/* Responsive */
+@media only screen and (max-width: 75em) {
+
+    html {
+      font-size: 50%;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 62em) {
+    .cart__right {
+      width: 50%;
+    }
+  
+  
+    .cart__right input {
+      width: 60%;
+    }
+  
+    .cart__right button {
+      width: 40%;
+      height: 100%;
+      background-color: #333;
+      color: var(--light);
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 48em) {
+    .cart__bottom {
+      flex-direction: column;
+    }
+  
+    .cart__right,
+    .cart__left {
+      width: 100%;
+    }
+    .cart__btns button{
+        font-size: 2rem !important;
+    }
+
+    table .th-img,
+    table .td__img-courses{
+        display: none;
+    }
+
+    .checkout-steps {
+        width: 35rem ;
+    
+    }
+
+  }
+  
+  @media only screen and (max-width: 37.5em) {
+    .cart__btns button{
+        font-size: 1.6rem !important;
+    }
+
+    .td__name-course{
+        padding: 0 2rem ;
+        line-height: 3rem;
+    }
+  }

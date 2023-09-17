@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="قالب فروش دوره برای سایت های آموزشی و فروش دوره ها و محصولات سایت">
+    <meta name="keywords" content="فروش دوره، سئو، برنامه نویسی، آموزش، جاوا اسکریپت">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/styles/libraries/swiper.css">
+    <link rel="stylesheet" href="assets/styles/product.css">
+    <title>فروشگاه</title>
+</head>
+
+<body dir="rtl" id="top-body">
+
+        <!-- Mobile Menu -->
+        <aside class="menu-mobile">
+            <div class="icon__close">
+                <span>
+                    <i class="fa fa-times-circle"></i>
+                </span>
+            </div>
+            <div class="menu-mobile__wrapper">
+                <div class="menu-mobile__content">
+                    <div class="menu-mobile__search">
+                        <input type="text" name="" id="" placeholder="جستجو کنید ...">
+                        <span>
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                    <ul class="menu-mobile__list">
+                        <li class="menu-mobile__item">
+                            <a href="index.html" class="menu-mobile__link">
+                                <span>صفحه اصلی</span>
+                            </a>
+                        </li>
+                        <li class="menu-mobile__item parent-item-submenu">
+                            <a href="#" class="menu-mobile__link">
+                                <span>دوره ها</span>
+                                <span><i class="fa fa-arrow-down"></i></span>
+                            </a>
+                            <ul class="menu-mobile__submenu--list">
+                                <li class="menu-mobile__submenu--item">
+                                    <a href="cart.html" class="">سبد خرید</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-mobile__item parent-item-submenu">
+                            <a href="#" class="menu-mobile__link">
+                                <span>صفحات</span>
+                                <span><i class="fa fa-arrow-down"></i></span>
+                            </a>
+                            <ul class="menu-mobile__submenu--list ">
+                                <li class="menu-mobile__submenu--item">
+                                    <a href="blog.html" class="">بلاگ</a>
+                                </li>
+                                <li class="menu-mobile__submenu--item">
+                                    <a href="product.html" class="">محصول</a>
+                                </li>
+                                <li class="menu-mobile__submenu--item">
+                                    <a href="courses.html" class="">محصولات</a>
+                                </li>
+                                <li class="menu-mobile__submenu--item">
+                                    <a href="article.html" class="">جزئیات مقاله</a>
+                                </li>
+            
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        
+    <!-- Header -->
+    <header class="header-mini">
+        <div class="u-container">
+            <nav class="top-nav">
+                <div class="top-nav__right">
+                    <div class="top-nav__right--contact">
+                        <div class="top-nav__img">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <p class="">
+                            <span>تماس پشتیبانی</span>
+                            <span>09901394741</span>
+                        </p>
+                    </div>
+                    <div class="top-nav__right--contact">
+                        <div class="top-nav__img">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <p class="">
+                            <span>پشتیبانی ایمیل</span>
+                            <span>mehdiilkhaninasab7@gmail.com</span>
+                        </p>
+                    </div>
+                    <div class="menu__login-submit">
+                        <a href="#">
+                            <svg class="icon icon-log-out">
+                                <use xlink:href="./assets/icons/defs.svg#icon-log-out"></use>
+                            </svg>
+                            <span>ورود</span>
+                            <span>/</span>
+                            <span>ثبت نام</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="top-nav__left">
+                    <a href="#" class="">بلاگ</a>
+                    <a href="#" class="">فروشگاه</a>
+                </div>
+            </nav>
+            <nav class="menu">
+                <div class="menu__logo">
+                    <img src="assets/images/logo-1.png" alt="">
+                </div>
+                <div class="menu__details">
+                    <div class="menu__right">
+                        <div class="menu__icon">
+                            <svg class="icon icon-menu">
+                                <use xlink:href="./assets/icons/defs.svg#icon-menu"></use>
+                            </svg>
+                        </div>
+                        <p class="">دسته بندی ها</p>
+                        <ul class="menu__category--subMenu-list">
+                            <li class="menu__category-subMeny-item subMneu__item">
+                                <a href="#" class="">
+                                    <span>چند رسانه ای</span>
+                                    <i class="fa fa-arrow-left"></i>
+                                </a>
+                                <ul>
+                                    <li><a href="">انیمیشن و سه بعدی</a></li>
+                                    <li><a href="">فیلم صدا</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu__category-subMeny-item">
+                                <a href="#" class="">زبان خارجی</a>
+                            </li>
+                            <li class="menu__category-subMeny-item">
+                                <a href="#" class="">سبک زندگی</a>
+                            </li>
+                            <li class="menu__category-subMeny-item">
+                                <a href="#" class="">طراحی</a>
+                            </li>
+                            <li class="menu__category-subMeny-item subMneu__item">
+                                <a href="#" class="">
+                                    <span>فناوری اطلاعات</span>
+                                    <i class="fa fa-arrow-left"></i>
+                                </a>
+                                <ul>
+                                    <li><a href="">برنامه نویسی</a></li>
+                                    <li><a href="">شبکه و امنیت</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu__category-subMeny-item">
+                                <a href="#" class="">کسب کار</a>
+                            </li>
+                        </ul>
+                        <div class="menu__logo">
+                            <img src="assets/images/logo-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__left">
+                    <ul class="menu__list">
+                        <li>
+                            <a href="/" class="nav-link">
+                                صفحه اصلی
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="">
+                                <span>دوره ها</span>
+                                <span><i class="fa fa-arrow-down"></i></span>
+                            </a>
+                            <ul class="">
+                                <li><a href="/cart" class="nav-link">سبد خرید</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="">
+                                <span>صفحات</span>
+                                <span><i class="fa fa-arrow-down"></i></span>
+                            </a>
+                            <ul class="">
+                                <li><a href="/blog" class="nav-link">بلاگ</a></li>
+                                <li><a href="/courses" class="nav-link">دوره ها</a></li>
+                                <li><a href="/product" class="nav-link">محصول</a></li>
+                                <li><a href="/article" class="nav-link">جزئیات مقاله</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="menu__baskit-search">
+                        <div class="menu__search">
+                            <a href="#" class=""><i class="fa fa-search"></i></a>
+                        </div>
+                        <div class="menu__baskit">
+                            <a href="#" class="">
+                                <i class="fa fa-shopping-bag"></i>
+                                <span>0</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="menu__login-submit">
+                        <a href="#">
+                            <svg class="icon icon-log-out">
+                                <use xlink:href="./assets/icons/defs.svg#icon-log-out"></use>
+                            </svg>
+                            <span>ورود</span>
+                            <span>/</span>
+                            <span>ثبت نام</span>
+                        </a>
+
+                    </div>
+                </div>
+        </div>
+        </nav>
+        <div class="landing landing-mini">
+            <div class="u-container">
+                <!-- breadcrumb  -->
+                <div class="breadcrumb">
+                    <div class="breadcrumb__wrapper">
+                        <ul class="breabcrumb__list">
+                            <li class="breabcrumb__item"><a href="#" class="breabcrumb__link">خانه</a><span>></span>
+                            </li>
+                            <li class="breabcrumb__item"><a href="#" class="breabcrumb__link">حساب کاربری</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="landing__content">
+                    <h2 class="landing__title">دوره آموزش افزایش سرعت سایت</h2>
+                    <div class="landing__content--wrapper">
+                        <div class="landing__content--right">
+                            <img src="assets/images/google-analytics-1-500x500.png" alt="">
+                            <div class="pricess__box">
+                                <span>39,000</span>
+                                <span>تومان</span>
+                            </div>
+                        </div>
+                        <div class="landing__content--left">
+                            <div class="introduction-courses__left">
+                                <h3 class="introduction-courses__title">دوره‌ی جامع غیرحضوری صفر تا صد ارزهای دیجیتال
+                                </h3>
+                                <div class="introduction-courses__box">
+                                    <svg class="svg svg--full">
+                                        <use xlink:href="#svg_price-ticket">
+                                            <svg id="svg_price-ticket" viewBox="0 0 462 103.7">
+                                                <g id="Group_5101" transform="translate(-11249.401 1012)">
+                                                    <path
+                                                        d="M11709.9-971.2h1.4v-36.9c0-2.2-1.8-4-4-4h-454c-2.2 0-4 1.8-4 4v36.8h1c5.9.2 10.7 5.1 10.7 11s-4.7 10.8-10.7 11h-1v36.9c0 2.2 1.8 4 4 4h454c2.2 0 4-1.8 4-4v-37l-1.1.1h-.4c-6.1 0-11-4.9-11-11 .1-5.9 5.1-10.9 11.1-10.9zm-13 11c0 7 5.6 12.7 12.5 13v34.9c0 1.1-.9 2-2 2h-454c-1.1 0-2-.9-2-2v-34.9c6.5-.7 11.7-6.3 11.6-12.9 0-6.7-5.1-12.3-11.6-12.9v-34.9c0-1.1.9-2 2-2h454c1.1 0 2 .9 2 2v34.8c-6.9.2-12.5 5.9-12.5 12.9z">
+                                                    </path>
+                                                    <path
+                                                        d="M11479.9-927.7c-.6 0-1-.4-1-1v-9.1c0-.6.4-1 1-1s1 .4 1 1v9.1c0 .6-.4 1-1 1zm0-18.1c-.6 0-1-.4-1-1v-9.1c0-.6.4-1 1-1s1 .4 1 1v9.1c0 .5-.4 1-1 1zm0-18.1c-.6 0-1-.4-1-1v-9.1c0-.6.4-1 1-1s1 .4 1 1v9.1c0 .5-.4 1-1 1zm0-18.2c-.6 0-1-.4-1-1v-9.1c0-.6.4-1 1-1s1 .4 1 1v9.1c0 .6-.4 1-1 1z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </use>
+                                    </svg>
+                                    <div class="introduction-courses__box--right">
+                                        <svg class="icon icon-basket">
+                                            <use xlink:href="./assets/icons/defs.svg#icon-basket"></use>
+                                        </svg>
+                                        <p class="">
+                                            <span>219</span>
+                                            <span>فروش</span>
+                                        </p>
+                                    </div>
+                                    <div class="introduction-courses__box--left">
+                                        <span>119</span>
+                                        <span>هزار تومن</span>
+                                    </div>
+                                </div>
+                                <div class="introduction__btns">
+                                    <button class="see-lessons__btn">
+                                        <i class="fa fa-users"></i>
+                                        <span>مشاهده جلسات دوره</span>
+                                    </button>
+                                    <button class="buy-courses__btn">
+                                        <i class="fa fa-basket-shopping"></i>
+                                        <span>شرکت در دوره</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <div class="u-container">
+            <div class="product-page__wrapper">
+                <div class="product-page_btns-tab">
+                    <button class="active" data-tab="description">توضیحات</button>
+                    <button data-tab="lessons">جلسات دوره</button>
+                    <button data-tab="comment" class="">
+                        نظرات
+                        (0)
+                    </button>
+                </div>
+                <div class="product-page__infos">
+                    <div class="product-page__tab product-page__desc active" data-desc="description" id="description">
+                        <div class="desc__title">
+                            <h2 class="">
+                                درآمد میلیونی ماهانه با کسب‌و‌کار اینترنتی
+                            </h2>
+                            <p class="">
+                                وب‌مستران هوشمند یک دوره جامع است که با یادگیری آن به مباحث بازاریابی اینترنتی و ساخت ۰
+                                تا ۱۰۰ کسب‌وکار اینترنتی، مسلط می‌شوید.
+                                امروزه در ایران و جهان، راه‌اندازی کسب‌وکار آنلاین، قسمت جدایی‌ناپذیر هر شغلی، ؛ حتی
+                                کسب‌و‌کارهای سنتی شده است. پس اگر می‌خواهید تخصصی یاد بگیرید که در دنیای جدید
+                                کسب‌وکارها، محبوب و توانمند باشید؛ باید بر روی اصول راه‌اندازی کسب‌وکار اینترنتی مسلط
+                                شوید.
+                                فراموش نکنید: شما در این دوره آموزشی، مبلغ یک پروژه طراحی سایت را پرداخت و سرمایه‌گذاری
+                                می‌نمائید، و یاد می‌گیرید که چگونه هزاران بار بدون پرداخت هزینه برای خود و دیگران طراحی
+                                سایت و فروشگاه اینترنتی انجام دهید.
+                            </p>
+                        </div>
+                        <div class="desc__targets">
+                            <div class="desc__target--ok">
+                                <h4 class="desc__targets--title">
+                                    این دوره برای چه کسانی توصیه می شود؟
+                                </h4>
+                                <ul class="">
+                                    <li>برای تمام کسانی که به فکر راه‌اندازی کسب‌وکار آنلاین خود هستند.</li>
+                                    <li>افرادی که می‌خواهند سایت راه‌اندازی کنند و می‌خواهند آن را کامل نمایند.</li>
+                                    <li>صاحبان کسب‌وکاری که به فکر ورود قدرتمند به دنیای مجازی هستند.</li>
+                                    <li>افرادی که می‌خواهند در خانه بنشینند و کسب درآمد آنلاین داشته باشند.</li>
+                                </ul>
+                            </div>
+                            <div class="desc__target--not">
+                                <h4 class="desc__targets--title">
+                                    این دوره برای چه کسانی توصیه نمی شود؟
+                                </h4>
+                                <ul class="">
+                                    <li>کسانی که از درآمد کنونی خود رضایت کامل دارند.</li>
+                                    <li>کسانی که هیچ اعتقادی به درآمد آنلاین ندارند.</li>
+                                    <li>کسانی که علاقه دارند تا با روش‌های قدیمی، فعالیت نمایند.</li>
+                                    <li>کسانی که احساس می‌کنند به آموزش کسب‌وکار اینترنتی نیازی ندار</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="desc__properties">
+                            <div class="desc__property--item">
+                                <span class="desc__property__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="512"
+                                        viewBox="0 0 511.999 511.999" width="512">
+                                        <g>
+                                            <path
+                                                d="m239.075 30.17v71.712c5.581-.521 11.223-.802 16.925-.802 5.698 0 11.337.281 16.913.801v-71.711z"
+                                                fill="#cbe2ff"></path>
+                                            <path d="m255.994 30.17h-16.919v71.712c5.579-.521 11.219-.802 16.919-.802z"
+                                                fill="#9dc6fb"></path>
+                                            <path
+                                                d="m50.753 2.101c-7.491 4.325-10.058 13.904-5.733 21.396l8.71 15.086 5.443 1.503 21.685-13.392v-3.774l-8.71-15.086c-4.325-7.491-13.904-10.058-21.395-5.733z"
+                                                fill="#f9f6f9"></path>
+                                            <path
+                                                d="m60.129 19.204c-3.577-6.196-2.429-13.812 2.311-18.711-3.819-.971-8.004-.518-11.687 1.608-7.491 4.325-10.058 13.904-5.733 21.396l8.71 15.086 5.443 1.503 9.592-5.924z"
+                                                fill="#cbe2ff"></path>
+                                            <path
+                                                d="m461.247 2.101c-7.491-4.325-17.071-1.758-21.396 5.733l-8.71 15.086v7.25l21.685 10.559 5.443-2.147 8.71-15.086c4.326-7.491 1.759-17.07-5.732-21.395z"
+                                                fill="#f9f6f9"></path>
+                                            <path
+                                                d="m444.276 30.647 8.71-15.086c2.963-5.132 8.391-7.95 13.925-7.827-1.327-2.262-3.23-4.227-5.664-5.632-7.491-4.325-17.071-1.758-21.396 5.733l-8.71 15.086v7.25l13.135 6.396z"
+                                                fill="#cbe2ff"></path>
+                                            <path
+                                                d="m367.326 133.451 1.467 5.059 16.483 14.958h6.665l20.74-35.923-27.129-15.662z"
+                                                fill="#f9f6f9"></path>
+                                            <path
+                                                d="m378.318 147.154 21.412-37.086-14.178-8.185-18.226 31.568 1.467 5.059z"
+                                                fill="#cbe2ff"></path>
+                                            <path
+                                                d="m99.319 117.545 20.74 35.923h4.025l20.589-16.803v-3.214l-18.226-31.568z"
+                                                fill="#f9f6f9"></path>
+                                            <path d="m113.317 109.463-13.998 8.082 20.74 35.923h4.025l9.95-8.121z"
+                                                fill="#cbe2ff"></path>
+                                            <path
+                                                d="m383.741 477.692-11.497-23.286-4.91-1.091-35.627 21.29-.971 3.145 10.365 20.994c5.813 11.774 20.071 16.606 31.845 10.793 11.775-5.813 16.608-20.07 10.795-31.845z"
+                                                fill="#f9f6f9"></path>
+                                            <path
+                                                d="m358.88 482.479-9.193-18.619-17.981 10.745-.971 3.145 10.365 20.994c5.813 11.774 20.071 16.606 31.845 10.793 6.102-3.012 10.333-8.295 12.191-14.322-10.384 2.212-21.34-2.779-26.256-12.736z"
+                                                fill="#cbe2ff"></path>
+                                            <path
+                                                d="m139.756 454.406-11.497 23.286c-5.813 11.775-.98 26.032 10.794 31.845s26.032.981 31.845-10.793l10.365-20.993v-4.991l-36.833-19.96z"
+                                                fill="#f9f6f9"></path>
+                                            <path
+                                                d="m152.607 480.611 9.107-18.445-17.284-9.366-4.674 1.607-11.497 23.286c-5.813 11.775-.98 26.032 10.794 31.845 6.619 3.268 14.023 3.172 20.27.369-8.737-6.785-11.804-18.991-6.716-29.296z"
+                                                fill="#cbe2ff"></path>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="m256 492.504c-108.531 0-196.827-88.296-196.827-196.827s88.296-196.827 196.827-196.827 196.827 88.296 196.827 196.827-88.296 196.827-196.827 196.827z"
+                                                        fill="#ff636e"></path>
+                                                </g>
+                                            </g>
+                                            <path
+                                                d="m107.977 295.677c0-100.269 75.367-183.26 172.425-195.315-7.998-.993-16.14-1.512-24.402-1.512-108.531 0-196.827 88.296-196.827 196.827s88.296 196.827 196.827 196.827c8.262 0 16.405-.518 24.402-1.512-97.058-12.055-172.425-95.046-172.425-195.315z"
+                                                fill="#ff4654"></path>
+                                            <circle cx="256" cy="295.677" fill="#f9f6f9" r="162.988"></circle>
+                                            <path
+                                                d="m141.816 295.677c0-81.58 60.248-149.35 138.586-161.161-7.962-1.201-16.11-1.827-24.402-1.827-89.872 0-162.989 73.116-162.989 162.989s73.116 162.988 162.989 162.988c8.292 0 16.44-.627 24.402-1.827-78.338-11.812-138.586-79.581-138.586-161.162z"
+                                                fill="#cbe2ff"></path>
+                                            <g>
+                                                <path
+                                                    d="m255.994 157.018c-4.267 0-7.726-3.459-7.726-7.726v-15.572c0-4.267 3.459-7.726 7.726-7.726s7.726 3.459 7.726 7.726v15.572c0 4.267-3.459 7.726-7.726 7.726z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m255.994 465.362c-4.267 0-7.726-3.459-7.726-7.726v-15.572c0-4.268 3.459-7.726 7.726-7.726s7.726 3.459 7.726 7.726v15.572c0 4.267-3.459 7.726-7.726 7.726z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m176.11 172.767-7.786-13.486c-2.134-3.696-.867-8.421 2.828-10.554 3.695-2.134 8.421-.868 10.554 2.828l7.786 13.486c2.134 3.696.867 8.421-2.828 10.554s-8.421.868-10.554-2.828z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m330.282 439.801-7.786-13.486c-2.134-3.695-.868-8.421 2.828-10.554 3.695-2.132 8.421-.868 10.554 2.828l7.786 13.486c2.134 3.695.868 8.42-2.828 10.554-3.696 2.133-8.421.867-10.554-2.828z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m125.356 229.175-13.486-7.786c-3.695-2.134-4.962-6.859-2.828-10.554 2.133-3.696 6.859-4.961 10.554-2.828l13.486 7.786c3.695 2.134 4.962 6.859 2.828 10.554-2.131 3.695-6.856 4.962-10.554 2.828z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m392.391 383.347-13.486-7.786c-3.695-2.134-4.962-6.859-2.828-10.554 2.133-3.696 6.859-4.961 10.554-2.828l13.486 7.786c3.695 2.134 4.962 6.859 2.828 10.554-2.132 3.695-6.857 4.962-10.554 2.828z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m109.608 303.403h-15.573c-4.267 0-7.726-3.459-7.726-7.726 0-4.268 3.459-7.726 7.726-7.726h15.572c4.267 0 7.726 3.459 7.726 7.726.001 4.267-3.458 7.726-7.725 7.726z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m417.952 303.403h-15.572c-4.267 0-7.726-3.459-7.726-7.726 0-4.268 3.459-7.726 7.726-7.726h15.572c4.267 0 7.726 3.459 7.726 7.726.001 4.267-3.459 7.726-7.726 7.726z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m109.043 380.519c-2.134-3.695-.867-8.42 2.828-10.554l13.486-7.786c3.695-2.132 8.421-.868 10.554 2.828 2.134 3.695.867 8.42-2.828 10.554l-13.486 7.786c-3.697 2.134-8.421.867-10.554-2.828z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m376.077 226.347c-2.134-3.695-.867-8.42 2.828-10.554l13.486-7.786c3.696-2.132 8.42-.868 10.554 2.828 2.134 3.695.867 8.42-2.828 10.554l-13.486 7.786c-3.696 2.134-8.421.867-10.554-2.828z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m171.151 442.629c-3.696-2.134-4.962-6.859-2.828-10.554l7.786-13.486c2.134-3.696 6.859-4.961 10.554-2.828 3.696 2.134 4.962 6.859 2.828 10.554l-7.786 13.486c-2.133 3.695-6.857 4.961-10.554 2.828z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m325.324 175.595c-3.695-2.133-4.962-6.859-2.828-10.554l7.786-13.486c2.134-3.696 6.859-4.963 10.554-2.828 3.695 2.133 4.962 6.859 2.828 10.554l-7.786 13.486c-2.134 3.695-6.859 4.962-10.554 2.828z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m66.628 29.598c-44.177 25.505-59.367 82.195-33.861 126.371l160.232-92.51c-25.505-44.177-82.195-59.367-126.371-33.861z"
+                                                    fill="#ff636e"></path>
+                                            </g>
+                                            <path
+                                                d="m72.555 26.458c-1.997.969-3.975 2.013-5.928 3.14-44.176 25.505-59.366 82.195-33.861 126.371l28.064-16.203c-18.236-37.648-12.684-81.547 11.725-113.308z"
+                                                fill="#ff4654"></path>
+                                            <g>
+                                                <path
+                                                    d="m445.372 29.598c44.176 25.505 59.366 82.195 33.861 126.371l-160.233-92.51c25.506-44.177 82.196-59.367 126.372-33.861z"
+                                                    fill="#ff636e"></path>
+                                            </g>
+                                            <path
+                                                d="m449.042 31.836c-1.201-.769-2.422-1.518-3.67-2.238-44.176-25.506-100.866-10.316-126.372 33.861l26.229 15.143c23.611-34.386 64.154-51.565 103.813-46.766z"
+                                                fill="#ff4654"></path>
+                                            <g>
+                                                <path
+                                                    d="m281.033 0h-50.066c-4.628 0-8.38 3.752-8.38 8.38v17.078c0 4.628 3.752 8.38 8.38 8.38h50.066c4.628 0 8.38-3.751 8.38-8.38v-17.078c0-4.628-3.752-8.38-8.38-8.38z"
+                                                    fill="#f9f6f9"></path>
+                                            </g>
+                                            <path
+                                                d="m248.761 25.458v-17.078c0-4.628 3.752-8.38 8.38-8.38h-26.175c-4.628 0-8.38 3.752-8.38 8.38v17.078c0 4.628 3.752 8.38 8.38 8.38h26.175c-4.628 0-8.38-3.751-8.38-8.38z"
+                                                fill="#cbe2ff"></path>
+                                            <g>
+                                                <path
+                                                    d="m256 466.392c-94.132 0-170.715-76.583-170.715-170.715s76.582-170.714 170.715-170.714 170.715 76.582 170.715 170.714-76.583 170.715-170.715 170.715zm0-325.977c-85.612 0-155.262 69.65-155.262 155.262s69.65 155.263 155.262 155.263 155.262-69.651 155.262-155.263c0-85.611-69.651-155.262-155.262-155.262z"
+                                                    fill="#ff7f87"></path>
+                                            </g>
+                                            <path
+                                                d="m256 175.303c-8.534 0-15.453 6.918-15.453 15.453v80.962l.596.973h28.968l1.341-.973v-80.962c0-8.534-6.918-15.453-15.452-15.453z"
+                                                fill="#ff636e"></path>
+                                            <path
+                                                d="m256 190.756c0-5.716 3.112-10.695 7.726-13.368-2.275-1.318-4.908-2.084-7.726-2.084-8.534 0-15.453 6.918-15.453 15.453v80.962l.596.973h15.453l-.596-.974z"
+                                                fill="#ff4654"></path>
+                                            <path
+                                                d="m256 321.452-23.876-12.748h-1.489l-32.526 56.333c-4.268 7.391-1.735 16.841 5.656 21.109 7.39 4.268 16.841 1.736 21.109-5.655l32.52-56.322z"
+                                                fill="#6e60b8"></path>
+                                            <path
+                                                d="m214.086 366.859 29.916-51.813-11.879-6.343h-1.489l-32.526 56.333c-4.268 7.391-1.735 16.841 5.656 21.109 3.698 2.135 7.911 2.568 11.734 1.542-4.513-5.835-5.329-14.045-1.412-20.828z"
+                                                fill="#6353b2"></path>
+                                            <path
+                                                d="m265.991 268.962c-9.225 5.341-15.452 15.31-15.452 26.716 0 11.405 6.226 21.374 15.452 26.716 10.815-4.058 18.534-14.501 18.534-26.716.001-12.216-7.718-22.658-18.534-26.716z"
+                                                fill="#cbe2ff"></path>
+                                            <path
+                                                d="m251.876 295.677c0-11.366 6.683-21.197 16.325-25.779-3.701-1.759-7.838-2.747-12.201-2.747-15.73 0-28.526 12.797-28.526 28.526s12.797 28.526 28.526 28.526c4.363 0 8.5-.988 12.201-2.747-9.642-4.581-16.325-14.413-16.325-25.779z"
+                                                fill="#9dc6fb"></path>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="m19.607 163.567c-2.134-3.696-.868-8.421 2.828-10.554l173.17-99.98c3.696-2.135 8.42-.868 10.554 2.828s.868 8.421-2.828 10.554l-173.17 99.98c-3.695 2.134-8.421.868-10.554-2.828z"
+                                                        fill="#ff7f87"></path>
+                                                </g>
+                                            </g>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="m481.838 166.395-173.169-99.98c-3.696-2.133-4.962-6.859-2.828-10.554 2.133-3.695 6.858-4.963 10.554-2.828l173.17 99.98c3.696 2.133 4.962 6.859 2.828 10.554-2.134 3.696-6.859 4.962-10.555 2.828z"
+                                                        fill="#ff7f87"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <h2 class=""> ۱۰۰ ساعت آموزش مفید </h2>
+                                <p class="">بیش از ۱۰۰ ساعت آموزش کاربردی در ۱۴ بخش مختلف از راه‌اندازی سایت تا رساندن
+                                    آن به درآمد </p>
+                            </div>
+                            <div class="desc__property--item">
+                                <span class="desc__property__icon">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="512"
+                                        viewBox="0 0 512 512" width="512">
+                                        <g>
+                                            <path
+                                                d="m490.63 28.132h-469.26c-11.803 0-21.37 9.568-21.37 21.37v281.75c0 11.802 9.567 21.37 21.37 21.37h469.26c11.802 0 21.37-9.567 21.37-21.37v-281.75c0-11.802-9.567-21.37-21.37-21.37z"
+                                                fill="#f9f6f9"></path>
+                                            <path
+                                                d="m463.21 115.178c-20.031-2.331-35.924-18.231-38.256-38.256-.502-4.307-4.097-7.583-8.433-7.583h-321.041c-4.337 0-7.932 3.275-8.434 7.583-2.331 20.03-18.23 35.924-38.256 38.256-4.307.502-7.583 4.097-7.583 8.434v133.531c0 4.337 3.275 7.932 7.583 8.434 2.453.286 4.843.778 7.155 1.453l9.644-2.836 116.915 37.773 7.905 9.449h226.111c4.337 0 7.932-3.275 8.434-7.583 2.331-20.031 18.231-35.924 38.256-38.256 4.307-.501 7.583-4.097 7.583-8.433v-133.533c0-4.337-3.275-7.932-7.583-8.433z"
+                                                fill="#cbe2ff"></path>
+                                            <path
+                                                d="m43.406 331.252v-281.75c0-11.802 9.567-21.37 21.37-21.37h-43.406c-11.803 0-21.37 9.568-21.37 21.37v281.75c0 11.802 9.567 21.37 21.37 21.37h43.406c-11.802 0-21.37-9.568-21.37-21.37z"
+                                                fill="#cbe2ff"></path>
+                                            <g>
+                                                <path
+                                                    d="m92.196 265.576c-4.307-.501-7.583-4.097-7.583-8.433v-133.532c0-4.337 3.275-7.932 7.583-8.434 20.031-2.331 35.924-18.231 38.256-38.256.501-4.307 4.097-7.583 8.433-7.583h-43.405c-4.337 0-7.932 3.275-8.434 7.583-2.331 20.03-18.23 35.924-38.256 38.256-4.307.502-7.583 4.097-7.583 8.434v133.531c0 4.337 3.275 7.932 7.583 8.434 2.453.286 4.843.778 7.155 1.453l9.644-2.836 56.101 18.125c-7.006-9.091-17.509-15.347-29.494-16.742z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <path
+                                                d="m94.859 364.978h-24.988l-4.282 1.735v111.89c0 4.113 4.51 6.633 8.013 4.477l21.257-13.081z"
+                                                fill="#ff4654"></path>
+                                            <path
+                                                d="m162.93 364.978h-26.169v105.021l21.257 13.081c3.503 2.156 8.013-.365 8.013-4.477v-111.89z"
+                                                fill="#ff636e"></path>
+                                            <path
+                                                d="m295.41 106.387h-78.82c-4.216 0-7.634 3.418-7.634 7.634v15.636c0 4.216 3.418 7.634 7.634 7.634h78.821c4.216 0 7.634-3.418 7.634-7.634v-15.636c-.001-4.216-3.419-7.634-7.635-7.634z"
+                                                fill="#ff636e"></path>
+                                            <path
+                                                d="m250.506 129.657v-15.636c0-4.216 3.418-7.634 7.634-7.634h-41.55c-4.216 0-7.634 3.418-7.634 7.634v15.636c0 4.216 3.418 7.634 7.634 7.634h41.55c-4.216 0-7.634-3.418-7.634-7.634z"
+                                                fill="#ff4654"></path>
+                                            <g>
+                                                <path
+                                                    d="m303.045 181.877h-94.089c-4.267 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h94.089c4.267 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m390.459 217.589h-268.918c-4.267 0-7.726-3.459-7.726-7.726 0-4.268 3.459-7.726 7.726-7.726h268.918c4.267 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m390.459 247.636h-268.918c-4.267 0-7.726-3.459-7.726-7.726 0-4.268 3.459-7.726 7.726-7.726h268.918c4.267 0 7.726 3.459 7.726 7.726 0 4.268-3.459 7.726-7.726 7.726z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <g>
+                                                <path
+                                                    d="m354.51 277.684h-191.408c-4.267 0-7.726-3.459-7.726-7.726 0-4.268 3.459-7.726 7.726-7.726h191.408c4.267 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z"
+                                                    fill="#9dc6fb"></path>
+                                            </g>
+                                            <path
+                                                d="m134.515 380.946h-38.503l-1.818 2.01v87.452l18.861-11.606c1.69-1.04 3.821-1.04 5.511 0l18.861 11.606v-87.452z"
+                                                fill="#ff4654"></path>
+                                            <path
+                                                d="m115.867 380.946h-19.855l-1.818 2.01v87.452l18.861-11.606c.862-.53 1.839-.787 2.813-.776v-77.08z"
+                                                fill="#e61e2b"></path>
+                                            <circle cx="115.81" cy="311.548" fill="#ffd064" r="74.603"></circle>
+                                            <path
+                                                d="m74.173 311.547c0-35.535 24.853-65.247 58.12-72.753-5.305-1.197-10.816-1.85-16.483-1.85-41.202 0-74.603 33.401-74.603 74.603s33.401 74.603 74.603 74.603c5.666 0 11.178-.653 16.483-1.85-33.267-7.506-58.12-37.217-58.12-72.753z"
+                                                fill="#ffc250"></path>
+                                            <path
+                                                d="m115.809 267.85c-24.094 0-43.697 19.603-43.697 43.698 0 24.094 19.603 43.697 43.697 43.697 24.095 0 43.698-19.603 43.698-43.697 0-24.095-19.602-43.698-43.698-43.698z"
+                                                fill="#ffc250"></path>
+                                            <path
+                                                d="m105.078 311.548c0-18.265 11.268-33.94 27.214-40.46-5.09-2.081-10.653-3.238-16.483-3.238-24.094 0-43.697 19.603-43.697 43.698 0 24.094 19.603 43.697 43.697 43.697 5.83 0 11.393-1.157 16.483-3.238-15.946-6.52-27.214-22.195-27.214-40.459z"
+                                                fill="#ebb044"></path>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <h2 class=""> ۱۰۰ ساعت آموزش مفید </h2>
+                                <p class="">بیش از ۱۰۰ ساعت آموزش کاربردی در ۱۴ بخش مختلف از راه‌اندازی سایت تا رساندن
+                                    آن به درآمد </p>
+                            </div>
+                            <div class="desc__property--item">
+                                <span class="desc__property__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="512"
+                                        viewBox="0 0 512 512" width="512">
+                                        <g>
+                                            <g clip-rule="evenodd" fill-rule="evenodd">
+                                                <path
+                                                    d="m24.419 53.729h463.162c12.715 0 23.094 10.381 23.094 23.066v286.259c0 12.685-10.379 23.066-23.094 23.066h-463.162c-12.715 0-23.094-10.381-23.094-23.066v-286.259c0-12.685 10.379-23.066 23.094-23.066z"
+                                                    fill="#cbe2ff"></path>
+                                                <path
+                                                    d="m457.491 53.729h30.09c12.715 0 23.094 10.381 23.094 23.066v286.259c0 12.685-10.379 23.066-23.094 23.066h-30.09c12.684 0 23.094-10.381 23.094-23.066v-286.259c0-12.685-10.382-23.066-23.094-23.066z"
+                                                    fill="#9dc6fb"></path>
+                                                <path d="m209.798 386.12h92.432l10.439 83.645h-113.338z" fill="#d5c6e4">
+                                                </path>
+                                                <path d="m272.112 386.12h30.118l10.439 83.645h-30.091z" fill="#c6b4da">
+                                                </path>
+                                                <path
+                                                    d="m192.591 78.928h112.114c17.321 0 31.484 14.163 31.484 31.484v86.916c0 17.321-14.163 31.513-31.484 31.513h-112.114c-17.32 0-31.485-14.192-31.485-31.513v-86.916c-.001-17.321 14.164-31.484 31.485-31.484z"
+                                                    fill="#365e7d"></path>
+                                                <path
+                                                    d="m274.614 78.928h30.091c17.321 0 31.484 14.163 31.484 31.484v86.916c0 17.321-14.163 31.513-31.484 31.513h-30.091c17.321 0 31.483-14.192 31.483-31.513v-86.916c.001-17.321-14.162-31.484-31.483-31.484z"
+                                                    fill="#2b4d66"></path>
+                                            </g>
+                                            <path
+                                                d="m369.608 159.643c-4.152 0-7.51-3.385-7.51-7.537s3.358-7.537 7.51-7.537h.256v-54.407c0-4.181 3.385-7.537 7.537-7.537s7.508 3.356 7.508 7.537v54.407h.256c4.182 0 7.536 3.385 7.536 7.537s-3.354 7.537-7.536 7.537z"
+                                                fill="#3e6dab"></path>
+                                            <path clip-rule="evenodd"
+                                                d="m94.127 82.284c-3.696-1.848-3.981-4.749 0-6.741l147.78-73.89c4.438-2.218 9.102-2.189 13.482 0l147.779 73.89c4.238 2.104 4.125 4.693 0 6.741l-147.779 73.89c-4.295 2.133-8.816 2.332-13.482 0z"
+                                                fill="#4a80aa" fill-rule="evenodd"></path>
+                                            <path clip-rule="evenodd"
+                                                d="m233.602 5.806 8.305-4.153c4.438-2.218 9.102-2.189 13.482 0l147.779 73.89c4.238 2.104 4.125 4.693 0 6.741l-147.779 73.89c-4.295 2.133-8.816 2.332-13.482 0l-8.305-4.153 139.476-69.737c4.094-2.048 4.209-4.636 0-6.741z"
+                                                fill="#407093" fill-rule="evenodd"></path>
+                                            <path
+                                                d="m61.904 256.115 35.438 20.478c.796.427 1.479 1.081 1.963 1.934 1.449 2.503.596 5.717-1.906 7.168l-35.183 20.307c-.824.568-1.848.882-2.929.882-2.9 0-5.262-2.332-5.262-5.233v-40.983h.029c-.029-.91.197-1.793.682-2.645 1.45-2.505 4.664-3.358 7.168-1.908z"
+                                                fill="#dd636e"></path>
+                                            <path
+                                                d="m161.105 288.766c-4.18 0-7.536-3.384-7.536-7.537s3.356-7.509 7.536-7.509h296.613c4.152 0 7.536 3.356 7.536 7.509 0 4.152-3.384 7.537-7.536 7.537z"
+                                                fill="#78c2a4"></path>
+                                            <path
+                                                d="m241.11 268.345c0-4.152 3.386-7.508 7.537-7.508 4.153 0 7.537 3.356 7.537 7.508v25.768c0 4.153-3.384 7.537-7.537 7.537-4.151 0-7.537-3.384-7.537-7.537z"
+                                                fill="#dd636e"></path>
+                                            <path clip-rule="evenodd"
+                                                d="m510.675 344.88h-509.35v18.174c0 12.685 10.379 23.066 23.094 23.066h185.379 92.433 185.351c12.715 0 23.094-10.381 23.094-23.066v-18.174zm-131.056 167.12h-247.238c-3.3 0-6.058-2.958-5.546-6.285 3.044-20.278 20.647-35.95 41.751-35.95h174.828c21.104 0 38.707 15.671 41.779 35.95.484 3.327-2.274 6.285-5.574 6.285z"
+                                                fill="#e2d8ec" fill-rule="evenodd"></path>
+                                            <path clip-rule="evenodd"
+                                                d="m510.675 344.88h-30.09v18.174c0 12.685-10.41 23.066-23.094 23.066h30.09c12.715 0 23.094-10.381 23.094-23.066zm-131.056 167.12h-30.091c3.3 0 6.058-2.958 5.546-6.285-3.043-20.278-20.648-35.95-41.75-35.95h30.09c21.104 0 38.707 15.671 41.779 35.95.484 3.327-2.274 6.285-5.574 6.285z"
+                                                fill="#d5c6e4" fill-rule="evenodd"></path>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <h2 class=""> ۱۰۰ ساعت آموزش مفید </h2>
+                                <p class="">بیش از ۱۰۰ ساعت آموزش کاربردی در ۱۴ بخش مختلف از راه‌اندازی سایت تا رساندن
+                                    آن به درآمد </p>
+                            </div>
+                            <div class="desc__property--item">
+                                <span class="desc__property__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512"
+                                        viewBox="0 0 512 512" width="512">
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="m3.806 80.654c0-44.939 36.754-81.294 81.842-80.645 43.675.628 79.188 36.446 79.464 80.124.155 24.461-10.583 46.414-27.645 61.305-1.801 1.571-1.541 4.439.516 5.656l15.197 8.992c2.457 1.454 1.426 5.22-1.429 5.22l-68.818-.017c-43.839-.815-79.127-36.602-79.127-80.635z"
+                                                        fill="#7acaa6"></path>
+                                                </g>
+                                            </g>
+                                            <path
+                                                d="m153.18 156.086-15.198-8.992c-2.046-1.21-2.33-4.074-.539-5.636 17.257-15.049 28.051-37.322 27.66-62.108-.677-42.873-35.377-78.066-78.238-79.315-6.078-.177-12.01.32-17.727 1.419 37.047 7.102 65.281 39.757 65.527 78.678.119 18.849-6.23 36.209-16.956 49.996-6.477 8.325-4.372 20.397 4.706 25.769l.318.188c2.43 1.438 1.444 5.132-1.339 5.212l30.356.007c2.855.002 3.887-3.765 1.43-5.218z"
+                                                fill="#57be92"></path>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="m396.792 292.755h-182.966c-45.698 0-70.706-53.256-41.519-88.42l1.623-1.956c12.858-15.491 19.896-34.99 19.896-55.122v-35.283c.001-61.842 50.133-111.974 111.975-111.974 61.842 0 111.974 50.132 111.974 111.974v36.474c0 20.343 7.186 40.032 20.29 55.593 29.551 35.092 4.605 88.714-41.273 88.714z"
+                                                        fill="#c59191"></path>
+                                                    <path
+                                                        d="m492.97 383.43v120.96h-375.32v-120.05c0-27.18 16.29-51.71 41.33-62.25l60.59-26.34 20.4-8.87c15.48-6.73 25.49-22 25.49-38.88v-7.83h79.69v7.43c0 16.95 10.11 32.28 25.7 38.96l81.95 35.13c24.42 10.82 40.17 35.02 40.17 61.74z"
+                                                        fill="#fff"></path>
+                                                    <path
+                                                        d="m219.565 324.59c20.679 6.179 51.116 12.769 88.217 12.12 34.811-.608 63.387-7.377 83.271-13.728l9.88-23.527-30.086-12.895c-15.586-6.681-25.692-22.006-25.692-38.964v-7.424h-79.69v7.828c0 16.878-10.012 32.147-25.489 38.877l-24.368 10.595z"
+                                                        fill="#ffcebf"></path>
+                                                    <g fill="#8795de">
+                                                        <path
+                                                            d="m452.796 321.685-61.732-26.459-.011.001v209.161h101.918v-120.957c0-26.717-15.749-50.922-40.175-61.746z">
+                                                        </path>
+                                                        <path
+                                                            d="m219.57 295.75v208.64h-101.92v-120.05c0-27.18 16.29-51.71 41.33-62.25z">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                                <g>
+                                                    <path
+                                                        d="m332.933 283.912c9.168 0 17.904-1.841 25.867-5.163-8.542-7.885-13.646-19.105-13.646-31.152v-7.424h-79.69v7.827c0 6.097-1.313 11.982-3.712 17.332 12.067 11.503 28.392 18.579 46.379 18.579h24.802z"
+                                                        fill="#ffb09e"></path>
+                                                    <path
+                                                        d="m384.957 120.293v65.925c0 37.14-30.108 67.247-67.247 67.247h-24.801c-37.14 0-67.247-30.108-67.247-67.247v-65.925c0-24.161 19.586-43.748 43.748-43.748h71.8c24.161.001 43.747 19.587 43.747 43.748z"
+                                                        fill="#ffcebf"></path>
+                                                    <path
+                                                        d="m384.957 154.593c-.03.091-.067.179-.094.272-2.431 8.395-8.811 24.253-24.229 36.142-7.179 5.537-15.368 9.537-24.338 11.891-4.066 1.067-6.498 5.228-5.431 9.294.898 3.419 3.981 5.682 7.358 5.682.639 0 1.289-.081 1.937-.251 10.952-2.874 20.968-7.773 29.771-14.56 6.079-4.688 10.999-9.866 14.982-15.072.015-.59.045-1.177.045-1.771v-31.627z"
+                                                        fill="#7a6d79"></path>
+                                                    <path
+                                                        d="m327.949 223.939h-17.837c-8.119 0-14.701-6.582-14.701-14.701 0-8.119 6.582-14.701 14.701-14.701h17.837c8.119 0 14.701 6.582 14.701 14.701-.001 8.12-6.582 14.701-14.701 14.701z"
+                                                        fill="#685e68"></path>
+                                                    <g>
+                                                        <path
+                                                            d="m321.201 59.097c1.708-21.54 22.33-35.835 42.067-43.239 32.649 19.563 54.507 55.284 54.507 96.115v7.698c-1.805.379-3.601.711-5.377.976-10.873 1.624-20.132.921-26.458 0-40.763-5.43-66.802-35.535-64.739-61.55z"
+                                                            fill="#b98080"></path>
+                                                        <path
+                                                            d="m305.801 0c25.288 0 48.616 8.386 67.361 22.525-9.351 16.271-30.823 48.441-71.086 72.257-29.89 17.681-58.074 23.622-75.43 25.865h-32.818v-8.674c-.001-61.841 50.131-111.973 111.973-111.973z"
+                                                            fill="#c59191"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            <path
+                                                d="m430.971 504.388h-243.654l-13.439-126.775c-.953-8.992 6.096-16.828 15.138-16.828h240.257c9.042 0 16.091 7.836 15.138 16.828z"
+                                                fill="#efedef"></path>
+                                            <path
+                                                d="m429.272 360.785h-30.446c9.042 0 16.091 7.836 15.138 16.828l-13.439 126.776h30.446l13.439-126.776c.954-8.992-6.095-16.828-15.138-16.828z"
+                                                fill="#e5e1e5"></path>
+                                            <g>
+                                                <path
+                                                    d="m504.5 512h-497c-4.143 0-7.5-3.358-7.5-7.5s3.357-7.5 7.5-7.5h497c4.143 0 7.5 3.358 7.5 7.5s-3.357 7.5-7.5 7.5z"
+                                                    fill="#c9bfc8"></path>
+                                            </g>
+                                            <circle cx="309.144" cy="432.587" fill="#c9bfc8" r="21.312"></circle>
+                                            <g fill="#fff">
+                                                <circle cx="54.014" cy="80.653" r="7.611"></circle>
+                                                <circle cx="84.46" cy="80.653" r="7.611"></circle>
+                                                <circle cx="114.906" cy="80.653" r="7.611"></circle>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <h2 class=""> ۱۰۰ ساعت آموزش مفید </h2>
+                                <p class="">بیش از ۱۰۰ ساعت آموزش کاربردی در ۱۴ بخش مختلف از راه‌اندازی سایت تا رساندن
+                                    آن به درآمد </p>
+                            </div>
+                        </div>
+                        <div class="desc__questions">
+                            <h2 class="desc__question--title">
+                                سوالات متداول دانشجویان
+                            </h2>
+                            <div class="questions__box">
+                                <div class="question__box">
+                                    <h5 class="question__box--title">
+                                        <span><i class="fas fa-minus"></i></span>
+                                        <span>وبمستران طلایی چه تفاوتی با سایر دوره‌های آموزش کسب‌و‌کار اینترنتی
+                                            دارد؟</span>
+                                    </h5>
+                                    <div class="question__box--answer active">
+                                        <p class="">
+                                            دوره‌های آموزشی زیادی در سطح اینترنت به‌فروش می‌رسد. اما مشکل اصلی این
+                                            دوره‌ها عدم تداوم در یادگیری شماست.
+
+                                            وبمستران طلایی از ۱۴ دوره اصلی تشکیل شده که طبیعتا این دوره‌ها آپدیت خواهند
+                                            شد. هر کدام از این ۱۴ دوره به‌صورت جداگانه آپدیت می‌شوند و مطالب جدیدی به
+                                            آن‌ها اضافه خواهد شد.
+
+                                            پس با ثبت‌نام در دوره وبمستران طلایی، یادگیری شما هیچ‌وقت پایان نمی‌یابد.
+                                            بلکه همیشه جلسات جدیدی از بروزرسانی دوره‌ها در پنل شما قرار خواهد گرفت.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questions__box">
+                                <div class="question__box">
+                                    <h5 class="question__box--title">
+                                        <span><i class="fas fa-plus"></i></span>
+                                        <span>وبمستران طلایی چه تفاوتی با سایر دوره‌های آموزش کسب‌و‌کار اینترنتی
+                                            دارد؟</span>
+                                    </h5>
+                                    <div class="question__box--answer ">
+                                        <p class="">
+                                            دوره‌های آموزشی زیادی در سطح اینترنت به‌فروش می‌رسد. اما مشکل اصلی این
+                                            دوره‌ها عدم تداوم در یادگیری شماست.
+
+                                            وبمستران طلایی از ۱۴ دوره اصلی تشکیل شده که طبیعتا این دوره‌ها آپدیت خواهند
+                                            شد. هر کدام از این ۱۴ دوره به‌صورت جداگانه آپدیت می‌شوند و مطالب جدیدی به
+                                            آن‌ها اضافه خواهد شد.
+
+                                            پس با ثبت‌نام در دوره وبمستران طلایی، یادگیری شما هیچ‌وقت پایان نمی‌یابد.
+                                            بلکه همیشه جلسات جدیدی از بروزرسانی دوره‌ها در پنل شما قرار خواهد گرفت.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-page__tab product-page__lessons " data-lessons="lessons" id="lessons">
+                        <div class="lessons__boxes">
+                            <div class="lesson__box">
+                                <div class="lesson__box--title">
+                                    <div class="leeson__box--logo">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px"
+                                            viewBox="0 0 447.674 447.674"
+                                            style="enable-background:new 0 0 447.674 447.674;" xml:space="preserve">
+                                            <g>
+                                                <path style="fill:#00769D;"
+                                                    d="M134.289,138.16h-24.722l67.399,190.521l37.732-107.825l-29.254-82.696H159.36v-18.154h115.508 v18.154h-27.049l67.398,190.521l24.227-69.234c31.781-88.702-26.048-116.333-26.048-136.129s16.048-35.843,35.843-35.843 c1.071,0,2.111,0.058,3.13,0.153c-33.541-31.663-78.768-51.08-128.534-51.08c-65.027,0-122.306,33.146-155.884,83.458h66.336 v18.154L134.289,138.16L134.289,138.16z">
+                                                </path>
+                                                <path style="fill:#00769D;"
+                                                    d="M36.548,223.837c0,71.704,40.302,133.986,99.483,165.458l-84.52-238.919 C41.883,172.932,36.548,197.761,36.548,223.837z">
+                                                </path>
+                                                <path style="fill:#00769D;"
+                                                    d="M386.833,131.547c2.679,15.774,1.868,33.503-2.243,51.301h0.745l-2.832,8.092l0,0 c-1.678,5.843-3.791,11.82-6.191,17.693l-64.444,180.541c59.057-31.51,99.256-93.725,99.256-165.338 C411.124,190.279,402.29,158.788,386.833,131.547z">
+                                                </path>
+                                                <path style="fill:#00769D;"
+                                                    d="M166.075,402.033c18.195,5.894,37.603,9.091,57.762,9.091c19.228,0,37.777-2.902,55.239-8.285 l-54.784-154.862L166.075,402.033z">
+                                                </path>
+                                                <path style="fill:#00769D;"
+                                                    d="M382.113,65.56C339.836,23.283,283.625,0,223.836,0S107.837,23.283,65.56,65.56S0,164.047,0,223.837 c0,59.789,23.283,115.999,65.56,158.276s98.488,65.56,158.277,65.56s115.999-23.283,158.277-65.56 c42.277-42.277,65.56-98.488,65.56-158.276C447.673,164.047,424.39,107.837,382.113,65.56z M223.836,431.883 c-114.717,0-208.046-93.329-208.046-208.046S109.119,15.79,223.836,15.79s208.046,93.33,208.046,208.047 S338.554,431.883,223.836,431.883z">
+                                                </path>
+                                            </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="lesson__box--text">
+                                        <h2 class="">ساخت سایت بدون برنامه نویسی</h2>
+                                        <p class="">همین ابتدای کار یک وب‌سایت بصورت عملی راه‌اندازی می‌کنیم. </p>
+                                    </div>
+                                </div>
+                                <div class="lesson__boxes--content active">
+                                    <div class="lesson__box--content">
+                                        <div class="lesson__box--content-wrapper">
+                                            <div class="lesson__box--content-right">
+                                                <div class="lesson__box--content-icon">
+                                                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="lesson__box--content-text">
+                                                    <h4 class="">
+                                                        <span>راه اندازی سایت اختصاصی </span>
+
+                                                    </h4>
+                                                    <p class="">
+                                                        اصول کارکرد یک وب‌سایت بصورت عملی
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="lesson__box--content-left">
+                                                <div class="lesson__private">
+                                                    <span><i class="fa fa-lock"></i></span>
+                                                    <span>خصوصی</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lessong__box--content-message">
+                                            <p class="">
+                                                <span>این درس خصوصی است</span>
+                                                <span>برای دسترسی کامل به دروس باید محصول را خریداری کنید</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="lesson__box--content">
+                                        <div class="lesson__box--content-wrapper">
+                                            <div class="lesson__box--content-right">
+                                                <div class="lesson__box--content-icon">
+                                                    <i class="fa fa-file-audio" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="lesson__box--content-text">
+                                                    <h4 class="">
+                                                        <span>کار با نوشته‌ها و مقالات سایت </span>
+
+                                                    </h4>
+                                                    <p class="">
+                                                        انواع نوشته و حالت های انتشار مطالب
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="lesson__box--content-left">
+                                                <div class="lesson__private">
+                                                    <span><i class="fa fa-lock"></i></span>
+                                                    <span>خصوصی</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lessong__box--content-message">
+                                            <p class="">
+                                                <span>این درس خصوصی است</span>
+                                                <span>برای دسترسی کامل به دروس باید محصول را خریداری کنید</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="lesson__box--content">
+                                        <div class="lesson__box--content-wrapper">
+                                            <div class="lesson__box--content-right">
+                                                <div class="lesson__box--content-icon">
+                                                    <i class="fab fa-wordpress" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="lesson__box--content-text">
+                                                    <h4 class="">
+                                                        <span>نصب وردپرس روی هاست</span>
+
+                                                    </h4>
+                                                    <p class="">
+                                                        تغییر پیشوند جداول دیتابیس برای افزایش امنیت سایت
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="lesson__box--content-left">
+                                                <div class="lesson__private">
+                                                    <span><i class="fa fa-lock"></i></span>
+                                                    <span>خصوصی</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lessong__box--content-message">
+                                            <p class="">
+                                                <span>این درس خصوصی است</span>
+                                                <span>برای دسترسی کامل به دروس باید محصول را خریداری کنید</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lesson__box">
+                                <div class="lesson__box--title">
+                                    <div class="leeson__box--logo">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px"
+                                            viewBox="0 0 501.551 501.551"
+                                            style="enable-background:new 0 0 501.551 501.551;" xml:space="preserve">
+                                            <path style="fill:#40596B;"
+                                                d="M480.653,78.367H20.898C9.404,78.367,0,87.771,0,99.265v311.38c0,11.494,9.404,20.898,20.898,20.898 h459.755c11.494,0,20.898-9.404,20.898-20.898V99.265C501.551,87.771,492.147,78.367,480.653,78.367z">
+                                            </path>
+                                            <rect x="31.347" y="109.714" style="fill:#FFFFFF;" width="438.857"
+                                                height="289.437"></rect>
+                                            <rect x="154.645" y="431.543" style="fill:#CDD6E0;" width="191.216"
+                                                height="56.425"></rect>
+                                            <rect x="97.176" y="487.967" style="fill:#F2F2F2;" width="307.2"
+                                                height="13.584"></rect>
+                                            <rect x="154.645" y="431.543" style="fill:#ACB3BA;" width="191.216"
+                                                height="15.673"></rect>
+                                            <path style="fill:#F2F2F2;"
+                                                d="M432.588,117.029v265.404c0,9.404-7.314,16.718-16.718,16.718H84.637 c-9.404,0-16.718-7.314-16.718-16.718V117.029H432.588z">
+                                            </path>
+                                            <g>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M252.865,191.216v39.706c-1.045,0-1.045,0-2.09,0c-1.045,0-1.045,0-2.09,0v-39.706H252.865z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M252.865,343.771v39.706h-4.18v-39.706c1.045,0,1.045,0,2.09,0 C251.82,343.771,251.82,343.771,252.865,343.771z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M319.739,220.473l-28.212,28.212c-1.045-1.045-2.09-2.09-3.135-3.135l28.212-28.212L319.739,220.473 z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M212.114,329.143l-28.212,28.212l-3.135-3.135l28.212-28.212 C210.024,327.053,211.069,328.098,212.114,329.143z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M346.906,285.257v4.18h-38.661c0-1.045,0-1.045,0-2.09c0-1.045,0-1.045,0-2.09L346.906,285.257 L346.906,285.257z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M194.351,287.347c0,1.045,0,1.045,0,2.09H155.69v-4.18h38.661 C194.351,285.257,194.351,286.302,194.351,287.347z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M319.739,353.176l-3.135,3.135l-27.167-27.167c1.045-1.045,2.09-2.09,3.135-3.135L319.739,353.176z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M212.114,245.551c-1.045,1.045-2.09,2.09-3.135,3.135l-28.212-28.212l3.135-3.135L212.114,245.551z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M230.922,234.057c-1.045,0-2.09,1.045-4.18,2.09l-9.404-21.943l4.18-2.09L230.922,234.057z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M283.167,361.535l-4.18,2.09l-9.404-21.943c1.045,0,2.09-1.045,4.18-2.09L283.167,361.535z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M199.576,263.314c-1.045,1.045-1.045,2.09-2.09,4.18l-21.943-9.404l2.09-4.18L199.576,263.314z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M326.008,316.604l-2.09,4.18l-21.943-9.404c1.045-1.045,1.045-2.09,2.09-4.18L326.008,316.604z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M199.576,310.335l-21.943,9.404l-2.09-4.18l21.943-9.404 C198.531,308.245,198.531,309.29,199.576,310.335z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M326.008,258.09l-21.943,9.404c0-1.045-1.045-2.09-2.09-4.18l21.943-9.404L326.008,258.09z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M230.922,340.637l-9.404,21.943l-4.18-2.09l9.404-21.943 C228.833,339.592,229.878,339.592,230.922,340.637z">
+                                                </path>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M283.167,213.159l-8.359,21.943c-1.045-1.045-2.09-1.045-4.18-2.09l9.404-21.943L283.167,213.159z">
+                                                </path>
+                                            </g>
+                                            <path style="fill:#FFD15C;"
+                                                d="M411.69,0H89.861C78.367,0,68.963,9.404,68.963,20.898v54.335h364.669V20.898 C432.588,9.404,423.184,0,411.69,0z">
+                                            </path>
+                                            <polygon style="fill:#40596B;"
+                                                points="324.963,273.763 344.816,344.816 362.58,327.053 379.298,344.816 394.971,329.143 378.253,311.38 394.971,293.616 ">
+                                            </polygon>
+                                            <ellipse style="fill:#F8B64C;" cx="205.845" cy="37.616" rx="12.539"
+                                                ry="12.539"></ellipse>
+                                            <ellipse style="fill:#FF7058;" cx="157.78" cy="37.616" rx="12.539"
+                                                ry="12.539"></ellipse>
+                                            <ellipse style="fill:#F8B64C;" cx="109.714" cy="37.616" rx="12.539"
+                                                ry="12.539"></ellipse>
+                                            <path style="fill:#E4EAEF;"
+                                                d="M432.588,125.388v49.11c-6.269,5.224-14.629,7.314-22.988,7.314 c-21.943,0-39.706-17.763-39.706-39.706c0,21.943-17.763,39.706-39.706,39.706c-21.943,0-39.706-17.763-39.706-39.706 c0,21.943-17.763,39.706-39.706,39.706s-39.706-17.763-39.706-39.706c0,21.943-17.763,39.706-39.706,39.706 s-39.706-17.763-39.706-39.706c0,21.943-17.763,39.706-39.706,39.706c-8.359,0-16.718-3.135-22.988-7.314v-49.11 C68.963,125.388,432.588,125.388,432.588,125.388z">
+                                            </path>
+                                            <polygon style="fill:#FF7058;"
+                                                points="131.657,117.029 52.245,117.029 68.963,75.233 141.061,75.233 ">
+                                            </polygon>
+                                            <polygon style="fill:#CDD6E0;"
+                                                points="211.069,117.029 131.657,117.029 141.061,75.233 214.204,75.233 ">
+                                            </polygon>
+                                            <polygon style="fill:#FF7058;"
+                                                points="290.482,117.029 211.069,117.029 214.204,75.233 287.347,75.233 ">
+                                            </polygon>
+                                            <polygon style="fill:#CDD6E0;"
+                                                points="369.894,117.029 290.482,117.029 287.347,75.233 360.49,75.233 ">
+                                            </polygon>
+                                            <polygon style="fill:#FF7058;"
+                                                points="449.306,117.029 369.894,117.029 360.49,75.233 432.588,75.233 ">
+                                            </polygon>
+                                            <g>
+                                                <path style="fill:#ACB3BA;"
+                                                    d="M131.657,134.792c0,21.943,17.763,39.706,39.706,39.706c21.943,0,39.706-17.763,39.706-39.706 v-17.763h-79.412L131.657,134.792L131.657,134.792z">
+                                                </path>
+                                                <path style="fill:#ACB3BA;"
+                                                    d="M290.482,117.029v17.763c0,21.943,17.763,39.706,39.706,39.706s39.706-17.763,39.706-39.706v-17.763 C369.894,117.029,290.482,117.029,290.482,117.029z">
+                                                </path>
+                                            </g>
+                                            <g>
+                                                <path style="fill:#F1543F;"
+                                                    d="M52.245,134.792c0,21.943,17.763,39.706,39.706,39.706s39.706-17.763,39.706-39.706v-17.763H52.245 V134.792z">
+                                                </path>
+                                                <path style="fill:#F1543F;"
+                                                    d="M211.069,134.792c0,21.943,17.763,39.706,39.706,39.706s39.706-17.763,39.706-39.706v-17.763 h-79.412L211.069,134.792L211.069,134.792z">
+                                                </path>
+                                                <path style="fill:#F1543F;"
+                                                    d="M369.894,117.029v17.763c0,21.943,17.763,39.706,39.706,39.706s39.706-17.763,39.706-39.706v-17.763 C449.306,117.029,369.894,117.029,369.894,117.029z">
+                                                </path>
+                                            </g>
+                                            <ellipse style="fill:#FF7058;" cx="250.776" cy="287.347" rx="61.649"
+                                                ry="62.694"></ellipse>
+                                            <g>
+                                                <path style="fill:#FFFFFF;"
+                                                    d="M240.327,306.155l-2.09-7.314h48.065v-36.571h-57.469l-3.135-13.584H208.98v6.269h12.539 l14.629,57.469h52.245v-6.269H240.327z M280.033,267.494v24.033h-42.841l-6.269-24.033H280.033z">
+                                                </path>
+                                                <ellipse style="fill:#FFFFFF;" cx="249.731" cy="323.918" rx="7.314"
+                                                    ry="7.314"></ellipse>
+                                                <ellipse style="fill:#FFFFFF;" cx="276.898" cy="323.918" rx="7.314"
+                                                    ry="7.314"></ellipse>
+                                            </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                            <g> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="lesson__box--text">
+                                        <h2 class="">ساخت سایت بدون برنامه نویسی</h2>
+                                        <p class="">همین ابتدای کار یک وب‌سایت بصورت عملی راه‌اندازی می‌کنیم. </p>
+                                    </div>
+                                </div>
+                                <div class="lesson__boxes--content">
+                                    <div class="lesson__box--content">
+                                        <div class="lesson__box--content-wrapper">
+                                            <div class="lesson__box--content-right">
+                                                <div class="lesson__box--content-icon">
+                                                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="lesson__box--content-text">
+                                                    <h4 class="">
+                                                        <span>راه اندازی سایت اختصاصی </span>
+
+                                                    </h4>
+                                                    <p class="">
+                                                        اصول کارکرد یک وب‌سایت بصورت عملی
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="lesson__box--content-left">
+                                                <div class="lesson__private">
+                                                    <span><i class="fa fa-lock"></i></span>
+                                                    <span>خصوصی</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lessong__box--content-message">
+                                            <p class="">
+                                                <span>این درس خصوصی است</span>
+                                                <span>برای دسترسی کامل به دروس باید محصول را خریداری کنید</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="lesson__box--content">
+                                        <div class="lesson__box--content-wrapper">
+                                            <div class="lesson__box--content-right">
+                                                <div class="lesson__box--content-icon">
+                                                    <i class="fa fa-file-audio" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="lesson__box--content-text">
+                                                    <h4 class="">
+                                                        <span>کار با نوشته‌ها و مقالات سایت </span>
+
+                                                    </h4>
+                                                    <p class="">
+                                                        انواع نوشته و حالت های انتشار مطالب
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="lesson__box--content-left">
+                                                <div class="lesson__private">
+                                                    <span><i class="fa fa-lock"></i></span>
+                                                    <span>خصوصی</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lessong__box--content-message">
+                                            <p class="">
+                                                <span>این درس خصوصی است</span>
+                                                <span>برای دسترسی کامل به دروس باید محصول را خریداری کنید</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="lesson__box--content">
+                                        <div class="lesson__box--content-wrapper">
+                                            <div class="lesson__box--content-right">
+                                                <div class="lesson__box--content-icon">
+                                                    <i class="fab fa-wordpress" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="lesson__box--content-text">
+                                                    <h4 class="">
+                                                        <span>نصب وردپرس روی هاست</span>
+
+                                                    </h4>
+                                                    <p class="">
+                                                        تغییر پیشوند جداول دیتابیس برای افزایش امنیت سایت
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="lesson__box--content-left">
+                                                <div class="lesson__private">
+                                                    <span><i class="fa fa-lock"></i></span>
+                                                    <span>خصوصی</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lessong__box--content-message">
+                                        <p class="">
+                                            <span>این درس خصوصی است</span>
+                                            <span>برای دسترسی کامل به دروس باید محصول را خریداری کنید</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-page__tab product-page__comment " data-comment="comment" id="comment">
+                        <div class="comment__content">
+                            <div class="comment__content--wrapper">
+                                <div class="comment__user">
+                                    <div class="comment__sender">
+                                        <div class="comment__sender-name">
+                                            <p class="">
+                                                <span>مهدی</span>
+                                                <span>ایلخانی نسب</span>
+                                            </p>
+                                            <p class="comment__sender-date">
+                                                <span>11</span>
+                                                <span>خرداد</span>
+                                                <span>1380</span>
+                                            </p>
+                                        </div>
+                                        <div class="comment__sender-text">
+                                            <p class="">استاد بازم یه سوال دیگه ببخشیدا واقعا ممنون میشم اینم جواب بدید؛
+                                                راستش توی این سایت از همه به علم شما اعتماد دارم واسه همین همه سوالاتم
+                                                رو واسه شما نگه داشتم 😁.
+                                                به نظرتون منی که css, html , jsرو تقریبا تموم کردم و الان فقط دارم تمرین
+                                                می کنم و چیزهای باقی مونده رو تموم می کنم. بعد این که کاملا توی این 3 تا
+                                                حرفه ای شدم برای سریع تر رسیدن به درآمد(منظورم از سریع یعنی در مدت زمان
+                                                کم تر) به نظرتون وارد vue بشم یا react چون دیدم که vue دوازده ساعته دورش
+                                                ولی react نود ساعته . (هدف من فعلا سریعتر رسیدن به درآمده)</p>
+                                        </div>
+                                        <div class="comment__sender-btn">
+                                            <button>پاسخ</button>
+                                        </div>
+                                        <form class="form__reply--comment form__reply--sender-comemnt">
+                                            <div class="reply__title">
+                                                <p class="">
+                                                    <span>پاسخ به </span>
+                                                    <span>محمد امین سعیدی راد</span>
+                                                </p>
+                                                <button>لغو پاسخ</button>
+                                            </div>
+                                            <div class="reply__text">
+                                                <span>دیدگاه شما*</span>
+                                                <textarea name="" id="" cols="30" rows="10" placeholder=" "></textarea>
+                                            </div>
+                                            <div class="reply__btn">
+                                                <button>ثبت</button>
+                                            </div>
+                                        </form>
+                                        <div class="comment__response">
+                                            <div class="comment__response-name">
+                                                <p class="">
+                                                    <span>محمد امین</span>
+                                                    <span>سعیدی راد</span>
+                                                </p>
+                                                <p class="comment__response-date">
+                                                    <span>11</span>
+                                                    <span>خرداد</span>
+                                                    <span>1380</span>
+                                                </p>
+                                            </div>
+                                            <div class="comment__response-text">
+                                                <p class="">
+                                                    عزیزین. لطف دارین.
+                                                    این 2 سوالی که پرسیدین واسه خیلی از دانشجوهای عزیز پیش میاد و سوالای
+                                                    پرتکرار هستن.
+                                                    واسه این که بصورت تک تک پاسخ داده نشه، تو چنل Vip به هر دو سوال در
+                                                    قالب پادکست پاسخ دادم.
+
+                                                    از طریق پادکست های موجود تو چنل Vip میتونین به پاسخ سوالتون برسین.
+                                                    بعد اگه باز ابهام یا سوالی بود درخدمتم.</p>
+                                            </div>
+                                            <div class="comment__response-btn">
+                                                <button>پاسخ</button>
+                                            </div>
+                                            <form class="form__reply--comment form__reply--response-comemnt">
+                                                <div class="reply__title">
+                                                    <p class="">
+                                                        <span>پاسخ به </span>
+                                                        <span>محمد امین سعیدی راد</span>
+                                                    </p>
+                                                    <button>لغو پاسخ</button>
+                                                </div>
+                                                <div class="reply__text">
+                                                    <span>دیدگاه شما*</span>
+                                                    <textarea name="" id="" cols="30" rows="10" placeholder=" "></textarea>
+                                                </div>
+                                                <div class="reply__btn">
+                                                    <button>ثبت</button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="comment__user">
+                                    <div class="comment__sender">
+                                        <div class="comment__sender-name">
+                                            <p class="">
+                                                <span>محمد امین</span>
+                                                <span>سعیدی راد</span>
+                                            </p>
+                                            <p class="comment__sender-date">
+                                                <span>11 </span>
+                                                <span>خرداد</span>
+                                                <span>1380</span>
+                                            </p>
+                                        </div>
+                                        <div class="comment__sender-text">
+                                            <p class="">استاد بازم یه سوال دیگه ببخشیدا واقعا ممنون میشم اینم جواب بدید؛
+                                                راستش توی این سایت از همه به علم شما اعتماد دارم واسه همین همه سوالاتم
+                                                رو واسه شما نگه داشتم 😁.
+                                                به نظرتون منی که css, html , jsرو تقریبا تموم کردم و الان فقط دارم تمرین
+                                                می کنم و چیزهای باقی مونده رو تموم می کنم. بعد این که کاملا توی این 3 تا
+                                                حرفه ای شدم برای سریع تر رسیدن به درآمد(منظورم از سریع یعنی در مدت زمان
+                                                کم تر) به نظرتون وارد vue بشم یا react چون دیدم که vue دوازده ساعته دورش
+                                                ولی react نود ساعته . (هدف من فعلا سریعتر رسیدن به درآمده)</p>
+                                        </div>
+
+                                        <div class="comment__sender-btn">
+                                            <button>پاسخ</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment__forms--wrapper">
+                            <p class="">
+                                هنوز هیچ دیدگاهی نوشته نشده است
+                            </p>
+                            <form action="">
+                                <h2 class="">
+                                    <span>
+                                        اولین کسی باشید که دیدگاهی می نویسد
+                                    </span>
+                                    <span>
+                                        "دوره آموزش افزایش سرعت سایت"
+                                    </span>
+                                </h2>
+                                <div class="textarea__box">
+                                    <textarea name="" id="" cols="30" rows="10"
+                                        placeholder="نقد و بررسی  شما"></textarea>
+                                </div>
+                                <div class="inputs__box">
+                                    <div class="name-inputs__box">
+                                        <input type="text" placeholder="نام">
+                                    </div>
+                                    <div class="email-inputs__box">
+                                        <input type="text" placeholder="ایمیل">
+                                    </div>
+                                </div>
+                                <button>ارسال دیدگاه</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+    <div class="product__related">
+        <div class="u-container">
+            <div class="product__related--wrappper">
+                <h2 class="product__related--title">محصولات مرتبط</h2>
+                <div class="product__related--slider">
+                    <!-- Swiper -->
+                    <div class="swiper-container  related-courses-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card courses__card">
+                                    <div class="card__wrapper">
+                                        <div class="card__img">
+                                            <img src="assets/images/website-speed-1-500x500.png" alt="">
+                                        </div>
+                                        <h3 class="card__title">دوره آموزش افزایش سرعت سایت</h3>
+                                        <div class="card__bottom">
+                                            <div class="card__bottom--right">
+                                                <span>
+                                                    <i class="fa fa-users"></i>
+                                                </span>
+                                                <span>1</span>
+                                            </div>
+                                            <div class="card__bottom--left">
+                                                <p class="">
+                                                    <span>39,000</span>
+                                                    <span>تومان</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card courses__card">
+                                    <div class="card__wrapper">
+                                        <div class="card__img">
+                                            <img src="assets/images/email-marketing-500x500.jpg" alt="">
+                                        </div>
+                                        <h3 class="card__title">آموزش ایمیل مارکتینگ</h3>
+                                        <div class="card__bottom">
+                                            <div class="card__bottom--right">
+                                                <span>
+                                                    <i class="fa fa-users"></i>
+                                                </span>
+                                                <span>2</span>
+                                            </div>
+                                            <div class="card__bottom--left">
+                                                <p class="">
+                                                    <span>199,000</span>
+                                                    <span>تومان</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card courses__card">
+                                    <div class="card__wrapper">
+                                        <div class="card__img">
+                                            <img src="assets/images/google-search-console-1-500x500.png" alt="">
+                                        </div>
+                                        <h3 class="card__title">آموزش کامل سرچ کنسول</h3>
+                                        <div class="card__bottom">
+                                            <div class="card__bottom--right">
+                                                <span>
+                                                    <i class="fa fa-users"></i>
+                                                </span>
+                                                <span>0</span>
+                                            </div>
+                                            <div class="card__bottom--left">
+                                                <p class="">
+                                                    <span>199,000</span>
+                                                    <span>تومان</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card courses__card">
+                                    <div class="card__wrapper">
+                                        <div class="card__img">
+                                            <img src="assets/images/google-analytics-1-500x500.png" alt="">
+                                        </div>
+                                        <h3 class="card__title">دوره آموزش گوگل انالیتیکس</h3>
+                                        <div class="card__bottom">
+                                            <div class="card__bottom--right">
+                                                <span>
+                                                    <i class="fa fa-users"></i>
+                                                </span>
+                                                <span>2</span>
+                                            </div>
+                                            <div class="card__bottom--left">
+                                                <p class="">
+                                                    <span>119,000</span>
+                                                    <span>تومان</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="u-container">
+            <div class="footer__wrapper">
+                <div class="footer__top">
+                    <div class="footer__right">
+                        <div class="footer__title">
+                            <h3>معرفی گروه طراحی و توسعه</h3>
+                        </div>
+                        <div class="footer__desc">
+                            <p class="">گروه وردپرس من از سال 1393 فعالیت خود را در زمینه طراحی و توسعه نرم افزارهای تحت
+                                وب با توجه به استانداردها و متدولوژی های روز دنیا و مد نظر قرار دادن ارزش ها و باورهای
+                                حرفه ای و نیز مطالعات کیفی و کمی در زمینه سیستم های یکپارچه.</p>
+                        </div>
+                        <div class="footer__contact">
+                            <p class="footer__adress">
+                                <span><i class="fa fa-map-marker-alt"></i></span>
+                                <span>تهران ، یوسف آباد ، خیابان چهلم ، پلاک 10</span>
+                            </p>
+                            <p class="footer__tel">
+                                <span><i class="fa fa-mobile"></i></span>
+                                <span>09901394741</span>
+                            </p>
+                            <p class="footer__email">
+                                <span><i class="fa fa-envelope"></i></span>
+                                <span>mehdiilkhaninasab7@gmail.com</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer__left">
+                        <div class="">
+                            <div class="footer__title">
+                                <h3>فهرست سفارشی</h3>
+                            </div>
+                            <ul class="footer__list">
+                                <li><a href="#" class="">بلاگ</a></li>
+                                <li><a href="cart.html" class="">سبد خرید</a></li>
+                                <li><a href="#" class="">لیست سفارشی</a></li>
+                                <li><a href="#" class="">لورم اپیسوم</a></li>
+                                <li><a href="login-register.html" class="">حساب کاربری من</a></li>
+                                <li><a href="#" class="">فروشگاه</a></li>
+                                <li><a href="#" class="">منوی دلخواه</a></li>
+                                <li><a href="#" class="">منوی دلخواه</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <div class="footer__title">
+                                <h3>منوی خدمات</h3>
+                            </div>
+                            <ul class="footer__list">
+                                <li><a href="#" class="">بلاگ</a></li>
+                                <li><a href="cart.html" class="">سبد خرید</a></li>
+                                <li><a href="#" class="">لیست سفارشی</a></li>
+                                <li><a href="#" class="">لورم اپیسوم</a></li>
+                                <li><a href="login-register.html" class="">حساب کاربری من</a></li>
+                                <li><a href="#" class="">فروشگاه</a></li>
+                                <li><a href="#" class="">منوی دلخواه</a></li>
+                                <li><a href="#" class="">منوی دلخواه</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="">
+                        <ul class="social-links">
+                            <li>
+                                <a href="" target="_blank" class="Facebook" title="Facebook">
+                                    <i class="fa fa-telegram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="Twitter" title="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="Instagram" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="Vimeo" title="Vimeo">
+                                    <i class="fab fa-vimeo-v"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="Behance" title="Behance">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="Foursquare" title="Foursquare">
+                                    <i class="fab fa-foursquare"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="" title="">
+                                    <i class="fab fa-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="moveUp__box">
+                        <a href="#top-body" class=""><span><i class="fa fa-angle-up"></i></span></a>
+
+                    </div>
+                    <div class="copy-right">
+                        <p class="">
+                            این وبسایت صرفا جهت نمونه کار است.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/libraries/swiper.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/spa.js" type="module"></script>
+
+</body>
+
+</html>

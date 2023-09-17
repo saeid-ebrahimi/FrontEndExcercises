@@ -1,0 +1,159 @@
+main {
+    width: 100%;
+    min-height: 115vh;
+    height: 150vh;
+    max-height: 100vh;
+    padding: 5rem 0;
+}
+
+
+.main__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    width: calc(50% - 1.5rem);
+    height: 100%;
+    margin-left: 1.5rem;
+}
+
+.login__wrapper {
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.login__title {
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.login__wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.login__wrapper form>div:not(.btns__box) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.login__wrapper form>div label{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: lighter;
+}
+.login__wrapper form>div label span:last-child{
+    color: var(--red);
+}
+
+.login__wrapper form>div input {
+    outline: none;
+    border: 1px solid #e6e6e6;
+    padding: 1.5rem;
+}
+
+.btns__box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btns__box button{
+    padding: 1.5rem 3rem ;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--yellow);
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.btns__box button:hover{
+    filter: brightness(90%);
+
+}
+
+.btns__box .remmber{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.forget__box{
+    color: #444;
+    transition: all 0.5s;
+}
+
+.forget__box:hover {
+    color: var(--yellow);
+}
+
+.register {
+    width: calc(50% - 1.5rem);
+    margin-right: 1.5rem;
+    height: 100%;
+}
+
+.privecy__box{
+    width: 100%;
+    text-align: justify;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+/* Responsive */
+@media only screen and (max-width: 75em) {
+
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 62em) {
+    .login-register__page {
+        min-height: 150vh;
+    }
+
+
+    .login-register__page--wrapper {
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .register {
+        width: 80%;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 48em) {
+    .login {
+        width: 100%;
+    }
+
+    .register {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {}

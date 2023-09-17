@@ -1,0 +1,22 @@
+/* BASE */
+@import url(base/_variable.css);
+@import url(base/_font-face.css);
+@import url(base/_reset.css);
+@import url(base/_utilities.css);
+
+/* Components */
+@import url(components/_menu.css);
+@import url(components/_cards.css);
+
+/* Layout */
+@import url(layouts/_blog.css);
+@import url(layouts/_header.css);
+@import url(layouts/_newCourses.css);
+@import url(layouts/_introCourses.css);
+@import url(layouts/_propertyCourses.css);
+@import url(layouts/_aboutUs.css);
+@import url(layouts/__footer.css);
+
+
+
+
