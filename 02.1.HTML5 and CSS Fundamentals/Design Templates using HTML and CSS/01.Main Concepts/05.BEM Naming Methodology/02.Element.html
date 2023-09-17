@@ -1,10 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Element in BEM</title>
+    <style>
+        /*  we should use only class name to style elements and we cannot use nested or div.classname selectors*/
+        .article__banner{
+
+        }
+        .article__description{
+
+        }
+        .article__heading{
+
+        }
+        .article__info{
+
+        }
+    </style>
 </head>
 <body>
-$END$
+<!-- element is part of a block that don't have standalone meaning and semantically tied to its block
+    we use block__element and if element name is more than one word block__element-name
+ -->
+<article class="article">
+    <img src="" class="article__banner" alt="">
+    <div class="article-content">
+        <h2 class="article__heading"></h2>
+        <p class="article__description"></p>
+        <p class="article__info"></p>
+        <button class="article__btn"></button>
+    </div>
+</article>
 </body>
 </html>

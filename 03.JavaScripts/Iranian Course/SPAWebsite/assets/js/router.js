@@ -1,4 +1,4 @@
-const pageTitle = "SPA Site"
+const home = "/SPAWebsite"
 const router = {
     404: {
         template:"./404.html",

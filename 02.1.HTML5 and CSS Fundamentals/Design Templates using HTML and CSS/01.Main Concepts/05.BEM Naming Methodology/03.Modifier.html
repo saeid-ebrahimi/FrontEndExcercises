@@ -1,10 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modifier</title>
+    <style>
+        /*  we can use nested or div.classname selectors for modifiers*/
+        body{
+            font-family: "Segoe UI", sans-serif;
+        }
+        .navigation{
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #282A35;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        .menu__item{
+            margin: 2rem;
+            font-size: 1.7rem;
+            line-height: 2.2rem;
+            padding: 1rem;
+        }
+        .menu__link{
+            color: #fff;
+            text-decoration: none;
+
+        }
+        .menu__item--active{
+            background-color: #65adea;
+            border-radius: 1rem;
+        }
+        .comment{
+            border: 2px solid #6ea3fb;
+            margin:1rem;
+            width:20rem;
+            border-radius: .5rem;
+            padding: 0.8rem;
+            background-color: #a4c4f8;
+        }
+
+        .comment__user-name{
+            margin: 0;
+         }
+        /*  we can use nested or div.classname selectors for modifiers*/
+        .comment.comment--dark{
+            border: 2px solid #848db1;
+            background-color: #282A35;
+            color: white;
+        }
+        .comment.comment--dark h2{
+            color: #65adea;
+        }
+        .comment__user-name--larger{
+            font-size: 2rem;
+        }
+
+    </style>
 </head>
 <body>
-$END$
+<!--  Flags on blocks or elements Use them to change appearance, behavior or state-->
+<nav class="navigation">
+    <ul class="menu">
+        <li class="menu__item menu__item--active"><a href="" class="menu__link ">Home</a></li>
+        <li class="menu__item"><a href="" class="menu__link">About Us</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Services</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Testimonial</a></li>
+    </ul>
+</nav>
+<div class="comment comment--dark">
+    <h2 class="comment__user-name comment__user-name--larger">Saeid</h2>
+    <p class="comment__body">Thanks for Advice</p>
+    <small class="comment__date">9/5/2023</small></div>
 </body>
 </html>

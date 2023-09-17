@@ -1,10 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Block in BEM</title>
+    <style>
+        /*  we should use only class name to style blocks and we cannot use nested or div.classname selectors*/
+        .header{
+
+        }
+        .top-header{
+
+        }
+        .top-footer{
+
+        }
+    </style>
 </head>
 <body>
-$END$
+<!--blocks are standalone entity and meaningful parts.
+  naming blocks in BEM is as .classname and for more than one word we can use hyphen to separate.
+   for ex. main-section -->
+    <header class="header">
+        <div class="top-header">
+            <div class="logo"></div>
+            <div class="menu"></div>
+            <button class="contact">Contact Us</button>
+        </div>
+        <div class="bottom-header"></div>
+    </header>
+<main class="main">
+    <article class="main-article">
+        <section class="first-section"></section>
+        <section class="second-section"></section>
+        <section class="third-section"></section>
+    </article>
+
+</main>
+<aside class="aside"></aside>
+<footer class="footer">
+    <div class="top-footer"></div>
+    <div class="bottom-footer"></div>
+</footer>
 </body>
 </html>

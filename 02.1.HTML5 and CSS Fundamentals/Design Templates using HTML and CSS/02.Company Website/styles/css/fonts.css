@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../../assets/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../../assets/fonts/Archivo/Archivo-Black.ttf") format("truetype");
+}

@@ -18,8 +18,9 @@ function urlRoutes(event){
 async function locationHandler(){
     const loc = window.location.pathname;
     console.log(loc)
-    const home = "/SPA Website"
-    const path = loc.replace(home,"").replace(".html", "")
+    // const home = "/SPAWebsite"
+    // let path = loc.replace(home,"").replace(".html", "")
+    const path = loc
     console.log(path)
     const route = router[path] || router[404]
     // console.log(route)
