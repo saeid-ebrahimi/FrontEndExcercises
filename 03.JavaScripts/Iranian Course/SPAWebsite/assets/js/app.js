@@ -1,6 +1,6 @@
-const menuIconHumber = document.querySelector('.menu__icon')
-const menuIconClose = document.querySelector('.icon__close')
-const menuBaskitIcon = document.querySelector('.menu__baskit')
+var menuIconHumber = document.querySelector('.menu__icon')
+var menuIconClose = document.querySelector('.icon__close')
+var menuBaskitIcon = document.querySelector('.menu__baskit')
 
 function openMenu() {
   const menuMobile = document.querySelector('.menu-mobile')

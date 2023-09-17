@@ -1,4 +1,3 @@
-const home = "/SPAWebsite"
 const router = {
     404: {
         template:"./404.html",
@@ -10,7 +9,7 @@ const router = {
     },
     "/blog":{
         template: "./blog.html",
-        title: "بلاگ ها"
+        title: "بلاگ"
     },
     "/courses":{
         template: "./courses.html",
