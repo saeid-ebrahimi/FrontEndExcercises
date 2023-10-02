@@ -6,16 +6,425 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Camping Web</title>
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/icon.png" type="image/png">
+
     <link rel="stylesheet" href="styles/css/reset.css">
     <link rel="stylesheet" href="styles/css/fonts.css">
+    <link rel="stylesheet" href="styles/css/grid.css">
     <link rel="stylesheet" href="styles/css/app.css">
     <link rel="stylesheet" href="styles/css/responsive.css">
     <script src="scripts/app.js" defer></script>
 
 </head>
 <body>
-  
+<!-- Mobile first Approach in Styling -->
+<header id="header" class="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="nav-wrapper">
+                <a href="#" class="app-logo">
+                    <img src="assets/svgs/logo.svg" alt="camping Web" class="app-log_img">
+                </a>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link menu__link--active">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link ">Destination</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Near Me</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Events</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Blogs</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Gallery</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">About</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-menu">
+                <h2 class="nav-menu__title">Camping Website</h2>
+                <ul class="mobile-menu">
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link mobile-menu__link--active">Home</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">Destination</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">Near Me</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">Events</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">Blogs</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">Gallery</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">About</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#" class="mobile-menu__link">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="nav-menu__links">
+                    <a href="#" class="nav-menu__link ">Sign Up</a>
+                    <a href="#" class="nav-menu__link ">Sign In</a>
+                </div>
+            </div>
+            <div class="nav__links">
+                <a href="#" class="nav__link">Sign Up</a>
+                <a href="#" class="nav__link nav__link--border">Sign In</a>
+            </div>
+            <div class="nav__btn">
+                <span class="nav__btn-line"></span>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1 class="header-content__title">Find Yourself Outside</h1>
+            <p class="header-content__caption">
+                Book unique camping experiences on over 300,000 campsites, cabins, RV parks, public parks and more.
+            </p>
+            <a href="#" class="btn header-content__link">Discover</a>
+        </div>
+    </div>
+</header>
+<main  class="main">
+    <div class="container">
+        <section class="services">
+            <div class="service">
+                <img src="assets/svgs/fire.svg" alt="Camping & Day Use" class="service_image">
+                <h2 class="service__title">Camping & Day Use</h2>
+                <p class="service__caption">Return to your favorite spot or discover a new one that’s right for you.</p>
+            </div>
+            <div class="service">
+                <img src="assets/svgs/tickets.svg" alt="Tours & Tickets" class="service_image">
+                <h2 class="service__title">Tours & Tickets</h2>
+                <p class="service__caption">Reserve tours and tickets to participate in events.</p>
+            </div>
+            <div class="service">
+                <img src="assets/svgs/paper.svg" alt="Permits" class="service_image">
+                <h2 class="service__title">Permits</h2>
+                <p class="service__caption">Obtain permits for access to high-demand locations.</p>
+            </div>
+            <div class="service">
+                <img src="assets/svgs/fish.svg" alt="Recreation Activities" class="service_image">
+                <h2 class="service__title">Recreation Activities</h2>
+                <p class="service__caption">Find the best spots for hunting, fishing & recreational shooting.</p>
+            </div>
+        </section>
+        <section class="destinations">
+            <img src="assets/svgs/destination.svg" alt="destinations" class="destinations__logo">
+            <h2 class="descriptions__title">Explore Destinations & Activities</h2>
+            <div class="destinations__places">
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image1.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">Trickle Creek Ranch</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image2.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon place__like-icon--fill">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">Dragonfly Tiny Cabin</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image3.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">Tiny Cabin in the mountains</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image4.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">The Stung</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image5.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">Luxury Tiny Beach Cabin</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image6.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">The Summit Cabin</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image7.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon place__like-icon--fill">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">Kindred Spirits Cabin</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image8.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">The Hermitage Cabin</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image9.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">Red Lifeguard Stand</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image10.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">The Tree House</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image11.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">Barrier island elevated tent</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <div class="place">
+                    <div class="place__banner">
+                        <img src="assets/images/image12.jpg" alt="" class="place__img">
+                        <div class="place__like">
+                            <img src="assets/svg-icons/heart-outline.svg" alt="" class="place__like-icon">
+                        </div>
+                        <div class="place__price">
+                            <p class="place__price-text">$36/night</p>
+                        </div>
+                    </div>
+                    <h3 class="place__title">Nino-van on the Shore</h3>
+                    <p class="place__caption">Book unique camping experiences on over 300,000 campsites.</p>
+                    <a href="#" class="btn place__link">Read More</a>
+                </div>
+                <a href="" class="btn destinations__btn">View All</a>
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="newsletter__content">
+                <h2 class="newsletter__title">Let's Stay in Touch</h2>
+                <p class="newsletter__caption">Get travel planning ideas, helpful tips, and stories from our visitors delivered right to your inbox.</p>
+                <div class="newsletter__email-box">
+                    <form class="newsletter__form" method="post">
+
+                        <label class="newsletter__email-label" for="email">
+                            <svg class="newsletter__email-icon" xmlns="http://www.w3.org/2000/svg" width="24.242" height="17.746" viewBox="0 0 24.242 17.746">
+                                <path id="Path_908" data-name="Path 908" d="M26.215,17.058H8.027A3.03,3.03,0,0,0,5,20.085V31.777A3.031,3.031,0,0,0,8.027,34.8H26.215a3.031,3.031,0,0,0,3.027-3.027V20.085A3.03,3.03,0,0,0,26.215,17.058Zm-18.188.857H26.215a2.168,2.168,0,0,1,1.829,1.007l-9.328,8.81a2.354,2.354,0,0,1-3.189,0L6.2,18.923A2.169,2.169,0,0,1,8.027,17.915ZM5.878,32.062a2.207,2.207,0,0,1-.021-.285V20.085a2.163,2.163,0,0,1,.021-.285l6.491,6.131Zm20.337,1.885H8.027A2.168,2.168,0,0,1,6.2,32.94l6.8-6.419,1.944,1.835a3.22,3.22,0,0,0,4.366,0l1.943-1.835,6.8,6.418A2.167,2.167,0,0,1,26.215,33.947Zm2.169-13.862V31.777a2.2,2.2,0,0,1-.021.285l-6.491-6.131L28.364,19.8A2.251,2.251,0,0,1,28.384,20.085Z" transform="translate(-5 -17.058)" fill="#8d8d8d"/>
+                            </svg>
+                            <input placeholder="Email Address" type="email" id="email" class="newsletter__input">
+                        </label>
+                        <button class="newsletter__submit" type="submit">
+                            <svg class="newsletter__submit-icon" xmlns="http://www.w3.org/2000/svg" width="24.162" height="18.23" viewBox="0 0 24.162 18.23">
+                                <path id="Path_909" data-name="Path 909" d="M9.778,15.82,6.954,17.7a.55.55,0,0,1-.816-.439V13.121l11.546-8.66L3.88,11.8.3,9.356A.748.748,0,0,1,.491,8.039L23.709-.37c.314-.126.565.251.377.565L13.606,17.514a.773.773,0,0,1-1.067.188Z" transform="translate(0.012 0.395)" fill="#fff" fill-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="newsletter__banner">
+                <img  class="newsletter__img" src="assets/images/tent.png" alt="newsletter image">
+            </div>
+        </section>
+        <a href="#header" class="scroll-up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18.68" height="22.175" viewBox="0 0 18.68 22.175">
+                <path id="Path_958" data-name="Path 958" d="M22.175,9.358a1.43,1.43,0,0,0-1.43-1.43H5.063l5.813-5.42A1.43,1.43,0,1,0,8.923.421L.455,8.311a1.43,1.43,0,0,0,0,2.091L8.923,18.3A1.43,1.43,0,1,0,10.875,16.2L5.063,10.788H20.746A1.43,1.43,0,0,0,22.175,9.358Z" transform="translate(18.68) rotate(90)" fill="#e76f51"/>
+            </svg>
+        </a>
+    </div>
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__left">
+                <div class="footer-content">
+                    <h2 class="footer__title">Hip camp is everywhere you want to camp.</h2>
+                    <p class="footer-content__description">Discover unique experiences on ranches, nature preserves, farms, vineyards, and public campgrounds across the U.S. Book tent camping, treehouses, cabins, yurts, primitive backcountry sites, car camping, airstreams, tiny houses, RV camping, glamping tents and more.</p>
+                </div>
+                <div class="footer-app">
+                    <h2 class="footer__title">Download Our App</h2>
+                    <a class="footer-app__link" href="#">
+                        <img class="footer-app__img"  src="assets/images/app-store-apple.jpg" alt="App Store" >
+                    </a>
+                    <a class="footer-app__link" href="#">
+                        <img class="footer-app__img"  src="assets/images/google-play.jpg" alt="Google Play" >
+                    </a>
+                </div>
+            </div>
+            <div class="footer__right">
+                <div class="footer-list">
+                    <h2 class="footer__title">Get to Know Us</h2>
+                    <ul class="footer-menu">
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">About Us</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Rules & Reservation Policies</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Accessibility</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Media Center</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Site Map</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h2 class="footer__title">Plan with Us</h2>
+                    <ul class="footer-menu">
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Find Trip Inspiration</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Build a Trip</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Buy a Pass</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Enter a Lottery</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h2 class="footer__title">Let Us Help You</h2>
+                    <ul class="footer-menu">
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Your Account</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Your Reservations</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Contact Us</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Help Center</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Submit Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-app--mobile">
+                <h2 class="footer__title">Download Our App</h2>
+                <a class="footer-app__link" href="#">
+                    <img class="footer-app__img"  src="assets/images/app-store-apple.jpg" alt="App Store" >
+                </a>
+                <a class="footer-app__link" href="#">
+                    <img class="footer-app__img"  src="assets/images/google-play.jpg" alt="Google Play" >
+                </a>
+            </div>
+        </div>
+        <p class="footer-copy-write">© 2023. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
     src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
 }
 @font-face {
-    font-family: "Roboto";
+    font-family: "Roboto Medium";
     src: url("../../assets/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Roboto";
+    font-family: "Archivo";
     src: url("../../assets/fonts/Archivo/Archivo-Black.ttf") format("truetype");
 }

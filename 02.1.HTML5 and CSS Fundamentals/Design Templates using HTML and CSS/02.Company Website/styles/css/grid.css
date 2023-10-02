@@ -1,0 +1,35 @@
+/* in mobile first better to make container 100%*/
+.container{
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container{
+        width: 54rem;
+    }
+}
+@media (min-width: 768px) {
+    .container{
+        width: 74rem;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        width: 96rem;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        width: 114rem;
+    }
+}
+
+@media (min-width: 1400px){
+    .container{
+        width: 137rem;
+    }
+}
