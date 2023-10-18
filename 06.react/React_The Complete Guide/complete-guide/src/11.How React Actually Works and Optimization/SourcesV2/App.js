@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 
 import './App.css';
 import DemoList from './components/Demo/DemoList';
@@ -10,10 +10,10 @@ function App() {
   const changeTitleHandler = useCallback(() => {
     setListTitle('New Title');
   }, []);
-
+ const listItems = useMemo(() => ([5, 3, 1, 10, 9]),[]); // to memoize reference types
   return (
     <div className='app'>
-      <DemoList title={listTitle} items={[5, 3, 1, 10, 9]} />
+      <DemoList title={listTitle} items={listItems} />
       <Button onClick={changeTitleHandler}>Change List Title</Button>
     </div>
   );

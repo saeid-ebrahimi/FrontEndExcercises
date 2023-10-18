@@ -1,23 +1,32 @@
-import classes from "../Login/Login.module.css";
-import React from "react";
 
-const Input = (props) => {
+import React, {useRef, useImperativeHandle} from "react";
+import classes from "./Input.module.css";
+const Input = React.forwardRef((props, ref) => {
+    const inputRef = useRef();
+    const activate = () => {
+        inputRef.current.focus();
+    }
+    useImperativeHandle(ref, () => {
+        return {
+            focus: activate
+        }
+    })
     return(
         <div
             className={`${classes.control} ${
-                emailIsValid === false ? classes.invalid : ''
+                props.isValid === false ? classes.invalid : ''
             }`}
         >
-            <label htmlFor="email">E-Mail</label>
+            <label htmlFor={props.id}>{props.label}</label>
             <input
-                type="email"
-                id="email"
-                value={emailState.value}
-                onChange={emailChangeHandler}
-                onBlur={validateEmailHandler}
+                type={props.type}
+                id={props.id}
+                value={props.value}
+                onChange={props.onChange}
+                onBlur={props.onBlur}
+                ref={inputRef}
             />
         </div>
-        <input type={props.type} id={props.id} value={props.value} onChange={props.onChange} onBlur={props.onBlur}>
     )
-}
+})
 export default Input;

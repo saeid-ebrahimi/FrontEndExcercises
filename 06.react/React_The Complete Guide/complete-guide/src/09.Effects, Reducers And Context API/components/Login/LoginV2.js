@@ -14,7 +14,7 @@ const Login = (props) => {
   useEffect(() => {
     const identifier = setTimeout(() => {
       setFormIsValid(enteredEmail.includes("@") && enteredPassword.trim().length > 6);
-    }, 1000)
+    }, 500);
     return () => {
       console.log("Cleaning Up")
       clearTimeout(identifier);

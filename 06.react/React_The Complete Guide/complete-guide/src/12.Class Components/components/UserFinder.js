@@ -1,14 +1,50 @@
-import { Fragment, useState, useEffect } from 'react';
-
+import { Fragment, Component  } from 'react';
+// import {useState, useEffect} from "react";
+import ErrorBoundary from "./ErrorBoundary";
 import Users from './Users';
 import classes from './UserFinder.module.css';
+import UsersContext from "../store/users-context";
 
-const DUMMY_USERS = [
-  { id: 'u1', name: 'Max' },
-  { id: 'u2', name: 'Manuel' },
-  { id: 'u3', name: 'Julie' },
-];
+class UserFinder extends Component{
+  static contextType = UsersContext; // required to use context, and you cannot use it to link to multiple contexts
+  constructor() {
+    super();
+    this.state = {
+      filteredUsers: [],
+      searchTerm: ""
+    }
+  }
+  componentDidMount() {
+    this.setState({filteredUsers: this.context.users});
+  }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevState.searchTerm !== this.state.searchTerm){
+      this.setState(
+          {filteredUsers: this.context.filter((user) => user.name.includes(this.state.searchTerm))})
+    }
+  }
+  componentWillUnmount() {
+    console.log("component will unmounted")
+  }
+
+  searchChangeHandler(event){
+    this.setState({searchTerm: event.target.value });
+  }
+  render() {
+    return (
+        <Fragment>
+          <div className={classes.finder}>
+            <input type='search' onChange={this.searchChangeHandler.bind(this)} />
+          </div>
+          <ErrorBoundary>
+            <Users users={this.state.filteredUsers} />
+          </ErrorBoundary>
+        </Fragment>
+    );
+  }
+}
+/*
 const UserFinder = () => {
   const [filteredUsers, setFilteredUsers] = useState(DUMMY_USERS);
   const [searchTerm, setSearchTerm] = useState('');
@@ -32,5 +68,5 @@ const UserFinder = () => {
     </Fragment>
   );
 };
-
+*/
 export default UserFinder;

@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "./05.Styling/index.css"
-import App from "./05.Styling/App"
+import "./16.Food App Project With Send Request/index.css";
+import App from "./16.Food App Project With Send Request/App";
 import reportWebVitals from './reportWebVitals';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <App />
   </React.StrictMode>
 );
 
