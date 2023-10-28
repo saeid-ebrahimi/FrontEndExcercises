@@ -1,8 +1,6 @@
 import { createStore,} from 'redux';
-import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = {counter:0, showCounter:true};
-
 const counterReducer = (state = initialState , action)  => {
     if (action.type === 'increment'){
         // state.counter++; // it's wrong way , never mutate states in raw Redux

@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "./16.Food App Project With Send Request/index.css";
-import App from "./16.Food App Project With Send Request/App";
+import "./19.SPA Using React Router/demo/index.css";
+import App from "./19.SPA Using React Router/demo/App";
 import reportWebVitals from './reportWebVitals';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <App />
+      <App></App>
   </React.StrictMode>
 );
 
