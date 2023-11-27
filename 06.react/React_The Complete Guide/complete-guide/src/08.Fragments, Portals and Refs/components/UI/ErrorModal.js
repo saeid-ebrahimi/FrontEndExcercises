@@ -6,7 +6,7 @@ import classes from "./ErrorModal.module.css"
 const Backdrop = (props) => {
     return <div className={classes.backdrop} onClick={props.onConfirm}></div>
 }
-// Add Portal to port a component in somewhere we wants
+// Add Portal to port a components in somewhere we wants
 const ModalOverlay = (props) => {
     return (
         <Card className={classes.modal}>

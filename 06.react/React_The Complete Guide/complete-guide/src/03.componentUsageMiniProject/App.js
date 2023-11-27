@@ -16,7 +16,7 @@ const concepts = [
     title: 'State',
     image: stateImage,
     description:
-      'State is data that may change over time. As it changes, the UI should be updated to reflect the updated data. Each component can maintain its own store and multiple components can share store.',
+      'State is data that may change over time. As it changes, the UI should be updated to reflect the updated data. Each components can maintain its own store and multiple components can share store.',
   },
   {
     title: 'Events',

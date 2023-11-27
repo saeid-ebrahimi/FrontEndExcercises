@@ -4,9 +4,7 @@ import EventsNavigation from "../components/EventsNavigation";
 const EventRootLayout = () => {
     return <>
         <EventsNavigation/>
-        <main>
-            <Outlet/>
-        </main>
+        <Outlet/>
     </>
 };
 export default EventRootLayout;

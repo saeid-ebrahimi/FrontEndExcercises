@@ -1,3 +1,4 @@
+import React from "react";
 import CartIcon from "../../Cart/CartIcon";
 import CartContext from "../../../store/cart-context";
 import classes from "./HeaderCartBtn.module.css"

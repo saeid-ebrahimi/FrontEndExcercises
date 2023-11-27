@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "./Cart.module.css"
 import Modal from "../UI/Modal/Modal";
 import {useContext, useState, Fragment} from "react";

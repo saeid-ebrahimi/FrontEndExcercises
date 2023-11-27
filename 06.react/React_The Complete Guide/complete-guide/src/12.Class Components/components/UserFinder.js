@@ -25,7 +25,7 @@ class UserFinder extends Component{
     }
   }
   componentWillUnmount() {
-    console.log("component will unmounted")
+    console.log("components will unmounted")
   }
 
   searchChangeHandler(event){
