@@ -5,142 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e36faf2c-1258-406f-8119-bb03647d7031" name="Changes" comment="some minor changes to the tutorial files">
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/article-details-large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/article-details-small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/author.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/description.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/down-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/download-background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/download-ebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/header-background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/header-ebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/screen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/up-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/scss/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/scss/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-v4compatibility.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-v4compatibility.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/article-details-large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/article-details-small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/audience-lightbox.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/audience.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/down-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/header-background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/header-slide-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/header-slide-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/header-slide-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/instructor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/invitation-background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/screen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/testimonial-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/testimonial-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/testimonial-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/testimonial-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/up-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/video-preview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/scss/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/scss/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-v4compatibility.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-v4compatibility.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/brad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/intro-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/screen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/js/lightbox-plus-jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/scss/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/scss/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-v4compatibility.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-v4compatibility.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/css/fontawesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/scss/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/scss/fontawesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/scss/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-v4compatibility.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-v4compatibility.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/Site-Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/sara.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07.Sara Portfolio Website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07.Sara Portfolio Website/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07.Sara Portfolio Website/scss/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/scss/bootstrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07.Sara Portfolio Website/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/scss/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +64,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/FrontEndExcercises/05.bootstrap",
+    "last_opened_file_path": "C:/FrontEndExcercises/05.bootstrap/07.Sara Portfolio Website",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -206,11 +77,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\FrontEndExcercises\05.bootstrap\06.Corso Website" />
+      <recent name="C:\FrontEndExcercises\05.bootstrap\07.Sara Portfolio Website" />
+      <recent name="C:\FrontEndExcercises\05.bootstrap\07.Sara Portfolio Website\images" />
       <recent name="C:\FrontEndExcercises\05.bootstrap" />
+      <recent name="C:\FrontEndExcercises\05.bootstrap\06.Corso Website" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\07.Customize" />
-      <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\07.Customize\js" />
-      <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\08.Mini Projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\FrontEndExcercises\05.bootstrap\05.Ebook Website" />
@@ -244,7 +115,7 @@
       <workItem from="1701200893992" duration="8580000" />
       <workItem from="1701258834023" duration="13258000" />
       <workItem from="1701326455017" duration="16108000" />
-      <workItem from="1701410277724" duration="329000" />
+      <workItem from="1701410277724" duration="12846000" />
     </task>
     <task id="LOCAL-00001" summary="some minor changes to the tutorial files">
       <created>1685360020601</created>
