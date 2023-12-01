@@ -87,6 +87,39 @@
       <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-solid-900.woff2" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-v4compatibility.ttf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-v4compatibility.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/brad.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/intro-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/project6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/images/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/js/lightbox-plus-jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/scss/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-v4compatibility.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07.Sara Portfolio Website/webfonts/fa-v4compatibility.woff2" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/css/bootstrap.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/css/fontawesome.css" afterDir="false" />
@@ -152,25 +185,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/FrontEndExcercises/05.bootstrap/06.Corso Website&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.webOptions&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/FrontEndExcercises/05.bootstrap",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.webOptions",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\FrontEndExcercises\05.bootstrap\06.Corso Website" />
@@ -211,6 +244,7 @@
       <workItem from="1701200893992" duration="8580000" />
       <workItem from="1701258834023" duration="13258000" />
       <workItem from="1701326455017" duration="16108000" />
+      <workItem from="1701410277724" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="some minor changes to the tutorial files">
       <created>1685360020601</created>
