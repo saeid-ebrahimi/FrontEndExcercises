@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="27fe4285-2f66-4396-8ccb-6ee2a31ebd9d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/NewsletterSignup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/NewsletterSignup.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Newsletter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/data/event.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/data/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/data/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/events.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/routes/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/routes/events.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/util/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/util/errors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/backend/util/validation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/AuthForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/AuthForm.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/EventForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/EventForm.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/EventItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/EventItem.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/EventsList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/EventsList.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/EventsNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/EventsNavigation.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/MainNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/MainNavigation.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/NewsletterSignup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/NewsletterSignup.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/PageContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/components/PageContent.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/Authentication.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/EditEvent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/Error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/EventDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/Events.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/EventsRoot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/Logout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/NewEvent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/Newsletter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/pages/Root.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/20.Authentication/frontend/src/util/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/components/MainNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/components/MainNavigation.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/components/PostItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/components/PostItem.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/components/PostList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/components/PostList.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/pages/Blog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/pages/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/pages/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/21.Deploying React App/pages/Root.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/The Ultimate React Course.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/01.First App/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/01.First App/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/02.Pure React App/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/02.Pure React App/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/pizzas/focaccia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/pizzas/funghi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/pizzas/margherita.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/pizzas/prosciutto.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/pizzas/salamino.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/pizzas/spinaci.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/03.pizza-menu/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/04.Developer Card/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/04.Developer Card/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/04.Developer Card/SaeidImage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/04.Developer Card/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/04.Developer Card/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/05.Steps/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/05.Steps/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/05.Steps/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/05.Steps/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/05.Steps/vanilla.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/06.Date Counter/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/06.Date Counter/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/06.Date Counter/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/06.Date Counter/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/07.Travel List/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/07.Travel List/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/07.Travel List/components/Form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/07.Travel List/components/Item.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/07.Travel List/components/Logo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/07.Travel List/components/PackingList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/07.Travel List/components/Stats.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/07.Travel List/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/07.Travel List/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/03.componentUsageMiniProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/03.componentUsageMiniProject/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/08.Fragments, Portals and Refs/components/UI/ErrorModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/08.Fragments, Portals and Refs/components/UI/ErrorModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/12.Class Components/components/UserFinder.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/12.Class Components/components/UserFinder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/AppV1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/AppV1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/components/MainNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/components/MainNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/ProductDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/ProductDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Root.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/backend/events.json" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/backend/events.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/backend/routes/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/backend/routes/events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventsNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventsNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/MainNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/MainNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EditEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EditEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EventDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EventDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Events.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EventsRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EventsRoot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/NewEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/NewEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Root.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_The Complete Guide/complete-guide/src/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2XcmvsojiU0vjVQsFrub6jtupHZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/FrontEndExcercises/06.react/React_The Complete Guide/complete-guide",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\FrontEndExcercises\06.react\The Ultimate React Course\src\05.Steps" />
+      <recent name="C:\FrontEndExcercises\06.react\The Ultimate React Course\src\03.pizza-menu\public" />
+      <recent name="C:\FrontEndExcercises\06.react\The Ultimate React Course\src\03.pizza-menu\src" />
+      <recent name="C:\FrontEndExcercises\06.react\The Ultimate React Course\src\01.First App" />
+      <recent name="C:\FrontEndExcercises\06.react\The Ultimate React Course" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\FrontEndExcercises\06.react\The Ultimate React Course\src\04.Developer Card" />
+      <recent name="C:\FrontEndExcercises\06.react\The Ultimate React Course\src\03.pizza-menu\public" />
+      <recent name="C:\FrontEndExcercises\06.react\The Ultimate React Course\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27fe4285-2f66-4396-8ccb-6ee2a31ebd9d" name="Changes" comment="" />
+      <created>1698936975898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698936975898</updated>
+      <workItem from="1698936977438" duration="3954000" />
+      <workItem from="1699011380043" duration="7307000" />
+      <workItem from="1699084923674" duration="27255000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

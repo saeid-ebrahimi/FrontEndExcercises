@@ -1,0 +1,46 @@
+[debug] [2023-10-31T17:47:17.935Z] ----------------------------------------------------------------------
+[debug] [2023-10-31T17:47:17.937Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\saeid\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-10-31T17:47:17.937Z] CLI Version:   12.7.0
+[debug] [2023-10-31T17:47:17.938Z] Platform:      win32
+[debug] [2023-10-31T17:47:17.938Z] Node Version:  v16.17.0
+[debug] [2023-10-31T17:47:17.938Z] Time:          Tue Oct 31 2023 21:17:17 GMT+0330 (Iran Standard Time)
+[debug] [2023-10-31T17:47:17.939Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-31T17:47:17.941Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-10-31T17:47:17.957Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-31T17:47:17.957Z] > authorizing via signed-in user (saeidebrahimiapply@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\FrontEndExcercises\06.react\React_The Complete Guide\complete-guide\src
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[debug] [2023-10-31T17:47:21.132Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: read ECONNRESET
+[warn] !  Unable to fetch the CLI MOTD and remote config. 
+[debug] [2023-10-31T17:47:21.133Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-10-31T17:49:30.169Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-10-31T17:49:30.169Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"deploy-first-react-app","name":"deploy-first-react-app"}
+[debug] [2023-10-31T17:49:30.955Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 403
+[debug] [2023-10-31T17:49:30.955Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 403 (Forbidden)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}\n  </style>\n  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>\n  <p><b>403.</b> <ins>That’s an error.</ins>\n  <p>Your client does not have permission to get URL <code>/v1/projects</code> from this server.  <ins>That’s all we know.</ins>\n"
+[debug] [2023-10-31T17:49:31.536Z] FirebaseError: Unable to parse JSON: SyntaxError: Unexpected token < in JSON at position 0
+    at RetryOperation._fn (C:\Users\saeid\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:257:39)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.

@@ -1,0 +1,35 @@
+{
+  "name": "ebook-website",
+  "version": "1.0.0",
+  "description": "Simple workflow for working with and customizing Bootstrap 5",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass --no-source-map scss:css",
+    "sass:watch": "sass --no-source-map --watch scss:css"
+  },
+  "author": "Brad Traversy",
+  "license": "MIT",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "bootstrap": "^5.2.3",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "anymatch": "^3.1.3",
+    "binary-extensions": "^2.2.0",
+    "braces": "^3.0.2",
+    "chokidar": "^3.5.3",
+    "fill-range": "^7.0.1",
+    "glob-parent": "^5.1.2",
+    "immutable": "^4.3.0",
+    "is-binary-path": "^2.1.0",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "is-number": "^7.0.0",
+    "normalize-path": "^3.0.0",
+    "picomatch": "^2.3.1",
+    "readdirp": "^3.6.0",
+    "source-map-js": "^1.0.2",
+    "to-regex-range": "^5.0.1"
+  }
+}

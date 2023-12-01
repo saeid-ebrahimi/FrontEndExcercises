@@ -5,59 +5,109 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e36faf2c-1258-406f-8119-bb03647d7031" name="Changes" comment="some minor changes to the tutorial files">
-      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/01.grid container properties/01.grid Display-templateRowColumns-gap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/01.grid container properties/01.grid Display-templateRowColumns-gap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/01.grid container properties/02.repeat and Fractional unit.css" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/01.grid container properties/02.repeat and Fractional unit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/article-details-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/article-details-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/author.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/description.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/down-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/download-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/download-ebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/header-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/header-ebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/testimonial-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/images/up-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/scss/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-v4compatibility.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.Ebook Website/webfonts/fa-v4compatibility.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/article-details-large.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/article-details-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/audience-lightbox.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/audience.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/down-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/header-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/header-slide-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/header-slide-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/header-slide-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/instructor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/invitation-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/partner-logo-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/testimonial-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/testimonial-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/testimonial-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/testimonial-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/up-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/images/video-preview.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/scss/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-v4compatibility.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06.Corso Website/webfonts/fa-v4compatibility.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/css/fontawesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/scss/fontawesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/scss/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-v4compatibility.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap Website Tutorials/07.Customize/webfonts/fa-v4compatibility.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/03.componentUsageMiniProject/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/03.componentUsageMiniProject/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/08.Fragments, Portals and Refs/components/UI/ErrorModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/08.Fragments, Portals and Refs/components/UI/ErrorModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/10.Food App Project/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/10.Food App Project/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/12.Class Components/components/UserFinder.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/12.Class Components/components/UserFinder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Cart/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Cart/CartIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Cart/CartIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Cart/CartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Cart/CartItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Layout/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Layout/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Layout/HeaderCartBtn/HeaderCartBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Layout/HeaderCartBtn/HeaderCartBtn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Meals/AvailableMeals.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Meals/AvailableMeals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Meals/MealItem/MealItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Meals/MealItem/MealItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Meals/MealItem/MealItemForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Meals/MealItem/MealItemForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Meals/Meals.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Meals/Meals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Meals/MealsSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/Meals/MealsSummary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/UI/Card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/UI/Card/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/UI/Input/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/UI/Input/Input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/UI/Modal/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/components/UI/Modal/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/store/CartProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/16.Food App Project With Send Request/store/CartProvider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/AppV1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/AppV1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/components/MainNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/components/MainNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Error.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/ProductDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/ProductDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Root.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/demo/pages/Root.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/backend/events.json" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/backend/events.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/backend/routes/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/backend/routes/events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventsNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/EventsNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/MainNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/components/MainNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EditEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EditEvent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Error.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EventDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EventDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Events.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EventsRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/EventsRoot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/NewEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/NewEvent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Root.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/19.SPA Using React Router/main project/frontend/src/pages/Root.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../06.react/React_The Complete Guide/complete-guide/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,14 +117,29 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="Sass File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9a31daa3-ffa4-4dd6-bb36-e6ce2ed002a6" />
+        <option name="url" value="https://github.com/annon14/FrontEndExcercises.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -87,39 +152,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/FrontEndExcercises/05.bootstrap/Bootstrap Website Tutorials/07.Customize",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.webOptions",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/FrontEndExcercises/05.bootstrap/06.Corso Website&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.webOptions&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\FrontEndExcercises\05.bootstrap\06.Corso Website" />
+      <recent name="C:\FrontEndExcercises\05.bootstrap" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\07.Customize" />
+      <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\07.Customize\js" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\08.Mini Projects" />
-      <recent name="C:\FrontEndExcercises\05.bootstrap\04.NFT Website\images" />
-      <recent name="C:\FrontEndExcercises\05.bootstrap\04.NFT Website\images\shapes" />
-      <recent name="C:\FrontEndExcercises\05.bootstrap\04.NFT Website\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\FrontEndExcercises\05.bootstrap\05.Ebook Website" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\08.Mini Projects\User List" />
       <recent name="C:\FrontEndExcercises\05.bootstrap" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\04.NFT Website\css" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\04.NFT Website\images\icons" />
-      <recent name="C:\FrontEndExcercises\05.bootstrap\Bootstrap Website Tutorials\02.Layout" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -140,7 +205,12 @@
       <workItem from="1700976679763" duration="2265000" />
       <workItem from="1700979141308" duration="31216000" />
       <workItem from="1701032105045" duration="2899000" />
-      <workItem from="1701067710243" duration="11028000" />
+      <workItem from="1701067710243" duration="14814000" />
+      <workItem from="1701120590976" duration="543000" />
+      <workItem from="1701198769752" duration="1932000" />
+      <workItem from="1701200893992" duration="8580000" />
+      <workItem from="1701258834023" duration="13258000" />
+      <workItem from="1701326455017" duration="16108000" />
     </task>
     <task id="LOCAL-00001" summary="some minor changes to the tutorial files">
       <created>1685360020601</created>
@@ -156,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685360028576</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="some minor changes to the tutorial files">
+      <created>1701110746565</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701110746565</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
