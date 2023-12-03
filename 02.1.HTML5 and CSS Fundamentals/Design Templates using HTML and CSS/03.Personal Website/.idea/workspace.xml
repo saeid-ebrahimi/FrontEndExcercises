@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="956d5b7d-5ef7-445a-8701-6132bd121fa1" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/styles/app.css" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25sDLyM6RrcZ4t06ANbnw2fF8Zi" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images/shapes" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hamidreza\Documents\Project2\images\shapes" />
+      <recent name="C:\Users\Hamidreza\Documents\Project2\images" />
+      <recent name="C:\Users\Hamidreza\Documents\Project2\styles" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hamidreza\Documents\Project2\images\icons" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="956d5b7d-5ef7-445a-8701-6132bd121fa1" name="Changes" comment="" />
+      <created>1646306850121</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646306850121</updated>
+      <workItem from="1646306851980" duration="14134000" />
+      <workItem from="1646410171368" duration="11437000" />
+      <workItem from="1646507191372" duration="11117000" />
+      <workItem from="1646641813730" duration="5661000" />
+      <workItem from="1646665981217" duration="8848000" />
+      <workItem from="1647608853193" duration="5976000" />
+      <workItem from="1647615225638" duration="16000" />
+      <workItem from="1647615442359" duration="2000" />
+      <workItem from="1647616136685" duration="174000" />
+      <workItem from="1647616897303" duration="23000" />
+      <workItem from="1647616939311" duration="4000" />
+      <workItem from="1647616955740" duration="70000" />
+      <workItem from="1647617037330" duration="207000" />
+      <workItem from="1647617255885" duration="57000" />
+      <workItem from="1647617408683" duration="4000" />
+      <workItem from="1647717496499" duration="12220000" />
+      <workItem from="1647885499626" duration="12420000" />
+      <workItem from="1647899925932" duration="3006000" />
+      <workItem from="1648049333256" duration="2254000" />
+      <workItem from="1648055191517" duration="144000" />
+      <workItem from="1648069316303" duration="10624000" />
+      <workItem from="1648081202875" duration="1578000" />
+      <workItem from="1648112714292" duration="298000" />
+      <workItem from="1648461011340" duration="8000" />
+      <workItem from="1648465620811" duration="5479000" />
+      <workItem from="1648495529424" duration="3702000" />
+      <workItem from="1648573659764" duration="2383000" />
+      <workItem from="1648578028456" duration="14774000" />
+      <workItem from="1648627328478" duration="1705000" />
+      <workItem from="1648657779080" duration="2808000" />
+      <workItem from="1648668131877" duration="5609000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

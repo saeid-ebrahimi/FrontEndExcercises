@@ -1,0 +1,278 @@
+@media (min-width: 1400px) {
+    .container {
+        width: 1250px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .home__photo {
+        width: 45rem;
+        height: 45rem;
+    }
+
+    .home {
+        height: 76rem;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .home__photo {
+        width: 38rem;
+        height: 38rem;
+    }
+
+    .home {
+        height: 68rem;
+    }
+
+    .about__cover,
+    .about__content {
+        flex-basis: 50%;
+    }
+
+    .service {
+        padding: 7rem 2rem;
+    }
+
+    .resume-list {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav__logo {
+        font-size: 5rem;
+    }
+
+    .menu__item {
+        margin-right: 2rem;
+    }
+
+    .home__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home__photo {
+        margin: 0 auto;
+        width: 36rem;
+        height: 36rem;
+    }
+
+    .home {
+        margin-top: 6rem;
+        background-image: none;
+        height: auto;
+    }
+
+    .home .row {
+        flex-direction: column-reverse;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about__cover,
+    .about__content {
+        flex-basis: auto;
+    }
+
+    .resume-list__item--active {
+        background-color: var(--primary-color);
+    }
+
+    .resume-list::before,
+    .resume-list__item::before,
+    .resume-content__title::before {
+        content: none;
+    }
+
+    .resume-list__icon {
+        display: none;
+    }
+
+    .resume-list {
+        flex-direction: row;
+        gap: .5rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        min-height: auto;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .resume-list__item {
+        border-radius: 4rem;
+        padding: 1.2rem 3rem;
+        margin-bottom: 0;
+        transition: all 120ms ease-in;
+    }
+
+    .resume-list__text {
+        font-size: 1.6rem;
+        margin: 0;
+        font-family: "Poppins";
+        transition: none;
+    }
+
+    .resume-content {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .contactus__map {
+        display: none;
+    }
+
+    .contact {
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        background-color: var(--section-bg-color);
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        width: 100%;
+        right: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        transition: all 120ms ease-in;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .menu--open {
+        height: 33rem;
+    }
+
+    .menu__item {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .menu__item:first-child {
+        margin-top: 2rem;
+    }
+
+    .nav__toggle-icon {
+        display: flex;
+    }
+
+    .cover {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 10%);
+        z-index: -1;
+        opacity: 0;
+        transition: all 200ms ease-in;
+    }
+
+    .cover--show {
+        opacity: 1;
+        z-index: 99;
+    }
+
+    .home {
+        margin-top: 4rem;
+    }
+
+    .home__photo {
+        width: 34rem;
+        height: 34rem;
+        border-width: 1.5rem;
+    }
+
+    .about__content {
+        padding: 2rem 4rem;
+    }
+
+    .service {
+        padding: 4rem 1rem;
+    }
+
+    .service__icon {
+        width: 6rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .home__title {
+        font-size: 4rem;
+    }
+
+    .home__name {
+        font-size: 2rem;
+    }
+
+    .home__photo {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .about__link {
+        width: 100%;
+    }
+
+    .about__content {
+        padding: 2rem;
+    }
+
+    .service {
+        padding: 5rem 2rem;
+    }
+
+    .service__wave {
+        display: none;
+    }
+
+    .footer__wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .service__wave {
+        display: block;
+    }
+
+    .contact {
+        padding: 4.5rem 2rem;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .home__title {
+        font-size: 3rem;
+    }
+
+    .home__links-wrapper {
+        width: 100%;
+    }
+
+    .home__link {
+        width: 100%;
+    }
+
+    .home__photo {
+        width: 26rem;
+        height: 26rem;
+        border-width: 1rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+}
+
