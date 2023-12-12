@@ -1,0 +1,16 @@
+{
+  "name": "02.better-environment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind:watch": "npx tailwindcss -i input.css -o app.css --watch",
+    "tailwind:build": "npx tailwindcss -i input.css -o app.css"
+  },
+  "keywords": [],
+  "author": "Mr.X",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.6"
+  }
+}

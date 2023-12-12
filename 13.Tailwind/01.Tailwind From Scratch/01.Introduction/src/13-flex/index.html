@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Flex</title>
+  </head>
+  <body>
+    <!-- Flex and alignment -->
+    <div class="flex flex-col justify-between sm:flex-row w-full sm:h-72 h-full bg-gray-300">
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">01</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">02</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">03</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">04</div>
+    </div>
+    <br>
+    <div class="flex flex-col justify-center items-center sm:flex-row w-full sm:h-72 h-full bg-sky-100">
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">01</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">02</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">03</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">04</div>
+    </div>
+    <br>
+    <div class="flex flex-col flex-wrap justify-center items-center sm:flex-row w-full sm:h-72 h-full bg-green-100">
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">01</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">02</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">03</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">04</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">05</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">06</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">07</div>
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">08</div>
+    </div>
+    <br>
+    <!-- Flex Column, Gap and Order -->
+    <div class="flex flex-col gap-4 justify-center items-center sm:flex-row w-full sm:h-72 h-full bg-emerald-100">
+      <div class="p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">01</div>
+      <div class="p-10 order-2 text-center border-2 border-blue-400 bg-emerald-400 mx-1">02</div>
+      <div class="p-10 order-3 text-center border-2 border-blue-400 bg-emerald-400 mx-1">03</div>
+      <div class="p-10 order-1 text-center border-2 border-blue-400 bg-emerald-400 mx-1">04</div>
+    </div>
+    <br>
+    <!-- Grow and shrink -->
+    <div class="flex w-full justify-center items-center bg-green-100">
+      <div class="flex-initial w-64 p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">01</div>
+      <div class="flex-none w-64 p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">02</div>
+      <div class="flex-auto w-64 p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">03</div>
+      <div class="flex-1 w-64 p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">04</div>
+      <div class="w-64 p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">05</div>
+      <div class=" p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">06</div>
+      <div class=" p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">07</div>
+      <div class=" p-10 text-center border-2 border-blue-400 bg-emerald-400 mx-1">08</div>
+    </div>
+    <br>
+  <div class="flex text-center">
+    <div class="p-5 flex-1 bg-blue-200">1</div>
+    <div class="p-5 flex-1 bg-blue-200">2</div>
+    <div class="p-5 flex-1 bg-blue-200">3</div>
+  </div>
+  </body>
+</html>
+
+<!-- Justify Content
+      justify-start	      justify-content: flex-start;
+      justify-end	        justify-content: flex-end;
+      justify-center	    justify-content: center;
+      justify-between	    justify-content: space-between;
+      justify-around	    justify-content: space-around;
+      justify-evenly	    justify-content: space-evenly;
+    -->
+
+<!-- 
+      items-start	    align-items: flex-start;
+      items-end	        align-items: flex-end;
+      items-center	    align-items: center;
+      items-baseline	align-items: baseline;
+      items-stretch	    align-items: stretch;
+     -->
+
+<!-- Flex Direction
+      flex-row	          flex-direction: row;
+      flex-row-reverse	  flex-direction: row-reverse;
+      flex-col	          flex-direction: column;
+      flex-col-reverse	  flex-direction: column-reverse;
+    -->
+
+<!-- 
+      flex-wrap	          flex-wrap: wrap;
+      flex-wrap-reverse	  flex-wrap: wrap-reverse;
+      flex-nowrap	      flex-wrap: nowrap;
+     -->
+
+<!-- Flex Properties
+      flex-none	    flex: none;     
+      Prevent item from growing or shrinking
+
+      flex-initial	flex: 0 1 auto; 
+      Allow item to shrink but not grow, taking into account its initial size
+
+      flex-auto	    flex: 1 1 auto; 
+      Allow item to grow and shrink, taking into account its initial size
+
+      flex-1	      flex: 1 1 0%;   
+      Allow item to grow and shrink as needed, ignoring its initial size
+    -->

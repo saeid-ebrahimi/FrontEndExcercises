@@ -1,0 +1,16 @@
+{
+  "name": "05.loop-studio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tailwindcss -i ./input.css -o ./css/style.css --watch",
+    "build": "tailwindcss -i ./input.css -o ./css/style.css"
+  },
+  "keywords": [],
+  "author": "Mr.X",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.6"
+  }
+}

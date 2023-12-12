@@ -5,47 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e36faf2c-1258-406f-8119-bb03647d7031" name="Changes" comment="some minor changes to the tutorial files">
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/article.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/article-details-large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/article-details-small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/contact.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/decoration-star.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/details-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/details-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/down-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/project-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/project-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/project-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/project-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/project-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/project-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/quotes.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/screen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/testimonial-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/testimonial-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/testimonial-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/images/up-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/scss/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/scss/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/webfonts/fa-v4compatibility.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08.Yavin Company Website/webfonts/fa-v4compatibility.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,32 +50,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/FrontEndExcercises/05.bootstrap/08.Yavin Company Website&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.webOptions&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/FrontEndExcercises/05.bootstrap/09.Vera Website",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.webOptions",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\FrontEndExcercises\05.bootstrap\09.Vera Website" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\08.Yavin Company Website" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\07.Sara Portfolio Website" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\07.Sara Portfolio Website\images" />
       <recent name="C:\FrontEndExcercises\05.bootstrap" />
-      <recent name="C:\FrontEndExcercises\05.bootstrap\06.Corso Website" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\FrontEndExcercises\05.bootstrap\05.Ebook Website" />
@@ -152,7 +111,7 @@
       <workItem from="1701326455017" duration="16108000" />
       <workItem from="1701410277724" duration="13454000" />
       <workItem from="1701528255772" duration="18955000" />
-      <workItem from="1701603262489" duration="1553000" />
+      <workItem from="1701603262489" duration="21991000" />
     </task>
     <task id="LOCAL-00001" summary="some minor changes to the tutorial files">
       <created>1685360020601</created>

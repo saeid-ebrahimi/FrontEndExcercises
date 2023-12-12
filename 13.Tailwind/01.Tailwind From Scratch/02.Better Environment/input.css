@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    h1{
+        @apply text-3xl text-white bg-red-400;
+    }
+}
+@layer components{
+    .btn-blue{
+        @apply bg-blue-500 py-2 px-4 rounded-xl text-white font-bold hover:bg-blue-700;
+    }
+}
+
+.content-area{
+    @apply bg-green-200;
+    height: theme('spacing.128')
+}
+
+@media screen(xl){
+    body{
+        @apply bg-black text-red;
+    }
+}
