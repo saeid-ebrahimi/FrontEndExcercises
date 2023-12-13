@@ -7,7 +7,7 @@ this repository contains front-end learning path exercises.
 3. JS, JS DOM and JQuery excercises
 4. Git
 5. Bootstrap sites and excercises
-6. React sites and exercises
+6. React Apps and exercises
 7. npm exercises
 8. Sass exercises and UI projects
 9. UI/UX Designs
