@@ -2,8 +2,8 @@
 FrontEnd Code Excercises
 
 this repository contains front-end learning path exercises.
-1. css basic
-2. html and css fundamentals, best practices , apps and games
+1. CSS basic
+2. HTML and CSS fundamentals, best practices , apps and games / Grid and Flexbox websites UI and websiets / Design HTML and CSS Templates
 3. JS, JS DOM and JQuery excercises
 4. Git
 5. Bootstrap sites and excercises
