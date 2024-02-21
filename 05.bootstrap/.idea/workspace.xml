@@ -5,7 +5,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e36faf2c-1258-406f-8119-bb03647d7031" name="Changes" comment="some minor changes to the tutorial files">
+      <change afterPath="$PROJECT_DIR$/03.LaslesJS_Farsi/assets/ScreenLaslesJs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff/Gilroy-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb(FaNum)-Black.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb(FaNum)-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb(FaNum)-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb(FaNum)-Thin.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb-Black.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb-Thin.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff2/KalamehWeb-Black.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff2/KalamehWeb-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff2/KalamehWeb-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_Woff2/KalamehWeb-Thin.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_eot/KalamehWeb-Black.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_eot/KalamehWeb-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_eot/KalamehWeb-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/font/WebFonts/_eot/KalamehWeb-Thin.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Ellipse 10 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Ellipse 10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Group 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Group 117.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Group 122 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Group 123 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Group 19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Group 25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Path (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Vector (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/Vector (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/arrowleft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/header_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/image 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/image 5 (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/image 5 (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/image 5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/image 6 (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/image 6 (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/image 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/navbar-toggler-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/pngaaa 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/scribble final version-02 (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/searchnormal1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/shoppingcart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/uniswap-coinuni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/img/wallet2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.IranNFT Agency Website UI/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/burger.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/burger.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/desserts.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/desserts.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/drinks.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/drinks.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fast foods.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fast foods.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fried foods.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fried foods.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fried-vegetables.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fried-vegetables.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/grilled.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/grilled.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/hot drinks.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/hot drinks.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/pic1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/pic1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/vegan raw dish.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/vegan raw dish.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03.LaslesJS_Farsi/Screenshot LaslesJs_v1.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +131,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/FrontEndExcercises/05.bootstrap/09.Vera Website",
+    "last_opened_file_path": "C:/FrontEndExcercises/08.SaSS/02.SASS Project",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -71,11 +144,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\FrontEndExcercises\05.bootstrap" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\09.Vera Website" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\08.Yavin Company Website" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\07.Sara Portfolio Website" />
       <recent name="C:\FrontEndExcercises\05.bootstrap\07.Sara Portfolio Website\images" />
-      <recent name="C:\FrontEndExcercises\05.bootstrap" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\FrontEndExcercises\05.bootstrap\05.Ebook Website" />
@@ -112,6 +185,7 @@
       <workItem from="1701410277724" duration="13454000" />
       <workItem from="1701528255772" duration="18955000" />
       <workItem from="1701603262489" duration="21991000" />
+      <workItem from="1702578915511" duration="742000" />
     </task>
     <task id="LOCAL-00001" summary="some minor changes to the tutorial files">
       <created>1685360020601</created>
