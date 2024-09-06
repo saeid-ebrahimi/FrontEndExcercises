@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bf25fae4-9d9a-4068-b43f-d510931d88d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/03.LaslesJS_Farsi/assets/ScreenLaslesJs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/.idea/04.IranNFT Agency Website UI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff/Gilroy-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb(FaNum)-Black.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb(FaNum)-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb(FaNum)-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb(FaNum)-Thin.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb-Black.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff/KalamehWeb-Thin.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff2/KalamehWeb-Black.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff2/KalamehWeb-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff2/KalamehWeb-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_Woff2/KalamehWeb-Thin.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_eot/KalamehWeb-Black.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_eot/KalamehWeb-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_eot/KalamehWeb-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/font/WebFonts/_eot/KalamehWeb-Thin.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Ellipse 10 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Ellipse 10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Group 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Group 117.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Group 122 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Group 123 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Group 19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Group 25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Path (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Vector (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/Vector (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/arrowleft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/header_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/image 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/image 5 (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/image 5 (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/image 5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/image 6 (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/image 6 (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/image 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/navbar-toggler-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/pngaaa 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/scribble final version-02 (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/searchnormal1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/shoppingcart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/uniswap-coinuni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/img/wallet2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05.bootstrap/04.IranNFT Agency Website UI/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/.idea/Nextjs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/app/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/app/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/app/layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/app/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/app/page.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/layout/Layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/layout/Layout.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/layout/MainNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/layout/MainNavigation.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/meetups/MeetupItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/meetups/MeetupItem.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/meetups/MeetupList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/meetups/MeetupList.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/meetups/NewMeetupForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/meetups/NewMeetupForm.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/ui/Card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/components/ui/Card.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/pages/_app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/pages/meetupId/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/pages/new-meetup/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/public/next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/public/vercel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/meetup-app/styles/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/pages/_app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/pages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/pages/news/[newsId].js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/pages/news/details.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/pages/news/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/public/next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/public/vercel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Nextjs/nextjs-intro/styles/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/.idea/02.doctor-pager-chat-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/src/components/Auth.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/src/components/ChannelContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/src/components/ChannelListContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/src/components/ChannelSearch.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/src/components/TeamChannelList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/src/components/TeamChannelPreview.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/src/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/client/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/server/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/server/controllers/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/server/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/server/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/server/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.doctor-pager-chat-app/server/routes/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/.eslintrc.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/assets/copy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/assets/grid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/assets/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/assets/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/assets/loader.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/assets/tick.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/components/Demo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/components/Hero.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/services/article.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/src/services/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.SumzAI/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/assets/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/assets/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/assets/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/assets/loader.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/ArtistCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/DetailsHeader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/Error.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/Loader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/MusicPlayer/Controls.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/MusicPlayer/Player.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/MusicPlayer/Seekbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/MusicPlayer/Track.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/MusicPlayer/VolumeBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/MusicPlayer/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/PlayPause.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/RelatedSongs.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/Searchbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/Sidebar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/SongBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/SongCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/TopPlay.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/pages/AroundYou.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/pages/ArtistDetails.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/pages/Discover.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/pages/Search.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/pages/SongDetails.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/pages/TopArtists.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/pages/TopCharts.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/pages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/redux/features/playerSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/redux/services/shazamCore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/src/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04.Lyriks/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.youtube-clone/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.youtube-clone/.idea/05.YouTube Clone.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.youtube-clone/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05.youtube-clone/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../08.SaSS/02.SASS Project/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/burger.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/burger.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/desserts.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/desserts.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/drinks.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/drinks.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fast foods.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fast foods.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fried foods.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fried foods.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fried-vegetables.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/fried-vegetables.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/gallery6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/grilled.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/grilled.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/hot drinks.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/hot drinks.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/pic1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/pic1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/story4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/vegan raw dish.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../02.1.HTML5 and CSS Fundamentals/grid/grid crash course/03.Final Project-Allen Food Template/img/vegan raw dish.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.bootstrap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.bootstrap/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.bootstrap/03.LaslesJS_Farsi/Screenshot LaslesJs_v1.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ac6iRzayVe2pRW2mCF3PWkjsyN" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ReactCreateComponentLastSelected": "arrowFunctionComponent",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/FrontEndExcercises/06.react/RealWorld Apps/05.youtube-clone",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\FrontEndExcercises\06.react\RealWorld Apps\01.chaty\public" />
+      <recent name="C:\FrontEndExcercises\06.react\RealWorld Apps" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/01.chaty/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf25fae4-9d9a-4068-b43f-d510931d88d8" name="Changes" comment="" />
+      <created>1704605646917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704605646917</updated>
+      <workItem from="1704605648089" duration="12268000" />
+      <workItem from="1704657934131" duration="12106000" />
+      <workItem from="1705841866503" duration="44000" />
+      <workItem from="1705913782197" duration="341000" />
+      <workItem from="1705914415212" duration="32000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

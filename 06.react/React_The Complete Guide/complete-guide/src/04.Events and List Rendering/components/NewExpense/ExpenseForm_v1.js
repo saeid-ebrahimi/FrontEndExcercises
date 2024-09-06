@@ -12,7 +12,7 @@ const ExpenseForm_v1 = () => {
         console.log(event.target.value)
         //setEnteredTitle(event.target.value)
         //setUserInput({...userInput, enteredTitle: event.target.value})
-        // better setter version where current store depends on previous store
+        // better setter version where current state depends on previous state
         setUserInput((prevState) => {
             return {...prevState, enteredTitle: event.target.value}
         })

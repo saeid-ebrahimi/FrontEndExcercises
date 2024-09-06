@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "./16.Food App Project With Send Request/index.css";
-import App from "./16.Food App Project With Send Request/App";
+import "./08.Fragments, Portals and Refs/index.css";
+import App from "./08.Fragments, Portals and Refs/App";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

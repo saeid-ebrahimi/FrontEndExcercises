@@ -1,5 +1,4 @@
 import React from "react";
-import MainNavigation from "../components/MainNavigation";
 import PageContent from "../components/PageContent";
 import { useRouteError} from "react-router-dom";
 
@@ -15,11 +14,9 @@ const ErrorPage = () => {
         message = "Could not find resource or page";
     }
     return <>
-        <MainNavigation/>
         <main>
             <PageContent title={title}>
                 <p>{message}</p>
-
             </PageContent>
         </main>
     </>

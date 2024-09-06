@@ -1,14 +1,13 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mr.X",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -20,5 +19,7 @@
     "nodemon": "^2.0.12",
     "stream-chat": "^4.1.0",
     "twilio": "^3.67.1"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }

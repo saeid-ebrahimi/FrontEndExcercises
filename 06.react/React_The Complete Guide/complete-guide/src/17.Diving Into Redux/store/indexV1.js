@@ -12,7 +12,7 @@ const counterReducer = (state = initialState , action)  => {
     }else if(action.type === 'toggle'){
         return { counter: state.counter, showCounter: ! state.showCounter}
     }
-    return state
+    return state;
 }
 const store = createStore(counterReducer);
 

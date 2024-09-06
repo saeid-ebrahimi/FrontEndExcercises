@@ -1,23 +1,22 @@
-.meals {
+.meals{
     max-width: 60rem;
     width: 90%;
     margin: 2rem auto;
     animation: meals-appear 1s ease-out forwards;
 }
-.meals-is-loading{
-    text-align: center;
-    color: white;
-}
-.meals-error{
-    text-align: center;
-    color: red;
-}
-.meals ul {
+.meals ul{
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
+.mealsLoading{
+    text-align: center;
+    color: white;
+}
+.mealsError {
+    text-align: center;
+    color: #e76565;
+}
 @keyframes meals-appear {
     from {
         opacity: 0;
