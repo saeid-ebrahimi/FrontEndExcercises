@@ -30,7 +30,7 @@ bDateElem.addEventListener("change", () =>{
     if (bDateElem.valueAsDate > new Date()){
         bDateElem.classList.remove("valid")
         bDateElem.classList.add("invalid")
-        bDateElem.setCustomValidity("you havn't burn")
+        bDateElem.setCustomValidity("you haven't burn")
     }
     else{
         bDateElem.classList.remove("invalid")
