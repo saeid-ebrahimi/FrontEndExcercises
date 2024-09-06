@@ -1,6 +1,6 @@
 // tuples are array-like structure where each element represents some property of a record
 
-const drink = {
+const drink:DrinkObj = {
     color: "brown",
     carbonated: true,
     sugar: 40
@@ -22,3 +22,11 @@ pepsiTuple[2] = 50
 type Drink = [string, boolean, number]
 const sprite: Drink = ['clear', true, 30]
 const tea: Drink = ['brown', false, 0]
+
+// object annotation using type 
+type DrinkObj = { color: string, carbonated: boolean, sugar: number };
+const pepsiObj: DrinkObj = {
+    color: "brown",
+    carbonated: true,
+    sugar: 40
+};

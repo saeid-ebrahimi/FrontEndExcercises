@@ -8,5 +8,14 @@
   },
   "keywords": [],
   "author": "Mr.X",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "@types/faker": "^6.6.9",
+    "@types/google.maps": "^3.55.7",
+    "faker": "^5.5.3"
+  }
 }
