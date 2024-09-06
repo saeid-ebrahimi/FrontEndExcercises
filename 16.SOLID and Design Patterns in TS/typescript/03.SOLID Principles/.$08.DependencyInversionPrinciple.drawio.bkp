@@ -1,0 +1,55 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Page-1" id="TT2oRCWxLuhn8VT34NKW">
+    <mxGraphModel dx="491" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="V7SZytDOUGowybL7SyMi-1" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;div&gt;IDatabase&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;perimeterSpacing=0;swimlaneLine=1;shadow=0;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="40" width="160" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="V7SZytDOUGowybL7SyMi-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;shadow=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=0;" vertex="1" parent="V7SZytDOUGowybL7SyMi-1">
+          <mxGeometry y="50" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="V7SZytDOUGowybL7SyMi-2" value="+ save(string):void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" vertex="1" parent="V7SZytDOUGowybL7SyMi-1">
+          <mxGeometry y="58" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="V7SZytDOUGowybL7SyMi-7" value="MySqlDatabase" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;perimeterSpacing=0;swimlaneLine=1;shadow=0;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry y="220" width="160" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="V7SZytDOUGowybL7SyMi-13" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=0;entryX=0.5;entryY=1.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="V7SZytDOUGowybL7SyMi-7" target="V7SZytDOUGowybL7SyMi-2">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="80" as="sourcePoint" />
+            <mxPoint x="240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="-30" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7SZytDOUGowybL7SyMi-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;shadow=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=0;" vertex="1" parent="V7SZytDOUGowybL7SyMi-7">
+          <mxGeometry y="50" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="V7SZytDOUGowybL7SyMi-9" value="+ save(string):void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" vertex="1" parent="V7SZytDOUGowybL7SyMi-7">
+          <mxGeometry y="58" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="V7SZytDOUGowybL7SyMi-10" value="MongoDbDatabase" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;perimeterSpacing=0;swimlaneLine=1;shadow=0;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="180" y="220" width="160" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="V7SZytDOUGowybL7SyMi-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;shadow=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=0;" vertex="1" parent="V7SZytDOUGowybL7SyMi-10">
+          <mxGeometry y="50" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="V7SZytDOUGowybL7SyMi-12" value="+ save(string):void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" vertex="1" parent="V7SZytDOUGowybL7SyMi-10">
+          <mxGeometry y="58" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="V7SZytDOUGowybL7SyMi-14" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=0;entryX=0.576;entryY=0.993;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.457;exitY=-0.009;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="V7SZytDOUGowybL7SyMi-10" target="V7SZytDOUGowybL7SyMi-2">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="150" y="210" as="sourcePoint" />
+            <mxPoint x="310" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="253" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

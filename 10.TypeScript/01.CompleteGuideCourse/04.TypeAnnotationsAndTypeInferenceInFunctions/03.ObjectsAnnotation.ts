@@ -1,5 +1,5 @@
 const profile = {
-    name:"Alex",
+    username:"Alex",
     age:20,
     coords:{
         lat: 0 ,
@@ -9,5 +9,5 @@ const profile = {
         this.age = age;
     },
 };
-const {age, name}:{age:number; name:string} = profile; // this error is OK!
+const {age, username}:{age:number; username:string} = profile; // this error is OK!
 const { coords: {lat, lng}}: {coords: { lat:number; lng:number}} = profile;

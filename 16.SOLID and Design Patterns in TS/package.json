@@ -1,0 +1,15 @@
+{
+  "name": "16.solid-and-design-patterns-in-ts",
+  "version": "1.0.0",
+  "description": "Practice Design Patterns in TS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "(npx parcel ./index.html) & npx parcel watch ./index.html"
+  },
+  "author": "Mr.X",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "prettier": "3.3.3"
+  }
+}

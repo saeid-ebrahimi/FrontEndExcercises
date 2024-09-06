@@ -1,0 +1,4 @@
+snake-case => is_valid , send_request : for variables, functions and methods in Python
+camelCase => isValid, send_request : for variables, functions and methods in JavaScript
+PascalCase => RequestBody, User, Person : for naming classes in all programming languages
+kebab-case => custom HTML elements or HTML tags attributes or CSS classes

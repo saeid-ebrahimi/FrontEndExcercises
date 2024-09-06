@@ -1,5 +1,5 @@
-import EventItem from "@/components/events/EventItem";
-import classes from "./EventList.module.css";
+import EventItem from "@/components/events/event-item";
+import classes from "./event-list.module.css";
 export default function EventList({events}) {
     return (
         <ul className={classes.list}>

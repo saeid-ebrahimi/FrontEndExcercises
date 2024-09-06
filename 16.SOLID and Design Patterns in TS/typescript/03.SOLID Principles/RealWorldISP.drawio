@@ -1,0 +1,123 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Page-1" id="s6nJesh25IGXKS1-YZXS">
+    <mxGraphModel dx="1434" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hgnGz2_jBULNp_NovMzi-1" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;div&gt;PostCreator&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;perimeterSpacing=0;swimlaneLine=1;shadow=0;spacingTop=10;" parent="1" vertex="1">
+          <mxGeometry x="390" y="330" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-2" value="+ createPost(Post): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" parent="hgnGz2_jBULNp_NovMzi-1" vertex="1">
+          <mxGeometry y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-3" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;div&gt;CommentCreator&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;perimeterSpacing=0;swimlaneLine=1;shadow=0;spacingTop=10;" parent="1" vertex="1">
+          <mxGeometry x="120" y="330" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-4" value="+ createComment(Comment&lt;span style=&quot;background-color: initial;&quot;&gt;): void&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" parent="hgnGz2_jBULNp_NovMzi-3" vertex="1">
+          <mxGeometry y="50" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-5" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;div&gt;Post Sharer&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;perimeterSpacing=0;swimlaneLine=1;shadow=0;spacingTop=10;" parent="1" vertex="1">
+          <mxGeometry x="580" y="330" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-6" value="+ sharePost(Post): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" parent="hgnGz2_jBULNp_NovMzi-5" vertex="1">
+          <mxGeometry y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-7" value="Admin" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;perimeterSpacing=0;swimlaneLine=1;shadow=0;spacingTop=10;" parent="1" vertex="1">
+          <mxGeometry x="240" y="530" width="220" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-8" value="+ createComment(Comment&lt;span style=&quot;background-color: initial;&quot;&gt;): void&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" parent="hgnGz2_jBULNp_NovMzi-7" vertex="1">
+          <mxGeometry y="50" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e0vGAUWljLfcHTHYiiHR-7" value="&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;&amp;nbsp;+ createPost(Post): void&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="hgnGz2_jBULNp_NovMzi-7">
+          <mxGeometry y="110" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e0vGAUWljLfcHTHYiiHR-8" value="&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;&amp;nbsp;+ sharePost(Post): void&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="hgnGz2_jBULNp_NovMzi-7">
+          <mxGeometry y="150" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-9" value="RegularUser" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;perimeterSpacing=0;swimlaneLine=1;shadow=0;spacingTop=10;" parent="1" vertex="1">
+          <mxGeometry x="560" y="530" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-10" value="&amp;nbsp;+ sharePost(Post): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" parent="hgnGz2_jBULNp_NovMzi-9" vertex="1">
+          <mxGeometry y="50" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-11" value="+ createComment(Comment&lt;span style=&quot;background-color: initial;&quot;&gt;): void&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="hgnGz2_jBULNp_NovMzi-9" vertex="1">
+          <mxGeometry y="100" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-13" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.438;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.525;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="hgnGz2_jBULNp_NovMzi-9" target="hgnGz2_jBULNp_NovMzi-2" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="460" y="480" as="sourcePoint" />
+            <mxPoint x="620" y="480" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-15" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.475;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="hgnGz2_jBULNp_NovMzi-9" target="hgnGz2_jBULNp_NovMzi-6" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="680" y="550" as="sourcePoint" />
+            <mxPoint x="504" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-16" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.381;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="hgnGz2_jBULNp_NovMzi-7" target="hgnGz2_jBULNp_NovMzi-1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="700" y="570" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-18" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;div&gt;Post&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;perimeterSpacing=0;swimlaneLine=1;shadow=0;spacingTop=10;" parent="1" vertex="1">
+          <mxGeometry x="390" y="90" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-19" value="+ title: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" parent="hgnGz2_jBULNp_NovMzi-18" vertex="1">
+          <mxGeometry y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-20" value="+ content: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" parent="hgnGz2_jBULNp_NovMzi-18" vertex="1">
+          <mxGeometry y="110" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-21" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;div&gt;Comment&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;perimeterSpacing=0;swimlaneLine=1;shadow=0;spacingTop=10;" parent="1" vertex="1">
+          <mxGeometry x="150" y="90" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-22" value="+ title: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" parent="hgnGz2_jBULNp_NovMzi-21" vertex="1">
+          <mxGeometry y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hgnGz2_jBULNp_NovMzi-23" value="+ content: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;glass=1;rounded=1;perimeterSpacing=0;sketch=1;curveFitting=1;jiggle=2;swimlaneLine=1;shadow=0;spacingTop=10;" parent="hgnGz2_jBULNp_NovMzi-21" vertex="1">
+          <mxGeometry y="110" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e0vGAUWljLfcHTHYiiHR-1" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.494;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hgnGz2_jBULNp_NovMzi-20" target="hgnGz2_jBULNp_NovMzi-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="440" y="280" as="sourcePoint" />
+            <mxPoint x="600" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e0vGAUWljLfcHTHYiiHR-3" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.5;exitY=1.017;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hgnGz2_jBULNp_NovMzi-23" target="hgnGz2_jBULNp_NovMzi-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="29" y="270" as="sourcePoint" />
+            <mxPoint x="30" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e0vGAUWljLfcHTHYiiHR-4" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hgnGz2_jBULNp_NovMzi-18" target="hgnGz2_jBULNp_NovMzi-5">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="690" y="271" as="sourcePoint" />
+            <mxPoint x="690" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="280" />
+              <mxPoint x="660" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e0vGAUWljLfcHTHYiiHR-5" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="hgnGz2_jBULNp_NovMzi-7" target="hgnGz2_jBULNp_NovMzi-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="481" y="530" as="sourcePoint" />
+            <mxPoint x="480" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e0vGAUWljLfcHTHYiiHR-6" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="hgnGz2_jBULNp_NovMzi-7" target="hgnGz2_jBULNp_NovMzi-5">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="311" y="540" as="sourcePoint" />
+            <mxPoint x="416" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

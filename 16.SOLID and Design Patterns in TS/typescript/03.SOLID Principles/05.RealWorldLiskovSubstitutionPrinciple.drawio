@@ -1,0 +1,70 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Page-1" id="w1ac0CJ0JX8zd0bMJsz4">
+    <mxGraphModel dx="1098" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FNgATjls4hUeImIPZcds-1" value="Abstract&amp;nbsp;&lt;span style=&quot;color: rgb(229, 192, 123); background-color: rgb(35, 39, 46); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; font-weight: normal; white-space: pre;&quot;&gt;PaymentProcessor&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="295" y="160" width="205" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="FNgATjls4hUeImIPZcds-1" vertex="1">
+          <mxGeometry y="26" width="205" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-4" value="+ abstract processPayment(): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="FNgATjls4hUeImIPZcds-1" vertex="1">
+          <mxGeometry y="34" width="205" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-5" value="&lt;div style=&quot;color: #abb2bf;background-color: #23272e;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;span style=&quot;color: #e5c07b;&quot;&gt;CreditCardProcessor&lt;/span&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="300" width="205" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="FNgATjls4hUeImIPZcds-5" vertex="1">
+          <mxGeometry y="26" width="205" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-7" value="+ processPayment(): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="FNgATjls4hUeImIPZcds-5" vertex="1">
+          <mxGeometry y="34" width="205" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-8" value="&lt;div style=&quot;color: #abb2bf;background-color: #23272e;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;span style=&quot;color: #e5c07b;&quot;&gt;PaypalProcessor&lt;/span&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="300" width="205" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-9" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="FNgATjls4hUeImIPZcds-8" vertex="1">
+          <mxGeometry y="26" width="205" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-10" value="&lt;div&gt;+ processPayment(): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="FNgATjls4hUeImIPZcds-8" vertex="1">
+          <mxGeometry y="34" width="205" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-11" value="&lt;div style=&quot;color: #abb2bf;background-color: #23272e;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;span style=&quot;color: #e5c07b;&quot;&gt;DebitCardProcessor&lt;/span&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="295" y="300" width="205" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="FNgATjls4hUeImIPZcds-11" vertex="1">
+          <mxGeometry y="26" width="205" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-13" value="&lt;div&gt;+ processPayment(): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="FNgATjls4hUeImIPZcds-11" vertex="1">
+          <mxGeometry y="34" width="205" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-14" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.229;entryY=1.077;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="FNgATjls4hUeImIPZcds-5" target="FNgATjls4hUeImIPZcds-4" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="170" y="270" as="sourcePoint" />
+            <mxPoint x="350" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-15" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.42;exitY=-0.067;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.42;entryY=0.846;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="FNgATjls4hUeImIPZcds-11" target="FNgATjls4hUeImIPZcds-4" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="550" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FNgATjls4hUeImIPZcds-16" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.415;exitY=-0.067;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.6;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="FNgATjls4hUeImIPZcds-8" target="FNgATjls4hUeImIPZcds-4" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="620" y="260" as="sourcePoint" />
+            <mxPoint x="780" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="418" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

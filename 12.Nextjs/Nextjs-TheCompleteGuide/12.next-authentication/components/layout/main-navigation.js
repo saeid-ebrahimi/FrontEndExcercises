@@ -1,25 +1,28 @@
 import Link from 'next/link';
-
+import {useSession, signOut} from "next-auth/react";
 import classes from './main-navigation.module.css';
 
 function MainNavigation() {
+  const {data:session, status:loading} =  useSession();
+    console.log(session)
+    async function logoutHandler(){
+        await signOut()
+    }
   return (
     <header className={classes.header}>
       <Link href='/'>
-        <a>
           <div className={classes.logo}>Next Auth</div>
-        </a>
       </Link>
       <nav>
         <ul>
+            {!session && !loading && <li>
+                <Link href='/auth'>Login</Link>
+            </li>}
           <li>
-            <Link href='/auth'>Login</Link>
+              {session && <Link href='/profile'>Profile</Link>}
           </li>
           <li>
-            <Link href='/profile'>Profile</Link>
-          </li>
-          <li>
-            <button>Logout</button>
+              {session && <button onClick={logoutHandler}>Logout</button>}
           </li>
         </ul>
       </nav>
