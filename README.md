@@ -13,4 +13,9 @@ this repository contains front-end learning path exercises.
 9. UI/UX Designs
 10. Typescript exercises and projects
 11. Redux in JS
-12. Tailwind exercises and website ui
+12. Nextjs 
+13. Tailwind exercises and website ui
+14. Material UI
+15. Clean Code
+16. SOLID principle and design patterns in ts
+17. PWA
