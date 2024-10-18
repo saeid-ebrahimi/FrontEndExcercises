@@ -1,6 +1,6 @@
 // service worker scope is depends on the folder which exists
 self.addEventListener('install', function (event) {
-    console.log('%c [Service Worker] Installing Service Worker ...', "background:green; color:white;padding:3px;", event,);
+    console.log('%c [Service Worker] Installing Service Worker ...', "background:green; color:white;padding:3px;", event);
 })
 
 self.addEventListener('activate', function (event) {
