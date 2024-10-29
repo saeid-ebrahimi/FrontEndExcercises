@@ -13,7 +13,7 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register("/sw.js")
     .then(function () {
-      console.log("%c Service Worker Registered!", "background:");
+      console.log("%c Service Worker Registered!", "background:darkblue;color:white;");
     })
 }
 // 1) Register a Service Worker

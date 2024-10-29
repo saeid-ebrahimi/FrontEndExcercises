@@ -30,6 +30,7 @@ self.addEventListener('install', function (event) {
 
 self.addEventListener('activate', function (event) {
     console.log('%c [Service Worker] Activating Service Worker ...',
+
         "background:lightblue;color:black;padding:3px;", event);
     event.waitUntil(
         caches.keys()
