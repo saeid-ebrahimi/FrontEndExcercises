@@ -1,14 +1,20 @@
+import { createClient } from '@supabase/supabase-js'
+const supabaseUrl = process.env.SUPABASE_URL
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
+
 var shareImageButton = document.querySelector('#share-image-button');
 var createPostArea = document.querySelector('#create-post');
 var closeCreatePostModalButton = document.querySelector('#close-create-post-modal-btn');
 var sharedMomentsArea = document.querySelector('#shared-moments');
+
 
 function openCreatePostModal() {
   createPostArea.style.display = 'block';
   if (deferredPrompt) {
     deferredPrompt.prompt();
 
-    deferredPrompt.userChoice.then(function(choiceResult) {
+    deferredPrompt.userChoice.then(function (choiceResult) {
       console.log(choiceResult.outcome);
 
       if (choiceResult.outcome === 'dismissed') {
@@ -44,7 +50,7 @@ function onSaveButtonClicked(event) {
   console.log('clicked');
   if ('caches' in window) {
     caches.open('user-requested')
-      .then(function(cache) {
+      .then(function (cache) {
         cache.add('https://httpbin.org/get');
         cache.add('/src/images/sf-boat.jpg');
       });
@@ -52,7 +58,7 @@ function onSaveButtonClicked(event) {
 }
 
 function clearCards() {
-  while(sharedMomentsArea.hasChildNodes()) {
+  while (sharedMomentsArea.hasChildNodes()) {
     sharedMomentsArea.removeChild(sharedMomentsArea.lastChild);
   }
 }
@@ -95,10 +101,10 @@ var url = 'https://pwagram-99adf.firebaseio.com/posts.json';
 var networkDataReceived = false;
 
 fetch(url)
-  .then(function(res) {
+  .then(function (res) {
     return res.json();
   })
-  .then(function(data) {
+  .then(function (data) {
     networkDataReceived = true;
     console.log('From web', data);
     var dataArray = [];
@@ -110,12 +116,12 @@ fetch(url)
 
 if ('caches' in window) {
   caches.match(url)
-    .then(function(response) {
+    .then(function (response) {
       if (response) {
         return response.json();
       }
     })
-    .then(function(data) {
+    .then(function (data) {
       console.log('From cache', data);
       if (!networkDataReceived) {
         var dataArray = [];
