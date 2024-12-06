@@ -1,27 +1,30 @@
-var shareImageButton = document.querySelector('#share-image-button');
-var createPostArea = document.querySelector('#create-post');
-var closeCreatePostModalButton = document.querySelector('#close-create-post-modal-btn');
+const shareImageButton = document.getElementById("share-image-button");
+const createPostArea = document.getElementById("create-post")
+const closeCreatePostModalButton = document.getElementById("close-create-post-modal-btn")
 
-function openCreatePostModal() {
-  createPostArea.style.display = 'block';
+async function openCreatePostModal() {
+  createPostArea.style.display = "block";
   if (deferredPrompt) {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then(function (choiceResult) {
-      console.log(choiceResult.outcome);
-      if (choiceResult.outcome === 'dismissed') {
-        console.log('User cancelled installation');
-      } else {
-        console.log("User added to home screen");
-      }
-    });
+    deferredPrompt.prompt()
+    const userChoice = await deferredPrompt.userChoice
+    if (userChoice.outcome === "dismissed") {
+      console.log("%cUser canceled installation", 'background:white;color:#DC2626;padding:5px;border-radius:5px;');
+    } else {
+      const LOG_STYLES = `color:white;
+        background: #166534;
+        padding: 8px 16px;
+        border-radius:5px;`
+      console.log("%cUser added to home screen", LOG_STYLES);
+    }
     deferredPrompt = null;
   }
 }
 
 function closeCreatePostModal() {
-  createPostArea.style.display = 'none';
+  createPostArea.style.display = "none"
 }
 
-shareImageButton.addEventListener('click', openCreatePostModal);
+shareImageButton.addEventListener("click", openCreatePostModal)
+closeCreatePostModalButton.addEventListener("click", closeCreatePostModal)
 
-closeCreatePostModalButton.addEventListener('click', closeCreatePostModal);
+
