@@ -136,7 +136,7 @@ postData("https://httpbin.org/post", {
     message: "Does it works?"
 })
 
-// XHR is a synchronous  operation and service worker don't support it.
+// XHR is a synchronous operation and service worker don't support it.
 // var xhr = new XMLHttpRequest();
 // xhr.open("GET", "https://httpbin.org/ip");
 // xhr.responseType = "json";
@@ -147,31 +147,3 @@ postData("https://httpbin.org/post", {
 //     console.log("Error!");
 // }
 // xhr.send()
-
-
-
-
-// const postData = {
-//     message: "Does it work?"
-// }
-// fetch("https://httpbin.org/post", {
-//     method: "POST",
-//     headers: {
-//         'Content-Type': "application/json",
-//         "Accept": "application/json"
-//     },
-//     mode: "cors",
-//     // mode: "no-cors",
-//     body: JSON.stringify(postData)
-// })
-//     .then(function (response) {
-//         console.log(response);
-//         return response.json()
-//     })
-//     .then(function (data) {
-//         console.log(data);
-//     })
-//     .catch(function (error) {
-//         console.log(error);
-//     })
-
