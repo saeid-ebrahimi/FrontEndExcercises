@@ -97,6 +97,7 @@ self.addEventListener('activate', function (event) {
     return self.clients.claim();
 })
 
+
 self.addEventListener("fetch", function (event) {
     // console.log('%c [Service Worker] Fetching something...', "background:gray;text:white;", event);
     event.respondWith(
