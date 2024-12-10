@@ -41,6 +41,7 @@ function createCard() {
   var cardTitleTextElement = document.createElement("h2")
   cardTitleTextElement.className = "mdl-card__title-text"
   cardTitleTextElement.textContent = "San Francisco Trip"
+  cardTitleTextElement.style.color = "black"
   cardTitle.appendChild(cardTitleTextElement)
 
   var cardSupportingText = document.createElement("div")
@@ -53,7 +54,7 @@ function createCard() {
   sharedMomentsArea.appendChild(cardWrapper)
 }
 
-fetch('https://httpbin.org/get')
+fetch('https://jsonplaceholder.typicode.com/posts')
   .then(function (res) {
     return res.json();
   })
