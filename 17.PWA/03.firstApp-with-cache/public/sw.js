@@ -59,6 +59,7 @@ self.addEventListener('install', async function (event) {
     border-radius:5px;
     font-size:14px;`;
     console.log('%c [Service Worker] Installing Service Worker ...', LOG_STYLES, event);
+
     // event.waitUntil(
     //     caches.open(STATIC_CACHE_NAME)
     //         .then(function (cache) {
@@ -82,6 +83,7 @@ self.addEventListener('activate', function (event) {
         LOG_STYLES,
         event
     );
+
     event.waitUntil(
         removeOldCaches([STATIC_CACHE_NAME, DYNAMIC_CACHE_NAME])
         // caches.keys()
@@ -99,7 +101,6 @@ self.addEventListener('activate', function (event) {
 
 
 self.addEventListener("fetch", function (event) {
-    // console.log('%c [Service Worker] Fetching something...', "background:gray;text:white;", event);
     event.respondWith(
         respondWihCache(DYNAMIC_CACHE_NAME, event.request)
         // caches.match(event.request)
