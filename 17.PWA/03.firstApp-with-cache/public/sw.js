@@ -31,7 +31,6 @@ async function respondWihCache(cacheName, request) {
         } else {
             const fetchResponse = await fetch(request)
             const dynamicCache = await caches.open(cacheName)
-
             await dynamicCache.put(request.url, fetchResponse.clone())
             return fetchResponse
 
@@ -117,7 +116,7 @@ self.addEventListener("fetch", function (event) {
         //                         })
         //                 })
         //                 .catch(function (err) {
-        //                     console.log(err)
+        //                     console.log(err)s
         //                 })
         //         }
         //     })
