@@ -37,6 +37,7 @@ function onSaveButtonClicked(event) {
   //     })
   // }
 }
+
 function clearCards() {
   while (sharedMomentsArea.hasChildNodes()) {
     sharedMomentsArea.removeChild(sharedMomentsArea.lastChild)
@@ -74,35 +75,35 @@ function createCard() {
   sharedMomentsArea.appendChild(cardWrapper)
 }
 
-var url = 'https://httpbin.org/get'
-var networkDataReceived = false
-fetch(url)
-  .then(function (res) {
-    return res.json();
-  })
-  .then(function (data) {
-    networkDataReceived(true)
+async function getPostsData(url) {
+  try {
+    const getResponse = await fetch(url)
+    const data = await getResponse.json()
+    networkDataReceived = true
     console.log("From Web", data);
     clearCards()
     createCard()
-  })
-  .catch(function (error) {
-    console.warn("cannot get the data")
-  })
+    return data
+  } catch (error) {
+    console.warn("cannot get the data");
+  }
+}
+async function getPostDataFromCache(url) {
+  const dynamicCache = await caches.match(url)
+  if (dynamicCache) {
+    const data = await dynamicCache.json()
+    console.log("From cache", data);
+    if (!networkDataReceived) {
+      clearCards()
+      createCard();
+    }
+  }
+}
 
+const url = 'https://httpbin.org/get'
+let networkDataReceived = false
+getPostsData(url)
+getPostDataFromCache(url)
 if ('caches' in window) {
-  caches.match(url)
-    .then(function (response) {
-      if (response) {
-        return response.json()
-      }
-    })
-    .then(function (data) {
-      console.log("From cache", data);
-      if (!networkDataReceived) {
-        clearCards()
-        createCard();
-      }
-    })
-
+  getPostDataFromCache(url)
 }

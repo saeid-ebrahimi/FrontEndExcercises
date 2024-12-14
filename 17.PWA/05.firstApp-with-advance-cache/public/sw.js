@@ -42,7 +42,7 @@ async function cacheOnlyApproach(request) {
     return caches.match(request)
 }
 
-async function firstCacheThenNetwork(request, cacheNames) {
+async function firstCacheThenNetworkFallback(request, cacheNames) {
     const matchResult = await caches.match(request)
     if (matchResult) {
         return matchResult
@@ -54,11 +54,35 @@ async function firstCacheThenNetwork(request, cacheNames) {
             return fetchResponse
         } catch (error) {
             const staticCache = await caches.open(cacheNames.static)
-            const matchResult = await staticCache.match("./fallback.html")
-            return matchResult
+            if (request.url.indexOf("/help")) {
+                const matchResult = await staticCache.match("./fallback.html")
+                return matchResult
+            }
+
         }
 
     }
+}
+
+
+async function firstNetworkThenCacheFallback(request, cacheName) {
+    try {
+        const fetchResponse = await fetch(request)
+        const dynamicCache = await caches.open(cacheName)
+        dynamicCache.put(request, fetchResponse.clone())
+        return fetchResponse
+    } catch (error) {
+        const dynamicCache = await caches.match(request)
+        return dynamicCache
+    }
+}
+
+async function updateCacheWithFetch(request, cacheName) {
+    const dynamicCache = await caches.open(cacheName)
+    const resp = await fetch(request)
+    dynamicCache.put(request, resp.clone)
+    return resp
+
 }
 // service worker scope is depends on the folder which exists
 self.addEventListener('install', function (event) {
@@ -91,7 +115,7 @@ self.addEventListener('activate', function (event) {
 self.addEventListener("fetch", function (event) {
     // 01. First cache approach with network fallback
     // event.respondWith(
-    //     firstCacheThenNetwork(event.request)
+    //     firstCacheThenNetworkFallback(event.request, DYNAMIC_CACHE_NAME)
     // )
 
     // 02. Cache only approach: is not recommended
@@ -104,78 +128,31 @@ self.addEventListener("fetch", function (event) {
     //     networkOnlyApproach(event.request)
     // )
 
-    // 04. Network with cache fallback
+    // 04. Network with cache fallback: bad user experience
+    // event.respondWith(
+    //     firstNetworkThenCacheFallback(event.request, DYNAMIC_CACHE_NAME)
+    // )
 
-
-})
-
-// best approach: first cache then update cache with fetch result
-self.addEventListener("fetch", function (event) {
-    var url = 'https://httpbin.org/get'
+    // 05. First cache then update cache with fetch result with offline mode support: best approach
+    const url = 'https://httpbin.org/get'
     if (event.request.url.indexOf(url) > -1) {
+        // First cache then update cache with fetch
         event.respondWith(
-            caches.open(DYNAMIC_CACHE_NAME)
-                .then(function (cache) {
-                    return fetch(event.request)
-                        .then(function (resp) {
-                            cache.put(event.request, resp.clone())
-                            return resp
-                        })
-                })
+            updateCacheWithFetch(event.request, DYNAMIC_CACHE_NAME)
         )
     } else if (new RegExp('\\b' + STATIC_FILES.join("\\b|\\b") + "\\b").test(event.request.url)) {
         event.respondWith(
             caches.match(event.request)
         )
-    }
-    else {
+    } else {
+        // offline mode support
         event.respondWith(
-            caches.match(event.request)
-                .then(function (response) {
-                    if (response) {
-                        return response;
-                    } else {
-                        return fetch(event.request)
-                            .then(function (resp) {
-                                return caches.open(DYNAMIC_CACHE_NAME)
-                                    .then(function (cache) {
-                                        cache.put(event.request.url, resp.clone())
-                                        return resp
-                                    })
-                            })
-                            .catch(function (err) {
-                                console.log(err)
-                                return caches.open(STATIC_CACHE_NAME)
-                                    .then(function (cache) {
-                                        if (event.request.url.indexOf("/help") > -1) {
-                                            return cache.match("/offline.html")
-                                        }
-                                    })
-                            })
-                    }
-                })
+            firstCacheThenNetworkFallback(event.request, { static: STATIC_CACHE_NAME, dynamic: DYNAMIC_CACHE_NAME })
         )
     }
 
 })
 
-
-// network first approach: bad user experience for slow networks
-// self.addEventListener("fetch", function (event) {
-//     event.respondWith(
-//         fetch(event.request)
-//             .then(function (resp) {
-//                 return caches.open(DYNAMIC_CACHE_NAME)
-//                     .then(function (cache) {
-//                         cache.put(event.request.url, resp.clone())
-//                         return resp
-//                     })
-//             })
-//             .catch(function (error) {
-//                 return caches.match(event.request)
-//             })
-//     )
-// });
 
 
 
