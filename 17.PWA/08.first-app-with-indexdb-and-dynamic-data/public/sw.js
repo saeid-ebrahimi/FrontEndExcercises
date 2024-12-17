@@ -1,174 +1,156 @@
-importScripts('/src/js/idb.js');
-var CACHE_STATIC_NAME = 'static-v16';
-var CACHE_DYNAMIC_NAME = 'dynamic-v2';
-var STATIC_FILES = [
-  '/',
-  '/index.html',
-  '/offline.html',
-  '/src/js/app.js',
-  '/src/js/feed.js',
-  '/src/js/promise.js',
-  '/src/js/fetch.js',
-  '/src/js/material.min.js',
-  '/src/css/app.css',
-  '/src/css/feed.css',
-  '/src/images/main-image.jpg',
-  'https://fonts.googleapis.com/css?family=Roboto:400,700',
-  'https://fonts.googleapis.com/icon?family=Material+Icons',
-  'https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css'
-];
+const STATIC_CACHE_NAME = 'static-v2'
+const DYNAMIC_CACHE_NAME = "dynamic-v2"
+const MAX_DYNAMIC_CACHE_ITEMS = 20
+// adding polyfills are unnecessary
+// because old browser don't support service workers "src/js/promise.js", "src/js/fetch.js"
+const STATIC_FILES = [
+    "/",
+    "/index.html",
+    "/fallback.html",
+    "/src/js/app.js",
+    "/src/js/feed.js",
+    "/src/js/promise.js",
+    "/src/js/fetch.js",
+    "/src/js/material.min.js",
+    "/src/css/app.css",
+    "/src/css/feed.css",
+    "/favicon.ico",
+    "/src/images/main-image.jpg",
+    "/manifest.json",
+    "https://fonts.googleapis.com/css?family=Roboto:400,700",
+    "https://fonts.googleapis.com/icon?family=Material+Icons",
+    "https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css",
+]
+async function addStaticCache(cacheName, filesName) {
+    console.log("[Service Worker] Pre Caching App Shell");
+    const staticCache = await caches.open(cacheName)
+    return staticCache.addAll(filesName)
+}
 
-// function trimCache(cacheName, maxItems) {
-//   caches.open(cacheName)
-//     .then(function (cache) {
-//       return cache.keys()
-//         .then(function (keys) {
-//           if (keys.length > maxItems) {
-//             cache.delete(keys[0])
-//               .then(trimCache(cacheName, maxItems));
-//           }
-//         });
-//     })
-// }
+async function removeOldCaches(fileNames) {
+    const cacheKeyList = await caches.keys()
+    const newCacheKeyList = cacheKeyList.map((cacheKey) => {
+        if (!fileNames.includes(cacheKey)) {
+            console.log("%c [Service Worker] Removing old cache.", "background:orange; color:white;padding:3px;", cacheKey);
+            return caches.delete(cacheKey)
+        }
+    })
+    return Promise.all(newCacheKeyList)
+}
 
-self.addEventListener('install', function (event) {
-  console.log('[Service Worker] Installing Service Worker ...', event);
-  event.waitUntil(
-    caches.open(CACHE_STATIC_NAME)
-      .then(function (cache) {
-        console.log('[Service Worker] Precaching App Shell');
-        cache.addAll(STATIC_FILES);
-      })
-  )
-});
+async function unregisterServiceWorkers() {
+    if ("serviceWorker" in navigator) {
+        const registrations = await navigator.serviceWorker.getRegistrations()
+        for (var i = 0; i < registrations.length; i++) {
+            await registrations[i].unregister()
+        }
+    }
+}
 
-self.addEventListener('activate', function (event) {
-  console.log('[Service Worker] Activating Service Worker ....', event);
-  event.waitUntil(
-    caches.keys()
-      .then(function (keyList) {
-        return Promise.all(keyList.map(function (key) {
-          if (key !== CACHE_STATIC_NAME && key !== CACHE_DYNAMIC_NAME) {
-            console.log('[Service Worker] Removing old cache.', key);
-            return caches.delete(key);
-          }
-        }));
-      })
-  );
-  return self.clients.claim();
-});
+async function firstCacheThenNetworkFallback(request, cacheNames) {
+    const matchResult = await caches.match(request)
+    if (matchResult) {
+        return matchResult
+    } else {
+        try {
+            const fetchResponse = await fetch(request)
+            const dynamicCache = caches.open(cacheNames.dynamic)
+            await dynamicCache.put(request.url, fetchResponse.clone())
+            return fetchResponse
+        } catch (error) {
+            const staticCache = await caches.open(cacheNames.static)
+            if (request.headers.get('accept').includes('text/html')) {
+                const matchResult = await staticCache.match("/fallback.html")
+                return matchResult
+            }
+
+        }
+
+    }
+}
+
+async function updateCacheWithFetch(request, cacheName) {
+    const dynamicCache = await caches.open(cacheName)
+    const resp = await fetch(request)
+    dynamicCache.put(request, resp.clone())
+    trimCache(cacheName, MAX_DYNAMIC_CACHE_ITEMS)
+    return resp
+
+}
 
 function isInArray(string, array) {
-  var cachePath;
-  if (string.indexOf(self.origin) === 0) { // request targets domain where we serve the page from (i.e. NOT a CDN)
-    console.log('matched ', string);
-    cachePath = string.substring(self.origin.length); // take the part of the URL AFTER the domain (e.g. after localhost:8080)
-  } else {
-    cachePath = string; // store the full request (for CDNs)
-  }
-  return array.indexOf(cachePath) > -1;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === string) {
+            return true
+        }
+    }
+    return false
 }
-self.addEventListener('fetch', function (event) {
 
-  var url = 'https://pwagram-99adf.firebaseio.com/posts';
-  if (event.request.url.indexOf(url) > -1) {
-    event.respondWith(
-      caches.open(CACHE_DYNAMIC_NAME)
-        .then(function (cache) {
-          return fetch(event.request)
-            .then(function (res) {
-              // trimCache(CACHE_DYNAMIC_NAME, 3);
-              cache.put(event.request, res.clone());
-              return res;
-            });
-        })
+async function trimCache(cacheName, maxItems) {
+    const cache = await caches.open(cacheName)
+    const cacheKeys = await cache.keys()
+    if (cacheKeys.length > maxItems) {
+        await cache.delete(cacheKeys[0])
+        trimCache(cacheName, maxItems)
+    }
+}
+// service worker scope is depends on the folder which exists
+self.addEventListener('install', function (event) {
+    const LOG_STYLES = `color:white;
+    background: #1D4ED8;
+    padding: 8px 16px;
+    border-radius:5px;
+    font-size:14px;`;
+    console.log('%c [Service Worker] Installing Service Worker ...', LOG_STYLES, event);
+    event.waitUntil(addStaticCache(STATIC_CACHE_NAME, STATIC_FILES))
+})
+
+self.addEventListener('activate', function (event) {
+    const LOG_STYLES = `color:white;
+        background: #7C3AED;
+        padding: 8px 16px;
+        border-radius:5px;
+        font-size:14px;`;
+    // because it's possible that the previous version of sw is working in opened tab it activate as we close the tab
+    console.log(
+        "%c[Service Worker] Activating Service Worker...",
+        LOG_STYLES,
+        event
     );
-  } else if (isInArray(event.request.url, STATIC_FILES)) {
-    event.respondWith(
-      caches.match(event.request)
-    );
-  } else {
-    event.respondWith(
-      caches.match(event.request)
-        .then(function (response) {
-          if (response) {
-            return response;
-          } else {
-            return fetch(event.request)
-              .then(function (res) {
-                return caches.open(CACHE_DYNAMIC_NAME)
-                  .then(function (cache) {
-                    // trimCache(CACHE_DYNAMIC_NAME, 3);
-                    cache.put(event.request.url, res.clone());
-                    return res;
-                  })
-              })
-              .catch(function (err) {
-                return caches.open(CACHE_STATIC_NAME)
-                  .then(function (cache) {
-                    if (event.request.headers.get('accept').includes('text/html')) {
-                      return cache.match('/offline.html');
-                    }
-                  });
-              });
-          }
-        })
-    );
-  }
-});
+    event.waitUntil(
+        removeOldCaches([STATIC_CACHE_NAME, DYNAMIC_CACHE_NAME])
+    )
+    return self.clients.claim();
+})
+// best approach: first cache then update cache with fetch result
+function isInArray(string, array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === string) {
+            return true
+        }
+    }
+    return false
+}
 
-// self.addEventListener('fetch', function(event) {
-//   event.respondWith(
-//     caches.match(event.request)
-//       .then(function(response) {
-//         if (response) {
-//           return response;
-//         } else {
-//           return fetch(event.request)
-//             .then(function(res) {
-//               return caches.open(CACHE_DYNAMIC_NAME)
-//                 .then(function(cache) {
-//                   cache.put(event.request.url, res.clone());
-//                   return res;
-//                 })
-//             })
-//             .catch(function(err) {
-//               return caches.open(CACHE_STATIC_NAME)
-//                 .then(function(cache) {
-//                   return cache.match('/offline.html');
-//                 });
-//             });
-//         }
-//       })
-//   );
-// });
-
-// self.addEventListener('fetch', function(event) {
-//   event.respondWith(
-//     fetch(event.request)
-//       .then(function(res) {
-//         return caches.open(CACHE_DYNAMIC_NAME)
-//                 .then(function(cache) {
-//                   cache.put(event.request.url, res.clone());
-//                   return res;
-//                 })
-//       })
-//       .catch(function(err) {
-//         return caches.match(event.request);
-//       })
-//   );
-// });
-
-// Cache-only
-// self.addEventListener('fetch', function (event) {
-//   event.respondWith(
-//     caches.match(event.request)
-//   );
-// });
-
-// Network-only
-// self.addEventListener('fetch', function (event) {
-//   event.respondWith(
-//     fetch(event.request)
-//   );
-// });
+self.addEventListener("fetch", function (event) {
+    // 05. First cache then update cache with fetch result with offline mode support: best approach
+    const url = 'https://pwagram-3a2a4-default-rtdb.firebaseio.com/posts.json'
+    if (event.request.url.indexOf(url) > -1) {
+        // First cache then update cache with fetch
+        event.respondWith(
+            updateCacheWithFetch(event.request, DYNAMIC_CACHE_NAME)
+        )
+    }
+    else if (isInArray(url, STATIC_FILES)) {
+        event.respondWith(
+            caches.match(event.request)
+        )
+    }
+    else {
+        // offline mode support
+        event.respondWith(
+            firstCacheThenNetworkFallback(event.request, { static: STATIC_CACHE_NAME, dynamic: DYNAMIC_CACHE_NAME })
+        )
+    }
+})

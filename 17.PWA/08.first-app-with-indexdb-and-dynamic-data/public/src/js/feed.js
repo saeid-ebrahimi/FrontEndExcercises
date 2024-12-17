@@ -1,38 +1,22 @@
-
-
 var shareImageButton = document.querySelector('#share-image-button');
 var createPostArea = document.querySelector('#create-post');
 var closeCreatePostModalButton = document.querySelector('#close-create-post-modal-btn');
 var sharedMomentsArea = document.querySelector('#shared-moments');
 
-
-
 function openCreatePostModal() {
   createPostArea.style.display = 'block';
   if (deferredPrompt) {
     deferredPrompt.prompt();
-
     deferredPrompt.userChoice.then(function (choiceResult) {
       console.log(choiceResult.outcome);
-
       if (choiceResult.outcome === 'dismissed') {
         console.log('User cancelled installation');
       } else {
-        console.log('User added to home screen');
+        console.log("User added to home screen");
       }
     });
-
     deferredPrompt = null;
   }
-
-  // if ('serviceWorker' in navigator) {
-  //   navigator.serviceWorker.getRegistrations()
-  //     .then(function(registrations) {
-  //       for (var i = 0; i < registrations.length; i++) {
-  //         registrations[i].unregister();
-  //       }
-  //     })
-  // }
 }
 
 function closeCreatePostModal() {
@@ -43,90 +27,100 @@ shareImageButton.addEventListener('click', openCreatePostModal);
 
 closeCreatePostModalButton.addEventListener('click', closeCreatePostModal);
 
-// Currently not in use, allows to save assets in cache on demand otherwise
 function onSaveButtonClicked(event) {
-  console.log('clicked');
-  if ('caches' in window) {
-    caches.open('user-requested')
-      .then(function (cache) {
-        cache.add('https://httpbin.org/get');
-        cache.add('/src/images/sf-boat.jpg');
-      });
-  }
+  console.log("clicked!");
+  // if ("caches" in window) {
+  //   caches.open('user-requested')
+  //     .then(function (cache) {
+  //       cache.add('https://httpbin.org/get')
+  //       cache.add("/src/images/sf-boat.jpg")
+  //     })
+  // }
 }
 
 function clearCards() {
   while (sharedMomentsArea.hasChildNodes()) {
-    sharedMomentsArea.removeChild(sharedMomentsArea.lastChild);
+    sharedMomentsArea.removeChild(sharedMomentsArea.lastChild)
   }
 }
 
 function createCard(data) {
-  var cardWrapper = document.createElement('div');
-  cardWrapper.className = 'shared-moment-card mdl-card mdl-shadow--2dp';
-  var cardTitle = document.createElement('div');
-  cardTitle.className = 'mdl-card__title';
-  cardTitle.style.backgroundImage = 'url("/src/images/sf-boat.jpg")';
-  cardTitle.style.backgroundSize = 'cover';
-  cardTitle.style.height = '180px';
-  cardWrapper.appendChild(cardTitle);
-  var cardTitleTextElement = document.createElement('h2');
-  cardTitleTextElement.style.color = 'white';
-  cardTitleTextElement.className = 'mdl-card__title-text';
-  cardTitleTextElement.textContent = data.title;
-  cardTitle.appendChild(cardTitleTextElement);
-  var cardSupportingText = document.createElement('div');
-  cardSupportingText.className = 'mdl-card__supporting-text';
-  cardSupportingText.textContent = data.location;
-  cardSupportingText.style.textAlign = 'center';
-  // var cardSaveButton = document.createElement('button');
-  // cardSaveButton.textContent = 'Save';
-  // cardSaveButton.addEventListener('click', onSaveButtonClicked);
-  // cardSupportingText.appendChild(cardSaveButton);
-  cardWrapper.appendChild(cardSupportingText);
-  componentHandler.upgradeElement(cardWrapper);
-  sharedMomentsArea.appendChild(cardWrapper);
+  var cardWrapper = document.createElement("div")
+  cardWrapper.className = "shared-moment-card mdl-card mdl-shadow--2dp"
+  var cardTitle = document.createElement("div")
+  cardTitle.className = "mdl-card__title"
+  cardTitle.style.backgroundImage = `url(${data.image})`;
+  cardTitle.style.backgroundSize = 'cover'
+  cardTitle.style.height = "180px"
+  cardWrapper.appendChild(cardTitle)
+
+  var cardTitleTextElement = document.createElement("h2")
+  cardTitleTextElement.className = "mdl-card__title-text"
+  cardTitleTextElement.textContent = data.title
+  cardTitleTextElement.style.color = "white"
+  cardTitle.appendChild(cardTitleTextElement)
+
+  var cardSupportingText = document.createElement("div")
+  cardSupportingText.className = "mdl-card__supporting-text"
+  cardSupportingText.textContent = data.location
+  cardSupportingText.style.textAlign = "center"
+  cardWrapper.appendChild(cardSupportingText)
+  componentHandler.upgradeElement(cardWrapper)
+  sharedMomentsArea.appendChild(cardWrapper)
 }
 
-function updateUI(data) {
-  clearCards();
-  for (var i = 0; i < data.length; i++) {
-    createCard(data[i]);
+async function updateUI(data) {
+  clearCards()
+  data.forEach(item => createCard(item))
+}
+
+async function getPostsData(url) {
+  try {
+    const getResponse = await fetch(url)
+    const data = await getResponse.json()
+    networkDataReceived = true
+    console.log("From Web", data);
+    const dataArray = []
+    for (let key in data) {
+      dataArray.push(data[key])
+    }
+    return dataArray
+  } catch (error) {
+    console.warn("cannot get the data");
+  }
+}
+async function getPostDataFromCache(url) {
+  const dynamicCache = await caches.match(url)
+  if (dynamicCache) {
+    const data = await dynamicCache.json()
+    console.log("From cache", data);
+    if (!networkDataReceived) {
+      const dataArray = []
+      for (let key in data) {
+        dataArray.push(data[key])
+      }
+      return dataArray
+    }
   }
 }
 
-var url = 'https://pwagram-3a2a4-default-rtdb.firebaseio.com/posts.json';
-var networkDataReceived = false;
-
-function createCards(fetchedData) {
-  const dataArray = []
-  for (const key in fetchedData) {
-    dataArray.push(fetchedData[key])
+async function createCards(url) {
+  const data = await getPostsData(url)
+  if (data) {
+    updateUI(data)
   }
-  updateUI(dataArray)
 }
 
-fetch(url)
-  .then(function (res) {
-    return res.json();
-  })
-  .then(function (data) {
-    networkDataReceived = true;
-    console.log('From web', data);
-    createCards(data)
-  });
+async function createCardsFromCache(url) {
+  const data = await getPostDataFromCache(url)
+  if (data) {
+    updateUI(data)
+  }
+}
 
+const url = 'https://pwagram-3a2a4-default-rtdb.firebaseio.com/posts.json'
+let networkDataReceived = false
+createCards(url)
 if ('caches' in window) {
-  caches.match(url)
-    .then(function (response) {
-      if (response) {
-        return response.json();
-      }
-    })
-    .then(function (data) {
-      console.log('From cache', data);
-      if (!networkDataReceived) {
-        createCards(data)
-      }
-    });
+  createCardsFromCache(url)
 }
