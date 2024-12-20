@@ -89,6 +89,7 @@ async function getPostsData(url) {
     console.warn("cannot get the data");
   }
 }
+
 async function getPostDataFromCache(url) {
   const dynamicCache = await caches.match(url)
   if (dynamicCache) {
@@ -117,10 +118,37 @@ async function createCardsFromCache(url) {
     updateUI(data)
   }
 }
-
+function createCardsFromIndexedDB() {
+  readAllData('posts')
+    .then(function (data) {
+      if (!networkDataReceived) {
+        console.log('From cache', data);
+        updateUI(data);
+      }
+    });
+}
+// async function createCardsFromIndexedDB() {
+//   const allData = readAllData("posts")
+//   if (!networkDataReceived) {
+//     console.log("From IndexDB", allData);
+//     updateUI(allData)
+//   }
+// }
 const url = 'https://pwagram-3a2a4-default-rtdb.firebaseio.com/posts.json'
+
 let networkDataReceived = false
 createCards(url)
-if ('caches' in window) {
-  createCardsFromCache(url)
+// if ('caches' in window) {
+//   createCardsFromCache(url)
+// }
+
+if ("indexedDB" in window) {
+  // readAllData('posts')
+  //   .then(function (data) {
+  //     if (!networkDataReceived) {
+  //       console.log('From cache', data);
+  //       updateUI(data);
+  //     }
+  //   });
+  createCardsFromIndexedDB()
 }
