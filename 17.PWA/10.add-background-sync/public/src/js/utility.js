@@ -1,10 +1,16 @@
 const DB_NAME = "posts-store"
 const STORE_NAME = "posts"
+const SYNC_STORE_NAME = "sync-posts"
 const KEY_PATH = "id"
 
 const dbPromise = idb.open(DB_NAME, 1, function (db) {
     if (!db.objectStoreNames.contains(STORE_NAME)) {
         db.createObjectStore(STORE_NAME, {
+            keyPath: KEY_PATH
+        })
+    }
+    if (!db.objectStoreNames.contains(SYNC_STORE_NAME)) {
+        db.createObjectStore(SYNC_STORE_NAME, {
             keyPath: KEY_PATH
         })
     }

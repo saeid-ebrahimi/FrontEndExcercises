@@ -137,6 +137,7 @@ function isInArray(string, array) {
     }
     return false
 }
+
 async function storeData(storeName, request) {
     const response = await fetch(request)
     await clearAllData("posts")
@@ -149,7 +150,6 @@ async function storeData(storeName, request) {
 }
 
 self.addEventListener("fetch", function (event) {
-
     const url = 'https://pwagram-3a2a4-default-rtdb.firebaseio.com/posts.json'
     if (event.request.url.indexOf(url) > -1) {
         event.respondWith(
@@ -176,6 +176,49 @@ self.addEventListener("fetch", function (event) {
         // offline mode support
         event.respondWith(
             firstCacheThenNetworkFallback(event.request, { static: STATIC_CACHE_NAME, dynamic: DYNAMIC_CACHE_NAME })
+        )
+    }
+})
+
+const url = 'https://pwagram-3a2a4-default-rtdb.firebaseio.com/posts.json'
+
+function sendDataFromIndexedDB(postData) {
+    fetch(url, {
+        method: "POST",
+        body: JSON.stringify(postData),
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        }
+    })
+        .then(function (response) {
+            console.log("Sent data", response);
+            if (response.ok) {
+                deleteItemFromData('sync-posts', postData.id)
+            }
+        })
+        .catch(function (error) {
+            console.log("Error While Sending Data", error);
+        })
+}
+
+self.addEventListener("sync", function (event) {
+    console.log("[Service Worker] Background syncing", event);
+    if (event.tag === 'sync-new-posts') {
+        console.log('[Service Worker] Syncing new posts');
+        event.waitUntil(
+            readAllData('sync-posts')
+                .then(function (allData) {
+                    for (let data of allData) {
+                        const formData = {
+                            id: data.id,
+                            title: data.title,
+                            location: data.location,
+                            image: 'https://images.simedia.cloud/cms-v2/CustomerData/579/Files/Images/02-gastlichkeit/header_slider/379348.jpg/image.jpg?v=638677923726'
+                        }
+                        sendDataFromIndexedDB(formData)
+                    }
+                })
         )
     }
 })

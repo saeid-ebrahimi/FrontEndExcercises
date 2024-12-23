@@ -1,7 +1,11 @@
-var shareImageButton = document.querySelector('#share-image-button');
-var createPostArea = document.querySelector('#create-post');
-var closeCreatePostModalButton = document.querySelector('#close-create-post-modal-btn');
-var sharedMomentsArea = document.querySelector('#shared-moments');
+const shareImageButton = document.querySelector('#share-image-button');
+const createPostArea = document.querySelector('#create-post');
+const closeCreatePostModalButton = document.querySelector('#close-create-post-modal-btn');
+const sharedMomentsArea = document.querySelector('#shared-moments');
+
+const form = document.querySelector("form")
+const titleInput = document.querySelector("#title")
+const locationInput = document.querySelector("#location")
 
 function openCreatePostModal() {
   createPostArea.style.display = 'block';
@@ -52,21 +56,21 @@ function clearCards() {
 }
 
 function createCard(data) {
-  var cardWrapper = document.createElement("div")
+  const cardWrapper = document.createElement("div")
   cardWrapper.className = "shared-moment-card mdl-card mdl-shadow--2dp"
-  var cardTitle = document.createElement("div")
+  const cardTitle = document.createElement("div")
   cardTitle.className = "mdl-card__title"
   cardTitle.style.backgroundImage = `url(${data.image})`;
   cardTitle.style.backgroundSize = 'cover'
   cardWrapper.appendChild(cardTitle)
 
-  var cardTitleTextElement = document.createElement("h2")
+  const cardTitleTextElement = document.createElement("h2")
   cardTitleTextElement.className = "mdl-card__title-text"
   cardTitleTextElement.textContent = data.title
   cardTitleTextElement.style.color = "white"
   cardTitle.appendChild(cardTitleTextElement)
 
-  var cardSupportingText = document.createElement("div")
+  const cardSupportingText = document.createElement("div")
   cardSupportingText.className = "mdl-card__supporting-text"
   cardSupportingText.textContent = data.location
   cardSupportingText.style.textAlign = "center"
@@ -158,3 +162,50 @@ if ("indexedDB" in window) {
   //   });
   createCardsFromIndexedDB()
 }
+function sendData(postData) {
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify(postData),
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    }
+  })
+    .then(function (response) {
+      console.log("Sent data", response);
+      updateUI()
+    })
+}
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (titleInput.value.trim() === "" || locationInput.value.trim() === "") {
+    alert("Please fill the inputs")
+    return
+  }
+  closeCreatePostModal()
+  const postData = {
+    id: new Date().toISOString(),
+    title: titleInput.value,
+    location: locationInput.value,
+    image: 'https://images.simedia.cloud/cms-v2/CustomerData/579/Files/Images/02-gastlichkeit/header_slider/379348.jpg/image.jpg?v=638677923726'
+  }
+  if ("serviceWorker" in navigator && 'SyncManager' in window) {
+    navigator.serviceWorker.ready.then(function (sw) {
+      writeData("sync-posts", postData)
+        .then(function () {
+          return sw.sync.register('sync-new-posts');
+        })
+        .then(function () {
+          const snackBarContainer = document.querySelector("#confirmation-toast");
+          const data = { message: "Your Post was saved for syncing!" }
+          snackBarContainer.MaterialSnackbar.showSnackbar(data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        })
+    })
+  } else {
+    sendData(postData)
+  }
+
+})
