@@ -1,21 +1,24 @@
 const STATIC_CACHE_NAME = 'static-v3'
 const DYNAMIC_CACHE_NAME = "dynamic-v2"
+// adding polyfills are unnecessary
+// because old browser don't support service workers "src/js/promise.js", "src/js/fetch.js"
 const STATIC_FILES = [
     "/",
     "/index.html",
-    "/offline.html",
-    "src/js/app.js",
-    "src/js/feed.js",
-    "src/js/material.min.js",
-    "src/css/app.css",
-    "src/css/feed.css",
+    "/fallback.html",
+    "/src/js/app.js",
+    "/src/js/feed.js",
+    "/src/js/promise.js",
+    "/src/js/fetch.js",
+    "/src/js/material.min.js",
+    "/src/css/app.css",
+    "/src/css/feed.css",
     "/favicon.ico",
-    "src/images/main-image.jpg",
+    "/src/images/main-image.jpg",
     "https://fonts.googleapis.com/css?family=Roboto:400,700",
     "https://fonts.googleapis.com/icon?family=Material+Icons",
     "https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css",
-    // adding polyfills are unnecessary
-    // because old browser don't support service workers "src/js/promise.js", "src/js/fetch.js"
+
 ]
 
 async function addStaticCache(cacheName, filesName) {
@@ -64,7 +67,6 @@ async function firstCacheThenNetworkFallback(request, cacheNames) {
     }
 }
 
-
 async function firstNetworkThenCacheFallback(request, cacheName) {
     try {
         const fetchResponse = await fetch(request)
@@ -84,6 +86,15 @@ async function updateCacheWithFetch(request, cacheName) {
     return resp
 
 }
+
+function isInArray(string, array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === string) {
+            return true
+        }
+    }
+    return false
+}
 // service worker scope is depends on the folder which exists
 self.addEventListener('install', function (event) {
     const LOG_STYLES = `color:white;
@@ -91,7 +102,8 @@ self.addEventListener('install', function (event) {
     padding: 8px 16px;
     border-radius:5px;
     font-size:14px;`;
-    console.log('%c [Service Worker] Installing Service Worker ...', LOG_STYLES, event); event.waitUntil(addStaticCache(cacheName = STATIC_CACHE_NAME, filesName = STATIC_FILES))
+    console.log('%c [Service Worker] Installing Service Worker ...', LOG_STYLES, event);
+    event.waitUntil(addStaticCache(cacheName = STATIC_CACHE_NAME, filesName = STATIC_FILES))
 })
 
 self.addEventListener('activate', function (event) {
@@ -140,7 +152,7 @@ self.addEventListener("fetch", function (event) {
         event.respondWith(
             updateCacheWithFetch(event.request, DYNAMIC_CACHE_NAME)
         )
-    } else if (new RegExp('\\b' + STATIC_FILES.join("\\b|\\b") + "\\b").test(event.request.url)) {
+    } else if (isInArray(url, STATIC_FILES)) {
         event.respondWith(
             caches.match(event.request)
         )

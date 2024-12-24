@@ -1,3 +1,6 @@
+importScripts('/src/js/idb.js')
+importScripts("/src/js/utility.js")
+
 const STATIC_CACHE_NAME = 'static-v2'
 const DYNAMIC_CACHE_NAME = "dynamic-v2"
 const MAX_DYNAMIC_CACHE_ITEMS = 20
@@ -11,6 +14,8 @@ const STATIC_FILES = [
     "/src/js/feed.js",
     "/src/js/promise.js",
     "/src/js/fetch.js",
+    "/src/js/idb.js",
+    "/src/js/utility.js",
     "/src/js/material.min.js",
     "/src/css/app.css",
     "/src/css/feed.css",
@@ -21,6 +26,7 @@ const STATIC_FILES = [
     "https://fonts.googleapis.com/icon?family=Material+Icons",
     "https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css",
 ]
+
 async function addStaticCache(cacheName, filesName) {
     console.log("[Service Worker] Pre Caching App Shell");
     const staticCache = await caches.open(cacheName)
@@ -36,13 +42,6 @@ async function removeOldCaches(fileNames) {
         }
     })
     return Promise.all(newCacheKeyList)
-}
-
-async function networkOnlyApproach(request) {
-    return fetch(request)
-}
-async function cacheOnlyApproach(request) {
-    return caches.match(request)
 }
 
 async function unregisterServiceWorkers() {
@@ -61,30 +60,17 @@ async function firstCacheThenNetworkFallback(request, cacheNames) {
     } else {
         try {
             const fetchResponse = await fetch(request)
-            const dynamicCache = caches.open(cacheNames.dynamic)
+            const dynamicCache = await caches.open(cacheNames.dynamic)
             await dynamicCache.put(request.url, fetchResponse.clone())
             return fetchResponse
         } catch (error) {
             const staticCache = await caches.open(cacheNames.static)
             if (request.headers.get('accept').includes('text/html')) {
-                const matchResult = await staticCache.match("/fallback.html")
-                return matchResult
+                return staticCache.match("/fallback.html")
             }
 
         }
 
-    }
-}
-
-async function firstNetworkThenCacheFallback(request, cacheName) {
-    try {
-        const fetchResponse = await fetch(request)
-        const dynamicCache = await caches.open(cacheName)
-        dynamicCache.put(request, fetchResponse.clone())
-        return fetchResponse
-    } catch (error) {
-        const dynamicCache = await caches.match(request)
-        return dynamicCache
     }
 }
 
@@ -151,35 +137,34 @@ function isInArray(string, array) {
     }
     return false
 }
+async function storeData(storeName, request) {
+    const response = await fetch(request)
+    await clearAllData("posts")
+    const clonedResp = response.clone()
+    const data = await clonedResp.json()
+    for (let key in data) {
+        writeData(storeName, data[key])
+    }
+    return response
+}
 
 self.addEventListener("fetch", function (event) {
-    // 01. First cache approach with network fallback
-    // event.respondWith(
-    //     firstCacheThenNetworkFallback(event.request, DYNAMIC_CACHE_NAME)
-    // )
 
-    // 02. Cache only approach: is not recommended
-    // event.respondWith(
-    //     cacheOnlyApproach(event.request)
-    // )
-
-    // 03. Network only approach: is not recommended
-    // event.respondWith(
-    //     networkOnlyApproach(event.request)
-    // )
-
-    // 04. Network with cache fallback: bad user experience
-    // event.respondWith(
-    //     firstNetworkThenCacheFallback(event.request, DYNAMIC_CACHE_NAME)
-    // )
-
-    // 05. First cache then update cache with fetch result with offline mode support: best approach
-    // const url = 'https://httpbin.org/get'
-    const url = "https://postman-echo.com/get"
+    const url = 'https://pwagram-3a2a4-default-rtdb.firebaseio.com/posts.json'
     if (event.request.url.indexOf(url) > -1) {
-        // First cache then update cache with fetch
         event.respondWith(
-            updateCacheWithFetch(event.request, DYNAMIC_CACHE_NAME)
+            storeData("posts", event.request)
+            // fetch(event.request)
+            //     .then(function (res) {
+            //         var clonedResp = res.clone()
+            //         clonedResp.json()
+            //             .then(function (data) {
+            //                 for (let key in data) {
+            //                     writeDataV1("posts", data[key])
+            //                 }
+            //             })
+            //         return res
+            //     })
         )
     }
     else if (isInArray(url, STATIC_FILES)) {
