@@ -63,9 +63,9 @@ export default function Header(props: PropsWithChildren) {
 
     function handleMenuItemClick(evt: React.MouseEvent<HTMLElement>, id: number) {
         setMenuAnchorEl(evt.currentTarget)
-        setOpenMenu(false)
         setSelectedSubMenu(id)
         setActiveTab(TABS.filter(tab => tab.label === "Services")?.[0]?.id)
+        setOpenMenu(false)
         handleClose(evt)
 
     }
@@ -96,7 +96,7 @@ export default function Header(props: PropsWithChildren) {
             }
         })
         SERVICES_SUBMENUS.forEach(tab => {
-            if (window.location.pathname.includes(tab.link)) {
+            if (window.location.pathname === (tab.link)) {
                 setSelectedSubMenu(tab.id)
             }
         })
@@ -138,7 +138,8 @@ export default function Header(props: PropsWithChildren) {
                                         onClick={() => { }}
                                         aria-owns={menuAnchorEl ? "simple-menu" : undefined}
                                         aria-haspopup={menuAnchorEl ? "true" : undefined}
-                                        // component={Link} to={tab.link}
+                                        component={Link}
+                                        to={tab.link}
                                         label={tab.label}
                                         key={tab.id} />
                                 } else {
