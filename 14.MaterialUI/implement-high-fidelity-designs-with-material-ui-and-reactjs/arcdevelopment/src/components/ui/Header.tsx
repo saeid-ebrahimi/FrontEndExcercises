@@ -1,8 +1,9 @@
 import React, { PropsWithChildren, useEffect, useState } from "react";
-import { AppBar, Toolbar, useScrollTrigger, Typography, Tabs, Tab, makeStyles, styled, Button } from "@mui/material";
+import { AppBar, Toolbar, useScrollTrigger, Typography, Tabs, Tab, makeStyles, styled, Button, Menu, MenuItem } from "@mui/material";
 
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
+import { theme } from "./Theme";
 
 interface Props {
     window?: () => Window;
@@ -47,13 +48,43 @@ const Logo = styled('img')(({ theme }) => ({
 
 export default function Header(props: PropsWithChildren) {
     // const classes = useStyles()
-    const [activeTab, setActiveTab] = useState(0)
+    const [activeTab, setActiveTab] = useState(0);
+    const [menuAnchorEl, setMenuAnchorEl] = useState<null | HTMLElement>(null);
+    const [openMenu, setOpenMenu] = useState(false)
+    const [selectedSubMenu, setSelectedSubMenu] = useState<number>(0)
     function handleChangeTab(evt: React.SyntheticEvent, value: number) {
         setActiveTab(value)
     }
+
+    function handleClick(evt: React.MouseEvent<HTMLElement>) {
+        setMenuAnchorEl(evt.currentTarget)
+        setOpenMenu(true)
+    }
+
+    function handleMenuItemClick(evt: React.MouseEvent<HTMLElement>, id: number) {
+        setMenuAnchorEl(evt.currentTarget)
+        setOpenMenu(false)
+        setSelectedSubMenu(id)
+        setActiveTab(TABS.filter(tab => tab.label === "Services")?.[0]?.id)
+        handleClose(evt)
+
+    }
+    function handleClose(evt: React.MouseEvent<HTMLElement>) {
+        setMenuAnchorEl(evt.currentTarget)
+        setOpenMenu(false)
+        setActiveTab(TABS.filter(tab => tab.label === "Services")?.[0]?.id)
+    }
+
     const tabStyles = {
         minWidth: 10,
         marginLeft: "25px",
+    }
+    const menuItemStyles = {
+        opacity: 0.7,
+        "&:hover":
+        {
+            opacity: 1,
+        }
     }
     useEffect(() => {
         TABS.forEach(tab => {
@@ -64,6 +95,11 @@ export default function Header(props: PropsWithChildren) {
                 setActiveTab(0)
             }
         })
+        SERVICES_SUBMENUS.forEach(tab => {
+            if (window.location.pathname.includes(tab.link)) {
+                setSelectedSubMenu(tab.id)
+            }
+        })
     }, [])
     const TABS = [
         { id: 0, link: "/", label: "Home" },
@@ -71,6 +107,12 @@ export default function Header(props: PropsWithChildren) {
         { id: 2, link: "/revolution", label: "The Revolution" },
         { id: 3, link: "/about", label: "About Us" },
         { id: 4, link: "/contact", label: "Contact Us" }
+    ]
+    const SERVICES_SUBMENUS = [
+        { id: 1, link: "/services", label: "Services" },
+        { id: 5, link: "/services/custom-software", label: "Custom Software Development" },
+        { id: 6, link: "/services/mobile-apps", label: "Mobile App Development" },
+        { id: 7, link: "/services/websites", label: "Website Development" },
     ]
     return (
         <React.Fragment>
@@ -89,7 +131,20 @@ export default function Header(props: PropsWithChildren) {
                         <Tabs value={activeTab} indicatorColor={"primary"} textColor={"inherit"} onChange={handleChangeTab} sx={{
                             marginLeft: "auto"
                         }}>
-                            {TABS.map(tab => (<Tab sx={(theme) => ({ tabStyles, ...theme.typography.tab })} component={Link} to={tab.link} label={tab.label} key={tab.id} />))}
+                            {TABS.map(tab => {
+                                if (tab.label === "Services") {
+                                    return <Tab sx={(theme) => ({ tabStyles, ...theme.typography.tab })}
+                                        onMouseOver={handleClick}
+                                        onClick={() => { }}
+                                        aria-owns={menuAnchorEl ? "simple-menu" : undefined}
+                                        aria-haspopup={menuAnchorEl ? "true" : undefined}
+                                        // component={Link} to={tab.link}
+                                        label={tab.label}
+                                        key={tab.id} />
+                                } else {
+                                    return <Tab sx={(theme) => ({ tabStyles, ...theme.typography.tab })} component={Link} to={tab.link} label={tab.label} key={tab.id} />
+                                }
+                            })}
                         </Tabs>
                         <Button variant={"contained"} color={"secondary"} sx={(theme) => ({
                             ...theme.typography.estimate,
@@ -100,6 +155,27 @@ export default function Header(props: PropsWithChildren) {
                         })}>
                             Free Estimate
                         </Button>
+                        <Menu id={"simple-menu"} elevation={0} keepMounted={true} anchorEl={menuAnchorEl} slotProps={{
+                            paper: {
+                                style: {
+                                    background: theme.palette.primary.main,
+                                    color: "white",
+                                    margin: "-1rem",
+                                    borderRadius: 0,
+                                }
+                            }
+                        }} open={openMenu} onClose={handleClick} MenuListProps={{ onMouseLeave: handleClose }}>
+                            {SERVICES_SUBMENUS.map(
+                                submenu => <MenuItem
+                                    selected={(submenu.id === selectedSubMenu) && (activeTab === TABS.filter(tab => tab.label === "Services")?.[0]?.id)}
+                                    key={submenu.id}
+                                    sx={(theme) => ({ ...theme.typography.tab, ...menuItemStyles })}
+                                    onClick={(evt) => { handleMenuItemClick(evt, submenu.id) }}
+                                    component={Link}
+                                    to={submenu.link}>
+                                    {submenu.label}
+                                </MenuItem>)}
+                        </Menu>
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>
