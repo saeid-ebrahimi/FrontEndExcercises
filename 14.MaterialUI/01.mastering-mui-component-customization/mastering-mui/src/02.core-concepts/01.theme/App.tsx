@@ -10,6 +10,9 @@ export function App() {
             <Button sx={{
                 color: "warning.main",
                 bgcolor: "whitesmoke",
+                borderWidth: 2,
+                borderStyle: "solid",
+                borderColor: (theme) => theme.palette.secondary.main,
                 mt: "50px",
                 py: "20px",
                 px: 5,
