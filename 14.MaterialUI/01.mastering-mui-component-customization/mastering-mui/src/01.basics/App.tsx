@@ -7,7 +7,7 @@ function MySpecialBox(props: { label: string; children: ReactNode }) {
         {props.children}
     </Box>
 }
-function App() {
+export function App() {
     return (
         <div>
             <Button sx={
@@ -25,5 +25,3 @@ function App() {
         </div>
     )
 }
-
-export default App
