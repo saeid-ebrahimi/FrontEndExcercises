@@ -1,4 +1,4 @@
-import { Autocomplete, TextField, Paper, type PaperProps } from "@mui/material";
+import { Autocomplete, TextField, Paper, type PaperProps, autocompleteClasses, inputLabelClasses, outlinedInputClasses } from "@mui/material";
 import { useEffect, useState } from "react";
 import { TOP_TEN_MOVIES } from "./constants";
 import { DeleteForever as DeleteForeverIcon, KeyboardArrowDown as KeyboardArrowDownIcon } from "@mui/icons-material";
@@ -13,7 +13,7 @@ function CustomPaper(props: PaperProps) {
     return <Paper
         sx={{
             bgcolor: "#EDE9FE",
-            "& .MuiAutocomplete-option": {
+            [`& .${autocompleteClasses.option}`]: {
                 borderBottom: "1px solid #2E1065",
                 "&:last-child": {
                     borderBottom: "none",
@@ -24,7 +24,7 @@ function CustomPaper(props: PaperProps) {
                 },
                 ...textStyles,
             },
-            "& .MuiAutocomplete-groupLabel": {
+            [`& .${autocompleteClasses.groupLabel}`]: {
                 bgcolor: "#8B5CF6",
                 ...textStyles,
                 color: "white",
@@ -34,13 +34,14 @@ function CustomPaper(props: PaperProps) {
 }
 
 
-export function CustomizedAutocomplete() {
+export function CustomizedAutocompleteUsingComponentClasses() {
     const [value, setValue] = useState<MovieOption[]>([])
     useEffect(() => {
         console.log(value);
     }, [value])
     return <Autocomplete
         multiple
+        open={true}
         noOptionsText={<span style={textStyles}>Item Not found!</span>}
         slotProps={{
             chip: {
@@ -62,39 +63,45 @@ export function CustomizedAutocomplete() {
             width: "30rem",
             bgcolor: "#EDE9FE",
             borderRadius: "1rem",
-            "& .MuiAutocomplete-input": {
+            [`& .${autocompleteClasses.input}`]: {
                 height: "3rem",
                 "&::placeholder": {
                     color: "#2E1065",
                 }
             },
-            "& > div > label": {
+            [`& > div > label`]: {
                 ...textStyles,
-                "&.Mui-focused": {
-                    pt: 0,
-                    ...textStyles
-                },
             },
-            "& .MuiOutlinedInput-notchedOutline": {
+            [`& > div > .${inputLabelClasses.focused}`]: {
                 borderColor: "#5B21B6",
+                ...textStyles,
                 borderRadius: "1rem",
                 "& > legend > span": {
                     mb: "1rem",
                 }
             },
-            "&:hover .MuiOutlinedInput-notchedOutline": {
+            [`& .${outlinedInputClasses.notchedOutline}`]: {
+                borderColor: "#5B21B6",
+                borderRadius: "1rem",
+            },
+            [`&:focus-within .${outlinedInputClasses.notchedOutline}`]: {
+                borderColor: "#5B21B6",
+                borderRadius: "1rem",
+                ...textStyles
+            },
+            [`&:hover .${outlinedInputClasses.notchedOutline}`]: {
                 borderColor: "#6D28D9"
             },
-            "& .MuiAutocomplete-clearIndicator": {
+            [`& .${autocompleteClasses.clearIndicator}`]: {
                 "& > svg": {
                     fill: "#6D28D9"
                 }
             },
-            "& .MuiAutocomplete-popupIndicator": {
+            [`& .${autocompleteClasses.popupIndicator}`]: {
                 "& > svg": {
-                    fill: "#6D28D9",
+                    fill: "#6D28D9"
                 }
-            }
+            },
 
         }}
         groupBy={(option) => (option.year < 2000 ? "20 Century" : "21 Century")}
