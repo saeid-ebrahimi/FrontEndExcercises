@@ -1,5 +1,4 @@
-import { Autocomplete, Paper, PaperProps, TextField, autocompleteClasses, chipClasses, inputClasses, inputLabelClasses, outlinedInputClasses, textFieldClasses } from "@mui/material";
-import { useState } from "react";
+import { Autocomplete, Paper, PaperProps, TextField, autocompleteClasses, chipClasses, inputClasses, inputLabelClasses, outlinedInputClasses } from "@mui/material";
 
 const textStyles = {
     color: "#fff",
@@ -28,7 +27,6 @@ const CustomPaper = (props: PaperProps) => {
     )
 }
 export function FruitsAutocomplete() {
-    const [value, setValue] = useState()
     const fruitOptions = [
         { name: "Apple", year: 2022 },
         { name: "Banana", year: 2020 },
@@ -42,7 +40,6 @@ export function FruitsAutocomplete() {
             <Autocomplete
                 multiple
                 id="fruits"
-                value={value}
                 sx={{
                     [`& .${autocompleteClasses.tag}`]: {
                         bgcolor: "#020617",

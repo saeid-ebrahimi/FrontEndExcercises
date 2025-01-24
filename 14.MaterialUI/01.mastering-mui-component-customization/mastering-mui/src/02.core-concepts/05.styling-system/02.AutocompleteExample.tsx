@@ -1,5 +1,5 @@
-import { Autocomplete, Chip, Paper, PaperProps, rgbToHex, TextField } from "@mui/material";
-import { PropsWithChildren } from "react";
+import { Autocomplete, Paper, PaperProps, TextField } from "@mui/material";
+
 
 const CustomPaper = (props: PaperProps) => {
     const { sx, ...otherProps } = props
@@ -50,7 +50,9 @@ export function FruitsAutocomplete() {
                 //         }
                 //     }
                 // }}
-                PaperComponent={CustomPaper}
+                slots={{
+                    paper: CustomPaper
+                }}
                 renderInput={(params) => <TextField {...params} label="Fruit" placeholder={"Favorite Fruits..."} />} />
 
         </>
