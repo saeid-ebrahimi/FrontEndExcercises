@@ -1,5 +1,5 @@
-import { ButtonFunctionalityDemo } from "./02.Button/01.ButtonFunctionalityDemo";
-import { ButtonCustomizationDemo } from "./02.Button/02.ButtonCustomizationDemo";
+import { ButtonGroupFunctionality } from "./03.ButtonGroup/01.ButtonGroupFunctionality";
+import { ButtonGroupCustomization } from "./03.ButtonGroup/02.ButtonGroupCustomization";
 
 export default function App() {
     return <div style={{
@@ -7,7 +7,7 @@ export default function App() {
         flexDirection: "column",
         gap: "2rem"
     }}>
-        <ButtonFunctionalityDemo />
-        <ButtonCustomizationDemo />
+        <ButtonGroupFunctionality />
+        <ButtonGroupCustomization />
     </div>
 }

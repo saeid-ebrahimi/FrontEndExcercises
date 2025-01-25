@@ -1,5 +1,4 @@
 import { Button, buttonClasses } from '@mui/material'
-import React from 'react'
 
 export function ButtonCustomizationDemo() {
     return (
