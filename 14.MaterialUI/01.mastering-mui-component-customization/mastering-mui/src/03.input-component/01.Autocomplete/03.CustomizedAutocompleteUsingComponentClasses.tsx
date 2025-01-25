@@ -41,7 +41,6 @@ export function CustomizedAutocompleteUsingComponentClasses() {
     }, [value])
     return <Autocomplete
         multiple
-        open={true}
         noOptionsText={<span style={textStyles}>Item Not found!</span>}
         slotProps={{
             chip: {
