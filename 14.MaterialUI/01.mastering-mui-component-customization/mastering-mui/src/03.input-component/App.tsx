@@ -1,4 +1,5 @@
 import { CheckboxFunctionality } from "./04.Checkbox/01.CheckboxFunctionality";
+import { CheckboxCustomization } from "./04.Checkbox/02.CheckboxCustomization";
 
 export default function App() {
     return <div style={{
@@ -9,5 +10,6 @@ export default function App() {
         gap: "2rem"
     }}>
         <CheckboxFunctionality />
+        <CheckboxCustomization />
     </div>
 }

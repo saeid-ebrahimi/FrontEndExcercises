@@ -1,6 +1,10 @@
 import { Checkbox, FormControl, FormControlLabel, FormGroup } from "@mui/material";
 import { useState } from "react";
-import { Battery20 as Battery20Icon, Battery50, BatteryFull as BatteryFullIcon } from "@mui/icons-material";
+import {
+    Battery20 as Battery20Icon,
+    // Battery50,
+    BatteryFull as BatteryFullIcon
+} from "@mui/icons-material";
 
 export function CheckboxFunctionality() {
     const [checkedItems, setCheckedItems] = useState<boolean[]>([false, false, false])
