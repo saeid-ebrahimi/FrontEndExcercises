@@ -1,4 +1,5 @@
 import { FormComponentFunctionality } from "./06.FormComponent/01.FormComponentFunctionality";
+import { FormComponentsCustomization } from "./06.FormComponent/02.FormComponentsCustomization";
 
 export default function App() {
     return <div style={{
@@ -9,5 +10,6 @@ export default function App() {
         gap: "2rem"
     }}>
         <FormComponentFunctionality />
+        <FormComponentsCustomization />
     </div>
 }
