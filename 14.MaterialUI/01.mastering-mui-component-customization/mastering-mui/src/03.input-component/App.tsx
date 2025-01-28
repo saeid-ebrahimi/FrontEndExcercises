@@ -1,5 +1,4 @@
-import { FloatingActionButtonFunctionality } from "./05.FloatingActionButton/01.FloatingActionButtonFunctionality"
-import { FloatingActionButtonCustomization } from "./05.FloatingActionButton/02.FloatingActionButtonCustomization"
+import { FormComponentFunctionality } from "./06.FormComponent/01.FormComponentFunctionality";
 
 export default function App() {
     return <div style={{
@@ -9,7 +8,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <FloatingActionButtonFunctionality />
-        <FloatingActionButtonCustomization />
+        <FormComponentFunctionality />
     </div>
 }
