@@ -9,7 +9,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <FormComponentFunctionality />
-        <FormComponentsCustomization />
+
     </div>
 }
