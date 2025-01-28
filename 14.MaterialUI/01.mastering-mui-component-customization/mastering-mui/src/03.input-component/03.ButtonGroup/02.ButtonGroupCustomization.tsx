@@ -1,5 +1,4 @@
 import { Button, ButtonGroup, buttonGroupClasses } from '@mui/material'
-import React from 'react'
 
 export function ButtonGroupCustomization() {
     return (

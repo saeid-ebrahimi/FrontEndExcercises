@@ -1,5 +1,6 @@
-import { CheckboxFunctionality } from "./04.Checkbox/01.CheckboxFunctionality";
-import { CheckboxCustomization } from "./04.Checkbox/02.CheckboxCustomization";
+import { CheckboxCustomization } from "./04.Checkbox/02.CheckboxCustomization"
+import { FloatingActionButtonFunctionality } from "./05.FloatingActionButton/01.FloatingActionButtonFunctionality"
+import { FloatingActionButtonCustomization } from "./05.FloatingActionButton/02.FloatingActionButtonCustomization"
 
 export default function App() {
     return <div style={{
@@ -9,7 +10,8 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <CheckboxFunctionality />
         <CheckboxCustomization />
+        <FloatingActionButtonFunctionality />
+        <FloatingActionButtonCustomization />
     </div>
 }
