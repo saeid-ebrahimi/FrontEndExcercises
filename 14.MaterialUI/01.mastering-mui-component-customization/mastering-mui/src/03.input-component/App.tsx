@@ -1,13 +1,13 @@
-import { ButtonGroupFunctionality } from "./03.ButtonGroup/01.ButtonGroupFunctionality";
-import { ButtonGroupCustomization } from "./03.ButtonGroup/02.ButtonGroupCustomization";
+import { CheckboxFunctionality } from "./04.Checkbox/01.CheckboxFunctionality";
 
 export default function App() {
     return <div style={{
         display: "flex",
         flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",
         gap: "2rem"
     }}>
-        <ButtonGroupFunctionality />
-        <ButtonGroupCustomization />
+        <CheckboxFunctionality />
     </div>
 }
