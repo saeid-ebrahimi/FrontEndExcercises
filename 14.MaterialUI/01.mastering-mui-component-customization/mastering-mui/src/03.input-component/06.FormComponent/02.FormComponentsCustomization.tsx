@@ -42,8 +42,8 @@ export function FormComponentsCustomization() {
 
                 }}
                 required
-            // error
-            // disabled
+                // error
+                disabled
             >
                 <FormLabel sx={{
                     // color: "#4338CA",
@@ -61,21 +61,39 @@ export function FormComponentsCustomization() {
                     // "&.Mui-error": {
                     //     color: "#C2410C"
                     // },
+                    // "&.Mui-disabled": {
+                    //     color: "#94A3B8"
+                    // }
+
 
                 }}>My Favorite Movies</FormLabel>
-                <FormGroup>
+                <FormGroup sx={{
+                    // "& .MuiFormControlLabel-label": {
+                    //     color: "#1E293B",
+                    //     fontSize: "1.2rem",
+                    //     "&.Mui-focused": {
+                    //         color: "#16A34A"
+                    //     },
+                    //     "&.Mui-disabled": {
+                    //         color: "#94A3B8"
+                    //     }
+                    // },
+                }}>
                     <FormControlLabel control={<Checkbox />} label={"Save Private Ryan"} />
                     <FormControlLabel control={<Checkbox />} label={"The God Father"} />
                     <FormControlLabel control={<Checkbox />} label={"The Oppenheimer"} />
                 </FormGroup>
                 <FormHelperText
-                // sx={{
-                // color: "#4338CA",
-                // fontFamily: "verdana",
-                // "&.Mui-error": {
-                //     color: "#C2410C"
-                //  }
-                // }}
+                    sx={{
+                        // color: "#4338CA",
+                        // fontFamily: "verdana",
+                        // "&.Mui-error": {
+                        //     color: "#C2410C"
+                        //  }
+                        // "&.Mui-disabled": {
+                        //     color: "#94A3B8"
+                        // }
+                    }}
                 >Please select your favorite movies</FormHelperText>
             </FormControl>
         </div >
