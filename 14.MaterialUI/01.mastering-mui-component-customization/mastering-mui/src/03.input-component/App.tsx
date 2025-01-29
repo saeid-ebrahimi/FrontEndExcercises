@@ -1,5 +1,4 @@
-import { FormComponentFunctionality } from "./06.FormComponent/01.FormComponentFunctionality";
-import { FormComponentsCustomization } from "./06.FormComponent/02.FormComponentsCustomization";
+import { RadioButtonFunctionality } from "./07.RadioButton/01.RadioButtonFunctionality";
 
 export default function App() {
     return <div style={{
@@ -9,6 +8,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-
+        <RadioButtonFunctionality />
     </div>
 }
