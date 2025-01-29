@@ -1,6 +1,4 @@
-import { RadioButtonFunctionality } from "./07.RadioButton/01.RadioButtonFunctionality";
-import { RadioButtonCustomization } from "./07.RadioButton/02.RadioButtonCustomization";
-import { RadioButtonCustomizationUsingClassesObject } from "./07.RadioButton/03.RadioButtonCustomizationUsingClassesObject";
+import { RatingFunctionality } from "./08.Rating/01.RatingFunctionality";
 
 export default function App() {
     return <div style={{
@@ -10,8 +8,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <RadioButtonFunctionality />
-        <RadioButtonCustomization />
-        <RadioButtonCustomizationUsingClassesObject />
+        <RatingFunctionality />
     </div>
 }
