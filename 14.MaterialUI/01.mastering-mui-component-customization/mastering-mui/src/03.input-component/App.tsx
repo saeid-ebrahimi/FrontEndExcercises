@@ -1,4 +1,5 @@
 import { RadioButtonFunctionality } from "./07.RadioButton/01.RadioButtonFunctionality";
+import { RadioButtonCustomization } from "./07.RadioButton/02.RadioButtonCustomization";
 
 export default function App() {
     return <div style={{
@@ -9,5 +10,6 @@ export default function App() {
         gap: "2rem"
     }}>
         <RadioButtonFunctionality />
+        <RadioButtonCustomization />
     </div>
 }

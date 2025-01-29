@@ -22,7 +22,6 @@ export function RadioButtonFunctionality() {
             />
             <FormControl
             // disabled
-
             >
                 <RadioGroup value={value} onChange={(event) => { setValue(event.target.value) }} row>
                     <FormControlLabel
