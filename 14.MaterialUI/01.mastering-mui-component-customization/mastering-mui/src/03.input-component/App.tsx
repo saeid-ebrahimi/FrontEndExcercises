@@ -1,6 +1,4 @@
-import { RatingFunctionality } from "./08.Rating/01.RatingFunctionality";
-import { RatingCustomization } from "./08.Rating/02.RatingCustomization";
-import { RatingCustomizationUsingClassesObject } from "./08.Rating/03.RatingCustomizationUsingClassesObject";
+import { SwitchFunctionality } from "./11.SwitchButton/01.SwitchFunctionality";
 
 export default function App() {
     return <div style={{
@@ -10,8 +8,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <RatingFunctionality />
-        <RatingCustomization />
-        <RatingCustomizationUsingClassesObject />
+        <SwitchFunctionality />
     </div>
 }
