@@ -1,8 +1,9 @@
-import { FormControl, FormHelperText, InputLabel, MenuItem, Select } from "@mui/material";
+import { FormControl, FormHelperText, InputLabel, ListSubheader, MenuItem, NativeSelect, Select } from "@mui/material";
 import { useState } from "react";
 
 export function SelectFunctionality() {
     const [value, setValue] = useState("")
+    const [nativeValue, setNativeValue] = useState("")
     const [values, setValues] = useState<string[]>([])
     const options = ["trial", "personal", "community", "enterprise", "largeCompany"]
 
@@ -26,20 +27,48 @@ export function SelectFunctionality() {
                     // error
                     label={"Plan"}
                     labelId={"plan"}
-                    renderValue={(value) => `${value} Plan`}
+                    renderValue={(value) => `${value.charAt(0).toUpperCase()}${value.slice(1)} Plan`}
                     value={value}
                     color={"secondary"}
                     onChange={(event) => { setValue(event.target.value) }}
                 >
+                    <ListSubheader>Membership Plans</ListSubheader>
                     {options.map((option) => (
                         <MenuItem key={option} value={option} >
-                            {option}
+                            {`${option.charAt(0).toUpperCase()}${option.slice(1)}`}
                         </MenuItem>
                     ))}
                 </Select >
-                <FormHelperText>{"select your plan"}</FormHelperText>
+                <FormHelperText>{"select your membership plan"}</FormHelperText>
             </FormControl>
+            <FormControl
+                // error
+                // disabled
+                sx={{ minWidth: "400px" }}
 
+            >
+                <InputLabel htmlFor="plan2" >Plan</InputLabel>
+                {/* Label will replace the placeholder*/}
+                <NativeSelect
+                    // disabled
+                    // readOnly
+                    // error
+                    placeholder={"Select The Plan Please..."}
+                    id={"plan2"}
+                    value={nativeValue}
+                    color={"secondary"}
+                    onChange={(event) => { setNativeValue(event.target.value) }}
+                >
+                    <optgroup label={"Membership Plans"}>
+                        {options.map((option) => (
+                            <option key={option} value={option} >
+                                {`${option.charAt(0).toUpperCase()}${option.slice(1)}`}
+                            </option>
+                        ))}
+                    </optgroup>
+                </NativeSelect >
+                <FormHelperText>{"select your membership plan"}</FormHelperText>
+            </FormControl>
             <Select
                 displayEmpty
                 renderValue={(value) => (value?.length ? `${value} Plan/Plans` : "Please Select The Plan/Plans")}

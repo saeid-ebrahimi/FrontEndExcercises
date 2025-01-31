@@ -1,5 +1,6 @@
 import { SelectFunctionality } from "./09.Select/01.SelectFunctionality";
 
+
 export default function App() {
     return <div style={{
         display: "flex",
@@ -10,5 +11,6 @@ export default function App() {
         gap: "2rem"
     }}>
         <SelectFunctionality />
+
     </div>
 }
