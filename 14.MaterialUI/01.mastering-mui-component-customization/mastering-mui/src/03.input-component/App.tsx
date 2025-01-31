@@ -1,5 +1,6 @@
 import { RatingFunctionality } from "./08.Rating/01.RatingFunctionality";
 import { RatingCustomization } from "./08.Rating/02.RatingCustomization";
+import { RatingCustomizationUsingClassesObject } from "./08.Rating/03.RatingCustomizationUsingClassesObject";
 
 export default function App() {
     return <div style={{
@@ -11,5 +12,6 @@ export default function App() {
     }}>
         <RatingFunctionality />
         <RatingCustomization />
+        <RatingCustomizationUsingClassesObject />
     </div>
 }
