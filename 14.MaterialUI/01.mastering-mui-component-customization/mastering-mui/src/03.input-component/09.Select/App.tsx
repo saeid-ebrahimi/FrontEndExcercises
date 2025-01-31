@@ -1,5 +1,5 @@
-import { SelectFunctionality } from "./09.Select/01.SelectFunctionality";
-import { SelectCustomization } from "./09.Select/02.SelectCustomization";
+import { SelectFunctionality } from "./01.SelectFunctionality";
+import { SelectCustomization } from "./02.SelectCustomization";
 
 export default function App() {
     return <div style={{
