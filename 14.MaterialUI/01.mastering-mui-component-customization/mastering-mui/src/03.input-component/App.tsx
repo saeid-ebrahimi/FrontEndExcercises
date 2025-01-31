@@ -1,4 +1,5 @@
 import { RatingFunctionality } from "./08.Rating/01.RatingFunctionality";
+import { RatingCustomization } from "./08.Rating/02.RatingCustomization";
 
 export default function App() {
     return <div style={{
@@ -9,5 +10,6 @@ export default function App() {
         gap: "2rem"
     }}>
         <RatingFunctionality />
+        <RatingCustomization />
     </div>
 }
