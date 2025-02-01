@@ -1,6 +1,4 @@
-import { SelectFunctionality } from "./09.Select/01.SelectFunctionality";
-import { SelectCustomization } from "./09.Select/02.SelectCustomization";
-import { SelectCustomizationUsingClassesObject } from "./09.Select/03.SelectCustomizationUsingClassesObject";
+import { SliderFunctionality } from "./10.Slider/01.SliderFunctionality";
 
 export default function App() {
     return <div style={{
@@ -11,8 +9,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        {/* <SelectFunctionality />
-        <SelectCustomization /> */}
-        <SelectCustomizationUsingClassesObject />
+        <SliderFunctionality />
     </div>
 }
