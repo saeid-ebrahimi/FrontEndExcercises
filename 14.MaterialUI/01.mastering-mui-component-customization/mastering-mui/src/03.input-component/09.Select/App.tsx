@@ -1,6 +1,6 @@
 import { SelectFunctionality } from "./01.SelectFunctionality";
 import { SelectCustomization } from "./02.SelectCustomization";
-
+import { SelectCustomizationUsingClassesObject } from "./03.SelectCustomizationUsingClassesObject";
 export default function App() {
     return <div style={{
         display: "flex",
@@ -12,5 +12,6 @@ export default function App() {
     }}>
         <SelectFunctionality />
         <SelectCustomization />
+        <SelectCustomizationUsingClassesObject />
     </div>
 }
