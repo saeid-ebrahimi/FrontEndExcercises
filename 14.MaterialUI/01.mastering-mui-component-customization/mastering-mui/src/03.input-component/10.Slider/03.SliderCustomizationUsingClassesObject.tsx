@@ -1,7 +1,8 @@
-import { Slider } from "@mui/material";
-import { type KeyboardEvent, useState } from "react";
+import { Slider, sliderClasses } from "@mui/material"
+import { type KeyboardEvent, useState } from "react"
 
-export function SliderCustomization() {
+
+export function SliderCustomizationUsingClassesObject() {
     const [value, setValue] = useState<number[]>([10, 20])
     function preventHorizontalKeyboardNavigation(event: KeyboardEvent) {
         if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
@@ -44,57 +45,57 @@ export function SliderCustomization() {
                     color: "warning.main",
                     height: 13,
                     width: "80%",
-                    "&.Mui-disabled": {
+                    minWidth: "600px",
+                    [`&.${sliderClasses.disabled}`]: {
                         color: "#64748B",
-                        "& .MuiSlider-thumb": {
+                        [`& .${sliderClasses.thumb}`]: {
                             bgcolor: "#CBD5E1"
                         },
-                        "& .MuiSlider-rail": {
-                            bgcolor: "#64748B"
-                        },
+                        [`& .${sliderClasses.rail}`]: {
+                            bgcolor: "#64748B",
+                            opacity: 0.5
+                        }
                     },
-                    "&:not(.Mui-disabled)": {
-                        "& .MuiSlider-rail": {
+                    [`&:not(.${sliderClasses.disabled})`]: {
+                        [`& .${sliderClasses.rail}`]: {
                             color: "primary.main",
                             opacity: 0.5,
                             height: 8,
                         },
-                        "& .MuiSlider-markActive": {
+                        [`& .${sliderClasses.markActive}`]: {
                             bgcolor: "primary.main",
                             height: "15px !important",
                             width: "3px !important",
                         },
-                        "& .MuiSlider-mark": {
+                        [`& .${sliderClasses.mark}`]: {
                             borderRadius: 0,
                             height: 10,
                             width: 2,
-                            "&:not(.MuiSlider-markActive)": {
+                            [`&:not(.${sliderClasses.markActive})`]: {
                                 bgcolor: "secondary.main"
                             }
                         },
-                        "& .MuiSlider-thumb[data-index='0']": {
+                        [`& .${sliderClasses.thumb}[data-index='0']`]: {
                             bgcolor: "success.main",
                             width: 25,
                             height: 25,
                         },
-
-                        "& .MuiSlider-thumb[data-index='1']": {
+                        [`& .${sliderClasses.thumb}[data-index='1']`]: {
                             bgcolor: "secondary.main",
                             width: 25,
                             height: 25,
                         },
-                        "& .MuiSlider-markLabelActive": {
+                        [`& .${sliderClasses.markLabelActive}`]: {
                             color: "primary.main",
                             fontFamily: "Verdana",
                             fontSize: 14
                         },
-                        "& .MuiSlider-markLabel:not(.MuiSlider-markLabelActive)": {
+                        [`& .${sliderClasses.markLabel}:not(.${sliderClasses.markLabelActive})`]: {
                             color: "#334155",
                             fontFamily: "verdana",
                             fontSize: 12
                         }
-                    },
-
+                    }
                 }}
             />
         </>
