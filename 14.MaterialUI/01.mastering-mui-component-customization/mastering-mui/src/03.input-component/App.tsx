@@ -1,4 +1,5 @@
 import { SliderFunctionality } from "./10.Slider/01.SliderFunctionality";
+import { SliderCustomization } from "./10.Slider/02.SliderCustomization";
 
 export default function App() {
     return <div style={{
@@ -10,5 +11,6 @@ export default function App() {
         gap: "2rem"
     }}>
         <SliderFunctionality />
+        <SliderCustomization />
     </div>
 }
