@@ -1,5 +1,6 @@
 import { SwitchFunctionality } from "./11.SwitchButton/01.SwitchFunctionality";
 import { SwitchCustomization } from "./11.SwitchButton/02.SwitchCustomization";
+import { SwitchCustomizationUsingClassesObject } from "./11.SwitchButton/03.SwitchCustomizationUsingClassesObject";
 
 export default function App() {
     return <div style={{
@@ -12,5 +13,6 @@ export default function App() {
     }}>
         <SwitchFunctionality />
         <SwitchCustomization />
+        <SwitchCustomizationUsingClassesObject />
     </div>
 }
