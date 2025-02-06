@@ -15,6 +15,5 @@ export function SwitchFunctionality() {
         }
         labelPlacement={"start"}
         label={"Dark Mode: "}
-
     />
 }

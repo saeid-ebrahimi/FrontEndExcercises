@@ -1,3 +1,5 @@
+import { SwitchFunctionality } from "./11.SwitchButton/01.SwitchFunctionality";
+import { SwitchCustomization } from "./11.SwitchButton/02.SwitchCustomization";
 
 export default function App() {
     return <div style={{
@@ -8,6 +10,7 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-
+        <SwitchFunctionality />
+        <SwitchCustomization />
     </div>
 }
