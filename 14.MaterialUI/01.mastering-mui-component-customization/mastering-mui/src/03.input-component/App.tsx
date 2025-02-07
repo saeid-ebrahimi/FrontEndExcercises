@@ -1,5 +1,6 @@
 import { ToggleButtonFunctionality } from "./13.ToggleButton/01.ToggleButtonFunctionality";
 import { ToggleButtonCustomization } from "./13.ToggleButton/02.ToggleButtonCustomization";
+import { ToggleButtonCustomizationUsingClassesObject } from "./13.ToggleButton/03.ToggleButtonCustomizationUsingClassesObject";
 
 export default function App() {
     return <div style={{
@@ -12,5 +13,6 @@ export default function App() {
     }}>
         <ToggleButtonFunctionality />
         <ToggleButtonCustomization />
+        <ToggleButtonCustomizationUsingClassesObject />
     </div>
 }
