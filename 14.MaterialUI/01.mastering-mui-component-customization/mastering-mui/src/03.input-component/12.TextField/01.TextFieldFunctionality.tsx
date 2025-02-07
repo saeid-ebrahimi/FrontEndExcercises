@@ -1,6 +1,6 @@
 import { useState, useEffect, ChangeEvent } from "react";
 import { TextField, InputAdornment } from "@mui/material";
-import { PhoneAndroid as PhoneIcon, Visibility as VisibilityIcon, VisibilityOff as VisibilityOffIcon, } from "@mui/icons-material";
+import { PhoneAndroid as PhoneIcon, Visibility as VisibilityIcon, VisibilityOff as VisibilityOffIcon } from "@mui/icons-material";
 export function TextFieldFunctionality() {
     const [textValue, setTextValue] = useState<string>("")
     const [phoneNumber, setPhoneNumber] = useState<string>("")
@@ -22,7 +22,6 @@ export function TextFieldFunctionality() {
                 }}
                 multiline
                 // rows={5}
-
                 minRows={2}
                 maxRows={7}
                 // variant={"filled"}
