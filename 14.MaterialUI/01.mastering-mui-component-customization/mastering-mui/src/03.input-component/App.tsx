@@ -1,6 +1,5 @@
-import { ToggleButtonFunctionality } from "./13.ToggleButton/01.ToggleButtonFunctionality";
-import { ToggleButtonCustomization } from "./13.ToggleButton/02.ToggleButtonCustomization";
-import { ToggleButtonCustomizationUsingClassesObject } from "./13.ToggleButton/03.ToggleButtonCustomizationUsingClassesObject";
+
+import { TextFieldFunctionality } from "./12.TextField/01.TextFieldFunctionality";
 
 export default function App() {
     return <div style={{
@@ -11,8 +10,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <ToggleButtonFunctionality />
-        <ToggleButtonCustomization />
-        <ToggleButtonCustomizationUsingClassesObject />
+        <TextFieldFunctionality />
     </div>
 }
