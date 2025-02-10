@@ -1,6 +1,5 @@
-import { AvatarFunctionality } from "./01.Avatar/01.AvatarFunctionality";
-import { AvatarCustomization } from "./01.Avatar/02.AvatarCustomization";
-import { AvatarCustomizationUsingClassesObject } from "./01.Avatar/03.AvatarCustomizationUsingClassesObject";
+import { BadgeFunctionality } from "./02.Badge/01.BadgeFunctionality";
+import { BadgeCustomization } from "./02.Badge/02.BadgeCustomization";
 
 export default function App() {
     return <div style={{
@@ -11,8 +10,7 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <AvatarFunctionality />
-        <AvatarCustomization />
-        <AvatarCustomizationUsingClassesObject />
+        <BadgeFunctionality />
+        <BadgeCustomization />
     </div>
 }
