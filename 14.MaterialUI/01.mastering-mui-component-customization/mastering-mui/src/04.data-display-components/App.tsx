@@ -1,5 +1,6 @@
 import { BadgeFunctionality } from "./02.Badge/01.BadgeFunctionality";
 import { BadgeCustomization } from "./02.Badge/02.BadgeCustomization";
+import { BadgeCustomizationUsingClassesObject } from "./02.Badge/03.BadgeCustomizationUsingClassesObject";
 
 export default function App() {
     return <div style={{
@@ -12,5 +13,6 @@ export default function App() {
     }}>
         <BadgeFunctionality />
         <BadgeCustomization />
+        <BadgeCustomizationUsingClassesObject />
     </div>
 }
