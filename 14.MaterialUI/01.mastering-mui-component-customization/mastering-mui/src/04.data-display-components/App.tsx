@@ -1,4 +1,5 @@
 import { ChipFunctionality } from "./03.Chip/01.ChipFunctionality";
+import { ChipCustomization } from "./03.Chip/02.ChipCustomization";
 
 export default function App() {
     return <div style={{
@@ -10,5 +11,6 @@ export default function App() {
         gap: "2rem"
     }}>
         <ChipFunctionality />
+        <ChipCustomization />
     </div>
 }
