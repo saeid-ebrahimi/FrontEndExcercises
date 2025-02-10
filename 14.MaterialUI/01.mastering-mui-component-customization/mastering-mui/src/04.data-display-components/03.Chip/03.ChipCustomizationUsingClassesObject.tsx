@@ -3,9 +3,10 @@ import {
     Delete as DeleteIcon,
     Recycling as RecyclingIcon
 } from "@mui/icons-material";
-import { Chip, Avatar } from "@mui/material";
+import { Chip, Avatar, chipClasses } from "@mui/material";
 
-export function ChipCustomization() {
+
+export function ChipCustomizationUsingClassesObject() {
     const [chips, setChips] = useState(["First Chip", "Second Chip", "Third Chip"])
 
     const handleDelete = (chipToRemove: string) => {
@@ -24,32 +25,28 @@ export function ChipCustomization() {
                         console.log(`${chip} Clicked`);
                     }}
                     sx={{
-                        bgcolor: "#F8FAFC",
-                        color: "#020617",
-                        borderColor: "#020617",
+                        bgcolor: "#E0E7FF",
+                        color: "#3730A3",
+                        borderColor: "#3730A3",
                         fontFamily: "verdana",
                         py: "10px",
                         "&:hover": {
-                            bgcolor: "#E2E8F0"
+                            bgcolor: "#C7D2FE"
                         },
-                        "& .MuiChip-deleteIcon": {
-                            fill: "#64748B",
+                        [`& .${chipClasses.deleteIcon}`]: {
+                            fill: "#3730A3",
                             "&:hover": {
                                 opacity: 0.8
                             }
                         },
                         "& > svg": {
-                            fill: "#64748B",
+                            fill: "#3730A3",
                             "&:hover": {
                                 opacity: 0.8
                             }
                         }
                     }}
                     icon={<RecyclingIcon />}
-                    // avatar={<Avatar sx={{
-                    //     bgcolor: "#CBD5E1",
-                    //     color: "#020617",
-                    // }}>B</Avatar>}
                     onDelete={() => handleDelete(chip)}
                     deleteIcon={<DeleteIcon />}
                 />)}
@@ -63,30 +60,26 @@ export function ChipCustomization() {
                         console.log(`${chip} Clicked`);
                     }}
                     sx={{
-                        bgcolor: "#F8FAFC",
-                        color: "#020617",
-                        borderColor: "#020617",
+                        bgcolor: "#E0E7FF",
+                        color: "#3730A3",
+                        borderColor: "#3730A3",
                         fontFamily: "verdana",
                         py: "10px",
-                        "&:hover": {
-                            bgcolor: "#E2E8F0"
-                        },
-                        "& .MuiChip-deleteIcon": {
-                            fill: "#64748B",
+                        [`& .${chipClasses.deleteIcon}`]: {
+                            fill: "#3730A3",
                             "&:hover": {
                                 opacity: 0.8
                             }
                         },
                         "& > svg": {
-                            fill: "#64748B",
+                            fill: "#3730A3",
                             "&:hover": {
                                 opacity: 0.8
                             }
                         }
                     }}
                     avatar={<Avatar sx={{
-                        bgcolor: "#CBD5E1",
-                        color: "#020617",
+                        bgcolor: "#A5B4FC",
                     }}>B</Avatar>}
                     onDelete={() => handleDelete(chip)}
                     deleteIcon={<DeleteIcon />}
