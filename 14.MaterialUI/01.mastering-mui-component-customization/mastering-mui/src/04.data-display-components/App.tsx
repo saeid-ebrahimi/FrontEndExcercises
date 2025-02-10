@@ -1,5 +1,6 @@
 import { AvatarFunctionality } from "./01.Avatar/01.AvatarFunctionality";
 import { AvatarCustomization } from "./01.Avatar/02.AvatarCustomization";
+import { AvatarCustomizationUsingClassesObject } from "./01.Avatar/03.AvatarCustomizationUsingClassesObject";
 
 export default function App() {
     return <div style={{
@@ -12,5 +13,6 @@ export default function App() {
     }}>
         <AvatarFunctionality />
         <AvatarCustomization />
+        <AvatarCustomizationUsingClassesObject />
     </div>
 }
