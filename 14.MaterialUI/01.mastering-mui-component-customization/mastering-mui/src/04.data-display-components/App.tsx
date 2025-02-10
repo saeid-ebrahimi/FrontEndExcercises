@@ -1,4 +1,5 @@
 import { AvatarFunctionality } from "./01.Avatar/01.AvatarFunctionality";
+import { AvatarCustomization } from "./01.Avatar/02.AvatarCustomization";
 
 export default function App() {
     return <div style={{
@@ -10,5 +11,6 @@ export default function App() {
         gap: "2rem"
     }}>
         <AvatarFunctionality />
+        <AvatarCustomization />
     </div>
 }
