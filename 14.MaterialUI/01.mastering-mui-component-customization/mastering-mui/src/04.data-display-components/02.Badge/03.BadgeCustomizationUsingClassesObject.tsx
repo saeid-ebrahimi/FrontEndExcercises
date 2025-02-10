@@ -25,7 +25,7 @@ export function BadgeCustomizationUsingClassesObject() {
             >
                 <Avatar sx={{
                     bgcolor: "#CBD5E1"
-                }} aria-aria-label={"notifications counter"}
+                }} aria-label={"notifications counter"}
                 // variant={"rounded"}
                 />
             </Badge>

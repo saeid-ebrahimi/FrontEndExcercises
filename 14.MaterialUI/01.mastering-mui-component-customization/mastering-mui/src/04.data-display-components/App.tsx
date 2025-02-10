@@ -1,6 +1,4 @@
-import { BadgeFunctionality } from "./02.Badge/01.BadgeFunctionality";
-import { BadgeCustomization } from "./02.Badge/02.BadgeCustomization";
-import { BadgeCustomizationUsingClassesObject } from "./02.Badge/03.BadgeCustomizationUsingClassesObject";
+import { ChipFunctionality } from "./03.Chip/01.ChipFunctionality";
 
 export default function App() {
     return <div style={{
@@ -11,8 +9,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <BadgeFunctionality />
-        <BadgeCustomization />
-        <BadgeCustomizationUsingClassesObject />
+        <ChipFunctionality />
     </div>
 }

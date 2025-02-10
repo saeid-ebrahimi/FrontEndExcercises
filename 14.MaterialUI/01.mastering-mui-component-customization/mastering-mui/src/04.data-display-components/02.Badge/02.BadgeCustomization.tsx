@@ -28,7 +28,7 @@ export function BadgeCustomization() {
                 }}
 
             >
-                <Avatar aria-aria-label={"notifications counter"} />
+                <Avatar aria-label={"notifications counter"} />
             </Badge>
             <Badge
                 overlap={"circular"}
@@ -49,7 +49,7 @@ export function BadgeCustomization() {
 
                 }}
             >
-                <Avatar aria-aria-label={"notifications counter"}
+                <Avatar aria-label={"notifications counter"}
                 // variant={"rounded"}
                 />
             </Badge>
@@ -60,7 +60,7 @@ export function BadgeCustomization() {
                     ...badgeStyles,
                 }}
             >
-                <Avatar aria-aria-label={"notifications counter"}
+                <Avatar aria-label={"notifications counter"}
                 // variant={"rounded"}
                 />
             </Badge>
