@@ -1,6 +1,4 @@
-import { ChipFunctionality } from "./03.Chip/01.ChipFunctionality";
-import { ChipCustomization } from "./03.Chip/02.ChipCustomization";
-import { ChipCustomizationUsingClassesObject } from "./03.Chip/03.ChipCustomizationUsingClassesObject";
+import { DividerFunctionality } from "./04.Divider/01.DividerFunctionality";
 
 export default function App() {
     return <div style={{
@@ -11,8 +9,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <ChipFunctionality />
-        <ChipCustomization />
-        <ChipCustomizationUsingClassesObject />
+        <DividerFunctionality />
     </div>
 }
