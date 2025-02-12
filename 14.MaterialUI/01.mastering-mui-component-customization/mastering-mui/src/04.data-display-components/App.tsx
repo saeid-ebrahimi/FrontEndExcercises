@@ -1,5 +1,6 @@
 import { DividerFunctionality } from "./04.Divider/01.DividerFunctionality";
 import { DividerCustomization } from "./04.Divider/02.DividerCustomization";
+import { DividerCustomizationUsingClassesObject } from "./04.Divider/03.DividerCustomizationUsingClassesObject";
 
 export default function App() {
     return <div style={{
@@ -12,5 +13,6 @@ export default function App() {
     }}>
         <DividerFunctionality />
         <DividerCustomization />
+        <DividerCustomizationUsingClassesObject />
     </div>
 }
