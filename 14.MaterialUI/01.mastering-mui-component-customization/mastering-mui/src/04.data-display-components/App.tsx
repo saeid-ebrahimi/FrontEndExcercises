@@ -1,6 +1,4 @@
-import { DividerFunctionality } from "./04.Divider/01.DividerFunctionality";
-import { DividerCustomization } from "./04.Divider/02.DividerCustomization";
-import { DividerCustomizationUsingClassesObject } from "./04.Divider/03.DividerCustomizationUsingClassesObject";
+import { IconsFunctionality } from "./06.Icons/01.IconsFunctionality";
 
 export default function App() {
     return <div style={{
@@ -11,8 +9,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <DividerFunctionality />
-        <DividerCustomization />
-        <DividerCustomizationUsingClassesObject />
+        <IconsFunctionality />
     </div>
 }
