@@ -1,4 +1,5 @@
 import { SVGIconsFunctionality } from "./07.SvgIcons/01.SVGIconsFunctionality";
+import { SvgIconsCustomization } from "./07.SvgIcons/02.SvgIconsCustomization";
 
 
 export default function App() {
@@ -11,5 +12,6 @@ export default function App() {
         gap: "2rem"
     }}>
         <SVGIconsFunctionality />
+        <SvgIconsCustomization />
     </div>
 }
