@@ -1,4 +1,5 @@
 import { DividerFunctionality } from "./04.Divider/01.DividerFunctionality";
+import { DividerCustomization } from "./04.Divider/02.DividerCustomization";
 
 export default function App() {
     return <div style={{
@@ -10,5 +11,6 @@ export default function App() {
         gap: "2rem"
     }}>
         <DividerFunctionality />
+        <DividerCustomization />
     </div>
 }
