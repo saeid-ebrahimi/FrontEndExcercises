@@ -1,6 +1,4 @@
-import { SVGIconsFunctionality } from "./07.SvgIcons/01.SVGIconsFunctionality";
-import { SvgIconsCustomization } from "./07.SvgIcons/02.SvgIconsCustomization";
-
+import { ListFunctionality } from "./05.List/01.ListFunctionality";
 
 export default function App() {
     return <div style={{
@@ -11,7 +9,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <SVGIconsFunctionality />
-        <SvgIconsCustomization />
+        <ListFunctionality />
     </div>
 }
