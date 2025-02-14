@@ -1,4 +1,5 @@
 import { TableFunctionality } from "./08.Table/01.TableFunctionality";
+import { TableCustomization } from "./08.Table/02.TableCustomization";
 
 export default function App() {
     return <div style={{
@@ -10,5 +11,7 @@ export default function App() {
         gap: "2rem"
     }}>
         <TableFunctionality />
+        <hr />
+        <TableCustomization />
     </div>
 }

@@ -2,7 +2,7 @@ import { Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, Ta
 import { useState, MouseEvent, ChangeEvent } from "react"
 
 
-export function TableFunctionality() {
+export function TableCustomization() {
     const [page, setPage] = useState(0)
     const [rowsPerPage, setRowsPerPage] = useState(10)
 
@@ -59,10 +59,37 @@ export function TableFunctionality() {
             }}>
                 <Table
                     stickyHeader
+                    sx={{
+                        "& th": {
+                            bgcolor: "#0F172A",
+                            color: "#F1F5F9",
+                            fontFamily: "verdana",
+                            fontSize: "1.1rem",
+                            borderColor: "#334155",
+                            padding: "16px 24px"
+                        },
+                        "& td": {
+                            // bgcolor: "#0F172A",
+                            color: "#CBD5E1",
+                            fontFamily: "verdana",
+                            borderColor: "#334155",
+                        },
+                        "& tr:nth-of-type(even)": {
+                            bgcolor: "#1E293B"
+                        },
+                        "& tr:nth-of-type(odd)": {
+                            bgcolor: "#0F172A",
+                        }
+                    }}
                 // size={"small"}
                 >
                     <TableHead>
-                        <TableRow>
+                        <TableRow sx={{
+                            "& > th": {
+                                fontSize: "1.5rem",
+                                borderWidth: "2px"
+                            }
+                        }}>
                             <TableCell align={"center"} colSpan={Object.keys(rows[0]).length}>Order History</TableCell>
                         </TableRow>
                         <TableRow>
@@ -71,7 +98,12 @@ export function TableFunctionality() {
                             <TableCell>Status</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody sx={{
+                        "& .MuiTableCell-root": {
+                            borderColor: "wheat",
+                            padding: "16px 24px"
+                        }
+                    }}>
                         {rows.slice((page) * rowsPerPage, (page + 1) * rowsPerPage).map((item, index) => (
                             <TableRow key={index}>
                                 <TableCell>{item.date.toDateString()}</TableCell>
@@ -80,7 +112,11 @@ export function TableFunctionality() {
                             </TableRow>
                         ))}
                     </TableBody>
-                    <TableFooter>
+                    <TableFooter sx={{
+                        "& td": {
+                            color: "#CBD5E1"
+                        }
+                    }}>
                         <TableRow>
                             <TableCell rowSpan={5} />
                             <TableCell>Total Orders</TableCell>
@@ -107,15 +143,45 @@ export function TableFunctionality() {
             </TableContainer>
             <TablePagination
                 component={"div"}
+                sx={{
+                    height: "200px",
+                    // color: "green",
+                    "& .MuiTablePagination-selectLabel": {
+                        color: "#3730A3",
+                        fontFamily: "verdana",
+                        fontSize: "0.8rem"
+                    },
+                    "& .MuiTablePagination-select": {
+                        color: "#3730A3",
+                        fontFamily: "verdana",
+                        fontSize: "0.8rem",
+                        "& > svg": {
+                            color: "#3730A3",
+                        },
+                    },
+                    "& .MuiTablePagination-displayedRows": {
+                        color: "#3730A3",
+                        fontFamily: "verdana",
+                        fontSize: "0.8rem",
+                    },
+                    "& .MuiTablePagination-actions": {
+                        color: "#3730A3",
+                        "& .Mui-disabled": {
+                            color: "#C7D2FE"
+                        },
+                        "& > button > svg": {
+                            fontSize: "1.2rem"
+                        }
+                    },
+                }}
                 rowsPerPageOptions={[10, 25, 100]}
                 rowsPerPage={rowsPerPage}
                 page={page}
-                sx={{
-                    height: "200px"
-                }}
+
                 count={rows.length}
                 onPageChange={handleChangePage}
                 onRowsPerPageChange={handleChangeRowsPerPage} />
+
         </>
     )
 }
