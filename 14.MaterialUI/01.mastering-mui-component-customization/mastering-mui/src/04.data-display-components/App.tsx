@@ -1,6 +1,4 @@
-import { TableFunctionality } from "./08.Table/01.TableFunctionality";
-import { TableCustomization } from "./08.Table/02.TableCustomization";
-import { TableCustomizationUsingClassesObject } from "./08.Table/03.TableCustomizationUsingClassesObject";
+import { TooltipFunctionality } from "./09.Tooltip/01.TooltipFunctionality";
 
 export default function App() {
     return <div style={{
@@ -11,8 +9,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <TableFunctionality />
-        <TableCustomization />
-        <TableCustomizationUsingClassesObject />
+        <TooltipFunctionality />
     </div>
 }
