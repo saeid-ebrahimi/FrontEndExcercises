@@ -1,6 +1,4 @@
-import { ListFunctionality } from "./05.List/01.ListFunctionality";
-import { ListCustomization } from "./05.List/02.ListCustomization";
-import { ListCustomizationUsingClassesObject } from "./05.List/03.ListCustomizationUsingClassesObject";
+import { TableFunctionality } from "./08.Table/01.TableFunctionality";
 
 export default function App() {
     return <div style={{
@@ -11,8 +9,6 @@ export default function App() {
         alignItems: "center",
         gap: "2rem"
     }}>
-        <ListFunctionality />
-        <ListCustomization />
-        <ListCustomizationUsingClassesObject />
+        <TableFunctionality />
     </div>
 }
