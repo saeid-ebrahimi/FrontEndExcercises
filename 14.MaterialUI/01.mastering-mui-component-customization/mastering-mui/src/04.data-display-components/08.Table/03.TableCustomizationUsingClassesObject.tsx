@@ -1,8 +1,13 @@
-import { Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TablePagination, TableRow } from "@mui/material"
+import {
+    Table, TableBody, TableCell, TableContainer,
+    TableFooter, TableHead, TablePagination, TableRow,
+    tableCellClasses, tableRowClasses, tablePaginationClasses,
+    paperClasses
+} from "@mui/material"
 import { useState, MouseEvent, ChangeEvent } from "react"
 
 
-export function TableCustomization() {
+export function TableCustomizationUsingClassesObject() {
     const [page, setPage] = useState(0)
     const [rowsPerPage, setRowsPerPage] = useState(10)
 
@@ -55,37 +60,37 @@ export function TableCustomization() {
     return (
         <>
             <TableContainer sx={{
-                maxHeight: 450
+                maxHeight: 450,
             }}>
                 <Table
                     stickyHeader
                     sx={{
-                        "& th": {
-                            bgcolor: "#0F172A",
-                            color: "#F1F5F9",
+                        [`& .${tableCellClasses.head}`]: {
+                            bgcolor: "#0C4A6E",
+                            color: "#E0F2FE",
                             fontFamily: "verdana",
                             fontSize: "1.1rem",
-                            borderColor: "#334155",
+                            borderColor: "#082F49",
                             padding: "16px 24px"
                         },
-                        "& td": {
+                        [`& .${tableCellClasses.body}`]: {
                             // bgcolor: "#0F172A",
-                            color: "#CBD5E1",
+                            color: "#BAE6FD",
                             fontFamily: "verdana",
-                            borderColor: "#334155",
+                            borderColor: "#0284C7",
                         },
-                        "& tr:nth-of-type(even)": {
-                            bgcolor: "#1E293B"
+                        [`& .${tableRowClasses.root}:nth-of-type(even)`]: {
+                            bgcolor: "#0369A1"
                         },
-                        "& tr:nth-of-type(odd)": {
-                            bgcolor: "#0F172A",
+                        [`& .${tableRowClasses.root}:nth-of-type(odd)`]: {
+                            bgcolor: "#075985",
                         }
                     }}
                 // size={"small"}
                 >
                     <TableHead>
                         <TableRow sx={{
-                            "& > th": {
+                            [`& .${tableCellClasses.head}`]: {
                                 fontSize: "1.5rem",
                                 borderWidth: "2px"
                             }
@@ -99,8 +104,8 @@ export function TableCustomization() {
                         </TableRow>
                     </TableHead>
                     <TableBody sx={{
-                        "& .MuiTableCell-root": {
-                            borderColor: "wheat",
+                        [`& .${tableCellClasses.root}`]: {
+                            borderColor: "#FBBF24",
                             padding: "16px 24px"
                         }
                     }}>
@@ -113,8 +118,8 @@ export function TableCustomization() {
                         ))}
                     </TableBody>
                     <TableFooter sx={{
-                        "& td": {
-                            color: "#CBD5E1"
+                        [`& .${tableCellClasses.footer}`]: {
+                            color: "#FEF3C7"
                         }
                     }}>
                         <TableRow>
@@ -146,28 +151,28 @@ export function TableCustomization() {
                 sx={{
                     height: "250px",
                     // color: "green",
-                    "& .MuiTablePagination-selectLabel": {
-                        color: "#3730A3",
+                    [`& .${tablePaginationClasses.selectLabel}`]: {
+                        color: "#4A044E",
                         fontFamily: "verdana",
                         fontSize: "0.8rem"
                     },
-                    "& .MuiTablePagination-select": {
-                        color: "#3730A3",
+                    [`& .${tablePaginationClasses.select}`]: {
+                        color: "#4A044E",
                         fontFamily: "verdana",
                         fontSize: "0.8rem",
                         "& > svg": {
-                            color: "#3730A3",
+                            color: "#4A044E",
                         },
                     },
-                    "& .MuiTablePagination-displayedRows": {
-                        color: "#3730A3",
+                    [`& .${tablePaginationClasses.displayedRows}`]: {
+                        color: "#4A044E",
                         fontFamily: "verdana",
                         fontSize: "0.8rem",
                     },
-                    "& .MuiTablePagination-actions": {
-                        color: "#3730A3",
+                    [`& .${tablePaginationClasses.actions}`]: {
+                        color: "#4A044E",
                         "& .Mui-disabled": {
-                            color: "#C7D2FE"
+                            color: "#E0E7FF"
                         },
                         "& > button > svg": {
                             fontSize: "1.2rem"

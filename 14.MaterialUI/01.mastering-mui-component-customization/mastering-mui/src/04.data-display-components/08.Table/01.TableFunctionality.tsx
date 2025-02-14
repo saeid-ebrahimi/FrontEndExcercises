@@ -111,7 +111,7 @@ export function TableFunctionality() {
                 rowsPerPage={rowsPerPage}
                 page={page}
                 sx={{
-                    height: "200px"
+                    height: "250px"
                 }}
                 count={rows.length}
                 onPageChange={handleChangePage}
