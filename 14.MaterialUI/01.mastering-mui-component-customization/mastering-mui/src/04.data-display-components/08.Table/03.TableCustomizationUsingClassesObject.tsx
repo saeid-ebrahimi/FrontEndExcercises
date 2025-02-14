@@ -2,7 +2,6 @@ import {
     Table, TableBody, TableCell, TableContainer,
     TableFooter, TableHead, TablePagination, TableRow,
     tableCellClasses, tableRowClasses, tablePaginationClasses,
-    paperClasses
 } from "@mui/material"
 import { useState, MouseEvent, ChangeEvent } from "react"
 
