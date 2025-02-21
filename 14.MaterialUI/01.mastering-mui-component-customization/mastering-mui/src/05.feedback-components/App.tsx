@@ -1,5 +1,5 @@
 import { Divider } from "@mui/material";
-import { BackdropFunctionality } from "./02.Backdrop/01.BackdropFunctionality";
+import { DialogFunctionality } from "./03.Dialog/01.DialogFunctionality";
 
 export default function App() {
 
@@ -11,7 +11,7 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <BackdropFunctionality />
+        <DialogFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
     </div>
 }
