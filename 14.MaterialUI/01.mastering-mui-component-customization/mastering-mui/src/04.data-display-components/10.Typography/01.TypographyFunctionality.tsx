@@ -6,7 +6,7 @@ const StyledDiv = styled("div")(({ theme }) => ({
 export function TypographyFunctionality() {
     return (
         <>
-            <Typography gutterBottom align={"center"} sx={{ width: "100%" }} variant={"h1"}>Header</Typography>
+            {/* <Typography gutterBottom align={"center"} sx={{ width: "100%" }} variant={"h1"}>Header</Typography>
             <Typography align={"right"} sx={{ width: "100%" }} variant={"h2"}>Header</Typography>
             <Typography align={"center"} sx={{ width: "100%" }} variant={"h3"}>Header</Typography>
             <Typography sx={{ width: "100%" }} variant={"h4"}>Header</Typography>
@@ -16,7 +16,7 @@ export function TypographyFunctionality() {
             <Typography sx={{ width: "100%" }} variant={"subtitle2"}>Subtitle</Typography>
             <Typography sx={{ width: "100%" }} variant={"overline"}>Overline</Typography>
             <Typography sx={{ width: "100%" }} component={"a"} variant={"button"}>Button</Typography>
-            <Typography sx={{ width: "100%" }} variant={"caption"}>Caption</Typography>
+            <Typography sx={{ width: "100%" }} variant={"caption"}>Caption</Typography> */}
             <div style={{ width: "200px" }}>
                 <Typography noWrap variant={"body1"}>
                     Loremipsumdolorsitametconsecteturadipisicingelit.Temporibus
