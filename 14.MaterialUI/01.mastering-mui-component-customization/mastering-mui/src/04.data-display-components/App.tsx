@@ -1,5 +1,4 @@
-import { TooltipFunctionality } from "./09.Tooltip/01.TooltipFunctionality";
-import { TooltipCustomization } from "./09.Tooltip/02.TooltipCustomization";
+import { TypographyFunctionality } from "./10.Typography/01.TypographyFunctionality";
 
 export default function App() {
     return <div style={{
@@ -8,9 +7,8 @@ export default function App() {
         justifyContent: "center",
         minHeight: "100vh",
         alignItems: "center",
-        gap: "2rem"
+        gap: "1.5rem"
     }}>
-        <TooltipFunctionality />
-        <TooltipCustomization />
+        <TypographyFunctionality />
     </div>
 }

@@ -8,7 +8,7 @@ export default function App() {
         justifyContent: "center",
         minHeight: "100vh",
         alignItems: "center",
-        gap: "2rem"
+        gap: "2rem",
     }}>
         <TooltipFunctionality />
         <TooltipCustomization />
