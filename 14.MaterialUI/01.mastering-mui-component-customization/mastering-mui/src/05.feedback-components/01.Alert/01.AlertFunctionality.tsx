@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Alert, AlertTitle, Button } from "@mui/material";
-
+import { Delete as DeleteIcon } from "@mui/icons-material";
 
 export function AlertFunctionality() {
     const [open, setOpen] = useState(true)
@@ -18,7 +18,7 @@ export function AlertFunctionality() {
             >
                 <AlertTitle>Do you noticed?</AlertTitle>
                 Something Happen!</Alert>}
-            {open && <Alert severity={"success"} onClose={() => { setOpen(false) }} >
+            {open && <Alert icon={<DeleteIcon />} severity={"success"} onClose={() => { setOpen(false) }} >
                 <AlertTitle>Do you noticed?</AlertTitle>
                 Something Happen!
             </Alert>}
