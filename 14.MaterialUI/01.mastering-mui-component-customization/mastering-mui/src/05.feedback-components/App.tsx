@@ -1,7 +1,6 @@
 import { Divider } from "@mui/material";
-import { DialogFunctionality } from "./03.Dialog/01.DialogFunctionality";
-import { DialogCustomization } from "./03.Dialog/02.DialogCustomization";
-import { DialogCustomizationUsingClassesObject } from "./03.Dialog/03.DialogCustomizationUsingClassesObject";
+import { ProgressFunctionality } from "./04.Progress/01.ProgressFunctionality";
+
 
 export default function App() {
 
@@ -13,9 +12,8 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <DialogFunctionality />
+        <ProgressFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-        <DialogCustomization />
-        <DialogCustomizationUsingClassesObject />
+
     </div>
 }
