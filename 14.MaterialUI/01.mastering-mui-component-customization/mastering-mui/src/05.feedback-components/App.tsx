@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import { DialogFunctionality } from "./03.Dialog/01.DialogFunctionality";
+import { DialogCustomization } from "./03.Dialog/02.DialogCustomization";
 
 export default function App() {
 
@@ -13,5 +14,6 @@ export default function App() {
     }}>
         <DialogFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
+        <DialogCustomization />
     </div>
 }
