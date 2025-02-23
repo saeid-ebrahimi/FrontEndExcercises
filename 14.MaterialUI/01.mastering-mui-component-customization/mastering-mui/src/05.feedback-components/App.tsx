@@ -1,6 +1,7 @@
 import { Divider } from "@mui/material";
 import { ProgressFunctionality } from "./04.Progress/01.ProgressFunctionality";
 import { ProgressCustomization } from "./04.Progress/02.ProgressCustomization";
+import { ProgressCustomizationUsingClassesObject } from "./04.Progress/03.ProgressCustomizationUsingClassesObject";
 
 
 export default function App() {
@@ -16,5 +17,6 @@ export default function App() {
         <ProgressFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
         <ProgressCustomization />
+        <ProgressCustomizationUsingClassesObject />
     </div>
 }
