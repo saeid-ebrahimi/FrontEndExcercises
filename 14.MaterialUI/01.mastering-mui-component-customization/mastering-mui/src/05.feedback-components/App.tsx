@@ -1,8 +1,5 @@
-import { Divider } from "@mui/material";
-import { ProgressFunctionality } from "./04.Progress/01.ProgressFunctionality";
-import { ProgressCustomization } from "./04.Progress/02.ProgressCustomization";
-import { ProgressCustomizationUsingClassesObject } from "./04.Progress/03.ProgressCustomizationUsingClassesObject";
-
+import { Divider, Skeleton } from "@mui/material";
+import { SkeletonFunctionality } from "./05.Skeleton/01.SkeletonFunctionality";
 
 export default function App() {
 
@@ -14,9 +11,7 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <ProgressFunctionality />
+        <SkeletonFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-        <ProgressCustomization />
-        <ProgressCustomizationUsingClassesObject />
     </div>
 }
