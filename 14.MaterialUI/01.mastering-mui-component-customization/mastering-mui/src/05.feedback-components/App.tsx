@@ -1,6 +1,6 @@
 import { Divider } from "@mui/material";
-import { SkeletonFunctionality } from "./05.Skeleton/01.SkeletonFunctionality";
-import { SkeletonCustomization } from "./05.Skeleton/02.SkeletonCustomization";
+import { SnackbarFunctionality } from "./06.Snackbar/01.SnackbarFunctionality";
+import { SnackbarCustomization } from "./06.Snackbar/02.SnackbarCustomization";
 
 export default function App() {
 
@@ -12,8 +12,8 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <SkeletonFunctionality />
+        <SnackbarFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-        <SkeletonCustomization />
+        <SnackbarCustomization />
     </div>
 }
