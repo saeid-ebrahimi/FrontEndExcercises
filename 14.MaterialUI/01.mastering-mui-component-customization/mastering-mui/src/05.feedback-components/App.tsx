@@ -1,5 +1,6 @@
-import { Divider, Skeleton } from "@mui/material";
+import { Divider } from "@mui/material";
 import { SkeletonFunctionality } from "./05.Skeleton/01.SkeletonFunctionality";
+import { SkeletonCustomization } from "./05.Skeleton/02.SkeletonCustomization";
 
 export default function App() {
 
@@ -13,5 +14,6 @@ export default function App() {
     }}>
         <SkeletonFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
+        <SkeletonCustomization />
     </div>
 }
