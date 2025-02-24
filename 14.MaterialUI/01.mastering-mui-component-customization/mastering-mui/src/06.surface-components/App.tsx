@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import { AccordionFunctionality } from "./01.Accordion/01.AccordionFunctionality";
+import { AccordionCustomization } from "./01.Accordion/02.AccordionCustomization";
 
 export default function App() {
     return <div style={{
@@ -12,5 +13,6 @@ export default function App() {
     }}>
         <AccordionFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
+        <AccordionCustomization />
     </div>
 }
