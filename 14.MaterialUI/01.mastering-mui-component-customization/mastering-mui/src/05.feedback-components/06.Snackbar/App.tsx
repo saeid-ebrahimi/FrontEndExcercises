@@ -4,7 +4,6 @@ import { SnackbarCustomization } from "./02.SnackbarCustomization";
 import { SnackbarCustomizationUsingClassesObject } from "./03.SnackbarCustomizationUsingClassesObject";
 
 export default function App() {
-
     return <div style={{
         display: "flex",
         flexDirection: "column",
