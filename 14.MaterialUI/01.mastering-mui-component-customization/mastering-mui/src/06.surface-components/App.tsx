@@ -1,20 +1,18 @@
-import { Divider } from "@mui/material";
-import { AccordionFunctionality } from "./01.Accordion/01.AccordionFunctionality";
-import { AccordionCustomization } from "./01.Accordion/02.AccordionCustomization";
-import { AccordionCustomizationUsingClassesObject } from "./01.Accordion/03.AccordionCustomizationUsingClassesObject";
+// import { Divider } from "@mui/material";
+// import { AppBarFunctionality } from "./02.AppBar/01.AppBarFunctionality";
+import { AppBarCustomization } from "./02.AppBar/02.AppBarCustomization";
 
 export default function App() {
     return <div style={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        // justifyContent: "center",
         minHeight: "100vh",
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <AccordionFunctionality />
-        <Divider flexItem variant={"middle"}>Customization</Divider>
-        <AccordionCustomization />
-        <AccordionCustomizationUsingClassesObject />
+        {/* <AppBarFunctionality />
+        <Divider flexItem variant={"middle"}>Customization</Divider> */}
+        <AppBarCustomization />
     </div>
 }
