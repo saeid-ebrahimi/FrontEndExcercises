@@ -1,5 +1,4 @@
 
-import { ArrowRight as ArrowRightIcon } from "@mui/icons-material"
 import { Breadcrumbs, Link, Typography } from "@mui/material"
 
 export function BreadCrumbsCustomization() {
