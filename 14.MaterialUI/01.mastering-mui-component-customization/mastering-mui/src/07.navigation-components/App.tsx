@@ -1,8 +1,5 @@
 import { Divider } from "@mui/material";
-import { ButtonNavigationFunctionality } from "./01.BottomNavigation/01.ButtonNavigationFunctionality";
-import { BottomNavigationCustomization } from "./01.BottomNavigation/02.BottomNavigationCustomization";
-import { BottomNavigationCustomizationUsingClassesObject } from "./01.BottomNavigation/03.BottomNavigationCustomizationUsingClassesObject";
-
+import { BreadCrumbsFunctionality } from "./02.Breadcrumbs/01.BreadCrumbsFunctionality";
 
 export default function App() {
     return <div style={{
@@ -14,9 +11,8 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <ButtonNavigationFunctionality />
+        <BreadCrumbsFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-        <BottomNavigationCustomization />
-        <BottomNavigationCustomizationUsingClassesObject />
+
     </div>
 }
