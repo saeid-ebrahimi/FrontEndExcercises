@@ -1,21 +1,18 @@
 import { Divider } from "@mui/material";
-import { CardFunctionality } from "./03.Card/01.CardFunctionality";
-import { CardCustomization } from "./03.Card/02.CardCustomization";
-import { CardCustomizationUsingClassesObject } from "./03.Card/03.CardCustomizationUsingClassesObject";
-
+import { PaperFunctionality } from "./04.Paper/01.PaperFunctionality";
 
 export default function App() {
     return <div style={{
         display: "flex",
         flexDirection: "column",
         // justifyContent: "center",
+        margin: 20,
         minHeight: "100vh",
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <CardFunctionality />
+        <PaperFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-        <CardCustomization />
-        <CardCustomizationUsingClassesObject />
+
     </div>
 }
