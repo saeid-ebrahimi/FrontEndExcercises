@@ -1,6 +1,7 @@
 import { Divider } from "@mui/material";
-import { ButtonNavigationFunctionality } from "./01.ButtomNavigation/01.ButtonNavigationFunctionality";
-import { BottomNavigationCustomization } from "./01.ButtomNavigation/02.BottomNavigationCustomization";
+import { ButtonNavigationFunctionality } from "./01.BottomNavigation/01.ButtonNavigationFunctionality";
+import { BottomNavigationCustomization } from "./01.BottomNavigation/02.BottomNavigationCustomization";
+import { BottomNavigationCustomizationUsingClassesObject } from "./01.BottomNavigation/03.BottomNavigationCustomizationUsingClassesObject";
 
 
 export default function App() {
@@ -16,5 +17,6 @@ export default function App() {
         <ButtonNavigationFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
         <BottomNavigationCustomization />
+        <BottomNavigationCustomizationUsingClassesObject />
     </div>
 }
