@@ -1,6 +1,6 @@
-// import { Divider } from "@mui/material";
-// import { AppBarFunctionality } from "./02.AppBar/01.AppBarFunctionality";
-import { AppBarCustomization } from "./02.AppBar/02.AppBarCustomization";
+import { Divider } from "@mui/material";
+import CardFunctionality from "./03.Card/01.CardFunctionality";
+
 
 export default function App() {
     return <div style={{
@@ -11,8 +11,8 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        {/* <AppBarFunctionality />
-        <Divider flexItem variant={"middle"}>Customization</Divider> */}
-        <AppBarCustomization />
+        <CardFunctionality />
+        <Divider flexItem variant={"middle"}>Customization</Divider>
+
     </div>
 }
