@@ -1,6 +1,7 @@
 import { Divider } from "@mui/material";
 import { CardFunctionality } from "./03.Card/01.CardFunctionality";
 import { CardCustomization } from "./03.Card/02.CardCustomization";
+import { CardCustomizationUsingClassesObject } from "./03.Card/03.CardCustomizationUsingClassesObject";
 
 
 export default function App() {
@@ -15,5 +16,6 @@ export default function App() {
         <CardFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
         <CardCustomization />
+        <CardCustomizationUsingClassesObject />
     </div>
 }
