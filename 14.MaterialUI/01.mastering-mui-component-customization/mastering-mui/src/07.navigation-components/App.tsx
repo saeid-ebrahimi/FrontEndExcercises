@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import { BreadCrumbsFunctionality } from "./02.Breadcrumbs/01.BreadCrumbsFunctionality";
+import { BreadCrumbsCustomization } from "./02.Breadcrumbs/02.BreadCrumbsCustomization";
 
 export default function App() {
     return <div style={{
@@ -13,6 +14,6 @@ export default function App() {
     }}>
         <BreadCrumbsFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-
+        <BreadCrumbsCustomization />
     </div>
 }
