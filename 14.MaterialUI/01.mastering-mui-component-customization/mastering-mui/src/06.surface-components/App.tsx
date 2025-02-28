@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import { PaperFunctionality } from "./04.Paper/01.PaperFunctionality";
+import { PaperCustomization } from "./04.Paper/02.PaperCustomization";
 
 export default function App() {
     return <div style={{
@@ -13,6 +14,6 @@ export default function App() {
     }}>
         <PaperFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-
+        <PaperCustomization />
     </div>
 }
