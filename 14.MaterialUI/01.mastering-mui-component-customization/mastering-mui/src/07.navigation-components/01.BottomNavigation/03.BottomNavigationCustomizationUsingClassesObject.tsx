@@ -1,4 +1,4 @@
-import { BottomNavigation, BottomNavigationAction, Paper, bottomNavigationActionClasses, selectClasses } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Paper, bottomNavigationActionClasses } from "@mui/material";
 import {
     AccountBalance as AccountBalanceIcon,
     AccountCircle as AccountCircleIcon,
