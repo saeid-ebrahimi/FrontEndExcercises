@@ -11,7 +11,7 @@
 
 - add long, hard-to-guess strings as the values for `NEXTAUTH_SECRET` and `REVALIDATION_SECRET`
 
-  - command to generate a random string: `openssl rand -base64 32`
+  - command to generate a random string: `openssl rand -hex 32`
 
 ## Running the App
 
