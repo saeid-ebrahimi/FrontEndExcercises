@@ -9,4 +9,5 @@ test('page has correct heading and image', () => {
 
     const image = screen.getByRole("img", { name: "Concert goer with hands in the shape of a heart" })
     expect(image).toBeInTheDocument();
+    // we do not need to test getStaticProps because it's a glue and we test it in integration tests using Cypress
 })
