@@ -67,6 +67,7 @@ export const Reservation = ({ showId, submitPurchase }: ReservationProps) => {
   if (error) return <QueryError message="Could not retrieve show info" />;
 
   return (
+    // @ts-ignore
     <Stack align="center" spacing={10}>
       <LoadingSpinner display={isValidating && !show} />
       {show ? (
