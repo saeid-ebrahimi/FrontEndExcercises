@@ -19,7 +19,6 @@ test("reservation page shows correct number of available seats", async () => {
     const seatCountText = screen.findByText(`${fakeUserReservations[0].show.band} seats left`);
     waitFor(() => expect(seatCountText).toBeInTheDocument());
 
-
     const purchaseButton = await screen.findByRole("button", { name: /purchase/i })
     expect(purchaseButton).toBeInTheDocument();
 
