@@ -7,9 +7,15 @@ test("band component displays correct band information", async () => {
     render(<BandPageComponent band={fakeBands[0]} error={null} />)
 
     const heading = screen.getByRole("heading", { name: /the wandering bunnies/i })
+    const text = screen.getByText(/blistering world music, supported by a moody water glass orchestra/i)
+    const image = screen.getByRole("img", { name: "band photo" })
+    const caption = screen.getByText(/photo by/i)
+    const link = screen.getByRole("link", { name: "Adina Voicu" })
     expect(heading).toBeInTheDocument()
-
-    // more test here
+    expect(text).toBeInTheDocument()
+    expect(image).toBeInTheDocument();
+    expect(caption)
+    expect(link).toBeInTheDocument();
 })
 
 test("band component displays errors", () => {

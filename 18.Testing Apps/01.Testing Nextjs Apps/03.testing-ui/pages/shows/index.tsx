@@ -59,6 +59,7 @@ export default function Shows({
   );
 
   return (
+    // @ts-ignore
     <Stack align="center" spacing={10}>
       <LoadingSpinner display={isValidating && !shows} />
       <Heading mt={10}>Upcoming Shows</Heading>
