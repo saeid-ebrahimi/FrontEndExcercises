@@ -1,10 +1,13 @@
 {
   "private": true,
   "scripts": {
+    "db:reset": "source scripts/reset-db.sh",
     "dev": "next dev",
     "lint": "next lint",
     "build": "next build",
+    "build:test": "npm run db:reset && export NODE_ENV=\"test\" && next build",
     "start": "next start",
+    "start:test": "export NODE_ENV=\"test\" && next start",
     "test": "jest --watch",
     "test:ci": "jest --ci"
   },
