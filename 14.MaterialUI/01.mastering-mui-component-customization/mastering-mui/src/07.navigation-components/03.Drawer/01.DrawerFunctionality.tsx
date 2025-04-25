@@ -1,5 +1,5 @@
 import { Button, Drawer, Box, SwipeableDrawer } from "@mui/material";
-import { SyntheticEvent, useState } from "react";
+import { useState } from "react";
 
 export default function DrawerFunctionality() {
     const [open, setOpen] = useState(false)
