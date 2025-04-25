@@ -74,9 +74,7 @@ export default function DrawerFunctionality() {
                         "& .MuiDrawer-paper": {
                             width: drawerWidth
                         }
-                    }} open={openSwipeableDrawer} onClose={handleClosePermanentDrawer} onOpen={function (event: SyntheticEvent<{}, Event>): void {
-                        throw new Error("Function not implemented.");
-                    }} >
+                    }} open={openSwipeableDrawer} onClose={handleClosePermanentDrawer} onOpen={() => { setOpenSwipeableDrawer(true) }} >
                     <ul>
                         <li>
                             <a href={""}>First</a>
