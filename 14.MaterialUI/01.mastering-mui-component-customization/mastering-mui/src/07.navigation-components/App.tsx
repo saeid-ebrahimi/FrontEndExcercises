@@ -1,10 +1,9 @@
 import { Divider } from "@mui/material";
 import DrawerFunctionality from "./03.Drawer/01.DrawerFunctionality";
-
+import DrawerCustomization from "./03.Drawer/02.DrawerCustomization";
 
 export default function App() {
     return <div style={{
-        display: "flex",
         flexDirection: "column",
         // justifyContent: "center",
         margin: 20,
@@ -14,6 +13,7 @@ export default function App() {
     }}>
         <DrawerFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
+        <DrawerCustomization />
 
     </div>
 }
