@@ -19,12 +19,11 @@ test("reservation page shows correct number of available seats", async () => {
     const seatCountText = screen.findByText(`${fakeUserReservations[0].show.band} seats left`);
     waitFor(() => expect(seatCountText).toBeInTheDocument());
 
+    // const inputSelector = screen.findByRole("")
+    // waitFor(()=> expect(inputSelector).toBeInTheDocument())
+
     const purchaseButton = await screen.findByRole("button", { name: /purchase/i })
     expect(purchaseButton).toBeInTheDocument();
-
-
-
-
 });
 
 test("reservation page shows 'sold out' message and NO purchase button if there are no seats available", async () => {
