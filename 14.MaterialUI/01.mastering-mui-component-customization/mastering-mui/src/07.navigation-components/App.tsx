@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import MenuFunctionality from "./05.Menu/01.MenuFunctionality";
+import MenuCustomization from "./05.Menu/02.MenuCustomization";
 
 export default function App() {
     return <div style={{
@@ -12,5 +13,6 @@ export default function App() {
     }}>
         <MenuFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
+        <MenuCustomization />
     </div>
 }
