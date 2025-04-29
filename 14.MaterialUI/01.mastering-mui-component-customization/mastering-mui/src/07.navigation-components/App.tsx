@@ -1,7 +1,5 @@
 import { Divider } from "@mui/material";
-import MenuFunctionality from "./05.Menu/01.MenuFunctionality";
-import MenuCustomization from "./05.Menu/02.MenuCustomization";
-import MenuCustomizationUsingClassesObject from "./05.Menu/03.MenuCustomizationUsingClassesObject";
+import PaginationFunctionality from "./06.Pagination/01.PaginationFunctionality";
 
 export default function App() {
     return <div style={{
@@ -12,9 +10,8 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <MenuFunctionality />
+        <PaginationFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-        <MenuCustomization />
-        <MenuCustomizationUsingClassesObject />
+
     </div>
 }
