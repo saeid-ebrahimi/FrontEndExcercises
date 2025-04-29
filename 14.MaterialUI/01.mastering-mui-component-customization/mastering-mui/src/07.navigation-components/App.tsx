@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import PaginationFunctionality from "./06.Pagination/01.PaginationFunctionality";
+import PaginationCustomization from "./06.Pagination/02.PaginationCustomization";
 
 export default function App() {
     return <div style={{
@@ -12,6 +13,6 @@ export default function App() {
     }}>
         <PaginationFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-
+        <PaginationCustomization />
     </div>
 }
