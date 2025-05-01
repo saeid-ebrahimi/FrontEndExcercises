@@ -1,6 +1,11 @@
-import { SpeedDial, SpeedDialAction, SpeedDialIcon, Button } from "@mui/material";
-import { LocalPhone as LocalPhoneIcon, Message as MessageIcon, Email as EmailIcon, SupportAgent as SupportAgentIcon, ArrowLeft as ArrowLeftIcon } from "@mui/icons-material";
 import { useState } from "react";
+import { SpeedDial, SpeedDialAction, SpeedDialIcon, Button } from "@mui/material";
+import {
+    LocalPhone as LocalPhoneIcon,
+    Message as MessageIcon, Email as EmailIcon,
+    SupportAgent as SupportAgentIcon,
+    ArrowLeft as ArrowLeftIcon
+} from "@mui/icons-material";
 
 export default function SpeedDialFunctionality() {
 
