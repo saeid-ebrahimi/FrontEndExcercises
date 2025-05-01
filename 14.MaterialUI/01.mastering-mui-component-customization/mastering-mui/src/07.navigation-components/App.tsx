@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import SpeedDialFunctionality from "./07.SpeedDial/01.SpeedDialFunctionality";
+import SpeedDialCustomization from "./07.SpeedDial/02.SpeedDialCustomization";
 
 export default function App() {
     return <div style={{
@@ -12,6 +13,6 @@ export default function App() {
     }}>
         <SpeedDialFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-
+        <SpeedDialCustomization />
     </div>
 }
