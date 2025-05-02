@@ -1,7 +1,6 @@
 import { Divider } from "@mui/material";
-import StepperFunctionality from "./08.Stepper/01.StepperFunctionality";
-import StepperCustomization from "./08.Stepper/02.StepperCustomization";
-import StepperCustomizationUsingClassesObject from "./08.Stepper/03.StepperCustomizationUsingClassesObject";
+import TabsFunctionality from "./09.Tabs/01.TabsFunctionality";
+
 
 export default function App() {
     return <div style={{
@@ -12,9 +11,8 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <StepperFunctionality />
+        <TabsFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-        <StepperCustomization />
-        <StepperCustomizationUsingClassesObject />
+
     </div>
 }
