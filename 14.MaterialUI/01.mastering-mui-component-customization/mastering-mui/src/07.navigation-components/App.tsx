@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import StepperFunctionality from "./08.Stepper/01.StepperFunctionality";
+import StepperCustomization from "./08.Stepper/02.StepperCustomization";
 
 export default function App() {
     return <div style={{
@@ -12,6 +13,6 @@ export default function App() {
     }}>
         <StepperFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-
+        <StepperCustomization />
     </div>
 }
