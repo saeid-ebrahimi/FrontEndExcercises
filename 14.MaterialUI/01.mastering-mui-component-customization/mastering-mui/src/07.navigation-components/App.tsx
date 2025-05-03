@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import TabsFunctionality from "./09.Tabs/01.TabsFunctionality";
+import TabCustomization from "./09.Tabs/02.TabCustomization";
 
 
 export default function App() {
@@ -11,8 +12,8 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <TabsFunctionality />
-        <Divider flexItem variant={"middle"}>Customization</Divider>
-
+        {/* <TabsFunctionality /> */}
+        {/* <Divider flexItem variant={"middle"}>Customization</Divider> */}
+        <TabCustomization />
     </div>
 }
