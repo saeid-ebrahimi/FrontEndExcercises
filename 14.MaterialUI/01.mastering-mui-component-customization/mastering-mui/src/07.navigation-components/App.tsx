@@ -1,6 +1,7 @@
-import { Divider } from "@mui/material";
-import TabsFunctionality from "./09.Tabs/01.TabsFunctionality";
-import TabCustomization from "./09.Tabs/02.TabCustomization";
+// import { Divider } from "@mui/material";
+// import TabsFunctionality from "./09.Tabs/01.TabsFunctionality";
+// import TabCustomization from "./09.Tabs/02.TabCustomization";
+import TabCustomizationUsingClassesObject from "./09.Tabs/03.TabCustomizationUsingClassesObject";
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
     }}>
         {/* <TabsFunctionality /> */}
         {/* <Divider flexItem variant={"middle"}>Customization</Divider> */}
-        <TabCustomization />
+        {/* <TabCustomization /> */}
+        <TabCustomizationUsingClassesObject />
     </div>
 }
