@@ -1,7 +1,5 @@
 import { Divider } from "@mui/material";
-import BoxFunctionality from "./01.Box/01.BoxFunctionality";
-import BoxCustomization from "./01.Box/02.BoxCustomization";
-
+import ContainerFunctionality from "./02.Container/01.ContainerFunctionality";
 
 
 export default function App() {
@@ -13,8 +11,8 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <BoxFunctionality />
+        <ContainerFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-        <BoxCustomization />
+
     </div>
 }
