@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import BoxFunctionality from "./01.Box/01.BoxFunctionality";
+import BoxCustomization from "./01.Box/02.BoxCustomization";
 
 
 
@@ -14,6 +15,6 @@ export default function App() {
     }}>
         <BoxFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-
+        <BoxCustomization />
     </div>
 }
