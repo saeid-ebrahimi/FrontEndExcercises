@@ -1,6 +1,7 @@
 import { Divider } from "@mui/material";
 // import ImageListFunctionality from "./04.ImageList/01.ImageListFunctionality";
-import ImageListCustomization from "./04.ImageList/02.ImageListCustomization";
+// import ImageListCustomization from "./04.ImageList/02.ImageListCustomization";
+import ImageListCustomizationUsingClassesObject from "./04.ImageList/03.ImageListCustomizationUsingClassesObject";
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
     }}>
         {/* <ImageListFunctionality /> */}
         <Divider flexItem variant={"middle"}>Customization</Divider>
-        <ImageListCustomization />
+        {/* <ImageListCustomization /> */}
+        <ImageListCustomizationUsingClassesObject />
     </div>
 }
