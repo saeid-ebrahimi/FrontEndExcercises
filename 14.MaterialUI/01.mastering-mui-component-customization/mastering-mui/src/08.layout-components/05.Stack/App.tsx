@@ -15,6 +15,5 @@ export default function App() {
         <StackFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
         <StackCustomization />
-
     </div>
 }
