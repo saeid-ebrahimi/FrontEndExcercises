@@ -1,25 +1,28 @@
-import React, { FormEvent, useState } from "react"
+import { FormEvent, useState } from "react"
+import { User } from "./App"
 
 
-function UserForm() {
-    const [email, setEmail] = useState<string>()
-    const [name, setName] = useState<string>()
+function UserForm({ onAddUser }: { onAddUser: (user: User) => void }) {
+    const [email, setEmail] = useState<string>("")
+    const [name, setName] = useState<string>("")
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        console.log(name, email);
+        onAddUser({ name, email })
+        setEmail("")
+        setName("")
     }
 
-    return <form onSubmit={handleSubmit} >
+    return <form className={"form"} onSubmit={handleSubmit} >
         <div>
-            <label>Name</label>
-            <input value={name} onChange={e => setName(e.target.value)} />
+            <label>Name:</label>
+            <input value={name} style={{ marginLeft: 10 }} onChange={e => setName(e.target.value)} />
         </div>
         <div>
-            <label>Email</label>
-            <input value={email} onChange={e => setEmail(e.target.value)} />
+            <label>Email:</label>
+            <input value={email} style={{ marginLeft: 10 }} onChange={e => setEmail(e.target.value)} />
         </div>
-        <button>Add User</button>
+        <button style={{ width: "100%" }}>Add User</button>
     </form>
 }
 
