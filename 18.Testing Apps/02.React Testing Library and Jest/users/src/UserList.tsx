@@ -17,7 +17,7 @@ export default function UserList({ users }: { users: User[] }) {
                     <th>Email</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody data-testid="user-list">
                 {users && users.length > 0 ? renderedUsers : <tr><td style={{ color: "gray" }} colSpan={2}>{"The list of users is empty"}</td></tr>}
             </tbody>
         </table >
