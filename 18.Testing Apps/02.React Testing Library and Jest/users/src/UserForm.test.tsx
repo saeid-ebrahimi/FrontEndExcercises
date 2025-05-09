@@ -48,3 +48,29 @@ test("it calls onUserAdd when the form is submitted", () => {
   expect(mock).toHaveBeenCalledWith({ name: "John", email: "john@gmail.com" })
 
 })
+
+test("empties the two inputs when form is submitted", () => {
+  const mock = jest.fn()
+  render(<UserForm onAddUser={mock} />)
+  // find the two inputs
+  const nameInput = screen.getByLabelText(/name/i)
+  const emailInput = screen.getByRole("textbox", { name: /email/i })
+
+  // simulate typing in a name
+  user.click(nameInput)
+  user.keyboard("John")
+
+  // simulate typing in an email
+  user.click(emailInput)
+  user.keyboard("john@gmail.com")
+
+  // Find the Button
+  const button = screen.getByRole("button")
+
+  // Simulate clicking the button
+  user.click(button)
+
+  expect(nameInput).toHaveValue("")
+  expect(emailInput).toHaveValue("")
+
+})
