@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gutter {
+  background-color: #3b3b3b;
+  cursor: col-resize;
+}
+
+i.icon:before {
+  font-size: 12px;
+  top: 0;
+  width: 20px;
+}
+
+.tree-panel {
+  height: calc(100vh - 64px);
+}
