@@ -3975,9 +3975,9 @@
       }
     },
     "node_modules/@types/jest": {
-      "version": "29.2.3",
-      "resolved": "https://registry.npmjs.org/@types/jest/-/jest-29.2.3.tgz",
-      "integrity": "sha512-6XwoEbmatfyoCjWRX7z0fKMmgYKe9+/HrviJ5k0X/tjJWHGAezZOfYaxqQKuzG/TvQyr+ktjm4jgbk0s4/oF2w==",
+      "version": "29.5.14",
+      "resolved": "https://registry.npmjs.org/@types/jest/-/jest-29.5.14.tgz",
+      "integrity": "sha512-ZN+4sdnLUbo8EVvVc2ao0GFW6oVrQRPn4K2lglySj7APvSrgzxHiNNK99us4WDMi57xxA2yggblIAMNhXOotLQ==",
       "dependencies": {
         "expect": "^29.0.0",
         "pretty-format": "^29.0.0"
@@ -21180,9 +21180,9 @@
       }
     },
     "@types/jest": {
-      "version": "29.2.3",
-      "resolved": "https://registry.npmjs.org/@types/jest/-/jest-29.2.3.tgz",
-      "integrity": "sha512-6XwoEbmatfyoCjWRX7z0fKMmgYKe9+/HrviJ5k0X/tjJWHGAezZOfYaxqQKuzG/TvQyr+ktjm4jgbk0s4/oF2w==",
+      "version": "29.5.14",
+      "resolved": "https://registry.npmjs.org/@types/jest/-/jest-29.5.14.tgz",
+      "integrity": "sha512-ZN+4sdnLUbo8EVvVc2ao0GFW6oVrQRPn4K2lglySj7APvSrgzxHiNNK99us4WDMi57xxA2yggblIAMNhXOotLQ==",
       "requires": {
         "expect": "^29.0.0",
         "pretty-format": "^29.0.0"
