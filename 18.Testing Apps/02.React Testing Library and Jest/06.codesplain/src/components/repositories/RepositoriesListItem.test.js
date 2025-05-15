@@ -1,60 +1,46 @@
-import { render, screen, act } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import { MemoryRouter } from "react-router-dom"
 import RepositoriesListItem from "./RepositoriesListItem"
-// make module mock
-// jest.mock('../tree/FileIcon.js', () => {
-//     // content of FileIcon.js
-//     return () => {
-//         return "File Icon Component"
-//     }
-// })
+
 
 function renderComponent() {
     const repository = {
         full_name: "facebook/react",
         language: "Javascript",
         description: "A framework for building applications using React",
-        owner: "facebook",
+        owner: {
+            login: "facebook",
+
+        },
         name: "react",
         html_url: "https://github.com/facebook/react",
     }
     render(<MemoryRouter>
         <RepositoriesListItem repository={repository} />
     </MemoryRouter>)
+    return { repository }
 }
 
 
 test("shows a link to the github homepage for this repository", async () => {
-    renderComponent()
-
-    // debug
-    // screen.debug();
-    // await pause();
-    // screen.debug();
-
-
-    // await screen.findByRole("img", { name: "Javascript" })
-
-    // screen.debug()
-
-    // the last and worst option
-    await act(async () => {
-        await pause()
-    })
+    const { repository } = renderComponent()
+    await screen.findByRole("img", { name: "Javascript" })
+    const link = screen.getByRole("link", { name: /github repository/i })
+    expect(link).toHaveAttribute('href', repository.html_url)
 
 })
-// debug pause function
-// const pause = () => {
-//     return new Promise((resolve) => {
-//         setTimeout(() => {
-//             resolve();
-//         }, 100)
-//     })
-// }
 
-// act pause function 
-const pause = () => {
-    return new Promise((resolve) => {
-        setTimeout(resolve, 100)
+test("shows a fileIcon with the appropriate icon", async () => {
+    const { repository } = renderComponent()
+    const icon = await screen.findByRole("img", { name: repository.language })
+})
+
+test("shows a link to the code editor page", async () => {
+    const { repository } = renderComponent()
+    await screen.findByRole("img", { name: repository.language })
+    const link = await screen.findByRole("link", {
+        name: new RegExp(repository.owner.login)
     })
-}
+    expect(link).toHaveAttribute("href", `/repositories/${repository.full_name}`)
+
+})
