@@ -5,7 +5,8 @@ import { onSmartTablePage } from "../support/page_objects/smartTablePage";
 
 describe("Test with Page Objects", () => {
   beforeEach("open application", () => {
-    cy.visit("/");
+    // cy.visit("/")
+    cy.openHomePage();
   });
 
   it("should submit Inline and Basic form and select tomorrow date in the calendar", () => {
