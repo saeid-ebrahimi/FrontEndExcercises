@@ -1,6 +1,5 @@
 import { Divider } from "@mui/material";
-import StackFunctionality from "./05.Stack/01.StackFunctionality";
-import StackCustomization from "./05.Stack/02.StackCustomization";
+import GridFunctionality from "./03.Grid/01.GridFunctionality";
 
 
 export default function App() {
@@ -12,9 +11,9 @@ export default function App() {
         alignItems: 'normal',
         gap: "1.5rem"
     }}>
-        <StackFunctionality />
+        <GridFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
-        <StackCustomization />
+
 
     </div>
 }
