@@ -1,4 +1,4 @@
-import { Divider, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Divider, Grid, useMediaQuery } from "@mui/material";
 
 
 // direction: row
