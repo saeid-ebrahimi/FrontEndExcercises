@@ -1,6 +1,7 @@
 import { Divider } from "@mui/material";
-import GridFunctionality from "./03.Grid/01.GridFunctionality";
-import GridDemo from "./03.Grid/02.GridDemo";
+import GridCustomization from "./03.Grid/03.GridCustomization";
+// import GridFunctionality from "./03.Grid/01.GridFunctionality";
+// import GridDemo from "./03.Grid/02.GridDemo";
 
 
 export default function App() {
@@ -13,9 +14,9 @@ export default function App() {
         gap: "1.5rem"
     }}>
         {/* <GridFunctionality /> */}
-        <GridDemo />
+        {/* <GridDemo /> */}
         <Divider flexItem variant={"middle"}>Customization</Divider>
-
+        <GridCustomization />
 
     </div>
 }
