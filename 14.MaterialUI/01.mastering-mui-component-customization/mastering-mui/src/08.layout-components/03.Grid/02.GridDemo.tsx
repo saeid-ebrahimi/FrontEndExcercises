@@ -12,10 +12,9 @@ const videos = [
     { title: "Video Title 7", viewCount: 11000, user: { name: "YouTuber 7", }, },
     { title: "Video Title 8", viewCount: 11000, user: { name: "YouTuber 8", }, },
     { title: "Video Title 9", viewCount: 11000, user: { name: "YouTuber 9", }, },
-    ,
 ]
 
-type Video = {
+type VideoType = {
     title: string;
     viewCount: number;
     user: { name: string };
@@ -53,7 +52,7 @@ function Subscription({ name }: { name: string }) {
     )
 }
 
-function Video({ video: { title, viewCount, user: { name } } }: { video: Video }) {
+function Video({ video: { title, viewCount, user: { name } } }: { video: VideoType }) {
     return (
         <Grid item m={1}>
             <Grid container direction={"column"} gap={1} md>
