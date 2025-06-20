@@ -1,8 +1,7 @@
 import { countReducer } from "./count/count.reducer";
-
+import { combineReducers } from "redux";
+import { unboxGiftReducer } from "./unboxGift/unboxGift.reducer";
 export const rootReducer = combineReducers({
-    count: countReducer
+    count: countReducer,
+    gift: unboxGiftReducer,
 })
-
-// run npm i
-// run npm i redux react-redux
