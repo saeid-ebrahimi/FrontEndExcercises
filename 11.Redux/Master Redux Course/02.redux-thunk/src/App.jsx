@@ -10,11 +10,14 @@ import { useEffect } from 'react';
 import { getUsers } from './redux/users/users.action';
 
 function App() {
+  const dispatch = useDispatch()
   const count = useSelector(state => state.count)
   const gift = useSelector(state => state.gift)
   const user = useSelector(state => state.user)
-  const users = useSelector(state => state.users)
-  const dispatch = useDispatch()
+  const { data: users,
+    isLoading,
+    error } = useSelector(state => state.users)
+
   useEffect(() => {
     dispatch(getUsers())
   }, [])
@@ -33,9 +36,10 @@ function App() {
       <ChangeUser />
       <ChangeUserName />
       <UserProfile user={user} />
-      {users.map((user, index) => {
+      {isLoading ? <p>loading data ... </p> : !error ? users.map((user, index) => {
         <UserProfile key={index} user={user} />
-      })}
+      }) : <p>{error}</p>}
+
     </>
   )
 }
