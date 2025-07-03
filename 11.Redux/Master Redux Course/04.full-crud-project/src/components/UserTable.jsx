@@ -1,6 +1,18 @@
-import React from 'react'
-import { Table } from "react-bootstrap";
+import React from 'react';
+import axios from "axios";
+import { Button, Table } from "react-bootstrap";
+import { useEffect } from 'react';
+import { useState } from 'react';
 export default function UserTable() {
+    const [posts, setPosts] = useState([]);
+
+    async function getPosts() {
+        const request = await axios.get('http://localhost:3000/posts')
+        setPosts(request.data)
+    }
+    useEffect(() => {
+        getPosts()
+    }, [])
     return (
         <div>
             <Table striped bordered hover>
@@ -9,24 +21,27 @@ export default function UserTable() {
                         <th>#</th>
                         <th>Title</th>
                         <th>Views</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td colSpan={2}>Larry the Bird</td>
-                    </tr>
+                    {posts && posts.length > 0 ? posts.map(post => <tr key={post.id}>
+                        <td>{post.id}</td>
+                        <td>{post.title}</td>
+                        <td>{post.views}</td>
+                        <td>
+                            <Button variant={"dark"} className={"ms-2"} onClick={() => editPost(post.id)}>Edit</Button>
+                            <Button variant={"danger"} className={"ms-2"} onClick={() => deletePost(post.id)}>Delete</Button>
+                        </td>
+                    </tr>)
+                        :
+                        <tr>
+                            <td colSpan={3}>
+                                the posts list is empty
+                            </td>
+                        </tr>
+                    }
+
                 </tbody>
             </Table>
         </div>
