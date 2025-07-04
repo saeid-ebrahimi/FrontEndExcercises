@@ -3,6 +3,7 @@ import axios from "axios";
 import { Button, Table } from "react-bootstrap";
 import { useEffect } from 'react';
 import { useState } from 'react';
+import EditPost from './EditPost';
 export default function UserTable() {
     const [posts, setPosts] = useState([]);
 
@@ -30,7 +31,7 @@ export default function UserTable() {
                         <td>{post.title}</td>
                         <td>{post.views}</td>
                         <td>
-                            <Button variant={"dark"} className={"ms-2"} onClick={() => editPost(post.id)}>Edit</Button>
+                            <EditPost />
                             <Button variant={"danger"} className={"ms-2"} onClick={() => deletePost(post.id)}>Delete</Button>
                         </td>
                     </tr>)
