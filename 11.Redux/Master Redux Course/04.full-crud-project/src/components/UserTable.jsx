@@ -3,7 +3,8 @@ import axios from "axios";
 import { Button, Table } from "react-bootstrap";
 import { useEffect } from 'react';
 import { useState } from 'react';
-import EditPost from './EditPost';
+import { EditPostModal } from './EditPostModal';
+import { CreatePostModal } from "./CreatePostModal";
 export default function UserTable() {
     const [posts, setPosts] = useState([]);
 
@@ -15,8 +16,9 @@ export default function UserTable() {
         getPosts()
     }, [])
     return (
-        <div>
-            <Table striped bordered hover>
+        <div className={"px-3 mt-3"}>
+            <CreatePostModal posts={posts} setPosts={setPosts} />
+            <Table className={"mt-3"} striped bordered hover>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -31,7 +33,7 @@ export default function UserTable() {
                         <td>{post.title}</td>
                         <td>{post.views}</td>
                         <td>
-                            <EditPost />
+                            <EditPostModal post={post} />
                             <Button variant={"danger"} className={"ms-2"} onClick={() => deletePost(post.id)}>Delete</Button>
                         </td>
                     </tr>)

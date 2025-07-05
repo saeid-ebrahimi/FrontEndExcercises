@@ -9,6 +9,41 @@
       "id": "2",
       "title": "another title",
       "views": 200
+    },
+    {
+      "id": "a9f4",
+      "title": "How Its going",
+      "views": "4"
+    },
+    {
+      "id": "36f9",
+      "title": "new Trip",
+      "views": "6"
+    },
+    {
+      "id": "3968",
+      "title": "new Trip",
+      "views": "6"
+    },
+    {
+      "id": "a24e",
+      "title": "How Its going",
+      "views": "1232"
+    },
+    {
+      "id": "c114",
+      "title": "How Its going",
+      "views": "1232"
+    },
+    {
+      "id": "0576",
+      "title": "a title",
+      "views": "88"
+    },
+    {
+      "id": "f6a9",
+      "title": "newest post",
+      "views": "90"
     }
   ],
   "comments": [
