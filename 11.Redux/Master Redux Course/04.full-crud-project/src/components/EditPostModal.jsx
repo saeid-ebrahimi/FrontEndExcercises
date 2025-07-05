@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 
-export function EditPostModal({ post }) {
+export function EditPostModal({ post, setPosts, posts }) {
     const [showModal, setShowModal] = useState(false);
     const [postTitle, setPostTitle] = useState(post.title)
     const [views, setViews] = useState(post.views)
@@ -13,10 +13,20 @@ export function EditPostModal({ post }) {
         try {
             const data = {
                 title: postTitle,
-                views: views,
+                views: parseInt(views),
             }
             const resp = await axios.patch('http://localhost:3000/posts', data)
-            // setShowModal(false)
+            setShowModal(false)
+            const filteredPostIndex = posts.indexOf(oldPost => oldPost.id === post.id);
+            const newPosts = posts.map(oldPost => {
+                if (oldPost.id === post.id) {
+                    return { id: post.id, title: data.title, views: parseInt(data.views) }
+                } else {
+                    return oldPost
+                }
+            })
+            setPosts([...newPosts])
+            console.log(newPosts);
         } catch (error) {
             console.log(error);
         }
