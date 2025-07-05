@@ -3,6 +3,7 @@ import './App.css'
 import axios from "axios";
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { CreatePostModal } from "./components/CreatePostModal";
 function App() {
   const [posts, setPosts] = useState([]);
 
