@@ -3,6 +3,7 @@ import { Button, Table } from "react-bootstrap";
 import { EditPostModal } from './EditPostModal';
 import { useDispatch, useSelector } from "react-redux";
 import { getPosts } from "../redux/posts/posts.slice";
+import { DeletePostModal } from './DeletePostModal';
 
 export default function UserTable() {
     const { data: posts, isLoading, error } = useSelector(state => state.post)
@@ -22,18 +23,22 @@ export default function UserTable() {
                 </tr>
             </thead>
             <tbody>
-                {posts && posts.length > 0 ? posts.map(post => <tr key={post.id}>
+                {isLoading ? <tr>
+                    <td colSpan={4}>
+                        Loading the posts list...
+                    </td>
+                </tr> : posts && posts.length > 0 ? posts.map(post => <tr key={post.id}>
                     <td>{post.id}</td>
                     <td>{post.title}</td>
                     <td>{post.views}</td>
-                    <td>
+                    <td className={"d-flex gap-2"}>
                         <EditPostModal postId={post.id} />
-                        <Button variant={"danger"} className={"ms-2"} onClick={() => deletePost(post.id)}>Delete</Button>
+                        <DeletePostModal postId={post.id} postTitle={post.title} />
                     </td>
                 </tr>)
                     :
                     <tr>
-                        <td colSpan={3}>
+                        <td colSpan={4}>
                             the posts list is empty
                         </td>
                     </tr>

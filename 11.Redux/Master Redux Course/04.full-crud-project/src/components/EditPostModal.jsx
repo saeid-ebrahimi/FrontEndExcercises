@@ -26,14 +26,6 @@ export function EditPostModal({ postId }) {
             }
             dispatch(updatePost(data))
             setShowModal(false)
-            const newPosts = posts.map(oldPost => {
-                if (oldPost.id === postId) {
-                    return { id: postId, title: data.title, views: parseInt(data.views) }
-                } else {
-                    return oldPost
-                }
-            })
-            dispatch(setPosts(newPosts))
         } catch (error) {
             console.log(error);
         }

@@ -31,6 +31,17 @@ export const updatePost = createAsyncThunk("posts/update", async (data, thunkApi
     try {
         const response = await axios.put(`http://localhost:3000/posts/${data.id}`, { title: data.title, views: data.views });
         // thunkApi.dispatch(getPosts()) # we handle update in front-end
+        return response.data;
+    } catch (error) {
+        throw new Error(error.message)
+    }
+})
+
+export const deletePost = createAsyncThunk("posts/delete", async (data, thunkApi) => {
+    try {
+        const response = await axios.delete(`http://localhost:3000/posts/${data}`);
+        // thunkApi.dispatch(getPosts()) # we handle delete post in front-end
+        return response.data;
     } catch (error) {
         throw new Error(error.message)
     }
@@ -57,6 +68,9 @@ export const postSlice = createSlice({
         },
         editPost: (state, action) => {
             state.post = action.payload;
+        },
+        resetPost: (state, action) => {
+            state.post = initialState;
         },
         setPosts: (state, action) => {
             state.data = action.payload
@@ -110,6 +124,46 @@ export const postSlice = createSlice({
             state.error = action.error;
         });
 
+        builder.addCase(updatePost.pending, (state, action) => {
+            state.isLoading = true;
+            state.error = null;
+        });
+
+        builder.addCase(updatePost.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.error = null;
+            const postId = action.payload.id
+            const newPosts = state.data.map(oldPost => {
+                if (oldPost.id === postId) {
+                    return { id: postId, title: action.payload.title, views: parseInt(action.payload.views) }
+                } else {
+                    return oldPost
+                }
+            })
+            state.data = [...newPosts];
+        })
+
+        builder.addCase(updatePost.rejected, (state, action) => {
+            state.isLoading = false;
+            state.error = action.error;
+        });
+
+        builder.addCase(deletePost.pending, (state, action) => {
+            state.isLoading = true;
+            state.error = null;
+        });
+
+        builder.addCase(deletePost.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.error = null;
+            const newPosts = state.data.filter(post => post.id !== action.payload.id)
+            state.data = newPosts;
+        });
+
+        builder.addCase(deletePost.rejected, (state, action) => {
+            state.isLoading = false;
+            state.error = action.error;
+        });
 
     }
 })

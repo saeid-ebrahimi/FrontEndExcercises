@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
@@ -13,7 +12,7 @@ export function CreatePostModal() {
     const handleCloseModal = () => setShowModal(false)
     const handleOpenModal = () => setShowModal(true)
     const handleSubmitCreate = async (evt) => {
-        evt.preventDefault()
+        evt.preventDefault();
         try {
             const data = {
                 title: postTitle,

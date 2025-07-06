@@ -21,17 +21,7 @@
       "views": "6"
     },
     {
-      "id": "3968",
-      "title": "new Trip",
-      "views": "6"
-    },
-    {
       "id": "a24e",
-      "title": "How Its going",
-      "views": "1232"
-    },
-    {
-      "id": "c114",
       "title": "How Its going",
       "views": "1232"
     },
@@ -46,9 +36,9 @@
       "views": "90"
     },
     {
-      "id": "6100",
       "title": "How Its going",
-      "views": 0
+      "views": 2000,
+      "id": "6100"
     },
     {
       "id": "d457",
@@ -61,54 +51,19 @@
       "views": 834
     },
     {
-      "id": "049a",
       "title": "How Its going Bro",
-      "views": 2
+      "views": 200,
+      "id": "049a"
     },
     {
-      "id": "55ad",
-      "title": "How Its going Bro",
-      "views": 2
+      "title": "How Its going in Italy",
+      "views": 245,
+      "id": "1196"
     },
     {
-      "id": "db13",
-      "title": "a title232",
-      "views": 9
-    },
-    {
-      "id": "1196",
-      "title": "How Its going 2323",
-      "views": 245
-    },
-    {
-      "id": "5d10",
-      "title": "newest post",
-      "views": 2
-    },
-    {
-      "id": "0c50",
-      "title": "new Trip",
-      "views": 99
-    },
-    {
-      "id": "8195",
-      "title": "234",
-      "views": 243
-    },
-    {
-      "id": "7905",
-      "title": "How Its going tt",
-      "views": 12
-    },
-    {
-      "id": "d3e5",
-      "title": "How Its going tt",
-      "views": 12
-    },
-    {
-      "id": "a76e",
-      "title": "234",
-      "views": 54657
+      "title": "new Trip in redux 2025",
+      "views": 990,
+      "id": "0c50"
     }
   ],
   "comments": [
