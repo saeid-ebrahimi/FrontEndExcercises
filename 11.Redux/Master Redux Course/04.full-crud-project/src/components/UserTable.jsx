@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getPosts } from "../redux/posts/posts.slice";
 import { DeletePostModal } from './DeletePostModal';
 
-export default function UserTable({ mode }) {
+export default function UserTable({ theme }) {
     const { data: posts, isLoading, error } = useSelector(state => state.post)
     const dispatch = useDispatch()
     useEffect(() => {
@@ -13,7 +13,7 @@ export default function UserTable({ mode }) {
     }, [])
 
     return (
-        <Table className={"mt-3"} data-bs-theme={mode} striped bordered hover>
+        <Table className={"mt-3"} data-bs-theme={theme} striped bordered hover>
             <thead>
                 <tr>
                     <th>#</th>

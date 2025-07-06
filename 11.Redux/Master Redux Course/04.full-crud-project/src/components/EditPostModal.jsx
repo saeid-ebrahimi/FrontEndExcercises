@@ -1,12 +1,10 @@
-import axios from "axios";
-import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { changePostTitle, changePostViews, getPostById, updatePost, setPosts } from "../redux/posts/posts.slice";
+import { changePostTitle, changePostViews, getPostById, updatePost } from "../redux/posts/posts.slice";
 
 export function EditPostModal({ postId }) {
-    const { post, data: posts } = useSelector(state => state.post)
+    const { post } = useSelector(state => state.post)
     const [showModal, setShowModal] = useState(false)
     const dispatch = useDispatch()
     const handleCloseModal = () => setShowModal(false)

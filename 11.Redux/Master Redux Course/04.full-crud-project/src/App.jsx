@@ -1,18 +1,27 @@
 import UserTable from "./components/UserTable"
 import './App.css'
-import axios from "axios";
-import { useEffect } from 'react';
-import { useState } from 'react';
 import { CreatePostModal } from "./components/CreatePostModal";
 import NavigationBar from './components/Navbar';
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { changeTheme } from './redux/theme/theme.slice';
+
 function App() {
-  const [mode, setMode] = useState('light')
+  const { theme } = useSelector(state => state.theme);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const getPreferredScheme = window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ? 'dark' : 'light';
+    if (getPreferredScheme) {
+      localStorage.setItem("theme", "dark")
+      dispatch(changeTheme("dark"))
+    }
+  }, [])
   return (
     <>
-      <NavigationBar mode={mode} setMode={setMode} />
-      <div className={`px-3 pt-3 bg-${mode}`}>
+      <NavigationBar theme={theme} />
+      <div className={`px-3 pt-3 bg-${theme}`}>
         <CreatePostModal />
-        <UserTable mode={mode} />
+        <UserTable theme={theme} />
       </div>
     </>
   )
