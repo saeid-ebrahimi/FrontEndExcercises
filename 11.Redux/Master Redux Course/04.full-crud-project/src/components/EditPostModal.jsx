@@ -1,11 +1,15 @@
 import axios from "axios";
+import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { getPostById } from "../redux/posts/posts.slice";
 
-export function EditPostModal({ post, setPosts, posts }) {
+export function EditPostModal({ postId, setPosts, posts }) {
     const [showModal, setShowModal] = useState(false);
-    const [postTitle, setPostTitle] = useState(post.title)
-    const [views, setViews] = useState(post.views)
+    const [postTitle, setPostTitle] = useState()
+    const [views, setViews] = useState()
+    const dispatch = useDispatch()
     const handleCloseModal = () => setShowModal(false)
     const handleOpenModal = () => setShowModal(true)
     const handleSubmitEdit = async (evt) => {
@@ -17,20 +21,21 @@ export function EditPostModal({ post, setPosts, posts }) {
             }
             const resp = await axios.patch('http://localhost:3000/posts', data)
             setShowModal(false)
-            const filteredPostIndex = posts.indexOf(oldPost => oldPost.id === post.id);
             const newPosts = posts.map(oldPost => {
-                if (oldPost.id === post.id) {
-                    return { id: post.id, title: data.title, views: parseInt(data.views) }
+                if (oldPost.id === postId) {
+                    return { id: postId, title: data.title, views: parseInt(data.views) }
                 } else {
                     return oldPost
                 }
             })
             setPosts([...newPosts])
-            console.log(newPosts);
         } catch (error) {
             console.log(error);
         }
     }
+    useEffect(() => {
+        dispatch(getPostById(postId))
+    }, [])
     return (
         <>
             <Button variant={"dark"} onClick={handleOpenModal}>Edit</Button>

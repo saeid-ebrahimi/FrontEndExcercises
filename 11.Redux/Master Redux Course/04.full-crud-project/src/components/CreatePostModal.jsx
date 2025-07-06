@@ -2,10 +2,14 @@ import axios from "axios";
 import { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
-export function CreatePostModal({ setPosts, posts }) {
+import { createPost } from "../redux/posts/posts.slice";
+import { useDispatch } from "react-redux";
+
+export function CreatePostModal() {
     const [showModal, setShowModal] = useState(false);
     const [postTitle, setPostTitle] = useState()
-    const [views, setViews] = useState(null)
+    const [views, setViews] = useState()
+    const dispatch = useDispatch()
     const handleCloseModal = () => setShowModal(false)
     const handleOpenModal = () => setShowModal(true)
     const handleSubmitCreate = async (evt) => {
@@ -15,14 +19,16 @@ export function CreatePostModal({ setPosts, posts }) {
                 title: postTitle,
                 views: parseInt(views),
             }
-            const resp = await axios.post('http://localhost:3000/posts', data)
-            setPosts([...posts, resp.data])
+            const resp = dispatch(createPost(data))
+            if (resp.error) {
+                throw new Error(resp.error.message)
+            }
             handleCloseModal()
             toast.success(`New Post with title "${postTitle}" has created!`)
             setPostTitle("")
-            setViews(null)
+            setViews(undefined)
         } catch (error) {
-            console.log(error);
+            toast.error(error.message)
         }
     }
 

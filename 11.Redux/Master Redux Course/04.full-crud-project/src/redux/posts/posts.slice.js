@@ -9,6 +9,15 @@ export const getPosts = createAsyncThunk("posts/getAll", async () => {
     }
 })
 
+export const getPostById = createAsyncThunk("posts/getById", async (postId) => {
+    try {
+        const response = await axios.get(`http://localhost:3000/posts?${postId}`);
+        return response.data;
+    } catch (error) {
+        throw new Error(error.message)
+    }
+})
+
 export const createPost = createAsyncThunk("posts/create", async (data) => {
     try {
         const response = await axios.post("http://localhost:3000/posts", data);
@@ -21,7 +30,11 @@ export const createPost = createAsyncThunk("posts/create", async (data) => {
 const initialState = {
     isLoading: false,
     error: null,
-    data: []
+    data: [],
+    post: {
+        title: "",
+        views: 0,
+    }
 }
 export const postSlice = createSlice({
     name: "post",
@@ -57,7 +70,25 @@ export const postSlice = createSlice({
         builder.addCase(createPost.rejected, (state, action) => {
             state.isLoading = false;
             state.error = action.error;
-        })
+        });
+
+        builder.addCase(getPostById.pending, (state, action) => {
+            state.isLoading = true;
+            state.error = null
+        });
+
+        builder.addCase(getPostById.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.error = null;
+            state.post = action.payload;
+        });
+
+        builder.addCase(getPostById.rejected, (state, action) => {
+            state.isLoading = false;
+            state.error = action.error;
+        });
+
+
     }
 })
 

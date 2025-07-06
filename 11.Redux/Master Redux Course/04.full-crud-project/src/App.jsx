@@ -5,19 +5,10 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { CreatePostModal } from "./components/CreatePostModal";
 function App() {
-  const [posts, setPosts] = useState([]);
-
-  async function getPosts() {
-    const request = await axios.get('http://localhost:3000/posts')
-    setPosts(request.data)
-  }
-  useEffect(() => {
-    getPosts()
-  }, [])
   return (
     <div className={"px-3 mt-3"}>
-      <CreatePostModal posts={posts} setPosts={setPosts} />
-      <UserTable posts={posts} setPosts={setPosts} />
+      <CreatePostModal />
+      <UserTable />
     </div>
   )
 }

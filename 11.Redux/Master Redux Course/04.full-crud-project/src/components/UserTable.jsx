@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button, Table } from "react-bootstrap";
 import { EditPostModal } from './EditPostModal';
-export default function UserTable({ posts, setPosts }) {
+import { useDispatch, useSelector } from "react-redux";
+import { getPosts } from "../redux/posts/posts.slice";
+
+export default function UserTable() {
+    const { data: posts, isLoading, error } = useSelector(state => state.post)
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getPosts())
+    }, [])
+
     return (
         <Table className={"mt-3"} striped bordered hover>
             <thead>
@@ -18,7 +27,7 @@ export default function UserTable({ posts, setPosts }) {
                     <td>{post.title}</td>
                     <td>{post.views}</td>
                     <td>
-                        <EditPostModal post={post} posts={posts} setPosts={setPosts} />
+                        <EditPostModal post={post} />
                         <Button variant={"danger"} className={"ms-2"} onClick={() => deletePost(post.id)}>Delete</Button>
                     </td>
                 </tr>)
