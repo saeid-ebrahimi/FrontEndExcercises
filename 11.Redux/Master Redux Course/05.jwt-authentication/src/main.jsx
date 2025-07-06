@@ -7,23 +7,27 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RegisterForm from './components/RegisterForm';
 import LoginForm from './components/LoginForm';
 import PostForm from './components/PostForm';
+import RootLayout from './components/RootLayout';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <RootLayout />,
+    children: [
+      {
+        path: "register",
+        element: <RegisterForm />
+      },
+      {
+        path: "login",
+        element: <LoginForm />
+      },
+      {
+        path: "post",
+        element: <PostForm />
+      }
+    ]
   },
-  {
-    path: "/register",
-    element: <RegisterForm />
-  },
-  {
-    path: "/login",
-    element: <LoginForm />
-  },
-  {
-    path: "/post",
-    element: <PostForm />
-  }
+
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
