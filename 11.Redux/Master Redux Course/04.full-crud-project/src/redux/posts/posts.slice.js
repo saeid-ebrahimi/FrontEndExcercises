@@ -27,6 +27,14 @@ export const createPost = createAsyncThunk("posts/create", async (data) => {
     }
 })
 
+export const updatePost = createAsyncThunk("posts/update", async (data, thunkApi) => {
+    try {
+        const response = await axios.put(`http://localhost:3000/posts/${data.id}`, { title: data.title, views: data.views });
+        // thunkApi.dispatch(getPosts()) # we handle update in front-end
+    } catch (error) {
+        throw new Error(error.message)
+    }
+})
 const initialState = {
     isLoading: false,
     error: null,
@@ -40,7 +48,20 @@ const initialState = {
 export const postSlice = createSlice({
     name: "post",
     initialState,
-    reducers: {},
+    reducers: {
+        changePostTitle: (state, action) => {
+            state.post.title = action.payload;
+        },
+        changePostViews: (state, action) => {
+            state.post.views = action.payload;
+        },
+        editPost: (state, action) => {
+            state.post = action.payload;
+        },
+        setPosts: (state, action) => {
+            state.data = action.payload
+        }
+    },
     extraReducers: (builder) => {
         builder.addCase(getPosts.pending, (state, action) => {
             state.isLoading = true;
@@ -92,5 +113,5 @@ export const postSlice = createSlice({
 
     }
 })
-
+export const { changePostTitle, changePostViews, editPost, setPosts } = postSlice.actions
 export default postSlice.reducer;

@@ -3,31 +3,28 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { getPostById } from "../redux/posts/posts.slice";
+import { changePostTitle, changePostViews, getPostById, updatePost, setPosts } from "../redux/posts/posts.slice";
 
 export function EditPostModal({ postId }) {
-    const { post } = useSelector(state => state.post)
-    const [showModal, setShowModal] = useState();
-    const [postTitle, setPostTitle] = useState();
-    const [views, setViews] = useState()
+    const { post, data: posts } = useSelector(state => state.post)
+    const [showModal, setShowModal] = useState(false)
     const dispatch = useDispatch()
     const handleCloseModal = () => setShowModal(false)
     const handleOpenModal = () => setShowModal(true)
     const handleGetData = async (evt) => {
         evt.preventDefault();
         dispatch(getPostById(postId));
-        setPostTitle(post.title);
-        setViews(post.views)
         handleOpenModal();
     }
     const handleSubmitEdit = async (evt) => {
         evt.preventDefault()
         try {
             const data = {
-                title: postTitle,
-                views: parseInt(views),
+                id: postId,
+                title: post.title,
+                views: parseInt(post.views),
             }
-            const resp = await axios.patch('http://localhost:3000/posts', data)
+            dispatch(updatePost(data))
             setShowModal(false)
             const newPosts = posts.map(oldPost => {
                 if (oldPost.id === postId) {
@@ -36,7 +33,7 @@ export function EditPostModal({ postId }) {
                     return oldPost
                 }
             })
-            setPosts([...newPosts])
+            dispatch(setPosts(newPosts))
         } catch (error) {
             console.log(error);
         }
@@ -46,7 +43,7 @@ export function EditPostModal({ postId }) {
             <Button variant={"dark"} onClick={handleGetData}>Edit</Button>
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Edit "{postTitle}" Post</Modal.Title>
+                    <Modal.Title>Edit "{post.title}" Post</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={(evt) => { handleSubmitEdit(evt) }}>
@@ -54,8 +51,8 @@ export function EditPostModal({ postId }) {
                             <Form.Label>Title</Form.Label>
                             <Form.Control
                                 type={"text"}
-                                value={postTitle}
-                                onChange={(evt) => setPostTitle(evt.target.value)}
+                                value={post.title}
+                                onChange={(evt) => dispatch(changePostTitle(evt.target.value))}
                                 placeholder={"Enter Post Title"}
                             />
                             <Form.Text className={"text-muted"} />
@@ -63,9 +60,9 @@ export function EditPostModal({ postId }) {
                         <Form.Group className={"mb-3"} controlId={"formPostViews"}>
                             <Form.Label>Views</Form.Label>
                             <Form.Control
-                                value={views}
+                                value={post.views}
                                 type={"number"}
-                                onChange={(evt) => setViews(evt.target.value)}
+                                onChange={(evt) => dispatch(changePostViews(parseInt(evt.target.value)))}
                                 placeholder={"views"}
                             />
                             <Form.Text className={"text-muted"} />
