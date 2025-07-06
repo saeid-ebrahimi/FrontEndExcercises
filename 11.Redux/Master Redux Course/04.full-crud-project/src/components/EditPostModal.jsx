@@ -32,7 +32,7 @@ export function EditPostModal({ postId }) {
     }
     return (
         <>
-            <Button variant={"dark"} onClick={handleGetData}>Edit</Button>
+            <Button variant={"primary"} onClick={handleGetData}>Edit</Button>
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit "{post.title}" Post</Modal.Title>

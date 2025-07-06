@@ -4,12 +4,17 @@ import axios from "axios";
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { CreatePostModal } from "./components/CreatePostModal";
+import NavigationBar from './components/Navbar';
 function App() {
+  const [mode, setMode] = useState('light')
   return (
-    <div className={"px-3 mt-3"}>
-      <CreatePostModal />
-      <UserTable />
-    </div>
+    <>
+      <NavigationBar mode={mode} setMode={setMode} />
+      <div className={`px-3 pt-3 bg-${mode}`}>
+        <CreatePostModal />
+        <UserTable mode={mode} />
+      </div>
+    </>
   )
 }
 
