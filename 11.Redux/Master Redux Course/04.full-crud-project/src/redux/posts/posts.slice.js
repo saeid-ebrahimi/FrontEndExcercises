@@ -11,7 +11,7 @@ export const getPosts = createAsyncThunk("posts/getAll", async () => {
 
 export const getPostById = createAsyncThunk("posts/getById", async (postId) => {
     try {
-        const response = await axios.get(`http://localhost:3000/posts?${postId}`);
+        const response = await axios.get(`http://localhost:3000/posts/${postId}`);
         return response.data;
     } catch (error) {
         throw new Error(error.message)
@@ -32,6 +32,7 @@ const initialState = {
     error: null,
     data: [],
     post: {
+        id: undefined,
         title: "",
         views: 0,
     }
@@ -80,7 +81,7 @@ export const postSlice = createSlice({
         builder.addCase(getPostById.fulfilled, (state, action) => {
             state.isLoading = false;
             state.error = null;
-            state.post = action.payload;
+            state.post = action.payload
         });
 
         builder.addCase(getPostById.rejected, (state, action) => {

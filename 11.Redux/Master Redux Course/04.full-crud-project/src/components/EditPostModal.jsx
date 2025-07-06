@@ -2,16 +2,24 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getPostById } from "../redux/posts/posts.slice";
 
-export function EditPostModal({ postId, setPosts, posts }) {
-    const [showModal, setShowModal] = useState(false);
-    const [postTitle, setPostTitle] = useState()
+export function EditPostModal({ postId }) {
+    const { post } = useSelector(state => state.post)
+    const [showModal, setShowModal] = useState();
+    const [postTitle, setPostTitle] = useState();
     const [views, setViews] = useState()
     const dispatch = useDispatch()
     const handleCloseModal = () => setShowModal(false)
     const handleOpenModal = () => setShowModal(true)
+    const handleGetData = async (evt) => {
+        evt.preventDefault();
+        dispatch(getPostById(postId));
+        setPostTitle(post.title);
+        setViews(post.views)
+        handleOpenModal();
+    }
     const handleSubmitEdit = async (evt) => {
         evt.preventDefault()
         try {
@@ -33,12 +41,9 @@ export function EditPostModal({ postId, setPosts, posts }) {
             console.log(error);
         }
     }
-    useEffect(() => {
-        dispatch(getPostById(postId))
-    }, [])
     return (
         <>
-            <Button variant={"dark"} onClick={handleOpenModal}>Edit</Button>
+            <Button variant={"dark"} onClick={handleGetData}>Edit</Button>
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit "{postTitle}" Post</Modal.Title>

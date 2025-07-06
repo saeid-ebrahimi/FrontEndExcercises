@@ -27,7 +27,7 @@ export default function UserTable() {
                     <td>{post.title}</td>
                     <td>{post.views}</td>
                     <td>
-                        <EditPostModal post={post} />
+                        <EditPostModal postId={post.id} />
                         <Button variant={"danger"} className={"ms-2"} onClick={() => deletePost(post.id)}>Delete</Button>
                     </td>
                 </tr>)
