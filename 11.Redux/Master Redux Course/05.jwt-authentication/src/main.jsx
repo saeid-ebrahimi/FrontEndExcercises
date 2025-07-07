@@ -14,6 +14,10 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       {
+        index: true,
+        element: <App />
+      },
+      {
         path: "register",
         element: <RegisterForm />
       },
