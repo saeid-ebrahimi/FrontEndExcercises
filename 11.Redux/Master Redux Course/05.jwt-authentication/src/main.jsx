@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RegisterForm from './components/RegisterForm';
 import LoginForm from './components/LoginForm';
+import Post from "./components/Post";
 import PostForm from './components/PostForm';
 import RootLayout from './components/RootLayout';
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       },
       {
         path: "post",
+        element: <Post />
+      },
+      {
+        path: "create-post",
         element: <PostForm />
       }
     ]
