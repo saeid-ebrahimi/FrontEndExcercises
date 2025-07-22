@@ -9,6 +9,9 @@ import LoginForm from './components/LoginForm';
 import Post from "./components/Post";
 import PostForm from './components/PostForm';
 import RootLayout from './components/RootLayout';
+import { store } from './redux/store';
+import { Provider } from "react-redux";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,9 +40,12 @@ const router = createBrowserRouter([
     ]
   },
 
-])
+]);
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </StrictMode>,
 )
