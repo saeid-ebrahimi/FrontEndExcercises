@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from "axios";
 import { Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -11,6 +12,7 @@ export default function Post() {
                 Authorization: `Bearer ${accessToken}`
             }
         })
+        console.log(response.data);
         setPosts(response.data)
     }
     useEffect(() => {
@@ -22,17 +24,18 @@ export default function Post() {
             <Table className={"mt-3"} striped bordered hover>
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>ID</th>
                         <th>Title</th>
                         <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {posts && posts.length > 0 && posts.map((post, index) => <tr key={index + 1}>
-                        <td>{index + 1}</td>
-                        <td>{post.title}</td>
-                        <td>{post.description}</td>
-                    </tr>)}
+                    {posts && posts.length > 0 && posts.map((post,) =>
+                        <tr key={post.id}>
+                            <td>{post.id}</td>
+                            <td>{post.title}</td>
+                            <td>{post.description}</td>
+                        </tr>)}
                 </tbody>
             </Table>
         </div>
