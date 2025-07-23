@@ -12,7 +12,6 @@ export default function Post() {
                 Authorization: `Bearer ${accessToken}`
             }
         })
-        console.log(response.data);
         setPosts(response.data)
     }
     useEffect(() => {
