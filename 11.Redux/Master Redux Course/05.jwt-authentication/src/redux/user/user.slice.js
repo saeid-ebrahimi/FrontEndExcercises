@@ -19,11 +19,11 @@ export const userSlice = createSlice({
         error: '',
         loading: false,
         access_token: '',
-        isAuthenticated: false,
+        isAuthenticated: Boolean(localStorage.getItem('isAuthenticated')) || false,
         data: {
-            firstName: "",
-            lastName: "",
-            email: "",
+            firstName: localStorage.getItem('firstName') || "",
+            lastName: localStorage.getItem('lastName') || "",
+            email: localStorage.getItem('email') || "",
         }
     },
     reducers: {
@@ -38,6 +38,9 @@ export const userSlice = createSlice({
             state.error = ""
             state.access_token = action.payload.access_token
             state.data = action.payload.data
+            localStorage.setItem("access_token", action.payload.access_token)
+            localStorage.setItem("firstName", action.payload.data.firstName)
+            localStorage.setItem("isAuthenticated", true)
         });
         builder.addCase(registerUser.rejected, (state, action) => {
             state.loading = false;
@@ -65,6 +68,9 @@ export const userSlice = createSlice({
             state.data.firstName = action.payload.data.firstName;
             state.data.lastName = action.payload.data.lastName;
             state.data.email = action.payload.data.email
+            localStorage.setItem("access_token", action.payload.access_token)
+            localStorage.setItem("firstName", action.payload.data.firstName)
+            localStorage.setItem("isAuthenticated", true)
         })
     }
 })

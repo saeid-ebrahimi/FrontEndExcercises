@@ -11,6 +11,7 @@ import PostForm from './components/PostForm';
 import RootLayout from './components/RootLayout';
 import { store } from './redux/store';
 import { Provider } from "react-redux";
+import ProtectedRoutes from './components/ProtectedRoutes';
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "create-post",
-        element: <PostForm />
+        element: <ProtectedRoutes><PostForm /></ProtectedRoutes>
       }
     ]
   },

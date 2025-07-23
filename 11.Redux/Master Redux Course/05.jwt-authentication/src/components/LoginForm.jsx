@@ -36,7 +36,7 @@ export default function LoginForm() {
         <Form onSubmit={onLogin} className={"mt-3"}>
             <FormGroup className={"mb-3"} controlId={"loginForm"}>
                 <FormLabel>Email Address:</FormLabel>
-                <FormControl type={"email"} placeholder={"Enter Email"} value={userData.email} onChange={(evt) => dispatch(changeDataField("email", evt.target.value))} />
+                <FormControl type={"email"} placeholder={"Enter Email"} value={userData.email} onChange={(evt) => dispatch(changeDataField({ fieldName: "email", fieldValue: evt.target.value }))} />
                 <FormText>we'll never share your email with anyone else</FormText>
             </FormGroup>
             <FormGroup className={"mb-3"}>

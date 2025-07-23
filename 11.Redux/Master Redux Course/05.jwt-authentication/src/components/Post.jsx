@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 export default function Post() {
     return (
         <div>
-            <Link to={"/create-post"} title={"Create Post "} className={"btn btn-primary"} >Create Post</Link>
-            <Table className={"mt-3"} striped bordered hover>
+            < to={"/create-post"} title={"Create Post "} className={"btn btn-primary"} >
+            <Table striped bordered hover>
                 <thead>
                     <tr>
                         <th>#</th>
