@@ -1,4 +1,4 @@
-import UserTable from "./components/UserTable"
+import PostTable from "./components/PostTable"
 import './App.css'
 import { CreatePostModal } from "./components/CreatePostModal";
 import NavigationBar from './components/Navbar';
@@ -21,7 +21,7 @@ function App() {
       <NavigationBar theme={theme} />
       <div style={{ height: "100vh" }} className={`px-3 pt-3 bg-${theme}`}>
         <CreatePostModal />
-        <UserTable theme={theme} />
+        <PostTable theme={theme} />
       </div>
     </>
   )

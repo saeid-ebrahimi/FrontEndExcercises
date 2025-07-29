@@ -8,7 +8,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getPosts, getPostsByPage } from '../apis';
 import { toast } from 'react-toastify';
 const PAGE_SIZE = 2
-export default function UserTable({ theme }) {
+export default function PostTable({ theme }) {
     const [active, setActive] = useState(1)
     // const { data: posts, isLoading, error } = useSelector(state => state.post)
     // const dispatch = useDispatch()
