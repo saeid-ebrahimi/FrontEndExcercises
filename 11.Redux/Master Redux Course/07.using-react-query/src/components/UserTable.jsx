@@ -1,16 +1,34 @@
 import React, { useEffect } from 'react';
-import { Button, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { EditPostModal } from './EditPostModal';
 import { useDispatch, useSelector } from "react-redux";
-import { getPosts } from "../redux/posts/posts.slice";
+;
 import { DeletePostModal } from './DeletePostModal';
+import { useQuery } from '@tanstack/react-query';
+import { getPosts } from '../apis';
+import { toast } from 'react-toastify';
 
 export default function UserTable({ theme }) {
-    const { data: posts, isLoading, error } = useSelector(state => state.post)
-    const dispatch = useDispatch()
+    // const { data: posts, isLoading, error } = useSelector(state => state.post)
+    // const dispatch = useDispatch()
+    // useEffect(() => {
+    //     dispatch(getPosts())
+    // }, [])
+
+    const { isPending, isLoading, isError, isSuccess, data: posts, error, isFetching, isPaused } = useQuery({
+        queryKey: ["posts"],
+        queryFn: getPosts,
+    })
+
     useEffect(() => {
-        dispatch(getPosts())
-    }, [])
+        if (isSuccess) {
+            return toast.success("getting posts was successful")
+        }
+        if (isError) {
+            return toast.error(`getting data have ${error.message} error`)
+        }
+    }, [isError, isSuccess])
+
 
     return (
         <Table className={"mt-3"} data-bs-theme={theme} striped bordered hover>

@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <NavigationBar theme={theme} />
-      <div className={`px-3 pt-3 bg-${theme}`}>
+      <div style={{ height: "100vh" }} className={`px-3 pt-3 bg-${theme}`}>
         <CreatePostModal />
         <UserTable theme={theme} />
       </div>
