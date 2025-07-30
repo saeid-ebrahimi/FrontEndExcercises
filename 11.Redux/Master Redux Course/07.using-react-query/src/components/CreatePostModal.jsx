@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
@@ -8,11 +8,22 @@ import { createPost } from "../apis";
 
 export function CreatePostModal() {
     const [showModal, setShowModal] = useState(false);
-    const [postTitle, setPostTitle] = useState()
-    const [views, setViews] = useState()
+    const [postTitle, setPostTitle] = useState();
+    const [views, setViews] = useState();
     // const dispatch = useDispatch()
-    const { isError, isPending, isSuccess, mutate, error } = useMutation({
+    const queryClient = useQueryClient();
+    const { mutate, isPending } = useMutation({
         mutationFn: (postData) => createPost(postData),
+        onError: (error) => {
+            toast.error(error.message)
+        },
+        onSuccess: () => {
+            toast.success("adding post was successful")
+            setPostTitle("");
+            setViews("")
+            handleCloseModal();
+            queryClient.invalidateQueries({ queryKey: ["posts"] })
+        }
     })
 
     const handleCloseModal = () => setShowModal(false)
@@ -27,21 +38,11 @@ export function CreatePostModal() {
         }
         mutate(data);
     }
-
     useEffect(() => {
-        if (isError) {
-            toast.error(error.message)
-        }
-        else if (isSuccess) {
-            toast.success("adding post was successful")
-            setPostTitle("");
-            setViews(undefined)
-            handleCloseModal();
-        } else if (isPending) {
-            toast.info("adding post is in progress")
-        }
+        if (isPending)
+            toast.info("adding post is in progress...")
+    }, [isPending])
 
-    }, [isPending, isError, isSuccess])
     // const handleSubmitCreate = async (evt) => {
     //     evt.preventDefault();
     //     try {
