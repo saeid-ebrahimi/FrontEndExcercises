@@ -20,3 +20,8 @@ export const getPostById = async (postId) => {
     })
     return response.data
 }
+
+export const createPost = async (data) => {
+    const response = await axios.post("http://localhost:3000/posts", data)
+    return response.data;
+}
