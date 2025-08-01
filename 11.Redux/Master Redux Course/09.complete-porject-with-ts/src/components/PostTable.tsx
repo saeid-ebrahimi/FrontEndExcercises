@@ -1,27 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Pagination, Table } from "react-bootstrap";
 import { EditPostModal } from './EditPostModal';
-import { useDispatch, useSelector } from "react-redux";
-;
 import { DeletePostModal } from './DeletePostModal';
 import { useQuery } from '@tanstack/react-query';
 import { getPosts, getPostsByPage } from '../apis';
 import { toast } from 'react-toastify';
+import type { TTheme } from '../redux/theme/theme.slice';
 const PAGE_SIZE = 2
-export default function PostTable({ theme }) {
+export default function PostTable({ theme }: { theme: TTheme }) {
     const [active, setActive] = useState(1)
-    // const { data: posts, isLoading, error } = useSelector(state => state.post)
-    // const dispatch = useDispatch()
-    // useEffect(() => {
-    //     dispatch(getPosts())
-    // }, [])
 
     const { data: posts, } = useQuery({
         queryKey: ["posts"],
         queryFn: getPosts,
     })
 
-    const { isPending, isLoading, isError, isSuccess, data: partialPosts, error, isFetching, isPaused } = useQuery({
+    const { isLoading, isError, isSuccess, data: partialPosts, error } = useQuery({
         queryKey: ["posts", active],
         queryFn: () => getPostsByPage(active, PAGE_SIZE),
     })

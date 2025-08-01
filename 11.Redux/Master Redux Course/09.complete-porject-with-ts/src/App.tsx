@@ -2,13 +2,15 @@ import PostTable from "./components/PostTable"
 import './App.css'
 import { CreatePostModal } from "./components/CreatePostModal";
 import NavigationBar from './components/Navbar';
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { changeTheme } from './redux/theme/theme.slice';
+import { useAppDispatch, useAppSelector } from "./redux/hooks";
+
 
 function App() {
-  const { theme } = useSelector(state => state.theme);
-  const dispatch = useDispatch();
+  const { theme } = useAppSelector(state => state.theme);
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
     const getPreferredScheme = window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ? 'dark' : 'light';
     if (getPreferredScheme) {
@@ -16,6 +18,10 @@ function App() {
       dispatch(changeTheme("dark"))
     }
   }, [])
+
+  useEffect(() => {
+    (document.querySelector("html")?.setAttribute("data-bs-theme", theme))
+  }, [theme])
   return (
     <>
       <NavigationBar theme={theme} />

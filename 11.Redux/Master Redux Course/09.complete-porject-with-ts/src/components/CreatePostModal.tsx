@@ -1,19 +1,19 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { createPost } from "../apis";
+import type { TPost } from "../redux/posts/posts.slice";
 // import { createPost } from "../redux/posts/posts.slice";
 // import { useDispatch } from "react-redux";
 
 export function CreatePostModal() {
     const [showModal, setShowModal] = useState(false);
-    const [postTitle, setPostTitle] = useState();
-    const [views, setViews] = useState();
-    // const dispatch = useDispatch()
+    const [postTitle, setPostTitle] = useState("");
+    const [views, setViews] = useState("");
     const queryClient = useQueryClient();
     const { mutate, isPending } = useMutation({
-        mutationFn: (postData) => createPost(postData),
+        mutationFn: (postData: Omit<TPost, "id">) => createPost(postData),
         onError: (error) => {
             toast.error(error.message)
         },
@@ -29,7 +29,7 @@ export function CreatePostModal() {
     const handleCloseModal = () => setShowModal(false)
     const handleOpenModal = () => setShowModal(true)
 
-    const handleSubmitCreate = async (evt) => {
+    const handleSubmitCreate = async (evt: FormEvent<HTMLFormElement>) => {
         evt.preventDefault();
         if (!views && !postTitle) return;
         const data = {
@@ -42,26 +42,6 @@ export function CreatePostModal() {
         if (isPending)
             toast.info("adding post is in progress...")
     }, [isPending])
-
-    // const handleSubmitCreate = async (evt) => {
-    //     evt.preventDefault();
-    //     try {
-    //         const data = {
-    //             title: postTitle,
-    //             views: parseInt(views),
-    //         }
-    //         const resp = dispatch(createPost(data))
-    //         if (resp.error) {
-    //             throw new Error(resp.error.message)
-    //         }
-    //         handleCloseModal()
-    //         toast.success(`New Post with title "${postTitle}" has created!`)
-    //         setPostTitle("")
-    //         setViews(undefined)
-    //     } catch (error) {
-    //         toast.error(error.message)
-    //     }
-    // }
 
     return (
         <>
@@ -99,7 +79,7 @@ export function CreatePostModal() {
                             <Button type={"button"} variant={"outline-danger"} onClick={() => {
                                 handleCloseModal();
                                 setPostTitle("");
-                                setViews(null);
+                                setViews("");
                             }}>Cancel</Button>
                         </div>
                     </Form>

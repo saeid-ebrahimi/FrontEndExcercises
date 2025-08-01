@@ -1,26 +1,28 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
 import { changePostTitle, changePostViews, getPostById, updatePost } from "../redux/posts/posts.slice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
-export function EditPostModal({ postId }) {
-    const { post } = useSelector(state => state.post)
+export function EditPostModal({ postId }: { postId?: number; }) {
+    const { post } = useAppSelector(state => state.post)
     const [showModal, setShowModal] = useState(false)
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     const handleCloseModal = () => setShowModal(false)
     const handleOpenModal = () => setShowModal(true)
-    const handleGetData = async (evt) => {
+    const handleGetData = async (evt: React.MouseEvent<HTMLButtonElement>) => {
         evt.preventDefault();
-        dispatch(getPostById(postId));
-        handleOpenModal();
+        if (postId) {
+            dispatch(getPostById(postId));
+            handleOpenModal();
+        }
     }
-    const handleSubmitEdit = async (evt) => {
+    const handleSubmitEdit = async (evt: FormEvent<HTMLFormElement>) => {
         evt.preventDefault()
         try {
             const data = {
                 id: postId,
                 title: post.title,
-                views: parseInt(post.views),
+                views: post.views,
             }
             dispatch(updatePost(data))
             setShowModal(false)

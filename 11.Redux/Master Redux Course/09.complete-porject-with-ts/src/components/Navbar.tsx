@@ -2,11 +2,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Form } from 'react-bootstrap';
-import { useDispatch } from "react-redux";
 import { changeTheme } from '../redux/theme/theme.slice';
+import { useAppDispatch } from '../redux/hooks';
+import type { ChangeEvent } from 'react';
 
-export default function NavigationBar({ theme }) {
-    const dispatch = useDispatch()
+
+export default function NavigationBar({ theme }: { theme: "dark" | "light" }) {
+    const dispatch = useAppDispatch()
     return (
         <>
             <Navbar bg={theme} data-bs-theme={theme}>
@@ -19,7 +21,7 @@ export default function NavigationBar({ theme }) {
                     </Nav>
                     <Form.Check type={"switch"}
                         id={"theme-mode"}
-                        onChange={(evt) => {
+                        onChange={(_evt: ChangeEvent<HTMLInputElement>) => {
                             dispatch(changeTheme(theme === "light" ? "dark" : "light"))
                         }}
                         checked={theme === "dark"}

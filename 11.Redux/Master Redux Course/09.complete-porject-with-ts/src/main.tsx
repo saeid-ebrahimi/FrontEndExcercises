@@ -22,10 +22,10 @@ const queryClient = new QueryClient({
       // refetchInterval: 1000 * 60 * 5, // Refetch data intervale without considering stale time
     },
     mutations: {
-      onError: (error, variables, context) => {
+      onError: (error, variables, _context) => {
         console.error('Mutation error:', error, variables);
       },
-      onSuccess: (data, variables, context) => {
+      onSuccess: (data, variables, _context) => {
         console.log('Mutation success:', data, variables);
       },
     }
