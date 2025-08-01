@@ -1,0 +1,16 @@
+body {
+  padding: 1;
+  height: 100vh;
+  background-color: transparent;
+}
+
+body > section {
+  padding: 0;
+}
+
+body > div {
+  min-height: 100vh;
+  margin: 0;
+  background-color: gray;
+  padding: 0;
+}
