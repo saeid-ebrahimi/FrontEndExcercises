@@ -1,0 +1,14 @@
+{
+  "users": [
+    { "id": 1, "name": "Zan" },
+    { "id": 2, "name": "John" }
+  ],
+  "posts": [
+    { "id": 1, "title": "How to learn JavaScript?", "userId": 1 },
+    { "id": 2, "title": "How to pro?", "userId": 1 },
+    { "id": 3, "title": "Learn to learn", "userId": 1 },
+    { "id": 4, "title": "I'm good", "userId": 2 },
+    { "id": 5, "title": "I'm bad", "userId": 2 },
+    { "id": 6, "title": "Boy", "userId": 2 }
+  ]
+}
