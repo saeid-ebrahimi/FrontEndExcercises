@@ -3,6 +3,7 @@ import {
   createAsyncThunk,
 } from "@reduxjs/toolkit";
 import axios from "axios";
+import type { TInitialState, TPost } from "./posts.types";
 export const getPosts = createAsyncThunk(
   "posts/getAll",
   async () => {
@@ -33,7 +34,7 @@ export const getPostById = createAsyncThunk(
 
 export const createPost = createAsyncThunk(
   "posts/create",
-  async (data) => {
+  async (data: Omit<TPost, "id">) => {
     try {
       const response = await axios.post(
         "http://localhost:3000/posts",
@@ -76,17 +77,7 @@ export const deletePost = createAsyncThunk(
     }
   }
 );
-export type TPost = {
-  id: number | undefined;
-  title: string;
-  views: number;
-};
-type TInitialState = {
-  isLoading: boolean;
-  error: Partial<Error> | null;
-  data: TPost[];
-  post: TPost;
-};
+
 const initialState: TInitialState = {
   isLoading: false,
   error: null,

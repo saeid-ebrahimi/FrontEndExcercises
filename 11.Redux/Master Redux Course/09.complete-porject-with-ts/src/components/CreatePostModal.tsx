@@ -3,7 +3,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { createPost } from "../apis";
-import type { TPost } from "../redux/posts/posts.slice";
+import type { TPost } from "../redux/posts/posts.types";
 // import { createPost } from "../redux/posts/posts.slice";
 // import { useDispatch } from "react-redux";
 

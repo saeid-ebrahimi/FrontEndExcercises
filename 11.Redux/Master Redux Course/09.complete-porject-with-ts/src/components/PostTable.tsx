@@ -5,7 +5,7 @@ import { DeletePostModal } from './DeletePostModal';
 import { useQuery } from '@tanstack/react-query';
 import { getPosts, getPostsByPage } from '../apis';
 import { toast } from 'react-toastify';
-import type { TTheme } from '../redux/theme/theme.slice';
+import type { TTheme } from '../redux/theme/theme.types';
 const PAGE_SIZE = 2
 export default function PostTable({ theme }: { theme: TTheme }) {
     const [active, setActive] = useState(1)
