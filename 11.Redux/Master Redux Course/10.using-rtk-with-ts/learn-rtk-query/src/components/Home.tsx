@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { AccordionEventKey } from 'react-bootstrap/esm/AccordionContext';
 import AddPost from './AddPost';
+import { useGetUsersQuery } from '../redux/user/user.api';
+import { toast } from 'react-toastify';
 
 function Home() {
+  const { data: users, isError, isSuccess, isLoading, error } = useGetUsersQuery();
+
   const [activeKey, setActiveKey] = useState<string | null>(null);
 
   const handleSelect = (eventKey: AccordionEventKey) => {
@@ -11,7 +15,14 @@ function Home() {
   };
 
   console.log('check activeKey', activeKey);
-
+  useEffect(() => {
+    if (isLoading)
+      toast.info("loading users data")
+    if (isError)
+      toast.error(error.toString())
+    if (isSuccess)
+      toast.success("getting users data is successful!")
+  }, [isError, isSuccess, isLoading])
   return (
     <Accordion activeKey={activeKey} onSelect={handleSelect} alwaysOpen>
       <Accordion.Item eventKey='0'>
