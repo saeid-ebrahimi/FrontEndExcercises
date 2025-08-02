@@ -6,7 +6,7 @@ import { useGetUsersQuery } from '../redux/user/user.api';
 import { toast } from 'react-toastify';
 
 function Home() {
-  const { data: users, isError, isSuccess, isLoading, error } = useGetUsersQuery();
+  const { data: users, isError, isSuccess, isLoading, error, isFetching } = useGetUsersQuery();
 
   const [activeKey, setActiveKey] = useState<string | null>(null);
 
@@ -16,38 +16,31 @@ function Home() {
 
   console.log('check activeKey', activeKey);
   useEffect(() => {
-    if (isLoading)
-      toast.info("loading users data")
+    if (isFetching)
+      toast.info("getting users data")
     if (isError)
       toast.error(error.toString())
     if (isSuccess)
       toast.success("getting users data is successful!")
-  }, [isError, isSuccess, isLoading])
+  }, [isError, isSuccess, isFetching])
   return (
-    <Accordion activeKey={activeKey} onSelect={handleSelect} alwaysOpen>
-      <Accordion.Item eventKey='0'>
-        <Accordion.Header>User #1</Accordion.Header>
-        <Accordion.Body>
-          <AddPost />
-          <ul>
-            <li>Post title 1</li>
-            <li>Post title 2</li>
-            <li>Post title 3</li>
-          </ul>
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey='1'>
-        <Accordion.Header>User #2</Accordion.Header>
-        <Accordion.Body>
-          <AddPost />
-          <ul>
-            <li>Post title 1</li>
-            <li>Post title 2</li>
-            <li>Post title 3</li>
-          </ul>
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
+    <>
+      {
+        isLoading ? <div>Loading data ...</div> : users && users?.length > 0 ? <Accordion activeKey={activeKey} onSelect={handleSelect} alwaysOpen>
+          {users.map(user => (<Accordion.Item key={user.id} eventKey={user.id}>
+            <Accordion.Header>{user.name}</Accordion.Header>
+            <Accordion.Body>
+              <AddPost />
+              <ul>
+                <li>Post title 1</li>
+                <li>Post title 2</li>
+                <li>Post title 3</li>
+              </ul>
+            </Accordion.Body>
+          </Accordion.Item>
+          ))}
+        </Accordion> : <div>User list is Empty</div>
+      }</>
   );
 }
 
