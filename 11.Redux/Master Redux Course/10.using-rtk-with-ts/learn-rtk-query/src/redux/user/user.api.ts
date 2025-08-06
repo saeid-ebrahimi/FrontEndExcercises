@@ -2,7 +2,7 @@ import {
   createApi,
   fetchBaseQuery,
 } from "@reduxjs/toolkit/query/react";
-import { TUser } from "./user.type";
+import { TAddUserData, TUser } from "./user.type";
 
 export const userApi = createApi({
   reducerPath: "userApi",
@@ -13,7 +13,20 @@ export const userApi = createApi({
     getUsers: builder.query<TUser[], void>({
       query: () => `users`,
     }),
+    addUser: builder.mutation<
+      TUser,
+      TAddUserData
+    >({
+      query: (data) => ({
+        url: `users`,
+        method: "Post",
+        body: JSON.stringify(data),
+      }),
+    }),
   }),
 });
 
-export const { useGetUsersQuery } = userApi;
+export const {
+  useGetUsersQuery,
+  useAddUserMutation,
+} = userApi;

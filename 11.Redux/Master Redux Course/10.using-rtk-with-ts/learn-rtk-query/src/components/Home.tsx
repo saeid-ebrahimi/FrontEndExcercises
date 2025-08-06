@@ -18,8 +18,8 @@ function Home() {
   useEffect(() => {
     if (isFetching)
       toast.info("getting users data")
-    if (isError)
-      toast.error(error.toString())
+    if (isError && "data" in error)
+      toast.error(error.data as string)
     if (isSuccess)
       toast.success("getting users data is successful!")
   }, [isError, isSuccess, isFetching])

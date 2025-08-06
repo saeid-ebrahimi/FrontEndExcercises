@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.9.0",
     "@reduxjs/toolkit": "^2.8.2",
     "bootstrap": "^5.3.3",
     "learn-rtk-query": "file:",
