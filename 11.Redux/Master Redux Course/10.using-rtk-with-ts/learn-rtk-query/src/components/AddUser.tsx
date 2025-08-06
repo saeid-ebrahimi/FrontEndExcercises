@@ -13,16 +13,18 @@ function AddUser() {
       email: faker.internet.email(),
     }
     addUser(data)
+
   }
 
   const showFeedback = () => {
     if (isLoading) {
       return toast.info("adding user data")
     }
-    if (isError && "data" in error) {
-      console.log(error.data as string);
-      return toast.error(error.data as string)
-    }
+    if (isError)
+      if ("data" in error)
+        toast.error(error.data as string)
+      else if ("message" in error)
+        toast.error(error.message as string)
     if (isSuccess) {
       console.log(userDataResult);
       return toast.success("adding user was successful")

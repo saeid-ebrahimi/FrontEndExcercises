@@ -18,15 +18,18 @@ function Home() {
   useEffect(() => {
     if (isFetching)
       toast.info("getting users data")
-    if (isError && "data" in error)
-      toast.error(error.data as string)
+    if (isError)
+      if ("data" in error)
+        toast.error(error.data as string)
+      else if ("message" in error)
+        toast.error(error.message as string)
     if (isSuccess)
       toast.success("getting users data is successful!")
   }, [isError, isSuccess, isFetching])
   return (
     <>
       {
-        isLoading ? <div>Loading data ...</div> : users && users?.length > 0 ? <Accordion activeKey={activeKey} onSelect={handleSelect} alwaysOpen>
+        isLoading ? <div style={{ color: "white" }}>Loading data ...</div> : isError ? <div style={{ color: "red" }}>error while getting data</div> : users && users?.length > 0 ? <Accordion activeKey={activeKey} onSelect={handleSelect} alwaysOpen>
           {users.map(user => (<Accordion.Item key={user.id} eventKey={user.id}>
             <Accordion.Header>{user.name}</Accordion.Header>
             <Accordion.Body>
