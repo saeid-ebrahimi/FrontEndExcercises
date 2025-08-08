@@ -1,42 +1,226 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Zan",
       "email": "zan@gmail.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "John",
       "email": "john@gmailo.com"
+    },
+    {
+      "id": "4018",
+      "name": "Derrick Block",
+      "email": "Roderick_Powlowski@gmail.com"
+    },
+    {
+      "id": "0df7",
+      "name": "Felix Rau",
+      "email": "Jakob0@yahoo.com"
+    },
+    {
+      "id": "ac53",
+      "name": "Theresa Gerhold",
+      "email": "Sunny53@hotmail.com"
+    },
+    {
+      "id": "8b1d",
+      "name": "Kay Mante",
+      "email": "Ursula.Considine@hotmail.com"
+    },
+    {
+      "id": "6f6f",
+      "name": "Darryl Lowe Sr.",
+      "email": "Blake33@hotmail.com"
+    },
+    {
+      "id": "8d31",
+      "name": "Lucia Cormier-Feeney",
+      "email": "Hadley_Willms55@yahoo.com"
+    },
+    {
+      "id": "9697",
+      "name": "Jennie Weber Sr.",
+      "email": "Arlie80@yahoo.com"
+    },
+    {
+      "id": "7a04",
+      "name": "Sadie Bartell",
+      "email": "Aaron77@gmail.com"
+    },
+    {
+      "id": "c4f1",
+      "name": "Bethany Jerde DVM",
+      "email": "Isabella.Quitzon71@gmail.com"
+    },
+    {
+      "id": "8233",
+      "name": "Spencer Corkery",
+      "email": "Earnest.Turcotte69@yahoo.com"
+    },
+    {
+      "id": "fea9",
+      "name": "Matthew Abernathy",
+      "email": "Ashly.Bechtelar@hotmail.com"
+    },
+    {
+      "id": "1988",
+      "name": "Ella Gutkowski",
+      "email": "Gerald_Bogan2@hotmail.com"
+    },
+    {
+      "id": "4237",
+      "name": "Albert Hudson",
+      "email": "Aliya_Ankunding78@hotmail.com"
+    },
+    {
+      "id": "d51e",
+      "name": "Clark Bechtelar",
+      "email": "Tierra_Pollich@yahoo.com"
+    },
+    {
+      "id": "652e",
+      "name": "Tracey Konopelski",
+      "email": "Michaela61@yahoo.com"
+    },
+    {
+      "id": "4dfa",
+      "name": "Melvin Bins",
+      "email": "Maria93@gmail.com"
+    },
+    {
+      "id": "a3f5",
+      "name": "Phillip Kuhlman",
+      "email": "Dewayne48@yahoo.com"
+    },
+    {
+      "id": "fd42",
+      "name": "Billy Murazik",
+      "email": "Alvera_Ryan@yahoo.com"
+    },
+    {
+      "id": "2024",
+      "name": "Chris Collins I",
+      "email": "Mabel_Ledner68@yahoo.com"
+    },
+    {
+      "id": "4394",
+      "name": "Ms. Susie Brakus V",
+      "email": "Weldon.Kuhic-Wintheiser@yahoo.com"
+    },
+    {
+      "id": "48ae",
+      "name": "Erica West",
+      "email": "Trace91@hotmail.com"
+    },
+    {
+      "id": "3aeb",
+      "name": "Jorge Jast I",
+      "email": "Clyde40@hotmail.com"
+    },
+    {
+      "id": "5b5e",
+      "name": "Homer Cremin",
+      "email": "Margarette.Kutch89@hotmail.com"
+    },
+    {
+      "id": "08a8",
+      "name": "Lucy Moore I",
+      "email": "Andy_Hammes-Parker@gmail.com"
     }
   ],
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "How to learn JavaScript?",
       "userId": "1"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "How to pro?",
       "userId": "1"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Learn to learn",
       "userId": "1"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "I'm good",
       "userId": "2"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "I'm bad",
       "userId": "2"
     },
-    { "id": 6, "title": "Boy", "userId": "2" }
+    {
+      "id": "6",
+      "title": "Boy",
+      "userId": "2"
+    },
+    {
+      "id": "fc3e",
+      "userId": "4018",
+      "title": "The Scarlet Letter"
+    },
+    {
+      "id": "e4be",
+      "userId": "4018",
+      "title": "Oscar and Lucinda"
+    },
+    {
+      "id": "65c1",
+      "userId": "4018",
+      "title": "In Cold Blood"
+    },
+    {
+      "id": "add4",
+      "userId": "4018",
+      "title": "The Golden Bowl"
+    },
+    {
+      "id": "9e09",
+      "userId": "652e",
+      "title": "A Confederacy of Dunces"
+    },
+    {
+      "id": "0390",
+      "userId": "652e",
+      "title": "The Pursuit of Love"
+    },
+    {
+      "id": "f244",
+      "userId": "652e",
+      "title": "Walden"
+    },
+    {
+      "id": "e44a",
+      "userId": "652e",
+      "title": "Frankenstein"
+    },
+    {
+      "id": "a2aa",
+      "userId": "1",
+      "title": "Heart of Darkness"
+    },
+    {
+      "id": "4f68",
+      "userId": "1",
+      "title": "The Pilgrim's Progress"
+    },
+    {
+      "id": "59e6",
+      "userId": "4018",
+      "title": "The Brief Wondrous Life of Oscar Wao"
+    },
+    {
+      "id": "9524",
+      "userId": "4018",
+      "title": "The Heart is a Lonely Hunter"
+    }
   ]
 }
