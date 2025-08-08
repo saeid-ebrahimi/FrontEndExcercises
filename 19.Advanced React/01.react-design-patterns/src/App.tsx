@@ -7,19 +7,20 @@ export function Left() {
     <h2 style={{ backgroundColor: "crimson" }}>I am left</h2>
   </>
 }
+export function Middle() {
+  return <h2 style={{ backgroundColor: "lightblue" }}>I am middle</h2>
+}
 export function Right() {
   return <>
     <h2 style={{ backgroundColor: "burlywood" }}>I am right</h2>
   </>
 }
+
 function App() {
 
   return (
     <>
-      <SplitScreen childrenWidths={[1, 3]} >
-        <Left />
-        <Right />
-      </SplitScreen>
+      <SplitScreen children={[<Left />, <Right />, <Middle />] as const} childrenWidths={[1, 3, 2,] as const} />
     </>
   )
 }

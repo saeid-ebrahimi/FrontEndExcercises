@@ -1,3 +1,4 @@
+
 import type { SplitScreenProps } from "./split-screen.types";
 import styled from "styled-components";
 
@@ -12,7 +13,7 @@ const Panel = styled.div<PanelProps>`
     flex:${(props) => props.flex};
 `
 
-export function SplitScreen({ children, childrenWidths }: SplitScreenProps) {
+export function SplitScreen<T extends readonly React.ReactNode[]>({ children, childrenWidths }: SplitScreenProps<T>) {
 
     return <Container>
         {children && children.map((item, index) =>

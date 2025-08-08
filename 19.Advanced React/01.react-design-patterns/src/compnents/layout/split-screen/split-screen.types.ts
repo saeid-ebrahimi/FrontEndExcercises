@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 
-export type SplitScreenProps = {
-  children: ReactNode[];
-  childrenWidths: number[];
+export type SplitScreenProps<
+  T extends readonly ReactNode[]
+> = {
+  children: T;
+  childrenWidths: { [K in keyof T]: number };
 };
