@@ -4,9 +4,10 @@ import { AccordionEventKey } from 'react-bootstrap/esm/AccordionContext';
 import AddPost from './AddPost';
 import { useGetUsersQuery } from '../redux/user/user.api';
 import { toast } from 'react-toastify';
+import UserPosts from './UserPosts';
 
 function Home() {
-  const { data: users, isError, isSuccess, isLoading, error, isFetching } = useGetUsersQuery();
+  const { data: users, isError: isGetUsersError, isSuccess: isGetUsersSuccess, isLoading: isGetUsersLoading, error: getUsersError, isFetching: isGetUsersFetching } = useGetUsersQuery();
 
   const [activeKey, setActiveKey] = useState<string | null>(null);
 
@@ -14,35 +15,37 @@ function Home() {
     setActiveKey(activeKey === eventKey ? null : (eventKey as string));
   };
 
-  console.log('check activeKey', activeKey);
   useEffect(() => {
-    if (isFetching)
-      toast.info("getting users data")
-    if (isError)
-      if ("data" in error)
-        toast.error(error.data as string)
-      else if ("message" in error)
-        toast.error(error.message as string)
-    if (isSuccess)
+    if (isGetUsersFetching)
+      toast.info("getting users data...")
+    if (isGetUsersError)
+      if ("data" in getUsersError)
+        toast.error(getUsersError.data as string)
+      else if ("message" in getUsersError)
+        toast.error(getUsersError.message as string)
+    if (isGetUsersSuccess)
       toast.success("getting users data is successful!")
-  }, [isError, isSuccess, isFetching])
+  }, [isGetUsersError, isGetUsersSuccess, isGetUsersFetching])
   return (
     <>
       {
-        isLoading ? <div style={{ color: "white" }}>Loading data ...</div> : isError ? <div style={{ color: "red" }}>error while getting data</div> : users && users?.length > 0 ? <Accordion activeKey={activeKey} onSelect={handleSelect} alwaysOpen>
-          {users.map(user => (<Accordion.Item key={user.id} eventKey={user.id}>
-            <Accordion.Header>{user.name}</Accordion.Header>
-            <Accordion.Body>
-              <AddPost />
-              <ul>
-                <li>Post title 1</li>
-                <li>Post title 2</li>
-                <li>Post title 3</li>
-              </ul>
-            </Accordion.Body>
-          </Accordion.Item>
-          ))}
-        </Accordion> : <div>User list is Empty</div>
+        isGetUsersLoading ? <div style={{ color: "white" }}>Loading data ...</div> : isGetUsersError ?
+          <div style={{ color: "red" }}>error while getting data</div> :
+          users && users?.length > 0 ?
+            <Accordion activeKey={activeKey} onSelect={handleSelect}>
+              {users.map(user => (<Accordion.Item key={user.id} eventKey={user.id}>
+                <Accordion.Header>{user.name}</Accordion.Header>
+                <Accordion.Body>
+                  {activeKey === user.id &&
+                    <>
+                      <AddPost userId={user.id} />
+                      <UserPosts userId={user.id} />
+                    </>}
+                </Accordion.Body>
+              </Accordion.Item>
+              ))}
+            </Accordion> :
+            <div>User list is Empty</div>
       }</>
   );
 }

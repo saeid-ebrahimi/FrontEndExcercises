@@ -8,6 +8,7 @@ function AddUser() {
   const [addUser, { data: userDataResult, isLoading, isError, isSuccess, error }] = useAddUserMutation();
 
   const handleAddUser = () => {
+    if (isLoading) return;
     const data = {
       name: faker.person.fullName(),
       email: faker.internet.email(),
@@ -35,8 +36,8 @@ function AddUser() {
   }, [isLoading, isError, isSuccess])
   return (
     <>
-      <Button variant='primary' style={{ marginBottom: '20px' }} onClick={handleAddUser}>
-        Add User
+      <Button variant='primary' style={{ marginBottom: '20px' }} disabled={isLoading} onClick={handleAddUser}>
+        {isLoading ? "Adding User..." : "Add User"}
       </Button>
     </>
   );

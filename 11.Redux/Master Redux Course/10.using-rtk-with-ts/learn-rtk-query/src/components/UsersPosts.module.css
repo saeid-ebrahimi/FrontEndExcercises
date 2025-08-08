@@ -1,0 +1,13 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+  justrify-content: start;
+  width: 100%;
+  gap: 1rem;
+  list-style: none;
+}
+
+.post {
+  width: 100%;
+  text-align: start;
+}
