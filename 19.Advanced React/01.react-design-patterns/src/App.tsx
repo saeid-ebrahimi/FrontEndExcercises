@@ -1,6 +1,10 @@
 
 import './App.css'
+import { LargeAuthorListItem, type TAuthor } from './components/authors/large-list-items/index.js';
+import { SmallAuthorListItem } from './components/authors/small-list-items';
 import { Container, Layout, SidebarLayout, SplitScreen } from './components/layout'
+import { RegularList } from './components/layout/lists/regular'
+import { authors } from "./data/authors.js";
 
 export function Left() {
   return <>
@@ -23,6 +27,8 @@ function App() {
       <Layout bgColor={"lightblue"}>
         <SidebarLayout sidebar={<div>Sidebar</div>}>
           <Container bgColor={"lightgreen"}>
+            <RegularList items={authors} sourceName={"author"} ItemComponent={SmallAuthorListItem} />
+            <RegularList items={authors} sourceName={"author"} ItemComponent={LargeAuthorListItem} />
             <SplitScreen children={[<Left />, <Right />, <Middle />] as const} childrenWidths={[1, 3, 2,] as const} />
           </Container>
         </SidebarLayout>
