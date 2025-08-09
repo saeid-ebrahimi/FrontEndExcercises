@@ -1,6 +1,6 @@
 
 import './App.css'
-import { SplitScreen } from './compnents/layout/split-screen'
+import { Container, Layout, SidebarLayout, SplitScreen } from './components/layout'
 
 export function Left() {
   return <>
@@ -20,7 +20,14 @@ function App() {
 
   return (
     <>
-      <SplitScreen children={[<Left />, <Right />, <Middle />] as const} childrenWidths={[1, 3, 2,] as const} />
+      <Layout bgColor={"lightblue"}>
+        <SidebarLayout sidebar={<div>Sidebar</div>}>
+          <Container bgColor={"lightgreen"}>
+            <SplitScreen children={[<Left />, <Right />, <Middle />] as const} childrenWidths={[1, 3, 2,] as const} />
+          </Container>
+        </SidebarLayout>
+      </Layout>
+
     </>
   )
 }
