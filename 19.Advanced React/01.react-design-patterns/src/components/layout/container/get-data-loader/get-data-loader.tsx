@@ -1,17 +1,16 @@
-import axios from "axios";
-import { Children, cloneElement, isValidElement, useEffect, useState, type ReactElement, } from "react";
+
+import { Children, cloneElement, isValidElement, useEffect, type ReactElement, } from "react";
 import type { IGetDataLoaderProps } from ".";
+import { useGetData } from "../../../../hooks/container/useGetData";
 
 export function GetDataLoader<T>({ children, getUrl }: IGetDataLoaderProps<T>) {
-    const [data, setData] = useState<T | null>(null)
+    const { data, isFetching, isError, isSuccess } = useGetData<T>(getUrl)
     useEffect(() => {
-        if (getUrl) {
-            (async () => {
-                const response = await axios.get(getUrl)
-                setData(response.data)
-            })()
+        if (isSuccess) {
+            console.log(data);
+
         }
-    }, [getUrl])
+    }, [isFetching, isError, isSuccess])
     return <>
         {Children.map(children, (child) => {
             if (isValidElement(child)) {
