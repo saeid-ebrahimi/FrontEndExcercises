@@ -6,7 +6,7 @@ import { LargeAuthorListItem, type TAuthor } from './components/authors/large-li
 import { SmallAuthorListItem } from './components/authors/small-list-item';
 import { LargeBookListItem } from './components/books/large-list-item';
 import { SmallBookListItem } from './components/books/small-list-item';
-import { Container, GetDataLoader, Layout, SidebarLayout, SplitScreen } from './components/layout'
+import { Container, DataSourceWithRender, GetDataLoader, Layout, SidebarLayout, SplitScreen } from './components/layout'
 import { NumberedList } from './components/layout/lists/numbered';
 import { RegularList } from './components/layout/lists/regular'
 import { Modal } from './components/layout/modal';
@@ -40,6 +40,9 @@ function App() {
                   <DataSource<TAuthor> resourceName={"users"} getData={async () => getData("/users/1")} >
                     <AuthorInfo />
                   </DataSource >
+                  <DataSourceWithRender<TAuthor>
+                    getData={async () => getData("users/3")}
+                    render={(resource) => <AuthorInfo data={resource} />} />
                 </>,
                 <>
                   {/* <RegularList items={books} sourceName={"book"} ItemComponent={SmallBookListItem} />
