@@ -12,6 +12,8 @@ import { RegularList } from './components/layout/lists/regular'
 import { Modal } from './components/layout/modal';
 import { authors } from "./data/authors";
 import { books } from './data/books';
+import { DataSource } from './components/layout/container/data-source';
+import { getData } from './apis/cmsApis';
 
 const queryClient = new QueryClient()
 function App() {
@@ -35,6 +37,9 @@ function App() {
                   <GetDataLoader<TAuthor> getUrl={`users/2`}>
                     <AuthorInfo />
                   </GetDataLoader>
+                  <DataSource<TAuthor> resourceName={"users"} getData={async () => getData("/users/1")} >
+                    <AuthorInfo />
+                  </DataSource >
                 </>,
                 <>
                   {/* <RegularList items={books} sourceName={"book"} ItemComponent={SmallBookListItem} />
@@ -46,7 +51,7 @@ function App() {
           </SidebarLayout>
 
         </Layout >
-      </QueryClientProvider>
+      </QueryClientProvider >
 
 
     </>
