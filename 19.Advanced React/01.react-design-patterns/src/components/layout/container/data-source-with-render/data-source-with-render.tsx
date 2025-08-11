@@ -6,7 +6,8 @@ export function DataSourceWithRender<T>({ getData, render }: IDataSourceWithRend
     useEffect(() => {
         (async () => {
             const data = await getData();
-            setResource(data)
+            if (data)
+                setResource(data)
         })()
     }, [getData])
     if (resource)

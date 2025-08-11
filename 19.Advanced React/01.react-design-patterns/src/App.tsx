@@ -15,9 +15,10 @@ import { books } from './data/books';
 import { DataSource } from './components/layout/container/data-source';
 import { getData } from './apis/cmsApis';
 
+const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
+
 const queryClient = new QueryClient()
 function App() {
-
   return (
     <>
       <QueryClientProvider client={queryClient}>
@@ -34,14 +35,32 @@ function App() {
                 <NumberedList items={authors} sourceName={"author"} ItemComponent={LargeAuthorListItem} /> */}
                 </>,
                 <>
-                  <GetDataLoader<TAuthor> getUrl={`users/2`}>
+                  {/* <GetDataLoader<TAuthor> getUrl={`users/2`}>
                     <AuthorInfo />
                   </GetDataLoader>
-                  <DataSource<TAuthor> resourceName={"users"} getData={async () => getData("/users/1")} >
+                  <DataSource<TAuthor> resourceName={"data"} getData={async () => getData("/users/1")} >
+                    <AuthorInfo />
+                  </DataSource > */}
+                  <DataSource<TAuthor> resourceName={"data"} getData={async () => {
+                    const data = getDataFromLocalStorage("author");
+                    console.log(data);
+
+                    if (typeof data === "string")
+                      return JSON.parse(data) as TAuthor;
+                  }} >
                     <AuthorInfo />
                   </DataSource >
                   <DataSourceWithRender<TAuthor>
                     getData={async () => getData("users/3")}
+                    render={(resource) => <AuthorInfo data={resource} />} />
+                  <DataSourceWithRender<TAuthor>
+                    getData={async () => {
+                      const data = getDataFromLocalStorage("author");
+                      console.log(data);
+
+                      if (typeof data === "string")
+                        return JSON.parse(data) as TAuthor;
+                    }}
                     render={(resource) => <AuthorInfo data={resource} />} />
                 </>,
                 <>
