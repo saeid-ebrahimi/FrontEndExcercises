@@ -14,6 +14,7 @@ import { authors } from "./data/authors";
 import { books } from './data/books';
 import { DataSource } from './components/layout/container/data-source';
 import { getData } from './apis/cmsApis';
+import { UncontrolledForm } from './components/uncontrolled-form/uncontrolled-form';
 
 const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
 
@@ -41,7 +42,7 @@ function App() {
                   <DataSource<TAuthor> resourceName={"data"} getData={async () => getData("/users/1")} >
                     <AuthorInfo />
                   </DataSource > */}
-                  <DataSource<TAuthor> resourceName={"data"} getData={async () => {
+                  {/* <DataSource<TAuthor> resourceName={"data"} getData={async () => {
                     const data = getDataFromLocalStorage("author");
                     console.log(data);
 
@@ -61,7 +62,8 @@ function App() {
                       if (typeof data === "string")
                         return JSON.parse(data) as TAuthor;
                     }}
-                    render={(resource) => <AuthorInfo data={resource} />} />
+                    render={(resource) => <AuthorInfo data={resource} />} /> */}
+                  <UncontrolledForm />
                 </>,
                 <>
                   {/* <RegularList items={books} sourceName={"book"} ItemComponent={SmallBookListItem} />
