@@ -17,8 +17,30 @@ import { getData } from './apis/cmsApis';
 import { UncontrolledForm } from './components/uncontrolled-form/uncontrolled-form';
 import { ControlledModal } from './components/layout/controlled-modal/controlled-modal';
 import { useState } from 'react';
+import { UncontrolledFlow } from './components/uncontrolled-flow/uncontrolled-flow';
+import type { TData } from './components/uncontrolled-flow';
 
 const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
+
+function FirstStep({ goNext }: { goNext?: (data: Partial<TData>) => void }) {
+  return <>
+    <h2>First step: Enter your name</h2>
+
+    {goNext && <button onClick={() => goNext({ name: "MyName" })}>Next</button>}
+  </>
+}
+function SecondStep({ goNext }: { goNext?: (data: Partial<TData>) => void }) {
+  return <>
+    <h2>Second step: Enter your age</h2>
+    {goNext && <button onClick={() => goNext({ age: 23 })}>Next</button >}
+  </>
+}
+function ThirdStep({ goNext }: { goNext?: (data: Partial<TData>) => void }) {
+  return <>
+    <h2>Third step: Enter your country</h2>
+    {goNext && <button onClick={() => goNext({ country: "UAE" })}>Next</button>}
+  </>
+}
 
 const queryClient = new QueryClient()
 function App() {
@@ -29,14 +51,21 @@ function App() {
         <Layout bgColor={"lightblue"}>
           <SidebarLayout sidebar={<div>Sidebar</div>}>
             <Container bgColor={"lightgreen"}>
-              <UncontrolledModal triggerContent={"show Modal"}>
+              {/* <UncontrolledModal triggerContent={"show Modal"}>
                 <LargeBookListItem book={books[0]} />
               </UncontrolledModal>
               <ControlledModal shouldDisplay={shouldDisplay} onClose={() => setShouldDisplay(false)} >
                 <h1>Here is the heading of the controlled modal</h1>
               </ControlledModal>
-              <button onClick={() => { setShouldDisplay(prev => !prev) }}>{shouldDisplay ? "Hide Modal" : "Display Modal"}</button>
-
+              <button onClick={() => { setShouldDisplay(prev => !prev) }}>{shouldDisplay ? "Hide Modal" : "Display Modal"}</button> */}
+              <UncontrolledFlow onDone={(data) => {
+                console.log(data);
+                alert("Yesss, you made it to the final step")
+              }} >
+                <FirstStep />
+                <SecondStep />
+                <ThirdStep />
+              </UncontrolledFlow>
               <SplitScreen children={[
                 <>
                   {/* <RegularList items={authors} sourceName={"author"} ItemComponent={SmallAuthorListItem} />
