@@ -9,26 +9,33 @@ import { SmallBookListItem } from './components/books/small-list-item';
 import { Container, DataSourceWithRender, GetDataLoader, Layout, SidebarLayout, SplitScreen } from './components/layout'
 import { NumberedList } from './components/layout/lists/numbered';
 import { RegularList } from './components/layout/lists/regular'
-import { Modal } from './components/layout/modal';
+import { UncontrolledModal } from './components/layout/uncontrolled-modal';
 import { authors } from "./data/authors";
 import { books } from './data/books';
 import { DataSource } from './components/layout/container/data-source';
 import { getData } from './apis/cmsApis';
 import { UncontrolledForm } from './components/uncontrolled-form/uncontrolled-form';
+import { ControlledModal } from './components/layout/controlled-modal/controlled-modal';
+import { useState } from 'react';
 
 const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
 
 const queryClient = new QueryClient()
 function App() {
+  const [shouldDisplay, setShouldDisplay] = useState(false)
   return (
     <>
       <QueryClientProvider client={queryClient}>
         <Layout bgColor={"lightblue"}>
           <SidebarLayout sidebar={<div>Sidebar</div>}>
             <Container bgColor={"lightgreen"}>
-              <Modal triggerContent={"show Modal"}>
+              <UncontrolledModal triggerContent={"show Modal"}>
                 <LargeBookListItem book={books[0]} />
-              </Modal>
+              </UncontrolledModal>
+              <ControlledModal shouldDisplay={shouldDisplay} onClose={() => setShouldDisplay(false)} >
+                <h1>Here is the heading of the controlled modal</h1>
+              </ControlledModal>
+              <button onClick={() => { setShouldDisplay(prev => !prev) }}>{shouldDisplay ? "Hide Modal" : "Display Modal"}</button>
 
               <SplitScreen children={[
                 <>
@@ -63,7 +70,7 @@ function App() {
                         return JSON.parse(data) as TAuthor;
                     }}
                     render={(resource) => <AuthorInfo data={resource} />} /> */}
-                  <UncontrolledForm />
+                  {/* <UncontrolledForm /> */}
                 </>,
                 <>
                   {/* <RegularList items={books} sourceName={"book"} ItemComponent={SmallBookListItem} />

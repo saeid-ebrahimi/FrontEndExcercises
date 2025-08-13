@@ -1,6 +1,6 @@
-import { useState } from "react";
-import type { TModalProps } from ".";
+
 import styled from "styled-components";
+import type { IControlledModalProps } from "./controlled-modal.types";
 
 const ModalBackground = styled.div`
     position:fixed;
@@ -20,14 +20,12 @@ const ModalContent = styled.div`
     width:50%;
 `
 
-export function Modal({ children, triggerContent }: TModalProps) {
-    const [show, setShow] = useState(false)
+export function ControlledModal({ shouldDisplay, onClose, children }: IControlledModalProps) {
     return <>
-        <button onClick={() => { setShow(true) }}>{triggerContent}</button>
-        {show && <ModalBackground onClick={() => { setShow(false) }} >
+        {shouldDisplay && <ModalBackground onClick={onClose} >
             <ModalContent onClick={(evt) => evt.stopPropagation()}>
                 {children}
-                <button onClick={() => { setShow(false) }}>Close</button>
+                <button onClick={onClose}>Close</button>
             </ModalContent>
         </ModalBackground>}
     </>

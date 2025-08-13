@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export type TModalProps = {
+export type TUncontrolledModalProps = {
   children: ReactNode;
   triggerContent: ReactNode;
 };
