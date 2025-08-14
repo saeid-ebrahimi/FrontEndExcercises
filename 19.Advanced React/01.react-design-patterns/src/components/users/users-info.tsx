@@ -1,7 +1,9 @@
-import { useGetCurrentUser } from "../../hooks/user/useGetCurrentUser"
+// import { useGetCurrentUser } from "../../hooks/user/useGetCurrentUser";
+import { useGetUser } from "../../hooks/user/useGetUser"
 
-export function UserInfo() {
-    const user = useGetCurrentUser();
+export function UserInfo({ userId }: { userId: number }) {
+    // const user = useGetCurrentUser();
+    const user = useGetUser(userId)
     const { name, age, country, books } = user || {}
     return <>
         {user ?

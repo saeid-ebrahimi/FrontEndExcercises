@@ -76,7 +76,7 @@ function App() {
         <Layout bgColor={"lightblue"}>
           <SidebarLayout sidebar={<div>Sidebar</div>}>
             <Container bgColor={"lightgreen"}>
-              <UserInfo />
+              <UserInfo userId={2} />
               {/* <AuthorInfoForm name={''} age={0} country={''} books={[]} /> */}
               {/* <AuthorInfoWithLog test={"test"} /> */}
               {/* <UncontrolledModal triggerContent={"show Modal"}>
