@@ -28,11 +28,8 @@ export function withUpdateUserInfo<P>(Component: ComponentType<P>, url: string) 
             if (user) {
                 const result = await postData<TAuthor>(url, user)
                 setInitialUser(result);
-
-
                 setUser(result)
             }
-
         }
 
         const onResetData = () => {

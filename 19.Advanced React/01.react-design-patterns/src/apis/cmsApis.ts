@@ -1,4 +1,3 @@
-import type { TAuthor } from "./../components/authors/large-list-item/large-list-item.types";
 import axiosInstance from "./axiosInstance";
 
 export async function getData<T>(
@@ -12,11 +11,11 @@ export async function getData<T>(
 
 export async function postData<T>(
   postUrl: string,
-  user: TAuthor
+  data: T
 ): Promise<T> {
   const response = await axiosInstance.post<T>(
     postUrl,
-    { user }
+    { data }
   );
   return response.data;
 }

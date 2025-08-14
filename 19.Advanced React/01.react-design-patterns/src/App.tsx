@@ -68,15 +68,16 @@ function App() {
   //   setCurrentFlowIndex(prev => prev + 1)
   // }
   // const AuthorInfoWithLog = withLogger(AuthorInfo);
-  const AuthorInfoWithUserData = withUser(AuthorInfo, `users/3`)
+  // const AuthorInfoWithUserData = withUser(AuthorInfo, `users/3`)
   return (
     <>
       <QueryClientProvider client={queryClient}>
         <Layout bgColor={"lightblue"}>
           <SidebarLayout sidebar={<div>Sidebar</div>}>
             <Container bgColor={"lightgreen"}>
+
+              {/* <AuthorInfoForm name={''} age={0} country={''} books={[]} /> */}
               {/* <AuthorInfoWithLog test={"test"} /> */}
-              <AuthorInfoForm name={''} age={0} country={''} books={[]} />
               {/* <UncontrolledModal triggerContent={"show Modal"}>
                 <LargeBookListItem book={books[0]} />
               </UncontrolledModal>
