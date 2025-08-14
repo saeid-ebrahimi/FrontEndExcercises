@@ -9,6 +9,10 @@ export default defineConfig({
         target: "http://localhost:9090",
         changeOrigin: true,
       },
+      "/current-user": {
+        target: "http://localhost:9090",
+        changeOrigin: true,
+      },
       "/books": {
         target: "http://localhost:9090",
         changeOrigin: true,

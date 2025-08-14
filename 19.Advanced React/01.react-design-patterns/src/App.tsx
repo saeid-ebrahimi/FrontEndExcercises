@@ -25,6 +25,7 @@ import { AuthorInfo } from './components/authors/author-info/author-info';
 import { withUser } from './hocs/with-user-info/with-user-info';
 import { AuthorInfoForm } from './components/authors/author-form/author-form';
 import type { TAuthor } from './components/authors/large-list-item';
+import { UserInfo } from './components/users/users-info';
 
 // const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
 
@@ -75,7 +76,7 @@ function App() {
         <Layout bgColor={"lightblue"}>
           <SidebarLayout sidebar={<div>Sidebar</div>}>
             <Container bgColor={"lightgreen"}>
-
+              <UserInfo />
               {/* <AuthorInfoForm name={''} age={0} country={''} books={[]} /> */}
               {/* <AuthorInfoWithLog test={"test"} /> */}
               {/* <UncontrolledModal triggerContent={"show Modal"}>
