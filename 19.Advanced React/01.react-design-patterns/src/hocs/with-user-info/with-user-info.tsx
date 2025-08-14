@@ -15,7 +15,7 @@ export function withUser<P>(Component: ComponentType<P>, url: string) {
         }, [])
 
         return <>
-            {user ? <Component {...props} data={user} /> : <h2>Loading data...</h2>}
+            {loading ? <Component {...props} data={user} /> : <h2>Loading data...</h2>}
         </>
     }
     WrappedComponent.displayName = `withUserInfo`;
