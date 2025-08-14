@@ -19,6 +19,7 @@ import { ControlledModal } from './components/layout/controlled-modal/controlled
 import { useState } from 'react';
 import { UncontrolledFlow } from './components/uncontrolled-flow/uncontrolled-flow';
 import type { TData } from './components/uncontrolled-flow';
+import { ControlledFlow } from './components/controlled-flow';
 
 const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
 
@@ -44,7 +45,23 @@ function ThirdStep({ goNext }: { goNext?: (data: Partial<TData>) => void }) {
 
 const queryClient = new QueryClient()
 function App() {
-  const [shouldDisplay, setShouldDisplay] = useState(false)
+  const [shouldDisplay, setShouldDisplay] = useState(false);
+  const [currentFlowIndex, setCurrentFlowIndex] = useState(0);
+  const [data, setData] = useState<TData>({
+    name: "",
+    age: 0,
+    country: ""
+  });
+
+  const onNext = (dataFromStep: Partial<TData>) => {
+    const updatedData = {
+      ...data,
+      ...dataFromStep
+    }
+    console.log(updatedData);
+    setData(updatedData)
+    setCurrentFlowIndex(prev => prev + 1)
+  }
   return (
     <>
       <QueryClientProvider client={queryClient}>
@@ -58,14 +75,22 @@ function App() {
                 <h1>Here is the heading of the controlled modal</h1>
               </ControlledModal>
               <button onClick={() => { setShouldDisplay(prev => !prev) }}>{shouldDisplay ? "Hide Modal" : "Display Modal"}</button> */}
-              <UncontrolledFlow onDone={(data) => {
+              {/* <UncontrolledFlow onDone={(data) => {
                 console.log(data);
                 alert("Yesss, you made it to the final step")
               }} >
                 <FirstStep />
                 <SecondStep />
                 <ThirdStep />
-              </UncontrolledFlow>
+              </UncontrolledFlow> */}
+              <ControlledFlow onNext={onNext} onDone={(data) => {
+                console.log(data);
+                alert("Yesss, you made it to the final step");
+              }} currentIndex={currentFlowIndex}>
+                <FirstStep />
+                <SecondStep />
+                <ThirdStep />
+              </ControlledFlow>
               <SplitScreen children={[
                 <>
                   {/* <RegularList items={authors} sourceName={"author"} ItemComponent={SmallAuthorListItem} />
