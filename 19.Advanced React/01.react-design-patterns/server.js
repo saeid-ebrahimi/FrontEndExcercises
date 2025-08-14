@@ -74,9 +74,7 @@ app.get("/users/:id", (req, res) => {
 app.post("/users/:id", (req, res) => {
   const { id } = req.params;
   const { user: editedUser } = req.body;
-
-  users = users.map((user) => (user.id === id ? editedUser : user));
-
+  users = users.map((user) => (user.id === id ? { id, ...editedUser } : user));
   const updatedUser = users.find((user) => user.id === id);
   if (!updatedUser) return res.status(404).json({ error: "User not found" });
   res.json(updatedUser);

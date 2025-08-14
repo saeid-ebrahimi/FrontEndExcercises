@@ -19,10 +19,12 @@ import { Container, DataSourceWithRender, GetDataLoader, Layout, SidebarLayout, 
 // import { ControlledModal } from './components/layout/controlled-modal/controlled-modal';
 // import { UncontrolledFlow } from './components/uncontrolled-flow/uncontrolled-flow';
 // import { ControlledFlow } from './components/controlled-flow';
-import type { TData } from './components/uncontrolled-flow';
-import { withLogger } from './hocs/with-logger/with-logger';
+// import type { TData } from './components/uncontrolled-flow';
+// import { withLogger } from './hocs/with-logger/with-logger';
 import { AuthorInfo } from './components/authors/author-info/author-info';
 import { withUser } from './hocs/with-user-info/with-user-info';
+import { AuthorInfoForm } from './components/authors/author-form/author-form';
+import type { TAuthor } from './components/authors/large-list-item';
 
 // const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
 
@@ -73,8 +75,8 @@ function App() {
         <Layout bgColor={"lightblue"}>
           <SidebarLayout sidebar={<div>Sidebar</div>}>
             <Container bgColor={"lightgreen"}>
-              <AuthorInfoWithUserData />
               {/* <AuthorInfoWithLog test={"test"} /> */}
+              <AuthorInfoForm name={''} age={0} country={''} books={[]} />
               {/* <UncontrolledModal triggerContent={"show Modal"}>
                 <LargeBookListItem book={books[0]} />
               </UncontrolledModal>
