@@ -1,73 +1,77 @@
 
+import { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './App.css'
-import { AuthorInfo } from './components/authors/author-info/author-info';
-import { LargeAuthorListItem, type TAuthor } from './components/authors/large-list-item';
-import { SmallAuthorListItem } from './components/authors/small-list-item';
-import { LargeBookListItem } from './components/books/large-list-item';
-import { SmallBookListItem } from './components/books/small-list-item';
+// import { AuthorInfo } from './components/authors/author-info/author-info';
+// import { LargeAuthorListItem, type TAuthor } from './components/authors/large-list-item';
+// import { SmallAuthorListItem } from './components/authors/small-list-item';
+// import { LargeBookListItem } from './components/books/large-list-item';
+// import { SmallBookListItem } from './components/books/small-list-item';
 import { Container, DataSourceWithRender, GetDataLoader, Layout, SidebarLayout, SplitScreen } from './components/layout'
-import { NumberedList } from './components/layout/lists/numbered';
-import { RegularList } from './components/layout/lists/regular'
-import { UncontrolledModal } from './components/layout/uncontrolled-modal';
-import { authors } from "./data/authors";
-import { books } from './data/books';
-import { DataSource } from './components/layout/container/data-source';
-import { getData } from './apis/cmsApis';
-import { UncontrolledForm } from './components/uncontrolled-form/uncontrolled-form';
-import { ControlledModal } from './components/layout/controlled-modal/controlled-modal';
-import { useState } from 'react';
-import { UncontrolledFlow } from './components/uncontrolled-flow/uncontrolled-flow';
+// import { NumberedList } from './components/layout/lists/numbered';
+// import { RegularList } from './components/layout/lists/regular'
+// import { UncontrolledModal } from './components/layout/uncontrolled-modal';
+// import { authors } from "./data/authors";
+// import { books } from './data/books';
+// import { DataSource } from './components/layout/container/data-source';
+// import { getData } from './apis/cmsApis';
+// import { UncontrolledForm } from './components/uncontrolled-form/uncontrolled-form';
+// import { ControlledModal } from './components/layout/controlled-modal/controlled-modal';
+// import { UncontrolledFlow } from './components/uncontrolled-flow/uncontrolled-flow';
+// import { ControlledFlow } from './components/controlled-flow';
 import type { TData } from './components/uncontrolled-flow';
-import { ControlledFlow } from './components/controlled-flow';
+import { withLogger } from './hocs/with-logger/with-logger';
+import { AuthorInfo } from './components/authors/author-info/author-info';
 
-const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
+// const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
 
-function FirstStep({ goNext }: { goNext?: (data: Partial<TData>) => void }) {
-  return <>
-    <h2>First step: Enter your name</h2>
+// function FirstStep({ goNext }: { goNext?: (data: Partial<TData>) => void }) {
+//   return <>
+//     <h2>First step: Enter your name</h2>
 
-    {goNext && <button onClick={() => goNext({ name: "MyName" })}>Next</button>}
-  </>
-}
-function SecondStep({ goNext }: { goNext?: (data: Partial<TData>) => void }) {
-  return <>
-    <h2>Second step: Enter your age</h2>
-    {goNext && <button onClick={() => goNext({ age: 23 })}>Next</button >}
-  </>
-}
-function ThirdStep({ goNext }: { goNext?: (data: Partial<TData>) => void }) {
-  return <>
-    <h2>Third step: Enter your country</h2>
-    {goNext && <button onClick={() => goNext({ country: "UAE" })}>Next</button>}
-  </>
-}
+//     {goNext && <button onClick={() => goNext({ name: "MyName" })}>Next</button>}
+//   </>
+// }
+// function SecondStep({ goNext }: { goNext?: (data: Partial<TData>) => void }) {
+//   return <>
+//     <h2>Second step: Enter your age</h2>
+//     {goNext && <button onClick={() => goNext({ age: 23 })}>Next</button >}
+//   </>
+// }
+// function ThirdStep({ goNext }: { goNext?: (data: Partial<TData>) => void }) {
+//   return <>
+//     <h2>Third step: Enter your country</h2>
+//     {goNext && <button onClick={() => goNext({ country: "UAE" })}>Next</button>}
+//   </>
+// }
 
 const queryClient = new QueryClient()
 function App() {
-  const [shouldDisplay, setShouldDisplay] = useState(false);
-  const [currentFlowIndex, setCurrentFlowIndex] = useState(0);
-  const [data, setData] = useState<TData>({
-    name: "",
-    age: 0,
-    country: ""
-  });
+  // const [shouldDisplay, setShouldDisplay] = useState(false);
+  // const [currentFlowIndex, setCurrentFlowIndex] = useState(0);
+  // const [data, setData] = useState<TData>({
+  //   name: "",
+  //   age: 0,
+  //   country: ""
+  // });
 
-  const onNext = (dataFromStep: Partial<TData>) => {
-    const updatedData = {
-      ...data,
-      ...dataFromStep
-    }
-    console.log(updatedData);
-    setData(updatedData)
-    setCurrentFlowIndex(prev => prev + 1)
-  }
+  // const onNext = (dataFromStep: Partial<TData>) => {
+  //   const updatedData = {
+  //     ...data,
+  //     ...dataFromStep
+  //   }
+  //   console.log(updatedData);
+  //   setData(updatedData)
+  //   setCurrentFlowIndex(prev => prev + 1)
+  // }
+  const AuthorInfoWithLog = withLogger(AuthorInfo)
   return (
     <>
       <QueryClientProvider client={queryClient}>
         <Layout bgColor={"lightblue"}>
           <SidebarLayout sidebar={<div>Sidebar</div>}>
             <Container bgColor={"lightgreen"}>
+              <AuthorInfoWithLog test={"test"} />
               {/* <UncontrolledModal triggerContent={"show Modal"}>
                 <LargeBookListItem book={books[0]} />
               </UncontrolledModal>
@@ -83,14 +87,15 @@ function App() {
                 <SecondStep />
                 <ThirdStep />
               </UncontrolledFlow> */}
-              <ControlledFlow onNext={onNext} onDone={(data) => {
+              {/* <ControlledFlow onNext={onNext} onDone={(data) => {
                 console.log(data);
                 alert("Yesss, you made it to the final step");
               }} currentIndex={currentFlowIndex}>
                 <FirstStep />
                 <SecondStep />
                 <ThirdStep />
-              </ControlledFlow>
+              </ControlledFlow> */}
+
               <SplitScreen children={[
                 <>
                   {/* <RegularList items={authors} sourceName={"author"} ItemComponent={SmallAuthorListItem} />
