@@ -22,6 +22,7 @@ import { Container, DataSourceWithRender, GetDataLoader, Layout, SidebarLayout, 
 import type { TData } from './components/uncontrolled-flow';
 import { withLogger } from './hocs/with-logger/with-logger';
 import { AuthorInfo } from './components/authors/author-info/author-info';
+import { withUser } from './hocs/with-user-info/with-user-info';
 
 // const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
 
@@ -64,14 +65,16 @@ function App() {
   //   setData(updatedData)
   //   setCurrentFlowIndex(prev => prev + 1)
   // }
-  const AuthorInfoWithLog = withLogger(AuthorInfo)
+  // const AuthorInfoWithLog = withLogger(AuthorInfo);
+  const AuthorInfoWithUserData = withUser(AuthorInfo, `users/3`)
   return (
     <>
       <QueryClientProvider client={queryClient}>
         <Layout bgColor={"lightblue"}>
           <SidebarLayout sidebar={<div>Sidebar</div>}>
             <Container bgColor={"lightgreen"}>
-              <AuthorInfoWithLog test={"test"} />
+              <AuthorInfoWithUserData />
+              {/* <AuthorInfoWithLog test={"test"} /> */}
               {/* <UncontrolledModal triggerContent={"show Modal"}>
                 <LargeBookListItem book={books[0]} />
               </UncontrolledModal>
