@@ -26,6 +26,7 @@ import { withUser } from './hocs/with-user-info/with-user-info';
 import { AuthorInfoForm } from './components/authors/author-form/author-form';
 import type { TAuthor } from './components/authors/large-list-item';
 import { UserInfo } from './components/users/users-info';
+import { Recursive } from './components/recursive';
 
 // const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
 
@@ -48,6 +49,18 @@ import { UserInfo } from './components/users/users-info';
 //     {goNext && <button onClick={() => goNext({ country: "UAE" })}>Next</button>}
 //   </>
 // }
+
+const myNestedObject = {
+  key1: "value1",
+  key2: {
+    innerKey1: "innerValue 1",
+    innerKey2: {
+      innerInnerKey1: "innerInnerValue1",
+      innerInnerKey2: "innerInnerValue2"
+    },
+  },
+  key3: "value3"
+}
 
 const queryClient = new QueryClient()
 function App() {
@@ -76,7 +89,8 @@ function App() {
         <Layout bgColor={"lightblue"}>
           <SidebarLayout sidebar={<div>Sidebar</div>}>
             <Container bgColor={"lightgreen"}>
-              <UserInfo userId={2} />
+              <UserInfo userId={3} />
+              <Recursive data={myNestedObject} />
               {/* <AuthorInfoForm name={''} age={0} country={''} books={[]} /> */}
               {/* <AuthorInfoWithLog test={"test"} /> */}
               {/* <UncontrolledModal triggerContent={"show Modal"}>

@@ -1,9 +1,26 @@
 // import { useGetCurrentUser } from "../../hooks/user/useGetCurrentUser";
+import { useCallback } from "react"
+import { getData } from "../../apis/cmsApis"
+import { useDataSource } from "../../hooks/resource/useDataSource"
+import { useGetResource } from "../../hooks/resource/useGetResource"
+import type { TUser } from "../../hooks/user/useGetCurrentUser.types"
 import { useGetUser } from "../../hooks/user/useGetUser"
 
 export function UserInfo({ userId }: { userId: number }) {
     // const user = useGetCurrentUser();
-    const user = useGetUser(userId)
+    // const user = useGetUser(userId)
+    // const user = useGetResource<TUser>(`/users/${userId}`)
+
+    // const getDataFromServer = (url: string) => useCallback(() => getData<TUser>(url), [url])
+    // const user = useDataSource<TUser>(getDataFromServer(`user/${userId}`))
+    const getDataFromLocalStorage = (key: string) => useCallback(async () => {
+        const data = localStorage.getItem(key)
+        return data ? JSON.parse(data) : {}
+    }
+        , [key])
+
+    const user = useDataSource<TUser>(getDataFromLocalStorage("user"))
+
     const { name, age, country, books } = user || {}
     return <>
         {user ?
