@@ -27,6 +27,8 @@ import { AuthorInfoForm } from './components/authors/author-form/author-form';
 import type { TAuthor } from './components/authors/large-list-item';
 import { UserInfo } from './components/users/users-info';
 import { Recursive } from './components/recursive';
+import { Card } from './components/compound/card';
+
 
 // const getDataFromLocalStorage = (key: string) => localStorage.getItem(key)
 
@@ -89,8 +91,21 @@ function App() {
         <Layout bgColor={"lightblue"}>
           <SidebarLayout sidebar={<div>Sidebar</div>}>
             <Container bgColor={"lightgreen"}>
-              <UserInfo userId={3} />
-              <Recursive data={myNestedObject} />
+              <Card>
+                <Card.Header><h1 style={{ margin: "0" }}>An Intro to Games</h1></Card.Header>
+                <Card.Body>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ad eum reiciendis tenetur impedit culpa. Omnis quo voluptates,
+                  quod, perspiciatis eos hic iste maxime et qui ut praesentium illo,
+                  dignissimos doloremque!
+                </Card.Body>
+                <Card.Footer>
+                  <button>view more</button>
+                  <button>find related...</button>
+                </Card.Footer>
+              </Card>
+              {/* <UserInfo userId={3} />
+              <Recursive data={myNestedObject} /> */}
               {/* <AuthorInfoForm name={''} age={0} country={''} books={[]} /> */}
               {/* <AuthorInfoWithLog test={"test"} /> */}
               {/* <UncontrolledModal triggerContent={"show Modal"}>
