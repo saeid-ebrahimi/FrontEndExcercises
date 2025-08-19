@@ -1,5 +1,5 @@
 
-import type { ButtonProps } from "."
+import type { ButtonProps } from "./composition.types"
 
 export function Button({ size, color, children, ...props }: ButtonProps) {
     return (<button style={{ fontSize: size === "small" ? "10px" : "24px", backgroundColor: color }} {...props}>{children}</button>)
