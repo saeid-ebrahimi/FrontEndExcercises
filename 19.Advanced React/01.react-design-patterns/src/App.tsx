@@ -65,6 +65,7 @@ const myNestedObject = {
 }
 
 const queryClient = new QueryClient()
+
 function App() {
   // const [shouldDisplay, setShouldDisplay] = useState(false);
   // const [currentFlowIndex, setCurrentFlowIndex] = useState(0);
