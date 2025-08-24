@@ -1,9 +1,6 @@
-
-
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { SubscribeForm } from './components/1-layers-pattern/start';
 import './App.css'
-import { Button } from './components/button';
-import { Modal } from './components/modal';
 
 const queryClient = new QueryClient()
 
@@ -12,9 +9,7 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <h1>Lets Build Some Components</h1>
-        <Button className={"large warning"}>Click Here</Button>
-        <Modal />
+        <SubscribeForm />
       </QueryClientProvider >
 
 
