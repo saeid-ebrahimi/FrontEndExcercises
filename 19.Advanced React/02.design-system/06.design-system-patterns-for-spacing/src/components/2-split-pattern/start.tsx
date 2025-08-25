@@ -4,8 +4,8 @@ import Form from "./form";
 import { fractionSchema } from "../common/fraction";
 
 interface ISplitProps {
-    gutter?: keyof typeof spaceSchema
-    fraction?: keyof typeof fractionSchema
+    gutter?: keyof typeof spaceSchema;
+    fraction?: keyof typeof fractionSchema;
 }
 
 export const Split = styled.div<ISplitProps>`
