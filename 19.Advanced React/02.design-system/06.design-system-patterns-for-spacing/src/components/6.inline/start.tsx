@@ -1,10 +1,34 @@
-import { InlineBundle } from "../5.inline-bundle/start";
+import { styled, css } from "styled-components";
+import { InlineBundle, type InlineBundleProps } from "../5.inline-bundle/start";
 import { Button, Logo, MenuWrapper } from "./components";
+import { stretchSchema } from "../common/stretch";
+export interface IInlineProps extends InlineBundleProps {
+    stretch?: number | keyof typeof stretchSchema;
+    switchAt?: number | string;
+}
+const responsive = css`
+    --switchAt: ${({ switchAt }) => typeof switchAt === "string" ? switchAt : `${switchAt}px`};
+    flex-wrap: wrap;
+    & > * {
+        min-width: fit-content;
+        flex-basis: calc((var(--switchAt) - (100% - var(--gutter)))* 999);
+    }
+`
+export const Inline = styled(InlineBundle) <IInlineProps>`
+    flex-wrap:nowrap;
+    ${(props) => {
+        if (typeof props.stretch === "number") {
+            return `> :nth-child(${props.stretch}) {flex: 1}`
+        }
+        return props.stretch ? stretchSchema[props.stretch] : ""
+    }}
+    ${(props) => props.switchAt && responsive};
+`
 
 export function Menu() {
     return (
         <MenuWrapper>
-            <div>
+            <Inline stretch={3} align={"center"} switchAt={620}>
                 <div>
                     <Logo />
                 </div>
@@ -15,11 +39,11 @@ export function Menu() {
                     <span>About US</span>
                     <span>Sign In</span>
                 </InlineBundle>
-                <div>
+                <Inline justify={"end"} align={"center"}>
                     <span>Login</span>
                     <Button>Register</Button>
-                </div>
-            </div>
+                </Inline>
+            </Inline>
         </MenuWrapper>
     )
 }
