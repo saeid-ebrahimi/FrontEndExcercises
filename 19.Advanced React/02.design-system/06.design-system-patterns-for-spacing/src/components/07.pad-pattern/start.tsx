@@ -2,7 +2,7 @@ import { Layers } from "../1-layers-pattern/start"
 import { styled } from "styled-components";
 import { Grid } from "../4.grid-pattern/start"
 import { InlineBundle } from "../5.inline-bundle/start"
-import { Bottom, Button, Card, Description, Name, Price, Top } from "./component"
+import { Bottom, Card, Description, Name, Price, Top } from "./component"
 import { spaceSchema } from "../common/spaces";
 
 export interface IPadProps {
@@ -15,16 +15,24 @@ export const Pad = styled.div<IPadProps>`
     }};
 `;
 
+export const Button = styled(Pad).attrs(() => ({
+    as: "button",
+    padding: ["sm", "lg"],
+}))`
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 4px;
+`
 const GiftCard = () => {
     return (<Card>
-
         <Top>
             <Pad padding={["xl"]}>
                 <Name>Git Card</Name>
                 <Description>This is one of our gift cards</Description>
                 <Price>$25.99</Price>
                 <InlineBundle gutter={"none"} justify={"center"}>
-                    <Pad as={Button} padding={["sm", "lg"]}>Buy</Pad>
+                    <Button>Buy</Button>
                 </InlineBundle>
             </Pad>
         </Top>
