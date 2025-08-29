@@ -21,7 +21,7 @@ export const Inline = styled(InlineBundle) <IInlineProps>`
             return `> :nth-child(${props.stretch}) {flex: 1}`
         }
         return props.stretch ? stretchSchema[props.stretch] : ""
-    }}
+    }}  
     ${(props) => props.switchAt && responsive};
 `
 
