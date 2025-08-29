@@ -1,0 +1,36 @@
+# What is Web Accessibility?
+
+as defined in dictionary.com
+"accessibility(noun): The quality of being able to be reached or entered"
+
+![information access-ability]()
+
+## Accessibility in WWW context
+
+Web accessibility refers to making websites and applications accessible to __people __with __disabilities
+
+It is about __removing barries to access,__ so that websites and applications can be accessed and used by people with disablities.
+
+### Example of barries to access in the phisical world
+
+- Stairs and curbs without ramps(which deny access to people using wheelchairs)
+- Narrow sidewalks, doorways, or aisles
+- Small toilets and washing facilities without grab bars
+- Inaccessible furniture, such as high shelves and tables without leg space
+- Lack of automatic or push-button doors
+- Low lighting(which makes it hard for people who are deaf to comunicate visually)
+- Weak color contrast
+
+### Example of digital barriers to access:
+
+- Absence of keyboard focus indicators,
+- Absence of labels on form controls,
+- buttons, links, and other UI widgets that can't be operated with a keyboard,
+- images without alternative text (alt-text)
+- videos without captions, transcripts, or audio descriptions,
+- low color contrast and small fonts,
+- certain types of animations that can't be paused or stopped.
+
+## What is a11y?
+
+a11y is a numeronym(a word that uses numbers to shorten words) of "accessibility"
