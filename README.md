@@ -110,4 +110,41 @@ Clean code principles:
 SOLID principles and design patterns:
 - Learning SOLID principles  
 - Implementing design patterns  
-- Applying patterns in TypeScript  
+- Applying patterns in TypeScript
+
+### 17. PWA
+Progressive Web App exercises:
+- Creating offline-capable apps
+- Adding service workers
+- Enhancing performance and reliability
+
+### 18. Testing Apps
+Testing frontend applications:
+- Writing unit and integration tests
+- Using testing libraries
+- Ensuring app stability and reliability
+
+### 19. Advanced React
+Advanced React concepts:
+- Compound component patterns
+- Performance optimization
+- Advanced state management
+
+### 20. Web Accessibility
+Improving accessibility in web applications:
+- Following accessibility best practices
+- Using ARIA roles and labels
+- Testing accessibility compliance
+
+### .idea
+Configuration files for JetBrains IDEs:
+- Project-specific settings
+- Code style configurations
+- IDE preferences
+
+### .vscode
+Configuration files for Visual Studio Code:
+- Workspace settings
+- Extensions recommendations
+- Debug configurations
+
