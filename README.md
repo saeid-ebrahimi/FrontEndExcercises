@@ -136,15 +136,3 @@ Improving accessibility in web applications:
 - Using ARIA roles and labels
 - Testing accessibility compliance
 
-### .idea
-Configuration files for JetBrains IDEs:
-- Project-specific settings
-- Code style configurations
-- IDE preferences
-
-### .vscode
-Configuration files for Visual Studio Code:
-- Workspace settings
-- Extensions recommendations
-- Debug configurations
-
