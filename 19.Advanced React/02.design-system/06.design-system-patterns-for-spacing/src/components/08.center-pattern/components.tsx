@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "../../images/profile-img.jpg";
+import img from "../../assets/profile-img.jpg";
 import { Split } from "../2-split-pattern/start";
 
 export const MediaWrapper = styled.div`
