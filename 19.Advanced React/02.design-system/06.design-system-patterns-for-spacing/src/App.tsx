@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './App.css'
-import { GiftCardList } from './components/07.pad-pattern/start';
+import { Profile } from './components/08.center-pattern/start';
 
 const queryClient = new QueryClient()
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <GiftCardList />
+        <Profile />
       </QueryClientProvider >
 
 
