@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Layers } from "../1-layers-pattern/start";
+import { Layers } from "../01-layers-pattern/start";
 
 export const Card = styled.div`
   border: 1px solid crimson;

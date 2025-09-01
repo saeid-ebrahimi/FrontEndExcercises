@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import img from "../../assets/profile-img.jpg";
-import { Split } from "../2-split-pattern/start";
+import { Split } from "../02-split-pattern/start";
 
 export const MediaWrapper = styled.div`
   --n: ${(props) => (props.ratio ? props.ratio[0] : 1)};

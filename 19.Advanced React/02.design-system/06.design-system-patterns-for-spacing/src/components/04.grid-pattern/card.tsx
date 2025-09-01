@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { spaceSchema } from "../common/spaces";
-import { Layers } from "../1-layers-pattern/start";
-import { Split } from "../2-split-pattern/start";
+import { Layers } from "../01-layers-pattern/start";
+import { Split } from "../02-split-pattern/start";
 
 const justifyAlignMap = {
-    start: "flex-start",
-    end: "flex-end",
-    center: "center",
+  start: "flex-start",
+  end: "flex-end",
+  center: "center",
 };
 
 const InlineBundle = styled.div`
@@ -16,19 +16,19 @@ const InlineBundle = styled.div`
   gap: var(--gutter);
 
   justify-content: ${(props) =>
-        justifyAlignMap[props.justify] ?? justifyAlignMap.start};
+    justifyAlignMap[props.justify] ?? justifyAlignMap.start};
 
   align-items: ${(props) =>
-        justifyAlignMap[props.align] ?? justifyAlignMap.start};
+    justifyAlignMap[props.align] ?? justifyAlignMap.start};
 `;
 
 const Pad = styled.div`
   padding: ${(props) => {
-        return []
-            .concat(props.padding)
-            .map((padKey) => spaceSchema[padKey])
-            .join(" ");
-    }};
+    return []
+      .concat(props.padding)
+      .map((padKey) => spaceSchema[padKey])
+      .join(" ");
+  }};
 `;
 
 const MediaWrapper = styled.div`
@@ -36,8 +36,8 @@ const MediaWrapper = styled.div`
   --d: ${(props) => (props.ratio ? props.ratio[1] : 1)};
 
   ${(props) =>
-        props.ratio &&
-        `
+    props.ratio &&
+    `
   aspect-ratio: var(--n) / var(--d);
   @supports not (aspect-ratio: 1/1) {
     padding-block-end: calc(var(--d) / var(--n) * 100%);
@@ -99,8 +99,8 @@ const ButtonsContainer = styled(Split).attrs(() => ({ gutter: "none" }))`
 `;
 
 const CurvedSpan = styled(Pad).attrs(() => ({
-    as: "span",
-    padding: ["xs", "m"],
+  as: "span",
+  padding: ["xs", "m"],
 }))`
   border-radius: 1rem;
   color: white;
@@ -109,10 +109,10 @@ const CurvedSpan = styled(Pad).attrs(() => ({
 `;
 
 const DetailsContainer = styled(Pad).attrs(() => ({
-    as: Split,
-    gutter: "l",
-    padding: "xl",
-    fraction: "auto-end",
+  as: Split,
+  gutter: "l",
+  padding: "xl",
+  fraction: "auto-end",
 }))`
   > figure > ${Avatar} {
     inline-size: 3rem;
@@ -140,34 +140,34 @@ const CallMessageButton = styled.button`
 `;
 
 const Card = () => {
-    return (
-        <Wrapper>
-            <DetailsContainer>
-                <Layers gutter="xs">
-                    <InlineBundle gutter="l" align="start">
-                        <strong>CodeLicks Academy</strong>
-                        <CurvedSpan>Teacher</CurvedSpan>
-                    </InlineBundle>
-                    <span>Master CS with us</span>
-                </Layers>
-                <figure>
-                    <Avatar />
-                </figure>
-            </DetailsContainer>
-            <ButtonsContainer gutter="none">
-                <Pad padding="l">
-                    <InlineBundle gutter="l" justify="center" align="center">
-                        <CallMessageButton>CALL</CallMessageButton>
-                    </InlineBundle>
-                </Pad>
-                <Pad padding="l">
-                    <InlineBundle gutter="l" justify="center" align="center">
-                        <CallMessageButton>TEXT</CallMessageButton>
-                    </InlineBundle>
-                </Pad>
-            </ButtonsContainer>
-        </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <DetailsContainer>
+        <Layers gutter="xs">
+          <InlineBundle gutter="l" align="start">
+            <strong>CodeLicks Academy</strong>
+            <CurvedSpan>Teacher</CurvedSpan>
+          </InlineBundle>
+          <span>Master CS with us</span>
+        </Layers>
+        <figure>
+          <Avatar />
+        </figure>
+      </DetailsContainer>
+      <ButtonsContainer gutter="none">
+        <Pad padding="l">
+          <InlineBundle gutter="l" justify="center" align="center">
+            <CallMessageButton>CALL</CallMessageButton>
+          </InlineBundle>
+        </Pad>
+        <Pad padding="l">
+          <InlineBundle gutter="l" justify="center" align="center">
+            <CallMessageButton>TEXT</CallMessageButton>
+          </InlineBundle>
+        </Pad>
+      </ButtonsContainer>
+    </Wrapper>
+  );
 };
 
 export default Card;

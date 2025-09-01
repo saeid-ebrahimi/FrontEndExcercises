@@ -1,5 +1,5 @@
 import { styled, css } from "styled-components";
-import { InlineBundle, type InlineBundleProps } from "../5.inline-bundle/start";
+import { InlineBundle, type InlineBundleProps } from "../05.inline-bundle/start";
 import { Button, Logo, MenuWrapper } from "./components";
 import { stretchSchema } from "../common/stretch";
 export interface IInlineProps extends InlineBundleProps {

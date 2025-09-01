@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { spaceSchema } from "../common/spaces";
-import { Split } from "../2-split-pattern/start";
+import { Split } from "../02-split-pattern/start";
 
 
 const Pad = styled.div<{ padding: string }>`
