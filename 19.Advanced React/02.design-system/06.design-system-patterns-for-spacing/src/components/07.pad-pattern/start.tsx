@@ -1,7 +1,7 @@
-import { Layers } from "../1-layers-pattern/start"
+import { Layers } from "../01-layers-pattern/start"
 import { styled } from "styled-components";
-import { Grid } from "../4.grid-pattern/start"
-import { InlineBundle } from "../5.inline-bundle/start"
+import { Grid } from "../04.grid-pattern/start"
+import { InlineBundle } from "../05.inline-bundle/start"
 import { Bottom, Card, Description, Name, Price, Top } from "./component"
 import { spaceSchema } from "../common/spaces";
 
