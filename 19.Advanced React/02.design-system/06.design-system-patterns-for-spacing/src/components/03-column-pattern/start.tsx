@@ -1,5 +1,5 @@
-import { InputGroup } from "../2-split-pattern/form";
-import { Split } from "../2-split-pattern/start";
+import { InputGroup } from "../02-split-pattern/form";
+import { Split } from "../02-split-pattern/start";
 import { styled } from "styled-components";
 import { spaceSchema } from "../common/spaces";
 
