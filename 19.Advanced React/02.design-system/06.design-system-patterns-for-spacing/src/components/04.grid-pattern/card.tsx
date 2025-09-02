@@ -2,36 +2,47 @@ import styled from "styled-components";
 import { spaceSchema } from "../common/spaces";
 import { Layers } from "../01-layers-pattern/start";
 import { Split } from "../02-split-pattern/start";
+import type { justifyContentSchema } from "../common/justify-content";
 
 const justifyAlignMap = {
   start: "flex-start",
   end: "flex-end",
   center: "center",
 };
-
-const InlineBundle = styled.div`
-  --gutter: ${(props) => spaceSchema[props.gutter] ?? spaceSchema.l};
+export interface IInlineBundleProps {
+  gutter?: keyof typeof spaceSchema;
+  justify?: keyof typeof justifyAlignMap;
+  align?: keyof typeof justifyAlignMap;
+}
+const InlineBundle = styled.div<IInlineBundleProps>`
+  --gutter: ${(props) => props.gutter ? spaceSchema[props.gutter] : spaceSchema.lg};
   display: flex;
   flex-wrap: wrap;
   gap: var(--gutter);
 
   justify-content: ${(props) =>
-    justifyAlignMap[props.justify] ?? justifyAlignMap.start};
+    props.justify ? justifyAlignMap[props.justify] : justifyAlignMap.start};
 
   align-items: ${(props) =>
-    justifyAlignMap[props.align] ?? justifyAlignMap.start};
+    props.align ? justifyAlignMap[props.align] : justifyAlignMap.start};
 `;
 
-const Pad = styled.div`
+export interface IPadProps {
+  padding?: (keyof typeof spaceSchema)[];
+}
+
+const Pad = styled.div<IPadProps>`
   padding: ${(props) => {
-    return []
-      .concat(props.padding)
-      .map((padKey) => spaceSchema[padKey])
-      .join(" ");
+    if (!props.padding) return "";
+    return Array.isArray(props.padding)
+      ? props.padding.map((padKey) => spaceSchema[padKey]).join(" ")
+      : spaceSchema[props.padding];
   }};
 `;
 
-const MediaWrapper = styled.div`
+interface IMediaWrapperProps { ratio: [number, number] }
+
+const MediaWrapper = styled.div<IMediaWrapperProps>`
   --n: ${(props) => (props.ratio ? props.ratio[0] : 1)};
   --d: ${(props) => (props.ratio ? props.ratio[1] : 1)};
 
@@ -100,7 +111,7 @@ const ButtonsContainer = styled(Split).attrs(() => ({ gutter: "none" }))`
 
 const CurvedSpan = styled(Pad).attrs(() => ({
   as: "span",
-  padding: ["xs", "m"],
+  padding: ["xs", "md"],
 }))`
   border-radius: 1rem;
   color: white;
@@ -108,9 +119,9 @@ const CurvedSpan = styled(Pad).attrs(() => ({
   font-size: 0.7rem;
 `;
 
-const DetailsContainer = styled(Pad).attrs(() => ({
+const DetailsContainer = styled(Split).attrs(() => ({
   as: Split,
-  gutter: "l",
+  gutter: "lg",
   padding: "xl",
   fraction: "auto-end",
 }))`
@@ -144,29 +155,29 @@ const Card = () => {
     <Wrapper>
       <DetailsContainer>
         <Layers gutter="xs">
-          <InlineBundle gutter="l" align="start">
+          <InlineBundle gutter="lg" align="start">
             <strong>CodeLicks Academy</strong>
             <CurvedSpan>Teacher</CurvedSpan>
           </InlineBundle>
           <span>Master CS with us</span>
         </Layers>
         <figure>
-          <Avatar />
+          <Avatar ratio={[1, 1]} />
         </figure>
       </DetailsContainer>
       <ButtonsContainer gutter="none">
-        <Pad padding="l">
-          <InlineBundle gutter="l" justify="center" align="center">
+        <Pad padding={["lg"]}>
+          <InlineBundle gutter="lg" justify="center" align="center">
             <CallMessageButton>CALL</CallMessageButton>
           </InlineBundle>
         </Pad>
-        <Pad padding="l">
-          <InlineBundle gutter="l" justify="center" align="center">
+        <Pad padding={["lg"]}>
+          <InlineBundle gutter="lg" justify="center" align="center">
             <CallMessageButton>TEXT</CallMessageButton>
           </InlineBundle>
         </Pad>
-      </ButtonsContainer>
-    </Wrapper>
+      </ButtonsContainer >
+    </Wrapper >
   );
 };
 
