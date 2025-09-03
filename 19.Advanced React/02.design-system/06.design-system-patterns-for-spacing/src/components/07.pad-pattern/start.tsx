@@ -9,9 +9,12 @@ export interface IPadProps {
     padding?: (keyof typeof spaceSchema)[];
 }
 
-export const Pad = styled.div<IPadProps>`
-    padding: ${(props) => {
-        return (props.padding ? [].concat(props.padding).map((paddingKey) => spaceSchema[paddingKey]).join(" ") : "")
+const Pad = styled.div<IPadProps>`
+  padding: ${(props) => {
+        if (!props.padding) return "";
+        return Array.isArray(props.padding)
+            ? props.padding.map((padKey) => spaceSchema[padKey]).join(" ")
+            : spaceSchema[props.padding];
     }};
 `;
 

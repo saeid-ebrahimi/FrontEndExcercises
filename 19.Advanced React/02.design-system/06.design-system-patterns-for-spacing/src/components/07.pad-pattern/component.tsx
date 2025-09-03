@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Layers } from "../01-layers-pattern/start";
+import type { spaceSchema } from "../common/spaces";
 
 export const Card = styled.div`
   border: 1px solid crimson;
@@ -16,7 +17,12 @@ export const Card = styled.div`
   );
 `;
 
-export const Top = (props) => <Layers {...props} gutter="m" />;
+interface ILayersProps {
+  gutter?: keyof typeof spaceSchema;
+  children?: React.ReactNode;
+};
+
+export const Top = (props: ILayersProps) => <Layers {...props} gutter="md" />;
 
 export const Bottom = styled.div`
   border-top: 1px solid crimson;
