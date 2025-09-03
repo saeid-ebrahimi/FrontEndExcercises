@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './App.css'
-import { NewProductsList } from './components/09.media-wrapper/start';
+import { Modal } from './components/11.Modal/modal';
 
 const queryClient = new QueryClient()
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <NewProductsList />
+        <Modal />
       </QueryClientProvider >
 
 
