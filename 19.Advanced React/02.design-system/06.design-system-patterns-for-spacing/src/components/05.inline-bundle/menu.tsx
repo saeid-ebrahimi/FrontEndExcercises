@@ -37,9 +37,6 @@ const Menu = styled(Split) <IMenuProps>`
   }
 `;
 
-const MenuItems = styled.div`
-  color: yellow;
-`;
 
 export interface IMenuBasis {
   children: ReactNode,
