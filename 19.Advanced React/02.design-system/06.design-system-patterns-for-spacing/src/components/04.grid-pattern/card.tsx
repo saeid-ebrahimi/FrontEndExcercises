@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { spaceSchema } from "../common/spaces";
 import { Layers } from "../01-layers-pattern/start";
 import { Split } from "../02-split-pattern/start";
-import type { justifyContentSchema } from "../common/justify-content";
 
 const justifyAlignMap = {
   start: "flex-start",
