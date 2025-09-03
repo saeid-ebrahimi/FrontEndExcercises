@@ -1,8 +1,12 @@
 import styled from "styled-components";
-import { Pad } from "../7-pad-pattern/start";
+import { Pad } from "../07.pad-pattern/start";
 
-export const Button = styled(Pad).attrs(() => ({
-  padding: ["m", "xl"],
+export interface IButtonProps {
+  primary?: boolean;
+}
+
+export const Button = styled(Pad).attrs<IButtonProps>(() => ({
+  padding: ["md", "xl"],
   as: "button",
 }))`
   background: ${(props) => (props.primary ? "crimson" : "white")};

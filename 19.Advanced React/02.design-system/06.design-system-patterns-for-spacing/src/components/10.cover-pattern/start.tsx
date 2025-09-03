@@ -1,11 +1,20 @@
 import { styled } from "styled-components";
-import { Layers } from "../1-layers-pattern/start";
-import { InlineBundle } from "../5-inline-bundle-pattern/start";
+
 import { Button } from "./components";
 import { spaceSchema } from "../common/spaces";
-import { Pad } from "../7-pad-pattern/start";
+import { InlineBundle } from "../05.inline-bundle/start";
+import { Layers } from "../01-layers-pattern/start";
+import { Pad } from "../07.pad-pattern/start";
+import type { ReactNode } from "react";
 
-export const Cover = styled.div.attrs(({ children, top, bottom }) => {
+export interface ICoverProps {
+  children?: ReactNode;
+  top?: ReactNode;
+  bottom?: ReactNode;
+  gutter?: keyof typeof spaceSchema;
+  minHeight?: string;
+}
+export const Cover = styled.div.attrs<ICoverProps>(({ children, top, bottom }) => {
   return {
     children: (
       <>
@@ -17,17 +26,17 @@ export const Cover = styled.div.attrs(({ children, top, bottom }) => {
   };
 })`
   display: grid;
-  gap: ${(props) => spaceSchema[props.gutter] ?? spaceSchema.l};
-  min-block-size: ${(props) => props.minHight ?? "100vh"};
+  gap: ${(props) => props.gutter ? spaceSchema[props.gutter] : spaceSchema.lg};
+  min-block-size: ${(props) => props.minHeight ?? "100vh"};
 
   grid-template-rows: ${({ top, bottom }) =>
     top && bottom
       ? "auto 1fr auto"
       : top
-      ? "auto 1fr"
-      : bottom
-      ? "1fr auto"
-      : "1fr"};
+        ? "auto 1fr"
+        : bottom
+          ? "1fr auto"
+          : "1fr"};
 
   > [data-cover-child] {
     align-self: center;
@@ -55,16 +64,16 @@ const Bottom = () => {
 
 const HeroPage = () => {
   return (
-    <Cover top={<Top />} bottom={<Bottom />} as={Pad} padding="l">
-      <Layers gutter="l">
+    <Cover top={<Top />} bottom={<Bottom />} as={Pad} padding={["lg"]} >
+      <Layers gutter="lg">
         <h1>CodeLicks</h1>
         <span>Learn and grow</span>
-        <InlineBundle gutter="l">
+        <InlineBundle gutter="lg">
           <Button primary>Enroll now</Button>
           <Button>Register</Button>
         </InlineBundle>
       </Layers>
-    </Cover>
+    </Cover >
   );
 };
 
