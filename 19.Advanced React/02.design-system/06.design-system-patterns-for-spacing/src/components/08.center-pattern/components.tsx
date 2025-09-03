@@ -2,7 +2,9 @@ import styled from "styled-components";
 import img from "../../assets/profile-img.jpg";
 import { Split } from "../02-split-pattern/start";
 
-export const MediaWrapper = styled.div`
+interface IMediaWrapperProps { ratio: [number, number] }
+
+export const MediaWrapper = styled.div<IMediaWrapperProps>`
   --n: ${(props) => (props.ratio ? props.ratio[0] : 1)};
   --d: ${(props) => (props.ratio ? props.ratio[1] : 1)};
 
@@ -57,6 +59,6 @@ export const Extras = () => (
       <LogoImg src={img} alt="" />
     </MediaWrapper>
 
-    <span>Uknown Image / Downloaded from upsplash.com </span>
+    <span>Unknown Image / Downloaded from unsplash.com </span>
   </Wrapper>
 );

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Extras } from "./components";
-import { Layers } from "../01-layers-pattern/start";
 
 interface ICenterProps {
     maxWidth: string;
