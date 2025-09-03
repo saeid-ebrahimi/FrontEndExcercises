@@ -6,7 +6,12 @@ export interface IInlineProps extends InlineBundleProps {
     stretch?: number | keyof typeof stretchSchema;
     switchAt?: number | string;
 }
-const responsive = css`
+
+interface IResponsiveProps {
+    switchAt?: string | number;
+    gutter?: string;
+}
+const responsive = css<IResponsiveProps>`
     --switchAt: ${({ switchAt }) => typeof switchAt === "string" ? switchAt : `${switchAt}px`};
     flex-wrap: wrap;
     & > * {
@@ -22,7 +27,7 @@ export const Inline = styled(InlineBundle) <IInlineProps>`
         }
         return props.stretch ? stretchSchema[props.stretch] : ""
     }}  
-    ${(props) => props.switchAt && responsive};
+    ${({ switchAt }) => switchAt && responsive}
 `
 
 export function Menu() {
