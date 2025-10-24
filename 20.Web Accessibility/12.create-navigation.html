@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Create Accessible Navigation</title>
+    <style>
+      .navigation__logo {
+        width: "40px";
+        height: "40px";
+      }
+    </style>
+  </head>
+  <body>
+    <header style="background-color: black">
+      <img
+        class="navigation__logo"
+        width="40px"
+        height="40px"
+        src="https://practical-accessibility.today/assets/images/logo/logo-icon--light.svg"
+        alt="navigation logo" />
+      <nav aria-label="site main navigation">
+        <ul>
+          <li>
+            <a
+              href="/products"
+              aria-current="page"
+              >products</a
+            >
+          </li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/press">Press</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <nav class="" aria-label="Breadcrumbs">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a
+              href="/products"
+              aria-current="page"
+              >Products</a
+            >
+          </li>
+        </ol>
+      </nav>
+    </main>
+  </body>
+</html>
