@@ -58,7 +58,7 @@ here is the example:
 
 ![hgroup don't work as expected in reality](./markdown-assets/09.6.hgroup-tag.jpg)
 
-### WCAG success criteria that tackle the use of headings:
+### WCAG success criteria that tackle the use of headings
 
 - SC 1.3.1 Info and Relationship (Level A):
 
