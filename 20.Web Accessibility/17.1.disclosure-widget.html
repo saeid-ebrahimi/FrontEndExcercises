@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Disclosure Widget</title>
+    <style>
+      .first-accordion summary {
+        list-style: none;
+      }
+      .first-accordion
+        summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .disclosure-widget > button {
+        all: unset;
+      }
+      .disclosure-widget
+        > button[aria-expanded="false"]
+        + div {
+        display: none;
+      }
+      .disclosure-widget
+        > button[aria-expanded="true"]
+        + div {
+        display: block;
+      }
+      .disclosure-widget
+        > button[aria-expanded="true"]
+        > svg {
+        transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <details>
+      <summary>
+        What is
+        <abbr title="Make Iran Great Again"
+          >MIGA</abbr
+        >
+        Means?
+      </summary>
+      <p>
+        It's a campaign to make Iran great again
+        by revolution.
+      </p>
+    </details>
+
+    <hr />
+
+    <details class="first-accordion">
+      <summary>
+        What is
+        <abbr title="Make Iran Great Again"
+          >MIGA</abbr
+        >
+        Means?
+
+        <svg
+          width="12"
+          height="8"
+          viewBox="-2 -2 14 12"
+          aria-hidden="true">
+          <g
+            fill="none"
+            transform="rotate(-90 6 4)">
+            <path
+              fill="currentColor"
+              d="M1.41.59l4.59 4.58 4.59-4.58 1.41 1.41-6 6-6-6z" />
+            <path d="M-6-8h24v24h-24z" />
+          </g>
+        </svg>
+      </summary>
+      <p>
+        It's a campaign to make Iran great again
+        by revolution.
+      </p>
+    </details>
+
+    <hr />
+
+    <div
+      class="disclosure-widget"
+      aria-label="accordion">
+      <button
+        aria-controls="MIGA-panel"
+        aria-expanded="false">
+        What is
+        <abbr title="Make Iran Great Again"
+          >MIGA</abbr
+        >
+        Means?
+        <svg
+          width="12"
+          height="8"
+          viewBox="-2 -2 14 12"
+          aria-hidden="true">
+          <g
+            fill="none"
+            transform="rotate(-90 6 4)">
+            <path
+              fill="currentColor"
+              d="M1.41.59l4.59 4.58 4.59-4.58 1.41 1.41-6 6-6-6z" />
+            <path d="M-6-8h24v24h-24z" />
+          </g>
+        </svg>
+      </button>
+      <div id="MIGA-panel" hidden>
+        <p>
+          It's a campaign to make Iran great again
+          by revolution.
+        </p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="disclosure-widget2">
+      <div class="panel">
+        This is the diclosure widget’s content.
+        This content is accessible even if
+        JavaScript is disabled. Try it. Disable
+        JavaScript in your browser and see.
+      </div>
+    </div>
+    <script>
+      let trigger = document.querySelector(
+        ".disclosure-widget > button"
+      );
+      let panel = document.querySelector(
+        ".disclosure-widget > div"
+      );
+
+      trigger.addEventListener(
+        "click",
+        function () {
+          if (
+            trigger.getAttribute(
+              "aria-expanded"
+            ) === "true"
+          ) {
+            trigger.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+            // panel.setAttribute("hidden", "");
+          } else {
+            trigger.setAttribute(
+              "aria-expanded",
+              "true"
+            );
+            // panel.removeAttribute("hidden");
+          }
+        }
+      );
+
+      let accordion = document.querySelector(
+        ".disclosure-widget2"
+      );
+      let accordionPanel =
+        document.querySelector(".panel");
+      accordionPanel.setAttribute("hidden", "");
+      const button =
+        document.createElement("button");
+      button.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+      button.append("trigger panel");
+      button.style = "all:unset";
+      button.addEventListener(
+        "click",
+        function () {
+          if (
+            button.getAttribute(
+              "aria-expanded"
+            ) === "true"
+          ) {
+            button.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+            accordionPanel.setAttribute(
+              "hidden",
+              ""
+            );
+          } else {
+            button.setAttribute(
+              "aria-expanded",
+              "true"
+            );
+            accordionPanel.removeAttribute(
+              "hidden"
+            );
+          }
+        }
+      );
+      accordion.prepend(button);
+    </script>
+  </body>
+</html>
