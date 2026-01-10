@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>An Accordion Widget</title>
+  </head>
+  <body>
+    <div
+      aria-label="accordion"
+      aria-labelledby="group-label"
+      role="group"
+      data-accordion>
+      <span
+        class="visually-hidden"
+        id="group-label"
+        >About this Product</span
+      >
+      <details aria-label="accordion-item">
+        <summary aria-label="accordion-trigger">
+          Description
+        </summary>
+        <div aria-label="accordion-panel">
+          1.Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Pariatur, obcaecati?
+        </div>
+      </details>
+      <details aria-label="accordion-item">
+        <summary aria-label="accordion-trigger">
+          Shipping and Delivery
+        </summary>
+        <div aria-label="accordion-panel">
+          2.Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Velit
+          atque dolorem nemo voluptas ad. Officia
+          dolor repellat ducimus mollitia
+          perspiciatis.
+        </div>
+      </details>
+      <details aria-label="accordion-item">
+        <summary aria-label="accordion-trigger">
+          Warranty & returns
+        </summary>
+        <div aria-label="accordion-panel">
+          3. Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Aperiam
+          nostrum facilis officia deleniti fuga
+          ducimus architecto suscipit, debitis
+          accusantium quaerat, quas, distinctio
+          perferendis veniam magni adipisci
+          eligendi maiores accusamus vitae.
+        </div>
+      </details>
+    </div>
+    <section
+      aria-label="accordion"
+      aria-labelledby="group-label"
+      data-accordion>
+      <h2 id="group-label">About this Product</h2>
+      <details aria-label="accordion-item">
+        <summary aria-label="accordion-trigger">
+          Description
+        </summary>
+        <div aria-label="accordion-panel">
+          1.Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Pariatur, obcaecati?
+        </div>
+      </details>
+      <details aria-label="accordion-item">
+        <summary aria-label="accordion-trigger">
+          Shipping and Delivery
+        </summary>
+        <div aria-label="accordion-panel">
+          2.Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Velit
+          atque dolorem nemo voluptas ad. Officia
+          dolor repellat ducimus mollitia
+          perspiciatis.
+        </div>
+      </details>
+      <details aria-label="accordion-item">
+        <summary aria-label="accordion-trigger">
+          Warranty & returns
+        </summary>
+        <div aria-label="accordion-panel">
+          3. Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Aperiam
+          nostrum facilis officia deleniti fuga
+          ducimus architecto suscipit, debitis
+          accusantium quaerat, quas, distinctio
+          perferendis veniam magni adipisci
+          eligendi maiores accusamus vitae.
+        </div>
+      </details>
+    </section>
+    <script>
+      let group = document.querySelector(
+        "[data-accordion]"
+      );
+
+      let widgets =
+        group.querySelectorAll("details");
+
+      widgets.forEach(function (widget, index) {
+        widget.addEventListener(
+          "click",
+          function () {
+            for (i = 0; i < widgets.length; i++) {
+              if (index === i) continue;
+              widgets[i].removeAttribute("open");
+            }
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
