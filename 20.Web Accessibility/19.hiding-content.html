@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=1, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* from element to element4 it just visually hidden the content not it's accessibility it's WCAG violation*/
+      .element {
+        opacity: 0;
+      }
+
+      .element2 {
+        filter: opacity(0);
+      }
+
+      .element3 {
+        clip-path: inset(100%);
+      }
+
+      .element4 {
+        position: absolute;
+        top: -200vh;
+      }
+
+      .element5 {
+        visibility: hidden;
+      }
+
+      .element6 {
+        display: none;
+        /* search about display: content; */
+        /* we can use content-visibility */
+      }
+    </style>
+  </head>
+  <body>
+    <p class="element">
+      Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Ea numquam commodi iste
+      nulla labore! Voluptate laboriosam beatae
+      odio, porro nesciunt quo explicabo dolor ea
+      corporis pariatur? Error maiores aliquid
+      iure.
+    </p>
+    <hr />
+    <p class="element2">
+      Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Ea numquam commodi iste
+      nulla labore! Voluptate laboriosam beatae
+      odio, porro nesciunt quo explicabo dolor ea
+      corporis pariatur? Error maiores aliquid
+      iure.
+    </p>
+    <hr />
+    <p class="element3">
+      Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Ex, exercitationem. Modi
+      sint temporibus odit vel? Facilis adipisci
+      ipsa quia veniam.
+    </p>
+    <hr />
+    <p class="element4">
+      Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Ex, exercitationem. Modi
+      sint temporibus odit vel? Facilis adipisci
+      ipsa quia veniam.
+    </p>
+    <hr />
+    <p class="element5">
+      Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Ex, exercitationem. Modi
+      sint temporibus odit vel? Facilis adipisci
+      ipsa quia veniam.
+    </p>
+    <hr />
+    <p hidden>
+      Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Accusamus atque voluptatum
+      rerum perspiciatis velit in consectetur
+      doloribus nesciunt ipsum? Commodi quibusdam
+      asperiores illum expedita, eveniet rem
+      aliquam illo sequi dolores!
+    </p>
+    <hr />
+    <button disabled>
+      Lorem ipsum dolor sit amet.
+    </button>
+    <hr />
+    <button inert>
+      Lorem ipsum dolor sit amet, consectetur
+    </button>
+    <hr />
+    <p aria-hidden="true">
+      This text is hidden in accessibility tree
+      not visually or keyboard-accessible
+    </p>
+    <hr />
+    <!-- this link may not be consistently hidden from screen readers because is action element-->
+    <a href="#" tabindex="-1" aria-hidden="true"
+      >...</a
+    >
+  </body>
+</html>
