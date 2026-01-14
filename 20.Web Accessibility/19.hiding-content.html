@@ -105,5 +105,36 @@
     <a href="#" tabindex="-1" aria-hidden="true"
       >...</a
     >
+    <hr />
+    <!-- hidden can be set without a value -->
+    <p hidden>I am hidden.</p>
+
+    <!-- The aria-hidden is ignored because it has no value -->
+    <p aria-hidden>
+      I am accessible to screen readers.
+    </p>
+    <hr />
+    <!-- this SHOULD expose the element to AAPIs, but is inconsistent across browsers -->
+    <p aria-hidden="false">
+      I should be exposed to screen readers but
+      may not be.
+    </p>
+
+    <!-- to expose an element to AAPIs, remove the aria-hidden attr altogether -->
+    <p>
+      I am consistently exposed to screen readers.
+    </p>
+    <hr />
+
+    <button>
+      <svg
+        viewBox="0 0 24 24"
+        height="24"
+        width="24"
+        aria-hidden="true">
+        ..
+      </svg>
+      Menu
+    </button>
   </body>
 </html>
