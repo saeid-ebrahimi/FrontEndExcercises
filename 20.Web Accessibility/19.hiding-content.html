@@ -10,6 +10,9 @@
       content="width=1, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
       /* from element to element4 it just visually hidden the content not it's accessibility it's WCAG violation*/
       .element {
         opacity: 0;
@@ -36,6 +39,25 @@
         display: none;
         /* search about display: content; */
         /* we can use content-visibility */
+      }
+
+      .visually-hidden:not(:focus):not(:active) {
+        /* shrink to a 1px square */
+        width: 1px;
+        height: 1px;
+
+        /* hide any resulting overflow */
+        overflow: hidden;
+
+        /* clip the element to remove any visual trace */
+        clip: rect(0 0 0 0); /* for IE only */
+        clip-path: inset(50%);
+
+        /* remove from page flow so it doesn’t affect surrounding layout */
+        position: absolute;
+
+        /* ensure proper text announcement by screen readers */
+        white-space: nowrap;
       }
     </style>
   </head>
@@ -137,6 +159,8 @@
       Menu
     </button>
 
+    <hr />
+
     <h2 role="none">
       this is a heading with no role
     </h2>
@@ -160,5 +184,16 @@
     <img src=".." alt=".." role="none" />
     <img src=".." alt=".." aria-hidden="true" />
     <img src=".." alt="" />
+
+    <hr />
+
+    <span class="visually-hidden"
+      >New price:
+    </span>
+    <span>$350</span>
+    <span class="visually-hidden"
+      >Old price:</span
+    >
+    <span>$450</span>
   </body>
 </html>
