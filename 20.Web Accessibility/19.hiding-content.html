@@ -136,5 +136,29 @@
       </svg>
       Menu
     </button>
+
+    <h2 role="none">
+      this is a heading with no role
+    </h2>
+    <h2>this is a semantic heading</h2>
+    <h3 role="none">
+      <!-- the link semantics are preserved and exposed as normal because it is not a required child of the heading, nor is there a semantic relationship between them -->
+      <a href="#">Im'a link</a>
+    </h3>
+    <ul>
+      <!-- prefer this -->
+      <li role="none">item 1</li>
+      <!-- over this -->
+      <li role="presentation">item 2</li>
+    </ul>
+    <!-- this table is used for layout purposes only -->
+    <table role="none">
+      <!-- suppressing the table's semantics will also suppress the semantics of all of its rows and cells (because they are required children) -->
+    </table>
+
+    <!-- these two are equivalent and will hide the img from screen readers -->
+    <img src=".." alt=".." role="none" />
+    <img src=".." alt=".." aria-hidden="true" />
+    <img src=".." alt="" />
   </body>
 </html>
