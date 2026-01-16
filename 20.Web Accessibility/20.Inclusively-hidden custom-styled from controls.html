@@ -14,8 +14,61 @@
       controls
     </title>
     <style>
-      .checkbox_background {
-        fill: white;
+      .c-custom-checkbox {
+        position: relative;
+      }
+      .c-custom-checkbox input[type="checkbox"] {
+        position: absolute;
+        width: 1.6rem;
+        height: 1.6rem;
+        opacity: 0;
+        z-index: 2;
+      }
+      .c-custom-checkbox
+        input[type="checkbox"]:focus-visible
+        + svg {
+        outline: 2px solid deeppink;
+        border-radius: 4px;
+        outline-offset: 4px;
+      }
+      .c-custom-checkbox
+        input[type="checkbox"]:disabled
+        + svg
+        > rect {
+        opacity: 60%;
+      }
+
+      .c-custom-checkbox
+        input[type="checkbox"]:checked
+        + svg
+        > rect {
+        transition: fill 0.4s linear;
+        fill: currentColor;
+      }
+      .c-custom-checkbox
+        input[type="checkbox"]:checked
+        + svg
+        > polyline {
+        transition: stroke 0.4s linear;
+        stroke-dashoffset: 0;
+        stroke: wheat;
+      }
+
+      @media screen and (forced-colors: active) {
+        .c-custom-checkbox
+          input[type="checkbox"]:checked
+          + svg
+          > .checkbox__background {
+          fill: darkblue;
+        }
+      }
+      @media screen and (forced-colors: active) {
+        .c-custom-checkbox
+          input[type="checkbox"]:checked
+          + svg
+          > .checkbox__checkmark {
+          stroke: bisque;
+        }
       }
     </style>
   </head>
