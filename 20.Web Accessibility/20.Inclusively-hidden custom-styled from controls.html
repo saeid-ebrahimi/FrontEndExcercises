@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE-edge" />
+    <meta
+      name="view-port"
+      content="width:device-width,
+    initial-scale=1.0" />
+    <title>
+      Inclusively-hidden custom-styled from
+      controls
+    </title>
+    <style>
+      .checkbox_background {
+        fill: white;
+      }
+    </style>
+  </head>
+  <body>
+    <label
+      for="c-checkbox"
+      class="c-custom-checkbox">
+      <input type="checkbox" id="c-checkbox" />
+      <svg
+        width="32"
+        height="32"
+        viewBox="-4 -4 39 39"
+        aria-hidden="true">
+        <!-- The background -->
+        <rect
+          class="checkbox_background"
+          width="35"
+          height="35"
+          x="-2"
+          y="-2"
+          stroke="currentColor"
+          fill="none"
+          stroke-width="3"
+          rx="6"
+          ry="6"
+          c></rect>
+        <!-- The checkmark -->
+        <polyline
+          class="checkbox_checkmark"
+          points="4,14 12,23 28,5"
+          stroke="transparent"
+          stroke-width="4"
+          fill="none"></polyline>
+      </svg>
+      <span>Add an accessibility statement</span>
+    </label>
+  </body>
+</html>
