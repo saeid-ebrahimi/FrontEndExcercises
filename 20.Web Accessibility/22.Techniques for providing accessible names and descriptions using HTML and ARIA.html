@@ -132,5 +132,39 @@
       aria-label="Please contact one of the event organizers for more information"
       >Rules of conduct</a
     >
+
+    <!-- Using the aria-describedby attribute -->
+    <label for="passw0rd">Password</label>
+    <input
+      type="password"
+      id="passw0rd"
+      aria-describedby="passw0rd-description" />
+    <p id="passw0rd-description">
+      You password should be at least 8 characters
+      long and contain at least one special
+      character.
+    </p>
+
+    <hr />
+
+    <a
+      href="#"
+      target="_blank"
+      aria-description="Opens in a new window">
+      The ARIA specification
+
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        aria-hidden="true">
+        <path
+          d="M6 2v24h24v-24h-24zM28 24h-20v-20h20v20zM4 28v-21l-2-2v25h25l-2-2h-21z"
+          fill="currentColor"></path>
+        <path
+          d="M11 8l5 5-6 6 3 3 6-6 5 5v-13z"
+          fill="currentColor"></path>
+      </svg>
+    </a>
   </body>
 </html>
