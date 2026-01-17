@@ -166,5 +166,25 @@
           fill="currentColor"></path>
       </svg>
     </a>
+
+    <!-- Using aria details -->
+
+    <label for="cvv">CVV</label>
+    <input
+      type="text"
+      id="cvv"
+      aria-details="cvv-details" />
+
+    <details id="cvv-details">
+      <summary>
+        <strong>What is CVV?</strong>
+      </summary>
+
+      <p>
+        The Card Verification Value (CVV) or Card
+        Verification Code (CVC) is a code printed
+        on your debit or credit card.
+      </p>
+    </details>
   </body>
 </html>
