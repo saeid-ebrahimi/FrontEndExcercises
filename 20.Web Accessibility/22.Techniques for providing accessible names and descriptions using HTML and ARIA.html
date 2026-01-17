@@ -63,12 +63,74 @@
 
     <!-- using an attribute -->
     <input type="submit" value="Send Message" />
+    <br />
+    <br />
+
     <img
       src="./path/to/image.png"
       alt="A cat sleeping on a bed." />
+    <br />
+    <br />
+
     <iframe
-      src=".."
+      src="."
       frameborder="0"
       title="[ frame accName ]"></iframe>
+
+    <!-- Using aria-labelledby -->
+    <nav aria-labelledby="heading_ID">
+      <h3 id="heading_ID">Categories</h3>
+      ...
+    </nav>
+    <nav aria-labelledby="heading2_ID">
+      <h3 id="heading2_ID">Find us elsewhere</h3>
+      ..
+    </nav>
+
+    <br />
+
+    <input
+      type="search"
+      aria-labelledby="search-btn" />
+    <button id="search-btn">Search</button>
+
+    <br />
+    <br />
+
+    <!-- Even though the <label> is associated with the input, the input's accName is still derived from the button because aria-labelledby takes priority -->
+    <label for="search-input"
+      >Find something on this site...</label
+    >
+    <input
+      type="search"
+      id="search-input"
+      aria-labelledby="search-btn" />
+    <button id="search-btn">Search</button>
+
+    <hr />
+
+    <!-- Using aria-label -->
+
+    <!-- This button os treated as empty; it gets its accName from the aria-label attribute; otherwise, it would not have one. -->
+    <button aria-label="Settings">
+      <i></i>
+    </button>
+
+    <!-- The accName for this input field is derived from the aria-labelledby attribute which takes priority over aria-label and other naming methods -->
+    <span id="name-label">Full Name</span>
+    <input
+      type="text"
+      aria-labelledby="name-label"
+      aria-label="Your Name" />
+    <hr />
+
+    <!-- <div>s are name prohibited, so this is invalid. Don't do this -->
+    <div aria-label="some name"></div>
+    <hr />
+    <a
+      href="https://...."
+      aria-label="Please contact one of the event organizers for more information"
+      >Rules of conduct</a
+    >
   </body>
 </html>
