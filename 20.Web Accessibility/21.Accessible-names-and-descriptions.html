@@ -61,5 +61,123 @@
     </button>
 
     <hr />
+
+    <nav aria-label="Site">
+      <!-- main site navigation links -->
+    </nav>
+
+    <hr />
+
+    <nav aria-label="Social">
+      <!-- social links -->
+    </nav>
+
+    <hr />
+
+    <fieldset>
+      <legend>I want to receive</legend>
+      <div>
+        <input
+          type="checkbox"
+          name="newsletter"
+          id="check_1" />
+        <label for="check_1"
+          >The weekly newsletter</label
+        >
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name="promotions"
+          id="check_2" />
+        <label for="check_2"
+          >Offers and promotions</label
+        >
+      </div>
+      […]
+    </fieldset>
+
+    <hr />
+
+    <!-- example borrowed from https://www.w3.org/WAI/tutorials/forms/grouping/ -->
+    <fieldset>
+      <legend>Shipping Address:</legend>
+      <div>
+        <label for="shipping_name">
+          <span class="visually-hidden"
+            >Shipping </span
+          >Name: </label
+        ><br />
+        <input
+          type="text"
+          name="shipping_name"
+          id="shipping_name" />
+      </div>
+      <div>
+        <label for="shipping_street"
+          >Street:</label
+        ><br />
+        <input
+          type="text"
+          name="shipping_street"
+          id="shipping_street" />
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Billing Address:</legend>
+      <div>
+        <label for="billing_name">
+          <span class="visually-hidden"
+            >Billing </span
+          >Name: </label
+        ><br />
+        <input
+          type="text"
+          name="billing_name"
+          id="billing_name" />
+      </div>
+      <div>
+        <label for="billing_street">Street:</label
+        ><br />
+        <input
+          type="text"
+          name="billing_street"
+          id="billing_street" />
+      </div>
+    </fieldset>
+    <hr />
+
+    <!-- this is not valid -->
+    <div aria-label="test">
+      <!-- Some text that may have accessibility issues, such dynamic text that animates on a letter-by-letter basis -->
+      Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Tenetur modi itaque iusto,
+      iure labore sequi minima doloremque, nostrum
+      dolor excepturi molestiae fugit culpa sunt
+      quasi perspiciatis. Iure maxime voluptas
+      doloribus!
+    </div>
+
+    <hr />
+
+    <!-- this is not valid -->
+    <span aria-label="Twitter">
+      <!-- some icon maybe -->
+      <i class="fa-brands fa-twitter"></i>
+    </span>
+
+    <hr />
+
+    <!-- the region role is a meaningful role that identifies a useful region of the page. Useful regions can have accessible names -->
+    <div role="region" aria-label="test">
+      Lorem ipsum dolor sit amet consectetur,
+      adipisicing elit. Deleniti nesciunt iste
+      recusandae quam labore amet beatae quidem,
+      illo distinctio a magnam maxime voluptates
+      ipsum adipisci, quia corporis aliquid
+      doloribus eum!
+    </div>
+
+    <hr />
   </body>
 </html>
