@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Content-Type"
+      content="text/html;charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <style>
+      a[target="_blank"]::after {
+        content: " (Opens in a new Window)";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Provide name using HTML content -->
+    <button>Download PDF</button>
+    <a
+      href="https://www.eatingbirdfood.com/basic-chia-seed-pudding/"
+      >Chia Seeds Pudding recipe</a
+    >
+
+    <hr />
+
+    <!-- using CSS pseudo-content and accessible name -->
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+      target="_blank"
+      >Learn about accessibility on MDN</a
+    >
+
+    <hr />
+
+    <!-- using another element -->
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      id="email"
+      autocomplete="email" />
+
+    <!-- The group’s accName is "Shipping address" -->
+    <fieldset>
+      <legend>Shipping address</legend>
+
+      ...
+    </fieldset>
+
+    <table>
+      <caption>
+        The timing schedule
+      </caption>
+    </table>
+    <hr />
+
+    <label>Your name</label>
+    <input type="text" />
+    <!-- the above snippet and below snippet are the same -->
+    <span>Your name</span>
+    <input type="text" />
+
+    <hr />
+
+    <!-- using an attribute -->
+    <input type="submit" value="Send Message" />
+    <img
+      src="./path/to/image.png"
+      alt="A cat sleeping on a bed." />
+    <iframe
+      src=".."
+      frameborder="0"
+      title="[ frame accName ]"></iframe>
+  </body>
+</html>
