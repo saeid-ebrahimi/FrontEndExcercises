@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>
+      Accessible names and descriptions
+    </title>
+    <style>
+      .visually-hidden {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- this input field has a visible label but no name -->
+    <span>enter your name:</span>
+    <input type="text" />
+
+    <hr />
+
+    <label for="name">enter your name:</label>
+    <input type="text" id="name" />
+
+    <hr />
+
+    <!-- this link has a graphical label, but no (pronounceable) name -->
+    <a href="https://twitter.com/SaraSoueidan">
+      <i class="fa-brands fa-twitter"></i>
+    </a>
+
+    <hr />
+    <!-- this link has a graphical label, and an accessible name -->
+
+    <a href="https://twitter.com/SaraSoueidan">
+      <span class="visually-hidden">Twitter</span>
+      <i class="fa-brands fa-twitter"></i>
+    </a>
+
+    <hr />
+  </body>
+</html>
