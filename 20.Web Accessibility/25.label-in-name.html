@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Label in Name</title>
+  </head>
+  <body>
+    <!-- Adding the product's name to the button that adds the product to cart would make the buttons' accessible names unique -->
+    <!-- Instead of this... -->
+    <button>
+      Add
+      <span class="visually-hidden"
+        >[Product Name]</span
+      >
+      to Cart
+    </button>
+    <!-- ... do this. -->
+    <button>
+      Add to Cart
+      <span class="visually-hidden"
+        >, [Product Name]</span
+      >
+    </button>
+
+    <!-- Instead of this... -->
+    <a href="/path/to/article-title/"
+      >Read More</a
+    >
+
+    <!-- ...do this. -->
+    <a href="/path/to/article-title/"
+      >Read More
+      <span class="visually-hidden"
+        >about [ ARTICLE TITLE ]</span
+      ></a
+    >
+  </body>
+</html>
