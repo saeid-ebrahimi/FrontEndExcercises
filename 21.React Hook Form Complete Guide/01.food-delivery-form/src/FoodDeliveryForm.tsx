@@ -1,4 +1,5 @@
 import { useState, type ChangeEvent, type SyntheticEvent } from 'react'
+import { getRenderCount } from './lib/getRenderCount';
 
 type FoodDeliveryFormType = {
     customerName: string;
@@ -8,6 +9,7 @@ type FoodDeliveryFormErrorType = {
     customerName: string;
     mobile: string;
 }
+const RenderCount = getRenderCount("FoodDeliveryForm")
 export function FoodDeliveryForm() {
     const [values, setValues] = useState<FoodDeliveryFormType>({
         customerName: "",
@@ -47,33 +49,36 @@ export function FoodDeliveryForm() {
     }
 
     return (
-        <form autoComplete={"off"} onSubmit={onSubmit}>
-            <div className={"form-floating mb-3"}>
-                <input onChange={handleChangeInput}
-                    name={"customerName"}
-                    value={values.customerName}
-                    id={"customerName"}
-                    type={"text"}
-                    className={"form-control"}
-                    placeholder={"John Doe"}
-                />
+        <>
+            <RenderCount />
+            <form autoComplete={"off"} onSubmit={onSubmit}>
+                <div className={"form-floating mb-3"}>
+                    <input onChange={handleChangeInput}
+                        name={"customerName"}
+                        value={values.customerName}
+                        id={"customerName"}
+                        type={"text"}
+                        className={"form-control"}
+                        placeholder={"John Doe"}
+                    />
 
-                <label htmlFor={"customerName"}>Customer Name:</label>
-            </div>
-            <p className={"text-danger"}>{errors.customerName}</p>
-            <div className={"form-floating mb-3"}>
-                <input
-                    onChange={handleChangeInput}
-                    name={"mobile"}
-                    id={"mobile"}
-                    type={"text"}
-                    className={"form-control"}
-                    placeholder={"09xx-xxx-xx-xx"}
-                />
-                <label htmlFor="mobile">Mobile:</label>
-            </div>
-            <p className={"text-danger"}>{errors.mobile}</p>
-            <button type={"submit"} className={"btn btn-primary"}>Submit</button>
-        </form>
+                    <label htmlFor={"customerName"}>Customer Name:</label>
+                </div>
+                <p className={"text-danger"}>{errors.customerName}</p>
+                <div className={"form-floating mb-3"}>
+                    <input
+                        onChange={handleChangeInput}
+                        name={"mobile"}
+                        id={"mobile"}
+                        type={"text"}
+                        className={"form-control"}
+                        placeholder={"09xx-xxx-xx-xx"}
+                    />
+                    <label htmlFor="mobile">Mobile:</label>
+                </div>
+                <p className={"text-danger"}>{errors.mobile}</p>
+                <button type={"submit"} className={"btn btn-primary"}>Submit</button>
+            </form>
+        </>
     )
 }

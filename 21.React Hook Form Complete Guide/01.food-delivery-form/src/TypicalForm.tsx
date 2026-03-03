@@ -1,10 +1,11 @@
 import { useForm } from "react-hook-form";
+import { getRenderCount } from "./lib/getRenderCount";
 
 type TTypicalForm = {
     customerName: string;
     mobile: string;
 }
-
+const RenderCount = getRenderCount("Typical Form")
 export function TypicalForm() {
     const { register, handleSubmit } = useForm<TTypicalForm>()
 
@@ -31,6 +32,7 @@ export function TypicalForm() {
 
 
     return <>
+        <RenderCount />
         <form autoComplete={"off"} onSubmit={handleSubmit(OnSubmit, OnError)}>
             <div className={"form-floating mb-3"}>
                 <input type={"text"}
