@@ -44,7 +44,6 @@ export function FoodDeliveryForm() {
         if (!validateFormData())
             return;
         console.log(evt.target);
-
     }
 
     return (
