@@ -20,3 +20,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+.error-feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--bs-danger);
+}

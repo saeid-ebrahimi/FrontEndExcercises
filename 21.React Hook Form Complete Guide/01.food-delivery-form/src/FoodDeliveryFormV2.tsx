@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form"
+import { useForm, type FieldError, type FieldErrors } from "react-hook-form"
 
 type TFoodDeliveryFormData = {
     orderNumber: number;
@@ -8,7 +8,11 @@ type TFoodDeliveryFormData = {
 }
 
 export function FoodDeliveryForm() {
-    const { register, handleSubmit } = useForm<TFoodDeliveryFormData>({
+    const { register, handleSubmit, formState: { errors } } = useForm<TFoodDeliveryFormData>({
+        mode: "onSubmit",
+        shouldFocusError: true,
+        // reValidateMode: "onSubmit",
+        delayError: 100,
         defaultValues: {
             orderNumber: new Date().valueOf(),
             customerName: "",
@@ -22,8 +26,12 @@ export function FoodDeliveryForm() {
 
     }
 
+    const onError = (errors: FieldErrors) => {
+        console.log(errors);
+
+    }
     return <>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
             <div className="row mb-4">
                 <div className="col">
                     <div className="form-floating">
@@ -31,9 +39,13 @@ export function FoodDeliveryForm() {
                             className={"form-control"}
                             placeholder={"Order number"}
                             {...register("orderNumber", {
-                                required: "Order number is required!"
+                                required: {
+                                    value: true,
+                                    message: "order number value is required!"
+                                }
                             })} />
                         <label htmlFor={"orderNumber"}>Order Number:</label>
+                        {errors?.orderNumber?.message && <div className={"error-feedback"}>{errors?.orderNumber?.message}</div>}
                     </div>
                 </div>
                 <div className={"col"}>
@@ -42,9 +54,21 @@ export function FoodDeliveryForm() {
                             className={"form-control"}
                             placeholder={"Mobile"}
                             {...register("mobile", {
-                                required: "Mobile number is required!"
+                                required: {
+                                    value: true,
+                                    message: "mobile number is required!"
+                                },
+                                minLength: {
+                                    value: 10,
+                                    message: "mobile field must be 10 characters"
+                                },
+                                maxLength: {
+                                    value: 10,
+                                    message: "mobile field must be 10 characters"
+                                }
                             })} />
                         <label htmlFor={"mobile"}>Mobile Number:</label>
+                        {errors.mobile?.message && <div className={"error-feedback"}>{errors.mobile?.message}</div>}
                     </div>
                 </div>
             </div>
@@ -55,9 +79,13 @@ export function FoodDeliveryForm() {
                             className={"form-control"}
                             placeholder={"Customer Name"}
                             {...register("customerName", {
-                                required: "Customer name is required!"
+                                required: {
+                                    value: true,
+                                    message: "customer name is required!"
+                                }
                             })} />
                         <label htmlFor={"customerName"}>Customer Name:</label>
+                        {errors.customerName?.message && <div className={"error-feedback"}>{errors.customerName?.message}</div>}
                     </div>
                 </div>
                 <div className={"col"}>
@@ -66,10 +94,14 @@ export function FoodDeliveryForm() {
                             className={"form-control"}
                             placeholder={"Email"}
                             {...register("email", {
-                                required: "email number is required!"
+                                pattern: {
+                                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                    message: "incorrect email format entered"
+                                }
                             })}
                         />
-                        <label htmlFor={"email"}>Mobile Number:</label>
+                        <label htmlFor={"email"}>Email:</label>
+                        {errors.email?.message && <div className={"error-feedback"}>{errors.email?.message}</div>}
                     </div>
                 </div>
             </div>
