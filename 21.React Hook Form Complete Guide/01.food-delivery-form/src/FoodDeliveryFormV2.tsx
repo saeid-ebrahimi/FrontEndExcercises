@@ -36,11 +36,11 @@ export function FoodDeliveryForm() {
         console.log(errors);
 
     }
-    const paymentStringOptions = [
-        "Select a Method",
-        "Online",
-        "COD"
-    ]
+    // const paymentStringOptions = [
+    //     "Select a Method",
+    //     "Online",
+    //     "COD"
+    // ]
     const paymentOptions = [
         { value: "", label: "Select a Method" },
         { value: "Online", label: "Paid Online" },
