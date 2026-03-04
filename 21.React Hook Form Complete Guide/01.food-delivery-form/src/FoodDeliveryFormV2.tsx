@@ -1,11 +1,14 @@
 import { useForm, type FieldErrors } from "react-hook-form"
 import { TextField } from "./components/controls/TextField";
+import { SelectField } from "./components/controls/SelectField";
 
 type TFoodDeliveryFormData = {
     orderNumber: number;
     customerName: string;
     mobile: string;
     email: string;
+    paymentMethod: string;
+    deliveryIn: number;
 }
 
 export function FoodDeliveryForm() {
@@ -18,7 +21,9 @@ export function FoodDeliveryForm() {
             orderNumber: new Date().valueOf(),
             customerName: "",
             mobile: "",
-            email: ""
+            email: "",
+            paymentMethod: "",
+            deliveryIn: 0,
         }
     })
 
@@ -31,6 +36,23 @@ export function FoodDeliveryForm() {
         console.log(errors);
 
     }
+    const paymentStringOptions = [
+        "Select a Method",
+        "Online",
+        "COD"
+    ]
+    const paymentOptions = [
+        { value: "", label: "Select a Method" },
+        { value: "Online", label: "Paid Online" },
+        { value: "COD", label: "Cash on Delivery" },
+    ]
+    const deliveryInOptions = [
+        { value: 0, label: "In Minute" },
+        { value: 30, label: "Half an Hour" },
+        { value: 60, label: "1 Hour" },
+        { value: 120, label: "2 Hours" },
+        { value: 180, label: "3 Hours" },
+    ]
     return <>
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
             <div className="row mb-4">
@@ -121,6 +143,47 @@ export function FoodDeliveryForm() {
                     </div> */}
                 </div>
             </div>
+            <div>List of ordered food items</div>
+            <div className="row mb-2">
+                <div className="col">
+                    {/* <SelectField
+                        label="Payment Method"
+                        options={paymentStringOptions}
+                        {...register("paymentMethod", {
+                            required: {
+                                value: true,
+                                message: "Select an Payment Method"
+                            }
+                        })}
+                        error={errors.paymentMethod}
+                    /> */}
+                    <SelectField
+                        label="Payment Method"
+                        options={paymentOptions}
+                        {...register("paymentMethod", {
+                            required: {
+                                value: true,
+                                message: "Select an Payment Method"
+                            }
+                        })}
+                        error={errors.paymentMethod}
+                    />
+                </div>
+                <div className="col">
+                    <SelectField
+                        label="Delivery Within"
+                        options={deliveryInOptions}
+                        {...register("deliveryIn", {
+                            required: {
+                                value: true,
+                                message: "Select a Delivery Time"
+                            }
+                        })}
+                        error={errors.deliveryIn}
+                    />
+                </div>
+            </div>
+            <div>delivery address</div>
             <button type={"submit"} className={"btn btn-primary"}>Submit Order</button>
         </form>
     </>
