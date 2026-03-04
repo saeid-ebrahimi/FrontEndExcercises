@@ -1,4 +1,4 @@
-import { useForm, type FieldError, type FieldErrors } from "react-hook-form"
+import { useForm, type FieldErrors } from "react-hook-form"
 
 type TFoodDeliveryFormData = {
     orderNumber: number;
@@ -97,6 +97,10 @@ export function FoodDeliveryForm() {
                                 pattern: {
                                     value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                                     message: "incorrect email format entered"
+                                },
+                                validate: {
+                                    notFake: (value) => value !== "email@gmail.com" || "the email is blocked",
+                                    notFromBlacklistedDomain: (value) => (!value.endsWith(".ir") && !value.includes("@example")) || "this domain is blocked"
                                 }
                             })}
                         />
