@@ -9,6 +9,12 @@ type TFoodDeliveryFormData = {
     email: string;
     paymentMethod: string;
     deliveryIn: number;
+    address: {
+        streetAddress: string;
+        landmark: string;
+        city: string;
+        state: string;
+    }
 }
 
 export function FoodDeliveryForm() {
@@ -24,6 +30,12 @@ export function FoodDeliveryForm() {
             email: "",
             paymentMethod: "",
             deliveryIn: 0,
+            address: {
+                streetAddress: "",
+                landmark: "",
+                city: "",
+                state: "",
+            }
         }
     })
 
@@ -144,7 +156,10 @@ export function FoodDeliveryForm() {
                 </div>
             </div>
             <div>List of ordered food items</div>
-            <div className="row mb-2">
+            <div className="text-start fw-bold mt-4 mb-4">
+                Checkout Details
+            </div>
+            <div className="row mb-4">
                 <div className="col">
                     {/* <SelectField
                         label="Payment Method"
@@ -183,7 +198,49 @@ export function FoodDeliveryForm() {
                     />
                 </div>
             </div>
-            <div>delivery address</div>
+            <div className="text-start fw-bold mt-4 mb-4">
+                Delivery Address
+            </div>
+            <div className={"row mb-4"}>
+                <div className="col">
+                    <TextField
+                        label={"Street Address:"}
+                        placeholder={"enter street address"}
+                        error={errors.address?.streetAddress}
+                        {...register("address.streetAddress", {
+                            required: "street address is required!"
+                        })}
+                    />
+                </div>
+                <div className="col">
+                    <TextField
+                        label={"City:"}
+                        placeholder={"enter city"}
+                        error={errors.address?.city}
+                        {...register("address.city", {
+                            required: "city is required!"
+                        })}
+                    />
+                </div>
+            </div>
+            <div className={"row mb-4"}>
+                <div className="col">
+                    <TextField
+                        label={"Landmark:"}
+                        placeholder={"enter landmark"}
+                        error={errors.address?.landmark}
+                        {...register("address.landmark")}
+                    />
+                </div>
+                <div className="col">
+                    <TextField
+                        label={"State:"}
+                        placeholder={"enter state"}
+                        error={errors.address?.state}
+                        {...register("address.state")}
+                    />
+                </div>
+            </div>
             <button type={"submit"} className={"btn btn-primary"}>Submit Order</button>
         </form>
     </>
