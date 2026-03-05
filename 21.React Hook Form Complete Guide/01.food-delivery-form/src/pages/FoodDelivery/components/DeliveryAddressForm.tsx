@@ -1,15 +1,15 @@
 import { useFormContext, useFormState } from "react-hook-form"
 import type { TDeliveryAddressFormData } from "../../../types"
 import { TextField } from "../../../components/controls/TextField"
-import { getRenderCount } from "../../../lib/getRenderCount"
+// import { getRenderCount } from "../../../lib/getRenderCount"
 
-const RenderCount = getRenderCount("DeliveryAddressForm")
+// const RenderCount = getRenderCount("DeliveryAddressForm")
 
 export function DeliveryAddressForm() {
     const { register } = useFormContext<{ address: TDeliveryAddressFormData }>()
     const { errors } = useFormState<{ address: TDeliveryAddressFormData }>({ name: "address", exact: true })
     return <>
-        <RenderCount />
+        {/* <RenderCount /> */}
         <div className="text-start fw-bold mt-4 mb-4">
             Delivery Address
         </div>

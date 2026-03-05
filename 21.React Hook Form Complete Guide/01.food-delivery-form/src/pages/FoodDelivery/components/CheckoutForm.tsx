@@ -1,9 +1,9 @@
 import { useFormContext, useFormState } from "react-hook-form"
 import { SelectField } from "../../../components/controls/SelectField"
 import type { TCheckoutFormData } from "../../../types"
-import { getRenderCount } from "../../../lib/getRenderCount"
+// import { getRenderCount } from "../../../lib/getRenderCount"
 
-const RenderCount = getRenderCount("CheckoutForm")
+// const RenderCount = getRenderCount("CheckoutForm")
 
 export const CheckoutForm = () => {
     const { register } = useFormContext<TCheckoutFormData>()
@@ -30,7 +30,7 @@ export const CheckoutForm = () => {
 
     return (
         <>
-            <RenderCount />
+            {/* <RenderCount /> */}
             <div className="text-start fw-bold mt-4 mb-4">
                 Checkout Details
             </div>
@@ -39,12 +39,14 @@ export const CheckoutForm = () => {
                     <SelectField
                         label="Payment Method"
                         options={paymentOptions}
-                        {...register("paymentMethod", {
-                            required: {
-                                value: true,
-                                message: "Select an Payment Method"
-                            }
-                        })}
+                        {...register("paymentMethod",
+                            // {
+                            //     required: {
+                            //         value: true,
+                            //         message: "Select an Payment Method"
+                            //     }
+                            // }
+                        )}
                         error={errors.paymentMethod}
                     />
                 </div>
