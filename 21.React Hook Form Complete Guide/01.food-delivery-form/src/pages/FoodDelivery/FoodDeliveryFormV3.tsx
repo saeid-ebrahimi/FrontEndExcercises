@@ -32,17 +32,18 @@ export function FoodDeliveryForm() {
     })
 
     const { handleSubmit,
-        formState: {
-            // errors,
-            // dirtyFields,
-            // touchedFields,
-            // isValid,
-            // isValidating
-            isSubmitting,
-            // isSubmitted,
-            // isSubmitSuccessful,
-            submitCount,
-        }
+        control,
+        // formState: {
+        // errors,
+        // dirtyFields,
+        // touchedFields,
+        // isValid,
+        // isValidating
+        // isSubmitting,
+        // isSubmitted,
+        // isSubmitSuccessful,
+        // submitCount,
+        // }
     } = formMethods
 
     // console.log("errors", errors);
@@ -66,7 +67,7 @@ export function FoodDeliveryForm() {
     }
 
     return <>
-        <p>submit count is {submitCount}</p>
+        {/* <p>submit count is {submitCount}</p> */}
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
             <RenderCount />
             <FormProvider {...formMethods} >
@@ -75,7 +76,7 @@ export function FoodDeliveryForm() {
                 <CheckoutForm />
                 <DeliveryAddressForm />
             </FormProvider>
-            <SubmitButton type={"submit"} text={"Submit Order"} isSubmitting={isSubmitting} />
+            <SubmitButton type={"submit"} text={"Submit Order"} control={control} />
         </form>
     </>
 }
