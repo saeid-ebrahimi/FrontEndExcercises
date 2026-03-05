@@ -1,9 +1,11 @@
+
 import { FormProvider, useForm, type FieldErrors, type UseFormReturn } from "react-hook-form"
 import { CheckoutForm } from "./components/CheckoutForm";
 import type { TFoodDeliveryFormData } from "../../types";
 import { DeliveryAddressForm } from "./components/DeliveryAddressForm";
 import { FoodDeliveryMasterForm } from "./components/FoodDeliveryMasterForm";
 import { getRenderCount } from "../../lib/getRenderCount";
+import { SubmitButton } from "./components/SubmitButton";
 
 
 const RenderCount = getRenderCount("FoodDeliveryForm")
@@ -73,7 +75,7 @@ export function FoodDeliveryForm() {
                 <CheckoutForm />
                 <DeliveryAddressForm />
             </FormProvider>
-            <button type={"submit"} className={"btn btn-primary"}>Submit Order</button>
+            <SubmitButton type={"submit"} text={"Submit Order"} isSubmitting={isSubmitting} />
         </form>
     </>
 }
