@@ -12,7 +12,7 @@ export function FoodDeliveryMasterForm() {
             "customerName",
             "mobile",
             "email",],
-
+        exact: true,
     })
     return (
         <>

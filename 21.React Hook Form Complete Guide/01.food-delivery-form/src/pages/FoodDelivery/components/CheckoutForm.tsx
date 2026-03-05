@@ -7,7 +7,13 @@ const RenderCount = getRenderCount("CheckoutForm")
 
 export const CheckoutForm = () => {
     const { register } = useFormContext<TCheckoutFormData>()
-    const { errors } = useFormState<TCheckoutFormData>({ name: ["deliveryIn", "paymentMethod"] })
+    const { errors } = useFormState<TCheckoutFormData>(
+        {
+            name: ["deliveryIn", "paymentMethod"],
+            exact: true,
+            // disabled:true,
+        })
+
     const paymentOptions = [
         { value: "", label: "Select a Method" },
         { value: "Online", label: "Paid Online" },

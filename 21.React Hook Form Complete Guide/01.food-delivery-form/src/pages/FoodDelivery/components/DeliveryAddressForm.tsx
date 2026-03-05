@@ -7,7 +7,7 @@ const RenderCount = getRenderCount("DeliveryAddressForm")
 
 export function DeliveryAddressForm() {
     const { register } = useFormContext<{ address: TDeliveryAddressFormData }>()
-    const { errors } = useFormState<{ address: TDeliveryAddressFormData }>({ name: "address" })
+    const { errors } = useFormState<{ address: TDeliveryAddressFormData }>({ name: "address", exact: true })
     return <>
         <RenderCount />
         <div className="text-start fw-bold mt-4 mb-4">
