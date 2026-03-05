@@ -39,8 +39,8 @@ export function FoodDeliveryForm() {
             // isValid,
             // isValidating
             isSubmitting,
-            isSubmitted,
-            isSubmitSuccessful,
+            // isSubmitted,
+            // isSubmitSuccessful,
             submitCount,
         }
     } = formMethods
@@ -51,9 +51,9 @@ export function FoodDeliveryForm() {
     // console.log("isValid", isValid);
     // console.log("isValidating", isValidating);
 
-    console.log("isSubmitting", isSubmitting);
-    console.log("isSubmitted", isSubmitted);
-    console.log("isSubmit Successful", isSubmitSuccessful);
+    // console.log("isSubmitting", isSubmitting);
+    // console.log("isSubmitted", isSubmitted);
+    // console.log("isSubmit Successful", isSubmitSuccessful);
 
     const onSubmit = async (formData: TFoodDeliveryFormData) => {
         await new Promise((resolve) => setTimeout(resolve, 2000))

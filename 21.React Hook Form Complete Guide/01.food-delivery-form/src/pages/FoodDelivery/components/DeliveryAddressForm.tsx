@@ -1,10 +1,15 @@
-import { useFormContext } from "react-hook-form"
+import { useFormContext, useFormState } from "react-hook-form"
 import type { TDeliveryAddressFormData } from "../../../types"
 import { TextField } from "../../../components/controls/TextField"
+import { getRenderCount } from "../../../lib/getRenderCount"
+
+const RenderCount = getRenderCount("DeliveryAddressForm")
 
 export function DeliveryAddressForm() {
-    const { register, formState: { errors } } = useFormContext<{ address: TDeliveryAddressFormData }>()
+    const { register } = useFormContext<{ address: TDeliveryAddressFormData }>()
+    const { errors } = useFormState<TDeliveryAddressFormData>({ name: ["city", "landmark", "state", "streetAddress"] })
     return <>
+        <RenderCount />
         <div className="text-start fw-bold mt-4 mb-4">
             Delivery Address
         </div>
@@ -13,7 +18,7 @@ export function DeliveryAddressForm() {
                 <TextField
                     label={"Street Address:"}
                     placeholder={"enter street address"}
-                    error={errors.address?.streetAddress}
+                    error={errors?.streetAddress}
                     {...register("address.streetAddress", {
                         required: "street address is required!"
                     })}
@@ -23,7 +28,7 @@ export function DeliveryAddressForm() {
                 <TextField
                     label={"City:"}
                     placeholder={"enter city"}
-                    error={errors.address?.city}
+                    error={errors?.city}
                     {...register("address.city", {
                         required: "city is required!"
                     })}
@@ -35,7 +40,7 @@ export function DeliveryAddressForm() {
                 <TextField
                     label={"Landmark:"}
                     placeholder={"enter landmark"}
-                    error={errors.address?.landmark}
+                    error={errors.landmark}
                     {...register("address.landmark")}
                 />
             </div>
@@ -43,7 +48,7 @@ export function DeliveryAddressForm() {
                 <TextField
                     label={"State:"}
                     placeholder={"enter state"}
-                    error={errors.address?.state}
+                    error={errors.state}
                     {...register("address.state")}
                 />
             </div>
