@@ -3,7 +3,7 @@ import { TextField } from "../../../components/controls/TextField";
 import type { TFoodDeliveryMasterFormData } from "../../../types";
 
 export function FoodDeliveryMasterForm() {
-    const { register, handleSubmit, formState: { errors } } = useFormContext<TFoodDeliveryMasterFormData>()
+    const { register, formState: { errors } } = useFormContext<TFoodDeliveryMasterFormData>()
     return (
         <>
             <div className="row mb-4">

@@ -3,7 +3,7 @@ import { SelectField } from "../../../components/controls/SelectField"
 import type { TCheckoutFormData } from "../../../types"
 
 export const CheckoutForm = () => {
-    const { register, handleSubmit, formState: { errors } } = useFormContext<TCheckoutFormData>()
+    const { register, formState: { errors } } = useFormContext<TCheckoutFormData>()
 
     const paymentOptions = [
         { value: "", label: "Select a Method" },

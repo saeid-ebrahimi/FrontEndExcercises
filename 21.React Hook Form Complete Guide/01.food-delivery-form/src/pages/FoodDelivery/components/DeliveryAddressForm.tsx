@@ -3,7 +3,7 @@ import type { TDeliveryAddressFormData } from "../../../types"
 import { TextField } from "../../../components/controls/TextField"
 
 export function DeliveryAddressForm() {
-    const { register, handleSubmit, formState: { errors } } = useFormContext<{ address: TDeliveryAddressFormData }>()
+    const { register, formState: { errors } } = useFormContext<{ address: TDeliveryAddressFormData }>()
     return <>
         <div className="text-start fw-bold mt-4 mb-4">
             Delivery Address
