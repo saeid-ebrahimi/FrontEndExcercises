@@ -29,7 +29,23 @@ export function FoodDeliveryForm() {
         }
     })
 
-    const { register, handleSubmit, formState: { errors } } = formMethods
+    const { handleSubmit,
+        formState: {
+            errors,
+            dirtyFields,
+            touchedFields,
+            isValid,
+            isValidating
+        }
+    } = formMethods
+
+    console.log("errors", errors);
+    console.log("dirty fields", dirtyFields);
+    console.log("touched fields", touchedFields);
+    console.log("isValid", isValid);
+    console.log("isValidating", isValidating);
+
+
 
     const onSubmit = (formData: TFoodDeliveryFormData) => {
         console.log("form data", formData);
