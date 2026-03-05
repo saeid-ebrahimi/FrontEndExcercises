@@ -1,24 +1,12 @@
-import { useForm, type FieldErrors } from "react-hook-form"
+import { FormProvider, useForm, type FieldErrors, type UseFormReturn } from "react-hook-form"
 import { TextField } from "./components/controls/TextField";
 import { CheckoutForm } from "./CheckoutForm";
+import type { TFoodDeliveryFormData } from "./types";
 
-type TFoodDeliveryFormData = {
-    orderNumber: number;
-    customerName: string;
-    mobile: string;
-    email: string;
-    paymentMethod: string;
-    deliveryIn: number;
-    address: {
-        streetAddress: string;
-        landmark: string;
-        city: string;
-        state: string;
-    }
-}
+
 
 export function FoodDeliveryForm() {
-    const { register, handleSubmit, formState: { errors } } = useForm<TFoodDeliveryFormData>({
+    const formMethods: UseFormReturn<TFoodDeliveryFormData> = useForm<TFoodDeliveryFormData>({
         mode: "onSubmit",
         shouldFocusError: true,
         // reValidateMode: "onSubmit",
@@ -38,6 +26,8 @@ export function FoodDeliveryForm() {
             }
         }
     })
+
+    const { register, handleSubmit, formState: { errors } } = formMethods
 
     const onSubmit = (formData: TFoodDeliveryFormData) => {
         console.log("form data", formData);
@@ -119,10 +109,30 @@ export function FoodDeliveryForm() {
                         })}
                         error={errors.email}
                     />
+                    {/* <div className="form-floating">
+                        <input type={"text"}
+                            className={"form-control"}
+                            placeholder={"Email"}
+                            {...register("email", {
+                                pattern: {
+                                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                    message: "incorrect email format entered"
+                                },
+                                validate: {
+                                    notFake: (value) => value !== "email@gmail.com" || "the email is blocked",
+                                    notFromBlacklistedDomain: (value) => (!value.endsWith(".ir") && !value.includes("@example")) || "this domain is blocked"
+                                }
+                            })}
+                        />
+                        <label htmlFor={"email"}>Email:</label>
+                        {errors.email?.message && <div className={"error-feedback"}>{errors.email?.message}</div>}
+                    </div> */}
                 </div>
             </div>
             <div>List of ordered food items</div>
-            <CheckoutForm />
+            <FormProvider {...formMethods} >
+                <CheckoutForm />
+            </FormProvider>
             <div className="text-start fw-bold mt-4 mb-4">
                 Delivery Address
             </div>
@@ -133,7 +143,7 @@ export function FoodDeliveryForm() {
                         placeholder={"enter street address"}
                         error={errors.address?.streetAddress}
                         {...register("address.streetAddress", {
-                            required: "Street Address is required!"
+                            required: "street address is required!"
                         })}
                     />
                 </div>
