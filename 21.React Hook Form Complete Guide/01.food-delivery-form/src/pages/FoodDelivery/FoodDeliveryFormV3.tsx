@@ -1,12 +1,12 @@
 import { FormProvider, useForm, type FieldErrors, type UseFormReturn } from "react-hook-form"
-import { TextField } from "../../components/controls/TextField";
 import { CheckoutForm } from "./components/CheckoutForm";
 import type { TFoodDeliveryFormData } from "../../types";
 import { DeliveryAddressForm } from "./components/DeliveryAddressForm";
 import { FoodDeliveryMasterForm } from "./components/FoodDeliveryMasterForm";
+import { getRenderCount } from "../../lib/getRenderCount";
 
 
-
+const RenderCount = getRenderCount("FoodDeliveryForm")
 export function FoodDeliveryForm() {
     const formMethods: UseFormReturn<TFoodDeliveryFormData> = useForm<TFoodDeliveryFormData>({
         mode: "onSubmit",
@@ -31,25 +31,31 @@ export function FoodDeliveryForm() {
 
     const { handleSubmit,
         formState: {
-            errors,
-            dirtyFields,
-            touchedFields,
-            isValid,
-            isValidating
+            // errors,
+            // dirtyFields,
+            // touchedFields,
+            // isValid,
+            // isValidating
+            isSubmitting,
+            isSubmitted,
+            isSubmitSuccessful,
+            submitCount,
         }
     } = formMethods
 
-    console.log("errors", errors);
-    console.log("dirty fields", dirtyFields);
-    console.log("touched fields", touchedFields);
-    console.log("isValid", isValid);
-    console.log("isValidating", isValidating);
+    // console.log("errors", errors);
+    // console.log("dirty fields", dirtyFields);
+    // console.log("touched fields", touchedFields);
+    // console.log("isValid", isValid);
+    // console.log("isValidating", isValidating);
 
+    console.log("isSubmitting", isSubmitting);
+    console.log("isSubmitted", isSubmitted);
+    console.log("isSubmit Successful", isSubmitSuccessful);
 
-
-    const onSubmit = (formData: TFoodDeliveryFormData) => {
+    const onSubmit = async (formData: TFoodDeliveryFormData) => {
+        await new Promise((resolve) => setTimeout(resolve, 2000))
         console.log("form data", formData);
-
     }
 
     const onError = (errors: FieldErrors) => {
@@ -58,8 +64,9 @@ export function FoodDeliveryForm() {
     }
 
     return <>
+        <p>submit count is {submitCount}</p>
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
-
+            <RenderCount />
             <FormProvider {...formMethods} >
                 <FoodDeliveryMasterForm />
                 <div>List of ordered food items</div>
