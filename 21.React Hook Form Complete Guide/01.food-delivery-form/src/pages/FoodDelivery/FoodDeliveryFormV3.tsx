@@ -73,7 +73,6 @@ export function FoodDeliveryForm() {
                 <CheckoutForm />
                 <DeliveryAddressForm />
             </FormProvider>
-
             <button type={"submit"} className={"btn btn-primary"}>Submit Order</button>
         </form>
     </>
