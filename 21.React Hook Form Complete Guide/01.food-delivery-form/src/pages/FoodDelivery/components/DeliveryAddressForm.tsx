@@ -7,7 +7,7 @@ const RenderCount = getRenderCount("DeliveryAddressForm")
 
 export function DeliveryAddressForm() {
     const { register } = useFormContext<{ address: TDeliveryAddressFormData }>()
-    const { errors } = useFormState<TDeliveryAddressFormData>({ name: ["city", "landmark", "state", "streetAddress"] })
+    const { errors } = useFormState<{ address: TDeliveryAddressFormData }>({ name: "address" })
     return <>
         <RenderCount />
         <div className="text-start fw-bold mt-4 mb-4">
@@ -18,7 +18,7 @@ export function DeliveryAddressForm() {
                 <TextField
                     label={"Street Address:"}
                     placeholder={"enter street address"}
-                    error={errors?.streetAddress}
+                    error={errors?.address?.streetAddress}
                     {...register("address.streetAddress", {
                         required: "street address is required!"
                     })}
@@ -28,7 +28,7 @@ export function DeliveryAddressForm() {
                 <TextField
                     label={"City:"}
                     placeholder={"enter city"}
-                    error={errors?.city}
+                    error={errors?.address?.city}
                     {...register("address.city", {
                         required: "city is required!"
                     })}
@@ -40,7 +40,7 @@ export function DeliveryAddressForm() {
                 <TextField
                     label={"Landmark:"}
                     placeholder={"enter landmark"}
-                    error={errors.landmark}
+                    error={errors?.address?.landmark}
                     {...register("address.landmark")}
                 />
             </div>
@@ -48,7 +48,7 @@ export function DeliveryAddressForm() {
                 <TextField
                     label={"State:"}
                     placeholder={"enter state"}
-                    error={errors.state}
+                    error={errors?.address?.state}
                     {...register("address.state")}
                 />
             </div>
