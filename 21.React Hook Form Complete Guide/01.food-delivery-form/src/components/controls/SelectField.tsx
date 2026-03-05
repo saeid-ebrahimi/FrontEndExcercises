@@ -13,6 +13,7 @@ export const SelectField = forwardRef((props: ISelectFieldProps, ref: ForwardedR
     function optionIsString(value: TSelectOption) {
         return typeof value === "string"
     }
+
     return (
         <div className={"form-floating"}>
             <select className={`form-select ${className}`} ref={ref} {...rest} >

@@ -1,14 +1,16 @@
 import { useFormContext } from "react-hook-form"
-import { SelectField } from "./components/controls/SelectField"
-import type { TCheckoutForm } from "./types"
+import { SelectField } from "../../../components/controls/SelectField"
+import type { TCheckoutFormData } from "../../../types"
 
 export const CheckoutForm = () => {
-    const { register, handleSubmit, formState: { errors } } = useFormContext<TCheckoutForm>()
+    const { register, handleSubmit, formState: { errors } } = useFormContext<TCheckoutFormData>()
+
     const paymentOptions = [
         { value: "", label: "Select a Method" },
         { value: "Online", label: "Paid Online" },
         { value: "COD", label: "Cash on Delivery" },
     ]
+
     const deliveryInOptions = [
         { value: 0, label: "In Minute" },
         { value: 30, label: "Half an Hour" },
@@ -16,6 +18,7 @@ export const CheckoutForm = () => {
         { value: 120, label: "2 Hours" },
         { value: 180, label: "3 Hours" },
     ]
+
     return (
         <>
             <div className="text-start fw-bold mt-4 mb-4">

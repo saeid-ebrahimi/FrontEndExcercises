@@ -5,21 +5,25 @@ export type TSelectOption =
       label: string;
     };
 
-export type TCheckoutForm = {
+export type TCheckoutFormData = {
   paymentMethod: string;
   deliveryIn: number;
 };
 
+export type TDeliveryAddressFormData = {
+  streetAddress: string;
+  landmark: string;
+  city: string;
+  state: string;
+};
+export type TFoodDeliveryMasterFormData = {
+  orderNumber: number;
+  customerName: string;
+  mobile: string;
+  email: string;
+};
 export type TFoodDeliveryFormData =
-  TCheckoutForm & {
-    orderNumber: number;
-    customerName: string;
-    mobile: string;
-    email: string;
-    address: {
-      streetAddress: string;
-      landmark: string;
-      city: string;
-      state: string;
+  TCheckoutFormData &
+    TFoodDeliveryMasterFormData & {
+      address: TDeliveryAddressFormData;
     };
-  };
