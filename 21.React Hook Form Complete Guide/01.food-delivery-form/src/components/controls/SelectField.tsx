@@ -16,7 +16,7 @@ export const SelectField = forwardRef((props: ISelectFieldProps, ref: ForwardedR
 
     return (
         <div className={"form-floating"}>
-            <select className={`form-select ${className}`} ref={ref} {...rest} >
+            <select className={`form-select ${className}`} name={name} ref={ref} {...rest} >
                 {options.map((option, index) =>
                     <option
                         key={index}

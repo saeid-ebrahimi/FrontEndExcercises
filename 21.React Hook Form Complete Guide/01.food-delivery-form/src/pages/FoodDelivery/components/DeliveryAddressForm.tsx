@@ -1,13 +1,16 @@
 import { useFormContext, useFormState } from "react-hook-form"
 import type { TDeliveryAddressFormData } from "../../../types"
 import { TextField } from "../../../components/controls/TextField"
-// import { getRenderCount } from "../../../lib/getRenderCount"
 
 // const RenderCount = getRenderCount("DeliveryAddressForm")
 
 export function DeliveryAddressForm() {
-    const { register } = useFormContext<{ address: TDeliveryAddressFormData }>()
-    const { errors } = useFormState<{ address: TDeliveryAddressFormData }>({ name: "address", exact: true })
+    const { register,
+        // getFieldState
+    } = useFormContext<{ address: TDeliveryAddressFormData }>()
+    const { errors,
+        // touchedFields
+    } = useFormState<{ address: TDeliveryAddressFormData }>({ name: "address", exact: true })
     return <>
         {/* <RenderCount /> */}
         <div className="text-start fw-bold mt-4 mb-4">
@@ -53,5 +56,6 @@ export function DeliveryAddressForm() {
                 />
             </div>
         </div>
+        {/* {getFieldState("address")?.isTouched && <div>The Address is touched!</div>} */}
     </>
 }

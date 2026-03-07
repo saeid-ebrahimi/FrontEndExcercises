@@ -40,12 +40,12 @@ export const CheckoutForm = () => {
                         label="Payment Method"
                         options={paymentOptions}
                         {...register("paymentMethod",
-                            // {
-                            //     required: {
-                            //         value: true,
-                            //         message: "Select an Payment Method"
-                            //     }
-                            // }
+                            {
+                                required: {
+                                    value: true,
+                                    message: "Select an Payment Method"
+                                }
+                            }
                         )}
                         error={errors.paymentMethod}
                     />

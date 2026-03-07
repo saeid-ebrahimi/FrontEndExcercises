@@ -1,9 +1,8 @@
 
 import type { ButtonHTMLAttributes } from "react";
-import { getRenderCount } from "../../../lib/getRenderCount";
 import { useFormState, type Control } from "react-hook-form";
 
-const RenderCount = getRenderCount("Submit Button")
+// const RenderCount = getRenderCount("Submit Button")
 interface ISubmitButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     text?: string;
     control?: Control<any, any>
@@ -12,7 +11,7 @@ export function SubmitButton(props: ISubmitButtonProps) {
     const { className = "btn-light", control = undefined, text, ...rest } = props
     if (control)
         return <>
-            <RenderCount />
+            {/* <RenderCount /> */}
             {control ?
                 <WithControl className={className} control={control} text={text} {...rest} />
                 :

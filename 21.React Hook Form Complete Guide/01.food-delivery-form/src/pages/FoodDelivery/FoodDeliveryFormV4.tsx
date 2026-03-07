@@ -6,6 +6,7 @@ import { DeliveryAddressForm } from "./components/DeliveryAddressForm";
 import { FoodDeliveryMasterForm } from "./components/FoodDeliveryMasterForm";
 import { getRenderCount } from "../../lib/getRenderCount";
 import { SubmitButton } from "./components/SubmitButton";
+import { useEffect } from "react";
 
 
 const RenderCount = getRenderCount("FoodDeliveryForm")
@@ -13,7 +14,6 @@ export function FoodDeliveryForm() {
     const formMethods: UseFormReturn<TFoodDeliveryFormData> = useForm<TFoodDeliveryFormData>({
         mode: "onSubmit",
         shouldFocusError: true,
-        // reValidateMode: "onSubmit",
         delayError: 100,
         defaultValues: {
             orderNumber: new Date().valueOf(),
@@ -31,33 +31,37 @@ export function FoodDeliveryForm() {
         }
     })
 
-    const { handleSubmit,
-        control,
-        // getFieldState,
-        formState: {
-            // touchedFields,
-            // errors,
-            // dirtyFields,
-            // touchedFields,
-            // isValid,
-            // isValidating
-            // isSubmitting,
-            // isSubmitted,
-            // isSubmitSuccessful,
-            // submitCount,
-        }
-        // getFieldState,
-    } = formMethods
+    const { handleSubmit, control, watch } = formMethods
 
-    // console.log("errors", errors);
-    // console.log("dirty fields", dirtyFields);
-    // console.log("touched fields", touchedFields);
-    // console.log("isValid", isValid);
-    // console.log("isValidating", isValidating);
+    // these two way of using watch, subscript to the form and rerender the form by changing the watched values
+    // console.log(watch(["address.city", "customerName"]))
+    // console.log(watch("address.city"))
 
-    // console.log("isSubmitting", isSubmitting);
-    // console.log("isSubmitted", isSubmitted);
-    // console.log("isSubmit Successful", isSubmitSuccessful);
+    // watch all values without rerendering the form and subscription
+    // watch((value, { name, type }) => console.log(value, name, type))
+
+    // const allControls = watch()
+    // console.log(allControls);
+
+
+    // const mobile = watch("mobile", "0982") // "0982" is default watch value not the field value
+    // console.log(mobile);
+    // default values are watch values before registering watch to the form
+    // const watchOutput = watch(["email", "customerName",], { email: "sdda@gmail.com", customerName: "Smith" })
+    // console.log(watchOutput);
+
+    // const paymentMethod = watch("paymentMethod")
+
+
+    // useEffect(() => {
+    //     if (paymentMethod === "Online")
+    //         alert("Please verify the payment")
+    // }, [paymentMethod])
+
+    useEffect(() => {
+        const subscription = watch((value, { name, type }) => console.log(value, name, type))
+        return () => subscription.unsubscribe()
+    }, [watch])
 
     const onSubmit = async (formData: TFoodDeliveryFormData) => {
         await new Promise((resolve) => setTimeout(resolve, 2000))
@@ -66,11 +70,9 @@ export function FoodDeliveryForm() {
 
     const onError = (errors: FieldErrors) => {
         console.log("errors:", errors);
-        // console.log("address state", getFieldState("address"))
     }
 
     return <>
-        {/* <p>submit count is {submitCount}</p> */}
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
             <RenderCount />
             <FormProvider {...formMethods} >
@@ -79,7 +81,6 @@ export function FoodDeliveryForm() {
                 <CheckoutForm />
                 <DeliveryAddressForm />
             </FormProvider>
-            {/* {getFieldState("address").isTouched && <div>field is touched </div>} */}
             <SubmitButton type={"submit"} text={"Submit Order"} control={control} />
 
         </form>
