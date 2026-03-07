@@ -6,7 +6,7 @@ import { DeliveryAddressForm } from "./components/DeliveryAddressForm";
 import { FoodDeliveryMasterForm } from "./components/FoodDeliveryMasterForm";
 import { getRenderCount } from "../../lib/getRenderCount";
 import { SubmitButton } from "./components/SubmitButton";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 
 const RenderCount = getRenderCount("FoodDeliveryForm")
@@ -32,7 +32,9 @@ export function FoodDeliveryForm() {
     })
 
     const { handleSubmit, control,
-        // watch
+        // watch,
+        getValues,
+        setValue
     } = formMethods
 
     // these two way of using watch, subscript to the form and rerender the form by changing the watched values
@@ -74,6 +76,21 @@ export function FoodDeliveryForm() {
         console.log("errors:", errors);
     }
 
+    const onSetValue = () => {
+        // console.log(getValues("mobile"))
+        // console.log(getValues(["customerName", "email"]))
+        // console.log(getValues())
+        setValue("customerName", "", {
+            shouldValidate: true,
+            shouldDirty: true,
+            shouldTouch: true,
+        })
+        setValue("paymentMethod", "COD", {
+            shouldValidate: true,
+            shouldDirty: true,
+            shouldTouch: true,
+        })
+    }
     return <>
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
             <RenderCount />
@@ -84,7 +101,7 @@ export function FoodDeliveryForm() {
                 <DeliveryAddressForm />
             </FormProvider>
             <SubmitButton type={"submit"} text={"Submit Order"} control={control} />
-
+            <button type={"button"} className={"btn btn-secondary ms-2"} onClick={onSetValue}>Set Values</button>
         </form>
     </>
 }
