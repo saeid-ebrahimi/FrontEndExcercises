@@ -31,7 +31,9 @@ export function FoodDeliveryForm() {
         }
     })
 
-    const { handleSubmit, control, watch } = formMethods
+    const { handleSubmit, control,
+        // watch
+    } = formMethods
 
     // these two way of using watch, subscript to the form and rerender the form by changing the watched values
     // console.log(watch(["address.city", "customerName"]))
@@ -58,10 +60,10 @@ export function FoodDeliveryForm() {
     //         alert("Please verify the payment")
     // }, [paymentMethod])
 
-    useEffect(() => {
-        const subscription = watch((value, { name, type }) => console.log(value, name, type))
-        return () => subscription.unsubscribe()
-    }, [watch])
+    // useEffect(() => {
+    //     const subscription = watch((value, { name, type }) => console.log(value, name, type))
+    //     return () => subscription.unsubscribe()
+    // }, [watch])
 
     const onSubmit = async (formData: TFoodDeliveryFormData) => {
         await new Promise((resolve) => setTimeout(resolve, 2000))

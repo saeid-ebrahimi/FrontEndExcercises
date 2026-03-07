@@ -1,18 +1,29 @@
-import { useFormContext, useFormState } from "react-hook-form"
+import { useFormContext, useFormState, useWatch } from "react-hook-form"
 import { SelectField } from "../../../components/controls/SelectField"
 import type { TCheckoutFormData } from "../../../types"
+import { useEffect } from "react"
 // import { getRenderCount } from "../../../lib/getRenderCount"
 
 // const RenderCount = getRenderCount("CheckoutForm")
 
 export const CheckoutForm = () => {
-    const { register } = useFormContext<TCheckoutFormData>()
+    const { register,
+        // watch
+    } = useFormContext<TCheckoutFormData>()
     const { errors } = useFormState<TCheckoutFormData>(
         {
             name: ["deliveryIn", "paymentMethod"],
             exact: true,
             // disabled:true,
         })
+
+    // it rerender all the form while changing payment method
+    // const paymentMethod = watch("paymentMethod")
+
+    const paymentMethod = useWatch({ name: "paymentMethod", exact: true })
+
+    // use this method if you don't use useFormContext
+    // const paymentMethod = useWatch({ name: "paymentMethod", exact: true, control: control })
 
     const paymentOptions = [
         { value: "", label: "Select a Method" },
@@ -28,6 +39,11 @@ export const CheckoutForm = () => {
         { value: 180, label: "3 Hours" },
     ]
 
+
+    useEffect(() => {
+        if (paymentMethod === "Online")
+            alert("Please verify the payment")
+    }, [paymentMethod])
     return (
         <>
             {/* <RenderCount /> */}
