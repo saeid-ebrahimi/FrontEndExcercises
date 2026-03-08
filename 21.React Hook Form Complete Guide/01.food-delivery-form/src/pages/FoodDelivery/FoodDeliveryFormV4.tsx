@@ -33,7 +33,7 @@ export function FoodDeliveryForm() {
 
     const { handleSubmit, control,
         // watch,
-        getValues,
+        // getValues,
         setValue
     } = formMethods
 

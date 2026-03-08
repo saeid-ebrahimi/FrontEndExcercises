@@ -16,14 +16,19 @@ export type TDeliveryAddressFormData = {
   city: string;
   state: string;
 };
+
 export type TFoodDeliveryMasterFormData = {
   orderNumber: number;
   customerName: string;
   mobile: string;
   email: string;
 };
+
+export type TFoodItem = { name: string };
+
 export type TFoodDeliveryFormData =
   TCheckoutFormData &
     TFoodDeliveryMasterFormData & {
       address: TDeliveryAddressFormData;
+      foodItems: TFoodItem[];
     };
