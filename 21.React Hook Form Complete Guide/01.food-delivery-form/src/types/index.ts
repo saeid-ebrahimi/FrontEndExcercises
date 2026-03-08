@@ -26,9 +26,15 @@ export type TFoodDeliveryMasterFormData = {
 
 export type TFoodItem = { name: string };
 
+export type TOrderedFoodItem = {
+  name: string;
+  quantity: number;
+};
+
 export type TFoodDeliveryFormData =
   TCheckoutFormData &
     TFoodDeliveryMasterFormData & {
       address: TDeliveryAddressFormData;
-      foodItems: TFoodItem[];
+      // foodItems: TFoodItem[];
+      orderedFoodItems: TOrderedFoodItem[];
     };
