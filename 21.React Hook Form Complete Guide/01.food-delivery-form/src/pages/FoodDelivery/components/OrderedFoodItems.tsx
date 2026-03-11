@@ -8,7 +8,24 @@ const RenderCount = getRenderCount("Food Items")
 export function OrderedFoodItems() {
     const { register } = useFormContext<{ orderedFoodItems: TOrderedFoodItem[] }>()
     const { errors } = useFormState<{ orderedFoodItems: TOrderedFoodItem[] }>({ name: "orderedFoodItems" })
-    const { fields, append, prepend, insert, swap, move, replace, update, remove } = useFieldArray<{ orderedFoodItems: TOrderedFoodItem[] }>({ name: "orderedFoodItems" })
+    const { fields, append, prepend, insert, swap, move, replace, update, remove } =
+        useFieldArray<{ orderedFoodItems: TOrderedFoodItem[] }>({
+            name: "orderedFoodItems", rules: {
+                required: {
+                    value: true,
+                    message: "No food in the order."
+                },
+                minLength: {
+                    value: 2,
+                    message: "At least 2 Fields is needed!"
+                },
+                // validate: {
+                //     noDuplicate: (value, values) => {
+
+                //     }
+                // }
+            }
+        })
 
     function onAppendRow() {
         append({ name: "", quantity: 0 }, {
@@ -92,11 +109,11 @@ export function OrderedFoodItems() {
                             />
                         </td>
                         <td>
-                            {/* <button
+                            <button
                                 type={"button"}
                                 className={"btn btn-sm btn-secondary ms-2"}
                                 onClick={() => onInsertRow(index + 1)}
-                            >Insert Row Below</button> */}
+                            >Insert</button>
                             <button
                                 type={"button"}
                                 className={"btn btn-sm btn-light ms-2"}
@@ -121,6 +138,14 @@ export function OrderedFoodItems() {
                     </tr>
                 )}
             </tbody>
+            {errors.orderedFoodItems?.root && <tfoot>
+                <tr>
+                    <td colSpan={3}>
+                        <span className={"error-feedback"}>{errors.orderedFoodItems?.root?.message}</span>
+                    </td>
+                </tr>
+            </tfoot>
+            }
         </table>
     </>
 }
