@@ -1,10 +1,11 @@
-import { useFieldArray, useFormContext, useFormState } from "react-hook-form";
+import { useFieldArray, useFormContext, useFormState, useWatch } from "react-hook-form";
 import type { NewFoodItem, TFood, TOrderedFoodItem, TSelectOption } from "../../../types";
 import { TextField } from "../../../components/controls/TextField";
 import { getRenderCount } from "../../../lib/getRenderCount";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ChangeEvent } from "react";
 import { getFoodItems } from "../../../db";
 import { SelectField } from "../../../components/controls/SelectField";
+import { roundToTwoDecimalPoint } from "../../../utils";
 
 const RenderCount = getRenderCount("Food Items")
 
@@ -12,7 +13,7 @@ export function NewFoodItems() {
     const [foodList, setFoodList] = useState<TFood[]>([])
     const [foodOptions, setFoodOptions] = useState<TSelectOption[]>([])
 
-    const { register } = useFormContext<{ newFoodItems: NewFoodItem[] }>()
+    const { register, getValues, setValue } = useFormContext<{ newFoodItems: NewFoodItem[] }>()
     const { errors } = useFormState<{ newFoodItems: NewFoodItem[] }>({ name: "newFoodItems" })
     const { fields, append, remove } =
         useFieldArray<{ newFoodItems: TOrderedFoodItem[] }>({
@@ -38,6 +39,9 @@ export function NewFoodItems() {
         setFoodList(tempFoodList)
     }, [])
 
+    useWatch<{
+        newFoodItems: NewFoodItem[]
+    }>({ name: "newFoodItems" })
     function onAppendRow() {
         append({ name: "", quantity: 0 }, {
         })
@@ -46,6 +50,25 @@ export function NewFoodItems() {
     function onRemove(index: number) {
         remove(index)
     }
+
+    function onChangeFood(evt: ChangeEvent<HTMLSelectElement>, rowIndex: number) {
+        const foodId = parseInt(evt.target.value);
+        let price: number = 0;
+        if (foodId > 0) {
+            price = foodList.find((food) => food.foodId === foodId)?.price || 0
+        }
+        setValue(`newFoodItems.${rowIndex}.price`, price);
+        onChangeQuantity(rowIndex)
+    }
+
+    function onChangeQuantity(rowIndex: number, evt?: ChangeEvent<HTMLInputElement>) {
+        const { price, quantity } = getValues(`newFoodItems.${rowIndex}`);
+        const newQuantity = parseInt(evt?.target?.value ?? "0")
+        let totalPrice = 0;
+        totalPrice = newQuantity ? newQuantity * price : quantity && quantity > 0 ? price * quantity : 0
+        setValue(`newFoodItems.${rowIndex}.totalPrice`, roundToTwoDecimalPoint(totalPrice))
+    }
+
 
 
     return <>
@@ -73,21 +96,37 @@ export function NewFoodItems() {
                                 options={foodOptions}
                                 {...register(`newFoodItems.${index}.foodId`, {
                                     valueAsNumber: true,
+                                    min: {
+                                        value: 1,
+                                        message: "Select A food please"
+                                    }
                                 })}
-                            // error={errors.newFoodItems?.[index]?.foodId}
+                                error={errors.newFoodItems?.[index]?.foodId}
+                                onChange={(evt) => onChangeFood(evt, index)}
                             />
                         </td>
-                        <td>Price</td>
+                        <td>$ {getValues(`newFoodItems.${index}.price`)}</td>
                         <td>
                             <TextField
                                 type={"number"}
                                 min={0}
-                                {...register(`newFoodItems.${index}.quantity`)}
+                                {...register(`newFoodItems.${index}.quantity`, {
+                                    valueAsNumber: true,
+                                    required: {
+                                        value: true,
+                                        message: " < 1.",
+                                    },
+                                    min: {
+                                        value: 1,
+                                        message: "< 1."
+                                    }
+                                })}
+                                onChange={(evt) => onChangeQuantity(index, evt)}
                                 error={errors.newFoodItems?.[index]?.quantity}
                             />
                         </td>
 
-                        <td>Total Price</td>
+                        <td>$ {getValues(`newFoodItems.${index}.totalPrice`)}</td>
                         <td>
                             <button
                                 type={"button"}
