@@ -6,7 +6,8 @@ import { DeliveryAddressForm } from "./components/DeliveryAddressForm";
 import { FoodDeliveryMasterForm } from "./components/FoodDeliveryMasterForm";
 import { getRenderCount } from "../../lib/getRenderCount";
 import { SubmitButton } from "./components/SubmitButton";
-import { OrderedFoodItems } from "./components/OrderedFoodItems";
+// import { OrderedFoodItems } from "./components/FoodItemsV2";
+import { NewFoodItems } from "./components/FoodItemsV3";
 
 const RenderCount = getRenderCount("FoodDeliveryForm")
 export function FoodDeliveryForm() {
@@ -22,7 +23,8 @@ export function FoodDeliveryForm() {
             paymentMethod: "",
             deliveryIn: 0,
             // foodItems: [{ name: "" }],
-            orderedFoodItems: [{ name: "", quantity: 0 }],
+            // orderedFoodItems: [{ name: "", quantity: 0 }],
+            newFoodItems: [{ foodId: 0, price: 0, quantity: 0, totalPrice: 0 }],
             address: {
                 streetAddress: "",
                 landmark: "",
@@ -51,7 +53,7 @@ export function FoodDeliveryForm() {
             <FormProvider {...formMethods} >
                 <FoodDeliveryMasterForm />
                 {/* <FoodItems /> */}
-                <OrderedFoodItems />
+                <NewFoodItems />
                 <CheckoutForm />
                 <DeliveryAddressForm />
             </FormProvider>

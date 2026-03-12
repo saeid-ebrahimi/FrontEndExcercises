@@ -74,7 +74,8 @@ export const CheckoutForm = () => {
                             required: {
                                 value: true,
                                 message: "Select a Delivery Time"
-                            }
+                            },
+                            valueAsNumber: true
                         })}
                         error={errors.deliveryIn}
                     />
