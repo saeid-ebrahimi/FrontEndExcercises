@@ -39,9 +39,8 @@ export function NewFoodItems() {
         setFoodList(tempFoodList)
     }, [])
 
-    useWatch<{
-        newFoodItems: NewFoodItem[]
-    }>({ name: "newFoodItems" })
+    const selectedFoodsItems: NewFoodItem[] = useWatch({ name: "newFoodItems" })
+    const grandTotal = useWatch({ name: "gTotal" })
     function onAppendRow() {
         append({ name: "", quantity: 0 }, {
         })
@@ -69,8 +68,15 @@ export function NewFoodItems() {
         setValue(`newFoodItems.${rowIndex}.totalPrice`, roundToTwoDecimalPoint(totalPrice))
     }
 
+    useEffect(() => { updateGrandTotal() }, [selectedFoodsItems])
 
-
+    function updateGrandTotal() {
+        let grandTotal = 0;
+        if (selectedFoodsItems && selectedFoodsItems.length > 0) {
+            grandTotal = selectedFoodsItems.reduce((sum, current) => sum + (current?.totalPrice ?? 0), 0)
+        }
+        setValue("gTotal", grandTotal)
+    }
     return <>
         <RenderCount />
         <table className={"table table-borderless table-hover"}>
@@ -137,14 +143,21 @@ export function NewFoodItems() {
                     </tr>
                 )}
             </tbody>
-            {errors.newFoodItems?.root && <tfoot>
-                <tr>
+            <tfoot>
+                {fields && fields?.length > 0 && <tr className={"border-top"}>
+                    <td colSpan={2} >
+                    </td>
+                    <th>Grand Total</th>
+                    <td colSpan={2}>$ {isNaN(grandTotal) ? "-" : roundToTwoDecimalPoint(grandTotal)}</td>
+                </tr>}
+                {errors.newFoodItems?.root && <tr>
                     <td colSpan={3}>
                         <span className={"error-feedback"}>{errors.newFoodItems?.root?.message}</span>
                     </td>
                 </tr>
+                }
             </tfoot>
-            }
+
         </table>
     </>
 }

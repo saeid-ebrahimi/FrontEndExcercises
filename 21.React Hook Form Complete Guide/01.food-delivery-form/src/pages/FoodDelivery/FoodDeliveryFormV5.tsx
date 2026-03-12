@@ -25,6 +25,7 @@ export function FoodDeliveryForm() {
             // foodItems: [{ name: "" }],
             // orderedFoodItems: [{ name: "", quantity: 0 }],
             newFoodItems: [{ foodId: 0, price: 0, quantity: 0, totalPrice: 0 }],
+            gTotal: 0,
             address: {
                 streetAddress: "",
                 landmark: "",

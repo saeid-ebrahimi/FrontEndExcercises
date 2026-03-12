@@ -22,6 +22,7 @@ export type TFoodDeliveryMasterFormData = {
   customerName: string;
   mobile: string;
   email: string;
+  gTotal: number;
 };
 
 export type TFoodItem = { name: string };
