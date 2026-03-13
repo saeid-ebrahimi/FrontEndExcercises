@@ -1,4 +1,7 @@
-import { type TFood } from "./../types/index";
+import {
+  type TFood,
+  type TFoodDeliveryFormData,
+} from "./../types/index";
 export const getFoodItems = () => {
   return [
     {
@@ -28,3 +31,23 @@ export const getFoodItems = () => {
     },
   ] as TFood[];
 };
+
+const ORDER_KEY = "order";
+
+export function createOrder(
+  order: TFoodDeliveryFormData
+) {
+  const orderId = Math.pow(
+    Math.random() * 10,
+    20
+  );
+  const placedOn = new Date();
+  localStorage.setItem(
+    ORDER_KEY,
+    JSON.stringify({
+      ...order,
+      orderId,
+      placedOn,
+    })
+  );
+}

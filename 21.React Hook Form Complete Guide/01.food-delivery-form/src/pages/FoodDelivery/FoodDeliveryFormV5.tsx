@@ -8,6 +8,7 @@ import { getRenderCount } from "../../lib/getRenderCount";
 import { SubmitButton } from "./components/SubmitButton";
 // import { OrderedFoodItems } from "./components/FoodItemsV2";
 import { NewFoodItems } from "./components/FoodItemsV3";
+import { createOrder } from "../../db";
 
 const RenderCount = getRenderCount("FoodDeliveryForm")
 export function FoodDeliveryForm() {
@@ -42,7 +43,7 @@ export function FoodDeliveryForm() {
 
     const onSubmit = async (formData: TFoodDeliveryFormData) => {
         await new Promise((resolve) => setTimeout(resolve, 2000))
-        console.log("form data", formData);
+        createOrder(formData)
     }
 
     const onError = (errors: FieldErrors) => {

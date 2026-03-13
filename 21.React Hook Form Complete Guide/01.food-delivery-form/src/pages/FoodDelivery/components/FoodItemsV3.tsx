@@ -13,7 +13,7 @@ export function NewFoodItems() {
     const [foodList, setFoodList] = useState<TFood[]>([])
     const [foodOptions, setFoodOptions] = useState<TSelectOption[]>([])
 
-    const { register, getValues, setValue } = useFormContext<{ newFoodItems: NewFoodItem[] }>()
+    const { register, getValues, setValue, trigger } = useFormContext<{ newFoodItems: NewFoodItem[] } & { gTotal: number }>()
     const { errors } = useFormState<{ newFoodItems: NewFoodItem[] }>({ name: "newFoodItems" })
     const { fields, append, remove } =
         useFieldArray<{ newFoodItems: TOrderedFoodItem[] }>({
@@ -108,10 +108,13 @@ export function NewFoodItems() {
                                     }
                                 })}
                                 error={errors.newFoodItems?.[index]?.foodId}
-                                onChange={(evt) => onChangeFood(evt, index)}
+                                onChange={(evt) => {
+                                    onChangeFood(evt, index);
+                                    trigger(`newFoodItems.${index}.quantity`)
+                                }}
                             />
                         </td>
-                        <td>$ {getValues(`newFoodItems.${index}.price`)}</td>
+                        <td className={"pt-3"}>$ {getValues(`newFoodItems.${index}.price`)}</td>
                         <td>
                             <TextField
                                 type={"number"}
@@ -122,17 +125,28 @@ export function NewFoodItems() {
                                         value: true,
                                         message: " < 1.",
                                     },
+                                    validate: {
+                                        isMoreThanStock: async (value: number) => {
+                                            await new Promise((resolve) => setTimeout(resolve, 1000));
+                                            if (value && value > 9) return "Out of Stock"
+                                            else return true;
+
+                                        }
+                                    },
                                     min: {
                                         value: 1,
                                         message: "< 1."
                                     }
                                 })}
-                                onChange={(evt) => onChangeQuantity(index, evt)}
+                                onChange={(evt) => {
+                                    onChangeQuantity(index, evt)
+                                    trigger(`newFoodItems.${index}.quantity`)
+                                }}
                                 error={errors.newFoodItems?.[index]?.quantity}
                             />
                         </td>
 
-                        <td>$ {getValues(`newFoodItems.${index}.totalPrice`)}</td>
+                        <td className={"pt-3"}>$ {getValues(`newFoodItems.${index}.totalPrice`)}</td>
                         <td>
                             <button
                                 type={"button"}
