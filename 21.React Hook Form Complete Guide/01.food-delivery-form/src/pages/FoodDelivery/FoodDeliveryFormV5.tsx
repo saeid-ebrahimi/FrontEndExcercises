@@ -55,6 +55,8 @@ export function FoodDeliveryForm() {
     const {
         handleSubmit,
         control,
+        // resetField,
+        reset
     } = formMethods
 
     const onSubmit = async (formData: TFoodDeliveryFormData) => {
@@ -64,6 +66,16 @@ export function FoodDeliveryForm() {
 
     const onError = (errors: FieldErrors) => {
         console.log("errors:", errors);
+    }
+    const onReset = () => {
+        // resetField("email", {
+        //     keepError: true,
+        //     defaultValue: ""
+        // })
+        reset(defaultValues, {
+            // keepErrors: true
+            // keepDirtyValues: true
+        })
     }
     return <>
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
@@ -77,6 +89,7 @@ export function FoodDeliveryForm() {
                 <DeliveryAddressForm />
             </FormProvider>
             <SubmitButton type={"submit"} text={"Submit Order"} control={control} />
+            <button type={"button"} onClick={onReset} className={"btn btn-secondary ms-2"}>Reset</button>
         </form>
     </>
 }
