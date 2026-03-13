@@ -2,6 +2,7 @@ import {
   type TFood,
   type TFoodDeliveryFormData,
 } from "./../types/index";
+
 export const getFoodItems = () => {
   return [
     {
@@ -56,7 +57,12 @@ export function createOrder(
   );
 }
 
-export function getOrderById(orderId: number) {
+export async function getOrderById(
+  orderId: number
+) {
+  await new Promise((resolve) =>
+    setTimeout(resolve, 1000)
+  );
   const order = localStorage.getItem(
     `${ORDER_KEY}_${orderId}`
   );

@@ -9,6 +9,7 @@ import { SubmitButton } from "./components/SubmitButton";
 // import { OrderedFoodItems } from "./components/FoodItemsV2";
 import { NewFoodItems } from "./components/FoodItemsV3";
 import { createOrder, getOrderById } from "../../db";
+import FormLoader from "./common/FormLoader";
 
 const defaultValues = {
     orderNumber: new Date().valueOf(),
@@ -35,14 +36,20 @@ export function FoodDeliveryForm() {
         mode: "onSubmit",
         shouldFocusError: true,
         delayError: 100,
-        defaultValues,
-        values: (() => {
-            if (id === 0) return defaultValues
+        defaultValues: async () => {
+            if (id === 0) return new Promise(resolve => resolve(defaultValues));
             else {
-                const tempOrder = getOrderById(id);
-                return tempOrder ? tempOrder : defaultValues
+                const tempOrder = await getOrderById(id);
+                return new Promise((resolve) => resolve(tempOrder ? tempOrder : defaultValues))
             }
-        })(),
+        },
+        // values: (() => {
+        //     if (id === 0) return defaultValues
+        //     else {
+        //         const tempOrder = getOrderById(id);
+        //         return tempOrder ? tempOrder : defaultValues
+        //     }
+        // })(),
     })
 
     const {
@@ -61,6 +68,7 @@ export function FoodDeliveryForm() {
     return <>
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
             <RenderCount />
+            <FormLoader control={control} />
             <FormProvider {...formMethods} >
                 <FoodDeliveryMasterForm />
                 {/* <FoodItems /> */}

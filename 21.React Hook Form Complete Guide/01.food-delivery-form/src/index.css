@@ -27,3 +27,39 @@ body {
   font-size: 0.875rem;
   color: var(--bs-danger);
 }
+
+#foodItems {
+  max-width: 600px;
+  min-width: 600px;
+}
+
+#foodItems
+  thead
+  tr
+  th:not(:first-child):not(:last-child) {
+  width: 15%;
+}
+
+.loader {
+  position: absolute;
+  left: 48%;
+  top: 50%;
+  z-index: 2147723772;
+  width: 60px;
+  height: 60px;
+  border-radius: 75%;
+  display: inline-block;
+  border-top: 6px solid var(--bs-info);
+  border-right: 6px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
