@@ -8,32 +8,41 @@ import { getRenderCount } from "../../lib/getRenderCount";
 import { SubmitButton } from "./components/SubmitButton";
 // import { OrderedFoodItems } from "./components/FoodItemsV2";
 import { NewFoodItems } from "./components/FoodItemsV3";
-import { createOrder } from "../../db";
+import { createOrder, getOrderById } from "../../db";
 
+const defaultValues = {
+    orderNumber: new Date().valueOf(),
+    customerName: "",
+    mobile: "",
+    email: "",
+    paymentMethod: "",
+    deliveryIn: 0,
+    // foodItems: [{ name: "" }],
+    // orderedFoodItems: [{ name: "", quantity: 0 }],
+    newFoodItems: [{ foodId: 0, price: 0, quantity: 0, totalPrice: 0 }],
+    gTotal: 0,
+    address: {
+        streetAddress: "",
+        landmark: "",
+        city: "",
+        state: "",
+    }
+}
 const RenderCount = getRenderCount("FoodDeliveryForm")
 export function FoodDeliveryForm() {
+    const id: number = JSON.parse(localStorage.getItem("orderId") ?? "1") - 1
     const formMethods: UseFormReturn<TFoodDeliveryFormData> = useForm<TFoodDeliveryFormData>({
         mode: "onSubmit",
         shouldFocusError: true,
         delayError: 100,
-        defaultValues: {
-            orderNumber: new Date().valueOf(),
-            customerName: "",
-            mobile: "",
-            email: "",
-            paymentMethod: "",
-            deliveryIn: 0,
-            // foodItems: [{ name: "" }],
-            // orderedFoodItems: [{ name: "", quantity: 0 }],
-            newFoodItems: [{ foodId: 0, price: 0, quantity: 0, totalPrice: 0 }],
-            gTotal: 0,
-            address: {
-                streetAddress: "",
-                landmark: "",
-                city: "",
-                state: "",
+        defaultValues,
+        values: (() => {
+            if (id === 0) return defaultValues
+            else {
+                const tempOrder = getOrderById(id);
+                return tempOrder ? tempOrder : defaultValues
             }
-        }
+        })(),
     })
 
     const {
