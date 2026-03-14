@@ -56,12 +56,25 @@ export function FoodDeliveryForm() {
         handleSubmit,
         control,
         // resetField,
+        setError,
+        clearErrors,
         reset
     } = formMethods
 
     const onSubmit = async (formData: TFoodDeliveryFormData) => {
         await new Promise((resolve) => setTimeout(resolve, 2000))
+        if (formData.email === "abc@gmail.com") {
+            setError("email", {
+                type: "duplicateEmail",
+                message: "the email already exists"
+
+            }, {
+                shouldFocus: true,
+            })
+            return
+        }
         createOrder(formData)
+        clearErrors()
     }
 
     const onError = (errors: FieldErrors) => {
