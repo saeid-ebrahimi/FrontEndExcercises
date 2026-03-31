@@ -31,43 +31,67 @@ export function FoodDeliveryForm() {
         }
     })
 
-    const { handleSubmit,
+    const {
+        handleSubmit,
         control,
-        // getFieldState,
+        getFieldState,
         formState: {
-            // touchedFields,
-            // errors,
-            // dirtyFields,
+            // errors: formErrors
             // touchedFields,
             // isValid,
-            // isValidating
+            // isValidating,
             // isSubmitting,
             // isSubmitted,
             // isSubmitSuccessful,
-            // submitCount,
+            submitCount,
         }
-        // getFieldState,
-    } = formMethods
-
-    // console.log("errors", errors);
-    // console.log("dirty fields", dirtyFields);
-    // console.log("touched fields", touchedFields);
-    // console.log("isValid", isValid);
-    // console.log("isValidating", isValidating);
-
-    // console.log("isSubmitting", isSubmitting);
-    // console.log("isSubmitted", isSubmitted);
-    // console.log("isSubmit Successful", isSubmitSuccessful);
+    } = formMethods as UseFormReturn<TFoodDeliveryFormData>;
 
     const onSubmit = async (formData: TFoodDeliveryFormData) => {
         await new Promise((resolve) => setTimeout(resolve, 2000))
-        console.log("form data", formData);
+        console.log("formData", formData);
     }
 
+    // to watch formErrors we need use effect on it
+    // useEffect(() => {
+    //     console.warn("form errors", formErrors)
+    // }, [formErrors])
+
+    // isValid state checked on any Blur on the fields and rerender component on blur
+    // console.log("isValid:", isValid)
+
+    // touchedFields checked on any Blur on the fields and rerender component on blur
+    // console.log("touchedFields", touchedFields)
+
+    // isValidating change state based on form revalidation mode and form mode and rerender the component based on its change
+    // console.log("isValidating", isValidating)
+
+    // initial value is false and based on submitting the form changes from false to true , then to false, 
+    // rerender the component based on its change
+    // console.log("isSubmitting", isSubmitting)
+
+    // initial value is false and anytime form is submitted it shows true
+    // rerender the component based on number of form submission
+    // console.log("isSubmitted", isSubmitted)
+
+    // initial value is false and anytime form is submitted without error it shows true otherwise it shows false
+    // rerender the component based on number of form submission
+    // console.log("isSubmitSuccessful", isSubmitSuccessful)
+
+    // it shows number of times we submitted a form
+    // rerender the component based on the number of form submissions
+    // console.log("isSubmitted", isSubmitted)
+
+    console.log("submit count", submitCount)
+
     const onError = (errors: FieldErrors) => {
-        console.log("errors:", errors);
-        // console.log("address state", getFieldState("address"))
+        console.error("There are Errors in Submit\n", errors)
+        const field = "address"
+        console.log("field state", field, getFieldState(field));
+
+        // console.log("touchedFields", touchedFields)
     }
+
 
     return <>
         {/* <p>submit count is {submitCount}</p> */}
