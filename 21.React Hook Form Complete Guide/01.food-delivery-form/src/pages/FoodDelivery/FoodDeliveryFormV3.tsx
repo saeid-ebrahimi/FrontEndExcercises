@@ -43,9 +43,17 @@ export function FoodDeliveryForm() {
             // isSubmitting,
             // isSubmitted,
             // isSubmitSuccessful,
-            submitCount,
+            // submitCount,
+            // dirtyFields,
+            // disabled,
+            // isDirty,
+            // isLoading, // It indicates that the form is performing an asynchronous operation related to validation or fetching.
+            // isReady, // The form has been fully initialized, necessary states are set, and it is ready to receive user input or perform operations (like submit).
+            // validatingFields,
+            // defaultValues,
         }
     } = formMethods as UseFormReturn<TFoodDeliveryFormData>;
+
 
     const onSubmit = async (formData: TFoodDeliveryFormData) => {
         await new Promise((resolve) => setTimeout(resolve, 2000))
@@ -82,14 +90,30 @@ export function FoodDeliveryForm() {
     // rerender the component based on the number of form submissions
     // console.log("isSubmitted", isSubmitted)
 
-    console.log("submit count", submitCount)
+    // it shows number of times we submitted a form
+    // rerender the component based on the number of form submissions
+    // console.log("submit count", submitCount))
+
+    // validatingFields contains validating fields (true or false) object and change state based on form revalidation mode and form mode and rerender the component based on its change
+    // console.log(validatingFields)
 
     const onError = (errors: FieldErrors) => {
+        // console.log("defaultValues:", defaultValues)
+
         console.error("There are Errors in Submit\n", errors)
         const field = "address"
         console.log("field state", field, getFieldState(field));
 
         // console.log("touchedFields", touchedFields)
+
+        // it shows dirty fields and render the component on make dirty any input
+        // console.log("dirtyFields", dirtyFields);
+
+        // it shows if the form is disabled and rerender the component on change its value
+        // console.log("disabled", disabled);
+
+        // it shows if the form is dirty and rerender the component on change its value
+        // console.log("isDirty", isDirty)
     }
 
 
