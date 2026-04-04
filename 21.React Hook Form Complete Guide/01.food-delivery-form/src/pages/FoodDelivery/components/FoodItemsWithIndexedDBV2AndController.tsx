@@ -165,28 +165,10 @@ export function OrderItemRow({
     onRemove,
     OnReset
 }: IOrderItemRowProps) {
-    const { control, register, formState: { errors, isSubmitting }, getValues, setValue } = useFormContext<{ foodItems: TFoodItem[] }>()
-    const { ref: idRef, ...idRest } = register(`foodItems.${index}.id`, {
-        required: "selecting food is required",
-    })
-    const totalPrice = useWatch({ name: `foodItems.${index}.totalPrice` })
-    const { ref: quantityRef, ...quantityRest } = register(`foodItems.${index}.quantity`, {
-        valueAsNumber: true,
-        required: "The quantity is required!",
-        min: {
-            value: 1,
-            message: "minimum value is 1"
-        },
-        // validate: {
-        //     isMoreThanStock: async (value: number) => {
-        //         await new Promise((resolve) => setTimeout(resolve, 1000));
-        //         if (value && value > 9) return "Out of Stock"
-        //         else return true;
+    const { control, formState: { isSubmitting }, getValues, setValue } = useFormContext<{ foodItems: TFoodItem[] }>()
 
-        //     }
-        // },
-    })
-    const currentRowError = errors?.foodItems?.[index]
+    const totalPrice = useWatch({ name: `foodItems.${index}.totalPrice` })
+
     type TSelectEvt = ChangeEvent<Omit<HTMLInputElement, "value"> & {
         value: number;
     }> | (Event & {
