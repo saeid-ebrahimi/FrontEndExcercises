@@ -1,15 +1,13 @@
 
 import './App.css'
-import FoodDeliveryTest from './FoodDeliveryV6'
+import { FoodDeliveryForm } from './pages/FoodDelivery/FoodDeliveryFormV6'
 
 
 function App() {
   return <>
     <div className={"container "}>
       <div className="mx-5">
-        {/* <FoodDeliveryForm /> */}
-        <hr />
-        <FoodDeliveryTest />
+        <FoodDeliveryForm />
       </div>
     </div>
   </>
