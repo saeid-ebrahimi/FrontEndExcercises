@@ -50,7 +50,6 @@ export const CheckoutFormWithController = () => {
                         name={"paymentMethod"}
                         control={control}
                         exact={true}
-                        disabled={isSubmitting}
                         rules={{
                             required: {
                                 value: true,
@@ -58,7 +57,7 @@ export const CheckoutFormWithController = () => {
                             }
                         }}
                         render={({ field, fieldState }) => <>
-                            <FormControl fullWidth error={!!fieldState.error}>
+                            <FormControl disabled={isSubmitting} fullWidth error={!!fieldState.error}>
                                 <InputLabel id="paymentMethod">Payment Method</InputLabel>
                                 <Select
                                     label={"Payment Method"}
@@ -80,7 +79,6 @@ export const CheckoutFormWithController = () => {
                         name={"deliveryIn"}
                         control={control}
                         exact={true}
-                        disabled={isSubmitting}
                         rules={{
                             required: {
                                 value: true,
@@ -88,7 +86,7 @@ export const CheckoutFormWithController = () => {
                             }
                         }}
                         render={({ field, fieldState }) => <>
-                            <FormControl fullWidth={true} error={!!fieldState.error}>
+                            <FormControl disabled={isSubmitting} fullWidth={true} error={!!fieldState.error}>
                                 <InputLabel id="deliveryIn">Delivery In</InputLabel>
                                 <Select fullWidth label={"Delivery In"} labelId={"deliveryIn"} {...field} >
                                     {deliveryInOptions.map(option => <MenuItem key={option.value} value={option.value}>

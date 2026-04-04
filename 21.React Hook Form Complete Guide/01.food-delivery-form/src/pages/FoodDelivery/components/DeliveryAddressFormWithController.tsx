@@ -23,14 +23,13 @@ export function DeliveryAddressFormWithController() {
                 <Controller
                     name={"address.streetAddress"}
                     control={control}
-                    disabled={isSubmitting}
                     exact={true}
                     rules={{
                         required: "street address is required!"
                     }}
                     render={({ field, fieldState }) =>
                         <>
-                            <FormControl fullWidth error={!!fieldState.error}>
+                            <FormControl disabled={isSubmitting} fullWidth error={!!fieldState.error}>
                                 <FormLabel
                                     id="streetAddress"
                                     hidden
@@ -48,14 +47,13 @@ export function DeliveryAddressFormWithController() {
                 <Controller
                     name={"address.city"}
                     control={control}
-                    disabled={isSubmitting}
                     exact={true}
                     rules={{
                         required: "city is required!"
                     }}
                     render={({ field, fieldState }) => (
                         <>
-                            <FormControl fullWidth={true} error={!!fieldState.error}>
+                            <FormControl disabled={isSubmitting} fullWidth={true} error={!!fieldState.error}>
                                 <FormLabel id={"city"} hidden>City</FormLabel>
                                 <TextField
                                     label={"City"}
@@ -74,10 +72,9 @@ export function DeliveryAddressFormWithController() {
                 <Controller
                     name={"address.landmark"}
                     control={control}
-                    disabled={isSubmitting}
                     exact={true}
                     render={({ field, fieldState }) => <>
-                        <FormControl fullWidth={true} error={!!fieldState.error}>
+                        <FormControl disabled={isSubmitting} fullWidth={true} error={!!fieldState.error}>
                             <FormLabel id={"landmark"} hidden>Landmark</FormLabel>
                             <TextField
                                 label={"Landmark"}
@@ -94,9 +91,8 @@ export function DeliveryAddressFormWithController() {
                     name={"address.state"}
                     control={control}
                     exact={true}
-                    disabled={isSubmitting}
                     render={(({ field, fieldState }) => <>
-                        <FormControl fullWidth error={!!fieldState.error}>
+                        <FormControl disabled={isSubmitting} fullWidth error={!!fieldState.error}>
                             <FormLabel id={"state"} hidden>State</FormLabel>
                             <TextField
                                 label={"State"}

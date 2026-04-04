@@ -23,7 +23,6 @@ export function FoodDeliveryMasterFormWithController() {
                     <Controller
                         control={control}
                         name="orderNumber"
-                        disabled={isSubmitting}
                         exact={true}
                         rules={{
                             required: {
@@ -35,6 +34,7 @@ export function FoodDeliveryMasterFormWithController() {
                             <FormControl fullWidth error={!!fieldState.error}>
                                 <FormLabel id={"orderNumber"} hidden>Order Number</FormLabel>
                                 <TextField
+                                    disabled={isSubmitting}
                                     placeholder={"Order number"}
                                     label={"Order Number:"}
                                     helperText={fieldState.error?.message}
@@ -49,7 +49,6 @@ export function FoodDeliveryMasterFormWithController() {
                         control={control}
                         name="mobile"
                         exact={true}
-                        disabled={isSubmitting}
                         rules={{
                             required: {
                                 value: true,
@@ -72,6 +71,7 @@ export function FoodDeliveryMasterFormWithController() {
                                         label={"mobile"}
                                         placeholder={"enter mobile number"}
                                         helperText={fieldState.error?.message}
+                                        disabled={isSubmitting}
                                         {...field}
                                     />
                                 </FormControl>
@@ -85,7 +85,6 @@ export function FoodDeliveryMasterFormWithController() {
                     <Controller
                         control={control}
                         name={"customerName"}
-                        disabled={isSubmitting}
                         exact={true}
                         rules={{
                             required: {
@@ -100,6 +99,7 @@ export function FoodDeliveryMasterFormWithController() {
                                     label={"customerName"}
                                     placeholder={"enter customer name"}
                                     helperText={fieldState.error?.message}
+                                    disabled={isSubmitting}
                                     {...field}
                                 />
                             </FormControl>
@@ -111,7 +111,6 @@ export function FoodDeliveryMasterFormWithController() {
                         control={control}
                         name={"email"}
                         exact={true}
-                        disabled={isSubmitting}
                         rules={{
                             pattern: {
                                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -129,6 +128,7 @@ export function FoodDeliveryMasterFormWithController() {
                                     label={"Email"}
                                     placeholder={"enter email"}
                                     helperText={fieldState.error?.message}
+                                    disabled={isSubmitting}
                                     {...field}
                                 />
                             </FormControl>

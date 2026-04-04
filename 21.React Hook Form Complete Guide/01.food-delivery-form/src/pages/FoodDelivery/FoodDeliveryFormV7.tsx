@@ -159,7 +159,12 @@ export function FoodDeliveryForm() {
                 <FoodItemsTest />
                 <CheckoutFormWithController />
                 <DeliveryAddressFormWithController />
-                <SubmitButton type="submit" className={"btn-outline-primary"} text="submit order" control={control} />
+                <SubmitButton
+                    type="submit"
+                    className={"btn-outline-primary"}
+                    text="submit order"
+                    control={control}
+                />
             </FormProvider>
         </form>
     </>
