@@ -4,10 +4,10 @@ import type { TCheckoutFormData, TDeliveryAddressFormData, TFoodDeliveryPrimaryF
 import { DEFAULT_FOOD_ITEM, FoodItemsTest, type TFoodItem } from "./components/FoodItemsWithIndexedDBV2";
 import { IDBManager } from "../../db/indexeddb";
 import { useEffect } from "react";
-import { FoodDeliveryMasterForm } from "./components/FoodDeliveryMasterForm";
 import { SubmitButton } from "./components/SubmitButton";
 import { CheckoutFormWithController } from "./components/CheckoutFormWithController";
 import { DeliveryAddressFormWithController } from "./components/DeliveryAddressFormWithController";
+import { FoodDeliveryMasterFormWithController } from "./components/FoodDeliveryMasterFormWithController";
 
 
 type TFoodDeliveryFormData = TFoodDeliveryPrimaryFormData & TCheckoutFormData & {
@@ -88,6 +88,9 @@ export function FoodDeliveryForm() {
     }, [reset])
 
     const onSubmit = async (formData: TFoodDeliveryFormData) => {
+        await new Promise((resolve) => setTimeout(resolve, 2000))
+        console.log(formData);
+        return
         if (formData.mobile.startsWith("938")) {
             setError("mobile", {
                 type: "invalidMobile",
@@ -152,7 +155,7 @@ export function FoodDeliveryForm() {
         <RenderCount />
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)} >
             <FormProvider {...formMethods}>
-                <FoodDeliveryMasterForm />
+                <FoodDeliveryMasterFormWithController />
                 <FoodItemsTest />
                 <CheckoutFormWithController />
                 <DeliveryAddressFormWithController />
