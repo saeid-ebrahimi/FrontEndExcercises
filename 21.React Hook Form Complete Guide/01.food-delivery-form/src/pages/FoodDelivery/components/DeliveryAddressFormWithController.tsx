@@ -1,6 +1,6 @@
 import { Controller, useFormContext, useFormState } from "react-hook-form"
 import type { TDeliveryAddressFormData } from "../../../types"
-import { FormControl, FormLabel, TextField } from "@mui/material"
+import { FormControl, TextField } from "@mui/material"
 
 // const RenderCount = getRenderCount("DeliveryAddressForm")
 
@@ -29,14 +29,11 @@ export function DeliveryAddressFormWithController() {
                     }}
                     render={({ field, fieldState }) =>
                         <>
-                            <FormControl disabled={isSubmitting} fullWidth error={!!fieldState.error}>
-                                <FormLabel
-                                    id="streetAddress"
-                                    hidden
-                                >Street Address</FormLabel>
+                            <FormControl fullWidth error={!!fieldState.error}>
                                 <TextField
                                     label={"Street Address"}
                                     placeholder={"enter street address"}
+                                    disabled={isSubmitting}
                                     helperText={fieldState.error?.message}
                                     {...field} />
                             </FormControl>
@@ -53,9 +50,9 @@ export function DeliveryAddressFormWithController() {
                     }}
                     render={({ field, fieldState }) => (
                         <>
-                            <FormControl disabled={isSubmitting} fullWidth={true} error={!!fieldState.error}>
-                                <FormLabel id={"city"} hidden>City</FormLabel>
+                            <FormControl fullWidth={true} error={!!fieldState.error}>
                                 <TextField
+                                    disabled={isSubmitting}
                                     label={"City"}
                                     placeholder={"enter city"}
                                     helperText={fieldState.error?.message}
@@ -74,9 +71,11 @@ export function DeliveryAddressFormWithController() {
                     control={control}
                     exact={true}
                     render={({ field, fieldState }) => <>
-                        <FormControl disabled={isSubmitting} fullWidth={true} error={!!fieldState.error}>
-                            <FormLabel id={"landmark"} hidden>Landmark</FormLabel>
+                        <FormControl
+                            fullWidth={true}
+                            error={!!fieldState.error}>
                             <TextField
+                                disabled={isSubmitting}
                                 label={"Landmark"}
                                 placeholder={"enter landmark"}
                                 helperText={fieldState.error?.message}
@@ -92,9 +91,9 @@ export function DeliveryAddressFormWithController() {
                     control={control}
                     exact={true}
                     render={(({ field, fieldState }) => <>
-                        <FormControl disabled={isSubmitting} fullWidth error={!!fieldState.error}>
-                            <FormLabel id={"state"} hidden>State</FormLabel>
+                        <FormControl fullWidth error={!!fieldState.error}>
                             <TextField
+                                disabled={isSubmitting}
                                 label={"State"}
                                 placeholder={"enter state"}
                                 helperText={fieldState.error?.message}

@@ -32,7 +32,6 @@ export function FoodDeliveryMasterFormWithController() {
                         }}
                         render={({ field, fieldState }) => <>
                             <FormControl fullWidth error={!!fieldState.error}>
-                                <FormLabel id={"orderNumber"} hidden>Order Number</FormLabel>
                                 <TextField
                                     disabled={isSubmitting}
                                     placeholder={"Order number"}
@@ -66,7 +65,6 @@ export function FoodDeliveryMasterFormWithController() {
                         render={({ field, fieldState }) =>
                             <>
                                 <FormControl fullWidth error={!!fieldState.error}>
-                                    <FormLabel id={"mobile"} hidden={true}>Mobile</FormLabel>
                                     <TextField
                                         label={"mobile"}
                                         placeholder={"enter mobile number"}
@@ -123,7 +121,6 @@ export function FoodDeliveryMasterFormWithController() {
                         }}
                         render={({ field, fieldState }) => <>
                             <FormControl fullWidth error={!!fieldState.error}>
-                                <FormLabel id={"email"} hidden={true}>Email</FormLabel>
                                 <TextField
                                     label={"Email"}
                                     placeholder={"enter email"}

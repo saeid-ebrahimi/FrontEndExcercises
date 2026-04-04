@@ -1,13 +1,14 @@
 import { FormProvider, useForm, type FieldErrors, type UseFormReturn } from "react-hook-form";
 import { getRenderCount } from "../../lib/getRenderCount";
 import type { TCheckoutFormData, TDeliveryAddressFormData, TFoodDeliveryPrimaryFormData } from "../../types";
-import { DEFAULT_FOOD_ITEM, FoodItemsTest, type TFoodItem } from "./components/FoodItemsWithIndexedDBV2";
+import { DEFAULT_FOOD_ITEM, type TFoodItem } from "./components/FoodItemsWithIndexedDBV2";
 import { IDBManager } from "../../db/indexeddb";
 import { useEffect } from "react";
 import { SubmitButton } from "./components/SubmitButton";
 import { CheckoutFormWithController } from "./components/CheckoutFormWithController";
 import { DeliveryAddressFormWithController } from "./components/DeliveryAddressFormWithController";
 import { FoodDeliveryMasterFormWithController } from "./components/FoodDeliveryMasterFormWithController";
+import { FoodItemsWithController } from "./components/FoodItemsWithIndexedDBV2AndController";
 
 
 type TFoodDeliveryFormData = TFoodDeliveryPrimaryFormData & TCheckoutFormData & {
@@ -80,7 +81,11 @@ export function FoodDeliveryForm() {
                 await foodDatabaseManager.closeDB();
             }
         };
-        fetchAndSetData(2);
+        const id = localStorage.getItem("id")
+        if (id) {
+            fetchAndSetData(JSON.parse(id));
+        }
+
         return () => {
             foodDatabaseManager.closeDB();
 
@@ -88,9 +93,6 @@ export function FoodDeliveryForm() {
     }, [reset])
 
     const onSubmit = async (formData: TFoodDeliveryFormData) => {
-        await new Promise((resolve) => setTimeout(resolve, 2000))
-        console.log(formData);
-        return
         if (formData.mobile.startsWith("938")) {
             setError("mobile", {
                 type: "invalidMobile",
@@ -156,7 +158,7 @@ export function FoodDeliveryForm() {
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)} >
             <FormProvider {...formMethods}>
                 <FoodDeliveryMasterFormWithController />
-                <FoodItemsTest />
+                <FoodItemsWithController />
                 <CheckoutFormWithController />
                 <DeliveryAddressFormWithController />
                 <SubmitButton
