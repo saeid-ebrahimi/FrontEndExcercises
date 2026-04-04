@@ -45,7 +45,8 @@ export function FoodDeliveryForm() {
     }
 
     const onError = (errors: FieldErrors) => {
-        console.log(errors);
+        console.error("There are Errors in Submit")
+        console.warn(errors);
 
     }
     // const paymentStringOptions = [
@@ -76,6 +77,10 @@ export function FoodDeliveryForm() {
                             required: {
                                 value: true,
                                 message: "order number value is required!"
+                            },
+                            pattern: {
+                                value: /^[0-9]+$/,
+                                message: "order number should be a number"
                             }
                         })}
                         error={errors.orderNumber}
@@ -88,6 +93,10 @@ export function FoodDeliveryForm() {
                             required: {
                                 value: true,
                                 message: "mobile number is required!"
+                            },
+                            pattern: {
+                                value: /^\d{10}$/,
+                                message: "mobile field must be 10 digits number"
                             },
                             minLength: {
                                 value: 10,
@@ -113,6 +122,10 @@ export function FoodDeliveryForm() {
                             required: {
                                 value: true,
                                 message: "customer name is required!"
+                            },
+                            pattern: {
+                                value: /^[A-Za-z\s]+$/,
+                                message: "customer name should be alphabetic characters"
                             }
                         }
                         )}
@@ -129,7 +142,7 @@ export function FoodDeliveryForm() {
                                 message: "incorrect email format entered"
                             },
                             validate: {
-                                notFake: (value) => value !== "email@gmail.com" || "the email is blocked",
+                                notFake: (value) => !value.endsWith("@example.com") || "The email is fake",
                                 notFromBlacklistedDomain: (value) => (!value.endsWith(".ir") && !value.includes("@example")) || "this domain is blocked"
                             }
                         })}
@@ -208,7 +221,7 @@ export function FoodDeliveryForm() {
                         placeholder={"enter street address"}
                         error={errors.address?.streetAddress}
                         {...register("address.streetAddress", {
-                            required: "street address is required!"
+                            required: "street address is required!",
                         })}
                     />
                 </div>
@@ -218,7 +231,11 @@ export function FoodDeliveryForm() {
                         placeholder={"enter city"}
                         error={errors.address?.city}
                         {...register("address.city", {
-                            required: "city is required!"
+                            required: "city is required!",
+                            pattern: {
+                                value: /^[A-Za-z\s]+$/,
+                                message: "state name should be alphabetic"
+                            }
                         })}
                     />
                 </div>
@@ -237,7 +254,12 @@ export function FoodDeliveryForm() {
                         label={"State:"}
                         placeholder={"enter state"}
                         error={errors.address?.state}
-                        {...register("address.state")}
+                        {...register("address.state", {
+                            pattern: {
+                                value: /^[A-Za-z\s]+$/,
+                                message: "state name should be alphabetic"
+                            }
+                        })}
                     />
                 </div>
             </div>

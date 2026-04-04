@@ -5,6 +5,12 @@ export type TSelectOption =
       label: string;
     };
 
+export type TFoodDeliveryPrimaryFormData = {
+  orderNumber: number;
+  customerName: string;
+  mobile: string;
+  email: string;
+};
 export type TCheckoutFormData = {
   paymentMethod: string;
   deliveryIn: number;
