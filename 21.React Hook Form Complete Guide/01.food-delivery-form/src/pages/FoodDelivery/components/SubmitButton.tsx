@@ -1,13 +1,15 @@
 
 import type { ButtonHTMLAttributes } from "react";
-import { useFormState, type Control } from "react-hook-form";
+import { useFormState, type Control, type FieldValues } from "react-hook-form";
+
 
 // const RenderCount = getRenderCount("Submit Button")
-interface ISubmitButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ISubmitButtonProps<T extends FieldValues> extends ButtonHTMLAttributes<HTMLButtonElement> {
     text?: string;
-    control?: Control<any, any>
+    control?: Control<T, any, T>
 }
-export function SubmitButton(props: ISubmitButtonProps) {
+
+export function SubmitButton<T extends FieldValues>(props: ISubmitButtonProps<T>) {
     const { className = "btn-light", control = undefined, text, ...rest } = props
     if (control)
         return <>
@@ -20,12 +22,12 @@ export function SubmitButton(props: ISubmitButtonProps) {
         </>
 }
 
-export function WithControl({
+export function WithControl<T extends FieldValues>({
     className,
     text,
     control,
     ...rest
-}: ISubmitButtonProps & { control: Control<any, any> }) {
+}: ISubmitButtonProps<T> & { control: Control<T, any, T> }) {
     const { isSubmitting } = useFormState({ control })
     return (
         <>
@@ -43,7 +45,7 @@ export function WithoutControl({
     className,
     text,
     ...rest
-}: Omit<ISubmitButtonProps, "control">) {
+}: Omit<ISubmitButtonProps<FieldValues>, "control">) {
     return (
         <>
             <button className={`btn ${className}`}  {...rest}>
