@@ -1,13 +1,13 @@
 import { FormProvider, useForm, type FieldErrors, type UseFormReturn } from "react-hook-form";
-import { getRenderCount } from "./lib/getRenderCount";
-import type { TCheckoutFormData, TDeliveryAddressFormData, TFoodDeliveryPrimaryFormData } from "./types";
-import { DEFAULT_FOOD_ITEM, FoodItemsTest, type TFoodItem } from "./pages/FoodDelivery/components/FoodItemsWithIndexedDBV2";
-import { IDBManager } from "./db/indexeddb";
+import { getRenderCount } from "../../lib/getRenderCount";
+import type { TCheckoutFormData, TDeliveryAddressFormData, TFoodDeliveryPrimaryFormData } from "../../types";
+import { DEFAULT_FOOD_ITEM, FoodItemsTest, type TFoodItem } from "./components/FoodItemsWithIndexedDBV2";
+import { IDBManager } from "../../db/indexeddb";
 import { useEffect } from "react";
-import { FoodDeliveryMasterForm } from "./pages/FoodDelivery/components/FoodDeliveryMasterForm";
-import { CheckoutForm } from "./pages/FoodDelivery/components/CheckoutForm";
-import { DeliveryAddressForm } from "./pages/FoodDelivery/components/DeliveryAddressForm";
-import { SubmitButton } from "./pages/FoodDelivery/components/SubmitButton";
+import { FoodDeliveryMasterForm } from "./components/FoodDeliveryMasterForm";
+import { SubmitButton } from "./components/SubmitButton";
+import { CheckoutFormWithController } from "./components/CheckoutFormWithController";
+import { DeliveryAddressFormWithController } from "./components/DeliveryAddressFormWithController";
 
 
 type TFoodDeliveryFormData = TFoodDeliveryPrimaryFormData & TCheckoutFormData & {
@@ -33,7 +33,7 @@ const DEFAULT_VALUES = {
 }
 const RenderCount = getRenderCount("FoodDeliveryForm")
 
-export default function FoodDeliveryTest() {
+export function FoodDeliveryForm() {
 
     const formMethods = useForm<TFoodDeliveryFormData>({
         mode: "onSubmit",
@@ -154,8 +154,8 @@ export default function FoodDeliveryTest() {
             <FormProvider {...formMethods}>
                 <FoodDeliveryMasterForm />
                 <FoodItemsTest />
-                <CheckoutForm />
-                <DeliveryAddressForm />
+                <CheckoutFormWithController />
+                <DeliveryAddressFormWithController />
                 <SubmitButton type="submit" className={"btn-outline-primary"} text="submit order" control={control} />
             </FormProvider>
         </form>
