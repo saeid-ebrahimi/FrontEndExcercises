@@ -1,6 +1,6 @@
 
 import './App.css'
-import { FoodDeliveryForm } from './pages/FoodDelivery/FoodDeliveryFormV6'
+import { FoodDeliveryForm } from './pages/FoodDelivery/FoodDeliveryFormV7'
 
 
 function App() {
