@@ -1,6 +1,4 @@
-import { Button, ButtonGroup } from '@mui/material'
-import React from 'react'
-
+import { Button, ButtonGroup } from '@mui/material';
 export function ButtonGroupFunctionality() {
     return (
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "flex-start" }}>
@@ -13,17 +11,24 @@ export function ButtonGroupFunctionality() {
                 <Button>Second</Button>
                 <Button>Third</Button>
             </ButtonGroup>
-            <ButtonGroup orientation={"vertical"} disableElevation variant={"contained"}>
+            <ButtonGroup
+                orientation={"vertical"}
+                disableElevation
+                variant={"contained"}
+            >
                 <Button>First</Button>
                 <Button>Second</Button>
                 <Button disabled>Third</Button>
             </ButtonGroup>
-            <ButtonGroup disabled color={"secondary"} variant={"text"}>
+            <ButtonGroup
+                disabled
+                color={"secondary"}
+                variant={"text"}
+            >
                 <Button>First</Button>
                 <Button>Second</Button>
                 <Button>Third</Button>
             </ButtonGroup>
-
         </div>
     )
 }
