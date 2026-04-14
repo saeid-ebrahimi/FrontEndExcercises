@@ -53,7 +53,6 @@ function FreeSoloAutocomplete() {
         onChange={(_event, newValue) => typeof newValue === "string" ? setValue(newValue) : setValue(newValue?.name)}
         groupBy={(option) => (option.year < 2000 ? "20 Century" : "21 Century")}
         renderInput={(params) => <TextField {...params} label={"Movies"} placeholder={"Select a Movie..."} />} />
-
 }
 
 
