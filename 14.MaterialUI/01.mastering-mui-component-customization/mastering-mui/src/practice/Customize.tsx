@@ -1,45 +1,30 @@
-import { Box, Button, ButtonGroup, buttonGroupClasses } from "@mui/material";
-
+import { Box, Fab, } from "@mui/material";
+import { Add as AddIcon } from "@mui/icons-material";
 export function Customize() {
+
     return <Box sx={{
         display: "flex",
         alignItems: "flex-start",
         flexDirection: "column",
         gap: "1rem",
     }}>
-        <ButtonGroup sx={{
-            "& > button": {
-                bgcolor: "#E1293B",
-                color: "#F1F5F9",
+        <Fab
+            disabled
+            variant={"extended"}
+            sx={{
+                bgcolor: "darkblue",
+                color: "wheat",
+                fontFamily: "Verdana",
                 "&:hover": {
-                    bgcolor: "#334155",
+                    bgcolor: "blue"
                 },
-            },
-            "& .MuiButtonGroup-grouped": {
-                borderColor: "wheat",
-                borderWidth: "3px",
-            }
-        }} variant={"text"}>
-            <Button>First</Button>
-            <Button>Second</Button>
-            <Button>Third</Button>
-        </ButtonGroup>
-        <ButtonGroup sx={{
-            "& > button": {
-                bgcolor: "#E1293B",
-                color: "#F1F5F9",
-                "&:hover": {
-                    bgcolor: "#334155",
-                },
-            },
-            [`& .${buttonGroupClasses.grouped}`]: {
-                borderColor: "wheat",
-                borderWidth: "2px",
-            },
-        }} variant={"text"}>
-            <Button>First</Button>
-            <Button>Second</Button>
-            <Button>Third</Button>
-        </ButtonGroup>
+                "&.Mui-disabled": {
+                    bgcolor: "#CBD5E1"
+                }
+            }}
+        >
+            <AddIcon />
+            New User
+        </Fab>
     </Box>
 };
