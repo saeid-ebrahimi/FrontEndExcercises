@@ -1,4 +1,4 @@
-import { Box, Fab } from "@mui/material";
+import { Box, Fab, fabClasses } from "@mui/material";
 import { Add as AddIcon } from "@mui/icons-material";
 
 export function CustomizeUsingComponentClasses() {
@@ -18,7 +18,7 @@ export function CustomizeUsingComponentClasses() {
                 "&:hover": {
                     bgcolor: "blue"
                 },
-                "&.Mui-disabled": {
+                [`&.${fabClasses.disabled}`]: {
                     bgcolor: "#CBD5E1"
                 }
             }}

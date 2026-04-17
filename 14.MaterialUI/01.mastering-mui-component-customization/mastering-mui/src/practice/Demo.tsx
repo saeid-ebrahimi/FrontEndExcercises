@@ -1,5 +1,5 @@
 import { Add as AddIcon } from "@mui/icons-material";
-import { Box, Fab } from "@mui/material";
+import { Box, Fab, FormControl } from "@mui/material";
 
 export function Demo() {
     return <Box sx={{
@@ -8,9 +8,8 @@ export function Demo() {
         flexDirection: "column",
         gap: "1rem",
     }}>
-        <Fab variant={"extended"}>
-            <AddIcon />
-            New User
-        </Fab>
+        <FormControl>
+
+        </FormControl>
     </Box>
 }
