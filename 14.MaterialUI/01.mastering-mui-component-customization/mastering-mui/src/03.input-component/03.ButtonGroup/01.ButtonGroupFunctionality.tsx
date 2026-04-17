@@ -1,7 +1,12 @@
-import { Button, ButtonGroup } from '@mui/material';
+import { Box, Button, ButtonGroup } from '@mui/material';
 export function ButtonGroupFunctionality() {
     return (
-        <div style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "flex-start" }}>
+        <Box sx={{
+            display: "flex",
+            alignItems: "flex-start",
+            flexDirection: "column",
+            gap: "1rem",
+        }}>
             <ButtonGroup>
                 <Button>First</Button>
                 <ButtonGroup orientation={"vertical"}>
@@ -29,6 +34,6 @@ export function ButtonGroupFunctionality() {
                 <Button>Second</Button>
                 <Button>Third</Button>
             </ButtonGroup>
-        </div>
+        </Box>
     )
 }

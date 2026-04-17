@@ -1,13 +1,15 @@
+import { Box } from "@mui/material";
 import { ButtonFunctionalityDemo } from "./01.ButtonFunctionalityDemo";
 import { ButtonCustomizationDemo } from "./02.ButtonCustomizationDemo";
 
 export default function App() {
-    return <div style={{
+    return <Box sx={{
         display: "flex",
+        alignItems: "flex-start",
         flexDirection: "column",
-        gap: "2rem"
+        gap: "1rem",
     }}>
         <ButtonFunctionalityDemo />
         <ButtonCustomizationDemo />
-    </div>
+    </Box>
 }
