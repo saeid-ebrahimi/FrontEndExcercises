@@ -1,14 +1,22 @@
-import { Brightness1, Brightness2, BrightnessHigh, BrightnessLow } from "@mui/icons-material";
+import { Brightness1, Brightness2, BrightnessHigh, BrightnessLow, ListSharp } from "@mui/icons-material";
 import {
     Box,
-    Rating
+    FormControl,
+    FormHelperText,
+    InputLabel,
+    ListSubheader,
+    MenuItem,
+    Rating,
+    Select
 
 } from "@mui/material";
 import { useState } from "react";
 
 
 export function Demo() {
-    const [value, setValue] = useState<number | null>(1)
+    const [value, setValue] = useState<string[]>([])
+    const options = ["trial", "personal", "community", "enterprise", "largeCompany"]
+
     console.log(value);
     const labels = ["Bad", "Okay", "Good", "Great", "Amazing"]
 
@@ -18,20 +26,31 @@ export function Demo() {
         flexDirection: "column",
         gap: "1rem",
     }}>
-        <Rating
-            max={5}
-            // readOnly
-            // highlightSelectedOnly
-            emptyIcon={<BrightnessLow />}
-            icon={<BrightnessHigh />}
-            size={"large"}
-            value={value}
-            precision={0.5}
-            onChangeActive={(_event, newValue) => {
-                console.log(`Hovered value is ${newValue}`);
-            }}
-            onChange={(_event, newValue) => setValue(newValue)} />
-        {value !== null && <p>{value >= 1 && value <= 5 && labels[value - 1]}</p>}
+        <FormControl
+        // error
+        // disabled
+        >
+            <InputLabel id="plan">Plan</InputLabel>
+            <Select
+                sx={{ minWidth: "400px" }}
+                displayEmpty
+                multiple
+                label={"Plan"}
+                labelId={"plan"}
+                renderValue={(value) => (value?.length ? `${value.toString()} Plan/Plans` : "Please Select The Plan/Plans")}
+                color="secondary"
+                value={value}
+                onChange={(event) => { setValue(event.target.value as string[]) }}
+            >
+                <ListSubheader>Membership Plans</ListSubheader>
+                {options.map((option) =>
+                    <MenuItem key={option} value={option}>
+                        {`${option.charAt(0).toUpperCase()}${option.slice(1)}`}
+                    </MenuItem>
+                )}
+            </Select>
+            <FormHelperText>{"select your membership plan"}</FormHelperText>
+        </FormControl>
 
     </Box>
 }

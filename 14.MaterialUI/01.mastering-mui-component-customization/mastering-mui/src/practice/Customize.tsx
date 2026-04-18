@@ -1,14 +1,21 @@
-import { BrightnessHigh, BrightnessLow } from "@mui/icons-material";
 import {
     Box,
-    ratingClasses, svgIconClasses,
-    Rating,
+    FormControl,
+    FormHelperText,
+    Select,
+    MenuItem,
+    ListSubheader,
+    InputLabel,
 } from "@mui/material";
 
 import { useState } from "react";
 
 export function Customize() {
-    const [brightnessValue, setBrightnessValue] = useState<number>(0.5)
+    const [value, setValue] = useState<string[]>([])
+    const options = ["trial", "personal", "community", "enterprise", "largeCompany"]
+
+    console.log(value);
+
 
     return <Box sx={{
         display: "flex",
@@ -16,42 +23,47 @@ export function Customize() {
         flexDirection: "column",
         gap: "1rem",
     }}>
-        <Rating
-            value={brightnessValue}
-            onChange={(_event, newValue) => { newValue && newValue >= 0 && setBrightnessValue(newValue) }}
-            emptyIcon={<BrightnessLow />}
-            icon={<BrightnessHigh />}
-            name={"brightness"}
-            onChangeActive={(_event, newValue) => {
-                console.log(`Hovered value is ${newValue}`);
-            }}
-            precision={0.5}
+        <FormControl
+            // error
+            // disabled
             sx={{
-                [`&.${ratingClasses.root}`]: {
-                    gap: 1,
-                },
-                // "& .MuiSvgIcon-root": {
-                //     fontSize: "2.7rem",
-                // },
-                // [`& .${ratingClasses.icon}`]: {
-                //     color: "red",
-                //     "& > svg": {
-                //         fontSize: "2rem",
-                //     }
-                // },
-                [`& .MuiRating-icon `]: {
-                    color: "red",
-                    "& > svg": {
-                        fontSize: "2rem",
+                "& .MuiFormLabel-root": {
+                    color: "#6D28D9",
+                    fontFamily: "Verdana",
+                    "&.Mui-focused": {
+                        color: "#6D28D9",
+                    },
+                    "&:not(.Mui-focused).MuiInputLabel-shrink": {
+                        color: "#047857",
+                    },
+                    "&.Mui-error": {
+                        color: "#B45309"
+                    },
+                    "&.Mui-disabled": {
+                        color: "#D8B4FE"
                     }
-                },
-                [`&.${ratingClasses.iconEmpty}`]: {
-                    color: "#E9D5FF",
-                },
-                [`& .${ratingClasses.iconFilled}`]: {
-                    color: "#86198F",
-                },
+                }
             }}
-        />
-    </Box >
+        >
+            <InputLabel error id="plan">Plan</InputLabel>
+            <Select
+                sx={{ minWidth: "400px" }}
+                multiple
+                label={"Plan"}
+                labelId={"plan"}
+                renderValue={(value) => (value?.length ? `${value.toString()} Plan/Plans` : "Please Select The Plan/Plans")}
+                color="secondary"
+                value={value}
+                onChange={(event) => { setValue(event.target.value as string[]) }}
+            >
+                <ListSubheader>Membership Plans</ListSubheader>
+                {options.map((option) =>
+                    <MenuItem key={option} value={option}>
+                        {`${option.charAt(0).toUpperCase()}${option.slice(1)}`}
+                    </MenuItem>
+                )}
+            </Select>
+            <FormHelperText>{"select your membership plan"}</FormHelperText>
+        </FormControl>
+    </Box>
 };

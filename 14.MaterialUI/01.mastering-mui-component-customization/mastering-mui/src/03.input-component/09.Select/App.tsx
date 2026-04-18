@@ -1,8 +1,9 @@
+import { Box } from "@mui/material";
 import { SelectFunctionality } from "./01.SelectFunctionality";
 import { SelectCustomization } from "./02.SelectCustomization";
 import { SelectCustomizationUsingClassesObject } from "./03.SelectCustomizationUsingClassesObject";
 export default function App() {
-    return <div style={{
+    return <Box sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -13,5 +14,5 @@ export default function App() {
         <SelectFunctionality />
         <SelectCustomization />
         <SelectCustomizationUsingClassesObject />
-    </div>
+    </Box>
 }
