@@ -3,7 +3,7 @@ import { FormComponentFunctionality } from "./01.FormComponentFunctionality";
 import { FormComponentsCustomization } from "./02.FormComponentsCustomization";
 
 export default function App() {
-    return <Box style={{
+    return <Box sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",

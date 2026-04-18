@@ -3,7 +3,7 @@ import { FloatingActionButtonFunctionality } from "./01.FloatingActionButtonFunc
 import { FloatingActionButtonCustomization } from "./02.FloatingActionButtonCustomization"
 
 export default function App() {
-    return <Box style={{
+    return <Box sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",

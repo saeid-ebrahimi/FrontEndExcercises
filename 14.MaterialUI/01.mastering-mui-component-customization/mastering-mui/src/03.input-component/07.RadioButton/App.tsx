@@ -4,7 +4,7 @@ import { RadioButtonCustomization } from "./02.RadioButtonCustomization";
 import { RadioButtonCustomizationUsingClassesObject } from "./03.RadioButtonCustomizationUsingClassesObject";
 
 export default function App() {
-    return <Box style={{
+    return <Box sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

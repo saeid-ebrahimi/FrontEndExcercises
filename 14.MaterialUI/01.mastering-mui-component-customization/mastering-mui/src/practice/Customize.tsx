@@ -1,6 +1,11 @@
-import { Box, Fab, } from "@mui/material";
-import { Add as AddIcon } from "@mui/icons-material";
+import {
+    Box, FormControl, FormControlLabel,
+    Radio, RadioGroup,
+} from "@mui/material";
+import { useState } from "react";
+
 export function Customize() {
+    const [value, setValue] = useState("email")
 
     return <Box sx={{
         display: "flex",
@@ -8,23 +13,56 @@ export function Customize() {
         flexDirection: "column",
         gap: "1rem",
     }}>
-        <Fab
-            disabled
-            variant={"extended"}
-            sx={{
-                bgcolor: "darkblue",
-                color: "wheat",
-                fontFamily: "Verdana",
-                "&:hover": {
-                    bgcolor: "blue"
+        <FormControl>
+            <RadioGroup sx={{
+                "& .MuiRadio-root": {
+                    color: "#164E63",
+                    "& .MuiSvgIcon-root": {
+                        fontSize: "1.7rem"
+                    },
+                    "&.Mui-disabled": {
+                        color: "#CFFAFE"
+                    },
+                    "& .Mui-checked:not(.Mui-disabled)": {
+                        color: "#164E63",
+                    },
                 },
-                "&.Mui-disabled": {
-                    bgcolor: "#CBD5E1"
+                "& .MuiFormControlLabel-label": {
+                    color: "#164E63",
+                    fontSize: 25,
+                    fontFamily: "Verdana",
+                    "&.Mui-disabled": {
+                        color: "#CFFAFE"
+                    }
                 }
             }}
-        >
-            <AddIcon />
-            New User
-        </Fab>
-    </Box>
+                value={value} onChange={(event) => { setValue(event.target.value) }}
+            >
+                <FormControlLabel
+                    // labelPlacement={"top"}
+                    value={"email"}
+                    aria-label={"Email"}
+                    control={<Radio
+                        size={"small"}
+                        color="secondary"
+                    />}
+                    label={"Email"}
+                />
+                <FormControlLabel
+                    value={"text"}
+                    aria-label={"Text Message"}
+                    control={<Radio
+                        size={"small"}
+                        color="secondary"
+                    />} label={"Text Message"} />
+                <FormControlLabel
+                    value={"newspaper"}
+                    aria-label={"Postal Newspaper"}
+                    control={<Radio
+                        size={"small"}
+                        color="secondary"
+                    />} label={"Postal Newspaper"} />
+            </RadioGroup>
+        </FormControl>
+    </Box >
 };
