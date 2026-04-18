@@ -8,7 +8,6 @@ export function RadioButtonCustomization() {
         // disabled
         >
             <RadioGroup sx={{
-
                 "& .MuiRadio-root": {
                     color: "#164E63",
                     "& .MuiSvgIcon-root": {
