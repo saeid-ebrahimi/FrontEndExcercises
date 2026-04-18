@@ -17,6 +17,12 @@ export function RatingCustomizationUsingClassesObject() {
             }}
             precision={0.5}
             sx={{
+                // [`& .${ratingClasses.icon}`]: {
+                //     color: "red",
+                //     "& > svg": {
+                //         fontSize: "2rem",
+                //     }
+                // },
                 [`& .${svgIconClasses.root}`]: {
                     fontSize: 30,
                     margin: "0 4px",
