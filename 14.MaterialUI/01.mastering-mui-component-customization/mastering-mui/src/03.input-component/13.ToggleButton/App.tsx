@@ -1,9 +1,10 @@
+import { Box } from "@mui/material";
 import { ToggleButtonFunctionality } from "./01.ToggleButtonFunctionality";
 import { ToggleButtonCustomization } from "./02.ToggleButtonCustomization";
 import { ToggleButtonCustomizationUsingClassesObject } from "./03.ToggleButtonCustomizationUsingClassesObject";
 
 export default function App() {
-    return <div style={{
+    return <Box style={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -14,5 +15,5 @@ export default function App() {
         <ToggleButtonFunctionality />
         <ToggleButtonCustomization />
         <ToggleButtonCustomizationUsingClassesObject />
-    </div>
+    </Box>
 }
