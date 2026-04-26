@@ -1,9 +1,10 @@
+import { Box } from "@mui/material";
 import { RatingFunctionality } from "./01.RatingFunctionality";
 import { RatingCustomization } from "./02.RatingCustomization";
 import { RatingCustomizationUsingClassesObject } from "./03.RatingCustomizationUsingClassesObject";
 
 export default function App() {
-    return <div style={{
+    return <Box sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -14,5 +15,5 @@ export default function App() {
         <RatingFunctionality />
         <RatingCustomization />
         <RatingCustomizationUsingClassesObject />
-    </div>
+    </Box>
 }

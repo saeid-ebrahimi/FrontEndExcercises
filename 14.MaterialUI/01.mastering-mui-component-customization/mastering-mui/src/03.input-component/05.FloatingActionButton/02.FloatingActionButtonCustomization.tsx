@@ -33,7 +33,7 @@ export function FloatingActionButtonCustomization() {
                     "&:hover": {
                         bgcolor: "#1E293B"
                     },
-                    [`&.${fabClasses.root}`]: {
+                    [`&.${fabClasses.disabled}`]: {
                         color: "#fff",
                         bgcolor: "#CBD5E1"
                     }

@@ -1,15 +1,15 @@
+import { Box } from "@mui/material";
 import { CheckboxFunctionality } from "./01.CheckboxFunctionality";
 import { CheckboxCustomization } from "./02.CheckboxCustomization";
 
 export default function App() {
-    return <div style={{
+    return <Box sx={{
         display: "flex",
+        alignItems: "flex-start",
         flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        gap: "2rem"
+        gap: "1rem",
     }}>
         <CheckboxFunctionality />
         <CheckboxCustomization />
-    </div>
+    </Box>
 }

@@ -1,8 +1,9 @@
+import { Box } from "@mui/material"
 import { FloatingActionButtonFunctionality } from "./01.FloatingActionButtonFunctionality"
 import { FloatingActionButtonCustomization } from "./02.FloatingActionButtonCustomization"
 
 export default function App() {
-    return <div style={{
+    return <Box sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
@@ -11,5 +12,5 @@ export default function App() {
     }}>
         <FloatingActionButtonFunctionality />
         <FloatingActionButtonCustomization />
-    </div>
+    </Box>
 }

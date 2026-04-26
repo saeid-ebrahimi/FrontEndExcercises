@@ -24,13 +24,12 @@ function ComboBox() {
             getOptionLabel={(option) => `${option.name} - ${option.year} `}
             groupBy={(option) => (option.year < 2000 ? "20 Century" : "21 Century")}
             renderOption={(props, option) => (
-                //@ts-ignore
-                <div {...props} key={props.key} style={{
+                <li {...props} key={props.key} style={{
                     backgroundColor: option.year >= 2000 ? "#7E22CE" : "",
                     color: option.year >= 2000 ? "white" : "",
                 }}>
                     {option.name}
-                </div>
+                </li>
             )}
             renderInput={(params) => <TextField {...params} label={"Movies"} placeholder={"Select a Movie..."} />} />
     </div>
@@ -54,7 +53,6 @@ function FreeSoloAutocomplete() {
         onChange={(_event, newValue) => typeof newValue === "string" ? setValue(newValue) : setValue(newValue?.name)}
         groupBy={(option) => (option.year < 2000 ? "20 Century" : "21 Century")}
         renderInput={(params) => <TextField {...params} label={"Movies"} placeholder={"Select a Movie..."} />} />
-
 }
 
 

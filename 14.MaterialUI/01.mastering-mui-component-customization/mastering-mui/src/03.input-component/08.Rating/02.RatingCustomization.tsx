@@ -16,9 +16,17 @@ export function RatingCustomization() {
             }}
             precision={0.5}
             sx={{
+                // [`& .MuiRating-icon `]: {
+                //     color: "red",
+                //     "& > svg": {
+                //         fontSize: "2rem",
+                //     }
+                // },
+                "&.MuiRating-root": {
+                    gap: 1,
+                },
                 "& .MuiSvgIcon-root": {
                     fontSize: 30,
-                    margin: "0 4px"
                 },
                 "& .MuiRating-iconFilled": {
                     color: "#86198F"
