@@ -1,9 +1,10 @@
+import { Box } from "@mui/material";
 import { SwitchFunctionality } from "./01.SwitchFunctionality";
 import { SwitchCustomization } from "./02.SwitchCustomization";
 import { SwitchCustomizationUsingClassesObject } from "./03.SwitchCustomizationUsingClassesObject";
 
 export default function App() {
-    return <div style={{
+    return <Box style={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -14,5 +15,5 @@ export default function App() {
         <SwitchFunctionality />
         <SwitchCustomization />
         <SwitchCustomizationUsingClassesObject />
-    </div>
+    </Box>
 }
