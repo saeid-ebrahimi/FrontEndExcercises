@@ -1,9 +1,10 @@
+import { Box } from "@mui/material";
 import { SliderFunctionality } from "./01.SliderFunctionality";
 import { SliderCustomization } from "./02.SliderCustomization";
 import { SliderCustomizationUsingClassesObject } from "./03.SliderCustomizationUsingClassesObject";
 
 export default function App() {
-    return <div style={{
+    return <Box style={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -14,5 +15,5 @@ export default function App() {
         <SliderFunctionality />
         <SliderCustomization />
         <SliderCustomizationUsingClassesObject />
-    </div>
+    </Box>
 }
