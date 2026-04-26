@@ -6,6 +6,8 @@ import {
     MenuItem,
     ListSubheader,
     InputLabel,
+    formLabelClasses,
+    inputLabelClasses,
 } from "@mui/material";
 
 import { useState } from "react";
@@ -24,30 +26,51 @@ export function Customize() {
         gap: "1rem",
     }}>
         <FormControl
-            // error
+            error
             // disabled
             sx={{
-                "& .MuiFormLabel-root": {
+                [`& .${formLabelClasses.root}`]: {
                     color: "#6D28D9",
                     fontFamily: "Verdana",
-                    "&.Mui-focused": {
+                    [`&.${formLabelClasses.focused}`]: {
                         color: "#6D28D9",
                     },
-                    "&:not(.Mui-focused).MuiInputLabel-shrink": {
+                    [`&:not(.Mui-focused).${inputLabelClasses.shrink}`]: {
                         color: "#047857",
                     },
-                    "&.Mui-error": {
-                        color: "#B45309"
+                    [`&.${formLabelClasses.error}`]: {
+                        color: "#B45309",
                     },
+                    [`&.${formLabelClasses.disabled}`]: {
+                        color: "#D8B4FE",
+                    },
+                },
+                "& .MuiSelect-root": {
+                    bgcolor: "#ECFDF5",
                     "&.Mui-disabled": {
-                        color: "#D8B4FE"
-                    }
+                        bgcolor: "white"
+                    },
+                    "& .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "#047857",
+                    },
+                    "&:hover .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "#10B981",
+                    },
+                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "#6D28D9",
+                    },
                 }
             }}
         >
-            <InputLabel error id="plan">Plan</InputLabel>
+            <InputLabel id="plan">Plan</InputLabel>
             <Select
-                sx={{ minWidth: "400px" }}
+                MenuProps={{
+                    PaperProps: {
+                        sx: {
+                            bgcolor: "#ECFDF5",
+                        }
+                    }
+                }}
                 multiple
                 label={"Plan"}
                 labelId={"plan"}

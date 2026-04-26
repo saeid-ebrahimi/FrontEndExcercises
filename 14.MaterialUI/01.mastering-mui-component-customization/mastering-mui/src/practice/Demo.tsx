@@ -2,55 +2,161 @@ import { Brightness1, Brightness2, BrightnessHigh, BrightnessLow, ListSharp } fr
 import {
     Box,
     FormControl,
+    FormControlLabel,
     FormHelperText,
+    InputAdornment,
     InputLabel,
     ListSubheader,
     MenuItem,
     Rating,
-    Select
+    Select,
+    Slider,
+    Switch,
+    TextField
 
 } from "@mui/material";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
+import { PhoneAndroid as PhoneIcon, Visibility as VisibilityIcon, VisibilityOff as VisibilityOffIcon } from "@mui/icons-material";
 
 export function Demo() {
-    const [value, setValue] = useState<string[]>([])
-    const options = ["trial", "personal", "community", "enterprise", "largeCompany"]
-
-    console.log(value);
-    const labels = ["Bad", "Okay", "Good", "Great", "Amazing"]
-
+    const [textValue, setTextValue] = useState<string>("")
+    const [phoneNumber, setPhoneNumber] = useState<string>("")
+    const [visible, setVisible] = useState(true)
     return <Box sx={{
         display: "flex",
         alignItems: "flex-start",
         flexDirection: "column",
         gap: "1rem",
     }}>
-        <FormControl
-        // error
-        // disabled
-        >
-            <InputLabel id="plan">Plan</InputLabel>
-            <Select
-                sx={{ minWidth: "400px" }}
-                displayEmpty
-                multiple
-                label={"Plan"}
-                labelId={"plan"}
-                renderValue={(value) => (value?.length ? `${value.toString()} Plan/Plans` : "Please Select The Plan/Plans")}
-                color="secondary"
-                value={value}
-                onChange={(event) => { setValue(event.target.value as string[]) }}
-            >
-                <ListSubheader>Membership Plans</ListSubheader>
-                {options.map((option) =>
-                    <MenuItem key={option} value={option}>
-                        {`${option.charAt(0).toUpperCase()}${option.slice(1)}`}
-                    </MenuItem>
-                )}
-            </Select>
-            <FormHelperText>{"select your membership plan"}</FormHelperText>
-        </FormControl>
+        <TextField
+            value={phoneNumber}
+            label={"Full Name"}
+            id={"full-name"}
+            type={visible ? "number" : "password"}
+            sx={{
+                "& input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button": {
+                    appearance: "none",
+                },
+                "& .Mui-error": {
+                    "& .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "#C2410C"
+                    },
+                    "& .MuiInputLabel-asterisk": {
+                        color: "#C2410C"
+                    }
+                },
+                "& .Mui-disabled": {
+                    "& .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "#D8B4FE !important",
+                    },
+                    "& .MuiOutlinedInput-input": {
+                        "-webkit-text-fill-color": "#D8B4FE",
+                        "& .Mui-error": {
+                            color: "wheat"
+                        }
+                    },
+                    "&.MuiInputLabel-root": {
+                        color: "#D8B4FE",
+                    },
+                    "&.MuiFormHelperText-root": {
+                        color: "#D8B4FE",
+                    },
+                    "&::placeholder": {
+                        color: "red !important"
+                    }
 
-    </Box>
+                },
+                "&:hover": {
+                    "& .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "#6D28D9",
+
+                    },
+                    "& .Mui-error .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "#F97316"
+                    },
+                    "& .Mui-disabled": {
+                        "& .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#D8B4FE"
+                        },
+                    },
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#4C1D95",
+                },
+                "& .MuiInputLabel-root": {
+                    color: "#0E7490",
+                    fontFamily: "Verdana",
+                    "&.Mui-error": {
+                        color: "#C2410C"
+                    }
+                },
+                "& ::placeholder": {
+                    color: "#4C1D95",
+                    opacity: 0.8,
+                },
+                "& .MuiInputLabel-shrink": {
+                    color: "#4C1D95",
+                    "&.Mui-error": {
+                        color: "#C2410C"
+                    }
+                },
+                "& .MuiFormHelperText-root": {
+                    color: "#4C1D95",
+                    fontFamily: "Verdana",
+                    fontSize: "0.75rem",
+                    "&.Mui-error": {
+                        color: "#C2410C"
+                    }
+                },
+
+            }}
+            placeholder={"Enter Your Phone Number..."}
+
+            required
+            slotProps={{
+                input: {
+                    sx: {
+                        bgcolor: "#EDE9FE",
+                        color: "#4C1D95",
+                        fontFamily: "Verdana",
+                        height: "4rem",
+                        "&.Mui-error": {
+                            bgcolor: "#FFF7ED",
+                            color: "#C2410C"
+                        },
+                        "&.Mui-disabled": {
+                            bgcolor: "white",
+                        },
+
+
+                    },
+                    startAdornment:
+                        <InputAdornment sx={{
+                            "& > svg": {
+                                color: "#4C1D95",
+                            },
+                        }} position={"start"}>
+                            <PhoneIcon />
+                        </InputAdornment>,
+                    endAdornment:
+                        <InputAdornment sx={{
+                            "& > svg": {
+                                color: "#4C1D95",
+                            },
+                        }} position={"end"} onClick={() => { setVisible(prev => !prev) }}>
+                            {visible ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                        </InputAdornment>
+                }
+            }}
+            onChange={
+                (event: ChangeEvent<HTMLInputElement>) => {
+                    setPhoneNumber(event.target.value)
+                }
+            }
+            error={phoneNumber.length !== 11 && phoneNumber.length > 0}
+            helperText={phoneNumber.length !== 11 && phoneNumber.length > 0 ? "your phone number should be 11 digits" : "enter your emergency phone number"}
+
+        />
+    </Box >
 }
