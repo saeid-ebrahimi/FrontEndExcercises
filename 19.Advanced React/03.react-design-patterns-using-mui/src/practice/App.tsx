@@ -1,6 +1,7 @@
 import { Box } from "@mui/material"
 import "../App.css"
 import { GridDemo } from "../01.layout-patterns/SplitScreen/grid"
+import { BoxDemo } from "../01.layout-patterns/SplitScreen/box"
 
 export default function App() {
     return <Box sx={{
@@ -9,6 +10,6 @@ export default function App() {
         gap: "2rem",
     }}>
         <GridDemo />
-
+        <BoxDemo />
     </Box>
 }
