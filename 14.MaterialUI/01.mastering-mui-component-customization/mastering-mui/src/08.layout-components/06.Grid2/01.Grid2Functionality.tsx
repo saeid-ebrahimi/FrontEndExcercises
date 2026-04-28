@@ -14,4 +14,4 @@ export function Grid2Functionality() {
             </Grid>
         </Grid>
     </Box>
-}
+};
