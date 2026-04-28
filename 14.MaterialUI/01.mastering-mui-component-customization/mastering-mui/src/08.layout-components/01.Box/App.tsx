@@ -1,11 +1,11 @@
-import { Divider } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import BoxFunctionality from "./01.BoxFunctionality";
 import BoxCustomization from "./02.BoxCustomization";
 
 
 
 export default function App() {
-    return <div style={{
+    return <Box style={{
         flexDirection: "column",
         // justifyContent: "center",
         margin: 20,
@@ -16,5 +16,5 @@ export default function App() {
         <BoxFunctionality />
         <Divider flexItem variant={"middle"}>Customization</Divider>
         <BoxCustomization />
-    </div>
+    </Box>
 }

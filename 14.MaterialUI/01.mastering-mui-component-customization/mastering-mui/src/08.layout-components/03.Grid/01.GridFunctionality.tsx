@@ -1,4 +1,4 @@
-import { Divider, Grid, useMediaQuery } from "@mui/material";
+import { Box, Divider, Grid, Typography, useMediaQuery } from "@mui/material";
 
 
 // direction: row
@@ -15,8 +15,8 @@ import { Divider, Grid, useMediaQuery } from "@mui/material";
 export default function GridFunctionality() {
     // const matchesMD = useMediaQuery(theme => theme.breakpoints.down("md"))
     return (
-        <div>
-            <h1>Grid Functionality</h1>
+        <Box>
+            <Typography component={"h1"}>Grid Functionality</Typography>
             <Grid container
                 // spacing={4}
                 sx={{
@@ -58,6 +58,6 @@ export default function GridFunctionality() {
                 </Grid>
             </Grid>
 
-        </div>
+        </Box>
     )
 }
