@@ -1,7 +1,7 @@
 import { Box } from "@mui/material"
 import "../App.css"
-import { BoxDemo } from "../01.layout-patterns/HolyGrail/box"
-import { Grid2Demo } from "../01.layout-patterns/HolyGrail/grid2"
+import { BoxDemo } from "../01.layout-patterns/02.HolyGrail/box"
+import { Grid2Demo } from "../01.layout-patterns/03.GridCard/grid2"
 
 export default function App() {
     return <Box sx={{
