@@ -2,7 +2,6 @@ import { Divider } from "@mui/material";
 import StackFunctionality from "./01.StackFunctionality";
 import StackCustomization from "./02.StackCustomization";
 
-
 export default function App() {
     return <div style={{
         flexDirection: "column",
