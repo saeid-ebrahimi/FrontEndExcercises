@@ -1,6 +1,6 @@
-import { Box, Typography, Grid2 as Grid } from "@mui/material";
+import { Box, Grid2 as Grid, Typography } from "@mui/material";
 
-export function Demo() {
+export function Grid2Functionality() {
     return <Box sx={{
         width: "100%",
     }}>
