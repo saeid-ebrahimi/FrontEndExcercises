@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 import "../App.css"
-import { DrawerDemo } from "../01.layout-patterns/04.Sidebar/drawer"
+import { ContainerDemo } from "../01.layout-patterns/05.Centered/container"
 export default function App() {
     return <Box sx={{
         display: "flex",
@@ -8,6 +8,6 @@ export default function App() {
         gap: "2rem",
         height: "500px"
     }}>
-        <DrawerDemo />
+        <ContainerDemo />
     </Box>
 }
