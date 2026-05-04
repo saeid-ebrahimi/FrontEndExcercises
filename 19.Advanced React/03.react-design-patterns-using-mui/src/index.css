@@ -30,7 +30,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
+#root {
+  padding: 0 !important;
+}
 body {
   margin: 0;
 }
