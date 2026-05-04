@@ -1,4 +1,5 @@
 import { Grid2 as Grid } from "@mui/material";
+
 import photo1 from "../../assets/229234.jpg";
 import photo2 from "../../assets/40051.jpg";
 import photo3 from "../../assets/640990.jpg";

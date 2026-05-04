@@ -1,7 +1,7 @@
 import { Box } from "@mui/material"
 import "../App.css"
+import { StackDemo } from "../01.layout-patterns/08.Stack/stackDemo"
 
-import { GridDemo } from "../01.layout-patterns/06.Bento/grid"
 export default function App() {
     return <Box sx={{
         display: "flex",
@@ -9,6 +9,6 @@ export default function App() {
         gap: "2rem",
         height: "500px"
     }}>
-        <GridDemo />
+        <StackDemo />
     </Box>
 }
