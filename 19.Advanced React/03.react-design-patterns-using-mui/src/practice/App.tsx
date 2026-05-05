@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 import "../App.css"
-import { ContainerDemo } from "../01.layout-patterns/07.Full-Screen/02.container"
+import { ModalDemo } from "../01.layout-patterns/07.Full-Screen/04.modal"
 
 export default function App() {
     return <Box sx={{
@@ -10,6 +10,6 @@ export default function App() {
         gap: "2rem",
         // height: "500px"
     }}>
-        <ContainerDemo />
+        <ModalDemo />
     </Box>
 }
