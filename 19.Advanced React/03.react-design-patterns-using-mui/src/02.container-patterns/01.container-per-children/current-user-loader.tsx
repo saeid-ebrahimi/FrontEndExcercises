@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { TUser } from "./user-info";
 
 export function CurrentUserLoader({ children }: { children: (user: TUser) => ReactNode; }) {
