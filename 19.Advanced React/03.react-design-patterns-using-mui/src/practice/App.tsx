@@ -17,6 +17,14 @@ async function getDataFromServer<T>(url: string): Promise<T> {
     // }
 }
 
+const getDataFromLocalStorage = <T,>(key: string): T => {
+    {
+        const stored = localStorage.getItem(key);
+        if (!stored) throw new Error(`No data found for key "${key}"`);
+        return JSON.parse(stored) as T;
+    };
+};
+
 export default function App() {
     return <>
         <ResourceLoader resourceUrl={"/users/3"}>
@@ -30,6 +38,13 @@ export default function App() {
         </DataSource>
         <DataSourceWithRender
             getFn={() => getDataFromServer<TUser>("/users/3")}
+            render={(resource: TUser) => <UserInfo user={resource} />}
+        />
+        <DataSource getFn={() => getDataFromLocalStorage<TUser>("user")}>
+            {(resource: TUser) => <UserInfo user={resource} />}
+        </DataSource>
+        <DataSourceWithRender
+            getFn={() => getDataFromLocalStorage<TUser>("user")}
             render={(resource: TUser) => <UserInfo user={resource} />}
         />
     </>
