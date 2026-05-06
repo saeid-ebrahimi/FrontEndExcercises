@@ -4,7 +4,6 @@ import { TUser } from "./user-info";
 
 export function UserLoader({ userId, children }: { userId: number; children: (user: TUser) => ReactNode; }) {
     const [user, setUser] = useState(null);
-    console.log(user);
 
     useEffect(() => {
         (async () => {
