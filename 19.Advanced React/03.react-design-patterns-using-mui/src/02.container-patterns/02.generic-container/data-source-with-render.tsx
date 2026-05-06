@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from "react";
 
-export function DataSource<T>(
+export function DataSourceWithRender<T>(
     { getFn, render }: { getFn?: () => T | Promise<T>; render: (prop: T) => ReactNode; }
 ) {
     const [resource, setResource] = useState<T>()

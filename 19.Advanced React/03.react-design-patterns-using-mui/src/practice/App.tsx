@@ -4,6 +4,7 @@ import { ResourceLoader } from "../02.container-patterns/02.generic-container/re
 import { BookInfo, TBook } from "../02.container-patterns/01.container-per-children/book-info"
 import { DataSource } from "../02.container-patterns/02.generic-container/data-source"
 import axios from "axios"
+import { DataSourceWithRender } from "../02.container-patterns/02.generic-container/data-source-with-render"
 
 async function getDataFromServer<T>(url: string): Promise<T> {
     // try {
@@ -27,5 +28,9 @@ export default function App() {
         <DataSource getFn={() => getDataFromServer<TUser>("/users/3")}>
             {(resource: TUser) => <UserInfo user={resource} />}
         </DataSource>
+        <DataSourceWithRender
+            getFn={() => getDataFromServer<TUser>("/users/3")}
+            render={(resource: TUser) => <UserInfo user={resource} />}
+        />
     </>
 }
