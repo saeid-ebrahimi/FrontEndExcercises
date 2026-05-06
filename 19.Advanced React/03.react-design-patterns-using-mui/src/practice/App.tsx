@@ -1,15 +1,11 @@
-import { Box } from "@mui/material"
 import "../App.css"
-import { ModalDemo } from "../01.layout-patterns/07.Full-Screen/04.modal"
+import { CurrentUserLoader } from "../02.container-patterns/curtrent-user-loader"
+import { UserInfo } from "../02.container-patterns/user-info"
 
 export default function App() {
-    return <Box sx={{
-        display: "flex",
-        padding: 0,
-        flexDirection: "column",
-        gap: "2rem",
-        // height: "500px"
-    }}>
-        <ModalDemo />
-    </Box>
+    return <>
+        <CurrentUserLoader>
+            {(user) => <UserInfo user={user} />}
+        </CurrentUserLoader>
+    </>
 }
