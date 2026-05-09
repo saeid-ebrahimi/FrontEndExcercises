@@ -1,9 +1,10 @@
 import "../App.css"
-import { TUser, UserInfo } from "../02.container-patterns/01.container-per-children/user-info"
+
 import { ResourceLoader } from "../02.container-patterns/02.generic-container/resource-loader"
-import { BookInfo, TBook } from "../02.container-patterns/01.container-per-children/book-info"
 import { DataSource } from "../02.container-patterns/02.generic-container/data-source"
 import axios from "axios"
+import { TUser, UserInfo } from "../02.container-patterns/02.generic-container/user-info"
+import { BookInfo, TBook } from "../02.container-patterns/02.generic-container/book-info"
 import { DataSourceWithRender } from "../02.container-patterns/02.generic-container/data-source-with-render"
 
 async function getDataFromServer<T>(url: string): Promise<T> {
@@ -33,19 +34,19 @@ export default function App() {
         <ResourceLoader resourceUrl={"/books/3"}>
             {(resource: TBook) => <BookInfo book={resource} />}
         </ResourceLoader>
-        <DataSource getFn={() => getDataFromServer<TUser>("/users/3")}>
+        <DataSource getFn={() => getDataFromServer<TUser>("/api/users/3")}>
             {(resource: TUser) => <UserInfo user={resource} />}
         </DataSource>
         <DataSourceWithRender
-            getFn={() => getDataFromServer<TUser>("/users/3")}
+            getFn={() => getDataFromServer<TUser>("/api/users/3")}
             render={(resource: TUser) => <UserInfo user={resource} />}
         />
-        <DataSource getFn={() => getDataFromLocalStorage<TUser>("user")}>
+        {/* <DataSource getFn={() => getDataFromLocalStorage<TUser>("user")}>
             {(resource: TUser) => <UserInfo user={resource} />}
         </DataSource>
         <DataSourceWithRender
             getFn={() => getDataFromLocalStorage<TUser>("user")}
             render={(resource: TUser) => <UserInfo user={resource} />}
-        />
+        /> */}
     </>
 }

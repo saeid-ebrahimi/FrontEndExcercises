@@ -9,6 +9,8 @@ export function DataSourceWithRender<T>(
             let data;
             if (getFn) {
                 data = await getFn();
+                console.log(data);
+
             }
             setResource(data)
         })();

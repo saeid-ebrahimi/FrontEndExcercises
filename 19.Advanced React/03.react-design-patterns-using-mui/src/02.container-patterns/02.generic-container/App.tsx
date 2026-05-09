@@ -36,13 +36,13 @@ export default function App() {
         <DataSource getFn={() => getDataFromServer<TUser>("/users/3")}>
             {(resource: TUser) => <UserInfo user={resource} />}
         </DataSource>
-        <DataSourceWithRender
-            getFn={() => getDataFromServer<TUser>("/users/3")}
-            render={(resource: TUser) => <UserInfo user={resource} />}
-        />
-        <DataSource getFn={() => getDataFromLocalStorage<TUser>("user")}>
+        <DataSource getFn={() => getDataFromServer<TUser>("/api/users/3")}>
             {(resource: TUser) => <UserInfo user={resource} />}
         </DataSource>
+        <DataSourceWithRender
+            getFn={() => getDataFromServer<TUser>("/api/users/3")}
+            render={(resource: TUser) => <UserInfo user={resource} />}
+        />
         <DataSourceWithRender
             getFn={() => getDataFromLocalStorage<TUser>("user")}
             render={(resource: TUser) => <UserInfo user={resource} />}
