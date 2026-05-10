@@ -19,4 +19,5 @@ const Step = ({ stepNumber, onNext, }: { stepNumber: number; onNext: (data: Part
     </Box>
 );
 
+// generateStep is HOC or factory function
 export const generateStep = (stepNumber: number, onNext: (data: Partial<TFinalData>) => void) => <Step key={stepNumber} stepNumber={stepNumber} onNext={onNext} />;
