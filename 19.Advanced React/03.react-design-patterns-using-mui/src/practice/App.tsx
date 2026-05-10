@@ -9,7 +9,7 @@ import { ControlledFlowWrapper } from "../03.controlled-and-uncontrolled-compone
 export default function App() {
 
     return <>
-        <UnControlledForm />
+        {/* <UnControlledForm />
         <ControlledForm />
         <UnControlledDialog />
         <UncontrolledFlow
@@ -20,7 +20,7 @@ export default function App() {
                 return steps[step];
             }
             }
-        />
+        /> */}
         <ControlledFlowWrapper />
 
     </>
