@@ -93,3 +93,26 @@ const SERVER_PORT = 9090;
 app.listen(SERVER_PORT, () =>
   console.log(`Server is listening on port: ${SERVER_PORT}`)
 );
+
+app.post("/analytics", (req, res) => {
+  const { event, page, utm } = req.body;
+
+  const analyticsEvent = {
+    event,
+    page,
+    utm,
+    timestamp: new Date().toISOString(),
+    ip: req.ip,
+    userAgent: req.get("user-agent"),
+  };
+
+  analyticsEvents.push(analyticsEvent);
+
+  console.log("Analytics Event");
+  console.log(analyticsEvent);
+
+  res.status(201).json({
+    success: true,
+    message: "Analytics event recorded.",
+  });
+});

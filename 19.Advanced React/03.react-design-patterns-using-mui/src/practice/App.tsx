@@ -1,27 +1,22 @@
-import { ControlledForm } from "../03.controlled-and-uncontrolled-components-patterns/01.forms/controlled-form"
-import { UnControlledForm } from "../03.controlled-and-uncontrolled-components-patterns/01.forms/uncontrolled-form"
-import { UnControlledDialog } from "../03.controlled-and-uncontrolled-components-patterns/02.dialog/uncontrolled-dialog"
-import { UncontrolledFlow } from "../03.controlled-and-uncontrolled-components-patterns/03.flow/uncontrolled-flow"
-import "../App.css"
-import { generateStep } from "../03.controlled-and-uncontrolled-components-patterns/03.flow/generateSteps"
-import { ControlledFlowWrapper } from "../03.controlled-and-uncontrolled-components-patterns/03.flow/controlled-flow-wrapper"
+// import { UserInfoWrapper } from "../04.HOC-design-pattern/user-info-wrapper";
+
+import { AnalyzedUserInfo } from "../04.HOC-design-pattern/components/analyzed-user-info";
 
 export default function App() {
 
     return <>
-        {/* <UnControlledForm />
-        <ControlledForm />
-        <UnControlledDialog />
-        <UncontrolledFlow
-            onDone={() => alert('All steps completed!')}
-            lastStepNumber={5}
-            render={({ step, onNext }) => {
-                const steps = [...Array(5)].map((_, index) => generateStep(index + 1, onNext));
-                return steps[step];
-            }
-            }
+        {/* <UserInfoWrapper
+            user={{ age: 23, books: [], country: "USA", name: "John" }}
+            calledIn={"List of users"}
+            utmData={{
+                utm_source: "google",
+                utm_medium: "cpc",
+                utm_campaign: "summer_sale_2026",
+                utm_term: "react hoc tutorial",
+                utm_content: "text_ad_variant_a",
+            }}
         /> */}
-        <ControlledFlowWrapper />
-
+        <AnalyzedUserInfo user={{ age: 23, books: [], country: "USA", name: "John" }} />
     </>
+
 }
