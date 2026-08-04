@@ -22,19 +22,30 @@ export function CurrentUserLoader2({ children }: { children: (user: TUser) => Re
     const [user, setUser] = useState(null);
     const [fetchCondition, setFetchCondition] = useState<"loading" | "error" | "success">("loading");
 
-    async function getCurrentUser() {
-        try {
-            const response = await axios.get("/api/currents-user");
-            setFetchCondition("success")
-            setUser(response.data)
-        } catch {
-            setFetchCondition("error")
-            setUser(null);
-        }
-    }
-
     useEffect(() => {
-        (async () => { await getCurrentUser() })();
+        const controller = new AbortController();
+        const getCurrentUser = async () => {
+            setFetchCondition("loading");
+            try {
+                const response = await axios.get("/api/currents-user", {
+                    signal: controller.signal
+                });
+                setUser(response.data)
+                setFetchCondition("success")
+            } catch (error) {
+                if (axios.isCancel(error)) {
+                    console.log("Request canceled");
+                } else {
+                    setFetchCondition("error")
+                }
+            }
+        }
+        getCurrentUser();
+
+        // 5. Cleanup function to abort the request
+        return () => {
+            controller.abort()
+        }
     }, [])
 
     if (fetchCondition === "loading") {

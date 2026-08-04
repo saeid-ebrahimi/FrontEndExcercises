@@ -22,21 +22,35 @@ export function UserLoader2({ userId, children }: { userId: number, children: (u
     const [user, setUser] = useState<TUser | null>(null)
     const [fetchCondition, setFetchCondition] = useState<"loading" | "error" | "success">("loading");
 
-    async function getUserInfo(userId: number) {
-        if (userId < 1) {
-            setFetchCondition("error")
-        }
-        try {
-            const response = await axios.get<TUser>(`/api/users/${userId}`);
-            setFetchCondition("success");
-            setUser(response.data);
-        } catch {
-            setFetchCondition("error");
-        }
-    }
-
     useEffect(() => {
-        (async () => { await getUserInfo(userId) })();
+        const controller = new AbortController();
+        const getUserInfo = async () => {
+            if (userId < 1) {
+                setFetchCondition("error");
+                return;
+            }
+            // 2. Reset to loading state if the URL changes
+            setFetchCondition("loading");
+            try {
+                const response = await axios.get<TUser>(`/api/users/${userId}`, {
+                    signal: controller.signal
+                });
+                setUser(response.data);
+                setFetchCondition("success");
+            } catch (error) {
+                if (axios.isCancel(error)) {
+                    console.log("Request canceled");
+                } else {
+                    setFetchCondition("error");
+                }
+            }
+        }
+        getUserInfo();
+
+        // 5. Cleanup function to abort the request
+        return () => {
+            controller.abort()
+        }
     }, [userId])
 
     if (fetchCondition === "loading") {
