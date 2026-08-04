@@ -5,7 +5,7 @@ export function BoxDemo() {
         height: "500px",
         display: "grid",
         gridTemplateRows: {
-            xs: "auto 1fr auto", md: "auto 1fr auto"
+            xs: "auto 1fr auto"
         },
         gridTemplateColumns: {
             xs: "1fr", md: "200px 1fr 200px"
@@ -25,23 +25,23 @@ export function BoxDemo() {
             `
         }
     }}>
-        <Box sx={{
+        <Box component={"header"} sx={{
             gridArea: "header",
             bgcolor: "primary.main"
         }}>Header</Box>
-        <Box sx={{
+        <Box component={"aside"} sx={{
             gridArea: "left",
             bgcolor: "secondary.main"
         }}>Left</Box>
-        <Box sx={{
+        <Box component={"main"} sx={{
             gridArea: "main",
             bgcolor: "gray",
         }}>Main</Box>
-        <Box sx={{
+        <Box component={"aside"} sx={{
             gridArea: "right",
             bgcolor: "red",
         }}>Right</Box>
-        <Box sx={{
+        <Box component={"footer"} sx={{
             gridArea: "footer",
             bgcolor: "blue"
         }}>Footer</Box>
