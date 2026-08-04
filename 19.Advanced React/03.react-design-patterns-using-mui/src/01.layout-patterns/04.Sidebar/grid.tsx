@@ -6,11 +6,7 @@ export function GridDemo() {
         minHeight: "100vh",
 
     }} container>
-        <Grid component={"main"} sx={{
-            bgcolor: "wheat"
-        }} size={{ xs: 12, lg: 8 }}>Main</Grid>
-        <Grid component={"aside"} sx={{
-            bgcolor: "whitesmoke"
-        }} size={{ xs: 12, lg: 4 }}>Aside</Grid>
+        <Grid component={"main"} bgcolor={"wheat"} size={{ xs: 12, lg: 8 }}>Main</Grid>
+        <Grid component={"aside"} bgcolor={"whitesmoke"} size={{ xs: 12, lg: 4 }}>Aside</Grid>
     </Grid>
 }
