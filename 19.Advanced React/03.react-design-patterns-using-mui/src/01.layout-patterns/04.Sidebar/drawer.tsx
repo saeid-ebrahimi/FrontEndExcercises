@@ -7,7 +7,7 @@ export function DrawerDemo() {
         setOpen(false)
     }
     const drawerWidth = 350
-    return <>
+    return <Box>
         <Button onClick={() => setOpen(prev => !prev)} >Toggle Drawer</Button>
         <Box sx={{
             width: "100%",
@@ -20,8 +20,11 @@ export function DrawerDemo() {
             anchor={"left"}
             // variant={"permanent"}
             variant={"persistent"}
+            // variant={"temporary"}
             ModalProps={{ keepMounted: true }}
-            open={open} onClose={handleClose} sx={{
+            open={open}
+            onClose={handleClose}
+            sx={{
                 width: drawerWidth,
                 "& .MuiDrawer-paper": {
                     width: drawerWidth
@@ -39,5 +42,5 @@ export function DrawerDemo() {
                 </li>
             </ul>
         </Drawer>
-    </>
+    </Box>
 }

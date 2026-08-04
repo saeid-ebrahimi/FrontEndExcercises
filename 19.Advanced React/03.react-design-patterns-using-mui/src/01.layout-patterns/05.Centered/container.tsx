@@ -1,10 +1,10 @@
 import { Container } from "@mui/material";
 
 export function ContainerDemo() {
-    return <Container sx={{
+    return <Container maxWidth={"lg"} sx={{
         bgcolor: "lightblue",
         height: "100%"
     }}>
-        test
+        Centered Using Container
     </Container>
 }

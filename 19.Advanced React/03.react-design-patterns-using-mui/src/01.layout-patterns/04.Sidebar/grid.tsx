@@ -8,9 +8,9 @@ export function GridDemo() {
     }} container>
         <Grid component={"main"} sx={{
             bgcolor: "wheat"
-        }} size={{ xs: 12, lg: 8 }}></Grid>
+        }} size={{ xs: 12, lg: 8 }}>Main</Grid>
         <Grid component={"aside"} sx={{
             bgcolor: "whitesmoke"
-        }} size={{ xs: 12, lg: 4 }}></Grid>
+        }} size={{ xs: 12, lg: 4 }}>Aside</Grid>
     </Grid>
 }
