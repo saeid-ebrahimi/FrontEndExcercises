@@ -23,24 +23,36 @@ export function ResourceLoader2<T>({ resourceUrl, children }: { resourceUrl: str
     const [resource, setResource] = useState<T | null>(null);
     const [fetchCondition, setFetchCondition] = useState<"loading" | "error" | "success">("loading");
 
-    async function getResource(resourceUrl: string) {
-        if (!resourceUrl) {
-            setFetchCondition("error");
-            return;
-        }
-        try {
-            const response = await axios.get<T>(resourceUrl);
-            setResource(response.data)
-            setFetchCondition("success")
-        } catch {
-            setFetchCondition("error")
-        }
-    }
+
 
     useEffect(() => {
-        (async () => {
-            await getResource(resourceUrl)
-        })()
+        const controller = new AbortController();
+
+        const getResource = async () => {
+            if (!resourceUrl) {
+                setFetchCondition("error");
+                return;
+            }
+            try {
+                const response = await axios.get<T>(resourceUrl, {
+                    signal: controller.signal,
+                });
+                setResource(response.data)
+                setFetchCondition("success")
+            } catch (error) {
+                if (axios.isCancel(error)) {
+                    console.log("Request canceled");
+                } else {
+                    setFetchCondition("error");
+                }
+            }
+        }
+        getResource();
+
+        // 5. Cleanup function to abort the request
+        return () => {
+            controller.abort();
+        }
     }, [resourceUrl])
 
     if (fetchCondition === "loading") {
