@@ -49,7 +49,7 @@ export function DataSourceWithRender2<T>({ getFn, render }: { getFn?: () => Prom
         return () => {
             controller.abort()
         }
-    }, [])
+    }, [getFn])
 
     if (fetchCondition === "loading") {
         return <Typography color={"textSecondary"}>Loading...</Typography>
