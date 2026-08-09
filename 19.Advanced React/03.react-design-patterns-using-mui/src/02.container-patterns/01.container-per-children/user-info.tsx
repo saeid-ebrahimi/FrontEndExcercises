@@ -1,3 +1,4 @@
+import { List, ListItem, Typography } from "@mui/material";
 
 export type TUser = {
     name: string; age: number, country: string, books: string[]
@@ -6,11 +7,19 @@ export const UserInfo = ({ user }: { user: TUser }) => {
 
     const { name, age, country, books } = user || {}
     return user ? <>
-        <h2>{name}</h2>
-        <p>Age: {age}</p>
-        <p>Country: {country}</p>
-        <ul>
-            {books.map(book => <li key={book}>{book}</li>)}
-        </ul>
-    </> : <h1>Loading</h1>
+        <Typography component="h2" variant={"h4"}>
+            {name}
+        </Typography>
+        <Typography component="p" variant={"body1"}>
+            Age: {age}
+        </Typography>
+        <Typography component="p" variant={"body1"}>
+            Country: {country}
+        </Typography>
+        <List>
+            {books.map(book => <ListItem key={book}>{book}</ListItem>)}
+        </List>
+    </> : <Typography component="h2" variant={"h4"}>
+        Loading
+    </Typography>
 }

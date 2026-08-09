@@ -1,3 +1,5 @@
+import { Typography } from "@mui/material";
+
 export type TBook = {
     name: string;
     pages: number;
@@ -11,12 +13,22 @@ export function BookInfo({ book }: { book: TBook }) {
 
         <>
             {book ? <>
-                <h2>{name}</h2>
-                <p>{price}</p>
-                <h3>Title:</h3>
-                <p>{title}</p>
-                <p>Number of Pages: {pages}</p>
-            </> : <h2>Loading</h2>}
+                <Typography component="h2" variant={"h4"}>{name}</Typography>
+                <Typography component="p" variant={"body1"}>
+                    Price: ${price.toFixed(2)}
+                </Typography>
+                <Typography component="h3" variant={"h5"}>
+                    Title:
+                </Typography>
+                <Typography component="p" variant={"body1"}>
+                    {title}
+                </Typography>
+                <Typography component="p" variant={"body1"}>
+                    Number of Pages: {pages}
+                </Typography>
+            </> : <Typography component="h2" variant={"h4"}>
+                Loading
+            </Typography>}
 
         </>
     )

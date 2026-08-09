@@ -54,13 +54,13 @@ Here is a breakdown of what can—and cannot—be easily replaced by hooks:
 
 ## 1. What Can Be Replaced by Hooks (Stateful & Side-Effect Logic)
 
-Logic that deals with data, subscriptions, browser APIs, or state can be extracted into a reusable Custom Hook, completely eliminating the need for wrapper components.
+- Logic that deals with data, subscriptions, browser APIs, or state can be extracted into a reusable Custom Hook, completely eliminating the need for wrapper components.
 
-Data Fetching & Loading States: Instead of an HOC wrapping a component to inject data and isLoading props, a custom hook like useFetch(url) lets components fetch data directly.
+- Data Fetching & Loading States: Instead of an HOC wrapping a component to inject data and isLoading props, a custom hook like useFetch(url) lets components fetch data directly.
 
-Authentication Checks: While an HOC can block rendering globally, authentication state and redirection can often be handled neatly inside a hook (e.g., useAuth()) combined with router logic or conditional rendering inside the component body.
+- Authentication Checks: While an HOC can block rendering globally, authentication state and redirection can often be handled neatly inside a hook (e.g., useAuth()) combined with router logic or conditional rendering inside the component body.
 
-Event Listeners & Subscriptions: Tracking window size (useWindowSize), online status (useOnlineStatus), or keyboard shortcuts can all be cleanly encapsulated in hooks without cluttering the component tree.
+- Event Listeners & Subscriptions: Tracking window size (useWindowSize), online status (useOnlineStatus), or keyboard shortcuts can all be cleanly encapsulated in hooks without cluttering the component tree.
 
 Example Replacement:
 
