@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Typography, CircularProgress } from '@mui/material';
 import { UserInfo } from '../logging/user-info';
 
+// using Hooks are most common way to implement data fetching
 function withDataFetching<P extends object, T extends Partial<P>>(
     WrappedComponent: React.ComponentType<P> | React.FC<P>,
     resourceUrl: string,
