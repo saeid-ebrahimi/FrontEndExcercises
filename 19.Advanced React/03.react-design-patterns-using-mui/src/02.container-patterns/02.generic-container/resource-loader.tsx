@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import axios from "axios";
 import { ReactNode, useEffect, useState } from "react";
 
@@ -14,7 +14,7 @@ export function ResourceLoader<T>(
         })()
     }, [resourceUrl])
 
-    if (!resource) return <div>Loading...</div>;
+    if (!resource) return <Box>Loading...</Box>;
     return <>{children(resource)}</>;
 }
 
@@ -22,8 +22,6 @@ export function ResourceLoader<T>(
 export function ResourceLoader2<T>({ resourceUrl, children }: { resourceUrl: string; children: (resource: T) => ReactNode }) {
     const [resource, setResource] = useState<T | null>(null);
     const [fetchCondition, setFetchCondition] = useState<"loading" | "error" | "success">("loading");
-
-
 
     useEffect(() => {
         const controller = new AbortController();
@@ -34,14 +32,16 @@ export function ResourceLoader2<T>({ resourceUrl, children }: { resourceUrl: str
                 return;
             }
             try {
-                const response = await axios.get<T>(resourceUrl, {
+                const response = await axios.get<T>(`/api/${resourceUrl}`, {
                     signal: controller.signal,
                 });
+                console.log("ResourceLoader2: data fetched successfully", response.data);
                 setResource(response.data)
                 setFetchCondition("success")
             } catch (error) {
                 if (axios.isCancel(error)) {
-                    console.log("Request canceled");
+                    // console.log("Request canceled");
+                    return;
                 } else {
                     setFetchCondition("error");
                 }

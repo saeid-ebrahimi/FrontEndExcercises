@@ -1,4 +1,4 @@
-import { LoggedUserInfo } from './logged-user-info'
+import { LoggedUserInfo } from './logging/logged-user-info'
 
 export default function App() {
     return (
