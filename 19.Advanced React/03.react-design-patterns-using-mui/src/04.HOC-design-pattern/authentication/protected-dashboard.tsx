@@ -1,7 +1,7 @@
 import { Button, Container, Typography } from "@mui/material";
 import { UserDashboard } from "./user-dashboard";
 
-
+// using Hooks are most common way to implement Authentication check
 function withProtectedRoute<P extends object>(WrappedComponent: React.ComponentType<P>) {
     return function ProtectedRoute(props: P) {
         const isAuthenticated = typeof window !== 'undefined' ? localStorage.getItem('authToken') : null;
