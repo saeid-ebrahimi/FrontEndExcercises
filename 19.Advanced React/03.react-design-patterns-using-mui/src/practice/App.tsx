@@ -1,12 +1,10 @@
-import { CurrentUserLoader2 } from "../02.container-patterns/01.container-per-children/current-user-loader";
-import { UserInfo } from "../02.container-patterns/01.container-per-children/user-info";
+
+import { ProtectedDashboard } from "../04.HOC-design-pattern/authentication/protected-dashboard";
 
 export default function App() {
 
     return <>
-        <CurrentUserLoader2>
-            {(user) => <UserInfo user={user} />}
-        </CurrentUserLoader2>
+        <ProtectedDashboard />
     </>
 
 }

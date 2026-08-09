@@ -28,13 +28,13 @@ export function DataSourceWithRender2<T>({ getFn, render }: { getFn?: () => Prom
         const controller = new AbortController();
         const getResource = async () => {
             let data;
+            if (!getFn) return
             try {
-                if (getFn) {
-                    setFetchCondition("loading")
-                    data = await getFn();
-                    setResource(data);
-                    setFetchCondition("success");
-                }
+                setFetchCondition("loading")
+                data = await getFn();
+                setResource(data);
+                setFetchCondition("success");
+
             } catch (error) {
                 if (axios.isCancel(error)) {
                     console.log("Request canceled");
@@ -44,7 +44,9 @@ export function DataSourceWithRender2<T>({ getFn, render }: { getFn?: () => Prom
             }
 
         }
-        getResource()
+        if (getFn) {
+            getResource()
+        }
 
         return () => {
             controller.abort()
