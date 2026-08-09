@@ -1,4 +1,4 @@
-import { List, ListItem, Typography } from "@mui/material";
+import { List, ListItem, ListItemText, Typography } from "@mui/material";
 
 export type TUser = {
     name: string; age: number, country: string, books: string[]
@@ -17,7 +17,9 @@ export const UserInfo = ({ user }: { user: TUser }) => {
             Country: {country}
         </Typography>
         <List>
-            {books.map(book => <ListItem key={book}>{book}</ListItem>)}
+            {books.map(book => <ListItem key={book}>
+                <ListItemText>{book}</ListItemText>
+            </ListItem>)}
         </List>
     </> : <Typography component="h2" variant={"h4"}>
         Loading
