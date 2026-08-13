@@ -1,4 +1,4 @@
-import { ResourceProfile } from "../05.custom-hooks/data-fetching-and-api/user-profile";
+import { ResourceProfile } from "../05.custom-hooks/data-fetching-and-api/resource-profile";
 
 export default function App() {
 
