@@ -29,12 +29,12 @@ The hook shares logic, not necessarily state.
 
 If you need genuinely shared state between components, you'd typically use something like:
 
-Context
-Redux
-Zustand
-React Query
-etc.
-Where custom hooks are especially useful
+- Context
+- Redux
+- Zustand
+- React Query
+  etc.
+  Where custom hooks are especially useful
 
 ## Category of custom hooks usages
 
@@ -81,7 +81,7 @@ Custom Hooks
 │   ├── useLocalStorage
 │   ├── useWindowSize
 │   ├── useMediaQuery
-│   └── useGeolocation
+│   └── useGeoLocation
 │
 ├── 4. Performance / Async
 │   ├── useDebounce
