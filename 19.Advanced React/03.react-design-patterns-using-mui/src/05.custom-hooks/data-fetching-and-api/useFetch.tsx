@@ -36,7 +36,6 @@ export function useFetch<T>(url: string): TUseFetchResult<T> {
         fetchData();
 
         return () => controller.abort();
-
     }, [url])
 
     return {
