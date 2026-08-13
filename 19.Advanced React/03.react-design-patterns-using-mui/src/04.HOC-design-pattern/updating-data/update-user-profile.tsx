@@ -80,6 +80,7 @@ function withDataFetchAndUpdate<P extends object, T extends Partial<P>>(
         const onResetUser = () => {
             setData(initialData);
         }
+
         const updateUser = async (data: T) => {
             try {
                 const response = await axios.put(`/api/${resourceUrl}`, data);
