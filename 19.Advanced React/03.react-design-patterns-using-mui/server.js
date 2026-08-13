@@ -80,6 +80,27 @@ app.post("/users/:id", (req, res) => {
   res.json(updatedUser);
 });
 
+app.put("/users/:id", (req, res) => {
+  const { id } = req.params;
+  const updatedUser = req.body;
+
+  const userIndex = users.findIndex((user) => user.id === id);
+
+  if (userIndex === -1) {
+    return res.status(404).json({
+      error: "User not found",
+    });
+  }
+
+  users[userIndex] = {
+    ...users[userIndex],
+    ...updatedUser,
+    id,
+  };
+
+  res.json(users[userIndex]);
+});
+
 app.get("/books", (req, res) => res.json(books));
 
 app.get("/books/:id", (req, res) => {

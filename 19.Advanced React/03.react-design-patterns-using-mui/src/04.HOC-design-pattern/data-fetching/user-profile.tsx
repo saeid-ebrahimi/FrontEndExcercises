@@ -63,7 +63,7 @@ function withDataFetching<P extends object, T extends Partial<P>>(
             const combinedProps = {
                 ...props,
                 [propName]: data,
-            } as unknown as P;
+            } as P;
 
             return <WrappedComponent {...combinedProps} />;
         }
