@@ -5,7 +5,6 @@ import { LoggedResourceLoader } from "../04.HOC-design-pattern/logging/logged-re
 import { UpdateUserProfile } from "../04.HOC-design-pattern/updating-data/update-user-profile";
 
 export default function App() {
-
     return <>
         <ProtectedDashboard />
         <LoggedResourceLoader />
