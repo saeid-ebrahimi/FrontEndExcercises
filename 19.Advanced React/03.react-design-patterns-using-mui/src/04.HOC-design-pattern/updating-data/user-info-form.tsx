@@ -9,7 +9,6 @@ type IUserInfoFormProps = {
     disableUpdate: boolean;
 };
 
-
 export default function UserInfoForm(
     {
         user,
