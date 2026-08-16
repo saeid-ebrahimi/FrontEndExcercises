@@ -1,5 +1,5 @@
 import { Box, Button, Stack, TextField } from "@mui/material";
-import { TUserUpdates } from "./update-user-profile";
+import { TUserUpdates } from "./update-resource-profile";
 
 export type TUser = {
     name: string; age: number, country: string, books: string[]
