@@ -28,10 +28,14 @@ const parseJwt = (token: string) => {
     }
 };
 
+interface IUser {
+    permissions: string[];
+    role: string;
+}
 // Note: this is not the best approach to read cookie for auth using context api and HttpOnly cookies are the best 
-export const useAuth = () => {
+export const useAuth = <T extends IUser>() => {
     const [token, setToken] = useState<string | null>(null);
-    const [user, setUser] = useState<unknown | null>(null);
+    const [user, setUser] = useState<T | null>(null);
 
     const loadAuth = useCallback(() => {
         const authCookie = getCookie("authToken");
