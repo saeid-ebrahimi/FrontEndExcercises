@@ -53,7 +53,7 @@ A useful way to categorize **custom hooks** is by the kind of problem they solve
 | **Pagination & Lists**             | Manage pagination, infinite loading, filtering, and sorting | `usePagination`, `useInfinitePagination`, `useFilters`            |
 | **Storage**                        | Synchronize React state with browser storage                | `useLocalStorage`, `useSessionStorage`                            |
 | **Real-time Communication**        | Manage WebSockets, SSE, subscriptions                       | `useWebSocket`, `useSSE`, `useSubscription`                       |
-| **Device & Browser Features**      | Access browser/device capabilities                          | `useGeolocation`, `useOnlineStatus`, `useClipboard`               |
+| **Device & Browser Features**      | Access browser/device capabilities                          | `useGeoLocation`, `useOnlineStatus`, `useClipboard`               |
 | **Timers & Async**                 | Handle intervals, timeouts, countdowns, and async workflows | `useTimer`, `useInterval`, `useTimeout`                           |
 | **Analytics & Tracking**           | Track events, page views, and user behavior                 | `useAnalytics`, `usePageView`                                     |
 | **Business Logic**                 | Encapsulate application-specific rules and workflows        | `useBooking`, `useCheckout`, `usePriceCalculation`                |
