@@ -28,6 +28,7 @@ const parseJwt = (token: string) => {
     }
 };
 
+// Note: this is not the best approach to read cookie for auth using context api and HttpOnly cookies are the best 
 export const useAuth = () => {
     const [token, setToken] = useState<string | null>(null);
     const [user, setUser] = useState<unknown | null>(null);
