@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 
+type TUnsubscribe = () => void;
+
 type TSubscribe<T> = (
     callback: (value: T) => void
-) => () => void;
+) => TUnsubscribe;
 
 export function useSubscription<T>(
     subscribe: TSubscribe<T>,
