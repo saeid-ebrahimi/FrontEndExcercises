@@ -1,5 +1,3 @@
-"Use client";
-
 import { useCallback, useState } from "react";
 
 type TGeoLocation = {

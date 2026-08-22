@@ -1,5 +1,3 @@
-"use client";
-
 import { useCallback } from "react";
 import { trackEvent } from "./analytics";
 import type { TAnalyticsEvent } from "./type";
