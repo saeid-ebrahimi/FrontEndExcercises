@@ -5,6 +5,7 @@ import { MenuItem, MenuItem2 } from "../06.recursive-components/05.MenuItem";
 import { ContentRenderer } from "../06.recursive-components/06.PageBuilder";
 import { ExpressionNode } from "../06.recursive-components/07.expression-tree";
 import { PermissionList } from "../06.recursive-components/08.permision-tree";
+import { ObjectViewer } from "../06.recursive-components/09.object-viewer";
 
 
 
@@ -43,6 +44,15 @@ export default function App() {
         <ExpressionNode node={expression1} />
         <ExpressionNode node={expression2} />
         <PermissionList permissions={permissions} />
+        <ObjectViewer value={{
+            name: "Saeid",
+            age: 28,
+            isActive: true,
+            contact: {
+                email: "saeid@example.com",
+                gmail: "saeid@example2.com"
+            },
+        }} />
     </>
 
 }

@@ -1,21 +1,25 @@
-function ObjectViewer({
+import { Box, Typography } from "@mui/material";
+
+export function ObjectViewer({
     value,
+    level = 0,
 }: {
     value: unknown;
+    level?: number
 }) {
     if (typeof value !== "object" || value === null) {
-        return <span>{String(value)}</span>;
+        return <Typography component={"span"} sx={{ pl: 2 }} >{String(value)}</Typography>;
     }
 
     return (
-        <div>
+        <Box sx={{ pl: level * 2 + 2 }} >
             {Object.entries(value).map(([key, child]) => (
-                <div key={key}>
-                    <strong>{key}:</strong>
+                <Box key={key}>
+                    <Typography component={"strong"} >{key}:</Typography>
 
-                    <ObjectViewer value={child} />
-                </div>
+                    <ObjectViewer value={child} level={level + 1} />
+                </Box>
             ))}
-        </div>
+        </Box>
     );
 }
