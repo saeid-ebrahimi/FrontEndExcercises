@@ -1,12 +1,12 @@
 import { List, ListItem } from "@mui/material";
 
-export type FileNode = {
+export type TFileNode = {
     name: string;
     type: "file" | "folder",
-    children?: FileNode[];
+    children?: TFileNode[];
 };
 
-export function FileTree({ node }: { node: FileNode }) {
+export function FileTree({ node }: { node: TFileNode }) {
     return (
         <List sx={{ paddingX: 4 }}>
             <ListItem>{node.name}</ListItem>
@@ -16,3 +16,38 @@ export function FileTree({ node }: { node: FileNode }) {
         </List>
     )
 }
+
+export const fileTree: TFileNode = {
+    name: "src",
+    type: "folder",
+    children: [
+        {
+            name: "components",
+            type: "folder",
+            children: [
+                {
+                    name: "Button.tsx",
+                    type: "file",
+                },
+                {
+                    name: "Card.tsx",
+                    type: "file",
+                },
+            ],
+        },
+        {
+            name: "hooks",
+            type: "folder",
+            children: [
+                {
+                    name: "useAuth.ts",
+                    type: "file",
+                },
+            ],
+        },
+        {
+            name: "index.ts",
+            type: "file",
+        },
+    ],
+};
