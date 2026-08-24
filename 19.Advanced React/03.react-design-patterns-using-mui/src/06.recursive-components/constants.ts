@@ -5,6 +5,7 @@ import { TCategory } from "./04.CategoryItem";
 import { TMenuItem } from "./05.MenuItem";
 import { TContentNode } from "./06.PageBuilder";
 import { TExpression } from "./07.expression-tree";
+import { TPermission } from "./08.permision-tree";
 
 export const myNestedObject: TNestedObject = {
   key1: "value1",
@@ -449,3 +450,90 @@ export const expression2: TExpression = {
     value: 5,
   },
 };
+
+export const permissions: TPermission[] = [
+  {
+    id: 1,
+    name: "Users",
+    children: [
+      {
+        id: 2,
+        name: "View Users",
+        children: [],
+      },
+      {
+        id: 3,
+        name: "Create Users",
+        children: [],
+      },
+      {
+        id: 4,
+        name: "Edit Users",
+        children: [],
+      },
+      {
+        id: 5,
+        name: "Delete Users",
+        children: [],
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: "Products",
+    children: [
+      {
+        id: 7,
+        name: "View Products",
+        children: [],
+      },
+      {
+        id: 8,
+        name: "Create Products",
+        children: [],
+      },
+      {
+        id: 9,
+        name: "Edit Products",
+        children: [],
+      },
+      {
+        id: 10,
+        name: "Delete Products",
+        children: [],
+      },
+    ],
+  },
+  {
+    id: 11,
+    name: "Reports",
+    children: [
+      {
+        id: 12,
+        name: "View Reports",
+        children: [],
+      },
+      {
+        id: 13,
+        name: "Export Reports",
+        children: [],
+      },
+      {
+        id: 14,
+        name: "Advanced Reports",
+        children: [
+          {
+            id: 15,
+            name: "Financial Reports",
+            children: [],
+          },
+          {
+            id: 16,
+            name: "User Reports",
+            children: [],
+          },
+        ],
+      },
+    ],
+  },
+];
