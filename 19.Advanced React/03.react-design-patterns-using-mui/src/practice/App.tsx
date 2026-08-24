@@ -1,7 +1,8 @@
 import { List } from "@mui/material";
 import { CategoryItem } from "../06.recursive-components/04.CategoryItem";
-import { categories, menuItems } from "../06.recursive-components/constants";
+import { categories, contentData, menuItems } from "../06.recursive-components/constants";
 import { MenuItem, MenuItem2 } from "../06.recursive-components/05.MenuItem";
+import { ContentRenderer } from "../06.recursive-components/06.PageBuilder";
 
 
 
@@ -36,6 +37,7 @@ export default function App() {
                 />
             ))}
         </List>
+        <ContentRenderer node={contentData} />;
     </>
 
 }

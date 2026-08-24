@@ -3,6 +3,7 @@ import { TFileNode } from "./02.FileExplorer";
 import { TCommentItem } from "./03.CommnetItem";
 import { TCategory } from "./04.CategoryItem";
 import { TMenuItem } from "./05.MenuItem";
+import { TContentNode } from "./06.PageBuilder";
 
 export const myNestedObject: TNestedObject = {
   key1: "value1",
@@ -372,3 +373,44 @@ export const menuItems: TMenuItem[] = [
     href: "/contact",
   },
 ];
+
+export const contentData: TContentNode = {
+  type: "section",
+  props: {},
+  children: [
+    {
+      type: "heading",
+      props: {
+        text: "Welcome to Our Website",
+      },
+    },
+    {
+      type: "paragraph",
+      props: {
+        text: "This page is generated from a recursive content structure.",
+      },
+    },
+    {
+      type: "card",
+      props: {
+        title: "Our Services",
+        description:
+          "We provide high-quality digital services.",
+      },
+      children: [
+        {
+          type: "paragraph",
+          props: {
+            text: "Learn more about what we offer.",
+          },
+        },
+        {
+          type: "button",
+          props: {
+            label: "Learn More",
+          },
+        },
+      ],
+    },
+  ],
+};
