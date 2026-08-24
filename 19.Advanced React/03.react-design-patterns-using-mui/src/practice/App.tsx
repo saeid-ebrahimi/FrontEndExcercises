@@ -1,7 +1,7 @@
 import { List } from "@mui/material";
 import { CategoryItem } from "../06.recursive-components/04.CategoryItem";
 import { categories, menuItems } from "../06.recursive-components/constants";
-import { MenuItem } from "../06.recursive-components/05.MenuItem";
+import { MenuItem, MenuItem2 } from "../06.recursive-components/05.MenuItem";
 
 
 
@@ -22,6 +22,15 @@ export default function App() {
         <List>
             {menuItems.map((item) => (
                 <MenuItem
+                    key={item.title}
+                    item={item}
+                />
+            ))}
+        </List>
+
+        <List>
+            {menuItems.map((item) => (
+                <MenuItem2
                     key={item.title}
                     item={item}
                 />
