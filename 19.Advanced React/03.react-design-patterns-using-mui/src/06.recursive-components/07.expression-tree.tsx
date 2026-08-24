@@ -1,3 +1,5 @@
+import { Typography } from "@mui/material";
+
 export type TExpression =
     | {
         type: "number";
@@ -16,16 +18,16 @@ export function ExpressionNode({
     node: TExpression;
 }) {
     if (node.type === "number") {
-        return <span>{node.value}</span>;
+        return <Typography component={"span"}>{node.value}</Typography>;
     }
 
     return (
-        <span>
+        <Typography component={"span"}>
             (
             <ExpressionNode node={node.left} />
             {" "}{node.operator}{" "}
             <ExpressionNode node={node.right} />
             )
-        </span>
+        </Typography>
     );
 }
