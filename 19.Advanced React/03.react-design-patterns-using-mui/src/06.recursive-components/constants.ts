@@ -4,6 +4,7 @@ import { TCommentItem } from "./03.CommnetItem";
 import { TCategory } from "./04.CategoryItem";
 import { TMenuItem } from "./05.MenuItem";
 import { TContentNode } from "./06.PageBuilder";
+import { TExpression } from "./07.expression-tree";
 
 export const myNestedObject: TNestedObject = {
   key1: "value1",
@@ -413,4 +414,38 @@ export const contentData: TContentNode = {
       ],
     },
   ],
+};
+
+export const expression1: TExpression = {
+  type: "operator",
+  operator: "+",
+  left: {
+    type: "number",
+    value: 2,
+  },
+  right: {
+    type: "number",
+    value: 3,
+  },
+};
+
+export const expression2: TExpression = {
+  type: "operator",
+  operator: "*",
+  left: {
+    type: "operator",
+    operator: "+",
+    left: {
+      type: "number",
+      value: 2,
+    },
+    right: {
+      type: "number",
+      value: 3,
+    },
+  },
+  right: {
+    type: "number",
+    value: 5,
+  },
 };

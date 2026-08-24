@@ -1,8 +1,9 @@
 import { List } from "@mui/material";
 import { CategoryItem } from "../06.recursive-components/04.CategoryItem";
-import { categories, contentData, menuItems } from "../06.recursive-components/constants";
+import { categories, contentData, expression1, expression2, menuItems } from "../06.recursive-components/constants";
 import { MenuItem, MenuItem2 } from "../06.recursive-components/05.MenuItem";
 import { ContentRenderer } from "../06.recursive-components/06.PageBuilder";
+import { ExpressionNode } from "../06.recursive-components/07.expression-tree";
 
 
 
@@ -37,7 +38,9 @@ export default function App() {
                 />
             ))}
         </List>
-        <ContentRenderer node={contentData} />;
+        <ContentRenderer node={contentData} />
+        <ExpressionNode node={expression1} />
+        <ExpressionNode node={expression2} />
     </>
 
 }
