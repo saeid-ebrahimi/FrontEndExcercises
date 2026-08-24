@@ -52,18 +52,22 @@ const fileTree: FileNode = {
 
 const comment: TCommentItem = {
     id: 1,
+    username: "john_doe",
     text: "This is the main comment",
     replies: [
         {
             id: 2,
+            username: "jane_smith",
             text: "This is the first reply",
             replies: [
                 {
                     id: 3,
+                    username: "mike_wilson",
                     text: "This is a reply to the first reply",
                     replies: [
                         {
                             id: 4,
+                            username: "sarah_jones",
                             text: "This is a nested reply",
                             replies: [],
                         },
@@ -71,6 +75,7 @@ const comment: TCommentItem = {
                 },
                 {
                     id: 5,
+                    username: "alex_brown",
                     text: "This is another reply to the first reply",
                     replies: [],
                 },
@@ -78,6 +83,7 @@ const comment: TCommentItem = {
         },
         {
             id: 6,
+            username: "emily_davis",
             text: "This is the second reply to the main comment",
             replies: [],
         },
