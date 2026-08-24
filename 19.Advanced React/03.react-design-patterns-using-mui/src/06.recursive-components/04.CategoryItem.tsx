@@ -10,10 +10,12 @@ export type TCategory = {
 export function CategoryItem({ category, level = 0 }: { category: TCategory, level?: number }) {
     return <ListItem sx={{
         pl: level * 3,
+        mr: 1,
+        borderLeft: level > 0 ? "1px solid gray" : "none"
     }}>
         <ListItemText primary={category.name} />
         {category.children.length > 0 && (
-            <List disablePadding>
+            <List>
                 {category.children.map((child) => (
                     <CategoryItem
                         key={child.id}

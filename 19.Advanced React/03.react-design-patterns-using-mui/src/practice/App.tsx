@@ -14,7 +14,7 @@ export default function App() {
         </List>
         <FileTree node={fileTree} />
         <CommentItem comment={comment} /> */}
-        <List>
+        <List sx={{ pl: 1, width: "fit-content" }}>
             {categories.map(category => <CategoryItem key={category.id} category={category} />)}
         </List>
     </>
