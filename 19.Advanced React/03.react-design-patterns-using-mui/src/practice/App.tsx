@@ -1,5 +1,6 @@
 import { List } from "@mui/material";
-import { categories, CategoryItem } from "../06.recursive-components/04.CategoryItem";
+import { CategoryItem } from "../06.recursive-components/04.CategoryItem";
+import { categories } from "../06.recursive-components/constants";
 
 
 

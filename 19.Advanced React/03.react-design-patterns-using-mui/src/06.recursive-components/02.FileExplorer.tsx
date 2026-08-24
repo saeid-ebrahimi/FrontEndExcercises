@@ -17,37 +17,3 @@ export function FileTree({ node }: { node: TFileNode }) {
     )
 }
 
-export const fileTree: TFileNode = {
-    name: "src",
-    type: "folder",
-    children: [
-        {
-            name: "components",
-            type: "folder",
-            children: [
-                {
-                    name: "Button.tsx",
-                    type: "file",
-                },
-                {
-                    name: "Card.tsx",
-                    type: "file",
-                },
-            ],
-        },
-        {
-            name: "hooks",
-            type: "folder",
-            children: [
-                {
-                    name: "useAuth.ts",
-                    type: "file",
-                },
-            ],
-        },
-        {
-            name: "index.ts",
-            type: "file",
-        },
-    ],
-};
