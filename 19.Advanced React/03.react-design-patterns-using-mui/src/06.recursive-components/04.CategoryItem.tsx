@@ -9,9 +9,9 @@ export type TCategory = {
 
 export function CategoryItem({ category, level = 0 }: { category: TCategory, level?: number }) {
     return <ListItem sx={{
-        pl: level * 3,
+        pl: level * 2,
         mr: 1,
-        borderLeft: level > 0 ? "1px solid gray" : "none"
+        borderLeft: level > 0 ? "3px solid darkblue" : "none"
     }}>
         <ListItemText primary={category.name} />
         {category.children.length > 0 && (

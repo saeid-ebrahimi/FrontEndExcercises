@@ -2,6 +2,7 @@ import { TNestedObject } from "./01.dummy-example";
 import { TFileNode } from "./02.FileExplorer";
 import { TCommentItem } from "./03.CommnetItem";
 import { TCategory } from "./04.CategoryItem";
+import { TMenuItem } from "./05.MenuItem";
 
 export const myNestedObject: TNestedObject = {
   key1: "value1",
@@ -237,5 +238,137 @@ export const categories: TCategory[] = [
         ],
       },
     ],
+  },
+];
+
+export const menuItems: TMenuItem[] = [
+  {
+    id: 1,
+    title: "Home",
+    href: "/",
+  },
+  {
+    id: 2,
+    title: "Products",
+    children: [
+      {
+        id: 3,
+        title: "Electronics",
+        children: [
+          {
+            id: 4,
+            title: "Computers",
+            children: [
+              {
+                id: 5,
+                title: "Laptops",
+                href: "/products/electronics/computers/laptops",
+              },
+              {
+                id: 6,
+                title: "Desktop Computers",
+                href: "/products/electronics/computers/desktops",
+              },
+            ],
+          },
+          {
+            id: 7,
+            title: "Phones",
+            children: [
+              {
+                id: 8,
+                title: "Smartphones",
+                href: "/products/electronics/phones/smartphones",
+              },
+              {
+                id: 9,
+                title: "Feature Phones",
+                href: "/products/electronics/phones/feature-phones",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 10,
+        title: "Clothing",
+        children: [
+          {
+            id: 11,
+            title: "Men's Clothing",
+            children: [
+              {
+                id: 12,
+                title: "Shirts",
+                href: "/products/clothing/men/shirts",
+              },
+              {
+                id: 13,
+                title: "Pants",
+                href: "/products/clothing/men/pants",
+              },
+            ],
+          },
+          {
+            id: 14,
+            title: "Women's Clothing",
+            children: [
+              {
+                id: 15,
+                title: "Dresses",
+                href: "/products/clothing/women/dresses",
+              },
+              {
+                id: 16,
+                title: "Shoes",
+                href: "/products/clothing/women/shoes",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 17,
+    title: "Services",
+    children: [
+      {
+        id: 18,
+        title: "Web Development",
+        href: "/services/web-development",
+      },
+      {
+        id: 19,
+        title: "UI/UX Design",
+        href: "/services/ui-ux-design",
+      },
+      {
+        id: 20,
+        title: "Consulting",
+        children: [
+          {
+            id: 21,
+            title: "Technical Consulting",
+            href: "/services/consulting/technical",
+          },
+          {
+            id: 22,
+            title: "Business Consulting",
+            href: "/services/consulting/business",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 23,
+    title: "About",
+    href: "/about",
+  },
+  {
+    id: 24,
+    title: "Contact",
+    href: "/contact",
   },
 ];
