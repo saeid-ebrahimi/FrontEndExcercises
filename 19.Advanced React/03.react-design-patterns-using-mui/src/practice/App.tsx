@@ -1,58 +1,60 @@
-import { List } from "@mui/material";
-import { CategoryItem } from "../06.recursive-components/04.CategoryItem";
-import { categories, contentData, expression1, expression2, menuItems, permissions } from "../06.recursive-components/constants";
-import { MenuItem, MenuItem2 } from "../06.recursive-components/05.MenuItem";
-import { ContentRenderer } from "../06.recursive-components/06.PageBuilder";
-import { ExpressionNode } from "../06.recursive-components/07.expression-tree";
-import { PermissionList } from "../06.recursive-components/08.permision-tree";
-import { ObjectViewer } from "../06.recursive-components/09.object-viewer";
-
-
-
-
+import Button from "@mui/material/Button";
+import { Card } from "../07.composition/01.card-composition";
+import { useState } from "react";
+import { Dialog } from "../07.composition/02.dialog-composition";
 
 export default function App() {
-
+    const [open, setOpen] = useState(false);
+    function handleClose() {
+        setOpen(false);
+    }
+    function handleDelete() {
+        alert("item deleted");
+        handleClose();
+    }
     return <>
-        {/* <List>
-            <RecursiveComponent data={myNestedObject} />
-        </List>
-        <FileTree node={fileTree} />
-        <CommentItem comment={comment} /> */}
-        <List sx={{ pl: 1, width: "fit-content" }}>
-            {categories.map(category => <CategoryItem key={category.id} category={category} />)}
-        </List>
-
-        <List>
-            {menuItems.map((item) => (
-                <MenuItem
-                    key={item.title}
-                    item={item}
-                />
-            ))}
-        </List>
-
-        <List>
-            {menuItems.map((item) => (
-                <MenuItem2
-                    key={item.title}
-                    item={item}
-                />
-            ))}
-        </List>
-        <ContentRenderer node={contentData} />
-        <ExpressionNode node={expression1} />
-        <ExpressionNode node={expression2} />
-        <PermissionList permissions={permissions} />
-        <ObjectViewer value={{
-            name: "Saeid",
-            age: 28,
-            isActive: true,
-            contact: {
-                email: "saeid@example.com",
-                gmail: "saeid@example2.com"
-            },
-        }} />
+        <Card>
+            <Card.Header>
+                Test Header
+            </Card.Header>
+            <Card.Content>
+                there is card content
+            </Card.Content>
+            <Card.Actions>
+                <Button>Click</Button>
+            </Card.Actions>
+        </Card>
+        <Button onClick={() => { setOpen(true) }}>Open</Button>
+        <Dialog
+            open={open}
+            onClose={handleClose}
+            maxWidth="sm"
+            fullWidth
+        >
+            <Dialog.Header>
+                <Dialog.Title>
+                    Delete Account
+                </Dialog.Title>
+                <Dialog.Description>
+                    Are you sure you want to delete this account?
+                </Dialog.Description>
+            </Dialog.Header>
+            <Dialog.Body>
+                This action cannot be undone.
+            </Dialog.Body>
+            <Dialog.Footer>
+                <Button onClick={handleClose}>
+                    Cancel
+                </Button>
+                <Button
+                    color="error"
+                    variant="contained"
+                    onClick={handleDelete}
+                >
+                    Delete
+                </Button>
+            </Dialog.Footer>
+        </Dialog>
     </>
 
 }
