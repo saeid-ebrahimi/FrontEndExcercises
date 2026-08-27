@@ -1,3 +1,4 @@
+// This is particularly useful for design systems.
 import { Box, Paper, Typography } from "@mui/material";
 
 type PageProps = {
