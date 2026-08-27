@@ -11,7 +11,7 @@ export function Page({ title, actions, content }: PageProps) {
         <Paper component={"section"}>
             <Box display={"flex"} gap={2} justifyContent={"space-between"}>
                 <Typography variant={"h3"} component={"h1"}>{title}</Typography>
-                <Box>{actions}</Box>
+                {actions && <Box>{actions}</Box>}
             </Box>
             <Box>{content}</Box>
         </Paper>

@@ -1,3 +1,11 @@
+// Good for
+// Cards
+// Modals
+// Layouts
+// Panels
+// Containers
+// Dialogs
+
 import { Card as MuiCard, CardContent, CardActions, CardHeader } from "@mui/material";
 
 type Props = {
