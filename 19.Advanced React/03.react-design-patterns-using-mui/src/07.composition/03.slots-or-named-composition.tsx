@@ -1,3 +1,9 @@
+// Good for
+// Page layouts
+// Dashboard layouts
+// Admin panels
+// Design systems
+// Reusable application shells
 import { Box } from "@mui/material";
 import { ReactNode } from "react"
 

@@ -1,3 +1,12 @@
+// Good for
+// Tabs
+// Accordion
+// Dropdown
+// Menu
+// Select
+// Dialog
+// Form components
+
 import {
     Dialog as MuiDialog,
     DialogTitle,
