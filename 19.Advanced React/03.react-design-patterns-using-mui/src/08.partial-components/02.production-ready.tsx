@@ -34,19 +34,3 @@ export const DeleteButton = partial(MuiButton, {
     color: 'error',
     size: 'small',
 });
-
-// 2. Consume them cleanly in your views
-export function ActionPanel() {
-    return (
-        <div className="flex gap-4 p-4">
-            {/* PrimaryButton only requires remaining props like 'children' or 'onClick' */}
-            <PrimaryButton onClick={() => console.log('Saved!')}>
-                Save Changes
-            </PrimaryButton>
-
-            <DeleteButton onClick={() => console.log('Deleted!')}>
-                Delete Item
-            </DeleteButton>
-        </div>
-    );
-}
