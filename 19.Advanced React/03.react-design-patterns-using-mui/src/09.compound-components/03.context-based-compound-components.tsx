@@ -35,7 +35,7 @@ type AccordionProps = {
 
 type AccordionItemProps = {
     value: string;
-    children: React.ReactElement;
+    children: React.ReactNode;
 };
 
 type AccordionTriggerProps = {
@@ -75,7 +75,7 @@ Accordion.Item = function Item({ value, children }: AccordionItemProps) {
             expanded={isExpanded}
             onChange={handleChange}
         >
-            {children}
+            {children!}
         </MuiAccordion>
     );
 }

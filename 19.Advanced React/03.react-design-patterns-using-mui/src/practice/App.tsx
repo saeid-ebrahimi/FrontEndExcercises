@@ -1,6 +1,7 @@
 import { Box, Button, Card, CardContent, CardHeader, Divider, Stack, Typography } from "@mui/material";
 import { Panel } from "../09.compound-components/01.named-sub-components";
 import { Panel as NewPanel } from "../09.compound-components/02.structured-compound-component";
+import { Accordion } from "../09.compound-components/03.context-based-compound-components";
 export default function App() {
 
     return <Box p={5}>
@@ -57,6 +58,39 @@ export default function App() {
                 </Box>
             </Panel.Footer>
         </NewPanel>
+        <Divider sx={{ my: 4 }} />
+        <Accordion>
+            <Accordion.Item value="item-1">
+                <Accordion.Trigger>
+                    What is React?
+                </Accordion.Trigger>
+
+                <Accordion.Content>
+                    React is a JavaScript library for building user interfaces.
+                </Accordion.Content>
+            </Accordion.Item>
+
+            <Accordion.Item value="item-2">
+                <Accordion.Trigger>
+                    What is TypeScript?
+                </Accordion.Trigger>
+
+                <Accordion.Content>
+                    TypeScript adds static typing to JavaScript.
+                </Accordion.Content>
+            </Accordion.Item>
+
+            <Accordion.Item value="item-3">
+                <Accordion.Trigger>
+                    What is Context API?
+                </Accordion.Trigger>
+
+                <Accordion.Content>
+                    Context allows components to share data without passing
+                    props through every level.
+                </Accordion.Content>
+            </Accordion.Item>
+        </Accordion>
     </Box>
 
 };
