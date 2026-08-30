@@ -4,7 +4,7 @@ type WithAuthProps = {
     isAuthenticated: boolean;
 }
 
-function withAuth<P extends object>(Component: ComponentType) {
+function withAuth<P extends object>(Component: ComponentType<P>): ComponentType<P & WithAuthProps> {
     return function AuthenticatedComponent(props: P & WithAuthProps) {
         const { isAuthenticated, ...componentProps } = props;
 
