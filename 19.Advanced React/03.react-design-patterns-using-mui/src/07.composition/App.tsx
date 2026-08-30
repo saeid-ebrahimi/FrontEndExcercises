@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "@mui/material/Button";
-import { Card } from "./01.named-sub-components-compound-composition";
+import { Card } from "./01.reusability-oriented-composition-composition";
 import { Dialog } from "./02.encapsulated-compound-composition";
 
 export default function App() {

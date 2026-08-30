@@ -1,6 +1,7 @@
 import { Box } from "@mui/material"
 import { ReactNode } from "react"
 
+// it also called named sub components composition
 // we use this approach when we have separate reusable components, I mean We can use Header and Content and Actions in Other places
 
 type Props = {
