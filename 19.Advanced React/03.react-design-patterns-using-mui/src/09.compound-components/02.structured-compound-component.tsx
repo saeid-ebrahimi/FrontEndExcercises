@@ -1,6 +1,8 @@
 import { Box } from "@mui/material";
 import { ReactNode } from "react"
 
+// it also called encapsulated compound composition
+// it is compound component pattern too, we use this pattern when the Header and Title are not reusable and are exists inside the dialog
 
 type ChildrenProps = {
     children: ReactNode;
