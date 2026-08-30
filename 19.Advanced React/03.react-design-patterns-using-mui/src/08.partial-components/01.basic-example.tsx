@@ -20,4 +20,5 @@ export function Button({ size, bgColor, text, disabled }: ButtonProps) {
     >
         {text}
     </MuiButton>
-}
+};
+

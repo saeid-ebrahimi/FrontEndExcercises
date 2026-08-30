@@ -6,6 +6,8 @@
 // Containers
 // Dialogs
 
+// it is compound component pattern too , we use this approach when we have separate usable components, I mean We can use Header and Content and Actions in Other places
+
 import { Card as MuiCard, CardContent, CardActions, CardHeader } from "@mui/material";
 
 type Props = {

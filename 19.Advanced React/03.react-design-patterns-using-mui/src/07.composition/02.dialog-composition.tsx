@@ -7,6 +7,9 @@
 // Dialog
 // Form components
 
+
+// it is compound component pattern too, we use this pattern when the Header and Title are not reusable and are exists inside the dialog
+
 import {
     Dialog as MuiDialog,
     DialogTitle,
