@@ -1,18 +1,20 @@
-import React, { ComponentType } from 'react';
-import MuiButton, { ButtonProps as MuiButtonProps } from '@mui/material/Button';
+import { ComponentType } from 'react';
+import MuiButton from '@mui/material/Button';
 
 // The partial utility higher-order function
-export function partial<P extends object, Q extends Partial<P>>(
+function partial<P extends object, PP extends Partial<P>>(
     Component: ComponentType<P>,
-    partialProps: Q
+    partialProps: PP
 ) {
-    type InjectedKeys = keyof Q;
+    type InjectedKeys = keyof PP;
     type RequiredProps = Omit<P, InjectedKeys>;
+
+    // Extract means: Give me the things that exist in both types.
     type OptionalProps = Partial<Pick<P, Extract<InjectedKeys, keyof P>>>;
     type TargetProps = RequiredProps & OptionalProps;
 
     const PartialComponent = (props: TargetProps) => {
-        return <Component {...(partialProps as P)} {...(props as unknown as P)} />;
+        return <Component {...(partialProps as PP)} {...(props as unknown as P)} />;
     };
 
     const componentName = Component.displayName || Component.name || 'Component';
