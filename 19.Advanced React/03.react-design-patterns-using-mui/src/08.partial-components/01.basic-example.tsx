@@ -2,9 +2,9 @@ import MuiButton from '@mui/material/Button';
 import { ComponentType } from 'react';
 
 interface ButtonProps {
-    size: 'small' | 'medium' | 'large';
     bgColor: string;
     text: string;
+    size?: 'small' | 'medium' | 'large';
     disabled?: boolean;
 };
 
@@ -22,7 +22,7 @@ function partialComponent<
     }
 }
 
-export function Button({ size, bgColor, text, disabled }: ButtonProps) {
+export function Button({ size = "medium", bgColor, text, disabled }: ButtonProps) {
     return <MuiButton disabled={disabled} size={size} variant={"contained"}
         sx={{
             fontSize: size === 'large' ? '25px' : '16px',
