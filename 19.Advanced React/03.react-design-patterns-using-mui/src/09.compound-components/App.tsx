@@ -1,8 +1,8 @@
 import { Box, Button, Card, CardContent, CardHeader, Divider, Stack, Typography } from "@mui/material";
 import { Panel } from "./01.named-sub-components";
 import { Panel as NewPanel } from "./02.structured-compound-component";
-export default function App() {
 
+export default function App() {
     return <Box p={5}>
         <Panel>
             <Panel.Header>
