@@ -1,3 +1,3 @@
-import { CounterStore } from "./01.observable";
+import { CounterStore } from "./observable";
 
 export const counterStore = new CounterStore();
