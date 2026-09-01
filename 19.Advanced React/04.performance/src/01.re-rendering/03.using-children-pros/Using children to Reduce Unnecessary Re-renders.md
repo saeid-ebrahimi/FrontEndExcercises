@@ -16,7 +16,10 @@ function Wrapper() {
 
   return (
     <div>
-      <button onClick={() => setCount((count) => count + 1)}>
+      <button
+        onClick={() =>
+          setCount((count) => count + 1)
+        }>
         Count: {count}
       </button>
 
@@ -40,7 +43,7 @@ If `HeavyComponent` is expensive, this may result in unnecessary rendering work.
 
 ---
 
-# Using `children`
+## Using `children`
 
 We can change the component so that the heavy content is passed through `children`:
 
@@ -54,7 +57,10 @@ function Wrapper({
 
   return (
     <div>
-      <button onClick={() => setCount((count) => count + 1)}>
+      <button
+        onClick={() =>
+          setCount((count) => count + 1)
+        }>
         Count: {count}
       </button>
 
@@ -100,7 +106,7 @@ This can allow `HeavyComponent` to **bail out of rendering** even though its par
 
 ---
 
-# Why Does `children` Help?
+## Why Does `children` Help?
 
 The important detail is that JSX creates React elements.
 
@@ -148,7 +154,7 @@ This is one reason the `children` pattern can be useful for performance.
 
 ---
 
-# Example: Heavy Component
+## Example: Heavy Component
 
 Imagine a page with an expensive chart:
 
@@ -228,7 +234,7 @@ Page
 
 ---
 
-# A Real-World Example
+## A Real-World Example
 
 Consider a modal-like component:
 
@@ -288,7 +294,7 @@ The frequently changing state is now isolated inside `Layout`.
 
 ---
 
-# This Is a Form of Composition
+## This Is a Form of Composition
 
 This technique is closely related to the **composition pattern** in React.
 
@@ -336,14 +342,16 @@ This provides both **better composition** and, in some cases, **better rendering
 
 ---
 
-# `children` vs `React.memo`
+## `children` vs `React.memo`
 
 Another common technique is:
 
 ```tsx
-const HeavyComponent = React.memo(function HeavyComponent() {
-  return <div>...</div>;
-});
+const HeavyComponent = React.memo(
+  function HeavyComponent() {
+    return <div>...</div>;
+  },
+);
 ```
 
 `React.memo` can prevent a child from rendering when its props haven't changed.
@@ -382,7 +390,7 @@ Both can be useful, but they solve the problem at different levels.
 
 ---
 
-# Important: `children` Is Not a Magic "No Re-render" Prop
+## Important: `children` Is Not a Magic "No Re-render" Prop
 
 It is important not to misunderstand this pattern.
 
