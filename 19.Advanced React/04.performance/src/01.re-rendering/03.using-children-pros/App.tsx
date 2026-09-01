@@ -1,9 +1,9 @@
 // import { useState } from "react";
-import { AdditionalComplexThings, BlaBla } from "./01.re-rendering/03.using-children-pros/components/dummy-components"
-import { SlowComponent } from "./01.re-rendering/03.using-children-pros/components/slow-component"
+import { AdditionalComplexThings, BlaBla } from "./components/dummy-components"
+import { SlowComponent } from "./components/slow-component"
 
 // import styled from "styled-components";
-import { DynamicScroll } from "./01.re-rendering/03.using-children-pros/components/dynamic-scroll";
+import { DynamicScroll } from "./components/dynamic-scroll";
 
 
 // const ScrollableContainer = styled.div`

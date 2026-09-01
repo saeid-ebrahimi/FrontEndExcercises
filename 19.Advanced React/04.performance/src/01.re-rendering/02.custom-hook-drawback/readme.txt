@@ -1,1 +1,0 @@
-using custom hooks with internal state can cause rerender in a components tru to use them in the nearest component not in heavy components
