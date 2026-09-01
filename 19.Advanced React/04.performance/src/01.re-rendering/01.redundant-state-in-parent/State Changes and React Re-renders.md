@@ -168,9 +168,9 @@ Therefore, moving state down is not the only optimization technique.
 Other techniques include:
 
 ```tsx
-React.memo
-useMemo
-useCallback
+React.memo;
+useMemo;
+useCallback;
 ```
 
 But these should generally be used when there is a real performance reason, rather than automatically everywhere.
