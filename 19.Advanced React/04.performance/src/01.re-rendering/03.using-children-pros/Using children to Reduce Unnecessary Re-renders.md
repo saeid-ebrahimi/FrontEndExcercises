@@ -416,7 +416,7 @@ Therefore, the benefit depends on **where the state lives and which component cr
 
 ---
 
-# The Main Principle
+## The Main Principle
 
 The important idea is not simply:
 
