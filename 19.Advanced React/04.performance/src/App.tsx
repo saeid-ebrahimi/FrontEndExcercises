@@ -3,7 +3,9 @@ import { Loading, Warning } from "./02.elements-as-prop-tricks/01.element-as-pro
 
 function App() {
   return <>
-    <Button icon={<Loading />} />
+    <Button type={"primary"} size={"lg"} icon={<Loading size={"14px"} />} />
+    <br />
+    <br />
     <Button icon={<Warning />} />
   </>
 }
