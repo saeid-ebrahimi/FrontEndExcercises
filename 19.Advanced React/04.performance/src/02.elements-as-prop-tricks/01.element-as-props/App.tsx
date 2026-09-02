@@ -3,8 +3,10 @@ import { Loading, Warning } from "./components/icons"
 
 function App() {
     return <>
-        <Button size={"lg"} type={"primary"} icon={<Loading />} />
-        <Button size={"lg"} icon={<Warning />} />
+        <Button type={"primary"} size={"lg"} icon={<Loading size={"14px"} />} />
+        <br />
+        <br />
+        <Button icon={<Warning />} />
     </>
 }
 
