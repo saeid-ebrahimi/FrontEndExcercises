@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 
-export function ColorWidgetWrong() {
+export function ColorWidget() {
   const [color, setColor] = useState('#3b82f6');
   const presetColors = [
     '#ef4444', // red

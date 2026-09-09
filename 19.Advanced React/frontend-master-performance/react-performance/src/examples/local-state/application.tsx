@@ -1,7 +1,7 @@
 import { Container } from '$components/container';
-import { CounterWidgetWrong } from './components/counter-widget';
-import { TextWidgetWrong } from './components/text-widget';
-import { ColorWidgetWrong } from './components/color-widget';
+import { CounterWidget } from './components/counter-widget';
+import { TextWidget } from './components/text-widget';
+import { ColorWidget } from './components/color-widget';
 
 function Application() {
   return (
@@ -10,22 +10,12 @@ function Application() {
         <h1 className="mb-2 text-3xl font-bold text-slate-900 dark:text-slate-100">
           Local State Demo
         </h1>
-        <p className="text-slate-600 dark:text-slate-400">
-          Open your browser console and interact with any widget. Notice how ALL three widgets
-          re-render even though they&apos;re completely independent? That&apos;s because their state is
-          lifted to the parent.
-        </p>
-        <div className="mt-4 rounded-md bg-red-50 p-4 dark:bg-red-900/20">
-          <p className="text-sm font-medium text-red-800 dark:text-red-200">
-            ❌ Anti-pattern: State is lifted unnecessarily, causing all widgets to re-render
-          </p>
-        </div>
       </section>
 
       <section className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <CounterWidgetWrong />
-        <TextWidgetWrong />
-        <ColorWidgetWrong />
+        <CounterWidget />
+        <TextWidget />
+        <ColorWidget />
       </section>
 
       <section className="rounded-md bg-slate-100 p-6 dark:bg-slate-800">

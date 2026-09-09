@@ -4,7 +4,7 @@ import { Button } from '$components/button';
 import { useState } from 'react';
 
 
-export function TextWidgetWrong() {
+export function TextWidget() {
   const [text, setText] = useState('');
 
   const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
