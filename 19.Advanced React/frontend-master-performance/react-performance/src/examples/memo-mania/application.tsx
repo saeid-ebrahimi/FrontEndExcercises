@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Container } from '$components/container';
 import { Button } from '$components/button';
 import { CalculationList } from './components/calculation-list';
@@ -25,17 +25,16 @@ function Application() {
     setCalculations([...calculations, newCalculation]);
   }
 
-  function updateCalculation(id: string, input: number) {
-    setCalculations(
-      calculations.map((calc) =>
-        calc.id === id ? { ...calc, input } : calc
-      )
+  const updateCalculation = useCallback(function (id: string, input: number) {
+    setCalculations(prev => prev.map((calc) =>
+      calc.id === id ? { ...calc, input } : calc
+    )
     );
-  }
+  }, [])
 
-  function deleteCalculation(id: string) {
-    setCalculations(calculations.filter((calc) => calc.id !== id));
-  }
+  const deleteCalculation = useCallback(function (id: string) {
+    setCalculations(prev => prev.filter((calc) => calc.id !== id));
+  }, [])
 
   return (
     <Container className="my-8 space-y-8">

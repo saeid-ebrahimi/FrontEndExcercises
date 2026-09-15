@@ -3,7 +3,7 @@ import { Input } from '$components/input';
 import { Card } from '$components/card';
 import type { Calculation } from '../types';
 import { calculate, getCalculationLabel, getCalculationDescription } from '../utilities/expensive-calculations';
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 
 interface CalculationCardProps {
   calculation: Calculation;
@@ -11,7 +11,7 @@ interface CalculationCardProps {
   onDelete: (id: string) => void;
 }
 
-export function CalculationCard({ calculation, onUpdate, onDelete }: CalculationCardProps) {
+export const CalculationCard = memo(function CalculationCard({ calculation, onUpdate, onDelete }: CalculationCardProps) {
   // This expensive calculation runs on EVERY render of ANY card
   const result = useMemo(() => calculate(calculation.type, calculation.input), [calculation.type, calculation.input]);
 
@@ -19,7 +19,7 @@ export function CalculationCard({ calculation, onUpdate, onDelete }: Calculation
   const description = getCalculationDescription(calculation.type);
 
   return (
-    <Card className="p-6">
+    <Card className="p-6" >
       <div className="space-y-4">
         <div className="flex items-start justify-between">
           <div>
@@ -53,6 +53,7 @@ export function CalculationCard({ calculation, onUpdate, onDelete }: Calculation
           </div>
         </div>
       </div>
-    </Card>
+    </Card >
   );
 }
+) 
