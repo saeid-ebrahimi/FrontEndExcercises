@@ -3,6 +3,7 @@ import { Input } from '$components/input';
 import { Card } from '$components/card';
 import type { Calculation } from '../types';
 import { calculate, getCalculationLabel, getCalculationDescription } from '../utilities/expensive-calculations';
+import { useMemo } from 'react';
 
 interface CalculationCardProps {
   calculation: Calculation;
@@ -12,7 +13,7 @@ interface CalculationCardProps {
 
 export function CalculationCard({ calculation, onUpdate, onDelete }: CalculationCardProps) {
   // This expensive calculation runs on EVERY render of ANY card
-  const result = calculate(calculation.type, calculation.input);
+  const result = useMemo(() => calculate(calculation.type, calculation.input), [calculation.type, calculation.input]);
 
   const label = getCalculationLabel(calculation.type);
   const description = getCalculationDescription(calculation.type);
