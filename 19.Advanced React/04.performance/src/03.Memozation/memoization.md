@@ -594,3 +594,82 @@ Caveats to Keep in Mind
 1. Development vs. Production: Always test with Production Builds or large mock datasets. React runs extra checks in Development mode that artificially inflate execution times.
 
 2. CPU Throttling: Test on lower-end hardware or use Chrome DevTools' CPU 4x/6x slowdown option to simulate real-world mobile device performance.
+
+## React.memo usage scenarios
+
+`React.memo` is a Higher-Order Component (HOC) that memoizes a component's rendered output, skipping re-renders if its props have not changed (via shallow comparison).
+
+Here are the primary production scenarios where wrapping a component in `React.memo` provides tangible benefits:
+
+**Scenario 1:** Pure Presentational Components Receiving Stable Props
+Components that display data (like UI elements, cards, or user profile widgets) inside a parent component that re-renders frequently due to independent state updates (e.g., active timers, form inputs, modal toggles).
+
+```JavaScript
+import { memo } from 'react';
+
+// ✅ SKIPS re-renders when parent's unrelated state (like timer) updates
+const UserCard = memo(function UserCard({ name, avatar }) {
+  return (
+    <div className="card">
+      <img src={avatar} alt={name} />
+      <h3>{name}</h3>
+    </div>
+  );
+});
+```
+
+**Scenario 2:** Heavy Components in Large Lists or Grids
+When rendering long lists or tables (e.g., 100+ items), updating a single list item (e.g., starring/selecting one row) forces the parent component to re-render. Without React.memo, every item in the list will re-render unnecessarily.
+
+```JavaScript
+import { memo } from 'react';
+
+// ✅ Only the specific item whose props actually changed will re-render
+const ListItem = memo(function ListItem({ item, onSelect }) {
+  return (
+    <li onClick={() => onSelect(item.id)}>
+      {item.title}
+    </li>
+  );
+});
+```
+
+**Scenario 3:** Complex or Heavy Rendering Logic
+Components that perform complex layout computations, render expensive SVG charts/graphs, or generate large DOM trees should be wrapped in React.memo to avoid re-evaluating the virtual DOM diffing process on every parent update.
+
+```JavaScript
+import { memo } from 'react';
+
+// ✅ Protects heavy chart rendering operations from parent updates
+const AnalyticsChart = memo(function AnalyticsChart({ data }) {
+  // Heavy DOM structure or complex calculation here
+  return <svg>{/* Complex visual rendering */}</svg>;
+});
+```
+
+**Scenario 4:** Custom Comparison Logic for Complex Props
+When props contain deeply nested objects or properties that shallow comparison (Object.is) marks as changed, you can pass a custom comparator function as the second argument to React.memo.
+
+```JavaScript
+import { memo } from 'react';
+
+function ProductRow({ product }) {
+  return <div>{product.details.title} - ${product.price}</div>;
+}
+
+// ✅ Custom comparison function: return true to SKIP render, false to RENDER
+function arePropsEqual(prevProps, nextProps) {
+  return (
+    prevProps.product.id === nextProps.product.id &&
+    prevProps.product.price === nextProps.product.price
+  );
+}
+
+export default memo(ProductRow, arePropsEqual);
+```
+
+When `React.memo` DOES NOT Help (Anti-Patterns)
+
+- **Unstable Prop References:** Passing inline objects (style={{ color: 'red' }}), inline arrays (items={[]}), or non-memoized inline callbacks (onClick={() => handleClick()}) breaks React.memo because shallow comparison fails every time.
+
+- **Primitive Props in Fast Components:** For lightweight components rendering simple HTML elements, the shallow prop comparison overhead costs nearly the same as (or more than) plain Virtual DOM diffing.
