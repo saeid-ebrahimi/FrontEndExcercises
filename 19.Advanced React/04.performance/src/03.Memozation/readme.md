@@ -89,11 +89,7 @@ CALL STACK                      MEMORY HEAP
 - **Memory Heap**: A brand-new object is created at #0x9c44.
 - **Garbage Collection:** The original object at #0x8f22 has zero references pointing to it, making it eligible to be freed from memory.
 
-```Javascript
-const user = { name: "Alice", age: 30 };
-// Mutation
-user.age = 31;
-```
+based on previous subject we have:
 
 ```Javascript
 const x = 2;
@@ -101,10 +97,88 @@ const y = 2;
 x === y // =true, values are exactly the same
 ```
 
-for objects, the reference of the x and the reference of the y in memory are different so they are not equal.
+and
 
 ```Javascript
     const x = {id:2};
     const y = {id:2};
     x === y; // =false, values are the same but object's references are not the same
 ```
+
+The fundamental reason for this difference lies in how JavaScript stores data in memory and how the strict equality operator (===) evaluates operands.
+
+Here is the step-by-step breakdown:
+
+1. Primitive Values: Compared by Value
+   Primitives (numbers, strings, booleans, null, undefined, symbols, and BigInts) are immutable data types stored directly on the Call Stack.
+
+When you declare primitive variables:
+
+```JavaScript
+const x = 2;
+const y = 2;
+x === y; // true
+```
+
+Memory Allocation: The stack holds the literal value 2 in the slot reserved for x, and the literal value 2 in the slot reserved for y.
+
+Equality Check: The === operator compares the actual data values stored in those stack slots. Since 2 is identical to 2, it evaluates to true.
+
+```Plaintext
+CALL STACK                        MEMORY HEAP
++-------+-----------+          +-----------------------+
+|  x    |  #0x101   | -------->| #0x101: { id: 2 }     |
++-------+-----------+          +-----------------------+
+|  y    |  #0x202   | -------->| #0x202: { id: 2 }     |
++-------+-----------+          +-----------------------+
+```
+
+When you instantiate two identical objects:
+
+```JavaScript
+const x = { id: 2 };
+const y = { id: 2 };
+x === y; // false
+```
+
+Memory Allocation:
+
+JavaScript creates a new object in the Heap at address #0x101 with content { id: 2 }.
+
+It creates a second new object in the Heap at address #0x202 with content { id: 2 }.
+
+On the Call Stack, variable x stores the address #0x101, and variable y stores the address #0x202.
+
+Equality Check: The === operator checks whether both variables contain the same memory address pointer on the stack, not whether the contents inside those heap addresses look the same.
+
+```Plaintext
+CALL STACK MEMORY HEAP
++-------+-----------+          +-----------------------+
+| x     | #0x101    | -------->| #0x101: { id: 2 } |
++-------+-----------+          +-----------------------+
+| y     | #0x202    | -------->| #0x202: { id: 2 } |
++-------+-----------+          +-----------------------+
+```
+
+Because #0x101 !== #0x202, x === y evaluates to false.
+
+3. Achieving true with Objects
+   To make an equality check between objects return true, both variables must point to the exact same location in memory:
+
+```JavaScript
+const x = { id: 2 };
+const y = x; // Copying the reference (address #0x101)
+
+x === y; // true
+```
+
+```Plaintext
+CALL STACK MEMORY HEAP
++-------+-----------+
+| x     | #0x101    | ---\     +-----------------------+
++-------+-----------+     >    | #0x101: { id: 2 }     |
+| y     | #0x101    | ---/     +-----------------------+
++-------+-----------+
+```
+
+Here, y holds a copy of the pointer #0x101. Because both variables hold the identical memory address, === evaluates to true.
