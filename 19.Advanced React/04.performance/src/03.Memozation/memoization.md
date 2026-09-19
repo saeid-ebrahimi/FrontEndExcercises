@@ -545,7 +545,7 @@ const fullName = useMemo(() => `${firstName} ${lastName}`, [firstName, lastName]
 const fullName = `${firstName} ${lastName}`;
 ```
 
-## how to measure component calculation execution times using performance.now() to determine if useMemo is necessary.
+## how to measure component calculation execution times using performance.now() to determine if useMemo is necessary
 
 Measuring execution time with performance.now() gives you exact millisecond-level data to decide if an operation warrants useMemo.
 
