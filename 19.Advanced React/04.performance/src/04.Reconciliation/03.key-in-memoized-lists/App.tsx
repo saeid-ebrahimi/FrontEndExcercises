@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Input from "./04.Reconciliation/03.key-in-memoized-lists/components/input";
+import Input from "./components/input";
 
 const data = [
   { id: "teacher", placeholder: "Teacher ID" },
@@ -11,6 +11,7 @@ const InputMemo = React.memo(Input);
 export default function App() {
   const [dataset, setDataset] = useState(false);
 
+  //Reorder the data for triggering a re-render on the App component
   const inputs = dataset ? [...data].reverse() : data;
 
   return (
