@@ -1,12 +1,8 @@
-import Button from "./02.elements-as-prop-tricks/components/button"
-import { Loading, Warning } from "./02.elements-as-prop-tricks/components/icons"
+import OTP from "./04.Reconciliation/01.fixing-input-reset-issue/components/otp-form"
 
 function App() {
   return <>
-    <Button type={"primary"} size={"lg"} icon={<Loading size={"14px"} />} />
-    <br />
-    <br />
-    <Button icon={<Warning />} />
+    <OTP />
   </>
 }
 
