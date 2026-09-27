@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import Sidebar from "./05.PerformantContextAPI/01.wasted-rerendering/components/sidebar";
-import Main from "./05.PerformantContextAPI/01.wasted-rerendering/components/main";
-import { useState } from "react";
+import NavController from "./05.PerformantContextAPI/02.better-version-using-context-api/context/nav-controller";
+import Main from "./05.PerformantContextAPI/02.better-version-using-context-api/components/main";
+import Sidebar from "./05.PerformantContextAPI/02.better-version-using-context-api/components/sidebar";
+
 
 const Container = styled.div`
   display: flex;
@@ -9,14 +10,12 @@ const Container = styled.div`
 `;
 
 function App() {
-  const [collapsed, setCollapsed] = useState(false);
-
-  return <>
+  return <NavController>
     <Container>
-      <Sidebar collapsed={collapsed} setCollapsed={() => { setCollapsed(prev => !prev) }} />
-      <Main collapsed={collapsed} />
+      <Sidebar />
+      <Main />
     </Container>
-  </>
+  </NavController>
 }
 
 export default App
