@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Sidebar from "./05.PerformantContextAPI/01.wasted-rerendering/components/sidebar";
-import Main from "./05.PerformantContextAPI/01.wasted-rerendering/components/main";
+import Sidebar from "./components/sidebar";
+import Main from "./components/main";
 import { useState } from "react";
 
 const Container = styled.div`
@@ -8,15 +8,12 @@ const Container = styled.div`
   height: 100vh;
 `;
 
-function App() {
+export default function App() {
   const [collapsed, setCollapsed] = useState(false);
-
-  return <>
+  return (
     <Container>
       <Sidebar collapsed={collapsed} setCollapsed={() => { setCollapsed(prev => !prev) }} />
       <Main collapsed={collapsed} />
     </Container>
-  </>
+  );
 }
-
-export default App
