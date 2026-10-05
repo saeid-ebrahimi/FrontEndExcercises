@@ -1,3 +1,14 @@
+// Accessing and Manipulating DOM Elements:
+// - Directly interacting with HTML DOM nodes for operations React doesn't manage declaratively.
+
+// - Focus management: Automatically focusing an < input > on mount or button click.
+
+// - Measuring elements: Getting element dimensions with getBoundingClientRect().
+
+// - Media playback: Calling.play() or.pause() on < video > or < audio > elements.
+
+// - Scrolling: Triggering.scrollIntoView() or reading scrollTop.
+
 import { type ChangeEvent, useRef, useState } from "react";
 
 const Form = () => {
