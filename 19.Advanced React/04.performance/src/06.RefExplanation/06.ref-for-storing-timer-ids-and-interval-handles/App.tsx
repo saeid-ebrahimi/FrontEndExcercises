@@ -1,5 +1,5 @@
 
-import Timer from "./components/timer";
+import { Timer } from "./components/timer";
 
 function App() {
     return (
