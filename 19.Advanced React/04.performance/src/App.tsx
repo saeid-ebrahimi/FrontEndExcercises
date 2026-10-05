@@ -1,9 +1,9 @@
 
-import { Timer } from "./06.RefExplanation/06.ref-for-storing-timer-ids-and-interval-handles/components/timer";
+import { Counter } from "./06.RefExplanation/07.ref-for-tracking-prev-state/component/counter";
 
 function App() {
   return (
-    <Timer />
+    <Counter />
   );
 }
 
