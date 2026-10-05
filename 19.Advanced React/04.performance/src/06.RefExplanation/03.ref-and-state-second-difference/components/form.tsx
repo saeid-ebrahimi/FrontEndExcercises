@@ -23,6 +23,8 @@ const Form = () => {
   const submit = () => {
     //send some data to backend server
     console.log(ref.current);
+    console.log(value);
+
   };
   return (
     <>
