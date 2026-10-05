@@ -1,5 +1,5 @@
 
-import Form from "./06.RefExplanation/04.ref-for-access-dom/components/form";
+import Form from "./06.RefExplanation/05.ref-as-prop/components/form";
 
 function App() {
   return (
