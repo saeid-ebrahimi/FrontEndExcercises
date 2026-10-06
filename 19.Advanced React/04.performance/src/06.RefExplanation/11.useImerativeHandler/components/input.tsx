@@ -1,4 +1,4 @@
-import { type ForwardedRef, forwardRef, useState } from "react";
+import { type ForwardedRef, forwardRef, useImperativeHandle, useRef, useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 
 const shakeAnimation = keyframes`
@@ -39,18 +39,32 @@ type Props = {
   changeHandler: (val: string) => void;
 };
 
+export type API = {
+  focus: () => void;
+  shake: () => void;
+}
 const Input = (
   { changeHandler }: Props,
-  ref: ForwardedRef<HTMLInputElement>
+  ref: ForwardedRef<API>
 ) => {
   const [isShaking, setIsShaking] = useState(false);
+
+  const inputRef = useRef<HTMLInputElement>(null)
+  useImperativeHandle(ref, () => ({
+    focus: () => { inputRef.current?.focus() },
+    shake: () => { setIsShaking(true) }
+  }), [])
+
+
+
   return (
     <AnimatedInput
       shake={isShaking}
       type="text"
       name="username"
-      ref={ref}
+      ref={inputRef}
       onChange={(e) => changeHandler(e.target.value)}
+      onAnimationEnd={() => setIsShaking(false)}
     />
   );
 };
