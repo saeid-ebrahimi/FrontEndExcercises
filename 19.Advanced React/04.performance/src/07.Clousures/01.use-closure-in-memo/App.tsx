@@ -1,15 +1,21 @@
-import React, { useState } from "react";
-import ExpensiveComponent from "./components/expensive-component";
 
-const MemoizedEC = React.memo(ExpensiveComponent);
+import ExpensiveComponent from "./components/expensive-component";
+import { memo, useCallback, useState } from "react";
+
+
+const MemoizedEC = memo(ExpensiveComponent, (prevProp, currentProp) => {
+  return prevProp.btnLabel === currentProp.btnLabel
+});
 
 export default function App() {
   const [value, setValue] = useState<string>();
 
-  const clickHandler = () => {
+  console.log(value);
+
+  const clickHandler = useCallback(() => {
     // submit stuff to the backend
     console.log(value);
-  };
+  }, [value])
 
   return (
     <>
