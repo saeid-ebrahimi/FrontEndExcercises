@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import styled from "styled-components";
 import { useFetchUsers } from "../hooks/useFetchUsers";
+import { API_STATUS } from "../constants";
 
 const Container = styled.div`
   margin-left: auto;
@@ -34,8 +35,8 @@ const FetchButton = styled.button`
   padding: 1rem;
 `;
 
-function Users() {
-  const { users, initFetchUsers } =
+export function Users() {
+  const { users, initFetchUsers, fetchStatus, error } =
     useFetchUsers();
 
   useEffect(() => {
@@ -45,23 +46,27 @@ function Users() {
   return (
     <Container>
       <FetchButton onClick={initFetchUsers}>
-        Fetch Users
+        {fetchStatus === API_STATUS.PENDING ? "Loading..." : "Fetch Users"}
       </FetchButton>
-      <FlexContainer>
-        <ContentContainer>
-          {users
-            ? users.map((user, index) => (
-                <React.Fragment key={index}>
-                  <UserName>{user.name}</UserName>
-                  <UserEmail>
-                    {user.email}
-                  </UserEmail>
-                </React.Fragment>
-              ))
-            : null}
-        </ContentContainer>
-      </FlexContainer>
+
+      {users?.length > 0 ? (
+        <FlexContainer>
+          <ContentContainer >
+            {users.map((user) => (
+              <Fragment key={user.id}>
+                <UserName>{user.name}</UserName>
+                <UserEmail>{user.email}</UserEmail>
+              </Fragment>
+            ))}
+          </ContentContainer>
+        </FlexContainer>
+      ) : null}
+      {error && (
+        <div>
+          <p>Error fetching users:</p>
+          <p>{error.message}</p>
+        </div>
+      )}
     </Container>
   );
 }
-export default Users;

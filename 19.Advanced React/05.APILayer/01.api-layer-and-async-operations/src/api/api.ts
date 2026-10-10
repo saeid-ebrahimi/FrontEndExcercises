@@ -1,45 +1,39 @@
 import axios, {
-  AxiosInstance,
-  AxiosRequestConfig,
+  type AxiosInstance,
+  type AxiosRequestConfig,
 } from "axios";
 
 const axiosParams = {
-  baseURL:
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:8080"
-      : "/",
+  baseURL: "http://localhost:8080",
 };
 
 const axiosInstance = axios.create(axiosParams);
 
 const api = (instance: AxiosInstance) => {
   return {
-    get: <T = unknown>(
+    get: (
       url: string,
       config: AxiosRequestConfig = {},
-    ): Promise<T> => instance.get(url, config),
-    delete: <T = unknown>(
+    ) => instance.get(url, config),
+    delete: (
       url: string,
       config: AxiosRequestConfig = {},
-    ): Promise<T> => instance.delete(url, config),
-    post: <T = unknown>(
-      url: string,
-      body?: unknown,
-      config: AxiosRequestConfig = {},
-    ): Promise<T> =>
-      instance.post(url, body, config),
-    patch: <T = unknown>(
+    ) => instance.delete(url, config),
+    post: (
       url: string,
       body?: unknown,
       config: AxiosRequestConfig = {},
-    ): Promise<T> =>
-      instance.patch(url, body, config),
-    put: <T = unknown>(
+    ) => instance.post(url, body, config),
+    patch: (
       url: string,
       body?: unknown,
       config: AxiosRequestConfig = {},
-    ): Promise<T> =>
-      instance.put(url, body, config),
+    ) => instance.patch(url, body, config),
+    put: (
+      url: string,
+      body?: unknown,
+      config: AxiosRequestConfig = {},
+    ) => instance.put(url, body, config),
   };
 };
 
