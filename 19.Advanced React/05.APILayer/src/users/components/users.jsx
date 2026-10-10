@@ -1,18 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { fetchUser } from "../api/userApi";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-
-const useFetchUsers = () => {
-  const [users, setUsers] = useState([]);
-  const initFetchUsers = async () => {
-    const response = await fetchUser();
-    setUsers(response.data);
-  };
-  return {
-    users,
-    initFetchUsers,
-  };
-};
+import { useFetchUsers } from "../hooks/useFetchUsers";
 
 const Container = styled.div`
   margin-left: auto;
@@ -47,7 +35,8 @@ const FetchButton = styled.button`
 `;
 
 function Users() {
-  const { users, initFetchUsers } = useFetchUsers();
+  const { users, initFetchUsers } =
+    useFetchUsers();
 
   useEffect(() => {
     initFetchUsers();
@@ -55,14 +44,18 @@ function Users() {
 
   return (
     <Container>
-      <FetchButton onClick={initFetchUsers}>Fetch Users</FetchButton>
+      <FetchButton onClick={initFetchUsers}>
+        Fetch Users
+      </FetchButton>
       <FlexContainer>
         <ContentContainer>
           {users
             ? users.map((user, index) => (
                 <React.Fragment key={index}>
                   <UserName>{user.name}</UserName>
-                  <UserEmail>{user.email}</UserEmail>
+                  <UserEmail>
+                    {user.email}
+                  </UserEmail>
                 </React.Fragment>
               ))
             : null}
