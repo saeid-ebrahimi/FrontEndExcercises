@@ -1,3 +1,4 @@
+// It's a Higher-Order Function (HOF)
 export async function withAsync<T>(
   fn: () => Promise<{ data: T }>,
 ) {

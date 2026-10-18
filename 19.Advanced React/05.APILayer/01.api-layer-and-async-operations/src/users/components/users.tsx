@@ -1,7 +1,6 @@
 import { Fragment, useEffect } from "react";
 import styled from "styled-components";
-import { useFetchUsers } from "../hooks/useFetchUsers";
-import { API_STATUS } from "../constants";
+import { useFetchUsers, LazyLoader } from "..";
 
 const Container = styled.div`
   margin-left: auto;
@@ -36,7 +35,7 @@ const FetchButton = styled.button`
 `;
 
 export function Users() {
-  const { users, initFetchUsers, fetchStatus, error } =
+  const { users, initFetchUsers, error, isFetchUsersStatusPending } =
     useFetchUsers();
 
   useEffect(() => {
@@ -46,7 +45,7 @@ export function Users() {
   return (
     <Container>
       <FetchButton onClick={initFetchUsers}>
-        {fetchStatus === API_STATUS.PENDING ? "Loading..." : "Fetch Users"}
+        <LazyLoader show={isFetchUsersStatusPending} delay={300} default={"Fetch Users"} />
       </FetchButton>
 
       {users?.length > 0 ? (

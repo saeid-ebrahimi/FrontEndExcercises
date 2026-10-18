@@ -3,6 +3,7 @@ import {
   fetchUsers,
   withAsync,
   API_STATUS,
+  useApiStatus,
   type TUser,
 } from "..";
 
@@ -10,26 +11,37 @@ export const useFetchUsers = () => {
   const [users, setUsers] = useState<TUser[]>([]);
   const [error, setError] =
     useState<Error | null>(null);
-  const [fetchStatus, setFetchStatus] = useState<
-    keyof typeof API_STATUS
-  >(API_STATUS.IDLE);
+
+  const {
+    status: fetchUsersStatus,
+    setStatus: setFetchUsersStatus,
+    isIdle: isFetchUsersStatusIdle,
+    isPending: isFetchUsersStatusPending,
+    isError: isFetchUsersStatusError,
+    isSuccess: isFetchUsersStatusSuccess,
+  } = useApiStatus();
 
   const initialFetch = async () => {
-    setFetchStatus(API_STATUS.PENDING);
+    setFetchUsersStatus(API_STATUS.PENDING);
     const { response, error } =
       await withAsync(fetchUsers);
     if (error) {
       setError(error as Error);
-      setFetchStatus(API_STATUS.ERROR);
+      setFetchUsersStatus(API_STATUS.ERROR);
     } else {
       setUsers(response);
-      setFetchStatus(API_STATUS.SUCCESS);
+      setFetchUsersStatus(API_STATUS.SUCCESS);
     }
   };
 
   return {
     users,
-    fetchStatus,
+    fetchUsersStatus,
+    setFetchUsersStatus,
+    isFetchUsersStatusIdle,
+    isFetchUsersStatusPending,
+    isFetchUsersStatusError,
+    isSuccess: isFetchUsersStatusSuccess,
     error,
     initFetchUsers: initialFetch,
   };
