@@ -48,7 +48,7 @@ export function Users() {
         <LazyLoader show={isFetchUsersStatusPending} delay={300} default={"Fetch Users"} />
       </FetchButton>
 
-      {users?.length > 0 ? (
+      {users?.length && users?.length > 0 ? (
         <FlexContainer>
           <ContentContainer >
             {users.map((user) => (

@@ -12,11 +12,7 @@ export const useFetchUsers = () => {
     isPending: isFetchUsersStatusPending,
     isError: isFetchUsersStatusError,
     isSuccess: isFetchUsersStatusSuccess,
-  } = useApi<TUser>(() =>
-    fetchUsers().then(
-      (response) => response.data,
-    ),
-  );
+  } = useApi<TUser[]>(() => fetchUsers());
 
   return {
     users,

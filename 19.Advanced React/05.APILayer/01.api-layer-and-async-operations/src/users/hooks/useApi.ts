@@ -2,8 +2,11 @@ import { useState } from "react";
 import { useApiStatus } from "./useApiStatus";
 import { API_STATUS } from "../constants";
 
-export function useApi<T>(
-  fn: () => Promise<{ data: T }>,
+export function useApi<
+  T,
+  TArgs extends unknown[] = [],
+>(
+  fn: (...args: TArgs) => Promise<{ data: T }>,
   config?: { initialData: T },
 ) {
   const [data, setData] = useState<T | null>(
@@ -16,11 +19,13 @@ export function useApi<T>(
     ...normalizedStatuses
   } = useApiStatus();
 
-  const execute = async (...args) => {
+  const execute = async (...args: TArgs) => {
     try {
       setStatus(API_STATUS.PENDING);
-      const data = await fn(...args);
-      setData(data);
+      const response = await fn(...args);
+      console.log(response);
+
+      setData(response.data);
       setStatus(API_STATUS.SUCCESS);
       return {
         data,

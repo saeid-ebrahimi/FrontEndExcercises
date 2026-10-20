@@ -8,12 +8,12 @@ export type TUser = {
 
 export type TApiStatus = keyof typeof API_STATUS;
 
-export type TApiStatusFlags = {
-  [K in TApiStatus as TApiStatusFlagKey]: boolean;
-};
-
 export type TApiStatusFlagKey =
   `is${Capitalize<Lowercase<string>>}`;
+
+export type TApiStatusFlags = {
+  [K in TApiStatus as `is${Capitalize<Lowercase<K>>}`]: boolean;
+};
 
 export type TUseApiStatusReturn = {
   status: TApiStatus;

@@ -13,19 +13,21 @@ const capitalize = (s: string) =>
 export const prepareStatuses = (
   currentStatus: TApiStatus,
 ): TApiStatusFlags => {
-  const statuses: TApiStatusFlags = {};
-  for (const status of Object.keys(
-    API_STATUS,
-  ) as TApiStatus[]) {
-    const normalizedStatus = capitalize(
-      status.toLowerCase(),
-    );
-    const normalizedStatusKey =
-      `is${normalizedStatus}` as TApiStatusFlagKey;
-    statuses[normalizedStatusKey] =
-      status === currentStatus;
-  }
-  return statuses;
+  return Object.fromEntries(
+    Object.keys(API_STATUS).map((status) => {
+      const normalizedStatus = capitalize(
+        status.toLowerCase(),
+      );
+
+      const normalizedStatusKey =
+        `is${normalizedStatus}` as TApiStatusFlagKey;
+
+      return [
+        normalizedStatusKey,
+        status === currentStatus,
+      ];
+    }),
+  ) as TApiStatusFlags;
 };
 
 export const useApiStatus = (
